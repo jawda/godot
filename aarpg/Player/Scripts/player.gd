@@ -14,10 +14,11 @@ var direction : Vector2 = Vector2.ZERO
 signal DirectionChanged( new_direction: Vector2 )
 
 func _ready():
+	PlayerManager.player = self
 	state_machine.Initialize(self)
 	pass
 	
-func _process(delta):
+func _process(_delta):
 	#direction.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	#direction.y = Input.get_action_strength("down") - Input.get_action_strength("up")
 	## fix diagonal speed so its the same as one direction
@@ -28,7 +29,7 @@ func _process(delta):
 	pass
 	
 	
-func _physics_process( delta ):
+func _physics_process( _delta ):
 	move_and_slide()
 	
 	
