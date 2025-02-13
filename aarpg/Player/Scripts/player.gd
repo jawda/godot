@@ -16,9 +16,13 @@ func _ready():
 	pass
 	
 func _process(delta):
-	direction.x = Input.get_action_strength("right") - Input.get_action_strength("left")
-	direction.y = Input.get_action_strength("down") - Input.get_action_strength("up")
-	
+	#direction.x = Input.get_action_strength("right") - Input.get_action_strength("left")
+	#direction.y = Input.get_action_strength("down") - Input.get_action_strength("up")
+	## fix diagonal speed so its the same as one direction
+	direction = Vector2(
+		Input.get_axis("left", "right"),
+		Input.get_axis("up", "down")
+		).normalized()
 	pass
 	
 	
