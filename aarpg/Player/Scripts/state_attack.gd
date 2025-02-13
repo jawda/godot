@@ -11,6 +11,7 @@ var attacking : bool = false
 @onready var walk: State = $"../Walk"
 @onready var attack_anim: AnimationPlayer = $"../../Sprite2D/AttackEffectSprite/AnimationPlayer"
 @onready var audio: AudioStreamPlayer2D = $"../../Audio/AudioStreamPlayer2D"
+@onready var hurt_box: HurtBox = $"../../Interactions/HurtBox"
 
 
 ## What happens when the player enters this state?
@@ -25,6 +26,12 @@ func Enter() -> void:
 	audio.play()
 	
 	attacking = true
+	
+	## turn on hurt box monitoring, i.e can i hit something
+	## add a little delay for the animation
+	await get_tree().create_timer( 0.075 ).timeout
+	hurt_box.monitoring = true
+	
 	pass
 
 ## What happens when the player exits this State?
@@ -32,6 +39,9 @@ func Exit() -> void:
 	## disconnect to a signal for the animation
 	animation_player.animation_finished.disconnect( EndAttack )
 	attacking = false
+	
+	## turn off hurt box monitoring, i.e can i hit something
+	hurt_box.monitoring = false
 	pass
 	
 
