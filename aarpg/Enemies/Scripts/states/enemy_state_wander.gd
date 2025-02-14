@@ -37,6 +37,8 @@ func exit() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func process(_delta: float) -> EnemyState:
 	_timer -= _delta
+	## when the timer goes below zero it then goes to the next state which is assigned in
+	## in the custom variable we created
 	if _timer < 0:
 		return next_state
 	return null
