@@ -26,7 +26,7 @@ func load_new_level(
 	position_offset = _position_offset
 	
 	## wait for next process tick
-	await get_tree().process_frame  # Level Transition
+	await SceneTransition.fade_out()  # Level Transition
 	
 	level_load_started.emit()
 	
@@ -36,7 +36,7 @@ func load_new_level(
 	## transition happens then we unpause
 	
 	## wait for next process tick
-	await get_tree().process_frame  # Level Transition
+	await SceneTransition.fade_in()  # Level Transition
 	get_tree().paused = false
 	
 	## wait for next process tick
