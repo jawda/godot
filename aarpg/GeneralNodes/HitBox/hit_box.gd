@@ -12,6 +12,6 @@ func _process(_delta: float) -> void:
 	pass
 
 ## fires a signal that notify the listener damage was taken
-func TakeDamage( hurt_box : HurtBox) -> void:
+func take_damage( hurt_box : HurtBox) -> void:
 	#print( "TakeDamage: ", damage )
 	damaged.emit( hurt_box )
