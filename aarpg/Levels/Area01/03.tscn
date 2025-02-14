@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cj12sg1x0aqad"]
+[gd_scene load_steps=6 format=3 uid="uid://cj12sg1x0aqad"]
 
 [ext_resource type="PackedScene" uid="uid://dhirerx4bdcis" path="res://Tile Maps/grass-01.tscn" id="1_63yl8"]
 [ext_resource type="Script" path="res://Levels/scripts/level.gd" id="1_c1fxs"]
 [ext_resource type="PackedScene" uid="uid://bxgl36w8qi2g7" path="res://Levels/PlayerSpawn.tscn" id="2_kjhma"]
 [ext_resource type="PackedScene" uid="uid://dw0r1160hmlas" path="res://Enemies/Slime/Slime.tscn" id="3_rteei"]
+[ext_resource type="PackedScene" uid="uid://yn0uwe333y7g" path="res://Levels/level_transition.tscn" id="5_do66g"]
 
 [node name="03" type="CharacterBody2D"]
 script = ExtResource("1_c1fxs")
@@ -22,3 +23,9 @@ position = Vector2(353, 351)
 
 [node name="Slime3" parent="." instance=ExtResource("3_rteei")]
 position = Vector2(578, 139)
+
+[node name="LevelTransition" parent="." instance=ExtResource("5_do66g")]
+position = Vector2(-64, 240)
+level = "res://Levels/Area01/01.tscn"
+target_transition_area = "LevelTransition2"
+size = 5

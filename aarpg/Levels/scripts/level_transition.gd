@@ -30,8 +30,46 @@ enum SIDE { LEFT, RIGHT, TOP, BOTTOM }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_update_area()
+	if Engine.is_editor_hint():
+		return
+		
+	## from here down we dont want to do in editor
+	monitoring = false # so if placed on transition it doesn't trigger again
+	_place_player()
+	
+	await LevelManager.level_loaded
+	
+	monitoring = true
+	body_entered.connect( _player_entered )
+	
 	pass # Replace with function body.
-
+func _player_entered( _p : Node2D ) -> void:
+	##Tell level manager we want to change levels
+	LevelManager.load_new_level( level, target_transition_area, get_offset() )
+	pass
+	
+func _place_player() -> void:
+	if name != LevelManager.target_transition:
+		return
+	PlayerManager.set_player_position( global_position + LevelManager.position_offset )
+	
+func get_offset() -> Vector2:
+	var offset = Vector2.ZERO
+	var player_pos = PlayerManager.player.global_position
+	
+	if side == SIDE.LEFT or side == SIDE.RIGHT:
+		offset.y = player_pos.y - global_position.y
+		offset.x = 16
+		if side == SIDE.LEFT:
+			offset.x *= -1
+	else:
+		offset.x = player_pos.x - global_position.x
+		offset.y = 16
+		if side == SIDE.TOP:
+			offset.y *= -1
+	
+	
+	return offset
 func _update_area() -> void:
 	var new_rect : Vector2 = Vector2( 32,32 )
 	var new_position : Vector2 = Vector2.ZERO
