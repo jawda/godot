@@ -8,6 +8,6 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 ##queue up the node for removal since only need one swipe to destroy
-func take_damage( _damage : int) -> void:
+func take_damage(hurt_box : HurtBox) -> void:
 	queue_free()
 	pass
