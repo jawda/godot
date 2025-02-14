@@ -15,5 +15,5 @@ func _process(_delta: float) -> void:
 ## when hit box enters the hurt box call function that it was hit and trigger damage
 func AreaEntered( a : Area2D ) -> void:
 	if a is HitBox:
-		a.TakeDamage( damage )
+		a.TakeDamage( self )
 	pass
