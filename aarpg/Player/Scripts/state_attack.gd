@@ -30,7 +30,8 @@ func enter() -> void:
 	## turn on hurt box monitoring, i.e can i hit something
 	## add a little delay for the animation
 	await get_tree().create_timer( 0.075 ).timeout
-	hurt_box.monitoring = true
+	if attacking:
+		hurt_box.monitoring = true
 	
 	pass
 
