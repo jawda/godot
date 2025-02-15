@@ -67,7 +67,6 @@ offset_right = -20.0
 offset_bottom = 214.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 10
-text = "This red drink restores your health!!!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -118,3 +117,6 @@ text = "Save"
 [node name="Button_Load" type="Button" parent="Control/HBoxContainer"]
 layout_mode = 2
 text = "Load"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+max_polyphony = 4
