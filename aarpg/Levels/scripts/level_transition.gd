@@ -9,6 +9,7 @@ enum SIDE { LEFT, RIGHT, TOP, BOTTOM }
 @export_file( "*.tscn" ) var level
 ## used to point the player to the other map
 @export var target_transition_area : String = "LevelTransition"
+@export var center_player : bool = false
 @export_category("Collision Area Settings")
 
 @export_range(1, 12, 1, "or_greater" ) var size : int = 2:
@@ -54,16 +55,23 @@ func _place_player() -> void:
 	PlayerManager.set_player_position( global_position + LevelManager.position_offset )
 	
 func get_offset() -> Vector2:
+	
 	var offset = Vector2.ZERO
 	var player_pos = PlayerManager.player.global_position
 	
 	if side == SIDE.LEFT or side == SIDE.RIGHT:
-		offset.y = player_pos.y - global_position.y
+		if center_player == true:
+			offset.y = 0
+		else:
+			offset.y = player_pos.y - global_position.y
 		offset.x = 16
 		if side == SIDE.LEFT:
 			offset.x *= -1
 	else:
-		offset.x = player_pos.x - global_position.x
+		if center_player == true:
+			offset.x = 0
+		else:
+			offset.x = player_pos.x - global_position.x
 		offset.y = 16
 		if side == SIDE.TOP:
 			offset.y *= -1
