@@ -63,7 +63,10 @@ func physics( _delta : float) -> EnemyState:
 func _on_player_enter() -> void:
 	_can_see_player = true
 	# dont wnat to leave stun immedietly
-	if state_machine.current_state is EnemyStateStun:
+	if ( 
+		state_machine.current_state is EnemyStateStun 
+	or state_machine.current_state is EnemyStateDestroy
+	):
 		return
 		
 	state_machine.change_state( self )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://bk5rl6d2x3oyq"]
+[gd_scene load_steps=47 format=3 uid="uid://bk5rl6d2x3oyq"]
 
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_fkry6"]
 [ext_resource type="Texture2D" uid="uid://blu3h1niss3to" path="res://Player/Sprites/PlayerSprite02.png" id="2_eara5"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bs7pwp6ysaufl" path="res://GeneralNodes/HitBox/hit_box.tscn" id="13_a7jqb"]
 [ext_resource type="AudioStream" uid="uid://bohupwtvtrchk" path="res://Player/Audio/hit_player.wav" id="14_1si0r"]
 [ext_resource type="Script" path="res://Player/Scripts/push_area.gd" id="14_4ndd1"]
+[ext_resource type="Script" path="res://Player/Scripts/abilities/abilities.gd" id="17_78ej7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sh3id"]
 
@@ -738,3 +739,6 @@ debug_color = Color(0.62847, 0.52973, 0.0647058, 0.42)
 libraries = {
 "": SubResource("AnimationLibrary_njkq3")
 }
+
+[node name="Abilities" type="Node" parent="."]
+script = ExtResource("17_78ej7")
