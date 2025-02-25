@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlk2jxwvpwggr"]
+[gd_scene load_steps=9 format=3 uid="uid://dlk2jxwvpwggr"]
 
 [ext_resource type="Script" path="res://Levels/scripts/level.gd" id="1_leigl"]
 [ext_resource type="PackedScene" uid="uid://cp7vmv8bl0fqo" path="res://Tile Maps/Dungeon_01_Tilemap.tscn" id="1_vxbxq"]
 [ext_resource type="PackedScene" uid="uid://bxgl36w8qi2g7" path="res://Levels/PlayerSpawn.tscn" id="3_6r55l"]
 [ext_resource type="PackedScene" uid="uid://yn0uwe333y7g" path="res://Levels/level_transition.tscn" id="4_ps3l6"]
+[ext_resource type="Resource" uid="uid://ce5li5kh6wwiv" path="res://Items/key_dungeon.tres" id="5_47ru1"]
+[ext_resource type="PackedScene" uid="uid://cjyw36qt7v6ea" path="res://GeneralNodes/EnemyCounter/enemy_counter.tscn" id="5_cxayc"]
+[ext_resource type="PackedScene" uid="uid://dw0r1160hmlas" path="res://Enemies/Slime/Slime.tscn" id="6_kfili"]
+[ext_resource type="PackedScene" uid="uid://dn6g4pf25qwqk" path="res://GeneralNodes/ItemDropper/item_dropper.tscn" id="7_dhjgo"]
 
 [node name="02" type="Node2D"]
 script = ExtResource("1_leigl")
@@ -21,3 +25,17 @@ position = Vector2(66, 196)
 level = "res://Levels/Dungeon/02.tscn"
 target_transition_area = "LevelTransition2"
 center_player = true
+
+[node name="EnemyCounter" parent="." instance=ExtResource("5_cxayc")]
+
+[node name="Slime" parent="EnemyCounter" instance=ExtResource("6_kfili")]
+position = Vector2(548, 251)
+
+[node name="Slime2" parent="EnemyCounter" instance=ExtResource("6_kfili")]
+position = Vector2(615, 130)
+
+[node name="ItemDropper" parent="." instance=ExtResource("7_dhjgo")]
+position = Vector2(453, 231)
+item_data = ExtResource("5_47ru1")
+
+[connection signal="enemies_defeated" from="EnemyCounter" to="ItemDropper" method="drop_item"]
