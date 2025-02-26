@@ -21,24 +21,23 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	if state == State.THROW:
-		speed -= acceleration * delta #have it gradually slow
+		speed -= acceleration * delta
 		position += direction * speed * delta
 		if speed <= 0:
 			state = State.RETURN
 		pass
 	elif state == State.RETURN:
-		direction = global_position.direction_to( player.global_position )#find player
+		direction = global_position.direction_to( player.global_position )
 		speed += acceleration * delta
 		position += direction * speed * delta
-		if global_position.direction_to( player.global_position ) <= Vector2.ZERO:
-			PlayerManager.play_audio(catch_audio)
-			queue_free()#it has returned so remove it
+		if global_position.distance_to( player.global_position ) <= 10:
+			PlayerManager.play_audio( catch_audio )
+			queue_free()
 		pass
-		
-	var speed_ratio = speed / max_speed
-	audio.pitch_scale = speed_ratio * 0.75 + 0.75 #give some dynamic audio pitch scaling
 	
-	animation_player.speed_scale = 1 + (speed_ratio * 0.25)
+	var speed_ratio = speed / max_speed
+	audio.pitch_scale = speed_ratio * 0.75 + 0.75
+	animation_player.speed_scale = 1 + ( speed_ratio * 0.25 )
 	pass
 	
 func throw( throw_direction : Vector2 ) -> void:
