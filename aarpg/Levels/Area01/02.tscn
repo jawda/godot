@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b0w2soj6lfyij"]
+[gd_scene load_steps=15 format=3 uid="uid://b0w2soj6lfyij"]
 
 [ext_resource type="PackedScene" uid="uid://dhirerx4bdcis" path="res://Tile Maps/grass-01.tscn" id="1_7g1d6"]
 [ext_resource type="Script" path="res://Levels/scripts/level.gd" id="1_aw8aw"]
@@ -12,6 +12,8 @@
 [ext_resource type="Resource" uid="uid://dt55110bugvjb" path="res://npc/00_npcs/npc_02.tres" id="10_g0u6o"]
 [ext_resource type="Resource" uid="uid://dfjhxkukrasnl" path="res://npc/00_npcs/npc_01.tres" id="10_qmkx6"]
 [ext_resource type="PackedScene" uid="uid://dce6v0qldotlb" path="res://npc/npc_behavior_wander.tscn" id="10_sjfmp"]
+[ext_resource type="PackedScene" uid="uid://cj1ldpx0twasu" path="res://npc/npc_behavior_patrol.tscn" id="13_eexcv"]
+[ext_resource type="PackedScene" uid="uid://dwnvefo40ps3s" path="res://npc/patrol_location.tscn" id="14_1wbg3"]
 
 [node name="02" type="CharacterBody2D"]
 script = ExtResource("1_aw8aw")
@@ -60,3 +62,19 @@ npc_resource = ExtResource("10_qmkx6")
 [node name="Npc2" parent="." instance=ExtResource("9_5n32n")]
 position = Vector2(370, 225)
 npc_resource = ExtResource("10_g0u6o")
+
+[node name="NpcBehaviorPatrol" parent="Npc2" instance=ExtResource("13_eexcv")]
+
+[node name="PatrolLocation" parent="Npc2/NpcBehaviorPatrol" instance=ExtResource("14_1wbg3")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(-3, 3)
+
+[node name="PatrolLocation2" parent="Npc2/NpcBehaviorPatrol" instance=ExtResource("14_1wbg3")]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(69, 4)
+wait_time = 1.0
+
+[node name="PatrolLocation3" parent="Npc2/NpcBehaviorPatrol" instance=ExtResource("14_1wbg3")]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(69, -153)
+wait_time = 1.0
