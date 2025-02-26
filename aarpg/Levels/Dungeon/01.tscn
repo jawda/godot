@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwv64m6l4k8kw"]
+[gd_scene load_steps=9 format=3 uid="uid://cwv64m6l4k8kw"]
 
 [ext_resource type="Script" path="res://Levels/scripts/level.gd" id="1_cxbvs"]
+[ext_resource type="AudioStream" uid="uid://by7u6xwsnp83j" path="res://Levels/music/example_music_03.ogg" id="2_3dwaw"]
 [ext_resource type="PackedScene" uid="uid://bxgl36w8qi2g7" path="res://Levels/PlayerSpawn.tscn" id="2_41uqk"]
 [ext_resource type="PackedScene" uid="uid://cp7vmv8bl0fqo" path="res://Tile Maps/Dungeon_01_Tilemap.tscn" id="3_htq4f"]
 [ext_resource type="PackedScene" uid="uid://yn0uwe333y7g" path="res://Levels/level_transition.tscn" id="4_nihq5"]
@@ -10,6 +11,7 @@
 
 [node name="01" type="Node2D"]
 script = ExtResource("1_cxbvs")
+music = ExtResource("2_3dwaw")
 
 [node name="Dungeon01Tilemap" parent="." instance=ExtResource("3_htq4f")]
 rendering_quadrant_size = 32

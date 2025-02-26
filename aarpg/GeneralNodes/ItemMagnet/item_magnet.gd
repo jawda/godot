@@ -16,13 +16,12 @@ func _ready() -> void:
 	pass
 	
 func _process(delta: float) -> void:
-	for i in range(items.size() -1, -1, -1):
+	for i in range( items.size() - 1, -1, -1 ):
 		var _item = items[i]
 		if _item == null:
-			items.remove_at( i ) #remove items in array for cleanup
+			items.remove_at( i )
 			speeds.remove_at( i )
-			
-		elif _item.global_position.direction_to( global_position) > Vector2(speeds[i], speeds[i]):
+		elif _item.global_position.distance_to( global_position ) > speeds[i]:
 			speeds[i] += magnet_strength * delta
 			_item.position += _item.global_position.direction_to( global_position ) * speeds[i]
 		else:
