@@ -20,11 +20,38 @@ func _ready() -> void:
 	setup_npc()
 	if Engine.is_editor_hint():
 		return
+	gather_interactables()
 	do_behavior_enabled.emit()
 	pass
 	
 func _physics_process(delta: float) -> void:
 	move_and_slide()
+	
+	
+func gather_interactables() -> void:
+	for c in get_children():
+		if c is DialogInteraction:
+			c.player_interacted.connect( _on_player_interacted )
+			c.finished.connect( _on_interaction_finished )
+
+
+func _on_player_interacted() -> void:
+	#npc was talked to
+	#face player
+	update_direction( PlayerManager.player.global_position )
+	state = "idle"
+	velocity = Vector2.ZERO
+	update_animation()
+	do_behavior = false
+	pass
+
+func _on_interaction_finished() -> void:
+	#conversation over go back to life
+	state = "idle"
+	update_animation()
+	do_behavior = true
+	do_behavior_enabled.emit()
+	pass
 	
 func update_animation() -> void:
 	animation.play( state + "_" + direction_name)

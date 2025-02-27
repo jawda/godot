@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3j8fwgxepjfb"]
+[gd_scene load_steps=5 format=3 uid="uid://d3j8fwgxepjfb"]
 
 [ext_resource type="Texture2D" uid="uid://inrfwunr0c35" path="res://Items/sprites/items.png" id="1_isx2q"]
 [ext_resource type="Script" path="res://GUI/pause_menu/inventory/scripts/inventory_slot_ui.gd" id="1_ocj0w"]
+[ext_resource type="FontFile" uid="uid://crqayx0btmpww" path="res://assets/npc_and_dialog/npc_and_dialog/fonts/m5x7.ttf" id="3_617jf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0w8m3"]
 atlas = ExtResource("1_isx2q")
@@ -24,6 +25,7 @@ stretch_mode = 3
 layout_mode = 0
 offset_right = 31.0
 offset_bottom = 23.0
-theme_override_font_sizes/font_size = 8
+theme_override_fonts/font = ExtResource("3_617jf")
+theme_override_font_sizes/font_size = 13
 text = "99"
 horizontal_alignment = 2
