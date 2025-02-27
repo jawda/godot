@@ -26,13 +26,18 @@ func check_mount_open( l : String ) -> void:
 		audio_stream_player.pitch_scale = randf_range( audio_pitch_base - 0.04, audio_pitch_base + 0.04 ) #give is some audio fun
 		audio_stream_player.play()
 	elif '.,!?'.contains( l ):#or an end punctuation
+		audio_stream_player.pitch_scale = audio_pitch_base -0.1 #give is some audio fun
+		audio_stream_player.play()
 		mouth_open_frames = 0
 		
 	if mouth_open_frames > 0:
 		mouth_open_frames -= 1
 	
 	if mouth_open_frames == 0:
-		open_mouth = false
+		if open_mouth == true:
+			open_mouth = false
+			audio_stream_player.pitch_scale = randf_range( audio_pitch_base - 0.08, audio_pitch_base + 0.02 ) #give is some audio fun
+			audio_stream_player.play()
 	pass
 
 # move mouth and make blink

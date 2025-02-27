@@ -9,6 +9,12 @@ var patrol_locations : Array[ PatrolLocation ]
 var current_location_index : int = 0
 var target : PatrolLocation
 
+var has_started : bool = false
+var last_phase : String = ""
+var direction : Vector2
+
+@onready var timer: Timer = $Timer
+
 
 func _ready() -> void:
 	gather_patrol_locations()
@@ -26,7 +32,7 @@ func _process( _delta: float ) -> void:
 	if Engine.is_editor_hint():
 		return
 	if npc.global_position.distance_to( target.target_position ) < 1:
-		start()
+		idle_phase()
 
 func gather_patrol_locations( _n : Node = null ) -> void:
 	patrol_locations = []
@@ -57,7 +63,18 @@ func gather_patrol_locations( _n : Node = null ) -> void:
 func start() -> void:
 	if npc.do_behavior == false or patrol_locations.size() < 2:
 		return
-		
+	
+	if has_started == true:
+		#time left we should still be in the idle phase so return
+		if timer.time_left == 0:
+			walk_phase() #otherwise npc was walking return to walking
+		return
+	
+	has_started = true
+	idle_phase()
+	pass
+
+func idle_phase() -> void:
 	#IDLE PHASE
 	npc.global_position = target.target_position
 	npc.state = "idle"
@@ -71,20 +88,24 @@ func start() -> void:
 		
 	target = patrol_locations[ current_location_index ]
 	
-	await get_tree().create_timer( wait_time ).timeout
+	if wait_time > 0:
+		timer.start( wait_time )
+		await timer.timeout
 	
 	if npc.do_behavior == false :
 		return
-		
+	walk_phase()
+	pass
+	
+func walk_phase() -> void:
 	#got to location waited time to walk to next
 	npc.state = "walk"
-	var _dir = global_position.direction_to( target.target_position )
-	npc.direction = _dir
-	npc.velocity = walk_speed * _dir
+	direction = global_position.direction_to( target.target_position )
+	npc.direction = direction
+	npc.velocity = walk_speed * direction
 	npc.update_direction( target.target_position )
 	npc.update_animation()
 		
-	
 	pass
 
 func _get_color_by_index( i : int ) -> Color:

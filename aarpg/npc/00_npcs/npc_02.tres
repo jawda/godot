@@ -9,4 +9,4 @@ script = ExtResource("2_0ru3d")
 npc_name = "Nero"
 sprite = ExtResource("3_4q6kr")
 portrait = ExtResource("1_ilxsf")
-dialog_audio_pitch = ""
+dialog_audio_pitch = 1.5
