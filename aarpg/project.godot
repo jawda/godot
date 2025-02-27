@@ -24,6 +24,7 @@ PlayerManager="*res://00_Globals/global_player_manager.gd"
 SceneTransition="*res://GUI/scene_transition/scene_transition.tscn"
 SaveManager="*res://00_Globals/global_save_manager.gd"
 PauseMenu="*res://GUI/pause_menu/pause_menu.tscn"
+DialogSystem="*res://GUI/dialog_system/dialog_system.tscn"
 
 [display]
 
@@ -32,6 +33,10 @@ window/size/viewport_height=270
 window/size/window_width_override=1024
 window/size/window_height_override=768
 window/stretch/mode="viewport"
+
+[gui]
+
+theme/custom_font="res://GUI/fonts/Abaddon Light.ttf"
 
 [input]
 
@@ -73,6 +78,11 @@ interact={
 ability={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":88,"key_label":0,"unicode":120,"location":0,"echo":false,"script":null)
+]
+}
+test={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":80,"key_label":0,"unicode":112,"location":0,"echo":false,"script":null)
 ]
 }
 
