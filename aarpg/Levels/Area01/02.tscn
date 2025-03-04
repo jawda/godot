@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b0w2soj6lfyij"]
+[gd_scene load_steps=21 format=3 uid="uid://b0w2soj6lfyij"]
 
 [ext_resource type="PackedScene" uid="uid://dhirerx4bdcis" path="res://Tile Maps/grass-01.tscn" id="1_7g1d6"]
 [ext_resource type="Script" path="res://Levels/scripts/level.gd" id="1_aw8aw"]
@@ -19,6 +19,7 @@
 [ext_resource type="Resource" uid="uid://dqwbo0wph6w5" path="res://npc/00_npcs/00_hero.tres" id="14_jvm64"]
 [ext_resource type="Script" path="res://Interactables/dialog/scripts/dialog_choice.gd" id="18_cgku2"]
 [ext_resource type="Script" path="res://Interactables/dialog/scripts/dialog_branch.gd" id="19_nb61a"]
+[ext_resource type="PackedScene" uid="uid://bm7tetyr3o4p5" path="res://Props/pot/pot.tscn" id="20_kc2io"]
 
 [node name="02" type="CharacterBody2D"]
 script = ExtResource("1_aw8aw")
@@ -139,3 +140,9 @@ npc_info = ExtResource("10_g0u6o")
 script = ExtResource("13_vxufi")
 text = "Geez! Some lousy hero you are!"
 npc_info = ExtResource("10_g0u6o")
+
+[node name="Pot" parent="." instance=ExtResource("20_kc2io")]
+position = Vector2(148, 97)
+
+[node name="Pot2" parent="." instance=ExtResource("20_kc2io")]
+position = Vector2(174, 97)

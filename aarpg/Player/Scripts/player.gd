@@ -13,6 +13,9 @@ var direction : Vector2 = Vector2.ZERO
 @onready var state_machine: PlayerStateMachine = $StateMachine
 @onready var hit_box: HitBox = $HitBox
 @onready var audio: AudioStreamPlayer2D = $Audio/AudioStreamPlayer2D
+@onready var lift: State_Lift = $StateMachine/Lift
+@onready var held_item: Node2D = $Sprite2D/HeldItem
+@onready var carry: State_Carry = $StateMachine/Carry
 
 signal direction_changed( new_direction: Vector2 )
 signal player_damaged( hurt_box: HurtBox )
@@ -104,4 +107,10 @@ func make_invulnerable( _duration : float = 1.0 ) -> void:
 	
 	invulnerable = false
 	hit_box.monitoring = true
+	pass
+
+func pickup_item( _t : Throwable )-> void:
+	state_machine.change_state( lift )
+	# store throwable
+	carry.throwable = _t
 	pass
