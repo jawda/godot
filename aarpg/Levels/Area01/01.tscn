@@ -40,6 +40,9 @@ side = 2
 [node name="Goblin" parent="." instance=ExtResource("4_i4vkv")]
 position = Vector2(341, 129)
 
+[node name="Goblin2" parent="." instance=ExtResource("4_i4vkv")]
+position = Vector2(148, 241)
+
 [node name="Pot" parent="." instance=ExtResource("7_1va2d")]
 position = Vector2(55, 173)
 
