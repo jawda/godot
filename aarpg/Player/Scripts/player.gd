@@ -47,9 +47,8 @@ func _physics_process( _delta ):
 	
 func _unhandled_input(event: InputEvent) -> void:
 	#debugging 
-	if event.is_action_pressed("test"):
-		update_hp(-99)
-		player_damaged.emit(%AttackHurtBox)
+	#if event.is_action_pressed("test"):
+		#PlayerManager.shake_camera()
 	pass
 
 func set_direction() -> bool:
