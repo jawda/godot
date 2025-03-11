@@ -1612,7 +1612,6 @@ exhaust_audio = ExtResource("22_b2nx7")
 [node name="Camera2D" type="Camera2D" parent="."]
 editor_draw_limits = true
 script = ExtResource("11_vh6ce")
-shake_power = 0.25
 shake_decay = 2.0
 
 [node name="Audio" type="Node2D" parent="."]
