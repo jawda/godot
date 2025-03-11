@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bxgl36w8qi2g7" path="res://Levels/PlayerSpawn.tscn" id="2_3dd5t"]
 [ext_resource type="PackedScene" uid="uid://yn0uwe333y7g" path="res://Levels/level_transition.tscn" id="3_qc60d"]
 [ext_resource type="PackedScene" uid="uid://c1pkyk5usuke7" path="res://Props/torches/torch_dungeon.tscn" id="5_mhby1"]
-[ext_resource type="PackedScene" uid="uid://dhcg6vjuejst7" path="res://Levels/Dungeon/dark_wizard/energy_orb.tscn" id="6_f1b4e"]
+[ext_resource type="PackedScene" uid="uid://cwomkju8v1e6q" path="res://Levels/Dungeon/dark_wizard/energy_beam.tscn" id="6_xy4r5"]
 
 [node name="04" type="Node2D"]
 script = ExtResource("1_kv80b")
@@ -45,18 +45,6 @@ color = Color(0.306, 0.36, 0.324, 1)
 energy = 0.8
 blend_mode = 2
 
-[node name="EnergyOrb" parent="." instance=ExtResource("6_f1b4e")]
-position = Vector2(114, 299)
-speed = 100.0
-
-[node name="EnergyOrb2" parent="." instance=ExtResource("6_f1b4e")]
-position = Vector2(591, 89)
-speed = 100.0
-
-[node name="EnergyOrb3" parent="." instance=ExtResource("6_f1b4e")]
-position = Vector2(113, 89)
-speed = 100.0
-
-[node name="EnergyOrb4" parent="." instance=ExtResource("6_f1b4e")]
-position = Vector2(593, 297)
-speed = 100.0
+[node name="EnergyBeam" parent="." instance=ExtResource("6_xy4r5")]
+position = Vector2(356, 237)
+use_timer = true
