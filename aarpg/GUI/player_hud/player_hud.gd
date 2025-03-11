@@ -12,6 +12,9 @@ var hearts : Array[ HeartGUI ] = []
 @onready var title_button: Button = $Control/GameOver/VBoxContainer/TitleButton
 @onready var animation_player: AnimationPlayer = $Control/GameOver/AnimationPlayer
 @onready var audio: AudioStreamPlayer = $AudioStreamPlayer
+@onready var boss_ui: Control = $Control/BossUI
+@onready var boss_hp_bar: TextureProgressBar = $Control/BossUI/TextureProgressBar
+@onready var boss_label: Label = $Control/BossUI/Label
 
 
 
@@ -30,8 +33,9 @@ func _ready() -> void:
 	title_button.pressed.connect( title_screen )
 	LevelManager.level_load_started.connect( hide_game_over_screen ) #when loaded hide game over
 	
-	#hide_boss_health()
+	hide_boss_health()
 	pass # Replace with function body.
+
 
 ## 1 heart is worth 2 hp
 func update_hp( _hp: int, _max_hp: int ) -> void:
@@ -96,3 +100,17 @@ func fade_to_black() -> bool:
 	await animation_player.animation_finished
 	PlayerManager.player.revive_player() #bring back the dead
 	return true
+
+func show_boss_health( boss_name : String ) -> void:
+	boss_ui.visible = true
+	boss_label.text = boss_name
+	update_boss_health( 1, 1 )
+	pass
+	
+func hide_boss_health() -> void:
+	boss_ui.visible = false
+	pass
+
+func update_boss_health( hp : int, max_hp : int ) -> void:
+	boss_hp_bar.value = clampf( float(hp) / float(max_hp) * 100, 0, 100 ) 
+	pass
