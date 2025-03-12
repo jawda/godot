@@ -38,19 +38,28 @@ size = 5
 side = 2
 
 [node name="Goblin" parent="." instance=ExtResource("4_i4vkv")]
-position = Vector2(341, 129)
+position = Vector2(518, 125)
 
 [node name="Goblin2" parent="." instance=ExtResource("4_i4vkv")]
 position = Vector2(148, 241)
 
+[node name="Goblin3" parent="." instance=ExtResource("4_i4vkv")]
+position = Vector2(538, 268)
+
+[node name="Goblin4" parent="." instance=ExtResource("4_i4vkv")]
+position = Vector2(99, 116)
+
+[node name="Goblin5" parent="." instance=ExtResource("4_i4vkv")]
+position = Vector2(300, 124)
+
 [node name="Pot" parent="." instance=ExtResource("7_1va2d")]
-position = Vector2(55, 173)
+position = Vector2(182, 181)
 
 [node name="Pot2" parent="." instance=ExtResource("7_1va2d")]
-position = Vector2(55, 137)
+position = Vector2(181, 150)
 
 [node name="Pot3" parent="." instance=ExtResource("7_1va2d")]
-position = Vector2(72, 153)
+position = Vector2(199, 164)
 
 [node name="Pot4" parent="." instance=ExtResource("7_1va2d")]
-position = Vector2(38, 154)
+position = Vector2(164, 164)
