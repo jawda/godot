@@ -17,7 +17,9 @@ var current_save : Dictionary = {
 	},
 	items = [],
 	persistence = [],
-	quests = [],
+	quests = [
+		#{ title = "not found", is_complete = false, completed_steps = [''] }
+	],
 }
 
 ## pause menu save game button fired

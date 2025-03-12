@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://3u1cgroknult"]
+
+[ext_resource type="Script" path="res://quests/scripts/quest_reward_item.gd" id="1_h7jra"]
+[ext_resource type="Script" path="res://quests/scripts/quest_resource.gd" id="2_07bnk"]
+[ext_resource type="Resource" uid="uid://cueoy8xnicrjg" path="res://Items/apple.tres" id="2_iihcx"]
+
+[sub_resource type="Resource" id="Resource_lix8a"]
+script = ExtResource("1_h7jra")
+item = ExtResource("2_iihcx")
+quantity = 3
+
+[resource]
+script = ExtResource("2_07bnk")
+title = "Long Quest"
+description = "A short quest with multiple steps"
+steps = Array[String](["Step 1", "Step 2", "Step 3", "Step 4", "Step 5"])
+reward_xp = 50
+reward_items = Array[ExtResource("1_h7jra")]([SubResource("Resource_lix8a")])
