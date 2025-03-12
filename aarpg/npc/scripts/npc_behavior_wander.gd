@@ -39,6 +39,14 @@ func start() -> void:
 	# WALK PHASE
 	npc.state = "walk"
 	var _dir : Vector2 = DIRECTIONS[ randi_range(0,3) ]
+	if abs( global_position.distance_to( original_position ) ) > wander_range * 32:
+		var dir_to_area : Vector2 = global_position.direction_to( original_position )
+		var best_directions : Array[ float ] 
+		for d in DIRECTIONS:
+			best_directions.append( d.dot( dir_to_area ) )
+			
+		print( best_directions )
+		pass
 	npc.direction = _dir
 	npc.velocity = wander_speed * _dir
 	npc.update_direction( global_position + _dir )
