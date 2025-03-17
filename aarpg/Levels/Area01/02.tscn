@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://b0w2soj6lfyij"]
+[gd_scene load_steps=26 format=4 uid="uid://b0w2soj6lfyij"]
 
 [ext_resource type="Script" path="res://Levels/scripts/level.gd" id="1_aw8aw"]
 [ext_resource type="AudioStream" uid="uid://nmkh7fcopt3w" path="res://Levels/music/example_music_01.ogg" id="2_dyvpa"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://brfryp2fsb8v" path="res://Interactables/Dungeon/PressurePlate.tscn" id="21_mr3kn"]
 [ext_resource type="PackedScene" uid="uid://bce567dac6qq3" path="res://quests/utility_nodes/quest_advance_trigger.tscn" id="22_204ab"]
 [ext_resource type="Resource" uid="uid://3u1cgroknult" path="res://quests/long_quest.tres" id="23_e8ucr"]
+[ext_resource type="PackedScene" uid="uid://ctf06qsakuhf3" path="res://quests/utility_nodes/quest_activated_switch.tscn" id="25_nkctc"]
 
 [node name="02" type="CharacterBody2D"]
 script = ExtResource("1_aw8aw")
@@ -127,6 +128,7 @@ text = "Count on it!"
 npc_info = ExtResource("10_g0u6o")
 
 [node name="QuestAdvanceTrigger" parent="Npc2/DialogInteraction/DialogChoice/DialogBranch" instance=ExtResource("22_204ab")]
+position = Vector2(374, 192)
 signal_name = "selected"
 linked_quest = ExtResource("21_g675j")
 settings_summary = "UPDATE QUEST:
@@ -171,26 +173,34 @@ Quest: Long Quest
 Step: 0 - N/A
 Complete: false"
 
-[node name="PressurePlate2" parent="." instance=ExtResource("21_mr3kn")]
-position = Vector2(292, 68)
-
-[node name="QuestAdvanceTrigger" parent="PressurePlate2" instance=ExtResource("22_204ab")]
-signal_name = "activated"
+[node name="QuestActivatedSwitch" parent="." instance=ExtResource("25_nkctc")]
+position = Vector2(297, 68)
+react_to_global_signal = true
 linked_quest = ExtResource("23_e8ucr")
-quest_step = 1
 settings_summary = "UPDATE QUEST:
 Quest: Long Quest
-Step: 1 - Step 1
-Complete: false"
+Checking if player has quest"
 
-[node name="PressurePlate3" parent="." instance=ExtResource("21_mr3kn")]
-position = Vector2(331, 68)
+[node name="PressurePlate3" parent="QuestActivatedSwitch" instance=ExtResource("21_mr3kn")]
 
-[node name="QuestAdvanceTrigger" parent="PressurePlate3" instance=ExtResource("22_204ab")]
+[node name="QuestAdvanceTrigger" parent="QuestActivatedSwitch/PressurePlate3" instance=ExtResource("22_204ab")]
 signal_name = "activated"
 linked_quest = ExtResource("23_e8ucr")
 quest_step = 2
+quest_complete = true
 settings_summary = "UPDATE QUEST:
 Quest: Long Quest
-Step: 2 - Step 2
-Complete: false"
+Step: 2 - step 2
+Complete: true"
+
+[node name="QuestActivatedSwitch2" parent="." instance=ExtResource("25_nkctc")]
+position = Vector2(369, 74)
+check_type = 3
+react_to_global_signal = true
+linked_quest = ExtResource("23_e8ucr")
+settings_summary = "UPDATE QUEST:
+Quest: Long Quest
+Checking if quest is complete"
+
+[node name="Pot" parent="QuestActivatedSwitch2" instance=ExtResource("20_kc2io")]
+position = Vector2(-3, -1)
