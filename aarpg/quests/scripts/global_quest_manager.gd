@@ -27,11 +27,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		#print(get_quest_index_by_title("Short Quest"))
 		#print("before: ", current_quests)
 		
-		update_quest("Recover Lost Magical Flute")
-		update_quest("Recover Lost Magical Flute", "", true)
-		update_quest("short quest")
-		update_quest("long quest", "step 1")
-		update_quest("long quest", "step 2")
+		#update_quest("Recover Lost Magical Flute")
+		#update_quest("Recover Lost Magical Flute", "", true)
+		#update_quest("short quest")
+		#update_quest("long quest", "step 1")
+		#update_quest("long quest", "step 2")
 		print("quests: ", current_quests)
 		#print("=========================================================")
 		pass
@@ -57,7 +57,7 @@ func update_quest( _title : String, _completed_step : String = "", _is_complete 
 				completed_steps = [] 
 		}
 		if _completed_step != "":
-			new_quest.completed_steps.append( _completed_step )
+			new_quest.completed_steps.append( _completed_step.to_lower() )
 		current_quests.append( new_quest )
 		quest_updated.emit( new_quest )
 		
@@ -67,7 +67,7 @@ func update_quest( _title : String, _completed_step : String = "", _is_complete 
 		#quest found so update it
 		var q = current_quests[ quest_index ]
 		if _completed_step != "" and q.completed_steps.has( _completed_step ) == false:
-			q.completed_steps.append( _completed_step )
+			q.completed_steps.append( _completed_step.to_lower() )
 			pass
 		q.is_complete = _is_complete
 		quest_updated.emit( q )
@@ -131,6 +131,6 @@ func sort_quests() -> void:
 	pass
 
 func sort_quests_ascending( a, b ):
-	if a.title < b.title:
+	if a.title.to_lower() < b.title.to_lower():
 		return true
 	return false
