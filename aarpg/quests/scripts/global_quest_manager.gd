@@ -51,6 +51,7 @@ func gather_quest_data() -> void:
 func update_quest( _title : String, _completed_step : String = "", _is_complete : bool = false ) -> void:
 	var quest_index : int = get_quest_index_by_title( _title )
 	if quest_index == -1:
+		# Quest not found so add it
 		var new_quest : Dictionary = { 
 				title = _title, 
 				is_complete = _is_complete, 
