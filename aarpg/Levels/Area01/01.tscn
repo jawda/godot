@@ -549,6 +549,7 @@ side = 2
 
 [node name="Goblin" parent="." instance=ExtResource("4_i4vkv")]
 position = Vector2(518, 125)
+xp_reward = 50
 
 [node name="Goblin2" parent="." instance=ExtResource("4_i4vkv")]
 position = Vector2(148, 241)
