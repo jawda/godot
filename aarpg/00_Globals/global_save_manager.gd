@@ -99,3 +99,7 @@ func check_persistent_value( value : String ) -> bool:
 	var p = current_save.persistence as Array
 	return p.has( value )
 	
+func remove_persistent_value( value : String ) -> void:
+	var p = current_save.persistence as Array
+	p.erase( value )
+	pass

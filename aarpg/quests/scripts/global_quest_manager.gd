@@ -77,8 +77,9 @@ func update_quest( _title : String, _completed_step : String = "", _is_complete 
 		#Display notification that quest updated or completed
 		
 		if q.is_complete == true:
-			disperse_quest_rewards( find_quest_by_title( _title ) )
 			PlayerHud.queue_notification( "Quest Complete!", _title)
+			disperse_quest_rewards( find_quest_by_title( _title ) )
+			
 		else:
 			PlayerHud.queue_notification( "Quest Updated", _title + ": " + _completed_step)
 	pass
