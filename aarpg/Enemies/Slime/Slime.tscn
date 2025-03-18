@@ -850,6 +850,7 @@ drops = Array[ExtResource("13_voe0j")]([SubResource("Resource_6hlcf"), SubResour
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 max_polyphony = 4
+bus = &"Boss Attacks"
 
 [node name="DestroyEffectSprite" type="Sprite2D" parent="."]
 visible = false
