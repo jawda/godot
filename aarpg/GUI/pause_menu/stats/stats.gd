@@ -21,7 +21,11 @@ func _process(delta: float) -> void:
 func update_stats() -> void:
 	var _p : Player = PlayerManager.player
 	level_value_label.text = str( _p.level )
-	xp_value_label.text = str( _p.xp ) + "/" + str( PlayerManager.level_requirements[ _p.level ])
+	
+	if _p.level < PlayerManager.level_requirements.size():
+		xp_value_label.text = str( _p.xp ) + "/" + str( PlayerManager.level_requirements[ _p.level ])
+	else:
+		xp_value_label.text = "MAX LVL"
 	attack_value_label.text = str( _p.attack )
 	defense_value_label.text = str( _p.defense )
 	pass

@@ -11,8 +11,8 @@ var interact_handled : bool = true
 var player : Player
 var player_spawned : bool = false
 
-var level_requirements = [ 0, 50, 100, 200, 400, 800, 1500, 3000, 6000, 12000, 25000 ]
-
+#var level_requirements = [ 0, 50, 100, 200, 400, 800, 1500, 3000, 6000, 12000, 25000 ]
+var level_requirements = [ 0, 5, 10, 20, 40 ]
 func _ready() -> void:
 	add_player_instance()
 	await get_tree().create_timer(0.2).timeout
@@ -31,14 +31,23 @@ func set_health(hp: int, max_hp: int) -> void:
 func reward_xp( _xp : int) -> void:
 	player.xp += _xp
 	# check for level up
+	check_for_level_advance()
+	pass
+	
+#Check for level advance recursively.
+# will call itself until doesn't meet condition
+func check_for_level_advance() -> void:
+	if player.level >= level_requirements.size():
+		return
 	if player.xp >= level_requirements[ player.level ]:
 		player.level += 1
 		# if you want more advanced stat increases would happen here
 		player.attack += 1
 		player.defense += 1
 		player_leveled_up.emit()
+		check_for_level_advance()
 	pass
-	
+
 func set_player_position(_new_pos : Vector2) -> void:
 	player.global_position = _new_pos
 	pass
