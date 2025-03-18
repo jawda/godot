@@ -553,15 +553,19 @@ xp_reward = 50
 
 [node name="Goblin2" parent="." instance=ExtResource("4_i4vkv")]
 position = Vector2(148, 241)
+xp_reward = null
 
 [node name="Goblin3" parent="." instance=ExtResource("4_i4vkv")]
 position = Vector2(538, 268)
+xp_reward = null
 
 [node name="Goblin4" parent="." instance=ExtResource("4_i4vkv")]
 position = Vector2(99, 116)
+xp_reward = null
 
 [node name="Goblin5" parent="." instance=ExtResource("4_i4vkv")]
 position = Vector2(300, 124)
+xp_reward = null
 
 [node name="Pot" parent="." instance=ExtResource("7_1va2d")]
 position = Vector2(182, 181)

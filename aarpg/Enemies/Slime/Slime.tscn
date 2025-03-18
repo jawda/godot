@@ -788,6 +788,7 @@ _data = {
 collision_layer = 256
 collision_mask = 16
 script = ExtResource("1_xelaf")
+hp = null
 xp_reward = 10
 
 [node name="HurtBox" parent="." instance=ExtResource("2_omnlh")]

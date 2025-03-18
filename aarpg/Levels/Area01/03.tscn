@@ -19,12 +19,15 @@ position = Vector2(367, 223)
 
 [node name="Slime" parent="." instance=ExtResource("3_rteei")]
 position = Vector2(229, 111)
+hp = null
 
 [node name="Slime2" parent="." instance=ExtResource("3_rteei")]
 position = Vector2(353, 351)
+hp = null
 
 [node name="Slime3" parent="." instance=ExtResource("3_rteei")]
 position = Vector2(578, 139)
+hp = null
 
 [node name="LevelTransition" parent="." instance=ExtResource("5_do66g")]
 position = Vector2(-64, 240)
