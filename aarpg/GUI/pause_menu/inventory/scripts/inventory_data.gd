@@ -110,3 +110,66 @@ func use_item( item : ItemData, count : int = 1) -> bool:
 				return true
 	return false
 	
+func equip_item( slot : SlotData ) -> void:
+	if slot == null or not slot.item_data is EquipableItemData:
+		return
+		
+	var item : EquipableItemData = slot.item_data
+	var slot_index : int = slots.find( slot )#get index for where the item was
+	var equipment_index : int = slots.size() - equipment_slot_count
+	
+	match item.type:
+		EquipableItemData.Type.ARMOR:
+			equipment_index += 0 # 20
+			pass
+		EquipableItemData.Type.WEAPON:
+			equipment_index += 1 # 21
+			pass
+		EquipableItemData.Type.AMULET:
+			equipment_index += 2 # 22
+			pass
+		EquipableItemData.Type.RING:
+			equipment_index += 3 # 23
+			pass
+	var unequpped_slot : SlotData = slots[ equipment_index ]
+	
+	#swap two items
+	slots[ slot_index ] = unequpped_slot
+	slots[ equipment_index ] = slot
+	
+	equipment_changed.emit()
+	PauseMenu.focused_item_changed( unequpped_slot )
+	pass
+
+func get_attack_bonus() -> int:
+	return get_equipment_bonus( EquipableItemModifier.Type.ATTACK ) # return bonus
+	
+func get_attack_bonus_diff( item : EquipableItemData ) -> int:
+	var before : int = get_attack_bonus()
+	var after : int = get_equipment_bonus( EquipableItemModifier.Type.ATTACK, item)
+	
+	return after - before
+	
+func get_defence_bonus() -> int:
+	return get_equipment_bonus( EquipableItemModifier.Type.DEFENSE ) # return bonus
+	
+func get_defense_bonus_diff( item : EquipableItemData ) -> int:
+	var before : int = get_attack_bonus()
+	var after : int = get_equipment_bonus( EquipableItemModifier.Type.DEFENSE, item)
+	
+	return after - before
+	
+func get_equipment_bonus( bonus_type : EquipableItemModifier.Type, compare : EquipableItemData = null ) -> int:
+	var bonus : int = 0
+	# loop thru all equipment equipped and get all bonuses
+	for s in equipment_slots():
+		if s == null:
+			continue
+		var e : EquipableItemData = s.item_data
+		if compare:
+			if e.type == compare.type:
+				e = compare
+		for m in e.modifiers:
+			if m.type == bonus_type:
+				bonus += m.value
+	return bonus
