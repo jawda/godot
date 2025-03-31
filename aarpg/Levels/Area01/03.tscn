@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://cj12sg1x0aqad"]
+[gd_scene load_steps=9 format=4 uid="uid://cj12sg1x0aqad"]
 
 [ext_resource type="Script" path="res://Levels/scripts/level.gd" id="1_c1fxs"]
 [ext_resource type="PackedScene" uid="uid://bxgl36w8qi2g7" path="res://Levels/PlayerSpawn.tscn" id="2_kjhma"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://ihjs4b0cp6hc" path="res://Tile Maps/grass_tiles-01.tscn" id="3_qe8fp"]
 [ext_resource type="PackedScene" uid="uid://dw0r1160hmlas" path="res://Enemies/Slime/Slime.tscn" id="3_rteei"]
 [ext_resource type="PackedScene" uid="uid://yn0uwe333y7g" path="res://Levels/level_transition.tscn" id="5_do66g"]
+[ext_resource type="PackedScene" uid="uid://2y2nqgid87jq" path="res://Interactables/TreasureChest/treasure-chest.tscn" id="7_ysjus"]
+[ext_resource type="Resource" uid="uid://b7lbfk218gra6" path="res://Items/w_katana.tres" id="8_aje7o"]
 
 [node name="03" type="CharacterBody2D"]
 script = ExtResource("1_c1fxs")
@@ -19,18 +21,19 @@ position = Vector2(367, 223)
 
 [node name="Slime" parent="." instance=ExtResource("3_rteei")]
 position = Vector2(229, 111)
-hp = null
 
 [node name="Slime2" parent="." instance=ExtResource("3_rteei")]
 position = Vector2(353, 351)
-hp = null
 
 [node name="Slime3" parent="." instance=ExtResource("3_rteei")]
 position = Vector2(578, 139)
-hp = null
 
 [node name="LevelTransition" parent="." instance=ExtResource("5_do66g")]
 position = Vector2(-64, 240)
 level = "res://Levels/Area01/01.tscn"
 target_transition_area = "LevelTransition2"
 size = 5
+
+[node name="Treasure-chest" parent="." instance=ExtResource("7_ysjus")]
+position = Vector2(655, 212)
+item_data = ExtResource("8_aje7o")

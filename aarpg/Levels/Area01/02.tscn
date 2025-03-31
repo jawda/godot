@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://b0w2soj6lfyij"]
+[gd_scene load_steps=27 format=4 uid="uid://b0w2soj6lfyij"]
 
 [ext_resource type="Script" path="res://Levels/scripts/level.gd" id="1_aw8aw"]
 [ext_resource type="AudioStream" uid="uid://nmkh7fcopt3w" path="res://Levels/music/example_music_01.ogg" id="2_dyvpa"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://bm7tetyr3o4p5" path="res://Props/pot/pot.tscn" id="20_kc2io"]
 [ext_resource type="Resource" uid="uid://bktatdxb41tx7" path="res://quests/recover_lost_flute.tres" id="21_g675j"]
 [ext_resource type="PackedScene" uid="uid://bce567dac6qq3" path="res://quests/utility_nodes/quest_advance_trigger.tscn" id="22_204ab"]
+[ext_resource type="PackedScene" uid="uid://3puboudrvdtq" path="res://Items/item_pickup/item_pickup.tscn" id="24_oxa43"]
+[ext_resource type="Resource" uid="uid://c0a2g43nb4g51" path="res://Items/a_ninja_suit.tres" id="25_7kvi5"]
 [ext_resource type="PackedScene" uid="uid://ctf06qsakuhf3" path="res://quests/utility_nodes/quest_activated_switch.tscn" id="25_nkctc"]
 
 [sub_resource type="GDScript" id="GDScript_woa8d"]
@@ -245,3 +247,7 @@ position = Vector2(148, 97)
 
 [node name="Pot2" parent="." instance=ExtResource("20_kc2io")]
 position = Vector2(174, 97)
+
+[node name="ItemPickup" parent="." instance=ExtResource("24_oxa43")]
+position = Vector2(236, 93)
+item_data = ExtResource("25_7kvi5")
