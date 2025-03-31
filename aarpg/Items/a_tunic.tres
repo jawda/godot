@@ -19,7 +19,6 @@ script = ExtResource("3_vai51")
 type = 1
 modifiers = Array[ExtResource("2_iugdd")]([SubResource("Resource_2ewyu")])
 name = "Tunic & Cape"
-description = "The tunic is clean and pressed,
-and the cape is oh-so-stylish."
+description = "The tunic is clean and pressed, and the cape is oh-so-stylish."
 texture = SubResource("AtlasTexture_xog5m")
 effects = Array[ExtResource("1_wp6pj")]([])

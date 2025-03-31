@@ -19,7 +19,7 @@ texture_margin_right = 14.0
 texture_margin_bottom = 14.0
 
 [node name="Stats" type="PanelContainer"]
-offset_right = 194.0
+offset_right = 308.0
 offset_bottom = 104.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_lgu70")
 script = ExtResource("2_62o6q")
@@ -31,70 +31,83 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Level_Label" type="Label" parent="VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(48, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.831373, 0.498039, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "Level"
 
 [node name="Level_Value_Label" type="Label" parent="VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
+unique_name_in_owner = true
+custom_minimum_size = Vector2(52, 0)
 layout_mode = 2
+size_flags_horizontal = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "1"
-horizontal_alignment = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+[node name="XP_Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(53, 0)
 layout_mode = 2
-
-[node name="XP_Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
-custom_minimum_size = Vector2(60, 0)
-layout_mode = 2
-size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.831373, 0.498039, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "XP"
 
-[node name="XP_Value_Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+[node name="XP_Value_Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "1"
-horizontal_alignment = 2
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Attack_Label" type="Label" parent="VBoxContainer/HBoxContainer3"]
-custom_minimum_size = Vector2(60, 0)
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+
+[node name="Attack_Label" type="Label" parent="VBoxContainer/HBoxContainer3/HBoxContainer"]
+layout_mode = 2
 theme_override_colors/font_color = Color(0.831373, 0.498039, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "Attack"
 
-[node name="Attack_Value_Label" type="Label" parent="VBoxContainer/HBoxContainer3"]
-custom_minimum_size = Vector2(40, 0)
+[node name="Attack_Value_Label" type="Label" parent="VBoxContainer/HBoxContainer3/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "1"
-horizontal_alignment = 2
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Attack_Value_Change_Label" type="Label" parent="VBoxContainer/HBoxContainer3/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "+1"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 
-[node name="Defense_Label" type="Label" parent="VBoxContainer/HBoxContainer4"]
-custom_minimum_size = Vector2(60, 0)
+[node name="Defense_Label" type="Label" parent="VBoxContainer/HBoxContainer3/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.831373, 0.498039, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "Defense"
 
-[node name="Defense_Value_Label" type="Label" parent="VBoxContainer/HBoxContainer4"]
-custom_minimum_size = Vector2(40, 0)
+[node name="Defense_Value_Label" type="Label" parent="VBoxContainer/HBoxContainer3/HBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "1"
-horizontal_alignment = 2
+
+[node name="Defense_Value_Change_Label" type="Label" parent="VBoxContainer/HBoxContainer3/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "+1"

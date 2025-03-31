@@ -24,7 +24,6 @@ script = ExtResource("3_e8fqb")
 type = 1
 modifiers = Array[ExtResource("2_dhubo")]([SubResource("Resource_2ewyu"), SubResource("Resource_oa5qt")])
 name = "Ninja Suit"
-description = "The ninja suit is totally rad,
-and surprisingly comfy."
+description = "The ninja suit is totally rad, and surprisingly comfy."
 texture = SubResource("AtlasTexture_xog5m")
 effects = Array[ExtResource("1_qmi76")]([])
