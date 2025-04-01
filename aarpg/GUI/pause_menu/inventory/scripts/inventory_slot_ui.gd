@@ -47,4 +47,7 @@ func item_pressed() -> void:
 			if was_used == false:
 				return
 			slot_data.quantity -= 1
+			
+			if slot_data == null:
+				return # bug fix for null data
 			label.text = str( slot_data.quantity)

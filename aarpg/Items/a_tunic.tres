@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://bu2nxhkgcasrw"]
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=8 format=3 uid="uid://bu2nxhkgcasrw"]
 
 [ext_resource type="Script" path="res://Items/item_effects/item_effect.gd" id="1_wp6pj"]
 [ext_resource type="Script" path="res://Items/scripts/equipable_item_modifier.gd" id="2_iugdd"]
 [ext_resource type="Script" path="res://Items/scripts/equipable_item_data.gd" id="3_vai51"]
+[ext_resource type="Texture2D" uid="uid://dlsm6gho1tt5n" path="res://Player/Sprites/player_sprite.png" id="4_i3ng2"]
 [ext_resource type="Texture2D" uid="uid://c5hrrtv0gpdwp" path="res://Items/sprites/gear.png" id="4_tnmjo"]
 
 [sub_resource type="Resource" id="Resource_2ewyu"]
@@ -18,6 +19,7 @@ region = Rect2(96, 0, 32, 32)
 script = ExtResource("3_vai51")
 type = 1
 modifiers = Array[ExtResource("2_iugdd")]([SubResource("Resource_2ewyu")])
+sprite_texture = ExtResource("4_i3ng2")
 name = "Tunic & Cape"
 description = "The tunic is clean and pressed, and the cape is oh-so-stylish."
 texture = SubResource("AtlasTexture_xog5m")
