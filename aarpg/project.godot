@@ -37,6 +37,10 @@ window/size/window_width_override=1024
 window/size/window_height_override=768
 window/stretch/mode="viewport"
 
+[global_group]
+
+tilemaps="Tilemaps with footstep sounds"
+
 [gui]
 
 theme/custom_font="res://GUI/fonts/Abaddon Light.ttf"
