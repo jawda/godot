@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://2y2nqgid87jq"]
 
-[ext_resource type="Script" path="res://Interactables/TreasureChest/treasure-chest.gd" id="1_qf1lk"]
+[ext_resource type="Script" uid="uid://bwhuhn0j74xrk" path="res://Interactables/TreasureChest/treasure-chest.gd" id="1_qf1lk"]
 [ext_resource type="Texture2D" uid="uid://dji34uug6nywh" path="res://Interactables/TreasureChest/treasure-chest.png" id="2_4t1m7"]
 [ext_resource type="Texture2D" uid="uid://inrfwunr0c35" path="res://Items/sprites/items.png" id="3_0826m"]
 [ext_resource type="AudioStream" uid="uid://noikux3k4erg" path="res://Interactables/TreasureChest/treasure-open.wav" id="4_7iinv"]
@@ -9,33 +9,6 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_obf02"]
 atlas = ExtResource("3_0826m")
 region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="Animation" id="Animation_4fgsl"]
-resource_name = "closed"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ItemSprite:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="Animation" id="Animation_kcnkk"]
 length = 0.001
@@ -88,8 +61,8 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_5mc88"]
-resource_name = "opened"
+[sub_resource type="Animation" id="Animation_4fgsl"]
+resource_name = "closed"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -100,7 +73,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -182,12 +155,39 @@ tracks/4/keys = {
 "values": [Color(1, 1, 1, 1), Color(2, 2, 2, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_5mc88"]
+resource_name = "opened"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ItemSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nlrv7"]
 _data = {
-"RESET": SubResource("Animation_kcnkk"),
-"closed": SubResource("Animation_4fgsl"),
-"open_chest": SubResource("Animation_qu58v"),
-"opened": SubResource("Animation_5mc88")
+&"RESET": SubResource("Animation_kcnkk"),
+&"closed": SubResource("Animation_4fgsl"),
+&"open_chest": SubResource("Animation_qu58v"),
+&"opened": SubResource("Animation_5mc88")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8wlh"]

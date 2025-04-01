@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bh5kk7gdkv36s"]
 
 [ext_resource type="FontFile" uid="uid://bkgabhmtxgeg5" path="res://assets/npc_and_dialog/npc_and_dialog/fonts/Abaddon Bold.ttf" id="1_d1v60"]
-[ext_resource type="Script" path="res://GUI/pause_menu/quests/quest_item.gd" id="1_x4ydh"]
+[ext_resource type="Script" uid="uid://beqdmk03a8g06" path="res://GUI/pause_menu/quests/quest_item.gd" id="1_x4ydh"]
 [ext_resource type="FontFile" uid="uid://cp5b7m5v7msl7" path="res://GUI/fonts/m5x7.ttf" id="2_dwdci"]
 
 [node name="QuestItem" type="Button"]

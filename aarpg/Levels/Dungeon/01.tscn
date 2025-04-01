@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=4 uid="uid://cwv64m6l4k8kw"]
 
-[ext_resource type="Script" path="res://Levels/scripts/level.gd" id="1_cxbvs"]
+[ext_resource type="Script" uid="uid://mnb4mm5aspl8" path="res://Levels/scripts/level.gd" id="1_cxbvs"]
 [ext_resource type="AudioStream" uid="uid://by7u6xwsnp83j" path="res://Levels/music/example_music_03.ogg" id="2_3dwaw"]
 [ext_resource type="PackedScene" uid="uid://bxgl36w8qi2g7" path="res://Levels/PlayerSpawn.tscn" id="2_41uqk"]
 [ext_resource type="PackedScene" uid="uid://c5l2hjwfp15is" path="res://Tile Maps/dungeon_tilemap_01.tscn" id="3_wxkis"]

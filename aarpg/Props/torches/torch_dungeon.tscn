@@ -1,10 +1,25 @@
 [gd_scene load_steps=9 format=3 uid="uid://c1pkyk5usuke7"]
 
 [ext_resource type="Texture2D" uid="uid://b27vya0frlnc" path="res://Props/torches/torch.png" id="1_3smn5"]
-[ext_resource type="Script" path="res://Props/torches/torch_light_flicker.gd" id="2_4bv8o"]
+[ext_resource type="Script" uid="uid://btov6juq7hmki" path="res://Props/torches/torch_light_flicker.gd" id="2_4bv8o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wpumn"]
 radius = 5.99621
+
+[sub_resource type="Animation" id="Animation_45il4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_b414i"]
 resource_name = "default"
@@ -23,25 +38,10 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_45il4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ypfkt"]
 _data = {
-"RESET": SubResource("Animation_45il4"),
-"default": SubResource("Animation_b414i")
+&"RESET": SubResource("Animation_45il4"),
+&"default": SubResource("Animation_b414i")
 }
 
 [sub_resource type="Gradient" id="Gradient_v8mdu"]

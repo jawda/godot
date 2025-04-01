@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dhirerx4bdcis"]
 
 [ext_resource type="Texture2D" uid="uid://c74byxihjqdm1" path="res://Tile Maps/Sprites/Grass-01.png" id="1_wh6et"]
-[ext_resource type="Script" path="res://Tile Maps/LevelTileMap.gd" id="2_ijr1d"]
+[ext_resource type="Script" uid="uid://dm03taw2e7rqh" path="res://Tile Maps/LevelTileMap.gd" id="2_ijr1d"]
 [ext_resource type="Texture2D" uid="uid://dbmbhcd5nu0ws" path="res://Tile Maps/Sprites/dungeon_entrance.png" id="2_lg7h3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgcdd"]

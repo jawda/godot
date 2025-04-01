@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://brfryp2fsb8v"]
 
-[ext_resource type="Script" path="res://Interactables/Dungeon/Scripts/preasure_plate.gd" id="1_rc1pm"]
+[ext_resource type="Script" uid="uid://bburmxkbqswsc" path="res://Interactables/Dungeon/Scripts/preasure_plate.gd" id="1_rc1pm"]
 [ext_resource type="Texture2D" uid="uid://842eylt601np" path="res://Interactables/Dungeon/dungeon_props.png" id="2_yg5mw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k5hud"]

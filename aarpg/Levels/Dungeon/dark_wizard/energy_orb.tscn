@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dhcg6vjuejst7"]
 
-[ext_resource type="Script" path="res://Levels/Dungeon/dark_wizard/script/energy_orb.gd" id="1_oddmf"]
+[ext_resource type="Script" uid="uid://dluhmydtr742s" path="res://Levels/Dungeon/dark_wizard/script/energy_orb.gd" id="1_oddmf"]
 [ext_resource type="PackedScene" uid="uid://c6mkgg4tqxkqp" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="2_6gm0x"]
 [ext_resource type="Material" uid="uid://b23efwb0wmq4c" path="res://shaders_and_materials/light_material.tres" id="2_v5wf2"]
 [ext_resource type="AudioStream" uid="uid://d00i20sej0yim" path="res://Levels/Dungeon/dark_wizard/audio/boss_fireball.wav" id="2_yrtne"]

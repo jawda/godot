@@ -1,6 +1,6 @@
-[gd_scene load_steps=28 format=4 uid="uid://b0w2soj6lfyij"]
+[gd_scene load_steps=29 format=4 uid="uid://b0w2soj6lfyij"]
 
-[ext_resource type="Script" path="res://Levels/scripts/level.gd" id="1_aw8aw"]
+[ext_resource type="Script" uid="uid://mnb4mm5aspl8" path="res://Levels/scripts/level.gd" id="1_aw8aw"]
 [ext_resource type="AudioStream" uid="uid://nmkh7fcopt3w" path="res://Levels/music/example_music_01.ogg" id="2_dyvpa"]
 [ext_resource type="PackedScene" uid="uid://jjxb4vroiltq" path="res://Props/Plants/plant.tscn" id="2_iyl5u"]
 [ext_resource type="PackedScene" uid="uid://ihjs4b0cp6hc" path="res://Tile Maps/grass_tiles-01.tscn" id="3_1u8q8"]
@@ -9,17 +9,18 @@
 [ext_resource type="PackedScene" uid="uid://yn0uwe333y7g" path="res://Levels/level_transition.tscn" id="5_shpk6"]
 [ext_resource type="PackedScene" uid="uid://2y2nqgid87jq" path="res://Interactables/TreasureChest/treasure-chest.tscn" id="6_l05kx"]
 [ext_resource type="Resource" uid="uid://buw2hx6v70ori" path="res://Items/potion.tres" id="7_rfppj"]
+[ext_resource type="PackedScene" uid="uid://cj66qlop856y" path="res://Levels/level_transition_interact.tscn" id="8_abg8o"]
 [ext_resource type="PackedScene" uid="uid://dyjfsgkvtnyd6" path="res://npc/npc.tscn" id="9_5n32n"]
 [ext_resource type="Resource" uid="uid://dt55110bugvjb" path="res://npc/00_npcs/npc_02.tres" id="10_g0u6o"]
 [ext_resource type="Resource" uid="uid://dfjhxkukrasnl" path="res://npc/00_npcs/npc_01.tres" id="10_qmkx6"]
 [ext_resource type="PackedScene" uid="uid://dce6v0qldotlb" path="res://npc/npc_behavior_wander.tscn" id="10_sjfmp"]
 [ext_resource type="PackedScene" uid="uid://brlrqj41moucn" path="res://Interactables/dialog/dialog_interaction.tscn" id="12_5nvsr"]
 [ext_resource type="PackedScene" uid="uid://cj1ldpx0twasu" path="res://npc/npc_behavior_patrol.tscn" id="13_eexcv"]
-[ext_resource type="Script" path="res://Interactables/dialog/scripts/dialog_text.gd" id="13_vxufi"]
+[ext_resource type="Script" uid="uid://bb7u64mp87vb" path="res://Interactables/dialog/scripts/dialog_text.gd" id="13_vxufi"]
 [ext_resource type="PackedScene" uid="uid://dwnvefo40ps3s" path="res://npc/patrol_location.tscn" id="14_1wbg3"]
 [ext_resource type="Resource" uid="uid://dqwbo0wph6w5" path="res://npc/00_npcs/00_hero.tres" id="14_jvm64"]
-[ext_resource type="Script" path="res://Interactables/dialog/scripts/dialog_choice.gd" id="18_cgku2"]
-[ext_resource type="Script" path="res://Interactables/dialog/scripts/dialog_branch.gd" id="19_nb61a"]
+[ext_resource type="Script" uid="uid://c8a7032g6fn73" path="res://Interactables/dialog/scripts/dialog_choice.gd" id="18_cgku2"]
+[ext_resource type="Script" uid="uid://cab25mu6nbb1c" path="res://Interactables/dialog/scripts/dialog_branch.gd" id="19_nb61a"]
 [ext_resource type="PackedScene" uid="uid://bm7tetyr3o4p5" path="res://Props/pot/pot.tscn" id="20_kc2io"]
 [ext_resource type="Resource" uid="uid://bktatdxb41tx7" path="res://quests/recover_lost_flute.tres" id="21_g675j"]
 [ext_resource type="PackedScene" uid="uid://bce567dac6qq3" path="res://quests/utility_nodes/quest_advance_trigger.tscn" id="22_204ab"]
@@ -76,6 +77,12 @@ position = Vector2(212, 164)
 position = Vector2(208, -64)
 level = "res://Levels/Area01/01.tscn"
 size = 3
+side = 2
+
+[node name="LevelTransition_Shop" parent="." instance=ExtResource("8_abg8o")]
+position = Vector2(416, 124)
+level = "uid://2p13wtrmfvqv"
+center_player = true
 side = 2
 
 [node name="Treasure-chest" parent="." instance=ExtResource("6_l05kx")]

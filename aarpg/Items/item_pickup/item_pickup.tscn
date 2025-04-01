@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://3puboudrvdtq"]
 
-[ext_resource type="Script" path="res://Items/item_pickup/item_pickup.gd" id="1_nnihj"]
+[ext_resource type="Script" uid="uid://ys4e7a3siijc" path="res://Items/item_pickup/item_pickup.gd" id="1_nnihj"]
 [ext_resource type="AudioStream" uid="uid://vea24ub7by58" path="res://Items/item_pickup/item_pickup.wav" id="2_gs5pw"]
 [ext_resource type="Texture2D" uid="uid://c4iemhs82ihs6" path="res://Player/Sprites/Shadow.png" id="2_usl5j"]
 [ext_resource type="Texture2D" uid="uid://inrfwunr0c35" path="res://Items/sprites/items.png" id="3_oymwo"]
@@ -11,6 +11,21 @@ radius = 17.0294
 [sub_resource type="AtlasTexture" id="AtlasTexture_2bk0a"]
 atlas = ExtResource("3_oymwo")
 region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="Animation" id="Animation_uy3hx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_ge0r7"]
 resource_name = "default"
@@ -28,25 +43,10 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(0, -6), Vector2(0, 0), Vector2(0, -3), Vector2(0, 0), Vector2(0, -1), Vector2(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_uy3hx"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_06uhw"]
 _data = {
-"RESET": SubResource("Animation_uy3hx"),
-"default": SubResource("Animation_ge0r7")
+&"RESET": SubResource("Animation_uy3hx"),
+&"default": SubResource("Animation_ge0r7")
 }
 
 [node name="ItemPickup" type="CharacterBody2D"]

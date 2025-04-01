@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://bsxby0nar0uqj"]
 
-[ext_resource type="Script" path="res://Levels/scripts/locked_door.gd" id="1_iidak"]
+[ext_resource type="Script" uid="uid://704knlxjpw0i" path="res://Levels/scripts/locked_door.gd" id="1_iidak"]
 [ext_resource type="Texture2D" uid="uid://842eylt601np" path="res://Interactables/Dungeon/dungeon_props.png" id="1_oqdir"]
 [ext_resource type="Resource" uid="uid://ce5li5kh6wwiv" path="res://Items/key_dungeon.tres" id="2_nl582"]
 [ext_resource type="AudioStream" uid="uid://crqf01l1id0dn" path="res://Interactables/Dungeon/locked_door.wav" id="3_b48qs"]
@@ -9,33 +9,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1wft"]
 size = Vector2(63, 56)
-
-[sub_resource type="Animation" id="Animation_5eaam"]
-resource_name = "closed"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("StaticBody2D/CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="Animation" id="Animation_g5egg"]
 length = 0.001
@@ -62,33 +35,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_rnsfn"]
-resource_name = "opened"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("StaticBody2D/CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_pppkk"]
@@ -118,6 +64,33 @@ tracks/1/keys = {
 "values": [true, false]
 }
 
+[sub_resource type="Animation" id="Animation_5eaam"]
+resource_name = "closed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody2D/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_i6yh1"]
 resource_name = "open_door"
 tracks/0/type = "value"
@@ -145,13 +118,40 @@ tracks/1/keys = {
 "values": [false, true]
 }
 
+[sub_resource type="Animation" id="Animation_rnsfn"]
+resource_name = "opened"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody2D/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_meh84"]
 _data = {
-"RESET": SubResource("Animation_g5egg"),
-"close_door": SubResource("Animation_pppkk"),
-"closed": SubResource("Animation_5eaam"),
-"open_door": SubResource("Animation_i6yh1"),
-"opened": SubResource("Animation_rnsfn")
+&"RESET": SubResource("Animation_g5egg"),
+&"close_door": SubResource("Animation_pppkk"),
+&"closed": SubResource("Animation_5eaam"),
+&"open_door": SubResource("Animation_i6yh1"),
+&"opened": SubResource("Animation_rnsfn")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3iard"]
