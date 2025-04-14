@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://b0w2soj6lfyij"]
+[gd_scene load_steps=27 format=4 uid="uid://b0w2soj6lfyij"]
 
 [ext_resource type="Script" uid="uid://mnb4mm5aspl8" path="res://Levels/scripts/level.gd" id="1_aw8aw"]
 [ext_resource type="AudioStream" uid="uid://nmkh7fcopt3w" path="res://Levels/music/example_music_01.ogg" id="2_dyvpa"]
@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://hao0fpom5q7e" path="res://Tile Maps/shop_tilemap_layer.tscn" id="4_ofj2e"]
 [ext_resource type="PackedScene" uid="uid://yn0uwe333y7g" path="res://Levels/level_transition.tscn" id="5_shpk6"]
 [ext_resource type="PackedScene" uid="uid://2y2nqgid87jq" path="res://Interactables/TreasureChest/treasure-chest.tscn" id="6_l05kx"]
-[ext_resource type="Resource" uid="uid://buw2hx6v70ori" path="res://Items/potion.tres" id="7_rfppj"]
 [ext_resource type="PackedScene" uid="uid://cj66qlop856y" path="res://Levels/level_transition_interact.tscn" id="8_abg8o"]
 [ext_resource type="PackedScene" uid="uid://dyjfsgkvtnyd6" path="res://npc/npc.tscn" id="9_5n32n"]
+[ext_resource type="Resource" uid="uid://kn6f7nc4j7ak" path="res://Items/gem.tres" id="10_abg8o"]
 [ext_resource type="Resource" uid="uid://dt55110bugvjb" path="res://npc/00_npcs/npc_02.tres" id="10_g0u6o"]
 [ext_resource type="Resource" uid="uid://dfjhxkukrasnl" path="res://npc/00_npcs/npc_01.tres" id="10_qmkx6"]
 [ext_resource type="PackedScene" uid="uid://dce6v0qldotlb" path="res://npc/npc_behavior_wander.tscn" id="10_sjfmp"]
@@ -24,8 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://bm7tetyr3o4p5" path="res://Props/pot/pot.tscn" id="20_kc2io"]
 [ext_resource type="Resource" uid="uid://bktatdxb41tx7" path="res://quests/recover_lost_flute.tres" id="21_g675j"]
 [ext_resource type="PackedScene" uid="uid://bce567dac6qq3" path="res://quests/utility_nodes/quest_advance_trigger.tscn" id="22_204ab"]
-[ext_resource type="PackedScene" uid="uid://3puboudrvdtq" path="res://Items/item_pickup/item_pickup.tscn" id="24_oxa43"]
-[ext_resource type="Resource" uid="uid://c0a2g43nb4g51" path="res://Items/a_ninja_suit.tres" id="25_7kvi5"]
 [ext_resource type="PackedScene" uid="uid://ctf06qsakuhf3" path="res://quests/utility_nodes/quest_activated_switch.tscn" id="25_nkctc"]
 
 [sub_resource type="GDScript" id="GDScript_woa8d"]
@@ -87,7 +85,8 @@ side = 2
 
 [node name="Treasure-chest" parent="." instance=ExtResource("6_l05kx")]
 position = Vector2(-6, 203)
-item_data = ExtResource("7_rfppj")
+item_data = ExtResource("10_abg8o")
+quantity = 149
 
 [node name="Npc" parent="." instance=ExtResource("9_5n32n")]
 position = Vector2(109, 227)
@@ -258,7 +257,3 @@ position = Vector2(148, 97)
 
 [node name="Pot2" parent="." instance=ExtResource("20_kc2io")]
 position = Vector2(174, 97)
-
-[node name="ItemPickup" parent="." instance=ExtResource("24_oxa43")]
-position = Vector2(102, 58)
-item_data = ExtResource("25_7kvi5")

@@ -23,4 +23,5 @@ sprite_texture = ExtResource("4_vl4rq")
 name = "Iron Sword"
 description = "A standard sword made of Iron."
 texture = SubResource("AtlasTexture_xog5m")
+cost = 200
 effects = Array[ExtResource("1_clepf")]([])

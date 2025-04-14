@@ -21,4 +21,5 @@ script = ExtResource("1_jepii")
 name = "Potion"
 description = "This red drink restores your health!!!"
 texture = SubResource("AtlasTexture_0r2q4")
+cost = 50
 effects = Array[ExtResource("1_oct3h")]([SubResource("Resource_awfkn")])

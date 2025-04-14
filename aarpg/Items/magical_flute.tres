@@ -9,4 +9,5 @@ script = ExtResource("2_5g4ma")
 name = "Nero's Magical Flute"
 description = "This is the Magical Flute that Nero lost in the dungeon"
 texture = ExtResource("3_iq4p7")
+cost = 0
 effects = Array[ExtResource("1_56uxx")]([])

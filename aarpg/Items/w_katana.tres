@@ -23,4 +23,5 @@ sprite_texture = ExtResource("4_gcwvd")
 name = "Katana"
 description = "A blade made from folded steel."
 texture = SubResource("AtlasTexture_xog5m")
+cost = 500
 effects = Array[ExtResource("1_3jj65")]([])
