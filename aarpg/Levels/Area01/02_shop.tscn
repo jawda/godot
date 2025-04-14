@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=4 uid="uid://2p13wtrmfvqv"]
+[gd_scene load_steps=9 format=4 uid="uid://2p13wtrmfvqv"]
 
 [ext_resource type="Script" uid="uid://mnb4mm5aspl8" path="res://Levels/scripts/level.gd" id="1_xgghs"]
 [ext_resource type="AudioStream" uid="uid://nmkh7fcopt3w" path="res://Levels/music/example_music_01.ogg" id="2_u3xya"]
 [ext_resource type="PackedScene" uid="uid://hao0fpom5q7e" path="res://Tile Maps/shop_tilemap_layer.tscn" id="4_5ajat"]
 [ext_resource type="PackedScene" uid="uid://bxgl36w8qi2g7" path="res://Levels/PlayerSpawn.tscn" id="5_b5fy1"]
 [ext_resource type="PackedScene" uid="uid://yn0uwe333y7g" path="res://Levels/level_transition.tscn" id="7_4skut"]
+[ext_resource type="Texture2D" uid="uid://ci75mbhup2qa" path="res://npc/sprites/shopkeeper.png" id="7_cdc6r"]
 [ext_resource type="PackedScene" uid="uid://bm7tetyr3o4p5" path="res://Props/pot/pot.tscn" id="23_386ky"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xm8b8"]
+atlas = ExtResource("7_cdc6r")
 
 [node name="02" type="Node2D"]
 y_sort_enabled = true
@@ -73,3 +77,8 @@ side = 3
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("5_b5fy1")]
 position = Vector2(194, 159)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(333, 67)
+texture = SubResource("AtlasTexture_xm8b8")
+hframes = 15

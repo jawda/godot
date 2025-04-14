@@ -1,0 +1,327 @@
+[gd_scene load_steps=12 format=3 uid="uid://dhepiddiouahw"]
+
+[ext_resource type="Texture2D" uid="uid://inrfwunr0c35" path="res://Items/sprites/items.png" id="1_mswg8"]
+[ext_resource type="Script" uid="uid://r8gdry8ojscu" path="res://GUI/shop_menu/shop_menu.gd" id="1_t0q3b"]
+[ext_resource type="FontFile" uid="uid://bkgabhmtxgeg5" path="res://assets/npc_and_dialog/npc_and_dialog/fonts/Abaddon Bold.ttf" id="2_dt4po"]
+[ext_resource type="PackedScene" uid="uid://cy0cwo8rb53t4" path="res://GUI/shop_menu/shop_item_button.tscn" id="2_lv53b"]
+[ext_resource type="FontFile" uid="uid://crqayx0btmpww" path="res://assets/npc_and_dialog/npc_and_dialog/fonts/m5x7.ttf" id="3_lv53b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt4po"]
+atlas = ExtResource("1_mswg8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="Animation" id="Animation_t0q3b"]
+resource_name = "not_enough_gems"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(-2, -2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(362, 28), Vector2(341, 28), Vector2(361, 28), Vector2(343, 28), Vector2(362, 28)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(2, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ejil7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(362, 28)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pd5r6"]
+_data = {
+&"RESET": SubResource("Animation_ejil7"),
+&"not_enough_gems": SubResource("Animation_t0q3b")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gn2rq"]
+atlas = ExtResource("1_mswg8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lv53b"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = SubResource("AtlasTexture_gn2rq")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+
+[node name="ShopMenu" type="CanvasLayer"]
+layer = 3
+script = ExtResource("1_t0q3b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.160784, 0.160784, 0.160784, 0.823529)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -118.0
+offset_top = 28.0
+offset_right = -20.0
+offset_bottom = 62.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="Control/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_dt4po")
+stretch_mode = 3
+
+[node name="GemLabel" type="Label" parent="Control/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "9999999"
+vertical_alignment = 2
+
+[node name="Spacer" type="Control" parent="Control/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/PanelContainer"]
+libraries = {
+&"": SubResource("AnimationLibrary_pd5r6")
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 66.0
+offset_right = 252.0
+offset_bottom = 233.0
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ShopItemsContainer" type="VBoxContainer" parent="Control/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="ShopItemButton" parent="Control/ScrollContainer/MarginContainer/ShopItemsContainer" instance=ExtResource("2_lv53b")]
+layout_mode = 2
+
+[node name="ShopItemButton2" parent="Control/ScrollContainer/MarginContainer/ShopItemsContainer" instance=ExtResource("2_lv53b")]
+layout_mode = 2
+
+[node name="ShopItemButton3" parent="Control/ScrollContainer/MarginContainer/ShopItemsContainer" instance=ExtResource("2_lv53b")]
+layout_mode = 2
+
+[node name="ShopItemButton4" parent="Control/ScrollContainer/MarginContainer/ShopItemsContainer" instance=ExtResource("2_lv53b")]
+layout_mode = 2
+
+[node name="ShopItemButton5" parent="Control/ScrollContainer/MarginContainer/ShopItemsContainer" instance=ExtResource("2_lv53b")]
+layout_mode = 2
+
+[node name="DetailsPanel" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 66.0
+offset_right = 464.0
+offset_bottom = 232.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_lv53b")
+
+[node name="Control" type="Control" parent="Control/DetailsPanel"]
+layout_mode = 2
+
+[node name="ItemImage" type="TextureRect" parent="Control/DetailsPanel/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = -7.0
+offset_right = 34.0
+offset_bottom = 25.0
+texture = SubResource("AtlasTexture_dt4po")
+stretch_mode = 3
+
+[node name="ItemName" type="Label" parent="Control/DetailsPanel/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 37.0
+offset_right = 181.0
+offset_bottom = 76.0
+text = "Item Name Label 
+"
+vertical_alignment = 2
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="ItemDescription" type="Label" parent="Control/DetailsPanel/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 175.0
+offset_bottom = 103.0
+theme_override_colors/font_color = Color(0.691357, 0.691357, 0.691357, 1)
+theme_override_fonts/font = ExtResource("3_lv53b")
+text = "example item description
+"
+autowrap_mode = 2
+
+[node name="Price Label" type="Label" parent="Control/DetailsPanel/Control"]
+layout_mode = 1
+offset_left = 97.0
+offset_top = -5.0
+offset_right = 201.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.691357, 0.691357, 0.691357, 1)
+theme_override_fonts/font = ExtResource("3_lv53b")
+text = "Purchase Price
+
+"
+autowrap_mode = 2
+
+[node name="ItemPrice" type="Label" parent="Control/DetailsPanel/Control"]
+layout_mode = 1
+offset_left = 53.0
+offset_top = -5.0
+offset_right = 81.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("3_lv53b")
+text = "999
+"
+autowrap_mode = 2
+
+[node name="ItemHeldCount" type="Label" parent="Control/DetailsPanel/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 53.0
+offset_top = 9.0
+offset_right = 81.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_lv53b")
+text = "999
+"
+autowrap_mode = 2
+
+[node name="InventoryCountLabel" type="Label" parent="Control/DetailsPanel/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 97.0
+offset_top = 9.0
+offset_right = 201.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.691357, 0.691357, 0.691357, 1)
+theme_override_fonts/font = ExtResource("3_lv53b")
+text = "In Inventory
+
+"
+autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control/DetailsPanel/Control"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 0
+offset_left = 97.0
+offset_top = 9.0
+offset_right = 176.0
+offset_bottom = 10.0
+color = Color(0.303233, 0.303233, 0.303233, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Control/DetailsPanel/Control"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 57.0
+offset_right = 178.0
+offset_bottom = 58.0
+color = Color(0.303233, 0.303233, 0.303233, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Control/DetailsPanel/Control"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 0
+offset_left = 96.0
+offset_top = 24.0
+offset_right = 175.0
+offset_bottom = 25.0
+color = Color(0.303233, 0.303233, 0.303233, 1)
+
+[node name="CloseButton" type="Button" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 396.0
+offset_top = 236.0
+offset_right = 456.0
+offset_bottom = 262.0
+text = "Close
+"
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0.533333)
+offset_left = 38.0
+offset_top = 18.0
+offset_right = 135.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("2_dt4po")
+text = "ShopKeeper
+"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
