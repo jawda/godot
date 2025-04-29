@@ -1,0 +1,178 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwo8h1qvhkdxh"]
+
+[ext_resource type="Texture2D" uid="uid://dvp6756v7ghgj" path="res://fishing_background.jpg" id="1_a11f7"]
+[ext_resource type="Texture2D" uid="uid://ckuie3i1qkntt" path="res://fish_icon.png" id="1_b4nk1"]
+[ext_resource type="Script" uid="uid://rtm24vr4gv8b" path="res://fishing_mini_game.gd" id="1_kfrmw"]
+[ext_resource type="Script" uid="uid://dw4811rjyaxlk" path="res://catch_progress.gd" id="2_a11f7"]
+[ext_resource type="Script" uid="uid://b6885kkn42owu" path="res://fish_box.gd" id="2_hpxao"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hpxao"]
+bg_color = Color(0.0980392, 0.423529, 0.266667, 1)
+
+[node name="FishingMiniGame" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kfrmw")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -303.0
+offset_top = -150.0
+offset_right = 309.0
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(290, 200)
+texture = ExtResource("1_a11f7")
+stretch_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+modulate = Color(0.756863, 0.815686, 1, 0.443137)
+self_modulate = Color(0.572988, 0.572988, 0.572988, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Interface" type="HBoxContainer" parent="."]
+process_mode = 1
+custom_minimum_size = Vector2(24, 90)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 114.0
+offset_top = -51.0
+offset_right = 154.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FishBox" type="Control" parent="Interface"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.6
+script = ExtResource("2_hpxao")
+
+[node name="Border" type="ColorRect" parent="Interface/FishBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+color = Color(0.737255, 0.435294, 0.607843, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Interface/FishBox/Border"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Fill" type="ColorRect" parent="Interface/FishBox/Border/MarginContainer"]
+custom_minimum_size = Vector2(14, 82)
+layout_mode = 2
+color = Color(0.027451, 0.254902, 0.862745, 1)
+
+[node name="FishIcon" type="TextureRect" parent="Interface/FishBox/Border/MarginContainer/Fill"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(4, 4)
+texture = ExtResource("1_b4nk1")
+stretch_mode = 2
+
+[node name="CatchBar" type="ColorRect" parent="Interface/FishBox/Border/MarginContainer/Fill"]
+custom_minimum_size = Vector2(14, 20)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.321924, 0.503027, 0.261556, 0.658824)
+
+[node name="FishMove" type="Timer" parent="Interface/FishBox"]
+autostart = true
+
+[node name="CatchProgress" type="Control" parent="Interface"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_a11f7")
+
+[node name="Border" type="ColorRect" parent="Interface/CatchProgress"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+color = Color(0.737255, 0.435294, 0.607843, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Interface/CatchProgress/Border"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="Interface/CatchProgress/Border/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_hpxao")
+max_value = 1000.0
+value = 50.0
+fill_mode = 3
+show_percentage = false
+
+[node name="EndText" type="Label" parent="."]
+layout_mode = 0
+offset_left = -95.0
+offset_top = -34.0
+offset_bottom = -9.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="fish_in_range" from="Interface/FishBox" to="." method="_on_fish_box_fish_in_range"]
+[connection signal="timeout" from="Interface/FishBox/FishMove" to="Interface/FishBox" method="_on_fish_move_timeout"]
+[connection signal="fish_caught" from="Interface/CatchProgress" to="." method="_on_catch_progress_fish_caught"]
+[connection signal="fish_escaped" from="Interface/CatchProgress" to="." method="_on_catch_progress_fish_escaped"]
