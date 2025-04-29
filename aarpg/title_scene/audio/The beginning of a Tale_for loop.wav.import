@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bwuarj8kao7uq"
+path="res://.godot/imported/The beginning of a Tale_for loop.wav-d2e76f1f9b44edd5369d7119e3f05c66.sample"
+
+[deps]
+
+source_file="res://title_scene/audio/The beginning of a Tale_for loop.wav"
+dest_files=["res://.godot/imported/The beginning of a Tale_for loop.wav-d2e76f1f9b44edd5369d7119e3f05c66.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

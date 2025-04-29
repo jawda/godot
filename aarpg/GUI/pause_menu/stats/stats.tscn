@@ -1,0 +1,113 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6hshym1flwxs"]
+
+[ext_resource type="Texture2D" uid="uid://inrfwunr0c35" path="res://Items/sprites/items.png" id="1_70c0b"]
+[ext_resource type="Script" uid="uid://y4ed51yjdus4" path="res://GUI/pause_menu/stats/stats.gd" id="2_62o6q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gn2rq"]
+atlas = ExtResource("1_70c0b")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lgu70"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = SubResource("AtlasTexture_gn2rq")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+
+[node name="Stats" type="PanelContainer"]
+offset_right = 308.0
+offset_bottom = 104.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_lgu70")
+script = ExtResource("2_62o6q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Level_Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.831373, 0.498039, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Level"
+
+[node name="Level_Value_Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "1"
+
+[node name="XP_Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(53, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.831373, 0.498039, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "XP"
+
+[node name="XP_Value_Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "1"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+
+[node name="Attack_Label" type="Label" parent="VBoxContainer/HBoxContainer3/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.831373, 0.498039, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Attack"
+
+[node name="Attack_Value_Label" type="Label" parent="VBoxContainer/HBoxContainer3/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "1"
+
+[node name="Attack_Value_Change_Label" type="Label" parent="VBoxContainer/HBoxContainer3/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "+1"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+
+[node name="Defense_Label" type="Label" parent="VBoxContainer/HBoxContainer3/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.831373, 0.498039, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Defense"
+
+[node name="Defense_Value_Label" type="Label" parent="VBoxContainer/HBoxContainer3/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "1"
+
+[node name="Defense_Value_Change_Label" type="Label" parent="VBoxContainer/HBoxContainer3/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "+1"

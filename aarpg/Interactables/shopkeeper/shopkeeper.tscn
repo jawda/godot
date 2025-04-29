@@ -1,0 +1,193 @@
+[gd_scene load_steps=15 format=3 uid="uid://ei7jihlnvw1q"]
+
+[ext_resource type="Script" uid="uid://1shhfu070mt4" path="res://Interactables/shopkeeper/shopkeeper.gd" id="1_0pe81"]
+[ext_resource type="PackedScene" uid="uid://dyjfsgkvtnyd6" path="res://npc/npc.tscn" id="2_f4o7l"]
+[ext_resource type="Resource" uid="uid://2xa5mmvlw7o6" path="res://npc/00_npcs/shopkeeper.tres" id="3_yevov"]
+[ext_resource type="Script" uid="uid://bw5kl57f653dp" path="res://Interactables/dialog/scripts/dialog_interaction.gd" id="4_rm5k1"]
+[ext_resource type="Texture2D" uid="uid://0b6ui5k1quyr" path="res://Interactables/dialog/sprites/dialog_interactable.png" id="5_l65jf"]
+[ext_resource type="Script" uid="uid://bb7u64mp87vb" path="res://Interactables/dialog/scripts/dialog_text.gd" id="5_rm5k1"]
+[ext_resource type="Script" uid="uid://c8a7032g6fn73" path="res://Interactables/dialog/scripts/dialog_choice.gd" id="6_l65jf"]
+[ext_resource type="Script" uid="uid://cab25mu6nbb1c" path="res://Interactables/dialog/scripts/dialog_branch.gd" id="7_cap4d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxl5u"]
+size = Vector2(44, 51)
+
+[sub_resource type="Animation" id="Animation_2lgmn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, -52)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yt4e4"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, -52)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fqrwt"]
+resource_name = "hide"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2, -55), Vector2(2, -52)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_v537w"]
+resource_name = "show"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2, -52), Vector2(2, -55)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n4326"]
+_data = {
+&"RESET": SubResource("Animation_2lgmn"),
+&"default": SubResource("Animation_yt4e4"),
+&"hide": SubResource("Animation_fqrwt"),
+&"show": SubResource("Animation_v537w")
+}
+
+[node name="Shopkeeper" type="Node2D"]
+script = ExtResource("1_0pe81")
+
+[node name="Npc" parent="." instance=ExtResource("2_f4o7l")]
+npc_resource = ExtResource("3_yevov")
+
+[node name="DialogInteraction" type="Area2D" parent="Npc"]
+process_mode = 3
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+script = ExtResource("4_rm5k1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Npc/DialogInteraction"]
+z_index = 100
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_dxl5u")
+debug_color = Color(0.241635, 0.621807, 0.395385, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="Npc/DialogInteraction"]
+position = Vector2(2, -52)
+texture = ExtResource("5_l65jf")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Npc/DialogInteraction"]
+process_mode = 3
+libraries = {
+&"": SubResource("AnimationLibrary_n4326")
+}
+autoplay = "default"
+
+[node name="DialogText" type="Node" parent="Npc/DialogInteraction"]
+script = ExtResource("5_rm5k1")
+text = "
+May I interest you in my wares?"
+npc_info = ExtResource("3_yevov")
+metadata/_custom_type_script = "uid://bb7u64mp87vb"
+
+[node name="DialogChoice" type="Node" parent="Npc/DialogInteraction"]
+script = ExtResource("6_l65jf")
+npc_info = ExtResource("3_yevov")
+metadata/_custom_type_script = "uid://c8a7032g6fn73"
+
+[node name="DialogBranch" type="Node" parent="Npc/DialogInteraction/DialogChoice"]
+script = ExtResource("7_cap4d")
+text = "Yes"
+npc_info = ExtResource("3_yevov")
+metadata/_custom_type_script = "uid://cab25mu6nbb1c"
+
+[node name="DialogBranch2" type="Node" parent="Npc/DialogInteraction/DialogChoice"]
+script = ExtResource("7_cap4d")
+text = "No"
+npc_info = ExtResource("3_yevov")
+metadata/_custom_type_script = "uid://cab25mu6nbb1c"
+
+[node name="DialogText" type="Node" parent="Npc/DialogInteraction/DialogChoice/DialogBranch2"]
+script = ExtResource("5_rm5k1")
+text = "
+I'll be here when you need some stuff!"
+npc_info = ExtResource("3_yevov")
+metadata/_custom_type_script = "uid://bb7u64mp87vb"

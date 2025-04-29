@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=7 format=3 uid="uid://2aqw6kc6o01l"]
+
+[ext_resource type="Script" uid="uid://crh77fs8dud8m" path="res://GUI/pause_menu/inventory/scripts/inventory_data.gd" id="1_wd85r"]
+[ext_resource type="Script" uid="uid://bjl7eyqi4w24" path="res://GUI/pause_menu/inventory/scripts/slot_data.gd" id="2_rdleg"]
+[ext_resource type="Resource" uid="uid://bu2nxhkgcasrw" path="res://Items/a_tunic.tres" id="3_g7gi6"]
+[ext_resource type="Resource" uid="uid://ihlu7im27e18" path="res://Items/w_iron_sword.tres" id="4_7ayu3"]
+
+[sub_resource type="Resource" id="Resource_x8rjt"]
+script = ExtResource("2_rdleg")
+item_data = ExtResource("3_g7gi6")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_rlghg"]
+script = ExtResource("2_rdleg")
+item_data = ExtResource("4_7ayu3")
+quantity = 1
+
+[resource]
+script = ExtResource("1_wd85r")
+slots = Array[ExtResource("2_rdleg")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_x8rjt"), SubResource("Resource_rlghg"), null, null])

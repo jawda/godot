@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://16fe38x8vcov"]
+
+[ext_resource type="Script" uid="uid://c0fcrxlv30uv5" path="res://00_Globals/global_effects/damage_text.gd" id="1_2rytm"]
+[ext_resource type="FontFile" uid="uid://cp5b7m5v7msl7" path="res://GUI/fonts/m5x7.ttf" id="1_mw4cd"]
+
+[node name="DamageText" type="Node2D"]
+z_index = 10
+script = ExtResource("1_2rytm")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -15.0
+offset_right = 20.0
+offset_bottom = 3.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_fonts/font = ExtResource("1_mw4cd")
+text = "99"
+horizontal_alignment = 1
