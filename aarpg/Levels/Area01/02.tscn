@@ -86,7 +86,7 @@ side = 2
 [node name="Treasure-chest" parent="." instance=ExtResource("6_l05kx")]
 position = Vector2(-6, 203)
 item_data = ExtResource("10_abg8o")
-quantity = 149
+quantity = 600
 
 [node name="Npc" parent="." instance=ExtResource("9_5n32n")]
 position = Vector2(109, 227)
