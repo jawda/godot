@@ -36,6 +36,7 @@ text = "999"
 horizontal_alignment = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 34.0
