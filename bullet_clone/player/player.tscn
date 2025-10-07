@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://rie1grhqkqfj"]
+
+[ext_resource type="Script" uid="uid://1gb08vq3560i" path="res://player/player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://d0h0nwyskxqd1" path="res://assets/player/witch.png" id="2_onrkg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
+atlas = ExtResource("2_onrkg")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+size = Vector2(29, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
+size = Vector2(20, 41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkbax"]
+bg_color = Color(0.796078, 0.0156863, 0.12549, 1)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_4flbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_i3pqv")
+hframes = 3
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_i3pqv")
+
+[node name="SelfDamage" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="SelfDamage"]
+unique_name_in_owner = true
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_rkbax")
+
+[node name="Health" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -11.0
+offset_top = -22.0
+offset_right = -7.0
+offset_bottom = 5.0
+rotation = -1.57189
+theme_override_styles/fill = SubResource("StyleBoxFlat_rkbax")
+value = 100.0
+fill_mode = 2
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="body_entered" from="SelfDamage" to="." method="_on_self_damage_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

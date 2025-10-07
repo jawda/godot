@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckfy1y7fq0a6v"]
+
+[ext_resource type="PackedScene" uid="uid://g5nh41vnsv7u" path="res://spawner.tscn" id="1_ia1lp"]
+[ext_resource type="PackedScene" uid="uid://rie1grhqkqfj" path="res://player/player.tscn" id="1_uhqqe"]
+
+[sub_resource type="TileSet" id="TileSet_ia1lp"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Parallax2D"]
+tile_set = SubResource("TileSet_ia1lp")
+
+[node name="Spawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_ia1lp")]
+player = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("1_uhqqe")]
+position = Vector2(296, 230)
