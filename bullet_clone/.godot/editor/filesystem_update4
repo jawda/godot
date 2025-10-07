@@ -1,0 +1,12 @@
+res://enemy/enemy.tscn
+res://player/player.tscn
+res://test_scene.tscn
+res://spawner.tscn
+res://spawner.gd
+res://enemy/resources/eye.tres
+res://enemy/resources/cactar.tres
+res://enemy/resources/fireball.tres
+res://enemy/resources/ghost.tres
+res://enemy/enemy.gd
+res://player/player.gd
+res://shaders/rainbow_outline.gdshader
