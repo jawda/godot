@@ -17,7 +17,8 @@ func exit() -> void:
 
 #  What happens when an input is pressed or released?
 func handle_input( _event : InputEvent ) -> PlayerState:
-	
+	if _event.is_action_pressed( "jump" ):
+		return jump
 	return next_state
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,5 +28,7 @@ func process(_delta: float) -> PlayerState:
 	return next_state
 
 func physics_process(_delta: float) -> PlayerState:
-	player.velocity.x = player.direction.x * move_speed
+	player.velocity.x = player.direction.x * player.move_speed
+	if player.is_on_floor() == false:
+		return fall
 	return next_state

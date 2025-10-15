@@ -7,6 +7,8 @@ var next_state : PlayerState
 #refrence to all other states
 @onready var idle: PlayerStateIdle = %Idle
 @onready var run: PlayerStateRun = %Run
+@onready var jump: PlayerStateJump = %Jump
+@onready var fall: PlayerStateFall = %Fall
 
 #endregion
 
