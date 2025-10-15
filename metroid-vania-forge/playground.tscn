@@ -94,9 +94,9 @@ position = Vector2(0, 0.15611267)
 shape = SubResource("RectangleShape2D_wt17y")
 
 [node name="Sprite2D8" type="Sprite2D" parent="."]
-position = Vector2(37.820747, 206.75043)
+position = Vector2(37.82123, 206.90378)
 rotation = -0.002264917
-scale = Vector2(2.00358, 1.6702017)
+scale = Vector2(2.0035887, 1.6606177)
 texture = SubResource("GradientTexture2D_rupst")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D8"]

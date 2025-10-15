@@ -1,5 +1,3 @@
-#need to add icon from itch.io page here
-#@icon("res://player/states/state.svg")
 class_name PlayerState extends Node
 
 var player : Player
@@ -7,6 +5,8 @@ var next_state : PlayerState
 
 #region /// state references
 #refrence to all other states
+@onready var idle: PlayerStateIdle = %Idle
+@onready var run: PlayerStateRun = %Run
 
 #endregion
 

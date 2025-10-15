@@ -22,9 +22,10 @@ func handle_input( _event : InputEvent ) -> PlayerState:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func process(_delta: float) -> PlayerState:
-
+	if player.direction.x == 0:
+		return idle
 	return next_state
 
 func physics_process(_delta: float) -> PlayerState:
-	
+	player.velocity.x = player.direction.x * move_speed
 	return next_state
