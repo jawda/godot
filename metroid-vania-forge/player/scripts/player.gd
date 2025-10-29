@@ -2,6 +2,13 @@ class_name Player extends CharacterBody2D
 
 const DEBUG_JUMP_INDICATOR = preload("uid://15x4hdojyhm5")
 
+#region /// onready variables
+@onready var sprite: Sprite2D = $Sprite2D
+@onready var collision_stand: CollisionShape2D = $CollisionStand
+@onready var collision_crouch: CollisionShape2D = $CollisionCrouch
+@onready var one_way_platform_raycast: RayCast2D = $OneWayPlatformRaycast
+
+#endregion
 
 #region /// Export variables
 @export var move_speed : float = 100
@@ -29,11 +36,13 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	change_state( current_state.handle_input( event ) )
+	
 	pass
 
 func _process( _delta: float) -> void:
 	update_direction()
 	change_state( current_state.process( _delta ) )
+	
 	pass
 
 func _physics_process(_delta: float) -> void:
@@ -41,6 +50,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	change_state( current_state.physics_process( _delta ) )
 	
+	$Label.text = current_state.name
 	pass
 
 func initialize_states()-> void:
@@ -63,6 +73,7 @@ func initialize_states()-> void:
 	#set first state
 	change_state( current_state )
 	current_state.enter()
+	
 	$Label.text = current_state.name
 	pass
 
