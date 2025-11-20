@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MetroidVaniaForge"
-run/main_scene="uid://c5ba8o851ncfd"
+run/main_scene="uid://bhq5sxycj6wg0"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
