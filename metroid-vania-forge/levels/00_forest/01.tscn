@@ -7,7 +7,7 @@
 [node name="01" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_1pu88")]
-position = Vector2(62, 197)
+position = Vector2(65, 219)
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
 self_modulate = Color(0.7294118, 0.85490197, 1, 1)
