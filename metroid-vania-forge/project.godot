@@ -15,6 +15,10 @@ run/main_scene="uid://bhq5sxycj6wg0"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SceneManager="*res://00_global/scene_manager/scene_manager.tscn"
+
 [display]
 
 window/size/viewport_width=480
@@ -22,6 +26,10 @@ window/size/viewport_height=270
 window/size/window_width_override=1440
 window/size/window_height_override=810
 window/stretch/mode="canvas_items"
+
+[global_group]
+
+Player=""
 
 [input]
 
@@ -84,6 +92,7 @@ action={
 
 2d_physics/layer_1="Ground"
 2d_physics/layer_2="One Way Platform"
+2d_physics/layer_5="Player"
 
 [rendering]
 

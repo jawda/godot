@@ -108,9 +108,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_boad6"]
 size = Vector2(16, 3)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 1
-collision_layer = 0
+collision_layer = 16
 collision_mask = 3
 script = ExtResource("1_oul6g")
 move_speed = 150.0
