@@ -5,6 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://cgawoyogixas1" path="res://general/level_transition/level_transition.tscn" id="3_vv2jw"]
 [ext_resource type="PackedScene" uid="uid://btuduxlulrlgm" path="res://levels/props/torch.tscn" id="4_r7adf"]
 
+[sub_resource type="Gradient" id="Gradient_r7adf"]
+offsets = PackedFloat32Array(0, 0.60362697)
+colors = PackedColorArray(0.029699998, 0.11, 0.11, 1, 0.96726984, 0.97534174, 0.99640626, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7vwju"]
+gradient = SubResource("Gradient_r7adf")
+fill_from = Vector2(0.514652, 0.6208791)
+fill_to = Vector2(0.5, 0)
+
 [node name="03" type="Node2D" unique_id=1331686108]
 
 [node name="LevelBounds" type="Node2D" parent="." unique_id=1179052359]
@@ -50,3 +59,13 @@ position = Vector2(1274, 210)
 
 [node name="Torch4" parent="props" unique_id=1707814846 instance=ExtResource("4_r7adf")]
 position = Vector2(1117, 210)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1419706522]
+color = Color(0.0510154, 0.15282857, 0.13212761, 1)
+blend_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=778619202]
+modulate = Color(1, 1, 1, 0.6156863)
+position = Vector2(755.5, 108.00001)
+scale = Vector2(24.609375, 6.9375)
+texture = SubResource("GradientTexture2D_7vwju")
