@@ -23,7 +23,7 @@ operator = 2
 [resource]
 mode = 1
 flags/light_only = false
-nodes/fragment/0/position = Vector2(816, 176)
+nodes/fragment/0/position = Vector2(832, 80)
 nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_1gi2e")
 nodes/fragment/2/position = Vector2(112, 160)
 nodes/fragment/3/node = SubResource("VisualShaderNodeInput_xrp3g")

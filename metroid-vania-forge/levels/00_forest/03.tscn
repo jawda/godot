@@ -65,6 +65,7 @@ color = Color(0.0510154, 0.15282857, 0.13212761, 1)
 blend_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=778619202]
+visible = false
 modulate = Color(1, 1, 1, 0.6156863)
 position = Vector2(755.5, 108.00001)
 scale = Vector2(24.609375, 6.9375)
