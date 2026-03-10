@@ -1,0 +1,145 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkxs8jjrww27b"]
+
+[ext_resource type="Script" uid="uid://d35kqm6a6ili1" path="res://characters/level/level_up_screen.gd" id="1"]
+[ext_resource type="Texture2D" path="res://characters/portraits/portrait_placeholder.svg" id="2"]
+[ext_resource type="Texture2D" path="res://assets/icons/icon_sword.svg" id="3"]
+
+[node name="LevelUpScreen" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1")
+sword_icon = ExtResource("3")
+
+[node name="BG" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.75)
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -310.0
+offset_right = 220.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_bottom = 24
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_right = 28
+
+[node name="VBox" type="VBoxContainer" parent="Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HeaderRow" type="HBoxContainer" parent="Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Portrait" type="TextureRect" parent="Panel/Margin/VBox/HeaderRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 80)
+texture = ExtResource("2")
+stretch_mode = 5
+
+[node name="HeaderText" type="VBoxContainer" parent="Panel/Margin/VBox/HeaderRow"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="CharacterName" type="Label" parent="Panel/Margin/VBox/HeaderRow/HeaderText"]
+layout_mode = 2
+text = "Character Name"
+theme_override_font_sizes/font_size = 22
+
+[node name="HSepHeader" type="HSeparator" parent="Panel/Margin/VBox/HeaderRow/HeaderText"]
+layout_mode = 2
+
+[node name="ClassLabel" type="Label" parent="Panel/Margin/VBox/HeaderRow/HeaderText"]
+layout_mode = 2
+text = "Class"
+theme_override_font_sizes/font_size = 13
+modulate = Color(0.75, 0.75, 0.75, 1)
+
+[node name="Title" type="Label" parent="Panel/Margin/VBox/HeaderRow/HeaderText"]
+layout_mode = 2
+text = "level up"
+theme_override_font_sizes/font_size = 13
+modulate = Color(0.6, 0.6, 0.6, 1)
+
+[node name="HSep1" type="HSeparator" parent="Panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="InfoSection" type="VBoxContainer" parent="Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LevelRow" type="HBoxContainer" parent="Panel/Margin/VBox/InfoSection"]
+layout_mode = 2
+
+[node name="LevelName" type="Label" parent="Panel/Margin/VBox/InfoSection/LevelRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level"
+
+[node name="LevelValue" type="Label" parent="Panel/Margin/VBox/InfoSection/LevelRow"]
+layout_mode = 2
+text = "1"
+horizontal_alignment = 2
+
+[node name="PointsRow" type="HBoxContainer" parent="Panel/Margin/VBox/InfoSection"]
+layout_mode = 2
+
+[node name="PointsName" type="Label" parent="Panel/Margin/VBox/InfoSection/PointsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Points Available"
+
+[node name="PointsValue" type="Label" parent="Panel/Margin/VBox/InfoSection/PointsRow"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 2
+
+[node name="HSep2" type="HSeparator" parent="Panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="Tabs" type="TabContainer" parent="Panel/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Attributes" type="MarginContainer" parent="Panel/Margin/VBox/Tabs"]
+layout_mode = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_right = 4
+
+[node name="AttrVBox" type="VBoxContainer" parent="Panel/Margin/VBox/Tabs/Attributes"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="StatList" type="VBoxContainer" parent="Panel/Margin/VBox/Tabs/Attributes/AttrVBox"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="HSep3" type="HSeparator" parent="Panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="ButtonRow" type="HBoxContainer" parent="Panel/Margin/VBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="CancelButton" type="Button" parent="Panel/Margin/VBox/ButtonRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(110, 34)
+text = "Cancel"
+
+[node name="ConfirmButton" type="Button" parent="Panel/Margin/VBox/ButtonRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(110, 34)
+text = "Confirm"

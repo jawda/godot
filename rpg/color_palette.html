@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG Color Palette — Blood & Parchment</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #0D0B0A;
+      color: #E8D5B0;
+      font-family: 'IM Fell English', Georgia, serif;
+      padding: 48px 32px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-family: 'IM Fell English SC', Georgia, serif;
+      font-size: 2rem;
+      color: #C4922A;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      color: #9A8878;
+      font-style: italic;
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-family: 'IM Fell English SC', Georgia, serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #9A8878;
+      border-bottom: 1px solid #2A211C;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .swatches {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      width: 160px;
+    }
+
+    .swatch-color {
+      width: 100%;
+      height: 80px;
+      border-radius: 4px 4px 0 0;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .swatch-info {
+      background: #1C1714;
+      border: 1px solid #2A211C;
+      border-top: none;
+      border-radius: 0 0 4px 4px;
+      padding: 10px 12px;
+    }
+
+    .swatch-name {
+      font-size: 0.95rem;
+      color: #E8D5B0;
+      margin-bottom: 2px;
+    }
+
+    .swatch-hex {
+      font-family: 'Courier New', monospace;
+      font-size: 0.8rem;
+      color: #9A8878;
+      margin-bottom: 4px;
+    }
+
+    .swatch-usage {
+      font-size: 0.75rem;
+      color: #9A8878;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .preview-section {
+      margin-top: 48px;
+    }
+
+    .ui-mock {
+      background: #1C1714;
+      border: 1px solid #2A211C;
+      border-radius: 4px;
+      padding: 28px 32px;
+      max-width: 440px;
+    }
+
+    .ui-mock h2 {
+      font-family: 'IM Fell English SC', Georgia, serif;
+      color: #E8D5B0;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+
+    .ui-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px solid #2A211C;
+      font-size: 0.95rem;
+    }
+
+    .ui-row:last-of-type { border-bottom: none; }
+
+    .ui-row .label { color: #E8D5B0; }
+    .ui-row .val-current { color: #9A8878; }
+    .ui-row .val-arrow { color: #2A211C; margin: 0 8px; }
+    .ui-row .val-new { color: #E8D5B0; }
+    .ui-row .val-increased { color: #D4AF5A; }
+    .ui-row .val-decreased { color: #8B3030; }
+
+    .ui-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 8px 28px;
+      border: 1px solid #C4922A;
+      background: transparent;
+      color: #C4922A;
+      font-family: 'IM Fell English', Georgia, serif;
+      font-size: 0.95rem;
+      border-radius: 2px;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn:hover {
+      background: #C4922A;
+      color: #0D0B0A;
+    }
+
+    .btn.secondary {
+      border-color: #2A211C;
+      color: #9A8878;
+    }
+
+    .btn.secondary:hover {
+      background: #2A211C;
+      color: #E8D5B0;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #2A211C;
+      margin: 12px 0;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      font-size: 0.9rem;
+    }
+
+    .info-row .key { color: #E8D5B0; }
+    .info-row .val { color: #9A8878; }
+  </style>
+</head>
+<body>
+
+  <h1>Blood &amp; Parchment</h1>
+  <p class="subtitle">Eastern European Dark Fantasy — Transylvania / Bram Stoker's Dracula</p>
+
+  <!-- BACKGROUNDS -->
+  <div class="section">
+    <div class="section-title">Backgrounds &amp; Surfaces</div>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0D0B0A;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Void</div>
+          <div class="swatch-hex">#0D0B0A</div>
+          <div class="swatch-usage">Scene backgrounds, deep shadow</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1C1714;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Crypt Stone</div>
+          <div class="swatch-hex">#1C1714</div>
+          <div class="swatch-usage">UI panels, containers</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#2A211C;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Worn Stone</div>
+          <div class="swatch-hex">#2A211C</div>
+          <div class="swatch-usage">Hover states, separators</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEXT -->
+  <div class="section">
+    <div class="section-title">Text</div>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#E8D5B0;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Aged Parchment</div>
+          <div class="swatch-hex">#E8D5B0</div>
+          <div class="swatch-usage">Primary readable text</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#9A8878;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Faded Ink</div>
+          <div class="swatch-hex">#9A8878</div>
+          <div class="swatch-usage">Labels, secondary info</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCENTS -->
+  <div class="section">
+    <div class="section-title">Accents</div>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#8B1A1A;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Dried Blood</div>
+          <div class="swatch-hex">#8B1A1A</div>
+          <div class="swatch-usage">Health, danger, primary accent</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#C4922A;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Tarnished Gold</div>
+          <div class="swatch-hex">#C4922A</div>
+          <div class="swatch-usage">Buttons, interactive, ornamental</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#4A1A5C;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Nightshade</div>
+          <div class="swatch-hex">#4A1A5C</div>
+          <div class="swatch-usage">Magic, faith, the arcane</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#B8C5D6;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Moonstone</div>
+          <div class="swatch-hex">#B8C5D6</div>
+          <div class="swatch-usage">Cold, ethereal, silver</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATUS -->
+  <div class="section">
+    <div class="section-title">Status &amp; Feedback</div>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#D4AF5A;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Pale Gold</div>
+          <div class="swatch-hex">#D4AF5A</div>
+          <div class="swatch-usage">Stat increased, XP gain</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#8B3030;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Coagulated</div>
+          <div class="swatch-hex">#8B3030</div>
+          <div class="swatch-usage">Stat decreased, damage taken</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#4A6248;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Grave Moss</div>
+          <div class="swatch-hex">#4A6248</div>
+          <div class="swatch-usage">Healing, nature magic</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UI PREVIEW -->
+  <div class="preview-section">
+    <div class="section-title">UI Preview — Level Up Screen</div>
+    <div class="ui-mock">
+      <h2>Level Up</h2>
+      <hr class="divider">
+      <div class="info-row"><span class="key">Level</span><span class="val">4</span></div>
+      <div class="info-row"><span class="key">Points Available</span><span class="val">3</span></div>
+      <hr class="divider">
+      <div style="font-size:0.75rem; color:#9A8878; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:10px;">Attribute Points</div>
+      <div class="ui-row">
+        <span class="label">Strength</span>
+        <span><span class="val-current">12</span><span class="val-arrow"> → </span><span class="val-increased">14</span></span>
+      </div>
+      <div class="ui-row">
+        <span class="label">Dexterity</span>
+        <span><span class="val-current">10</span><span class="val-arrow"> → </span><span class="val-new">10</span></span>
+      </div>
+      <div class="ui-row">
+        <span class="label">Vigor</span>
+        <span><span class="val-current">10</span><span class="val-arrow"> → </span><span class="val-increased">11</span></span>
+      </div>
+      <div class="ui-row">
+        <span class="label">Faith</span>
+        <span><span class="val-current">8</span><span class="val-arrow"> → </span><span class="val-new">8</span></span>
+      </div>
+      <div class="ui-row">
+        <span class="label">Intelligence</span>
+        <span><span class="val-current">9</span><span class="val-arrow"> → </span><span class="val-new">9</span></span>
+      </div>
+      <div class="ui-row">
+        <span class="label">Charisma</span>
+        <span><span class="val-current">10</span><span class="val-arrow"> → </span><span class="val-decreased">9</span></span>
+      </div>
+      <div class="ui-buttons">
+        <button class="btn secondary">Cancel</button>
+        <button class="btn">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
