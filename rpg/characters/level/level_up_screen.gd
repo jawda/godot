@@ -109,7 +109,7 @@ func _build_stat_rows() -> void:
 
 		# Decrease button
 		var dec_btn := Button.new()
-		dec_btn.text = "<"
+		dec_btn.text = "-"
 		dec_btn.flat = true
 		dec_btn.custom_minimum_size = Vector2(28, 28)
 		if not Engine.is_editor_hint():
@@ -127,7 +127,7 @@ func _build_stat_rows() -> void:
 
 		# Increase button
 		var inc_btn := Button.new()
-		inc_btn.text = ">"
+		inc_btn.text = "+"
 		inc_btn.flat = true
 		inc_btn.custom_minimum_size = Vector2(28, 28)
 		if not Engine.is_editor_hint():

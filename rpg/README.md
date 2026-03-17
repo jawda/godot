@@ -21,6 +21,32 @@ rpg/
 │       ├── level_system.gd
 │       ├── level_up_screen.gd
 │       └── level_up_screen.tscn
+├── story/
+│   ├── IntroStory.md
+│   ├── world/
+│   │   ├── Lore.md
+│   │   ├── Duskholm.md
+│   │   ├── Mirewald.md
+│   │   └── TheSaltmereVein.md
+│   ├── characters/
+│   │   ├── PlayerBackstory.md
+│   │   ├── NPCs.md
+│   │   ├── Antagonist.md
+│   │   └── visual_references/
+│   │       ├── SerafinVoss_VisualReference.md
+│   │       ├── Corren_VisualReference.md
+│   │       ├── Cael_VisualReference.md
+│   │       ├── Nessa_VisualReference.md
+│   │       └── Rowan_VisualReference.md
+│   ├── factions/
+│   │   ├── TheChurch.md
+│   │   ├── Townsfolk.md
+│   │   └── TheCult.md
+│   ├── quests/
+│   │   ├── MainQuest.md
+│   │   └── SideQuests.md
+│   └── dialogue/
+│       └── OpeningSequence.md
 └── color_palette.html
 ```
 
@@ -156,12 +182,12 @@ func _on_level_system_leveled_up(_level: int, _points: int) -> void:
 ├─────────────────────────────────────┤
 │ [ Attribute Points ]                │
 │                                     │
-│  Strength     10  ⚔  < 10 >        │
-│  Dexterity    10  ⚔  < 10 >        │
-│  Vigor        10  ⚔  < 10 >        │
-│  Faith        10  ⚔  < 10 >        │
-│  Intelligence 10  ⚔  < 10 >        │
-│  Charisma     10  ⚔  < 10 >        │
+│  Strength     10  ⚔  - 10 +        │
+│  Dexterity    10  ⚔  - 10 +        │
+│  Vigor        10  ⚔  - 10 +        │
+│  Faith        10  ⚔  - 10 +        │
+│  Intelligence 10  ⚔  - 10 +        │
+│  Charisma     10  ⚔  - 10 +        │
 ├─────────────────────────────────────┤
 │           [Cancel]  [Confirm]       │
 └─────────────────────────────────────┘
