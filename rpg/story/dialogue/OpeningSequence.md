@@ -28,13 +28,37 @@ Character creation is never presented as a menu. Every choice is framed as somet
 
 *Exterior. Night. The road into Duskholm from the south.*
 
-*The player is walking. No dialogue, no narration. Just movement — the road, the walls ahead, the gate standing open. The guards on the gate look tired and do not speak. One of them watches the player pass without expression.*
+*It is raining — not a downpour, a cold and steady fall that has been going for hours. The road is soft underfoot, the mud pulling at every step like the road itself is reluctant to let anyone through. The player's boots are already soaked.*
 
-*Inside the walls: candlelight from every window. The smell of woodsmoke. The streets quieter than a town this size should be at this hour. A dog somewhere, not barking — just watching.*
+*The sky is the colour of a bruise. No moon visible — only cloud, thick and low, lit from within occasionally by a distant flicker of lightning that illuminates the landscape in a single white frame before the dark closes back in. The thunder follows seconds later, low and rolling, barely louder than the rain.*
 
-*The Tallow Inn is visible at the end of the street. Warm light through the shuttered windows. The player walks toward it.*
+*The road bends and Duskholm comes into view.*
 
-*This segment is short — thirty seconds of movement, no interaction required. Long enough for the world to register. Short enough not to overstay.*
+*The walls are old — stone and timber, patched in several places with newer wood that hasn't weathered to match. They are not tall enough to be impressive, not low enough to be comforting. A working wall, built by people who needed one. The south gate stands open, torches in iron brackets on either side doing their best against the rain — the flames bending with each gust, thinning almost to nothing, then catching again with a stubbornness that feels almost personal.*
+
+*Two guards stand at the gate. They have the look of men who drew the short straw — hunched into their coats, faces down. One of them lifts his head as the player approaches. He looks at the player's gear. He looks at the road behind them — checking whether they are alone, checking what might have followed them out of the dark.*
+
+*He says nothing. He steps aside.*
+
+*Inside the walls the sound of the rain changes — it hits cobblestone now instead of mud, a harder and more specific sound. The streets are narrow and uneven, buildings leaning slightly toward each other overhead as if for warmth. Every window glows. Not festively — desperately. The light of people who have decided that darkness is the enemy and they will not give it an inch.*
+
+*A shutter bangs in the wind somewhere above. A cat moves across the street ahead without looking at the player and disappears beneath a door.*
+
+*Lightning again — closer this time. In the half-second of white light the player can see the full length of the main street, the market stalls with their canvas tied down and dripping, the dark shape of the chapel spire at the centre of town, and at the far northern end of the street, past everything, the treeline.*
+
+*The Mirewald.*
+
+*Even from here, even in the rain, it is wrong. The trees are too dark. Too still. The rain falls on everything — on the rooftops, on the cobblestones, on the market stalls — but at the treeline it seems to fall differently, absorbed rather than bounced, swallowed rather than shed. There are no sounds from inside it. Not even the sound of rain on leaves.*
+
+*The thunder rolls through again. The player looks away.*
+
+*At the end of the street, through the rain, the sign of the Tallow Inn is just visible — a painted tallow candle on a dark board, swinging on its bracket. Warm amber light leaks through the shuttered windows. The smell of woodsmoke and something cooking.*
+
+*The player walks toward it.*
+
+*This segment is approximately sixty seconds of guided movement — no required interactions, no dialogue. Long enough for the world to settle into the player's bones. The rain should be audible throughout: on cobblestones, on rooftops, on the player's shoulders. The lightning flashes twice more before they reach the inn door, each one briefly showing the Mirewald at the end of the street.*
+
+*When the player pushes open the inn door the rain cuts off — not completely, it's still audible outside, but the warmth and the fire sound take over immediately. The contrast should feel like relief.*
 
 ---
 
