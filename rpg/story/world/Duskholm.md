@@ -82,9 +82,13 @@ Named for the ancient stone well at its heart — carved from a single piece of 
 
 The square is where the remaining townsfolk gather during the day, mostly out of mutual fear rather than community spirit. A few market stalls still operate. People talk in low voices. Everyone watches the northern skyline.
 
-The well is significant: it sits on one of the ley lines that feeds into the Mirewald. When the player interacts with it in the mid-game, after learning enough about the entity, they will feel the same recognition they eventually feel at the Rootbed — faint here, but unmistakable.
+The well is significant: it sits directly above the second convergence point — the ritual site the Covenant consecrated thirty days ago, causing the darkness to begin. The Rootwell is the thinnest place between the surface and the entity below.
 
-**Gameplay:** Central hub. NPCs congregate here. Key dialogue and quest pickups. The well is an interactable object with mid-game story relevance.
+After the player has rested at the Tallow Inn two or three times, the well pulls them from sleep in the middle of the night with a cold blue-white glow. What follows is a flashback vision — five fragments, deliberately vague — that is the entity's first direct communication with the player. See `story/dialogue/RootwellVision.md` for the full scene.
+
+In the mid-game the player can examine the Rootwell's base with enough knowledge to confirm the recent consecration. The stone is marked in a way that Nessa can identify and Strell will go very quiet about.
+
+**Gameplay:** Central hub. NPCs congregate here. Key dialogue and quest pickups. The Rootwell vision triggers after 2–3 rests. Interactable mid-game for ritual evidence. Returns as a significant location in Ending Three.
 
 ---
 
