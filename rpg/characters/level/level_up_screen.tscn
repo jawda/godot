@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://bkxs8jjrww27b"]
+
+[ext_resource type="Script" uid="uid://d35kqm6a6ili1" path="res://characters/level/level_up_screen.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://070fllc42ojf" path="res://characters/portraits/portrait_placeholder.svg" id="2"]
+[ext_resource type="Texture2D" uid="uid://dmjcqj3gskht8" path="res://assets/icons/hollow_sun_icon.svg" id="2_8dqel"]
+
+[node name="LevelUpScreen" type="CanvasLayer" unique_id=863741466]
+layer = 10
+script = ExtResource("1")
+sword_icon = ExtResource("2_8dqel")
+
+[node name="BG" type="ColorRect" parent="." unique_id=900875379]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.75)
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1832647948]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -310.0
+offset_right = 220.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="Panel" unique_id=1742490228]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Panel/Margin" unique_id=1097322463]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HeaderRow" type="HBoxContainer" parent="Panel/Margin/VBox" unique_id=552650214]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Portrait" type="TextureRect" parent="Panel/Margin/VBox/HeaderRow" unique_id=2018626181]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("2")
+stretch_mode = 5
+
+[node name="HeaderText" type="VBoxContainer" parent="Panel/Margin/VBox/HeaderRow" unique_id=578417111]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="CharacterName" type="Label" parent="Panel/Margin/VBox/HeaderRow/HeaderText" unique_id=1943540456]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Character Name"
+
+[node name="HSepHeader" type="HSeparator" parent="Panel/Margin/VBox/HeaderRow/HeaderText" unique_id=164620675]
+layout_mode = 2
+
+[node name="ClassLabel" type="Label" parent="Panel/Margin/VBox/HeaderRow/HeaderText" unique_id=1030676039]
+modulate = Color(0.75, 0.75, 0.75, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "Class"
+
+[node name="Title" type="Label" parent="Panel/Margin/VBox/HeaderRow/HeaderText" unique_id=1286167425]
+modulate = Color(0.6, 0.6, 0.6, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "level up"
+
+[node name="HSep1" type="HSeparator" parent="Panel/Margin/VBox" unique_id=1902784257]
+layout_mode = 2
+
+[node name="InfoSection" type="VBoxContainer" parent="Panel/Margin/VBox" unique_id=959837905]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LevelRow" type="HBoxContainer" parent="Panel/Margin/VBox/InfoSection" unique_id=530419749]
+layout_mode = 2
+
+[node name="LevelName" type="Label" parent="Panel/Margin/VBox/InfoSection/LevelRow" unique_id=232883403]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level"
+
+[node name="LevelValue" type="Label" parent="Panel/Margin/VBox/InfoSection/LevelRow" unique_id=1311571627]
+layout_mode = 2
+text = "1"
+horizontal_alignment = 2
+
+[node name="PointsRow" type="HBoxContainer" parent="Panel/Margin/VBox/InfoSection" unique_id=499557146]
+layout_mode = 2
+
+[node name="PointsName" type="Label" parent="Panel/Margin/VBox/InfoSection/PointsRow" unique_id=1000781413]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Points Available"
+
+[node name="PointsValue" type="Label" parent="Panel/Margin/VBox/InfoSection/PointsRow" unique_id=764629035]
+layout_mode = 2
+text = "3"
+horizontal_alignment = 2
+
+[node name="HSep2" type="HSeparator" parent="Panel/Margin/VBox" unique_id=474968908]
+layout_mode = 2
+
+[node name="Tabs" type="TabContainer" parent="Panel/Margin/VBox" unique_id=1829592416]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+tab_0/title = "Attribute Points"
+
+[node name="Attributes" type="MarginContainer" parent="Panel/Margin/VBox/Tabs" unique_id=223486915]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 8
+metadata/_tab_index = 0
+metadata/_tab_name = "Attribute Points"
+
+[node name="AttrVBox" type="VBoxContainer" parent="Panel/Margin/VBox/Tabs/Attributes" unique_id=1777740832]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="StatList" type="VBoxContainer" parent="Panel/Margin/VBox/Tabs/Attributes/AttrVBox" unique_id=288804961]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="HSep3" type="HSeparator" parent="Panel/Margin/VBox" unique_id=569223868]
+layout_mode = 2
+
+[node name="ButtonRow" type="HBoxContainer" parent="Panel/Margin/VBox" unique_id=1362882612]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="Panel/Margin/VBox/ButtonRow" unique_id=124776745]
+custom_minimum_size = Vector2(110, 34)
+layout_mode = 2
+text = "Cancel"
+
+[node name="ConfirmButton" type="Button" parent="Panel/Margin/VBox/ButtonRow" unique_id=378128337]
+custom_minimum_size = Vector2(110, 34)
+layout_mode = 2
+text = "Confirm"
