@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://c5rqm4i8k4g5m"]
+
+[ext_resource type="Script" uid="uid://bfcck7ld2ak0j" path="res://cards/card.gd" id="1_card"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_body"]
+bg_color = Color(0.08, 0.09, 0.16, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.18, 0.78, 0.87, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0.75, 0.85, 0.35)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_art"]
+bg_color = Color(0.11, 0.12, 0.2, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.18, 0.78, 0.87, 0.45)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cost"]
+bg_color = Color(0.3, 0.1, 0.45, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.65, 0.35, 0.9, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0.5, 0.2, 0.75, 0.5)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_name"]
+bg_color = Color(0.05, 0.35, 0.48, 1)
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color(0.18, 0.78, 0.87, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_desc"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(0.06, 0.07, 0.13, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.18, 0.78, 0.87, 0.3)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rarity"]
+bg_color = Color(0.28, 0.28, 0.34, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.55, 0.55, 0.62, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="Card" type="Control" unique_id=361472546]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 160.0
+offset_bottom = 240.0
+script = ExtResource("1_card")
+
+[node name="CardBody" type="Panel" parent="." unique_id=1764360206]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_body")
+
+[node name="ArtFrame" type="Panel" parent="CardBody" unique_id=301176704]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 150.0
+offset_bottom = 108.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_art")
+
+[node name="ArtLabel" type="Label" parent="CardBody/ArtFrame" unique_id=610551907]
+layout_mode = 0
+offset_right = 140.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.18, 0.78, 0.87, 0.35)
+theme_override_font_sizes/font_size = 11
+text = "[ Art Placeholder ]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CostBadge" type="Panel" parent="CardBody" unique_id=856903607]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 42.0
+offset_bottom = 42.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cost")
+
+[node name="CostLabel" type="Label" parent="CardBody/CostBadge" unique_id=221814777]
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(1, 0.92, 0.3, 1)
+theme_override_font_sizes/font_size = 18
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameBanner" type="Panel" parent="CardBody" unique_id=1098521931]
+layout_mode = 0
+offset_top = 110.0
+offset_right = 160.0
+offset_bottom = 138.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_name")
+
+[node name="CardName" type="Label" parent="CardBody/NameBanner" unique_id=1561425587]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.94, 0.96, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "Void Strike"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TypeLabel" type="Label" parent="CardBody" unique_id=267341311]
+layout_mode = 0
+offset_top = 140.0
+offset_right = 160.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0.18, 0.78, 0.87, 0.7)
+theme_override_font_sizes/font_size = 10
+text = "— Attack —"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DescriptionBox" type="Panel" parent="CardBody" unique_id=1310361918]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 160.0
+offset_right = 152.0
+offset_bottom = 222.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_desc")
+
+[node name="DescriptionText" type="RichTextLabel" parent="CardBody/DescriptionBox" unique_id=1808930320]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 138.0
+offset_bottom = 57.0
+theme_override_colors/default_color = Color(0.85, 0.88, 0.95, 1)
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "Deal [b]8[/b] damage.
+Apply [color=#00e5c8]1 Void[/color]."
+fit_content = true
+
+[node name="RarityStrip" type="Panel" parent="CardBody" unique_id=140027380]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 226.0
+offset_right = 110.0
+offset_bottom = 238.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rarity")
+
+[node name="RarityLabel" type="Label" parent="CardBody/RarityStrip" unique_id=1212506145]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 12.0
+theme_override_colors/font_color = Color(0.78, 0.78, 0.84, 1)
+theme_override_font_sizes/font_size = 9
+text = "Common"
+horizontal_alignment = 1
+vertical_alignment = 1

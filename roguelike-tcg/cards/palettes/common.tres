@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CardPalette" format=3 uid="uid://tatdb1tx0ben"]
+
+[ext_resource type="Script" uid="uid://c5itqofv4kw58" path="res://cards/card_palette.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+name_outline = Color(0, 0, 0, 0)
