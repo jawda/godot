@@ -1,0 +1,12 @@
+TileMapLayer
+Parallax2D
+Camera2D
+ProgressBar
+Timer
+CollisionShape2D
+Area2D
+Label
+HBoxContainer
+CanvasLayer
+Sprite2D
+CharacterBody2D

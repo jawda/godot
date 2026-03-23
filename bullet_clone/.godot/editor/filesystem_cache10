@@ -1,0 +1,31 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1753272955
+icon.svg::CompressedTexture2D/CompressedTexture2D::4503687459038741944::1753205820::1753205827::1::::<><><>0<>0<>ddea0f80bcd02628a19677632c57b464<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+spawner.gd::GDScript::6812576212287515178::1753213813::0::1::::<>Node2D<><>0<>0<><>::
+spawner.tscn::PackedScene::483867780227604008::1753213813::0::1::::<><><>0<>0<><>::uid://c4ccet6ty4xu5::::res://spawner.gd<>uid://do8a1iqya5bim::::res://enemy/enemy.tscn<>uid://djyfcfdhvg10y::::res://enemy/EnemyType.gd<>uid://djdc3heg6gx4w::::res://enemy/resources/cactar.tres<>uid://cmfq53c0jm38o::::res://enemy/resources/eye.tres<>uid://y16mb13ayqx7::::res://enemy/resources/fireball.tres<>uid://ep4fhcrxb0w4::::res://enemy/resources/ghost.tres
+test_scene.tscn::PackedScene::5486556641248434203::1753213636::0::1::::<><><>0<>0<><>::uid://g5nh41vnsv7u::::res://spawner.tscn<>uid://rie1grhqkqfj::::res://player/player.tscn
+::res://assets/::1753206464
+::res://assets/enemy/::1753213520
+cactar32.png::CompressedTexture2D/CompressedTexture2D::4987564338104134302::1753213519::1753213520::1::::<><><>0<>0<>7cbe80c137e914e8a987a6626ee76b8b<>res://.godot/imported/cactar32.png-29feacd03fd4c3fccf49f1d46fbd34fc.ctex::
+cactus.png::CompressedTexture2D/CompressedTexture2D::2225329059422295988::1753212535::1753212535::1::::<><><>0<>0<>5d138e99fa4b96a29cb6703463a0259a<>res://.godot/imported/cactus.png-2a5692000ce8fdea53039f0feb03fe6c.ctex::
+eye32.png::CompressedTexture2D/CompressedTexture2D::3688833958860839702::1753213519::1753213520::1::::<><><>0<>0<>c323acb9ff17fc09c22786042e6ffbe1<>res://.godot/imported/eye32.png-9f492ca1c23c4f32afea7169177bba6b.ctex::
+eye.png::CompressedTexture2D/CompressedTexture2D::753146020103537975::1753211241::1753211242::1::::<><><>0<>0<>7747a41a870abe6996e9ad96619b089b<>res://.godot/imported/eye.png-55aa51cac3448439b3aeeff11fc9aaac.ctex::
+fireball32.png::CompressedTexture2D/CompressedTexture2D::7002812183687892479::1753213519::1753213520::1::::<><><>0<>0<>c01a881b91bc06b1e32386848e92496c<>res://.godot/imported/fireball32.png-c14c6d71b60dc960acb566b919e6f405.ctex::
+fireball.png::CompressedTexture2D/CompressedTexture2D::4574095122647122639::1753212138::1753212138::1::::<><><>0<>0<>9854f8b0d33ed4a15b227e9c62f545a7<>res://.godot/imported/fireball.png-fd47d0e20744587f3e766530bccc7823.ctex::
+ghost32.png::CompressedTexture2D/CompressedTexture2D::297180404307843336::1753213519::1753213520::1::::<><><>0<>0<>e88ede5d996457b3d6ae8be221b5b2cc<>res://.godot/imported/ghost32.png-ab5a8738ac546223642993373a7a6969.ctex::
+ghost.png::CompressedTexture2D/CompressedTexture2D::6229228614123422316::1753211694::1753211694::1::::<><><>0<>0<>4db01c554b8d0b4098de17a89288738e<>res://.godot/imported/ghost.png-20b32154e6100c460f65174f8dba32ed.ctex::
+Rpg Maker VX Resource planet.jpg::CompressedTexture2D/CompressedTexture2D::2842478864309308196::1753206472::1753206472::1::::<><><>0<>0<>8b127fc4e8a771abceea51e6de00321c<>res://.godot/imported/Rpg Maker VX Resource planet.jpg-164080666715804ed9f47ead3659ad04.ctex::
+::res://assets/player/::1753206239
+witch.png::CompressedTexture2D/CompressedTexture2D::8929976119869589208::1753206239::1753206239::1::::<><><>0<>0<>afbfc3fc9949a9b08254a5902874bfcd<>res://.godot/imported/witch.png-c720a58eb6b3f0079c52ab90d37b8903.ctex::
+::res://enemy/::1753213774
+enemy.gd::GDScript::2874722562163822007::1753212686::0::1::::<>CharacterBody2D<><>0<>0<><>::
+enemy.tscn::PackedScene::8210077204532558992::1753213774::0::1::::<><><>0<>0<><>::uid://bg7si4iqvynsp::::res://enemy/enemy.gd<>uid://bgq6hgu42bvsu::::res://assets/enemy/Rpg Maker VX Resource planet.jpg
+EnemyType.gd::GDScript::7840814134068213106::1753210919::0::1::::Enemy<>Resource<><>0<>0<><>::
+::res://enemy/resources/::1753213579
+cactar.tres::Resource/Enemy::7797326587455615020::1753213545::0::1::::<><><>0<>0<><>::uid://djyfcfdhvg10y::::res://enemy/EnemyType.gd<>uid://cdcaprc53ctb7::::res://assets/enemy/cactar32.png
+eye.tres::Resource/Enemy::5626455900406130544::1753213555::0::1::::<><><>0<>0<><>::uid://djyfcfdhvg10y::::res://enemy/EnemyType.gd<>uid://bss5s6fb7snow::::res://assets/enemy/eye32.png
+fireball.tres::Resource/Enemy::1740109819182369966::1753213568::0::1::::<><><>0<>0<><>::uid://djyfcfdhvg10y::::res://enemy/EnemyType.gd<>uid://c61hj8lmkqcax::::res://assets/enemy/fireball32.png
+ghost.tres::Resource/Enemy::313491134179044869::1753213579::0::1::::<><><>0<>0<><>::uid://djyfcfdhvg10y::::res://enemy/EnemyType.gd<>uid://eh7ruvgx4bmu::::res://assets/enemy/ghost32.png
+::res://player/::1753213636
+player.gd::GDScript/GDScript::1837403329430636998::1753206136::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::1210015004233238883::1753213636::0::1::::<><><>0<>0<><>::uid://1gb08vq3560i::::res://player/player.gd<>uid://d0h0nwyskxqd1::::res://assets/player/witch.png
