@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://m3dywio7u0u2"]
+
+[ext_resource type="Script" uid="uid://di60eb7g2a5us" path="res://cards/card_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://cs5vvdsqlp4gn" path="res://cards/card_effect.gd" id="1_rbk8e"]
+
+[sub_resource type="Resource" id="Resource_ee2ph"]
+script = ExtResource("1_rbk8e")
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+
+[resource]
+script = ExtResource("1")
+card_name = "Void Strike"
+card_cost = 1
+card_description = "Deal [b]8[/b] damage.
+Apply [color=#00e5c8]1 Void[/color]."
+effects = Array[ExtResource("1_rbk8e")]([SubResource("Resource_ee2ph")])

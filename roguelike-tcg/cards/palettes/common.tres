@@ -4,4 +4,24 @@
 
 [resource]
 script = ExtResource("1")
+body_bg = Color(0.09, 0.05, 0.08, 1)
+border = Color(0.5, 0.38, 0.25, 1)
+shadow = Color(0.5, 0.38, 0.25, 0.25)
+shadow_base = 5
+shadow_peak = 5
+cost_bg = Color(0.16, 0.09, 0.05, 1)
+cost_border = Color(0.75, 0.63, 0.44, 1)
+cost_text = Color(0.97, 0.94, 0.85, 1)
+art_border = Color(0.5, 0.38, 0.25, 0.4)
+name_bg = Color(0.25, 0.16, 0.09, 1)
+name_border = Color(0.5, 0.38, 0.25, 1)
+name_text = Color(0.97, 0.94, 0.85, 1)
 name_outline = Color(0, 0, 0, 0)
+type_text = Color(0.75, 0.63, 0.44, 0.8)
+desc_border = Color(0.5, 0.38, 0.25, 0.28)
+desc_text = Color(0.91, 0.82, 0.63, 1)
+rarity_bg = Color(0.16, 0.09, 0.05, 1)
+rarity_border = Color(0.5, 0.38, 0.25, 1)
+rarity_text = Color(0.75, 0.63, 0.44, 1)
+rarity_strip_x0 = 42
+rarity_strip_x1 = 102

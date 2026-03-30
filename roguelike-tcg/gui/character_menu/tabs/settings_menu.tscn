@@ -1,0 +1,224 @@
+[gd_scene format=3 uid="uid://bl4lbrfnao0b6"]
+
+[ext_resource type="Script" uid="uid://dhw5wp3g55eqr" path="res://gui/character_menu/tabs/settings_tab.gd" id="script_settings_tab"]
+
+[sub_resource type="SystemFont" id="HeaderFont"]
+font_weight = 700
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="HeaderLabelSettings"]
+font = SubResource("HeaderFont")
+font_size = 18
+
+[sub_resource type="StyleBoxFlat" id="SectionPanelStyle"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+bg_color = Color(0.18, 0.08, 0.24, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.22, 0.66, 0.5)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="ToggleOffStyle"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.50, 0.60, 0.88, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="ToggleOnStyle"]
+bg_color = Color(0.19, 0.25, 0.63, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.50, 0.60, 0.88, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="ToggleHoverStyle"]
+bg_color = Color(0.28, 0.34, 0.55, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.69, 0.78, 0.94, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Settings" type="Control" unique_id=2043475158]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("script_settings_tab")
+
+[node name="ContentBox" type="VBoxContainer" parent="." unique_id=45619993]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="AudioLabelMargin" type="MarginContainer" parent="ContentBox" unique_id=1124629004]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+
+[node name="AudioLabel" type="Label" parent="ContentBox/AudioLabelMargin" unique_id=706627492]
+layout_mode = 2
+text = "Audio"
+label_settings = SubResource("HeaderLabelSettings")
+
+[node name="AudioSectionMargin" type="MarginContainer" parent="ContentBox" unique_id=2082946499]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+
+[node name="AudioSectionPanel" type="PanelContainer" parent="ContentBox/AudioSectionMargin" unique_id=2003635288]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("SectionPanelStyle")
+
+[node name="AudioSection" type="VBoxContainer" parent="ContentBox/AudioSectionMargin/AudioSectionPanel" unique_id=1387730199]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="MasterRow" type="HBoxContainer" parent="ContentBox/AudioSectionMargin/AudioSectionPanel/AudioSection" unique_id=1835030666]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="MasterLabel" type="Label" parent="ContentBox/AudioSectionMargin/AudioSectionPanel/AudioSection/MasterRow" unique_id=1446224778]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+text = "Master"
+
+[node name="MasterSlider" type="HSlider" parent="ContentBox/AudioSectionMargin/AudioSectionPanel/AudioSection/MasterRow" unique_id=1395453176]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="MasterValue" type="Label" parent="ContentBox/AudioSectionMargin/AudioSectionPanel/AudioSection/MasterRow" unique_id=1401862009]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+text = "100"
+horizontal_alignment = 2
+
+[node name="MusicRow" type="HBoxContainer" parent="ContentBox/AudioSectionMargin/AudioSectionPanel/AudioSection" unique_id=729850894]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="MusicLabel" type="Label" parent="ContentBox/AudioSectionMargin/AudioSectionPanel/AudioSection/MusicRow" unique_id=328012374]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="ContentBox/AudioSectionMargin/AudioSectionPanel/AudioSection/MusicRow" unique_id=1587605433]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 80.0
+
+[node name="MusicValue" type="Label" parent="ContentBox/AudioSectionMargin/AudioSectionPanel/AudioSection/MusicRow" unique_id=579191272]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+text = "80"
+horizontal_alignment = 2
+
+[node name="SFXRow" type="HBoxContainer" parent="ContentBox/AudioSectionMargin/AudioSectionPanel/AudioSection" unique_id=2063340295]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SFXLabel" type="Label" parent="ContentBox/AudioSectionMargin/AudioSectionPanel/AudioSection/SFXRow" unique_id=481216697]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="ContentBox/AudioSectionMargin/AudioSectionPanel/AudioSection/SFXRow" unique_id=826820236]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="SFXValue" type="Label" parent="ContentBox/AudioSectionMargin/AudioSectionPanel/AudioSection/SFXRow" unique_id=1097811664]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+text = "100"
+horizontal_alignment = 2
+
+[node name="DisplayLabelMargin" type="MarginContainer" parent="ContentBox" unique_id=45130995]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+
+[node name="DisplayLabel" type="Label" parent="ContentBox/DisplayLabelMargin" unique_id=444026581]
+layout_mode = 2
+text = "Display"
+label_settings = SubResource("HeaderLabelSettings")
+
+[node name="DisplaySectionMargin" type="MarginContainer" parent="ContentBox" unique_id=288321262]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+
+[node name="DisplaySectionPanel" type="PanelContainer" parent="ContentBox/DisplaySectionMargin" unique_id=496490009]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("SectionPanelStyle")
+
+[node name="DisplaySection" type="VBoxContainer" parent="ContentBox/DisplaySectionMargin/DisplaySectionPanel" unique_id=1329401536]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="FullscreenRow" type="HBoxContainer" parent="ContentBox/DisplaySectionMargin/DisplaySectionPanel/DisplaySection" unique_id=606449878]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="FullscreenLabel" type="Label" parent="ContentBox/DisplaySectionMargin/DisplaySectionPanel/DisplaySection/FullscreenRow" unique_id=159815051]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fullscreen"
+
+[node name="FullscreenToggle" type="CheckButton" parent="ContentBox/DisplaySectionMargin/DisplaySectionPanel/DisplaySection/FullscreenRow" unique_id=1129012685]
+layout_mode = 2
+theme_override_styles/normal = SubResource("ToggleOffStyle")
+theme_override_styles/pressed = SubResource("ToggleOnStyle")
+theme_override_styles/hover = SubResource("ToggleHoverStyle")
+theme_override_styles/hover_pressed = SubResource("ToggleOnStyle")
+
+[node name="ExitQuitMargin" type="MarginContainer" parent="ContentBox" unique_id=11840950]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 32
+
+[node name="ExitQuitButtons" type="VBoxContainer" parent="ContentBox/ExitQuitMargin" unique_id=308158238]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ExitToMenuButton" type="Button" parent="ContentBox/ExitQuitMargin/ExitQuitButtons" unique_id=1232334746]
+layout_mode = 2
+text = "Exit to Main Menu"
+
+[node name="QuitButton" type="Button" parent="ContentBox/ExitQuitMargin/ExitQuitButtons" unique_id=365818094]
+layout_mode = 2
+text = "Quit Game"

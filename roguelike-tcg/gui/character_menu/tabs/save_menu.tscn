@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://save_menu"]
+
+[ext_resource type="Script" path="res://gui/character_menu/tabs/save_tab.gd" id="script_save_tab"]
+
+[node name="Save" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("script_save_tab")
+
+[node name="ContentBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Instructions" type="Label" parent="ContentBox"]
+layout_mode = 2
+text = "Progress is saved automatically when you exit."
+
+[node name="ExitToMenuButton" type="Button" parent="ContentBox"]
+layout_mode = 2
+text = "Exit to Main Menu"
+
+[node name="QuitButton" type="Button" parent="ContentBox"]
+layout_mode = 2
+text = "Quit Game"

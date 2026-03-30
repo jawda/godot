@@ -1,29 +1,27 @@
-[gd_resource type="Resource" script_class="CardPalette" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="CardPalette" format=3 uid="uid://jm38n7ir1ug7"]
 
-[ext_resource type="Script" path="res://cards/card_palette.gd" id="1"]
+[ext_resource type="Script" uid="uid://c5itqofv4kw58" path="res://cards/card_palette.gd" id="1"]
 
 [resource]
 script = ExtResource("1")
-body_bg = Color(0.05, 0.11, 0.09, 1)
-border = Color(0.18, 0.74, 0.44, 1)
-shadow = Color(0.1, 0.62, 0.34, 0.3)
-border_width = 2
+body_bg = Color(0.04, 0.08, 0.05, 1)
+border = Color(0.37, 0.54, 0.31, 1)
+shadow = Color(0.37, 0.54, 0.31, 0.3)
 shadow_base = 5
 shadow_peak = 5
-cost_bg = Color(0.06, 0.22, 0.14, 1)
-cost_border = Color(0.28, 0.88, 0.54, 1)
-cost_text = Color(0.82, 1.0, 0.58, 1)
-art_border = Color(0.18, 0.74, 0.44, 0.45)
-name_bg = Color(0.05, 0.28, 0.17, 1)
-name_border = Color(0.18, 0.74, 0.44, 1)
-name_text = Color(0.86, 1.0, 0.78, 1)
+cost_bg = Color(0.05, 0.12, 0.07, 1)
+cost_border = Color(0.66, 0.78, 0.38, 1)
+cost_text = Color(0.94, 0.85, 0.31, 1)
+art_border = Color(0.37, 0.54, 0.31, 0.45)
+name_bg = Color(0.05, 0.18, 0.09, 1)
+name_border = Color(0.37, 0.54, 0.31, 1)
+name_text = Color(0.94, 0.85, 0.31, 1)
 name_outline = Color(0, 0, 0, 0)
-name_outline_size = 0
-type_text = Color(0.22, 0.82, 0.5, 0.78)
-desc_border = Color(0.18, 0.74, 0.44, 0.28)
-desc_text = Color(0.84, 0.95, 0.82, 1)
-rarity_bg = Color(0.06, 0.2, 0.12, 1)
-rarity_border = Color(0.18, 0.74, 0.44, 1)
-rarity_text = Color(0.48, 0.88, 0.62, 1)
-rarity_strip_x0 = 50
-rarity_strip_x1 = 110
+type_text = Color(0.66, 0.78, 0.38, 0.78)
+desc_border = Color(0.37, 0.54, 0.31, 0.28)
+desc_text = Color(0.97, 0.94, 0.85, 1)
+rarity_bg = Color(0.05, 0.12, 0.07, 1)
+rarity_border = Color(0.37, 0.54, 0.31, 1)
+rarity_text = Color(0.66, 0.78, 0.38, 1)
+rarity_strip_x0 = 42
+rarity_strip_x1 = 102

@@ -1,57 +1,31 @@
 @tool
+class_name Card
 extends Control
 
-enum Rarity { COMMON, UNCOMMON, RARE, MYTHIC, SPECIAL }
-enum CardType { ATTACK, SKILL, POWER, CURSE, STATUS }
+const CARD_TYPE_LABELS: Array[String] = ["Attack", "Skill", "Power", "Curse", "Status", "Defense"]
+const RARITY_LABELS: Array[String]    = ["Common", "Uncommon", "Rare", "✦ Mythic ✦", "✦ Special ✦"]
+const SIZE := Vector2(160, 240)
 
-const CARD_TYPE_LABELS: Array[String] = ["Attack", "Skill", "Power", "Curse", "Status"]
+# ── Card data ──────────────────────────────────────────────────────────────────
 
-# ── Exported properties with live-update setters ──────────────────────────────
-
-@export_group("Card Data")
-@export var card_name: String = "Void Strike":
-	set(v):
-		card_name = v
-		if is_node_ready(): _update_labels()
-
-@export var card_cost: int = 1:
-	set(v):
-		card_cost = v
-		if is_node_ready(): _update_labels()
-
-@export var card_type: CardType = CardType.ATTACK:
-	set(v):
-		card_type = v
-		if is_node_ready(): _update_labels()
-
-@export_multiline var card_description: String = "Deal [b]8[/b] damage.\nApply [color=#00e5c8]1 Void[/color].":
-	set(v):
-		card_description = v
-		if is_node_ready(): _update_labels()
-
-@export_group("Rarity")
-@export var base_rarity: Rarity = Rarity.COMMON:
-	set(v):
-		base_rarity = v
+@export var data: CardData:
+	set(new_data):
+		if data and data.changed.is_connected(_on_data_changed):
+			data.changed.disconnect(_on_data_changed)
+		data = new_data
+		if data:
+			data.changed.connect(_on_data_changed)
 		if is_node_ready():
 			_apply_palette()
 			_update_labels()
 
-@export var upgraded: bool = false:
-	set(v):
-		upgraded = v
-		if is_node_ready():
-			_apply_palette()
-			_update_labels()
-
-# Effective rarity is what drives all visuals.
-# Upgrading shifts the card up one tier, capped at SPECIAL.
-var effective_rarity: Rarity:
-	get: return mini(base_rarity + 1, Rarity.SPECIAL) as Rarity if upgraded else base_rarity
+func _on_data_changed() -> void:
+	_apply_palette()
+	_update_labels()
 
 # ── Palettes ───────────────────────────────────────────────────────────────────
 # Loaded from res://cards/palettes/*.tres — edit those files to change colors.
-# Order must match the Rarity enum (COMMON=0 … SPECIAL=4).
+# Order must match CardData.Rarity enum (COMMON=0 … SPECIAL=4).
 
 const PALETTES: Array[CardPalette] = [
 	preload("res://cards/palettes/common.tres"),
@@ -61,28 +35,44 @@ const PALETTES: Array[CardPalette] = [
 	preload("res://cards/palettes/special.tres"),
 ]
 
-const RARITY_LABELS := ["Common", "Uncommon", "Rare", "✦ Mythic ✦", "✦ Special ✦"]
+# ── Node references ────────────────────────────────────────────────────────────
+
+@onready var _card_body: Panel          = $CardBody
+@onready var _cost_badge: Panel         = $CardBody/CostBadge
+@onready var _cost_label: Label         = $CardBody/CostBadge/CostLabel
+@onready var _art_frame: Panel          = $CardBody/ArtFrame
+@onready var _art_label: Label          = $CardBody/ArtFrame/ArtLabel
+@onready var _name_banner: Panel        = $CardBody/NameBanner
+@onready var _card_name_label: Label    = $CardBody/NameBanner/CardName
+@onready var _type_label: Label         = $CardBody/TypeLabel
+@onready var _description_box: Panel    = $CardBody/DescriptionBox
+@onready var _description_text: RichTextLabel = $CardBody/DescriptionBox/DescriptionText
+@onready var _rarity_strip: Panel       = $CardBody/DescriptionBox/RarityStrip
+@onready var _rarity_label: Label       = $CardBody/DescriptionBox/RarityStrip/RarityLabel
 
 # ── Internal state ─────────────────────────────────────────────────────────────
 
-var _base_scale    := Vector2.ONE
-var _pulse_tween   : Tween
-var _body_style    : StyleBoxFlat
+var _base_scale: Vector2 = Vector2.ONE
+var _resting_y: float = 0.0
+var _pulse_tween: Tween
+var _hover_tween: Tween
+var _body_style: StyleBoxFlat
 
 # ── Lifecycle ──────────────────────────────────────────────────────────────────
 
 func _ready() -> void:
 	_base_scale = scale
+	if data == null:
+		data = CardData.new()
 	_apply_palette()
 	_update_labels()
-	if not Engine.is_editor_hint():
-		mouse_entered.connect(_on_mouse_entered)
-		mouse_exited.connect(_on_mouse_exited)
 
 # ── Palette application ────────────────────────────────────────────────────────
 
 func _apply_palette() -> void:
-	var p: CardPalette = PALETTES[effective_rarity]
+	if data == null:
+		return
+	var palette: CardPalette = PALETTES[data.effective_rarity]
 
 	# Kill any existing pulse so switching rarities is clean
 	if _pulse_tween:
@@ -90,102 +80,107 @@ func _apply_palette() -> void:
 		_pulse_tween = null
 
 	# Card body — store reference for pulse animation
-	_body_style = _make_style(p.body_bg, p.border,
-			8, p.border_width, p.shadow, p.shadow_base)
-	$CardBody.add_theme_stylebox_override("panel", _body_style)
+	_body_style = _make_style(palette.body_bg, palette.border,
+			8, palette.border_width, palette.shadow, palette.shadow_base)
+	_card_body.add_theme_stylebox_override("panel", _body_style)
 
 	# Cost badge
-	var cost_shadow := Color(p.shadow.r, p.shadow.g, p.shadow.b, 0.6)
-	var cost := _make_style(p.cost_bg, p.cost_border, 18, p.border_width, cost_shadow, 4)
-	$CardBody/CostBadge.add_theme_stylebox_override("panel", cost)
-	$CardBody/CostBadge/CostLabel.add_theme_color_override("font_color", p.cost_text)
+	var cost_shadow: Color = Color(palette.shadow.r, palette.shadow.g, palette.shadow.b, 0.6)
+	var cost_style: StyleBoxFlat = _make_style(palette.cost_bg, palette.cost_border, 13, palette.border_width, cost_shadow, 4)
+	_cost_badge.add_theme_stylebox_override("panel", cost_style)
+	_cost_label.add_theme_color_override("font_color", palette.cost_text)
 
 	# Art frame
-	var art := _make_style(p.body_bg.lightened(0.04), p.art_border, 4, 1)
-	$CardBody/ArtFrame.add_theme_stylebox_override("panel", art)
-	$CardBody/ArtFrame/ArtLabel.add_theme_color_override("font_color",
-			p.art_border * Color(1, 1, 1, 0.9))
+	var art_style: StyleBoxFlat = _make_style(palette.body_bg.lightened(0.04), palette.art_border, 4, 1)
+	_art_frame.add_theme_stylebox_override("panel", art_style)
+	_art_label.add_theme_color_override("font_color", palette.art_border * Color(1, 1, 1, 0.9))
 
 	# Name banner
-	var name_style := StyleBoxFlat.new()
-	name_style.bg_color = p.name_bg
-	name_style.border_width_top = 1
-	name_style.border_width_bottom = 1
-	name_style.border_color = p.name_border
-	$CardBody/NameBanner.add_theme_stylebox_override("panel", name_style)
+	var name_style: StyleBoxFlat = StyleBoxFlat.new()
+	name_style.bg_color = palette.name_bg
+	name_style.set_border_width_all(1)
+	name_style.border_color = palette.name_border
+	name_style.set_corner_radius_all(8)
+	_name_banner.add_theme_stylebox_override("panel", name_style)
 
-	var name_label := $CardBody/NameBanner/CardName
-	name_label.add_theme_color_override("font_color", p.name_text)
-	name_label.add_theme_constant_override("outline_size", p.name_outline_size)
-	name_label.add_theme_color_override("font_outline_color", p.name_outline)
+	_card_name_label.add_theme_color_override("font_color", palette.name_text)
+	_card_name_label.add_theme_constant_override("outline_size", palette.name_outline_size)
+	_card_name_label.add_theme_color_override("font_outline_color", palette.name_outline)
 
 	# Type label
-	$CardBody/TypeLabel.add_theme_color_override("font_color", p.type_text)
+	_type_label.add_theme_color_override("font_color", palette.type_text)
 
 	# Description box
-	var desc := _make_style(p.body_bg.darkened(0.15), p.desc_border, 4, 1)
-	desc.content_margin_left   = 6.0
-	desc.content_margin_top    = 5.0
-	desc.content_margin_right  = 6.0
-	desc.content_margin_bottom = 5.0
-	$CardBody/DescriptionBox.add_theme_stylebox_override("panel", desc)
-	$CardBody/DescriptionBox/DescriptionText.add_theme_color_override(
-			"default_color", p.desc_text)
+	var desc_style: StyleBoxFlat = _make_style(palette.body_bg.darkened(0.15), palette.desc_border, 4, 1)
+	desc_style.content_margin_left   = 6.0
+	desc_style.content_margin_top    = 5.0
+	desc_style.content_margin_right  = 6.0
+	desc_style.content_margin_bottom = 5.0
+	_description_box.add_theme_stylebox_override("panel", desc_style)
+	_description_text.add_theme_color_override("default_color", palette.desc_text)
 
 	# Rarity strip — width varies by tier
-	var strip := $CardBody/RarityStrip
-	strip.offset_left  = float(p.rarity_strip_x0)
-	strip.offset_right = float(p.rarity_strip_x1)
-	var rar := _make_style(p.rarity_bg, p.rarity_border, 6, 1)
-	strip.add_theme_stylebox_override("panel", rar)
-	$CardBody/RarityStrip/RarityLabel.add_theme_color_override("font_color", p.rarity_text)
+	_rarity_strip.offset_left  = float(palette.rarity_strip_x0)
+	_rarity_strip.offset_right = float(palette.rarity_strip_x1)
+	var rarity_style: StyleBoxFlat = _make_style(palette.rarity_bg, palette.rarity_border, 6, 1)
+	_rarity_strip.add_theme_stylebox_override("panel", rarity_style)
+	_rarity_label.add_theme_color_override("font_color", palette.rarity_text)
 	# Expand label to fill new strip width
-	$CardBody/RarityStrip/RarityLabel.offset_right = float(p.rarity_strip_x1 - p.rarity_strip_x0)
+	_rarity_label.offset_right = float(palette.rarity_strip_x1 - palette.rarity_strip_x0)
 
 	# Pulsing glow for Mythic and Special
-	if effective_rarity >= Rarity.MYTHIC:
-		_start_pulse(p.shadow_base, p.shadow_peak)
+	if data.effective_rarity >= CardData.Rarity.MYTHIC:
+		_start_pulse(palette.shadow_base, palette.shadow_peak)
 
-func _start_pulse(base_sz: int, peak_sz: int) -> void:
+func _start_pulse(base_size: int, peak_size: int) -> void:
 	_pulse_tween = create_tween().set_loops()
-	_pulse_tween.tween_method(_set_body_shadow, float(base_sz), float(peak_sz), 1.2) \
+	_pulse_tween.tween_method(_set_body_shadow, float(base_size), float(peak_size), 1.2) \
 			.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
-	_pulse_tween.tween_method(_set_body_shadow, float(peak_sz), float(base_sz), 1.2) \
+	_pulse_tween.tween_method(_set_body_shadow, float(peak_size), float(base_size), 1.2) \
 			.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 
-func _set_body_shadow(sz: float) -> void:
+func _set_body_shadow(shadow_size: float) -> void:
 	if _body_style:
-		_body_style.shadow_size = int(sz)
+		_body_style.shadow_size = int(shadow_size)
 
-func _make_style(bg: Color, border: Color, radius: int = 6, border_w: int = 2,
-		shadow: Color = Color.TRANSPARENT, shadow_sz: int = 0) -> StyleBoxFlat:
-	var s := StyleBoxFlat.new()
-	s.bg_color = bg
-	s.set_border_width_all(border_w)
-	s.border_color = border
-	s.set_corner_radius_all(radius)
-	s.shadow_color = shadow
-	s.shadow_size = shadow_sz
-	return s
+func _make_style(background: Color, border: Color, radius: int = 6, border_width: int = 2,
+		shadow: Color = Color.TRANSPARENT, shadow_size: int = 0) -> StyleBoxFlat:
+	var style: StyleBoxFlat = StyleBoxFlat.new()
+	style.bg_color = background
+	style.set_border_width_all(border_width)
+	style.border_color = border
+	style.set_corner_radius_all(radius)
+	style.shadow_color = shadow
+	style.shadow_size = shadow_size
+	return style
 
 # ── Label updates ──────────────────────────────────────────────────────────────
 
 func _update_labels() -> void:
-	$CardBody/CostBadge/CostLabel.text = str(card_cost)
-	$CardBody/NameBanner/CardName.text = card_name
-	$CardBody/TypeLabel.text = "— " + CARD_TYPE_LABELS[card_type] + " —"
-	$CardBody/DescriptionBox/DescriptionText.text = card_description
-	var rarity_text: String = RARITY_LABELS[effective_rarity]
-	if upgraded:
+	if data == null:
+		return
+	_cost_label.text = str(data.card_cost)
+	_card_name_label.text = data.card_name
+	_type_label.text = "— " + CARD_TYPE_LABELS[data.card_type] + " —"
+	_description_text.text = data.get_description(data.upgraded)
+	var rarity_text: String = RARITY_LABELS[data.effective_rarity]
+	if data.upgraded:
 		rarity_text += " +"
-	$CardBody/RarityStrip/RarityLabel.text = rarity_text
+	_rarity_label.text = rarity_text
 
-# ── Hover animation (runtime only) ────────────────────────────────────────────
+# ── Hover (mouse and controller focus) ────────────────────────────────────────
 
-func _on_mouse_entered() -> void:
-	var tween := create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
-	tween.tween_property(self, "scale", _base_scale * 1.08, 0.15)
-
-func _on_mouse_exited() -> void:
-	var tween := create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
-	tween.tween_property(self, "scale", _base_scale, 0.15)
+func set_hovered(is_hovered: bool) -> void:
+	if _hover_tween:
+		_hover_tween.kill()
+	_hover_tween = create_tween().set_parallel(true) \
+			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+	if is_hovered:
+		z_index = 10
+		_resting_y = position.y
+		_hover_tween.tween_property(self, "scale", _base_scale * 1.08, 0.18)
+		_hover_tween.tween_property(self, "position:y", position.y - 22.0, 0.18)
+	else:
+		z_index = 0
+		_hover_tween.tween_property(self, "scale", _base_scale, 0.15)
+		_hover_tween.tween_property(self, "position:y", _resting_y, 0.15)

@@ -1,0 +1,320 @@
+[gd_scene format=3 uid="uid://gear_menu"]
+
+[ext_resource type="Script" path="res://gui/character_menu/tabs/gear_tab.gd" id="script_gear_tab"]
+
+[sub_resource type="StyleBoxFlat" id="SlotNormal"]
+bg_color = Color(0.13, 0.07, 0.20, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.22, 0.66, 0.5)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="SlotHover"]
+bg_color = Color(0.20, 0.10, 0.30, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.50, 0.60, 0.88, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="SlotPressed"]
+bg_color = Color(0.28, 0.12, 0.42, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.44, 0.22, 0.66, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="DetailPanelStyle"]
+content_margin_left = 14.0
+content_margin_top = 12.0
+content_margin_right = 14.0
+content_margin_bottom = 12.0
+bg_color = Color(0.18, 0.08, 0.24, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.22, 0.66, 0.5)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxLine" id="DetailSeparatorStyle"]
+color = Color(0.44, 0.22, 0.66, 1)
+thickness = 1
+
+[node name="Gear" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("script_gear_tab")
+
+[node name="ContentMargin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="ContentLayout" type="HBoxContainer" parent="ContentMargin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SlotGrid" type="GridContainer" parent="ContentMargin/ContentLayout"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 2
+
+[node name="HelmetSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
+custom_minimum_size = Vector2(110, 140)
+layout_mode = 2
+theme_override_styles/normal = SubResource("SlotNormal")
+theme_override_styles/hover = SubResource("SlotHover")
+theme_override_styles/pressed = SubResource("SlotPressed")
+theme_override_styles/hover_pressed = SubResource("SlotPressed")
+
+[node name="SlotVBox" type="VBoxContainer" parent="ContentMargin/ContentLayout/SlotGrid/HelmetSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_constants/separation = 4
+
+[node name="SlotName" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/HelmetSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Helmet"
+
+[node name="SlotImage" type="TextureRect" parent="ContentMargin/ContentLayout/SlotGrid/HelmetSlot/SlotVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotStatus" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/HelmetSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Empty"
+
+[node name="NecklaceSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
+custom_minimum_size = Vector2(110, 140)
+layout_mode = 2
+theme_override_styles/normal = SubResource("SlotNormal")
+theme_override_styles/hover = SubResource("SlotHover")
+theme_override_styles/pressed = SubResource("SlotPressed")
+theme_override_styles/hover_pressed = SubResource("SlotPressed")
+
+[node name="SlotVBox" type="VBoxContainer" parent="ContentMargin/ContentLayout/SlotGrid/NecklaceSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_constants/separation = 4
+
+[node name="SlotName" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/NecklaceSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Necklace"
+
+[node name="SlotImage" type="TextureRect" parent="ContentMargin/ContentLayout/SlotGrid/NecklaceSlot/SlotVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotStatus" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/NecklaceSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Empty"
+
+[node name="RingLeftSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
+custom_minimum_size = Vector2(110, 140)
+layout_mode = 2
+theme_override_styles/normal = SubResource("SlotNormal")
+theme_override_styles/hover = SubResource("SlotHover")
+theme_override_styles/pressed = SubResource("SlotPressed")
+theme_override_styles/hover_pressed = SubResource("SlotPressed")
+
+[node name="SlotVBox" type="VBoxContainer" parent="ContentMargin/ContentLayout/SlotGrid/RingLeftSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_constants/separation = 4
+
+[node name="SlotName" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/RingLeftSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Ring (Left)"
+
+[node name="SlotImage" type="TextureRect" parent="ContentMargin/ContentLayout/SlotGrid/RingLeftSlot/SlotVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotStatus" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/RingLeftSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Empty"
+
+[node name="RingRightSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
+custom_minimum_size = Vector2(110, 140)
+layout_mode = 2
+theme_override_styles/normal = SubResource("SlotNormal")
+theme_override_styles/hover = SubResource("SlotHover")
+theme_override_styles/pressed = SubResource("SlotPressed")
+theme_override_styles/hover_pressed = SubResource("SlotPressed")
+
+[node name="SlotVBox" type="VBoxContainer" parent="ContentMargin/ContentLayout/SlotGrid/RingRightSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_constants/separation = 4
+
+[node name="SlotName" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/RingRightSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Ring (Right)"
+
+[node name="SlotImage" type="TextureRect" parent="ContentMargin/ContentLayout/SlotGrid/RingRightSlot/SlotVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotStatus" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/RingRightSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Empty"
+
+[node name="ArmorSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
+custom_minimum_size = Vector2(110, 140)
+layout_mode = 2
+theme_override_styles/normal = SubResource("SlotNormal")
+theme_override_styles/hover = SubResource("SlotHover")
+theme_override_styles/pressed = SubResource("SlotPressed")
+theme_override_styles/hover_pressed = SubResource("SlotPressed")
+
+[node name="SlotVBox" type="VBoxContainer" parent="ContentMargin/ContentLayout/SlotGrid/ArmorSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_constants/separation = 4
+
+[node name="SlotName" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/ArmorSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Armor"
+
+[node name="SlotImage" type="TextureRect" parent="ContentMargin/ContentLayout/SlotGrid/ArmorSlot/SlotVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotStatus" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/ArmorSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Empty"
+
+[node name="WeaponSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
+custom_minimum_size = Vector2(110, 140)
+layout_mode = 2
+theme_override_styles/normal = SubResource("SlotNormal")
+theme_override_styles/hover = SubResource("SlotHover")
+theme_override_styles/pressed = SubResource("SlotPressed")
+theme_override_styles/hover_pressed = SubResource("SlotPressed")
+
+[node name="SlotVBox" type="VBoxContainer" parent="ContentMargin/ContentLayout/SlotGrid/WeaponSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_constants/separation = 4
+
+[node name="SlotName" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/WeaponSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Weapon"
+
+[node name="SlotImage" type="TextureRect" parent="ContentMargin/ContentLayout/SlotGrid/WeaponSlot/SlotVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotStatus" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/WeaponSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Empty"
+
+[node name="DetailPanel" type="PanelContainer" parent="ContentMargin/ContentLayout"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("DetailPanelStyle")
+
+[node name="DetailContent" type="VBoxContainer" parent="ContentMargin/ContentLayout/DetailPanel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="GearName" type="Label" parent="ContentMargin/ContentLayout/DetailPanel/DetailContent"]
+layout_mode = 2
+text = "Hover over a slot"
+
+[node name="GearSeparator" type="HSeparator" parent="ContentMargin/ContentLayout/DetailPanel/DetailContent"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("DetailSeparatorStyle")
+
+[node name="GearDescription" type="RichTextLabel" parent="ContentMargin/ContentLayout/DetailPanel/DetailContent"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+fit_content = true

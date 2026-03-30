@@ -1,154 +1,172 @@
 [gd_scene format=3 uid="uid://c5rqm4i8k4g5m"]
 
 [ext_resource type="Script" uid="uid://bfcck7ld2ak0j" path="res://cards/card.gd" id="1_card"]
+[ext_resource type="Script" uid="uid://di60eb7g2a5us" path="res://cards/card_data.gd" id="2_nwofj"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_body"]
+[sub_resource type="Resource" id="Resource_4k7q8"]
+script = ExtResource("2_nwofj")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f61jr"]
 bg_color = Color(0.08, 0.09, 0.16, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.18, 0.78, 0.87, 1)
+border_color = Color(0.44, 0.45, 0.52, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
-shadow_color = Color(0, 0.75, 0.85, 0.35)
-shadow_size = 6
+shadow_color = Color(0.25, 0.25, 0.3, 0.2)
+shadow_size = 4
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_art"]
-bg_color = Color(0.11, 0.12, 0.2, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsqqk"]
+bg_color = Color(0.116799995, 0.1264, 0.1936, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.18, 0.78, 0.87, 0.45)
+border_color = Color(0.38, 0.38, 0.44, 0.4)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
+shadow_color = Color(1, 1, 1, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cost"]
-bg_color = Color(0.3, 0.1, 0.45, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwj5s"]
+bg_color = Color(0.17, 0.17, 0.23, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.45, 0.52, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hel13"]
+bg_color = Color(0.18, 0.19, 0.24, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.65, 0.35, 0.9, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-shadow_color = Color(0.5, 0.2, 0.75, 0.5)
+border_color = Color(0.52, 0.53, 0.6, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_color = Color(0.25, 0.25, 0.3, 0.6)
 shadow_size = 4
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_name"]
-bg_color = Color(0.05, 0.35, 0.48, 1)
-border_width_top = 1
-border_width_bottom = 1
-border_color = Color(0.18, 0.78, 0.87, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_desc"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_auvip"]
 content_margin_left = 6.0
 content_margin_top = 5.0
 content_margin_right = 6.0
 content_margin_bottom = 5.0
-bg_color = Color(0.06, 0.07, 0.13, 1)
+bg_color = Color(0.068, 0.076500006, 0.136, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.18, 0.78, 0.87, 0.3)
+border_color = Color(0.38, 0.38, 0.44, 0.28)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
+shadow_color = Color(1, 1, 1, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rarity"]
-bg_color = Color(0.28, 0.28, 0.34, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_geen5"]
+bg_color = Color(0.22, 0.22, 0.28, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.55, 0.55, 0.62, 1)
+border_color = Color(0.48, 0.48, 0.55, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
+shadow_color = Color(1, 1, 1, 0)
 
 [node name="Card" type="Control" unique_id=361472546]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 160.0
 offset_bottom = 240.0
+pivot_offset = Vector2(80, 240)
 script = ExtResource("1_card")
+data = SubResource("Resource_4k7q8")
 
 [node name="CardBody" type="Panel" parent="." unique_id=1764360206]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_body")
+theme_override_styles/panel = SubResource("StyleBoxFlat_f61jr")
 
 [node name="ArtFrame" type="Panel" parent="CardBody" unique_id=301176704]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 8.0
+offset_top = 34.0
 offset_right = 150.0
-offset_bottom = 108.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_art")
+offset_bottom = 148.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jsqqk")
 
 [node name="ArtLabel" type="Label" parent="CardBody/ArtFrame" unique_id=610551907]
 layout_mode = 0
 offset_right = 140.0
-offset_bottom = 100.0
-theme_override_colors/font_color = Color(0.18, 0.78, 0.87, 0.35)
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0.38, 0.38, 0.44, 0.35999998)
 theme_override_font_sizes/font_size = 11
 text = "[ Art Placeholder ]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CostBadge" type="Panel" parent="CardBody" unique_id=856903607]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 6.0
-offset_right = 42.0
-offset_bottom = 42.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_cost")
-
-[node name="CostLabel" type="Label" parent="CardBody/CostBadge" unique_id=221814777]
-layout_mode = 0
-offset_right = 36.0
-offset_bottom = 36.0
-theme_override_colors/font_color = Color(1, 0.92, 0.3, 1)
-theme_override_font_sizes/font_size = 18
-text = "1"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="NameBanner" type="Panel" parent="CardBody" unique_id=1098521931]
 layout_mode = 0
-offset_top = 110.0
-offset_right = 160.0
-offset_bottom = 138.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_name")
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 150.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nwj5s")
 
 [node name="CardName" type="Label" parent="CardBody/NameBanner" unique_id=1561425587]
 layout_mode = 0
-offset_right = 160.0
-offset_bottom = 28.0
-theme_override_colors/font_color = Color(0.94, 0.96, 1, 1)
-theme_override_font_sizes/font_size = 13
-text = "Void Strike"
-horizontal_alignment = 1
+offset_left = 8.0
+offset_right = 112.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.88, 0.88, 0.92, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 11
+text = "New Card"
 vertical_alignment = 1
 uppercase = true
 
+[node name="CostBadge" type="Panel" parent="CardBody" unique_id=856903607]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 6.0
+offset_right = 150.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hel13")
+
+[node name="CostLabel" type="Label" parent="CardBody/CostBadge" unique_id=221814777]
+layout_mode = 0
+offset_right = 26.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.82, 0.82, 0.86, 1)
+theme_override_font_sizes/font_size = 15
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="TypeLabel" type="Label" parent="CardBody" unique_id=267341311]
 layout_mode = 0
-offset_top = 140.0
+offset_top = 150.0
 offset_right = 160.0
-offset_bottom = 158.0
-theme_override_colors/font_color = Color(0.18, 0.78, 0.87, 0.7)
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(0.52, 0.53, 0.6, 0.75)
 theme_override_font_sizes/font_size = 10
 text = "— Attack —"
 horizontal_alignment = 1
@@ -157,37 +175,35 @@ vertical_alignment = 1
 [node name="DescriptionBox" type="Panel" parent="CardBody" unique_id=1310361918]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 160.0
+offset_top = 166.0
 offset_right = 152.0
-offset_bottom = 222.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_desc")
+offset_bottom = 234.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_auvip")
 
 [node name="DescriptionText" type="RichTextLabel" parent="CardBody/DescriptionBox" unique_id=1808930320]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 5.0
 offset_right = 138.0
-offset_bottom = 57.0
-theme_override_colors/default_color = Color(0.85, 0.88, 0.95, 1)
+offset_bottom = 47.0
+theme_override_colors/default_color = Color(0.82, 0.82, 0.86, 1)
 theme_override_font_sizes/normal_font_size = 11
 bbcode_enabled = true
-text = "Deal [b]8[/b] damage.
-Apply [color=#00e5c8]1 Void[/color]."
 fit_content = true
 
-[node name="RarityStrip" type="Panel" parent="CardBody" unique_id=140027380]
+[node name="RarityStrip" type="Panel" parent="CardBody/DescriptionBox" unique_id=140027380]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 226.0
-offset_right = 110.0
-offset_bottom = 238.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_rarity")
+offset_left = 42.0
+offset_top = 52.0
+offset_right = 102.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_geen5")
 
-[node name="RarityLabel" type="Label" parent="CardBody/RarityStrip" unique_id=1212506145]
+[node name="RarityLabel" type="Label" parent="CardBody/DescriptionBox/RarityStrip" unique_id=1212506145]
 layout_mode = 0
 offset_right = 60.0
 offset_bottom = 12.0
-theme_override_colors/font_color = Color(0.78, 0.78, 0.84, 1)
+theme_override_colors/font_color = Color(0.68, 0.68, 0.74, 1)
 theme_override_font_sizes/font_size = 9
 text = "Common"
 horizontal_alignment = 1

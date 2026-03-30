@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://cjn5heul4whhp"]
 
 [ext_resource type="PackedScene" uid="uid://c5rqm4i8k4g5m" path="res://cards/card.tscn" id="1_card"]
+[ext_resource type="Script" uid="uid://di60eb7g2a5us" path="res://cards/card_data.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://cs5vvdsqlp4gn" path="res://cards/card_effect.gd" id="2_h2yge"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
 bg_color = Color(0.05, 0.06, 0.1, 1)
+
+[sub_resource type="Resource" id="Resource_h2yge"]
+script = ExtResource("2_0xm2m")
+base_rarity = 4
 
 [node name="Main" type="Control" unique_id=1946475885]
 layout_mode = 3
@@ -34,3 +40,4 @@ mouse_filter = 2
 
 [node name="Card" parent="CardAnchor" unique_id=1023398483 instance=ExtResource("1_card")]
 layout_mode = 0
+data = SubResource("Resource_h2yge")

@@ -1,0 +1,236 @@
+[gd_scene format=3 uid="uid://stats_menu"]
+
+[ext_resource type="Script" path="res://gui/character_menu/tabs/stats_tab.gd" id="script_stats_tab"]
+
+[sub_resource type="StyleBoxFlat" id="PortraitFrameStyle"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.13, 0.07, 0.20, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.22, 0.66, 0.5)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StatsPanelStyle"]
+content_margin_left = 14.0
+content_margin_top = 10.0
+content_margin_right = 14.0
+content_margin_bottom = 10.0
+bg_color = Color(0.18, 0.08, 0.24, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.22, 0.66, 0.5)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxLine" id="StatSeparatorStyle"]
+color = Color(0.44, 0.22, 0.66, 0.4)
+thickness = 1
+
+[sub_resource type="SystemFont" id="CharacterNameFont"]
+font_weight = 700
+
+[sub_resource type="LabelSettings" id="CharacterNameSettings"]
+font = SubResource("CharacterNameFont")
+font_size = 18
+
+[node name="Stats" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("script_stats_tab")
+
+[node name="ContentMargin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="OuterVBox" type="VBoxContainer" parent="ContentMargin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="CharacterName" type="Label" parent="ContentMargin/OuterVBox"]
+layout_mode = 2
+label_settings = SubResource("CharacterNameSettings")
+text = "Character Name"
+
+[node name="CharacterClass" type="Label" parent="ContentMargin/OuterVBox"]
+layout_mode = 2
+text = ""
+
+[node name="ContentLayout" type="HBoxContainer" parent="ContentMargin/OuterVBox"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 14
+
+[node name="PortraitPanel" type="PanelContainer" parent="ContentMargin/OuterVBox/ContentLayout"]
+layout_mode = 2
+custom_minimum_size = Vector2(220, 220)
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("PortraitFrameStyle")
+
+[node name="Portrait" type="TextureRect" parent="ContentMargin/OuterVBox/ContentLayout/PortraitPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightColumn" type="VBoxContainer" parent="ContentMargin/OuterVBox/ContentLayout"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="StatsPanel" type="PanelContainer" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StatsPanelStyle")
+
+[node name="StatsContent" type="VBoxContainer" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="StrengthRow" type="HBoxContainer" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent"]
+layout_mode = 2
+
+[node name="StatName" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/StrengthRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(140, 0)
+text = "Strength"
+
+[node name="StatValue" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/StrengthRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 2
+text = "0"
+
+[node name="DexterityRow" type="HBoxContainer" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent"]
+layout_mode = 2
+
+[node name="StatName" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/DexterityRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(140, 0)
+text = "Dexterity"
+
+[node name="StatValue" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/DexterityRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 2
+text = "0"
+
+[node name="ConstitutionRow" type="HBoxContainer" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent"]
+layout_mode = 2
+
+[node name="StatName" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/ConstitutionRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(140, 0)
+text = "Constitution"
+
+[node name="StatValue" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/ConstitutionRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 2
+text = "0"
+
+[node name="IntelligenceRow" type="HBoxContainer" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent"]
+layout_mode = 2
+
+[node name="StatName" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/IntelligenceRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(140, 0)
+text = "Intelligence"
+
+[node name="StatValue" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/IntelligenceRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 2
+text = "0"
+
+[node name="FaithRow" type="HBoxContainer" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent"]
+layout_mode = 2
+
+[node name="StatName" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/FaithRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(140, 0)
+text = "Faith"
+
+[node name="StatValue" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/FaithRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 2
+text = "0"
+
+[node name="CritChanceRow" type="HBoxContainer" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent"]
+layout_mode = 2
+
+[node name="StatName" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/CritChanceRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(140, 0)
+text = "Crit Chance"
+
+[node name="StatValue" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/CritChanceRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 2
+text = "0%"
+
+[node name="StatSeparator" type="HSeparator" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StatSeparatorStyle")
+
+[node name="HealthRow" type="HBoxContainer" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent"]
+layout_mode = 2
+
+[node name="StatName" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/HealthRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(140, 0)
+text = "Health"
+
+[node name="StatValue" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/HealthRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 2
+text = "0 / 0"
+
+[node name="GoldRow" type="HBoxContainer" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent"]
+layout_mode = 2
+
+[node name="StatName" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/GoldRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(140, 0)
+text = "Gold"
+
+[node name="StatValue" type="Label" parent="ContentMargin/OuterVBox/ContentLayout/RightColumn/StatsPanel/StatsContent/GoldRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 2
+text = "0"
+
+[node name="BioPanel" type="PanelContainer" parent="ContentMargin/OuterVBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StatsPanelStyle")
+
+[node name="BioContent" type="VBoxContainer" parent="ContentMargin/OuterVBox/BioPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BioText" type="Label" parent="ContentMargin/OuterVBox/BioPanel/BioContent"]
+layout_mode = 2
+autowrap_mode = 3
+text = "This is the character Bio"
