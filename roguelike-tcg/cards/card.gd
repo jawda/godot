@@ -2,8 +2,7 @@
 class_name Card
 extends Control
 
-const CARD_TYPE_LABELS: Array[String] = ["Attack", "Skill", "Power", "Curse", "Status", "Defense"]
-const RARITY_LABELS: Array[String]    = ["Common", "Uncommon", "Rare", "✦ Mythic ✦", "✦ Special ✦"]
+const RARITY_LABELS: Array[String] = ["Common", "Uncommon", "Rare", "✦ Mythic ✦", "✦ Special ✦"]
 const SIZE := Vector2(160, 240)
 
 # ── Card data ──────────────────────────────────────────────────────────────────
@@ -161,7 +160,7 @@ func _update_labels() -> void:
 		return
 	_cost_label.text = str(data.card_cost)
 	_card_name_label.text = data.card_name
-	_type_label.text = "— " + CARD_TYPE_LABELS[data.card_type] + " —"
+	_type_label.text = "— " + data.get_type_label() + " —"
 	_description_text.text = data.get_description(data.upgraded)
 	var rarity_text: String = RARITY_LABELS[data.effective_rarity]
 	if data.upgraded:
@@ -169,6 +168,13 @@ func _update_labels() -> void:
 	_rarity_label.text = rarity_text
 
 # ── Hover (mouse and controller focus) ────────────────────────────────────────
+
+## Kills in-flight hover animation and resets scale. Called before drag takes over positioning.
+func cancel_animations() -> void:
+	if _hover_tween:
+		_hover_tween.kill()
+		_hover_tween = null
+	scale = _base_scale
 
 func set_hovered(is_hovered: bool) -> void:
 	if _hover_tween:

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://41owh0srda7s"]
+
+[ext_resource type="Script" uid="uid://di60eb7g2a5us" path="res://cards/card_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://cs5vvdsqlp4gn" path="res://cards/card_effect.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_mace_effect"]
+script = ExtResource("2")
+value = 6
+damage_type = 1
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+
+[resource]
+script = ExtResource("1")
+card_name = "Mace Strike"
+card_cost = 1
+card_description = "Deal [b]{0}[/b] [color=#f5e642]holy[/color] damage."
+effects = Array[ExtResource("2")]([SubResource("Resource_mace_effect")])
+card_class = 1

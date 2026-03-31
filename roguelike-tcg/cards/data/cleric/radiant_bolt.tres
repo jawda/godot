@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://46oxlhms5ffl"]
+
+[ext_resource type="Script" uid="uid://di60eb7g2a5us" path="res://cards/card_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://cs5vvdsqlp4gn" path="res://cards/card_effect.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_damage"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+value = 14
+damage_type = 1
+
+[sub_resource type="Resource" id="Resource_draw"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+effect_type = 2
+value = 1
+target = 0
+
+[resource]
+script = ExtResource("1")
+card_name = "Radiant Bolt"
+card_cost = 2
+base_rarity = 1
+card_description = "Deal [b]{0}[/b] [color=#f5e642]holy[/color] damage.
+Draw [b]{1}[/b] card."
+effects = Array[ExtResource("2")]([SubResource("Resource_damage"), SubResource("Resource_draw")])
+card_class = 1

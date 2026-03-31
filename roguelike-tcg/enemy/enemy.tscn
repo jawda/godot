@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" uid="uid://c6xc1xla46dqv" path="res://enemy/enemy.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="HPBarBg"]
+bg_color = Color(0.08, 0.04, 0.12, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.22, 0.66, 0.4)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="HPBarFill"]
+bg_color = Color(0.55, 0.08, 0.12, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="Enemy" type="VBoxContainer"]
+script = ExtResource("1")
+custom_minimum_size = Vector2(160, 0)
+size_flags_horizontal = 4
+
+[node name="IntentDisplay" type="PanelContainer" parent="."]
+size_flags_horizontal = 3
+
+[node name="IntentLabel" type="Label" parent="IntentDisplay"]
+text = "..."
+autowrap_mode = 3
+horizontal_alignment = 1
+
+[node name="NameLabel" type="Label" parent="."]
+text = "Enemy"
+horizontal_alignment = 1
+
+[node name="SpriteContainer" type="Control" parent="."]
+custom_minimum_size = Vector2(160, 140)
+size_flags_horizontal = 3
+
+[node name="Sprite" type="AnimatedSprite2D" parent="SpriteContainer"]
+position = Vector2(80, 70)
+visible = false
+
+[node name="Portrait" type="TextureRect" parent="SpriteContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand_mode = 1
+stretch_mode = 5
+visible = false
+
+[node name="PlaceholderLabel" type="Label" parent="SpriteContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[ art ]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(0, 12)
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 100.0
+value = 100.0
+show_percentage = false
+theme_override_styles/background = SubResource("HPBarBg")
+theme_override_styles/fill = SubResource("HPBarFill")
+
+[node name="HealthLabel" type="Label" parent="."]
+text = "100 / 100"
+horizontal_alignment = 1
+
+[node name="StatusRow" type="HBoxContainer" parent="."]
+size_flags_horizontal = 3
+
+[node name="BlockDisplay" type="HBoxContainer" parent="StatusRow"]
+visible = false
+
+[node name="BlockLabel" type="Label" parent="StatusRow/BlockDisplay"]
+text = "Block: 0"
+
+[node name="StatusContainer" type="HBoxContainer" parent="StatusRow"]
+size_flags_horizontal = 3

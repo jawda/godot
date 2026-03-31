@@ -55,10 +55,6 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxLine" id="SeparatorStyle"]
-color = Color(0.44, 0.22, 0.66, 1)
-thickness = 1
-
 [sub_resource type="ButtonGroup" id="TabButtonGroup"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7fij"]
@@ -96,6 +92,9 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxLine" id="SeparatorStyle"]
+color = Color(0.44, 0.22, 0.66, 1)
 
 [node name="CharacterMenu" type="Control" unique_id=891649116]
 layout_mode = 3

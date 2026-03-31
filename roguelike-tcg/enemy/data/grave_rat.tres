@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://b8tqthakb60x0"]
+
+[ext_resource type="Script" uid="uid://tjsk1hd7cekh" path="res://enemy/enemy_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://bkc62cbaws0dm" path="res://enemy/enemy_action.gd" id="2"]
+[ext_resource type="Script" uid="uid://g4b1gdtbj5a0" path="res://enemy/action_weight_modifier.gd" id="2_aaymr"]
+[ext_resource type="Script" uid="uid://dx226mur6wr8k" path="res://enemy/enemy_phase.gd" id="3_ln5i1"]
+
+[sub_resource type="Resource" id="Action_gnaw"]
+script = ExtResource("2")
+intent_description = "Gnaws and bites — preparing to deal 3 damage."
+base_weight = 2
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_fester"]
+script = ExtResource("2")
+action_type = 2
+value = 1
+intent_description = "Festers in the wound — preparing to apply 1 Weak."
+param = "weak"
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_scratch"]
+script = ExtResource("2")
+value = 2
+intent_description = "Scurries and scratches — preparing to deal 5 damage."
+base_weight = 2
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[resource]
+script = ExtResource("1")
+enemy_name = "Grave Rat"
+description = "Bloated and disease-ridden. Its bite carries a sickness that dulls the strength of those it touches."
+tags = Array[String](["beast"])
+max_health = 12
+base_attack = 3
+ai_pattern = 1
+actions = Array[ExtResource("2")]([SubResource("Action_gnaw"), SubResource("Action_fester"), SubResource("Action_scratch")])

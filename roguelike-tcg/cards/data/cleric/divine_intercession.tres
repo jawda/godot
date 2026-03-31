@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://y6q0nj2mbxhh"]
+
+[ext_resource type="Script" uid="uid://di60eb7g2a5us" path="res://cards/card_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://cs5vvdsqlp4gn" path="res://cards/card_effect.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_block"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+effect_type = 1
+target = 0
+power_trigger = 2
+value_source = 4
+
+[resource]
+script = ExtResource("1")
+card_name = "Divine Intercession"
+card_cost = 3
+card_type = 2
+base_rarity = 2
+card_description = "Whenever you gain HP this combat, gain that much Block too."
+effects = Array[ExtResource("2")]([SubResource("Resource_block")])
+card_class = 1

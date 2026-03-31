@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://bokjgh18ud866"]
+
+[ext_resource type="Script" uid="uid://tjsk1hd7cekh" path="res://enemy/enemy_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://bkc62cbaws0dm" path="res://enemy/enemy_action.gd" id="2"]
+[ext_resource type="Script" uid="uid://g4b1gdtbj5a0" path="res://enemy/action_weight_modifier.gd" id="3"]
+[ext_resource type="Script" uid="uid://dx226mur6wr8k" path="res://enemy/enemy_phase.gd" id="3_8vrrn"]
+
+[sub_resource type="Resource" id="Modifier_ally_present"]
+script = ExtResource("3")
+condition = 5
+weight_bonus = 3
+metadata/_custom_type_script = "uid://g4b1gdtbj5a0"
+
+[sub_resource type="Resource" id="Action_buff_allies"]
+script = ExtResource("2")
+action_type = 4
+value = 3
+intent_description = "Barks orders — granting all allies +3 Attack."
+target = 2
+param = "attack"
+base_weight = 2
+weight_modifiers = Array[ExtResource("3")]([SubResource("Modifier_ally_present")])
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_strike_heavy"]
+script = ExtResource("2")
+value = 4
+intent_description = "Strikes with authority — preparing to deal 12 damage."
+base_weight = 2
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_strike_light"]
+script = ExtResource("2")
+intent_description = "Slashes — preparing to deal 8 damage."
+base_weight = 2
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Modifier_took_damage"]
+script = ExtResource("3")
+condition = 3
+weight_bonus = 3
+metadata/_custom_type_script = "uid://g4b1gdtbj5a0"
+
+[sub_resource type="Resource" id="Action_formation"]
+script = ExtResource("2")
+action_type = 1
+value = 3
+intent_description = "Commands a defensive formation — bracing for 9 block."
+target = 1
+weight_modifiers = Array[ExtResource("3")]([SubResource("Modifier_took_damage")])
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[resource]
+script = ExtResource("1")
+enemy_name = "Bone Sergeant"
+tier = 1
+description = "A commander from some long-dead army. Its authority carries even in death — the lesser dead respond to its orders."
+tags = Array[String](["undead"])
+max_health = 45
+base_attack = 8
+base_block = 6
+ai_pattern = 1
+actions = Array[ExtResource("2")]([SubResource("Action_buff_allies"), SubResource("Action_strike_heavy"), SubResource("Action_strike_light"), SubResource("Action_formation")])

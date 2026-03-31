@@ -3,6 +3,8 @@ extends ColorRect
 
 const CARD: PackedScene = preload("res://cards/card.tscn")
 const MAX_HAND_SIZE: int = 10
+## How many pixels above its resting position a card must be dragged to trigger play on release.
+const DRAG_PLAY_THRESHOLD: float = -80.0
 
 @export var hand_curve: Curve
 @export var rotation_curve: Curve
@@ -12,22 +14,66 @@ const MAX_HAND_SIZE: int = 10
 @export var y_min: int = 0
 @export var y_max: int = -35
 
+## Emitted when the focused card is clicked or confirmed via controller.
+signal card_play_requested(card_data: CardData)
+## Emitted each time a card is successfully drawn from the deck.
+signal card_drawn
+
 var _deck: Deck = null
 var _focused_card: Card = null
+var _drag_card: Card = null
+var _drag_offset: Vector2 = Vector2.ZERO
+var _drag_ready: bool = false
+var _input_enabled: bool = true
 
-# Resting positions are the layout positions before any hover animation.
-# Hover detection uses these so rotation and card lift don't affect hit testing.
+# Resting positions are the TARGET layout positions — updated immediately when
+# the layout changes, even while cards are still animating there.
+# Hover detection uses these so hit rects are always accurate.
 var _resting_positions: Array[Vector2] = []
+
+# One stored tween per card so old reflow tweens can be killed before
+# starting a new one for the same card.
+var _reflow_tweens: Dictionary = {}
 
 func set_deck(deck: Deck) -> void:
 	_deck = deck
 
 # ── Input ──────────────────────────────────────────────────────────────────────
 
+## Disables all card input. Used by Battlefield while targeting is active so
+## enemy clicks are not intercepted by the hand.
+func set_input_enabled(enabled: bool) -> void:
+	_input_enabled = enabled
+	if not enabled and _drag_card != null:
+		var card: Card = _drag_card
+		_drag_card = null
+		card.modulate = Color.WHITE
+		card.z_index = 0
+		_drag_ready = false
+		_set_focus(null)
+
 func _input(event: InputEvent) -> void:
+	if not _input_enabled:
+		return
 	if event is InputEventMouseMotion:
 		var mouse_pos: Vector2 = get_local_mouse_position()
-		_set_focus(_card_at_position(mouse_pos))
+		if _drag_card != null:
+			_update_drag(mouse_pos)
+		else:
+			_set_focus(_card_at_position(mouse_pos))
+	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			if _focused_card != null and _focused_card.data != null:
+				_start_drag(_focused_card, get_local_mouse_position())
+				get_viewport().set_input_as_handled()
+		else:
+			if _drag_card != null:
+				_resolve_drag()
+				get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("ui_accept"):
+		if _focused_card != null and _focused_card.data != null:
+			card_play_requested.emit(_focused_card.data)
+			get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("ui_left") or event.is_action_pressed("ui_right"):
 		var card_count: int = get_child_count()
 		if card_count == 0:
@@ -51,6 +97,50 @@ func _card_at_position(pos: Vector2) -> Card:
 			return get_child(card_index) as Card
 	return null
 
+# ── Drag ───────────────────────────────────────────────────────────────────────
+
+func _start_drag(card: Card, mouse_pos: Vector2) -> void:
+	_drag_card = card
+	_drag_offset = card.position - mouse_pos
+	_drag_ready = false
+	card.cancel_animations()
+	card.rotation_degrees = 0.0
+	card.z_index = 20
+
+func _update_drag(mouse_pos: Vector2) -> void:
+	var card_index: int = _drag_card.get_index()
+	if card_index >= _resting_positions.size():
+		return
+	var new_pos: Vector2 = mouse_pos + _drag_offset
+	_drag_card.position = new_pos
+	var was_ready: bool = _drag_ready
+	_drag_ready = (new_pos.y - _resting_positions[card_index].y) < DRAG_PLAY_THRESHOLD
+	if _drag_ready != was_ready:
+		_drag_card.modulate = Color(1.4, 1.3, 0.7) if _drag_ready else Color.WHITE
+
+func _resolve_drag() -> void:
+	var card: Card = _drag_card
+	_drag_card = null
+	card.modulate = Color.WHITE
+	card.z_index = 0
+	if _drag_ready and card.data != null:
+		_drag_ready = false
+		_set_focus(null)
+		card_play_requested.emit(card.data)
+	else:
+		_drag_ready = false
+		var card_index: int = card.get_index()
+		var layout: Array = _calc_layout()
+		var positions: Array[Vector2] = layout[0]
+		var rotations: Array[float] = layout[1]
+		if card_index < positions.size():
+			var snap_tween: Tween = create_tween().set_parallel(true)
+			snap_tween.tween_property(card, "position", positions[card_index], 0.3) \
+					.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+			snap_tween.tween_property(card, "rotation_degrees", rotations[card_index], 0.3) \
+					.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+		_set_focus(null)
+
 # ── Focus ──────────────────────────────────────────────────────────────────────
 
 func _set_focus(card: Card) -> void:
@@ -64,7 +154,6 @@ func _set_focus(card: Card) -> void:
 
 # ── Draw / discard ─────────────────────────────────────────────────────────────
 
-## Draws count cards with a staggered delay between each, animating them into the hand.
 func draw_multiple(count: int, stagger_delay: float = 0.12) -> void:
 	for draw_index: int in count:
 		get_tree().create_timer(stagger_delay * draw_index).timeout.connect(draw)
@@ -77,12 +166,15 @@ func draw() -> void:
 		card_data = _deck.draw_card()
 		if card_data == null:
 			return
+		card_drawn.emit()
 	_set_focus(null)
 	var new_card: Card = CARD.instantiate()
 	add_child(new_card)
 	if card_data != null:
 		new_card.data = card_data
-	_update_cards()
+	# Snap resting positions first so hit detection is correct immediately,
+	# then animate cards to those positions.
+	_refresh_resting_positions()
 	_animate_card_in(new_card)
 
 func discard() -> void:
@@ -93,83 +185,137 @@ func discard() -> void:
 		_set_focus(null)
 	if _deck != null and card.data != null:
 		_deck.discard_card(card.data)
-	card.reparent(get_tree().root)
+	_reflow_tweens.erase(card)
+	remove_child(card)
 	card.queue_free()
-	_update_cards()
+	_refresh_resting_positions()
+
+func discard_all() -> void:
+	_set_focus(null)
+	for i: int in range(get_child_count() - 1, -1, -1):
+		var card: Card = get_child(i) as Card
+		if card == null:
+			continue
+		if _deck != null and card.data != null:
+			_deck.discard_card(card.data)
+		_reflow_tweens.erase(card)
+		remove_child(card)
+		card.queue_free()
+	_resting_positions.clear()
+
+## Finds and discards the first Card node whose data reference matches card_data.
+func discard_specific_data(card_data: CardData) -> void:
+	for i: int in get_child_count():
+		var card: Card = get_child(i) as Card
+		if card == null or card.data != card_data:
+			continue
+		if _focused_card == card:
+			_set_focus(null)
+		if _deck != null:
+			_deck.discard_card(card_data)
+		_reflow_tweens.erase(card)
+		remove_child(card)   # remove now so child count is correct before recalculating
+		card.queue_free()
+		_refresh_resting_positions()
+		_animate_reflow(null)
+		return
+
+## Adds a card directly into the hand without drawing from the deck.
+func add_card_to_hand(card_data: CardData) -> void:
+	if get_child_count() >= MAX_HAND_SIZE:
+		return
+	_set_focus(null)
+	var new_card: Card = CARD.instantiate()
+	add_child(new_card)
+	new_card.data = card_data
+	_refresh_resting_positions()
+	_animate_card_in(new_card)
 
 # ── Layout ─────────────────────────────────────────────────────────────────────
 
-func _animate_card_in(card: Card) -> void:
-	var target_position: Vector2 = card.position
-	var target_rotation: float = card.rotation_degrees
+## Calculates the target position and rotation for each card given the current
+## child count. Returns parallel arrays: positions and rotation_degrees.
+func _calc_layout() -> Array:
+	var card_count: int = get_child_count()
+	var positions: Array[Vector2] = []
+	var rotations: Array[float] = []
+	positions.resize(card_count)
+	rotations.resize(card_count)
 
-	# Start from the bottom-centre of the hand container (mimics drawing from a deck)
+	if card_count == 0:
+		return [positions, rotations]
+
+	var all_cards_size: float = Card.SIZE.x * card_count + x_sep * (card_count - 1)
+	var final_x_sep: float = x_sep
+	if all_cards_size > size.x:
+		final_x_sep = (size.x - Card.SIZE.x * card_count) / float(card_count - 1)
+		all_cards_size = size.x
+	var left_offset: float = (size.x - all_cards_size) / 2.0
+
+	for card_index: int in card_count:
+		var t: float = (1.0 / (card_count - 1) * card_index) if card_count > 1 else 0.0
+		var final_x: float = left_offset + Card.SIZE.x * card_index + final_x_sep * card_index
+		var final_y: float = y_min + y_max * hand_curve.sample(t)
+		positions[card_index] = Vector2(final_x, final_y)
+		rotations[card_index] = max_rotation_degrees * rotation_curve.sample(t)
+
+	return [positions, rotations]
+
+## Updates _resting_positions to the current target layout and snaps card transforms.
+## Use after structural changes (child added/removed) when animation isn't needed.
+func _refresh_resting_positions() -> void:
+	var layout: Array = _calc_layout()
+	var positions: Array[Vector2] = layout[0]
+	var rotations: Array[float] = layout[1]
+	_resting_positions.resize(positions.size())
+	for card_index: int in positions.size():
+		_resting_positions[card_index] = positions[card_index]
+		var card: Card = get_child(card_index)
+		card.position = positions[card_index]
+		card.rotation_degrees = rotations[card_index]
+
+func _animate_card_in(card: Card) -> void:
+	var target_pos: Vector2 = card.position
+	var target_rot: float = card.rotation_degrees
+
 	card.position = Vector2(size.x / 2.0 - Card.SIZE.x / 2.0, size.y + Card.SIZE.y * 0.5)
 	card.rotation_degrees = 0.0
 	card.modulate.a = 0.0
 
 	var tween: Tween = create_tween().set_parallel(true)
-	tween.tween_property(card, "position", target_position, 0.32) \
+	tween.tween_property(card, "position", target_pos, 0.32) \
 			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
-	tween.tween_property(card, "rotation_degrees", target_rotation, 0.32) \
+	tween.tween_property(card, "rotation_degrees", target_rot, 0.32) \
 			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
 	tween.tween_property(card, "modulate:a", 1.0, 0.18) \
 			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_LINEAR)
 
-	# Reflow existing cards smoothly to make room for the new arrival
 	_animate_reflow(card)
 
+## Smoothly moves all cards (except skip_card) to their target layout positions.
+## Also updates _resting_positions immediately so hit detection is accurate
+## during the animation, not just after it finishes.
 func _animate_reflow(skip_card: Card) -> void:
-	var card_count: int = get_child_count()
-	var all_cards_size: float = Card.SIZE.x * card_count + x_sep * (card_count - 1)
+	var layout: Array = _calc_layout()
+	var positions: Array[Vector2] = layout[0]
+	var rotations: Array[float] = layout[1]
 
-	var final_x_sep: float = x_sep
-	if all_cards_size > size.x:
-		final_x_sep = (size.x - Card.SIZE.x * card_count) / (card_count - 1)
-		all_cards_size = size.x
+	# Update resting positions to targets right away — hit detection is based on
+	# where cards are heading, not where they currently are.
+	_resting_positions.resize(positions.size())
+	for card_index: int in positions.size():
+		_resting_positions[card_index] = positions[card_index]
 
-	var left_offset: float = (size.x - all_cards_size) / 2.0
-
-	for card_index: int in card_count:
+	for card_index: int in get_child_count():
 		var card: Card = get_child(card_index)
 		if card == skip_card:
 			continue
-		var y_multiplier: float = hand_curve.sample(1.0 / (card_count - 1) * card_index) if card_count > 1 else 0.0
-		var rot_multiplier: float = rotation_curve.sample(1.0 / (card_count - 1) * card_index) if card_count > 1 else 0.0
-
-		var target_x: float = left_offset + Card.SIZE.x * card_index + final_x_sep * card_index
-		var target_y: float = y_min + y_max * y_multiplier
-
+		# Kill any in-flight reflow tween for this card before starting a new one.
+		if _reflow_tweens.has(card) and is_instance_valid(_reflow_tweens[card]):
+			_reflow_tweens[card].kill()
 		var reflow_tween: Tween = create_tween().set_parallel(true)
-		reflow_tween.tween_property(card, "position", Vector2(target_x, target_y), 0.22) \
+		_reflow_tweens[card] = reflow_tween
+		reflow_tween.tween_property(card, "position", positions[card_index], 0.22) \
 				.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
-		reflow_tween.tween_property(card, "rotation_degrees", max_rotation_degrees * rot_multiplier, 0.22) \
+		reflow_tween.tween_property(card, "rotation_degrees", rotations[card_index], 0.22) \
 				.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
-
-func _update_cards() -> void:
-	var card_count: int = get_child_count()
-	var all_cards_size: float = Card.SIZE.x * card_count + x_sep * (card_count - 1)
-
-	var final_x_sep: float = x_sep
-
-	# If the total card width exceeds the container, overlap cards to fit
-	if all_cards_size > size.x:
-		final_x_sep = (size.x - Card.SIZE.x * card_count) / (card_count - 1)
-		all_cards_size = size.x
-
-	# Center the card row within the hand container
-	var left_offset: float = (size.x - all_cards_size) / 2.0
-
-	_resting_positions.resize(card_count)
-
-	for card_index: int in card_count:
-		var card: Card = get_child(card_index)
-		var y_multiplier: float = hand_curve.sample(1.0 / (card_count - 1) * card_index) if card_count > 1 else 0.0
-		var rot_multiplier: float = rotation_curve.sample(1.0 / (card_count - 1) * card_index) if card_count > 1 else 0.0
-
-		var final_x: float = left_offset + Card.SIZE.x * card_index + final_x_sep * card_index
-		var final_y: float = y_min + y_max * y_multiplier
-
-		_resting_positions[card_index] = Vector2(final_x, final_y)
-		card.position = Vector2(final_x, final_y)
-		card.rotation_degrees = max_rotation_degrees * rot_multiplier

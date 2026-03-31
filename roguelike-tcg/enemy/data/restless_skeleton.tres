@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://c8qurn3pvr168"]
+
+[ext_resource type="Script" uid="uid://tjsk1hd7cekh" path="res://enemy/enemy_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://bkc62cbaws0dm" path="res://enemy/enemy_action.gd" id="2"]
+[ext_resource type="Script" uid="uid://g4b1gdtbj5a0" path="res://enemy/action_weight_modifier.gd" id="2_va3sk"]
+[ext_resource type="Script" uid="uid://dx226mur6wr8k" path="res://enemy/enemy_phase.gd" id="3_pqa2w"]
+
+[sub_resource type="Resource" id="Action_shield"]
+script = ExtResource("2")
+action_type = 1
+intent_description = "Raises its shield — bracing for 5 block."
+target = 1
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_blade"]
+script = ExtResource("2")
+value = 2
+intent_description = "Swings its rusted blade — preparing to strike for 8 damage."
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_jab"]
+script = ExtResource("2")
+intent_description = "Jabs with a bone shard — preparing to strike for 6 damage."
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[resource]
+script = ExtResource("1")
+enemy_name = "Restless Skeleton"
+description = "Animated bone and rusted iron. It fought in life and has not stopped since."
+tags = Array[String](["undead"])
+max_health = 22
+base_attack = 6
+base_block = 5
+actions = Array[ExtResource("2")]([SubResource("Action_shield"), SubResource("Action_blade"), SubResource("Action_jab")])

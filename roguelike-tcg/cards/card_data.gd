@@ -2,8 +2,9 @@
 class_name CardData
 extends Resource
 
-enum Rarity   { COMMON, UNCOMMON, RARE, MYTHIC, SPECIAL }
-enum CardType { ATTACK, SKILL, POWER, CURSE, STATUS, DEFENSE }
+enum Rarity    { COMMON, UNCOMMON, RARE, MYTHIC, SPECIAL }
+enum CardType  { ATTACK, QUIRK, POWER, CURSE, STATUS, DEFENSE }
+enum CardClass { NEUTRAL, CLERIC }
 
 @export_group("Card Data")
 @export var card_name: String = "New Card":
@@ -49,8 +50,28 @@ enum CardType { ATTACK, SKILL, POWER, CURSE, STATUS, DEFENSE }
 		is_token = new_is_token
 		emit_changed()
 
+## Which player class this card belongs to. NEUTRAL cards appear in all draft pools.
+@export var card_class: CardClass = CardClass.NEUTRAL:
+	set(new_card_class):
+		card_class = new_card_class
+		emit_changed()
+
 func _on_effect_changed() -> void:
 	emit_changed()
+
+## Returns the display label for this card's type, accounting for class-specific terminology.
+## e.g. Cleric POWER cards display as "Blessing" rather than "Power".
+func get_type_label() -> String:
+	if card_class == CardClass.CLERIC and card_type == CardType.POWER:
+		return "Blessing"
+	match card_type:
+		CardType.ATTACK:  return "Attack"
+		CardType.QUIRK:   return "Quirk"
+		CardType.POWER:   return "Power"
+		CardType.CURSE:   return "Curse"
+		CardType.STATUS:  return "Status"
+		CardType.DEFENSE: return "Defense"
+	return ""
 
 ## Returns card_description with {N} tokens replaced by the resolved effect values.
 ## Pass the card's current upgraded state so upgraded values are used when appropriate.

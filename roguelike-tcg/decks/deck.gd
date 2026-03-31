@@ -84,3 +84,12 @@ func discard_pile_count() -> int:
 
 func total_count() -> int:
 	return _all_cards.size()
+
+func get_all_cards() -> Array[CardData]:
+	return _all_cards.duplicate()
+
+func get_draw_pile() -> Array[CardData]:
+	return _draw_pile.duplicate()
+
+func get_discard_pile() -> Array[CardData]:
+	return _discard_pile.duplicate()

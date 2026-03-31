@@ -1,3 +1,212 @@
 [gd_scene format=3 uid="uid://de5y7kndqrh8s"]
 
-[node name="Battlefield" type="Node2D" unique_id=1315766685]
+[ext_resource type="Script" uid="uid://cm6scigv2p67v" path="res://hand.gd" id="1"]
+[ext_resource type="Script" uid="uid://cdvtrv2pe7jl7" path="res://gui/battlefield.gd" id="2_battlefield"]
+[ext_resource type="Resource" uid="uid://rkl5bjnb1uls" path="res://player/characters/cleric.tres" id="2_lnu6c"]
+[ext_resource type="Script" uid="uid://tjsk1hd7cekh" path="res://enemy/enemy_data.gd" id="3_vdhtw"]
+[ext_resource type="Resource" uid="uid://b43knepycada" path="res://enemy/data/gravewarden.tres" id="4_t7qo3"]
+
+[sub_resource type="StyleBoxFlat" id="HPBarBg"]
+bg_color = Color(0.08, 0.04, 0.12, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.22, 0.66, 0.4)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="HPBarFill"]
+bg_color = Color(0.65, 0.12, 0.18, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="EndTurnNormal"]
+bg_color = Color(0.13, 0.07, 0.2, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.22, 0.66, 0.5)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="EndTurnPressed"]
+bg_color = Color(0.28, 0.12, 0.42, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.22, 0.66, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="EndTurnHover"]
+bg_color = Color(0.2, 0.1, 0.3, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5, 0.6, 0.88, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Curve" id="Curve_hand"]
+_data = [Vector2(0.003984064, 0.022307396), 0.0, 6.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -6.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_rotation"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 6.0, 0, 0, Vector2(0.5, 1.4901161e-08), 0.0, 0.0, 0, 0, Vector2(0.99601597, 1), 6.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Battlefield" type="Control" unique_id=1136549708]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_battlefield")
+player_data = ExtResource("2_lnu6c")
+enemy_data_list = Array[ExtResource("3_vdhtw")]([ExtResource("4_t7qo3")])
+
+[node name="Background" type="ColorRect" parent="." unique_id=2079431227]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.055, 0.043, 0.1, 1)
+
+[node name="MainLayout" type="VBoxContainer" parent="." unique_id=1455347672]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="BattleArea" type="Control" parent="MainLayout" unique_id=813822205]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="EnemyRow" type="HBoxContainer" parent="MainLayout/BattleArea" unique_id=834258680]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 240.0
+grow_horizontal = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="PlayerSection" type="HBoxContainer" parent="MainLayout/BattleArea" unique_id=275704382]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="PlayerArea" type="HBoxContainer" parent="MainLayout/BattleArea/PlayerSection" unique_id=1261828760]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 12
+
+[node name="PlayerVisualSlot" type="Control" parent="MainLayout/BattleArea/PlayerSection/PlayerArea" unique_id=1570538503]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 2
+
+[node name="PlayerVisualPlaceholder" type="Label" parent="MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerVisualSlot" unique_id=895402124]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "[ player ]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerStatsBox" type="VBoxContainer" parent="MainLayout/BattleArea/PlayerSection/PlayerArea" unique_id=1928866902]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="PlayerHPLabel" type="Label" parent="MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox" unique_id=1534780708]
+layout_mode = 2
+text = "HP: -- / --"
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox" unique_id=1596069692]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("HPBarBg")
+theme_override_styles/fill = SubResource("HPBarFill")
+value = 100.0
+show_percentage = false
+
+[node name="PlayerBlockLabel" type="Label" parent="MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox" unique_id=257082267]
+visible = false
+layout_mode = 2
+text = "Block: 0"
+
+[node name="Spacer" type="Control" parent="MainLayout/BattleArea/PlayerSection" unique_id=156864252]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HUD" type="VBoxContainer" parent="MainLayout/BattleArea/PlayerSection" unique_id=1143952842]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 8
+
+[node name="EnergyLabel" type="Label" parent="MainLayout/BattleArea/PlayerSection/HUD" unique_id=337077300]
+layout_mode = 2
+text = "Energy: 3 / 3"
+horizontal_alignment = 2
+
+[node name="PileCounters" type="HBoxContainer" parent="MainLayout/BattleArea/PlayerSection/HUD" unique_id=1297817506]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="DrawPileLabel" type="Label" parent="MainLayout/BattleArea/PlayerSection/HUD/PileCounters" unique_id=1985864839]
+layout_mode = 2
+text = "Draw: 10"
+
+[node name="DiscardPileLabel" type="Label" parent="MainLayout/BattleArea/PlayerSection/HUD/PileCounters" unique_id=225041169]
+layout_mode = 2
+text = "Discard: 0"
+
+[node name="EndTurnButton" type="Button" parent="MainLayout/BattleArea/PlayerSection/HUD" unique_id=731399791]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+theme_override_styles/normal = SubResource("EndTurnNormal")
+theme_override_styles/pressed = SubResource("EndTurnPressed")
+theme_override_styles/hover = SubResource("EndTurnHover")
+theme_override_styles/hover_pressed = SubResource("EndTurnHover")
+text = "End Turn"
+
+[node name="HandArea" type="ColorRect" parent="MainLayout" unique_id=1208968561]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0.039)
+script = ExtResource("1")
+hand_curve = SubResource("Curve_hand")
+rotation_curve = SubResource("Curve_rotation")

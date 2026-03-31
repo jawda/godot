@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c5ttp6v1p2601"]
+
+[ext_resource type="Script" uid="uid://di60eb7g2a5us" path="res://cards/card_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://cs5vvdsqlp4gn" path="res://cards/card_effect.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_damage"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+value = 5
+damage_type = 1
+
+[sub_resource type="Resource" id="Resource_block"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+effect_type = 1
+value = 3
+target = 0
+
+[resource]
+script = ExtResource("1")
+card_name = "Sacred Strike"
+card_cost = 1
+card_description = "Deal [b]{0}[/b] [color=#f5e642]holy[/color] damage.
+Gain [b]{1}[/b] Block."
+effects = Array[ExtResource("2")]([SubResource("Resource_damage"), SubResource("Resource_block")])
+card_class = 1

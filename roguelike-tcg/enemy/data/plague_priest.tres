@@ -1,0 +1,88 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Script" uid="uid://tjsk1hd7cekh" path="res://enemy/enemy_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://bkc62cbaws0dm" path="res://enemy/enemy_action.gd" id="2"]
+[ext_resource type="Script" uid="uid://g4b1gdtbj5a0" path="res://enemy/action_weight_modifier.gd" id="3"]
+[ext_resource type="Script" uid="uid://dx226mur6wr8k" path="res://enemy/enemy_phase.gd" id="4"]
+
+[sub_resource type="Resource" id="Action_p1_staff"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+action_type = 0
+value = 3
+intent_description = "Raises a cursed staff — preparing to strike for 15 damage."
+base_weight = 3
+
+[sub_resource type="Resource" id="Action_p1_weak"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+action_type = 2
+value = 2
+intent_description = "Chants a weakening curse — preparing to apply 2 Weak."
+param = "weak"
+base_weight = 2
+
+[sub_resource type="Resource" id="Action_p1_vulnerable"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+action_type = 2
+value = 1
+intent_description = "Tears at your defenses — preparing to apply 1 Vulnerable."
+param = "vulnerable"
+base_weight = 2
+
+[sub_resource type="Resource" id="Action_p1_shield"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+action_type = 1
+value = 5
+target = 1
+intent_description = "Wraps himself in dark energy — bracing for 10 block."
+base_weight = 1
+
+[sub_resource type="Resource" id="Action_p2_plague"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+action_type = 0
+value = 6
+intent_description = "Unleashes a plague strike — preparing to deal 18 damage."
+base_weight = 2
+
+[sub_resource type="Resource" id="Action_p2_burn"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+action_type = 2
+value = 3
+intent_description = "Spews infectious rot — preparing to apply 3 Burn."
+param = "burn"
+base_weight = 3
+
+[sub_resource type="Resource" id="Action_p2_buff"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+action_type = 3
+value = 4
+target = 1
+intent_description = "Draws on corrupted power — Attack +4 for the rest of combat."
+param = "attack"
+base_weight = 1
+
+[sub_resource type="Resource" id="Phase_desperate"]
+script = ExtResource("4")
+metadata/_custom_type_script = "uid://dx226mur6wr8k"
+hp_threshold = 0.5
+actions = Array[ExtResource("2")]([SubResource("Action_p2_plague"), SubResource("Action_p2_burn"), SubResource("Action_p2_buff")])
+on_trigger_description = "The Plague Priest tears open his robes — black ichor seeps from the wounds. His chanting grows desperate."
+
+[resource]
+script = ExtResource("1")
+enemy_name = "Plague Priest"
+tier = 2
+description = "A cleric who answered a different call. Whatever faith sustained him in life has curdled into something that festers and spreads."
+tags = ["undead"]
+max_health = 90
+base_attack = 12
+base_block = 5
+ai_pattern = 1
+actions = Array[ExtResource("2")]([SubResource("Action_p1_staff"), SubResource("Action_p1_weak"), SubResource("Action_p1_vulnerable"), SubResource("Action_p1_shield")])
+phases = Array[ExtResource("4")]([SubResource("Phase_desperate")])

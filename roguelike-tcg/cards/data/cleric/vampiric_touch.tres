@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bdi1yttog4kal"]
+
+[ext_resource type="Script" uid="uid://di60eb7g2a5us" path="res://cards/card_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://cs5vvdsqlp4gn" path="res://cards/card_effect.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_damage"]
+script = ExtResource("2")
+value = 10
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+
+[sub_resource type="Resource" id="Resource_heal"]
+script = ExtResource("2")
+effect_type = 3
+value = 10
+target = 0
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+
+[resource]
+script = ExtResource("1")
+card_name = "Vampiric Touch"
+card_cost = 2
+card_description = "Deal [b]{0}[/b] damage.
+Heal [b]{1}[/b] HP."
+effects = Array[ExtResource("2")]([SubResource("Resource_damage"), SubResource("Resource_heal")])
+card_class = 1
+base_rarity = 1

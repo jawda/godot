@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(grep:*)",
-      "Bash(find '/mnt/c/Users/JoeW1928/OneDrive/Desktop/non work/Godot/godot/roguelike-tcg/' -type f ! -path */.godot/* ! -name *.import)"
+      "Bash(find '/mnt/c/Users/JoeW1928/OneDrive/Desktop/non work/Godot/godot/roguelike-tcg/' -type f ! -path */.godot/* ! -name *.import)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//mnt/c/Users/JoeW1928/OneDrive/Desktop/non work/Godot/godot/roguelike-tcg/enemy/data/**)",
+      "Bash(done)"
     ]
   }
 }

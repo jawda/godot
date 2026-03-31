@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://rkl7ylgfocv5"]
+
+[ext_resource type="Script" uid="uid://di60eb7g2a5us" path="res://cards/card_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://cs5vvdsqlp4gn" path="res://cards/card_effect.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_damage"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+value = 4
+target = 0
+
+[sub_resource type="Resource" id="Resource_status"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+effect_type = 4
+value = 1
+target = 0
+param = "free_next_card"
+
+[resource]
+script = ExtResource("1")
+card_name = "Sacrifice"
+card_cost = 1
+card_type = 1
+base_rarity = 1
+card_description = "Lose [b]{0}[/b] HP.
+Your next card this turn costs [b]0[/b]."
+effects = Array[ExtResource("2")]([SubResource("Resource_damage"), SubResource("Resource_status")])
+card_class = 1

@@ -1,0 +1,115 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://b43knepycada"]
+
+[ext_resource type="Script" uid="uid://tjsk1hd7cekh" path="res://enemy/enemy_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://bkc62cbaws0dm" path="res://enemy/enemy_action.gd" id="2"]
+[ext_resource type="Script" uid="uid://g4b1gdtbj5a0" path="res://enemy/action_weight_modifier.gd" id="2_bao28"]
+[ext_resource type="Script" uid="uid://dx226mur6wr8k" path="res://enemy/enemy_phase.gd" id="3"]
+
+[sub_resource type="Resource" id="Action_p1_slam"]
+script = ExtResource("2")
+value = 5
+intent_description = "Slams with a massive fist — preparing to deal 20 damage."
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_p1_harden"]
+script = ExtResource("2")
+action_type = 1
+value = 8
+intent_description = "Hardens its ancient bones — bracing for 18 block."
+target = 1
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_p1_crush"]
+script = ExtResource("2")
+value = 8
+intent_description = "Brings down its full weight — preparing to deal 23 damage."
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_p1_summon"]
+script = ExtResource("2")
+action_type = 5
+intent_description = "Calls to the buried dead — summoning a Restless Skeleton."
+param = "summon_skeleton"
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_p2_groundslam"]
+script = ExtResource("2")
+value = 8
+intent_description = "Drives a fist into the ground — preparing to deal 23 damage."
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_p2_buff"]
+script = ExtResource("2")
+action_type = 3
+value = 5
+intent_description = "Runes flare — Attack +5 for the rest of combat."
+target = 1
+param = "attack"
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_p2_erupt"]
+script = ExtResource("2")
+value = 12
+intent_description = "Erupts upward — preparing to deal 27 damage."
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_p2_summon"]
+script = ExtResource("2")
+action_type = 5
+intent_description = "Draws more dead from the earth — summoning a Restless Skeleton."
+param = "summon_skeleton"
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Phase_cracked"]
+script = ExtResource("3")
+hp_threshold = 0.75
+actions = Array[ExtResource("2")]([SubResource("Action_p2_groundslam"), SubResource("Action_p2_buff"), SubResource("Action_p2_erupt"), SubResource("Action_p2_summon")])
+on_trigger_description = "Cracks split across the Gravewarden's chest. Ancient runes ignite along its ribcage."
+metadata/_custom_type_script = "uid://dx226mur6wr8k"
+
+[sub_resource type="Resource" id="Action_p3_collapse"]
+script = ExtResource("2")
+value = 15
+intent_description = "Collapses forward — desperate and wild — preparing to deal 30 damage."
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_p3_fury"]
+script = ExtResource("2")
+value = 10
+intent_description = "Strikes again before you recover — preparing to deal 25 damage."
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_p3_bonestorm"]
+script = ExtResource("2")
+action_type = 5
+intent_description = "Shards of its own skeleton tear outward — dealing damage to all."
+param = "bone_storm"
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_p3_buff"]
+script = ExtResource("2")
+action_type = 3
+value = 8
+intent_description = "Feeds on its own pain — Attack +8 for the rest of combat."
+target = 1
+param = "attack"
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Phase_fury"]
+script = ExtResource("3")
+hp_threshold = 0.25
+actions = Array[ExtResource("2")]([SubResource("Action_p3_collapse"), SubResource("Action_p3_fury"), SubResource("Action_p3_bonestorm"), SubResource("Action_p3_buff")])
+on_trigger_description = "The Gravewarden ROARS. The chamber shakes. Its eyes burn with desperate fury."
+metadata/_custom_type_script = "uid://dx226mur6wr8k"
+
+[resource]
+script = ExtResource("1")
+enemy_name = "The Gravewarden"
+tier = 3
+description = "It was built to guard something — no one living remembers what. Whatever it protected is long gone. The Gravewarden remains, and it has grown very tired of intruders."
+tags = Array[String](["undead"])
+max_health = 250
+base_attack = 15
+base_block = 10
+actions = Array[ExtResource("2")]([SubResource("Action_p1_slam"), SubResource("Action_p1_harden"), SubResource("Action_p1_crush"), SubResource("Action_p1_summon")])
+phases = Array[ExtResource("3")]([SubResource("Phase_cracked"), SubResource("Phase_fury")])

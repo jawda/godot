@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://rklqbxdax3wl"]
+
+[ext_resource type="Script" uid="uid://di60eb7g2a5us" path="res://cards/card_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://cs5vvdsqlp4gn" path="res://cards/card_effect.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_damage"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+target = 0
+value_source = 2
+
+[sub_resource type="Resource" id="Resource_draw"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+effect_type = 2
+target = 0
+value_source = 2
+
+[resource]
+script = ExtResource("1")
+card_name = "Blood Pact"
+card_cost = 2
+card_type = 1
+base_rarity = 2
+card_description = "Lose HP equal to your current Block.
+Draw that many cards."
+effects = Array[ExtResource("2")]([SubResource("Resource_damage"), SubResource("Resource_draw")])
+card_class = 1
