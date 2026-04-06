@@ -176,6 +176,23 @@ func cancel_animations() -> void:
 		_hover_tween = null
 	scale = _base_scale
 
+## Plays a shrink + fade animation. Awaitable — caller is responsible for freeing the node.
+func play_discard() -> void:
+	if _hover_tween:
+		_hover_tween.kill()
+		_hover_tween = null
+	if _pulse_tween:
+		_pulse_tween.kill()
+		_pulse_tween = null
+	z_index = 5
+	mouse_filter = MOUSE_FILTER_IGNORE
+	var tween: Tween = create_tween().set_parallel(true)
+	tween.tween_property(self, "scale", Vector2(0.4, 0.4), 0.25) \
+			.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_BACK)
+	tween.tween_property(self, "modulate:a", 0.0, 0.22) \
+			.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_LINEAR)
+	await tween.finished
+
 func set_hovered(is_hovered: bool) -> void:
 	if _hover_tween:
 		_hover_tween.kill()

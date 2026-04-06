@@ -228,9 +228,9 @@ func _update_display() -> void:
 	for status_name: String in statuses:
 		if statuses[status_name] <= 0:
 			continue
-		var lbl: Label = Label.new()
-		lbl.text = "%s: %d" % [status_name.capitalize(), statuses[status_name]]
-		_status_container.add_child(lbl)
+		var status_label: Label = Label.new()
+		status_label.text = "%s: %d" % [status_name.capitalize(), statuses[status_name]]
+		_status_container.add_child(status_label)
 
 func _update_intent() -> void:
 	var action: EnemyAction = get_current_action()

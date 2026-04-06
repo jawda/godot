@@ -7,14 +7,14 @@ extends Control
 
 # ── Rarity styling ────────────────────────────────────────────────────────────
 
-const RARITY_COLORS: Array = [
+const RARITY_COLORS: Array[Color] = [
 	Color(0.52, 0.52, 0.52),   # COMMON
 	Color(0.38, 0.65, 0.38),   # UNCOMMON
 	Color(0.32, 0.52, 0.82),   # RARE
 	Color(0.62, 0.32, 0.82),   # MYTHIC
 	Color(0.78, 0.65, 0.12),   # SPECIAL
 ]
-const RARITY_NAMES: Array = ["Common", "Uncommon", "Rare", "Mythic", "Special"]
+const RARITY_NAMES: Array[String] = ["Common", "Uncommon", "Rare", "Mythic", "Special"]
 
 const PANEL_W:   float = 660.0
 const PANEL_H:   float = 580.0
@@ -25,7 +25,7 @@ const CARD_SCENE: PackedScene = preload("res://cards/card.tscn")
 # ── Runtime ───────────────────────────────────────────────────────────────────
 
 var _card_preview: Card      = null
-var _preview_pos:  Vector2   = Vector2.ZERO
+var _preview_positionition: Vector2 = Vector2.ZERO
 
 # ── Lifecycle ─────────────────────────────────────────────────────────────────
 
@@ -45,13 +45,13 @@ func open(title: String, cards: Array[CardData]) -> void:
 		child.queue_free()
 	_card_preview = null
 
-	var vp: Vector2 = get_viewport().get_visible_rect().size
+	var viewport_size: Vector2 = get_viewport().get_visible_rect().size
 	position = Vector2.ZERO
-	size     = vp
+	size     = viewport_size
 
-	_build_backdrop(vp)
-	_build_panel(title, cards, vp)
-	_build_preview(vp)
+	_build_backdrop(viewport_size)
+	_build_panel(title, cards, viewport_size)
+	_build_preview(viewport_size)
 	show()
 
 func close() -> void:
@@ -62,17 +62,17 @@ func close() -> void:
 
 # ── UI construction ───────────────────────────────────────────────────────────
 
-func _build_backdrop(vp: Vector2) -> void:
+func _build_backdrop(viewport_size: Vector2) -> void:
 	var backdrop: ColorRect = ColorRect.new()
 	backdrop.position = Vector2.ZERO
-	backdrop.size     = vp
+	backdrop.size     = viewport_size
 	backdrop.color    = Color(0.0, 0.0, 0.0, 0.72)
 	backdrop.gui_input.connect(_on_backdrop_input)
 	add_child(backdrop)
 
-func _build_panel(title: String, cards: Array[CardData], vp: Vector2) -> void:
+func _build_panel(title: String, cards: Array[CardData], viewport_size: Vector2) -> void:
 	var panel: PanelContainer = PanelContainer.new()
-	panel.position = Vector2((vp.x - PANEL_W) * 0.5, (vp.y - PANEL_H) * 0.5)
+	panel.position = Vector2((viewport_size.x - PANEL_W) * 0.5, (viewport_size.y - PANEL_H) * 0.5)
 	panel.size     = Vector2(PANEL_W, PANEL_H)
 
 	var panel_style: StyleBoxFlat = StyleBoxFlat.new()
@@ -87,20 +87,20 @@ func _build_panel(title: String, cards: Array[CardData], vp: Vector2) -> void:
 	panel.add_theme_stylebox_override("panel", panel_style)
 	add_child(panel)
 
-	var root_vbox: VBoxContainer = VBoxContainer.new()
-	root_vbox.add_theme_constant_override("separation", 0)
-	panel.add_child(root_vbox)
+	var panel_content: VBoxContainer = VBoxContainer.new()
+	panel_content.add_theme_constant_override("separation", 0)
+	panel.add_child(panel_content)
 
-	root_vbox.add_child(_build_header(title, cards.size()))
+	panel_content.add_child(_build_header(title, cards.size()))
 
-	var sep: HSeparator = HSeparator.new()
-	sep.add_theme_color_override("color", Color(0.44, 0.22, 0.66, 0.5))
-	root_vbox.add_child(sep)
+	var separator: HSeparator = HSeparator.new()
+	separator.add_theme_color_override("color", Color(0.44, 0.22, 0.66, 0.5))
+	panel_content.add_child(separator)
 
 	var scroll: ScrollContainer = ScrollContainer.new()
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	root_vbox.add_child(scroll)
+	panel_content.add_child(scroll)
 
 	var card_list: VBoxContainer = VBoxContainer.new()
 	card_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -121,26 +121,26 @@ func _build_panel(title: String, cards: Array[CardData], vp: Vector2) -> void:
 	for card: CardData in cards:
 		inner.add_child(_build_card_row(card))
 
-func _build_preview(vp: Vector2) -> void:
+func _build_preview(viewport_size: Vector2) -> void:
 	# Position the preview to the right of the panel, clamped to viewport.
 	# Falls back to left side if there is not enough space on the right.
-	var panel_right: float = (vp.x + PANEL_W) * 0.5
-	var right_gap:   float = vp.x - panel_right
-	var panel_left:  float = (vp.x - PANEL_W) * 0.5
+	var panel_right: float = (viewport_size.x + PANEL_W) * 0.5
+	var right_gap:   float = viewport_size.x - panel_right
+	var panel_left:  float = (viewport_size.x - PANEL_W) * 0.5
 
-	var px: float
+	var preview_x: float
 	if right_gap >= CARD_W + 8.0:
-		px = panel_right + (right_gap - CARD_W) * 0.5
+		preview_x = panel_right + (right_gap - CARD_W) * 0.5
 	else:
-		px = panel_left - CARD_W - (panel_left - CARD_W) * 0.5
-	px = clampf(px, 4.0, vp.x - CARD_W - 4.0)
-	var py: float = clampf((vp.y - CARD_H) * 0.5, 4.0, vp.y - CARD_H - 4.0)
-	_preview_pos = Vector2(px, py)
+		preview_x = panel_left - CARD_W - (panel_left - CARD_W) * 0.5
+	preview_x = clampf(preview_x, 4.0, viewport_size.x - CARD_W - 4.0)
+	var preview_y: float = clampf((viewport_size.y - CARD_H) * 0.5, 4.0, viewport_size.y - CARD_H - 4.0)
+	_preview_position = Vector2(preview_x, preview_y)
 
 	_card_preview = CARD_SCENE.instantiate() as Card
 	_card_preview.pivot_offset  = Vector2.ZERO   # predictable top-left origin
 	_card_preview.mouse_filter  = Control.MOUSE_FILTER_IGNORE
-	_card_preview.position      = _preview_pos
+	_card_preview.position      = _preview_position
 	_card_preview.z_index       = 2
 	_card_preview.hide()
 	add_child(_card_preview)
@@ -152,22 +152,22 @@ func _build_header(title: String, count: int) -> Control:
 	margin.add_theme_constant_override("margin_top",    14)
 	margin.add_theme_constant_override("margin_bottom", 14)
 
-	var hbox: HBoxContainer = HBoxContainer.new()
-	margin.add_child(hbox)
+	var header_row: HBoxContainer = HBoxContainer.new()
+	margin.add_child(header_row)
 
 	var title_lbl: Label = Label.new()
 	title_lbl.text = title
 	title_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	title_lbl.add_theme_font_size_override("font_size", 18)
 	title_lbl.add_theme_color_override("font_color", Color(0.90, 0.80, 1.00))
-	hbox.add_child(title_lbl)
+	header_row.add_child(title_lbl)
 
 	var count_lbl: Label = Label.new()
 	count_lbl.text = "  (%d)" % count
 	count_lbl.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	count_lbl.add_theme_font_size_override("font_size", 13)
 	count_lbl.add_theme_color_override("font_color", Color(0.55, 0.45, 0.70))
-	hbox.add_child(count_lbl)
+	header_row.add_child(count_lbl)
 
 	var close_btn: Button = Button.new()
 	close_btn.text = "✕"
@@ -176,7 +176,7 @@ func _build_header(title: String, count: int) -> Control:
 	close_btn.add_theme_font_size_override("font_size", 16)
 	close_btn.add_theme_color_override("font_color", Color(0.80, 0.40, 0.40))
 	close_btn.pressed.connect(close)
-	hbox.add_child(close_btn)
+	header_row.add_child(close_btn)
 
 	return margin
 
@@ -225,9 +225,9 @@ func _build_card_row(card: CardData) -> Control:
 		row.add_theme_stylebox_override("panel", row_style)
 		_hide_preview())
 
-	var hbox: HBoxContainer = HBoxContainer.new()
-	hbox.add_theme_constant_override("separation", 12)
-	row.add_child(hbox)
+	var row_content: HBoxContainer = HBoxContainer.new()
+	row_content.add_theme_constant_override("separation", 12)
+	row.add_child(row_content)
 
 	# Cost badge
 	var cost_wrap: PanelContainer = PanelContainer.new()
@@ -251,13 +251,13 @@ func _build_card_row(card: CardData) -> Control:
 	cost_lbl.add_theme_font_size_override("font_size", 14)
 	cost_lbl.add_theme_color_override("font_color", Color.WHITE)
 	cost_wrap.add_child(cost_lbl)
-	hbox.add_child(cost_wrap)
+	row_content.add_child(cost_wrap)
 
 	# Name + type column
 	var name_col: VBoxContainer = VBoxContainer.new()
 	name_col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	name_col.add_theme_constant_override("separation", 1)
-	hbox.add_child(name_col)
+	row_content.add_child(name_col)
 
 	var name_lbl: Label = Label.new()
 	name_lbl.text = card.card_name + (" +" if card.upgraded else "")
@@ -277,7 +277,7 @@ func _build_card_row(card: CardData) -> Control:
 	rarity_lbl.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	rarity_lbl.add_theme_font_size_override("font_size", 11)
 	rarity_lbl.add_theme_color_override("font_color", rarity_color)
-	hbox.add_child(rarity_lbl)
+	row_content.add_child(rarity_lbl)
 
 	return row
 
@@ -287,7 +287,7 @@ func _show_preview(card_data: CardData) -> void:
 	if _card_preview == null:
 		return
 	_card_preview.data     = card_data
-	_card_preview.position = _preview_pos
+	_card_preview.position = _preview_position
 	_card_preview.show()
 
 func _hide_preview() -> void:

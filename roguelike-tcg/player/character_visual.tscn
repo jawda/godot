@@ -2,37 +2,18 @@
 
 [ext_resource type="Script" path="res://player/character_visual.gd" id="1_script"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_1"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"idle",
-"speed": 8.0
-}, {
-"frames": [],
-"loop": false,
-"name": &"attack",
-"speed": 8.0
-}, {
-"frames": [],
-"loop": false,
-"name": &"hit",
-"speed": 8.0
-}, {
-"frames": [],
-"loop": false,
-"name": &"damaged",
-"speed": 8.0
-}, {
-"frames": [],
-"loop": false,
-"name": &"death",
-"speed": 8.0
-}]
-
 [node name="CharacterVisual" type="Node2D"]
 script = ExtResource("1_script")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_1")
-animation = &"idle"
+[node name="Sprite" type="Sprite2D" parent="."]
+
+[node name="BlastSprite" type="Sprite2D" parent="."]
+visible = false
+
+[node name="BlastParticles" type="GPUParticles2D" parent="."]
+emitting = false
+
+[node name="DeathParticles" type="GPUParticles2D" parent="."]
+emitting = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -87,6 +87,7 @@ func _setup_combat() -> void:
 
 	_end_turn_button.pressed.connect(_on_end_turn_pressed)
 	_hand_area.card_play_requested.connect(_on_card_play_requested)
+	_hand_area.card_drag_play_requested.connect(_on_card_drag_play_requested)
 
 	_player_health_bar.max_value = player_data.base_max_health + \
 			player_data.constitution * CombatPlayer.HP_PER_CONSTITUTION
@@ -125,20 +126,20 @@ func _setup_deck_viewer() -> void:
 	_reposition_pile_buttons.call_deferred()
 
 func _reposition_pile_buttons() -> void:
-	var w: float = size.x
-	var h: float = size.y
-	var btn_w: float = 108.0
-	var btn_h: float = 32.0
+	var width: float = size.x
+	var height: float = size.y
+	var button_width: float = 108.0
+	var button_height: float = 32.0
 	var margin: float = 12.0
 
-	_btn_draw_pile.position = Vector2(margin, h - btn_h - margin)
-	_btn_draw_pile.size     = Vector2(btn_w, btn_h)
+	_btn_draw_pile.position = Vector2(margin, height - button_height - margin)
+	_btn_draw_pile.size     = Vector2(button_width, button_height)
 
-	_btn_full_deck.position = Vector2(w - btn_w - margin, margin)
-	_btn_full_deck.size     = Vector2(btn_w, btn_h)
+	_btn_full_deck.position = Vector2(width - button_width - margin, margin)
+	_btn_full_deck.size     = Vector2(button_width, button_height)
 
-	_btn_discard.position   = Vector2(w - btn_w - margin, h - btn_h - margin)
-	_btn_discard.size       = Vector2(btn_w, btn_h)
+	_btn_discard.position   = Vector2(width - button_width - margin, height - button_height - margin)
+	_btn_discard.size       = Vector2(button_width, button_height)
 
 func _make_pile_button(label: String) -> Button:
 	var btn: Button = Button.new()
@@ -197,6 +198,23 @@ func _on_card_play_requested(card_data: CardData) -> void:
 		_show_toast("Not enough energy")
 		return
 	if _needs_enemy_target(card_data):
+		_pending_card = card_data
+		_enter_targeting_mode()
+	else:
+		_combat_manager.play_card(card_data, null)
+
+func _on_card_drag_play_requested(card_data: CardData, release_pos: Vector2) -> void:
+	if not _combat_manager.can_play(card_data):
+		_show_toast("Not enough energy")
+		return
+	if _needs_enemy_target(card_data):
+		for enemy: Enemy in _enemies:
+			if enemy.is_dead():
+				continue
+			if enemy.get_global_rect().has_point(release_pos):
+				_combat_manager.play_card(card_data, enemy)
+				return
+		# Released above threshold but not over a living enemy — enter targeting mode.
 		_pending_card = card_data
 		_enter_targeting_mode()
 	else:

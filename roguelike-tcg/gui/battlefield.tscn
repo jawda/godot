@@ -4,7 +4,8 @@
 [ext_resource type="Script" uid="uid://cdvtrv2pe7jl7" path="res://gui/battlefield.gd" id="2_battlefield"]
 [ext_resource type="Resource" uid="uid://rkl5bjnb1uls" path="res://player/characters/cleric.tres" id="2_lnu6c"]
 [ext_resource type="Script" uid="uid://tjsk1hd7cekh" path="res://enemy/enemy_data.gd" id="3_vdhtw"]
-[ext_resource type="Resource" uid="uid://b43knepycada" path="res://enemy/data/gravewarden.tres" id="4_t7qo3"]
+[ext_resource type="Resource" uid="uid://b8tqthakb60x0" path="res://enemy/data/grave_rat.tres" id="4_lnu6c"]
+[ext_resource type="Resource" uid="uid://c8qurn3pvr168" path="res://enemy/data/restless_skeleton.tres" id="5_vdhtw"]
 
 [sub_resource type="StyleBoxFlat" id="HPBarBg"]
 bg_color = Color(0.08, 0.04, 0.12, 1)
@@ -79,7 +80,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_battlefield")
 player_data = ExtResource("2_lnu6c")
-enemy_data_list = Array[ExtResource("3_vdhtw")]([ExtResource("4_t7qo3")])
+enemy_data_list = Array[ExtResource("3_vdhtw")]([ExtResource("4_lnu6c"), ExtResource("5_vdhtw"), ExtResource("4_lnu6c")])
 
 [node name="Background" type="ColorRect" parent="." unique_id=2079431227]
 layout_mode = 1

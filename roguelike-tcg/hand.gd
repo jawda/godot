@@ -16,6 +16,9 @@ const DRAG_PLAY_THRESHOLD: float = -80.0
 
 ## Emitted when the focused card is clicked or confirmed via controller.
 signal card_play_requested(card_data: CardData)
+## Emitted when a card is released from drag above the play threshold.
+## Carries the global mouse position so Battlefield can hit-test enemies.
+signal card_drag_play_requested(card_data: CardData, release_pos: Vector2)
 ## Emitted each time a card is successfully drawn from the deck.
 signal card_drawn
 
@@ -126,7 +129,7 @@ func _resolve_drag() -> void:
 	if _drag_ready and card.data != null:
 		_drag_ready = false
 		_set_focus(null)
-		card_play_requested.emit(card.data)
+		card_drag_play_requested.emit(card.data, get_global_mouse_position())
 	else:
 		_drag_ready = false
 		var card_index: int = card.get_index()
@@ -192,8 +195,8 @@ func discard() -> void:
 
 func discard_all() -> void:
 	_set_focus(null)
-	for i: int in range(get_child_count() - 1, -1, -1):
-		var card: Card = get_child(i) as Card
+	for card_index: int in range(get_child_count() - 1, -1, -1):
+		var card: Card = get_child(card_index) as Card
 		if card == null:
 			continue
 		if _deck != null and card.data != null:
@@ -205,8 +208,8 @@ func discard_all() -> void:
 
 ## Finds and discards the first Card node whose data reference matches card_data.
 func discard_specific_data(card_data: CardData) -> void:
-	for i: int in get_child_count():
-		var card: Card = get_child(i) as Card
+	for card_index: int in get_child_count():
+		var card: Card = get_child(card_index) as Card
 		if card == null or card.data != card_data:
 			continue
 		if _focused_card == card:
@@ -214,11 +217,22 @@ func discard_specific_data(card_data: CardData) -> void:
 		if _deck != null:
 			_deck.discard_card(card_data)
 		_reflow_tweens.erase(card)
-		remove_child(card)   # remove now so child count is correct before recalculating
-		card.queue_free()
-		_refresh_resting_positions()
-		_animate_reflow(null)
+		# Push the resting position offscreen so hover detection ignores this card
+		# while it animates. The child stays in the tree so it remains visible.
+		if card_index < _resting_positions.size():
+			_resting_positions[card_index] = Vector2(-9999.0, -9999.0)
+		_finish_discard_animation(card)
 		return
+
+## Plays the discard animation then removes the card and reflows the hand.
+## Called without await — runs asynchronously in the background.
+func _finish_discard_animation(card: Card) -> void:
+	await card.play_discard()
+	if is_instance_valid(card):
+		remove_child(card)
+		card.queue_free()
+	_refresh_resting_positions()
+	_animate_reflow(null)
 
 ## Adds a card directly into the hand without drawing from the deck.
 func add_card_to_hand(card_data: CardData) -> void:
@@ -253,11 +267,11 @@ func _calc_layout() -> Array:
 	var left_offset: float = (size.x - all_cards_size) / 2.0
 
 	for card_index: int in card_count:
-		var t: float = (1.0 / (card_count - 1) * card_index) if card_count > 1 else 0.0
+		var layout_fraction: float = (1.0 / (card_count - 1) * card_index) if card_count > 1 else 0.0
 		var final_x: float = left_offset + Card.SIZE.x * card_index + final_x_sep * card_index
-		var final_y: float = y_min + y_max * hand_curve.sample(t)
+		var final_y: float = y_min + y_max * hand_curve.sample(layout_fraction)
 		positions[card_index] = Vector2(final_x, final_y)
-		rotations[card_index] = max_rotation_degrees * rotation_curve.sample(t)
+		rotations[card_index] = max_rotation_degrees * rotation_curve.sample(layout_fraction)
 
 	return [positions, rotations]
 

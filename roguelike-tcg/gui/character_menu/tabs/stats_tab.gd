@@ -18,8 +18,8 @@ extends Control
 
 func _ready() -> void:
 	await get_tree().process_frame
-	var h := _portrait_panel.size.y
-	_portrait_panel.custom_minimum_size = Vector2(h, h)
+	var portrait_height: float = _portrait_panel.size.y
+	_portrait_panel.custom_minimum_size = Vector2(portrait_height, portrait_height)
 
 func populate(player_data: PlayerData, run_data: RunSaveData) -> void:
 	_character_name.text = player_data.character_name

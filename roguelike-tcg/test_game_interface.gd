@@ -1,3 +1,4 @@
+class_name TestGameInterface
 extends Control
 
 const STARTER_DECK_DATA: DeckData = preload("res://decks/data/starter_deck.tres")

@@ -6,31 +6,27 @@ extends Node2D
 enum State {
 	IDLE,
 	ATTACKING,  ## Player is performing an attack
-	HIT,        ## Player's attack connects — enemy reacts (not the player)
+	HIT,        ## Player's attack connects — weapon effect plays
 	DAMAGED,    ## Player is taking damage
 	DEAD,
 }
 
 # ── Signals ────────────────────────────────────────────────────────────────────
 
-## Emitted when the attack animation finishes. Combat system listens to this
-## before resolving damage so the hit visually lands at the right moment.
+## Emitted when the attack animation finishes.
 signal attack_finished
-
 ## Emitted when the hit animation finishes.
 signal hit_finished
-
-## Emitted when a single damaged animation finishes. If multiple damage instances
-## were queued, this fires after each one — not just the last.
+## Emitted when a single damaged animation finishes.
 signal damaged_finished
-
-## Emitted when the death animation finishes. Combat system listens to this
-## before transitioning to the post-combat screen.
+## Emitted when the death animation finishes.
 signal death_finished
 
 # ── Node references ────────────────────────────────────────────────────────────
 
-@onready var _sprite: AnimatedSprite2D = $Sprite
+@onready var _sprite: Sprite2D            = $Sprite
+@onready var _blast_sprite: Sprite2D      = $BlastSprite
+@onready var _anim_player: AnimationPlayer = $AnimationPlayer
 
 # ── Internal state ─────────────────────────────────────────────────────────────
 
@@ -43,7 +39,7 @@ var _damaged_queue: int = 0
 # ── Lifecycle ──────────────────────────────────────────────────────────────────
 
 func _ready() -> void:
-	_sprite.animation_finished.connect(_on_animation_finished)
+	_anim_player.animation_finished.connect(_on_animation_finished)
 	_transition_to(State.IDLE)
 
 # ── Public API ─────────────────────────────────────────────────────────────────
@@ -52,21 +48,18 @@ func _ready() -> void:
 func play_attack() -> void:
 	_transition_to(State.ATTACKING)
 
-## Plays the hit animation (player's strike connects). Emits hit_finished when done.
+## Plays the hit animation (weapon effect on connect). Emits hit_finished when done.
 func play_hit() -> void:
 	_transition_to(State.HIT)
 
-## Plays the damaged animation (player takes a hit).
-## If the animation is already playing, the request is queued and plays
-## immediately after the current one finishes — so every hit gets its own animation.
+## Plays the damaged animation. Queues additional hits if already playing.
 func play_damaged() -> void:
 	if _current_state == State.DAMAGED:
 		_damaged_queue += 1
 		return
 	_transition_to(State.DAMAGED)
 
-## Plays the death animation. Emits death_finished when done. Does not return to idle.
-## Clears any pending damaged queue since the character is dead.
+## Plays the death animation. Emits death_finished when done. Terminal state.
 func play_death() -> void:
 	_transition_to(State.DEAD)
 
@@ -84,32 +77,32 @@ func _transition_to(new_state: State) -> void:
 
 	match _current_state:
 		State.IDLE:
-			_sprite.play("idle")
+			_anim_player.play("idle")
 		State.ATTACKING:
-			_sprite.play("attack")
+			_anim_player.play("attack")
 		State.HIT:
-			_sprite.play("hit")
+			_anim_player.play("hit")
 		State.DAMAGED:
-			_sprite.play("damaged")
+			_anim_player.play("damaged")
 		State.DEAD:
 			_damaged_queue = 0
-			_sprite.play("death")
+			_anim_player.play("death")
 
-func _on_animation_finished() -> void:
-	match _current_state:
-		State.ATTACKING:
+func _on_animation_finished(anim_name: StringName) -> void:
+	match anim_name:
+		"attack":
 			attack_finished.emit()
 			_transition_to(State.IDLE)
-		State.HIT:
+		"hit":
 			hit_finished.emit()
 			_transition_to(State.IDLE)
-		State.DAMAGED:
+		"damaged":
 			damaged_finished.emit()
 			if _damaged_queue > 0:
 				_damaged_queue -= 1
 				_transition_to(State.DAMAGED)
 			else:
 				_transition_to(State.IDLE)
-		State.DEAD:
+		"death":
 			death_finished.emit()
 			# Stay in DEAD — no automatic transition.
