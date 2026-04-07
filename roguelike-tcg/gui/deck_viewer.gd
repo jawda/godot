@@ -25,7 +25,7 @@ const CARD_SCENE: PackedScene = preload("res://cards/card.tscn")
 # ── Runtime ───────────────────────────────────────────────────────────────────
 
 var _card_preview: Card      = null
-var _preview_positionition: Vector2 = Vector2.ZERO
+var _preview_position: Vector2 = Vector2.ZERO
 
 # ── Lifecycle ─────────────────────────────────────────────────────────────────
 

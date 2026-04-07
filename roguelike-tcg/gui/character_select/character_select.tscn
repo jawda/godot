@@ -1,0 +1,253 @@
+[gd_scene format=3 uid="uid://charselect001"]
+
+[ext_resource type="Script" path="res://gui/character_select/character_select.gd" id="1_script"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_detail"]
+bg_color = Color(0.08, 0.04, 0.13, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.50, 0.26, 0.78, 0.80)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_begin_normal"]
+bg_color = Color(0.1, 0.05, 0.18, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.55, 0.28, 0.85, 0.80)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+content_margin_left = 40.0
+content_margin_right = 40.0
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_begin_hover"]
+bg_color = Color(0.18, 0.08, 0.30, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.75, 0.45, 1.0, 1.0)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+content_margin_left = 40.0
+content_margin_right = 40.0
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+
+[node name="CharacterSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.055, 0.043, 0.1, 1.0)
+
+[node name="ScreenPadding" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="ContentLayout" type="VBoxContainer" parent="ScreenPadding"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Header" type="VBoxContainer" parent="ScreenPadding/ContentLayout"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="ScreenPadding/ContentLayout/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 38
+theme_override_colors/font_color = Color(0.95, 0.88, 1.0, 1.0)
+text = "Choose Your Character"
+horizontal_alignment = 1
+
+[node name="Tagline" type="Label" parent="ScreenPadding/ContentLayout/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.5, 0.42, 0.65, 1.0)
+text = "Select a class to begin your descent."
+horizontal_alignment = 1
+
+[node name="CharacterRow" type="HBoxContainer" parent="ScreenPadding/ContentLayout"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="DetailCard" type="PanelContainer" parent="ScreenPadding/ContentLayout"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_detail")
+
+[node name="CardPadding" type="MarginContainer" parent="ScreenPadding/ContentLayout/DetailCard"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="CardContent" type="VBoxContainer" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SelectedName" type="Label" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.95, 0.88, 1.0, 1.0)
+text = "—"
+horizontal_alignment = 1
+
+[node name="SelectedClass" type="Label" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.65, 0.48, 0.88, 1.0)
+text = "—"
+horizontal_alignment = 1
+
+[node name="Divider" type="HSeparator" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent"]
+layout_mode = 2
+
+[node name="SelectedDescription" type="Label" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.72, 0.65, 0.82, 1.0)
+text = "—"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="StatsRow" type="HBoxContainer" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="HPStat" type="VBoxContainer" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent/StatsRow"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="HPLabel" type="Label" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent/StatsRow/HPStat"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.50, 0.44, 0.68, 1.0)
+text = "HP"
+horizontal_alignment = 1
+
+[node name="HPValue" type="Label" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent/StatsRow/HPStat"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.88, 0.82, 1.0, 1.0)
+text = "--"
+horizontal_alignment = 1
+
+[node name="ConStat" type="VBoxContainer" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent/StatsRow"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="ConLabel" type="Label" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent/StatsRow/ConStat"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.50, 0.44, 0.68, 1.0)
+text = "CON"
+horizontal_alignment = 1
+
+[node name="ConValue" type="Label" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent/StatsRow/ConStat"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.88, 0.82, 1.0, 1.0)
+text = "--"
+horizontal_alignment = 1
+
+[node name="FaithStat" type="VBoxContainer" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent/StatsRow"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="FaithLabel" type="Label" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent/StatsRow/FaithStat"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.50, 0.44, 0.68, 1.0)
+text = "FAITH"
+horizontal_alignment = 1
+
+[node name="FaithValue" type="Label" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent/StatsRow/FaithStat"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.88, 0.82, 1.0, 1.0)
+text = "--"
+horizontal_alignment = 1
+
+[node name="StrStat" type="VBoxContainer" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent/StatsRow"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="StrLabel" type="Label" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent/StatsRow/StrStat"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.50, 0.44, 0.68, 1.0)
+text = "STR"
+horizontal_alignment = 1
+
+[node name="StrValue" type="Label" parent="ScreenPadding/ContentLayout/DetailCard/CardPadding/CardContent/StatsRow/StrStat"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.88, 0.82, 1.0, 1.0)
+text = "--"
+horizontal_alignment = 1
+
+[node name="BottomSection" type="CenterContainer" parent="ScreenPadding/ContentLayout"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BeginRun" type="Button" parent="ScreenPadding/ContentLayout/BottomSection"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_begin_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_begin_hover")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_begin_hover")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.88, 0.78, 1.0, 1.0)
+text = "Begin Run"

@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://startscreen001"]
+
+[ext_resource type="Script" path="res://gui/start_screen/start_screen.gd" id="1_script"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu_normal"]
+bg_color = Color(0.08, 0.04, 0.14, 0.90)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.40, 0.20, 0.62, 0.70)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu_hover"]
+bg_color = Color(0.14, 0.07, 0.24, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.65, 0.38, 0.90, 1.0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.055, 0.043, 0.1, 1.0)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="VBoxContainer" parent="Center"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="Label" parent="Center/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 72
+theme_override_colors/font_color = Color(0.95, 0.88, 1.0, 1.0)
+text = "Last Rites"
+horizontal_alignment = 1
+
+[node name="TitleGap" type="Control" parent="Center/Content"]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+
+[node name="ButtonList" type="VBoxContainer" parent="Center/Content"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="NewGame" type="Button" parent="Center/Content/ButtonList"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 52)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_menu_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_menu_hover")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_menu_hover")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.88, 0.80, 1.0, 1.0)
+text = "New Game"
+
+[node name="Continue" type="Button" parent="Center/Content/ButtonList"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 52)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_menu_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_menu_hover")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_menu_hover")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.88, 0.80, 1.0, 1.0)
+text = "Continue"
+
+[node name="Settings" type="Button" parent="Center/Content/ButtonList"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 52)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_menu_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_menu_hover")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_menu_hover")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.88, 0.80, 1.0, 1.0)
+text = "Settings"
+
+[node name="Quit" type="Button" parent="Center/Content/ButtonList"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 52)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_menu_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_menu_hover")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_menu_hover")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.88, 0.80, 1.0, 1.0)
+text = "Quit"

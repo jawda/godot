@@ -1,6 +1,18 @@
-# Roguelike TCG
+# Last Rites
 
 A roguelike deck-building card game built in Godot 4.6. Dark fantasy aesthetic — gothic, pixel art inspired, morally complex.
+
+---
+
+## Game Flow
+
+```
+Start Screen → Character Select → Battlefield (combat)
+```
+
+- **Start Screen** (`gui/start_screen/`) — New Game, Continue (hidden until a run exists), Settings, Quit
+- **Character Select** (`gui/character_select/`) — animated character sprites, click to reveal info card and Begin Run
+- **Battlefield** (`gui/battlefield.tscn`) — full combat loop with hand, energy, enemies, end turn
 
 ---
 
@@ -47,11 +59,17 @@ roguelike-tcg/
 │       ├── plague_priest.tres     # Elite (1 phase)
 │       └── gravewarden.tres       # Boss (2 phases)
 ├── gui/
+│   ├── start_screen/
+│   │   ├── start_screen.tscn      # Start screen — title, New Game, Continue, Settings, Quit
+│   │   └── start_screen.gd        # StartScreen — save check for Continue, settings overlay
+│   ├── character_select/
+│   │   ├── character_select.tscn  # Character select — animated sprites, info card, Begin Run
+│   │   └── character_select.gd    # CharacterSelect — loads characters, SubViewport animations, scene swap
 │   ├── battlefield.tscn           # Battlefield scene — full combat layout
 │   ├── battlefield.gd             # Battlefield — combat wiring, targeting, pile buttons, HUD
 │   ├── deck_viewer.gd             # DeckViewer — overlay panel for viewing card piles
 │   └── character_menu/
-│       ├── character_menu.tscn    # Tabbed character menu overlay
+│       ├── character_menu.tscn    # Tabbed character menu overlay (used during combat)
 │       ├── character_menu.gd      # CharacterMenu — tab routing, save/quit signals
 │       └── tabs/
 │           ├── stats_tab.gd       # StatsTab — character name, class, stat labels
@@ -60,10 +78,12 @@ roguelike-tcg/
 │           └── settings_tab.gd    # SettingsTab — audio sliders, fullscreen toggle
 ├── player/
 │   ├── player_data.gd             # PlayerData resource — character identity, stats, gear slots, starter deck
-│   ├── character_visual.tscn      # Character scene — AnimatedSprite2D + state machine
+│   ├── character_visual.tscn      # Base character scene — Sprite2D + AnimationPlayer state machine
 │   ├── character_visual.gd        # CharacterVisual — idle/attacking/hit/damaged/dead state machine
 │   └── characters/
-│       └── cleric.tres            # Cleric PlayerData (CON 2, FAITH 3, 75 HP)
+│       ├── cleric.tres            # Cleric PlayerData (CON 2, FAITH 3, 75 HP)
+│       ├── cleric_visual.tscn     # Cleric visual scene — sprite sheet + animations
+│       └── cleric.png             # Cleric sprite sheet (1500×810, 5×3 frames)
 │   └── gear/
 │       ├── gear_data.gd           # GearData resource — item name, slot, rarity, effects
 │       └── gear_effect.gd         # GearEffect resource — one passive or triggered gear effect
@@ -201,12 +221,16 @@ See [Creating a Character](documents/creating-a-character.md) for a full guide.
 
 **Available characters:** Cleric (`player/characters/cleric.tres`)
 
+To add a new character: create a `PlayerData` .tres, create a `*_visual.tscn` (instancing
+`character_visual.tscn`), then add the resource path to `CHARACTER_RESOURCE_PATHS` and the class →
+scene mapping to `CHARACTER_VISUAL_SCENES` in `character_select.gd`.
+
 ---
 
 ### Save System
 
-`SaveManager` is registered as an autoload (Project Settings → Autoload). It reads and writes
-`user://save.tres` automatically on load and provides helpers for managing character and run saves.
+`SaveManager` is registered as an autoload. It reads and writes `user://save.tres` automatically on
+load and provides helpers for managing character and run saves.
 
 | Method | Description |
 |---|---|
@@ -216,6 +240,10 @@ See [Creating a Character](documents/creating-a-character.md) for a full guide.
 
 The `character_id` is the path to the character's `PlayerData` .tres file
 (e.g. `"res://player/characters/cleric.tres"`).
+
+All characters share one save file. Per-character persistent data (gear, unlocked cards) lives in
+`CharacterSaveData`. The active run snapshot (health, floor, deck) lives in `RunSaveData`.
+The **Continue** button on the start screen is hidden until `SaveData.character_saves` is non-empty.
 
 ---
 
@@ -246,17 +274,19 @@ Connect `character_menu.closed` to resume the game.
 
 ## Active Test Scene
 
-`gui/game.tscn` — loads the Cleric starter deck, deals 5 cards, and has Draw/Discard/Reset buttons.
-Used for testing hand layout and card visuals in isolation.
+`main.tscn` — displays a single card using the `CardData` editor. Useful for previewing card
+visuals and rarity palettes in isolation. Not part of the main game flow.
 
 ---
 
 ## What's Not Implemented Yet
 
-- Status effect visuals on enemies
-- Combat system integration with Faith/Intelligence formulas
-- Run structure (map, rooms, rest sites)
-- Character select screen and start menu
-- In-game compendium
+- Audio buses (Music and SFX) — needed for settings sliders to function
+- Status effect visuals on enemy cards
+- Enemy AI context conditions (PLAYER_HP_BELOW_THRESHOLD etc.)
+- CharacterMenu wired into battlefield pause flow
+- Continue loading actual save state (currently goes to character select same as New Game)
+- Run structure (map, rooms, rest sites, encounters)
 - Store and event systems
+- In-game compendium
 - Enemy and character sprite sheets (waiting on art)
