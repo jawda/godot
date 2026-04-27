@@ -7,6 +7,7 @@
 script = ExtResource("2")
 effect_type = 3
 value = 4
+upgraded_value = 6
 target = 0
 metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
 
@@ -16,4 +17,5 @@ card_name = "Prayer"
 card_type = 1
 card_description = "Heal [b]{0}[/b] HP."
 effects = Array[ExtResource("2")]([SubResource("Resource_prayer_effect")])
+in_reward_pool = false
 card_class = 1

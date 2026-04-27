@@ -1,32 +1,33 @@
 [gd_scene format=3 uid="uid://c5rqm4i8k4g5m"]
 
 [ext_resource type="Script" uid="uid://bfcck7ld2ak0j" path="res://cards/card.gd" id="1_card"]
+[ext_resource type="Script" uid="uid://cs5vvdsqlp4gn" path="res://cards/card_effect.gd" id="2_4k7q8"]
 [ext_resource type="Script" uid="uid://di60eb7g2a5us" path="res://cards/card_data.gd" id="2_nwofj"]
 
 [sub_resource type="Resource" id="Resource_4k7q8"]
 script = ExtResource("2_nwofj")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f61jr"]
-bg_color = Color(0.08, 0.09, 0.16, 1)
+bg_color = Color(0.09, 0.05, 0.08, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.44, 0.45, 0.52, 1)
+border_color = Color(0.5, 0.38, 0.25, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
-shadow_color = Color(0.25, 0.25, 0.3, 0.2)
-shadow_size = 4
+shadow_color = Color(0.5, 0.38, 0.25, 0.25)
+shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsqqk"]
-bg_color = Color(0.116799995, 0.1264, 0.1936, 1)
+bg_color = Color(0.1264, 0.088, 0.116799995, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.38, 0.38, 0.44, 0.4)
+border_color = Color(0.5, 0.38, 0.25, 0.4)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -34,29 +35,29 @@ corner_radius_bottom_left = 4
 shadow_color = Color(1, 1, 1, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwj5s"]
-bg_color = Color(0.17, 0.17, 0.23, 1)
+bg_color = Color(0.25, 0.16, 0.09, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.44, 0.45, 0.52, 1)
+border_color = Color(0.5, 0.38, 0.25, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hel13"]
-bg_color = Color(0.18, 0.19, 0.24, 1)
+bg_color = Color(0.16, 0.09, 0.05, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.52, 0.53, 0.6, 1)
+border_color = Color(0.75, 0.63, 0.44, 1)
 corner_radius_top_left = 13
 corner_radius_top_right = 13
 corner_radius_bottom_right = 13
 corner_radius_bottom_left = 13
-shadow_color = Color(0.25, 0.25, 0.3, 0.6)
+shadow_color = Color(0.5, 0.38, 0.25, 0.6)
 shadow_size = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_auvip"]
@@ -64,12 +65,12 @@ content_margin_left = 6.0
 content_margin_top = 5.0
 content_margin_right = 6.0
 content_margin_bottom = 5.0
-bg_color = Color(0.068, 0.076500006, 0.136, 1)
+bg_color = Color(0.076500006, 0.0425, 0.068, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.38, 0.38, 0.44, 0.28)
+border_color = Color(0.5, 0.38, 0.25, 0.28)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -77,12 +78,12 @@ corner_radius_bottom_left = 4
 shadow_color = Color(1, 1, 1, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_geen5"]
-bg_color = Color(0.22, 0.22, 0.28, 1)
+bg_color = Color(0.16, 0.09, 0.05, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.48, 0.48, 0.55, 1)
+border_color = Color(0.5, 0.38, 0.25, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
@@ -116,7 +117,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_jsqqk")
 layout_mode = 0
 offset_right = 140.0
 offset_bottom = 114.0
-theme_override_colors/font_color = Color(0.38, 0.38, 0.44, 0.35999998)
+theme_override_colors/font_color = Color(0.5, 0.38, 0.25, 0.35999998)
 theme_override_font_sizes/font_size = 11
 text = "[ Art Placeholder ]"
 horizontal_alignment = 1
@@ -135,7 +136,7 @@ layout_mode = 0
 offset_left = 8.0
 offset_right = 112.0
 offset_bottom = 26.0
-theme_override_colors/font_color = Color(0.88, 0.88, 0.92, 1)
+theme_override_colors/font_color = Color(0.97, 0.94, 0.85, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 0
 theme_override_font_sizes/font_size = 11
@@ -155,7 +156,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_hel13")
 layout_mode = 0
 offset_right = 26.0
 offset_bottom = 26.0
-theme_override_colors/font_color = Color(0.82, 0.82, 0.86, 1)
+theme_override_colors/font_color = Color(0.97, 0.94, 0.85, 1)
 theme_override_font_sizes/font_size = 15
 text = "0"
 horizontal_alignment = 1
@@ -166,7 +167,7 @@ layout_mode = 0
 offset_top = 150.0
 offset_right = 160.0
 offset_bottom = 164.0
-theme_override_colors/font_color = Color(0.52, 0.53, 0.6, 0.75)
+theme_override_colors/font_color = Color(0.75, 0.63, 0.44, 0.8)
 theme_override_font_sizes/font_size = 10
 text = "— Attack —"
 horizontal_alignment = 1
@@ -186,7 +187,7 @@ offset_left = 6.0
 offset_top = 5.0
 offset_right = 138.0
 offset_bottom = 47.0
-theme_override_colors/default_color = Color(0.82, 0.82, 0.86, 1)
+theme_override_colors/default_color = Color(0.91, 0.82, 0.63, 1)
 theme_override_font_sizes/normal_font_size = 11
 bbcode_enabled = true
 fit_content = true
@@ -203,7 +204,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_geen5")
 layout_mode = 0
 offset_right = 60.0
 offset_bottom = 12.0
-theme_override_colors/font_color = Color(0.68, 0.68, 0.74, 1)
+theme_override_colors/font_color = Color(0.75, 0.63, 0.44, 1)
 theme_override_font_sizes/font_size = 9
 text = "Common"
 horizontal_alignment = 1

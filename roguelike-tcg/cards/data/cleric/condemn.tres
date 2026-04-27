@@ -7,6 +7,7 @@
 script = ExtResource("2")
 metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
 value = 6
+upgraded_value = 9
 damage_type = 1
 
 [sub_resource type="Resource" id="Resource_status"]
@@ -14,6 +15,7 @@ script = ExtResource("2")
 metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
 effect_type = 4
 value = 1
+upgraded_value = 2
 param = "vulnerable"
 
 [resource]

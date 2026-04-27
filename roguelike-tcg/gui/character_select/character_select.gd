@@ -1,19 +1,16 @@
 class_name CharacterSelect
 extends Control
 
-# ── Scene references ──────────────────────────────────────────────────────────
-
-const BATTLEFIELD_SCENE: PackedScene = preload("res://gui/battlefield.tscn")
-
 ## Add a new entry here each time a character is added.
 const CHARACTER_RESOURCE_PATHS: Array[String] = [
 	"res://player/characters/cleric.tres",
 ]
 
-## Maps character_class → the visual scene that plays their animations.
-const CHARACTER_VISUAL_SCENES: Dictionary = {
-	"cleric": "res://player/characters/cleric_visual.tscn",
-}
+## Ordered list of floors for every new run. Add FloorData resources here
+## as new floors are created. The floor loop steps through this sequence.
+const FLOOR_SEQUENCE: Array[String] = [
+	"res://world/data/floor_01_the_crypt.tres",
+]
 
 ## Native size of one sprite frame in the cleric sheet (1500 × 810, 5 h × 3 v).
 const SPRITE_FRAME_SIZE: Vector2i = Vector2i(300, 270)
@@ -90,20 +87,17 @@ func _build_character_slot(player_data: PlayerData) -> Panel:
 	viewport.transparent_bg = true
 	viewport_container.add_child(viewport)
 
-	var visual_scene_path: String = CHARACTER_VISUAL_SCENES.get(player_data.character_class, "")
-	if visual_scene_path != "":
-		var visual_scene: PackedScene = load(visual_scene_path) as PackedScene
-		if visual_scene != null:
-			var visual_node: CharacterVisual = visual_scene.instantiate() as CharacterVisual
-			# stretch=true forces the SubViewport to match the container size (SLOT_DISPLAY_SIZE),
-			# so we position and scale the sprite to fit that canvas, not the native frame size.
-			var scale_factor: float = minf(
-				SLOT_DISPLAY_SIZE.x / float(SPRITE_FRAME_SIZE.x),
-				SLOT_DISPLAY_SIZE.y / float(SPRITE_FRAME_SIZE.y)
-			)
-			visual_node.position = Vector2(SLOT_DISPLAY_SIZE.x * 0.5, SLOT_DISPLAY_SIZE.y * 0.5)
-			visual_node.scale    = Vector2(scale_factor, scale_factor)
-			viewport.add_child(visual_node)
+	if player_data.visual_scene != null:
+		var visual_node: CharacterVisual = player_data.visual_scene.instantiate() as CharacterVisual
+		# stretch=true forces the SubViewport to match the container size (SLOT_DISPLAY_SIZE),
+		# so we position and scale the sprite to fit that canvas, not the native frame size.
+		var scale_factor: float = minf(
+			SLOT_DISPLAY_SIZE.x / float(SPRITE_FRAME_SIZE.x),
+			SLOT_DISPLAY_SIZE.y / float(SPRITE_FRAME_SIZE.y)
+		)
+		visual_node.position = Vector2(SLOT_DISPLAY_SIZE.x * 0.5, SLOT_DISPLAY_SIZE.y * 0.5)
+		visual_node.scale    = Vector2(scale_factor, scale_factor)
+		viewport.add_child(visual_node)
 
 	slot.gui_input.connect(func(input_event: InputEvent) -> void:
 		if input_event is InputEventMouseButton \
@@ -147,11 +141,18 @@ func _populate_detail_card(player_data: PlayerData) -> void:
 func _on_begin_run_pressed() -> void:
 	if _selected_player_data == null:
 		return
-	var battlefield: Battlefield = BATTLEFIELD_SCENE.instantiate() as Battlefield
-	battlefield.player_data = _selected_player_data
-	get_tree().root.add_child(battlefield)
-	get_tree().current_scene.queue_free()
-	get_tree().current_scene = battlefield
+
+	var max_hp: int = _selected_player_data.base_max_health + \
+			_selected_player_data.constitution * CombatPlayer.HP_PER_CONSTITUTION
+
+	var sequence: Array[FloorData] = []
+	for path: String in FLOOR_SEQUENCE:
+		var floor_data: FloorData = load(path) as FloorData
+		if floor_data != null:
+			sequence.append(floor_data)
+
+	RunState.start_new_run(_selected_player_data, sequence, max_hp)
+	SceneTransition.transition_to("res://gui/floor_loop/floor_loop.tscn")
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────

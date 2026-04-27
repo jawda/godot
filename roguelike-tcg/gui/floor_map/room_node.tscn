@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://gui/floor_map/room_node.gd" id="1_rn"]
+
+[node name="RoomNode" type="Button"]
+layout_mode = 0
+clip_contents = true
+script = ExtResource("1_rn")

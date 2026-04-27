@@ -1,0 +1,29 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://world/floor_data.gd" id="1_fd"]
+[ext_resource type="Script" path="res://enemy/enemy_data.gd" id="2_ed"]
+[ext_resource type="Resource" path="res://enemy/data/deathbloom.tres" id="3_sc"]
+[ext_resource type="Resource" path="res://enemy/data/grave_rat.tres" id="4_gr"]
+[ext_resource type="Resource" path="res://enemy/data/restless_skeleton.tres" id="5_rs"]
+[ext_resource type="Resource" path="res://enemy/data/bone_sergeant.tres" id="6_bs"]
+[ext_resource type="Resource" path="res://enemy/data/plague_priest.tres" id="7_pp"]
+[ext_resource type="Resource" path="res://enemy/data/gravewarden.tres" id="8_gw"]
+
+[resource]
+script = ExtResource("1_fd")
+floor_name = "The Crypt"
+description = "The uppermost layer of the tomb. The restless dead stir in shallow graves, drawn by the warmth of the living."
+floor_number = 1
+min_rooms = 8
+max_rooms = 12
+allow_blacksmith = false
+combat_weight = 25
+elite_weight = 8
+rest_weight = 14
+treasure_weight = 12
+event_weight = 14
+shop_weight = 10
+blacksmith_weight = 4
+combat_enemies = Array[ExtResource("2_ed")]([ExtResource("4_gr"), ExtResource("5_rs")])
+elite_enemies = Array[ExtResource("2_ed")]([ExtResource("3_sc"), ExtResource("6_bs"), ExtResource("7_pp")])
+boss_pool = Array[ExtResource("2_ed")]([ExtResource("8_gw")])

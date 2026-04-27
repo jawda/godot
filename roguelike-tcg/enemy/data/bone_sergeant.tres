@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://bokjgh18ud866"]
 
 [ext_resource type="Script" uid="uid://tjsk1hd7cekh" path="res://enemy/enemy_data.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://bnjt45wtc33b" path="res://enemy/frames/bone_sergeant_frames.tres" id="1_frames"]
 [ext_resource type="Script" uid="uid://bkc62cbaws0dm" path="res://enemy/enemy_action.gd" id="2"]
 [ext_resource type="Script" uid="uid://g4b1gdtbj5a0" path="res://enemy/action_weight_modifier.gd" id="3"]
 [ext_resource type="Script" uid="uid://dx226mur6wr8k" path="res://enemy/enemy_phase.gd" id="3_8vrrn"]
@@ -56,6 +57,7 @@ enemy_name = "Bone Sergeant"
 tier = 1
 description = "A commander from some long-dead army. Its authority carries even in death — the lesser dead respond to its orders."
 tags = Array[String](["undead"])
+sprite_frames = ExtResource("1_frames")
 max_health = 45
 base_attack = 8
 base_block = 6

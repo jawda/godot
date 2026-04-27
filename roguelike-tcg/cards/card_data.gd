@@ -50,6 +50,13 @@ enum CardClass { NEUTRAL, CLERIC }
 		is_token = new_is_token
 		emit_changed()
 
+## When false this card never appears in combat reward pools.
+## Set to false on starter/basic cards (Strike, Defend, Mace Strike, Ward, Prayer, etc.).
+@export var in_reward_pool: bool = true:
+	set(new_in_reward_pool):
+		in_reward_pool = new_in_reward_pool
+		emit_changed()
+
 ## Which player class this card belongs to. NEUTRAL cards appear in all draft pools.
 @export var card_class: CardClass = CardClass.NEUTRAL:
 	set(new_card_class):
@@ -92,6 +99,15 @@ func get_description(is_upgraded: bool = false) -> String:
 	set(new_upgraded):
 		upgraded = new_upgraded
 		emit_changed()
+
+## Cost when upgraded. -1 means the same as card_cost.
+@export var upgraded_cost: int = -1:
+	set(new_upgraded_cost):
+		upgraded_cost = new_upgraded_cost
+		emit_changed()
+
+var effective_cost: int:
+	get: return upgraded_cost if (upgraded and upgraded_cost >= 0) else card_cost
 
 var effective_rarity: Rarity:
 	get: return mini(base_rarity + 1, Rarity.SPECIAL) as Rarity if upgraded else base_rarity

@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://b8tqthakb60x0"]
 
 [ext_resource type="Script" uid="uid://tjsk1hd7cekh" path="res://enemy/enemy_data.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://jwclkxxcya75" path="res://enemy/frames/grave_rat_frames.tres" id="1_frames"]
 [ext_resource type="Script" uid="uid://bkc62cbaws0dm" path="res://enemy/enemy_action.gd" id="2"]
 [ext_resource type="Script" uid="uid://g4b1gdtbj5a0" path="res://enemy/action_weight_modifier.gd" id="2_aaymr"]
 [ext_resource type="Script" uid="uid://dx226mur6wr8k" path="res://enemy/enemy_phase.gd" id="3_ln5i1"]
@@ -31,6 +32,7 @@ script = ExtResource("1")
 enemy_name = "Grave Rat"
 description = "Bloated and disease-ridden. Its bite carries a sickness that dulls the strength of those it touches."
 tags = Array[String](["beast"])
+sprite_frames = ExtResource("1_frames")
 max_health = 12
 base_attack = 3
 ai_pattern = 1

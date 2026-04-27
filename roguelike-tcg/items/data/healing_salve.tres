@@ -1,0 +1,16 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://items/consumable_data.gd" id="1_cd"]
+[ext_resource type="Script" path="res://items/consumable_effect.gd" id="2_ce"]
+
+[sub_resource type="Resource" id="Effect_heal"]
+script = ExtResource("2_ce")
+effect_type = 0
+value = 25
+
+[resource]
+script = ExtResource("1_cd")
+item_name = "Healing Salve"
+description = "Restore 25 HP."
+use_timing = 0
+effects = Array[ExtResource("2_ce")]([SubResource("Effect_heal")])

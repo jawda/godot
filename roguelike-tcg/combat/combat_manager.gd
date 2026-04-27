@@ -39,6 +39,11 @@ signal special_action_triggered(param: String)
 ## Emitted when the draw or discard pile count changes.
 signal draw_pile_changed(count: int)
 signal discard_pile_changed(count: int)
+signal exile_pile_changed(count: int)
+## Emitted when the player deals damage to an enemy (for attack animation).
+signal player_attacked
+## Emitted when the player takes damage from an enemy attack (for damage animation).
+signal player_took_damage
 
 # ── Constants ───────────────────────────────────────────────────────────────────
 
@@ -129,7 +134,7 @@ func can_play(card_data: CardData) -> bool:
 		return false
 	if _player.get_status("free_next_card") > 0:
 		return true
-	return _player.current_energy >= card_data.card_cost
+	return _player.current_energy >= card_data.effective_cost
 
 ## Attempts to play a card. Returns false if the card cannot be played right now.
 func play_card(card_data: CardData, target_enemy: Enemy) -> bool:
@@ -137,7 +142,7 @@ func play_card(card_data: CardData, target_enemy: Enemy) -> bool:
 		return false
 
 	# Honour free_next_card status
-	var actual_cost: int = card_data.card_cost
+	var actual_cost: int = card_data.effective_cost
 	if _player.get_status("free_next_card") > 0:
 		actual_cost = 0
 		_player.statuses.erase("free_next_card")
@@ -151,7 +156,10 @@ func play_card(card_data: CardData, target_enemy: Enemy) -> bool:
 		else:
 			_resolve_card_effect(effect, card_data, target_enemy, 0, true)
 
-	_hand.discard_specific_data(card_data)
+	if card_data.card_type == CardData.CardType.POWER:
+		_hand.exile_specific_data(card_data)
+	else:
+		_hand.discard_specific_data(card_data)
 	_cards_played_this_turn += 1
 
 	_fire_power_triggers(CardEffect.PowerTrigger.ON_CARD_PLAYED, 0)
@@ -226,10 +234,13 @@ func _deal_player_damage_to_enemy(effect: CardEffect, base_magnitude: int,
 	# Weak: player deals 25% less damage
 	if _player.get_status("weak") > 0:
 		damage = roundi(damage * 0.75)
+	player_attacked.emit()
 	target_enemy.take_damage(damage)
 	if target_enemy.is_dead():
 		enemy_died.emit(_enemies.find(target_enemy))
 		_check_victory()
+	else:
+		target_enemy.play_damaged()
 
 func _apply_status_effect(effect: CardEffect, magnitude: int, target_enemy: Enemy) -> void:
 	match effect.target:
@@ -302,6 +313,7 @@ func _run_enemy_actions() -> void:
 func _resolve_enemy_action(action: EnemyAction, enemy: Enemy) -> void:
 	match action.action_type:
 		EnemyAction.ActionType.ATTACK:
+			enemy.play_attack()
 			var damage: int = enemy.combat_attack + action.value
 			# Vulnerable player takes 50% more damage
 			if _player.get_status("vulnerable") > 0:
@@ -309,6 +321,7 @@ func _resolve_enemy_action(action: EnemyAction, enemy: Enemy) -> void:
 			_player.take_damage(damage)
 			player_hp_changed.emit(_player.current_health, _player.max_health)
 			player_block_changed.emit(_player.current_block)
+			player_took_damage.emit()
 
 		EnemyAction.ActionType.BLOCK:
 			enemy.gain_block(enemy.combat_block_base + action.value)
@@ -386,3 +399,4 @@ func _emit_player_ui() -> void:
 func _emit_deck_ui() -> void:
 	draw_pile_changed.emit(_deck.draw_pile_count())
 	discard_pile_changed.emit(_deck.discard_pile_count())
+	exile_pile_changed.emit(_deck.exile_pile_count())

@@ -1,0 +1,112 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://gui/rest_site/rest_site.gd" id="1_rs"]
+[ext_resource type="PackedScene" path="res://gui/rest_site/card_picker.tscn" id="2_cp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.07, 0.05, 0.10, 0.97)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.68, 0.55, 0.28, 0.80)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="RestSite" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rs")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.03, 0.07, 1.0)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Center"]
+layout_mode = 2
+custom_minimum_size = Vector2(560, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Padding" type="MarginContainer" parent="Center/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_bottom = 28
+
+[node name="Contents" type="VBoxContainer" parent="Center/Panel/Padding"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SiteTitle" type="Label" parent="Center/Panel/Padding/Contents"]
+layout_mode = 2
+text = "Rest"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.95, 0.85, 0.55, 1.0)
+
+[node name="HealthDisplay" type="Label" parent="Center/Panel/Padding/Contents"]
+layout_mode = 2
+text = "HP  — / —"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.65, 0.88, 0.65, 1.0)
+
+[node name="Divider1" type="HSeparator" parent="Center/Panel/Padding/Contents"]
+layout_mode = 2
+theme_override_colors/color = Color(0.68, 0.55, 0.28, 0.40)
+
+[node name="Options" type="VBoxContainer" parent="Center/Panel/Padding/Contents"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Recover" type="Button" parent="Center/Panel/Padding/Contents/Options"]
+layout_mode = 2
+text = "Recover — restore 30% HP"
+
+[node name="Reflect" type="Button" parent="Center/Panel/Padding/Contents/Options"]
+layout_mode = 2
+text = "Reflect — upgrade a card"
+
+[node name="RemoveCard" type="Button" parent="Center/Panel/Padding/Contents/Options"]
+layout_mode = 2
+text = "Remove a Card — costs 50g"
+
+[node name="SwapGear" type="Button" parent="Center/Panel/Padding/Contents/Options"]
+layout_mode = 2
+disabled = true
+text = "Swap Gear  (not yet available)"
+
+[node name="ClaimMastery" type="Button" parent="Center/Panel/Padding/Contents/Options"]
+layout_mode = 2
+visible = false
+text = "Claim Mastery"
+
+[node name="Divider2" type="HSeparator" parent="Center/Panel/Padding/Contents"]
+layout_mode = 2
+theme_override_colors/color = Color(0.68, 0.55, 0.28, 0.40)
+
+[node name="Leave" type="Button" parent="Center/Panel/Padding/Contents"]
+layout_mode = 2
+text = "Leave"
+
+[node name="CardPicker" parent="." instance=ExtResource("2_cp")]

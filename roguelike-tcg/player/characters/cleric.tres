@@ -1,18 +1,16 @@
-[gd_resource type="Resource" script_class="PlayerData" format=3 uid="uid://clericplayer001"]
+[gd_resource type="Resource" script_class="PlayerData" format=3 uid="uid://rkl5bjnb1uls"]
 
 [ext_resource type="Script" uid="uid://cks32rq4ss0mf" path="res://player/player_data.gd" id="1"]
-[ext_resource type="Resource" uid="uid://clericstarter001" path="res://decks/data/cleric_starter_deck.tres" id="2"]
+[ext_resource type="Resource" uid="uid://b3yq6brqes3qy" path="res://decks/data/cleric_starter_deck.tres" id="2"]
+[ext_resource type="PackedScene" uid="uid://dwxxn0qilrxfb" path="res://player/characters/cleric_visual.tscn" id="3_visual"]
 
 [resource]
 script = ExtResource("1")
 character_name = "Cleric"
 character_class = "cleric"
 character_description = "A devoted servant of the light. Channels holy power to smite the undead, fortify their body with unyielding faith, and sustain themselves through sacred healing."
+visual_scene = ExtResource("3_visual")
 starter_deck = ExtResource("2")
-strength = 0
-dexterity = 0
 constitution = 2
-intelligence = 0
 faith = 3
-base_crit_chance = 5.0
 base_max_health = 75

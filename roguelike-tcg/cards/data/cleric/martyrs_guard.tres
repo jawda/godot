@@ -8,6 +8,7 @@ script = ExtResource("2")
 metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
 effect_type = 1
 value = 18
+upgraded_value = 24
 target = 0
 
 [sub_resource type="Resource" id="Resource_damage"]

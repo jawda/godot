@@ -8,6 +8,7 @@ script = ExtResource("2")
 metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
 effect_type = 1
 value = 1
+upgraded_value = 2
 target = 0
 power_trigger = 3
 

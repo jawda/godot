@@ -6,6 +6,7 @@
 [sub_resource type="Resource" id="Resource_mace_effect"]
 script = ExtResource("2")
 value = 6
+upgraded_value = 9
 damage_type = 1
 metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
 
@@ -15,4 +16,5 @@ card_name = "Mace Strike"
 card_cost = 1
 card_description = "Deal [b]{0}[/b] [color=#f5e642]holy[/color] damage."
 effects = Array[ExtResource("2")]([SubResource("Resource_mace_effect")])
+in_reward_pool = false
 card_class = 1

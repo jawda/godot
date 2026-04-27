@@ -260,7 +260,7 @@ layout_mode = 2
 horizontal_alignment = 1
 text = "Empty"
 
-[node name="WeaponSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
+[node name="BootsSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
 custom_minimum_size = Vector2(110, 140)
 layout_mode = 2
 theme_override_styles/normal = SubResource("SlotNormal")
@@ -268,7 +268,7 @@ theme_override_styles/hover = SubResource("SlotHover")
 theme_override_styles/pressed = SubResource("SlotPressed")
 theme_override_styles/hover_pressed = SubResource("SlotPressed")
 
-[node name="SlotVBox" type="VBoxContainer" parent="ContentMargin/ContentLayout/SlotGrid/WeaponSlot"]
+[node name="SlotVBox" type="VBoxContainer" parent="ContentMargin/ContentLayout/SlotGrid/BootsSlot"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -279,18 +279,88 @@ offset_right = -6.0
 offset_bottom = -6.0
 theme_override_constants/separation = 4
 
-[node name="SlotName" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/WeaponSlot/SlotVBox"]
+[node name="SlotName" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/BootsSlot/SlotVBox"]
 layout_mode = 2
 horizontal_alignment = 1
-text = "Weapon"
+text = "Boots"
 
-[node name="SlotImage" type="TextureRect" parent="ContentMargin/ContentLayout/SlotGrid/WeaponSlot/SlotVBox"]
+[node name="SlotImage" type="TextureRect" parent="ContentMargin/ContentLayout/SlotGrid/BootsSlot/SlotVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 expand_mode = 1
 stretch_mode = 5
 
-[node name="SlotStatus" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/WeaponSlot/SlotVBox"]
+[node name="SlotStatus" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/BootsSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Empty"
+
+[node name="WeaponRightSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
+custom_minimum_size = Vector2(110, 140)
+layout_mode = 2
+theme_override_styles/normal = SubResource("SlotNormal")
+theme_override_styles/hover = SubResource("SlotHover")
+theme_override_styles/pressed = SubResource("SlotPressed")
+theme_override_styles/hover_pressed = SubResource("SlotPressed")
+
+[node name="SlotVBox" type="VBoxContainer" parent="ContentMargin/ContentLayout/SlotGrid/WeaponRightSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_constants/separation = 4
+
+[node name="SlotName" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/WeaponRightSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Weapon (R)"
+
+[node name="SlotImage" type="TextureRect" parent="ContentMargin/ContentLayout/SlotGrid/WeaponRightSlot/SlotVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotStatus" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/WeaponRightSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Empty"
+
+[node name="WeaponLeftSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
+custom_minimum_size = Vector2(110, 140)
+layout_mode = 2
+theme_override_styles/normal = SubResource("SlotNormal")
+theme_override_styles/hover = SubResource("SlotHover")
+theme_override_styles/pressed = SubResource("SlotPressed")
+theme_override_styles/hover_pressed = SubResource("SlotPressed")
+
+[node name="SlotVBox" type="VBoxContainer" parent="ContentMargin/ContentLayout/SlotGrid/WeaponLeftSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_constants/separation = 4
+
+[node name="SlotName" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/WeaponLeftSlot/SlotVBox"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Weapon (L)"
+
+[node name="SlotImage" type="TextureRect" parent="ContentMargin/ContentLayout/SlotGrid/WeaponLeftSlot/SlotVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotStatus" type="Label" parent="ContentMargin/ContentLayout/SlotGrid/WeaponLeftSlot/SlotVBox"]
 layout_mode = 2
 horizontal_alignment = 1
 text = "Empty"

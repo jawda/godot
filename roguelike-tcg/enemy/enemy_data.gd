@@ -12,7 +12,7 @@ enum Tier {
 enum AiPattern {
 	SEQUENTIAL, ## Cycles through the action pool in order, looping at the end
 	WEIGHTED,   ## Picks based on each action's effective weight (base_weight + active modifier bonuses)
-	            ## Equal base_weights with no modifiers produces uniform random behaviour
+				## Equal base_weights with no modifiers produces uniform random behaviour
 }
 
 # ── Identity ───────────────────────────────────────────────────────────────────
@@ -65,6 +65,13 @@ enum AiPattern {
 @export var sprite_frames: SpriteFrames:
 	set(new_sprite_frames):
 		sprite_frames = new_sprite_frames
+		emit_changed()
+
+## Scale applied to the AnimatedSprite2D when sprite_frames is set.
+## Adjust per-enemy to fit the sprite container (160×140). Default is no scaling.
+@export var visual_scale: Vector2 = Vector2.ONE:
+	set(new_visual_scale):
+		visual_scale = new_visual_scale
 		emit_changed()
 
 # ── Stats ──────────────────────────────────────────────────────────────────────

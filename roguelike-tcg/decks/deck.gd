@@ -9,6 +9,9 @@ const MAX_SIZE: int = 40
 var _all_cards: Array[CardData] = []
 var _draw_pile: Array[CardData] = []
 var _discard_pile: Array[CardData] = []
+## Cards exiled this combat (played Powers/Blessings). Not reshuffled.
+## Cleared at combat start via load_from_run / load_from_data.
+var _exile_pile: Array[CardData] = []
 
 # ── Setup ──────────────────────────────────────────────────────────────────────
 
@@ -18,6 +21,26 @@ func load_from_data(deck_data: DeckData) -> void:
 		_all_cards.append(card_data)
 	_draw_pile = _all_cards.duplicate()
 	_discard_pile.clear()
+	_exile_pile.clear()
+	shuffle()
+
+## Builds the deck from the live run state, respecting per-copy upgrade flags.
+## Upgraded copies are duplicated so they are independent objects and don't
+## pollute the shared .tres resource for non-upgraded copies.
+func load_from_run(run: RunSaveData) -> void:
+	_all_cards.clear()
+	for i: int in run.deck_card_paths.size():
+		var card_data: CardData = load(run.deck_card_paths[i]) as CardData
+		if card_data == null:
+			continue
+		var is_upgraded: bool = i < run.deck_card_upgrades.size() and run.deck_card_upgrades[i]
+		if is_upgraded:
+			card_data = card_data.duplicate() as CardData
+			card_data.upgraded = true
+		_all_cards.append(card_data)
+	_draw_pile = _all_cards.duplicate()
+	_discard_pile.clear()
+	_exile_pile.clear()
 	shuffle()
 
 func shuffle() -> void:
@@ -37,6 +60,11 @@ func draw_card() -> CardData:
 
 func discard_card(card_data: CardData) -> void:
 	_discard_pile.append(card_data)
+
+## Moves a played Power/Blessing to the exile zone for the rest of this combat.
+## Exiled cards are not reshuffled and cannot be drawn again this combat.
+func exile_card(card_data: CardData) -> void:
+	_exile_pile.append(card_data)
 
 ## Moves all discarded cards back into the draw pile and shuffles.
 func reshuffle_discard_into_draw() -> void:
@@ -82,6 +110,9 @@ func draw_pile_count() -> int:
 func discard_pile_count() -> int:
 	return _discard_pile.size()
 
+func exile_pile_count() -> int:
+	return _exile_pile.size()
+
 func total_count() -> int:
 	return _all_cards.size()
 
@@ -93,3 +124,6 @@ func get_draw_pile() -> Array[CardData]:
 
 func get_discard_pile() -> Array[CardData]:
 	return _discard_pile.duplicate()
+
+func get_exile_pile() -> Array[CardData]:
+	return _exile_pile.duplicate()

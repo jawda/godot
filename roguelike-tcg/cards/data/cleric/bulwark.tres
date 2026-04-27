@@ -8,12 +8,14 @@ script = ExtResource("2")
 metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
 effect_type = 1
 value = 10
+upgraded_value = 14
 target = 0
 
 [resource]
 script = ExtResource("1")
 card_name = "Bulwark"
 card_cost = 1
+upgraded_cost = 0
 card_type = 5
 card_description = "Gain [b]{0}[/b] Block."
 effects = Array[ExtResource("2")]([SubResource("Resource_block")])

@@ -7,6 +7,7 @@
 script = ExtResource("2")
 metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
 value = 8
+upgraded_value = 11
 
 [sub_resource type="Resource" id="Resource_void_status"]
 script = ExtResource("2")
@@ -18,6 +19,7 @@ param = "void"
 [resource]
 script = ExtResource("1")
 card_name = "Void Strike"
+in_reward_pool = false
 card_cost = 1
 card_description = "Deal [b]{0}[/b] damage.
 Apply [color=#00e5c8]{1} Void[/color]."

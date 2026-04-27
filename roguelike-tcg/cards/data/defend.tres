@@ -7,12 +7,14 @@
 script = ExtResource("2")
 effect_type = 1
 value = 5
+upgraded_value = 8
 target = 0
 metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
 
 [resource]
 script = ExtResource("1")
 card_name = "Defend"
+in_reward_pool = false
 card_cost = 1
 card_type = 5
 card_description = "Gain [b]{0}[/b] Block."

@@ -2,7 +2,7 @@
 class_name GearData
 extends Resource
 
-enum GearSlot { HELMET, NECKLACE, RING, ARMOR, WEAPON }
+enum GearSlot { HELMET, NECKLACE, RING, ARMOR, BOOTS, WEAPON_RIGHT, WEAPON_LEFT }
 enum Rarity    { COMMON, UNCOMMON, RARE, MYTHIC, SPECIAL }
 
 @export_group("Gear Data")
@@ -41,18 +41,27 @@ enum Rarity    { COMMON, UNCOMMON, RARE, MYTHIC, SPECIAL }
 		emit_changed()
 
 @export_group("Upgrade")
-@export var upgraded: bool = false:
-	set(new_upgraded):
-		upgraded = new_upgraded
+## First-level upgrade choices available at a blacksmith. Empty = this item cannot be upgraded.
+@export var upgrade_options: Array[GearUpgradeNode] = []:
+	set(new_upgrade_options):
+		upgrade_options = new_upgrade_options
 		emit_changed()
 
 func _on_effect_changed() -> void:
 	emit_changed()
 
-## Returns gear_description with {N} tokens replaced by the resolved effect values.
-func get_description(is_upgraded: bool = false) -> String:
-	var result: String = gear_description
-	for effect_index in effects.size():
-		if effects[effect_index]:
-			result = result.replace("{%d}" % effect_index, str(effects[effect_index].resolved_value(is_upgraded)))
+## Returns the description with {N} tokens replaced by effect values.
+## Pass the active GearUpgradeNode to resolve a specific upgrade state,
+## or omit to get the base item description.
+func get_description(active_node: GearUpgradeNode = null) -> String:
+	var template: String = gear_description
+	var active_effects: Array[GearEffect] = effects
+	if active_node != null:
+		if not active_node.description.is_empty():
+			template = active_node.description
+		active_effects = active_node.effects
+	var result: String = template
+	for effect_index: int in active_effects.size():
+		if active_effects[effect_index]:
+			result = result.replace("{%d}" % effect_index, str(active_effects[effect_index].value))
 	return result

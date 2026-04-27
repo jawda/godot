@@ -1,14 +1,25 @@
 class_name Battlefield
 extends Control
 
-# ── Scene configuration ──────────────────────────────────────────────────────────
+## Emitted after the player dismisses the combat result overlay.
+## victory = true → won the fight; false → player was defeated.
+signal combat_completed(victory: bool)
+
+# ── Scene configuration ────────────────────────────────────────────────────────
 
 @export var player_data: PlayerData
 @export var enemy_data_list: Array[EnemyData] = []
+## Set by FloorLoop before entering the scene tree. Determines the reward rarity pool.
+@export var room_type: RoomData.RoomType = RoomData.RoomType.COMBAT
 
-# ── Preloads ─────────────────────────────────────────────────────────────────────
+# ── Preloads ───────────────────────────────────────────────────────────────────
 
 const ENEMY_SCENE: PackedScene = preload("res://enemy/enemy.tscn")
+
+## Size of the PlayerVisualSlot Control in the scene (must match custom_minimum_size).
+const VISUAL_SLOT_SIZE: Vector2 = Vector2(220, 260)
+## Native size of one sprite frame — used to scale the visual to fit the slot.
+const VISUAL_FRAME_SIZE: Vector2 = Vector2(300, 270)
 
 ## Maps SPECIAL action param strings to the EnemyData resource they spawn.
 const SUMMON_LOOKUP: Dictionary = {
@@ -21,21 +32,31 @@ const PIP_FILLED: Color       = Color(0.9, 0.72, 0.18, 1.0)
 const PIP_EMPTY: Color        = Color(0.12, 0.08, 0.06, 1.0)
 const PIP_BORDER: Color       = Color(0.55, 0.42, 0.10, 0.8)
 
-# ── Node references ───────────────────────────────────────────────────────────────
+# ── Node references ────────────────────────────────────────────────────────────
 
-@onready var _hand_area: Hand                = $MainLayout/HandArea
-@onready var _enemy_row: HBoxContainer       = $MainLayout/BattleArea/EnemyRow
-@onready var _end_turn_button: Button        = $MainLayout/BattleArea/PlayerSection/HUD/EndTurnButton
-@onready var _draw_pile_label: Label         = $MainLayout/BattleArea/PlayerSection/HUD/PileCounters/DrawPileLabel
-@onready var _discard_pile_label: Label      = $MainLayout/BattleArea/PlayerSection/HUD/PileCounters/DiscardPileLabel
-@onready var _player_stats_box: VBoxContainer = $MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox
-@onready var _player_hp_label: Label         = $MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox/PlayerHPLabel
-@onready var _player_health_bar: ProgressBar = $MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox/PlayerHealthBar
-@onready var _player_block_label: Label      = $MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox/PlayerBlockLabel
-## Sourced from HUD but reparented to player stats box in _setup_combat.
-@onready var _energy_label: Label            = $MainLayout/BattleArea/PlayerSection/HUD/EnergyLabel
+@onready var _hand_area: Hand                  = $MainLayout/HandArea
+@onready var _enemy_row: HBoxContainer         = $MainLayout/BattleArea/EnemyRow
+@onready var _end_turn_button: Button          = $MainLayout/BattleArea/PlayerSection/HUD/EndTurnButton
+@onready var _draw_pile_label: Label           = $MainLayout/BattleArea/PlayerSection/HUD/PileCounters/DrawPileLabel
+@onready var _discard_pile_label: Label        = $MainLayout/BattleArea/PlayerSection/HUD/PileCounters/DiscardPileLabel
+@onready var _player_stats_box: VBoxContainer  = $MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox
+@onready var _player_hp_label: Label           = $MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox/PlayerHPLabel
+@onready var _player_health_bar: ProgressBar   = $MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox/PlayerHealthBar
+@onready var _player_block_label: Label        = $MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox/PlayerBlockLabel
+@onready var _player_visual_slot: Control      = $MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerVisualSlot
+@onready var _player_visual_placeholder: Label = $MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerVisualSlot/PlayerVisualPlaceholder
+@onready var _energy_label: Label              = $MainLayout/BattleArea/PlayerSection/HUD/EnergyLabel
+@onready var _energy_pips_row: HBoxContainer   = $MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox/EnergyPips
+@onready var _deck_viewer: DeckViewer          = $DeckViewer
+@onready var _combat_result: CombatResult      = $CombatResult
+@onready var _combat_reward: CombatReward      = $CombatReward
+@onready var _toast: Toast                     = $Toast
+@onready var _btn_draw_pile: Button            = $DrawPileButton
+@onready var _btn_full_deck: Button            = $DeckButton
+@onready var _btn_discard: Button              = $DiscardButton
+@onready var _btn_exile: Button                = $ExileButton
 
-# ── Runtime ───────────────────────────────────────────────────────────────────────
+# ── Runtime ────────────────────────────────────────────────────────────────────
 
 var _combat_manager: CombatManager = null
 var _deck: Deck = null
@@ -43,24 +64,23 @@ var _enemies: Array[Enemy] = []
 var _pending_card: CardData = null
 var _energy_pips: Array[Panel] = []
 var _combat_over: bool = false
+var _player_visual: CharacterVisual = null
 
-var _deck_viewer: DeckViewer = null
-var _btn_full_deck: Button   = null
-var _btn_draw_pile: Button   = null
-var _btn_discard: Button     = null
-
-# ── Lifecycle ─────────────────────────────────────────────────────────────────────
+# ── Lifecycle ──────────────────────────────────────────────────────────────────
 
 func _ready() -> void:
 	if player_data == null or enemy_data_list.is_empty():
 		return
 	_setup_combat()
 
-# ── Setup ─────────────────────────────────────────────────────────────────────────
+# ── Setup ──────────────────────────────────────────────────────────────────────
 
 func _setup_combat() -> void:
 	_deck = Deck.new()
-	_deck.load_from_data(player_data.starter_deck)
+	if RunState.active_run != null:
+		_deck.load_from_run(RunState.active_run)
+	else:
+		_deck.load_from_data(player_data.starter_deck)
 	_hand_area.set_deck(_deck)
 
 	for enemy_data: EnemyData in enemy_data_list:
@@ -79,110 +99,68 @@ func _setup_combat() -> void:
 	_combat_manager.player_energy_changed.connect(_on_player_energy_changed)
 	_combat_manager.draw_pile_changed.connect(_on_draw_pile_changed)
 	_combat_manager.discard_pile_changed.connect(_on_discard_pile_changed)
+	_combat_manager.exile_pile_changed.connect(_on_exile_pile_changed)
 	_combat_manager.special_action_triggered.connect(_on_special_action_triggered)
 	_combat_manager.enemy_died.connect(_on_enemy_died)
 	_combat_manager.player_turn_began.connect(_on_player_turn_began)
 	_combat_manager.enemy_turn_began.connect(_on_enemy_turn_began)
 	_combat_manager.combat_ended.connect(_on_combat_ended)
+	_combat_manager.player_attacked.connect(_on_player_attacked)
+	_combat_manager.player_took_damage.connect(_on_player_took_damage)
+
+	_setup_player_visual()
 
 	_end_turn_button.pressed.connect(_on_end_turn_pressed)
+	_btn_full_deck.pressed.connect(_on_btn_full_deck_pressed)
+	_btn_draw_pile.pressed.connect(_on_btn_draw_pile_pressed)
+	_btn_discard.pressed.connect(_on_btn_discard_pressed)
+	_btn_exile.pressed.connect(_on_btn_exile_pressed)
 	_hand_area.card_play_requested.connect(_on_card_play_requested)
 	_hand_area.card_drag_play_requested.connect(_on_card_drag_play_requested)
 
 	_player_health_bar.max_value = player_data.base_max_health + \
 			player_data.constitution * CombatPlayer.HP_PER_CONSTITUTION
 
-	# Move energy label from HUD to the player stats box
+	# Move energy label from HUD into the player stats box
 	_energy_label.reparent(_player_stats_box)
 	_energy_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 
-	_setup_deck_viewer()
 	_btn_full_deck.text = "Deck  %d" % _deck.total_count()
 	_combat_manager.start_combat()
 
-# ── Deck viewer setup ─────────────────────────────────────────────────────────
+# ── Player visual setup ────────────────────────────────────────────────────────
 
-func _setup_deck_viewer() -> void:
-	# Viewer overlay — sits above the battlefield, below the combat-result overlay
-	_deck_viewer = DeckViewer.new()
-	add_child(_deck_viewer)
+func _setup_player_visual() -> void:
+	if player_data == null or player_data.visual_scene == null:
+		return
 
-	# Add buttons directly to the battlefield root so they float over everything.
-	# Positioning is deferred because size is not finalised during _ready().
-	_btn_full_deck = _make_pile_button("Deck")
-	_btn_full_deck.pressed.connect(_on_btn_full_deck_pressed)
-	add_child(_btn_full_deck)
+	var viewport_container: SubViewportContainer = SubViewportContainer.new()
+	viewport_container.stretch = true
+	viewport_container.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	viewport_container.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_player_visual_slot.add_child(viewport_container)
 
-	_btn_draw_pile = _make_pile_button("Draw")
-	_btn_draw_pile.pressed.connect(_on_btn_draw_pile_pressed)
-	add_child(_btn_draw_pile)
+	var viewport: SubViewport = SubViewport.new()
+	viewport.transparent_bg = true
+	viewport_container.add_child(viewport)
 
-	_btn_discard = _make_pile_button("Discard")
-	_btn_discard.pressed.connect(_on_btn_discard_pressed)
-	add_child(_btn_discard)
+	_player_visual = player_data.visual_scene.instantiate() as CharacterVisual
+	var scale_factor: float = minf(
+		VISUAL_SLOT_SIZE.x / VISUAL_FRAME_SIZE.x,
+		VISUAL_SLOT_SIZE.y / VISUAL_FRAME_SIZE.y
+	)
+	_player_visual.position = Vector2(VISUAL_SLOT_SIZE.x * 0.5, VISUAL_SLOT_SIZE.y * 0.5)
+	_player_visual.scale = Vector2(scale_factor, scale_factor)
+	viewport.add_child(_player_visual)
 
-	# Re-position whenever the window resizes, and once after layout settles.
-	resized.connect(_reposition_pile_buttons)
-	_reposition_pile_buttons.call_deferred()
+	_player_visual_placeholder.hide()
 
-func _reposition_pile_buttons() -> void:
-	var width: float = size.x
-	var height: float = size.y
-	var button_width: float = 108.0
-	var button_height: float = 32.0
-	var margin: float = 12.0
-
-	_btn_draw_pile.position = Vector2(margin, height - button_height - margin)
-	_btn_draw_pile.size     = Vector2(button_width, button_height)
-
-	_btn_full_deck.position = Vector2(width - button_width - margin, margin)
-	_btn_full_deck.size     = Vector2(button_width, button_height)
-
-	_btn_discard.position   = Vector2(width - button_width - margin, height - button_height - margin)
-	_btn_discard.size       = Vector2(button_width, button_height)
-
-func _make_pile_button(label: String) -> Button:
-	var btn: Button = Button.new()
-	btn.text = label
-	var style: StyleBoxFlat = StyleBoxFlat.new()
-	style.bg_color     = Color(0.07, 0.04, 0.12, 0.88)
-	style.set_border_width_all(1)
-	style.border_color = Color(0.44, 0.22, 0.66, 0.85)
-	style.set_corner_radius_all(5)
-	style.content_margin_left   = 10.0
-	style.content_margin_right  = 10.0
-	style.content_margin_top    = 6.0
-	style.content_margin_bottom = 6.0
-	btn.add_theme_stylebox_override("normal", style)
-	var hover_style: StyleBoxFlat = style.duplicate() as StyleBoxFlat
-	hover_style.bg_color     = Color(0.12, 0.07, 0.20, 0.95)
-	hover_style.border_color = Color(0.65, 0.35, 0.90)
-	btn.add_theme_stylebox_override("hover", hover_style)
-	btn.add_theme_color_override("font_color", Color(0.78, 0.68, 0.92))
-	btn.add_theme_font_size_override("font_size", 12)
-	return btn
-
-func _on_btn_full_deck_pressed() -> void:
-	var cards: Array[CardData] = _deck.get_all_cards()
-	cards.sort_custom(func(a: CardData, b: CardData) -> bool:
-		if a.card_type != b.card_type:
-			return a.card_type < b.card_type
-		return a.card_name < b.card_name)
-	_deck_viewer.open("Full Deck", cards)
-	_btn_full_deck.text = "Deck  %d" % _deck.total_count()
-
-func _on_btn_draw_pile_pressed() -> void:
-	_deck_viewer.open("Draw Pile", _deck.get_draw_pile())
-
-func _on_btn_discard_pressed() -> void:
-	_deck_viewer.open("Discard Pile", _deck.get_discard_pile())
-
-# ── Input ─────────────────────────────────────────────────────────────────────────
+# ── Input ──────────────────────────────────────────────────────────────────────
 
 func _unhandled_input(event: InputEvent) -> void:
 	if _pending_card == null:
 		return
-	if _deck_viewer != null and _deck_viewer.visible:
+	if _deck_viewer.visible:
 		return
 	var cancel: bool = (event is InputEventMouseButton \
 			and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed) \
@@ -191,11 +169,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		_cancel_targeting()
 		get_viewport().set_input_as_handled()
 
-# ── Card play / targeting ─────────────────────────────────────────────────────────
+# ── Card play / targeting ──────────────────────────────────────────────────────
 
 func _on_card_play_requested(card_data: CardData) -> void:
 	if not _combat_manager.can_play(card_data):
-		_show_toast("Not enough energy")
+		_toast.show_message("Not enough energy")
 		return
 	if _needs_enemy_target(card_data):
 		_pending_card = card_data
@@ -205,7 +183,8 @@ func _on_card_play_requested(card_data: CardData) -> void:
 
 func _on_card_drag_play_requested(card_data: CardData, release_pos: Vector2) -> void:
 	if not _combat_manager.can_play(card_data):
-		_show_toast("Not enough energy")
+		_toast.show_message("Not enough energy")
+		_hand_area.return_dragged_card(card_data)
 		return
 	if _needs_enemy_target(card_data):
 		for enemy: Enemy in _enemies:
@@ -214,9 +193,7 @@ func _on_card_drag_play_requested(card_data: CardData, release_pos: Vector2) -> 
 			if enemy.get_global_rect().has_point(release_pos):
 				_combat_manager.play_card(card_data, enemy)
 				return
-		# Released above threshold but not over a living enemy — enter targeting mode.
-		_pending_card = card_data
-		_enter_targeting_mode()
+		_hand_area.return_dragged_card(card_data)
 	else:
 		_combat_manager.play_card(card_data, null)
 
@@ -238,7 +215,7 @@ func _needs_enemy_target(card_data: CardData) -> bool:
 			return true
 	return false
 
-# ── Targeting visuals ─────────────────────────────────────────────────────────────
+# ── Targeting visuals ──────────────────────────────────────────────────────────
 
 func _enter_targeting_mode() -> void:
 	_hand_area.set_input_enabled(false)
@@ -257,14 +234,34 @@ func _exit_targeting_mode() -> void:
 		enemy.modulate = Color.WHITE
 		enemy.mouse_default_cursor_shape = Control.CURSOR_ARROW
 
-# ── End turn ──────────────────────────────────────────────────────────────────────
+# ── End turn ───────────────────────────────────────────────────────────────────
 
 func _on_end_turn_pressed() -> void:
 	if _pending_card != null:
 		_cancel_targeting()
 	_combat_manager.end_player_turn()
 
-# ── UI signal handlers ────────────────────────────────────────────────────────────
+# ── Deck viewer ────────────────────────────────────────────────────────────────
+
+func _on_btn_full_deck_pressed() -> void:
+	var cards: Array[CardData] = _deck.get_all_cards()
+	cards.sort_custom(func(a: CardData, b: CardData) -> bool:
+		if a.card_type != b.card_type:
+			return a.card_type < b.card_type
+		return a.card_name < b.card_name)
+	_deck_viewer.open("Full Deck", cards)
+	_btn_full_deck.text = "Deck  %d" % _deck.total_count()
+
+func _on_btn_draw_pile_pressed() -> void:
+	_deck_viewer.open("Draw Pile", _deck.get_draw_pile())
+
+func _on_btn_discard_pressed() -> void:
+	_deck_viewer.open("Discard Pile", _deck.get_discard_pile())
+
+func _on_btn_exile_pressed() -> void:
+	_deck_viewer.open("Exile", _deck.get_exile_pile())
+
+# ── UI signal handlers ─────────────────────────────────────────────────────────
 
 func _on_player_hp_changed(current: int, max_val: int) -> void:
 	_player_hp_label.text = "HP: %d / %d" % [current, max_val]
@@ -284,13 +281,14 @@ func _on_player_energy_changed(current: int, max_val: int) -> void:
 
 func _on_draw_pile_changed(count: int) -> void:
 	_draw_pile_label.text = "Draw: %d" % count
-	if _btn_draw_pile:
-		_btn_draw_pile.text = "Draw  %d" % count
+	_btn_draw_pile.text = "Draw  %d" % count
 
 func _on_discard_pile_changed(count: int) -> void:
 	_discard_pile_label.text = "Discard: %d" % count
-	if _btn_discard:
-		_btn_discard.text = "Discard  %d" % count
+	_btn_discard.text = "Discard  %d" % count
+
+func _on_exile_pile_changed(count: int) -> void:
+	_btn_exile.text = "Exile  %d" % count
 
 func _on_special_action_triggered(param: String) -> void:
 	if not SUMMON_LOOKUP.has(param):
@@ -311,7 +309,7 @@ func _on_enemy_died(enemy_index: int) -> void:
 	tween.tween_property(enemy, "modulate:a", 0.0, 0.45).set_ease(Tween.EASE_IN)
 	await tween.finished
 	enemy.hide()
-	enemy.modulate.a = 1.0  # reset alpha so it doesn't stay invisible if ever reused
+	enemy.modulate.a = 1.0
 
 func _on_player_turn_began(_energy: int, _max_energy: int) -> void:
 	_end_turn_button.disabled = false
@@ -319,70 +317,54 @@ func _on_player_turn_began(_energy: int, _max_energy: int) -> void:
 func _on_enemy_turn_began() -> void:
 	_end_turn_button.disabled = true
 
+func _on_player_attacked() -> void:
+	if _player_visual != null:
+		_player_visual.play_attack()
+
+func _on_player_took_damage() -> void:
+	if _player_visual != null:
+		_player_visual.play_damaged()
+
 func _on_combat_ended(victory: bool) -> void:
 	_combat_over = true
 	_end_turn_button.disabled = true
 	_exit_targeting_mode()
 	_hand_area.discard_all()
-	# Give the death animation time to finish, then show result and clean up
+	if not victory and _player_visual != null:
+		_player_visual.play_death()
 	await get_tree().create_timer(0.5).timeout
-	_show_combat_result(victory)
+	_combat_result.show_result(victory)
 	_cleanup_enemies()
+	_combat_result.continue_pressed.connect(func() -> void:
+		if victory:
+			_show_card_reward()
+		else:
+			combat_completed.emit(false),
+		CONNECT_ONE_SHOT)
 
-func _show_combat_result(victory: bool) -> void:
-	var overlay: Control = Control.new()
-	overlay.set_anchors_preset(Control.PRESET_FULL_RECT)
-	overlay.mouse_filter = Control.MOUSE_FILTER_STOP
-	add_child(overlay)
-
-	var bg: ColorRect = ColorRect.new()
-	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
-	bg.color = Color(0.0, 0.0, 0.0, 0.6)
-	bg.modulate.a = 0.0
-	overlay.add_child(bg)
-
-	var center: CenterContainer = CenterContainer.new()
-	center.set_anchors_preset(Control.PRESET_FULL_RECT)
-	overlay.add_child(center)
-
-	var panel: PanelContainer = PanelContainer.new()
-	var style: StyleBoxFlat = StyleBoxFlat.new()
-	style.bg_color = Color(0.07, 0.03, 0.12, 0.97)
-	style.set_corner_radius_all(12)
-	style.set_border_width_all(2)
-	style.border_color = Color(0.55, 0.28, 0.85) if victory else Color(0.72, 0.14, 0.14)
-	style.content_margin_left   = 60.0
-	style.content_margin_right  = 60.0
-	style.content_margin_top    = 36.0
-	style.content_margin_bottom = 36.0
-	panel.add_theme_stylebox_override("panel", style)
-	panel.modulate.a = 0.0
-	center.add_child(panel)
-
-	var label: Label = Label.new()
-	label.text = "Victory!" if victory else "Defeated."
-	label.add_theme_font_size_override("font_size", 52)
-	label.add_theme_color_override("font_color",
-			Color(0.95, 0.78, 0.18) if victory else Color(0.92, 0.32, 0.32))
-	panel.add_child(label)
-
-	var tween: Tween = create_tween().set_parallel(true)
-	tween.tween_property(bg, "modulate:a", 1.0, 0.35)
-	tween.tween_property(panel, "modulate:a", 1.0, 0.35).set_delay(0.1)
+func _show_card_reward() -> void:
+	var combat_type: CombatReward.CombatType
+	match room_type:
+		RoomData.RoomType.ELITE:
+			combat_type = CombatReward.CombatType.ELITE
+		RoomData.RoomType.BOSS:
+			combat_type = CombatReward.CombatType.BOSS
+		_:
+			combat_type = CombatReward.CombatType.STANDARD
+	_combat_reward.open(combat_type)
+	_combat_reward.reward_completed.connect(
+			func() -> void: combat_completed.emit(true), CONNECT_ONE_SHOT)
 
 func _cleanup_enemies() -> void:
 	for enemy: Enemy in _enemies:
 		enemy.queue_free()
 	_enemies.clear()
 
-# ── Energy pips ───────────────────────────────────────────────────────────────────
+# ── Energy pips ────────────────────────────────────────────────────────────────
 
 func _ensure_energy_pips(max_energy: int) -> void:
 	if not _energy_pips.is_empty():
 		return
-	var pip_row: HBoxContainer = HBoxContainer.new()
-	pip_row.add_theme_constant_override("separation", 5)
-	_player_stats_box.add_child(pip_row)
 	for _i: int in max_energy:
 		var pip: Panel = Panel.new()
 		pip.custom_minimum_size = Vector2(16, 16)
@@ -391,7 +373,7 @@ func _ensure_energy_pips(max_energy: int) -> void:
 		style.set_border_width_all(1)
 		style.border_color = PIP_BORDER
 		pip.add_theme_stylebox_override("panel", style)
-		pip_row.add_child(pip)
+		_energy_pips_row.add_child(pip)
 		_energy_pips.append(pip)
 
 func _refresh_energy_pips(current_energy: int) -> void:
@@ -399,36 +381,3 @@ func _refresh_energy_pips(current_energy: int) -> void:
 		var style: StyleBoxFlat = _energy_pips[i].get_theme_stylebox("panel") as StyleBoxFlat
 		if style:
 			style.bg_color = PIP_FILLED if i < current_energy else PIP_EMPTY
-
-# ── Toast notifications ───────────────────────────────────────────────────────────
-
-func _show_toast(message: String) -> void:
-	var panel: PanelContainer = PanelContainer.new()
-	var label: Label = Label.new()
-	label.text = message
-	panel.add_child(label)
-	add_child(panel)
-
-	var bg: StyleBoxFlat = StyleBoxFlat.new()
-	bg.bg_color = Color(0.1, 0.04, 0.16, 0.92)
-	bg.set_corner_radius_all(6)
-	bg.set_border_width_all(1)
-	bg.border_color = Color(0.75, 0.2, 0.2, 0.9)
-	panel.add_theme_stylebox_override("panel", bg)
-	label.add_theme_color_override("font_color", Color(1.0, 0.45, 0.45))
-
-	# Wait one frame so the panel has a valid size before positioning
-	await get_tree().process_frame
-	panel.position = Vector2(
-		size.x * 0.5 - panel.size.x * 0.5,
-		size.y * 0.58
-	)
-
-	var tween: Tween = create_tween().set_parallel(true)
-	tween.tween_interval(0.8)
-	tween.tween_property(panel, "position:y", panel.position.y - 28.0, 0.5) \
-			.set_delay(0.8).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
-	tween.tween_property(panel, "modulate:a", 0.0, 0.45) \
-			.set_delay(0.8)
-	await tween.finished
-	panel.queue_free()

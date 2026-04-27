@@ -20,6 +20,13 @@ extends Resource
 		character_description = new_character_description
 		emit_changed()
 
+## The CharacterVisual scene for this character — used in the character select
+## and instantiated into the player slot during combat.
+@export var visual_scene: PackedScene:
+	set(new_visual_scene):
+		visual_scene = new_visual_scene
+		emit_changed()
+
 ## The deck this character starts every run with.
 @export var starter_deck: DeckData:
 	set(new_starter_deck):
@@ -110,7 +117,17 @@ extends Resource
 		armor = new_armor
 		emit_changed()
 
-@export var weapon: GearData:
-	set(new_weapon):
-		weapon = new_weapon
+@export var boots: GearData:
+	set(new_boots):
+		boots = new_boots
+		emit_changed()
+
+@export var weapon_right: GearData:
+	set(new_weapon_right):
+		weapon_right = new_weapon_right
+		emit_changed()
+
+@export var weapon_left: GearData:
+	set(new_weapon_left):
+		weapon_left = new_weapon_left
 		emit_changed()

@@ -33,8 +33,10 @@ var _current_phase: EnemyPhase = null
 
 @onready var _intent_label: Label               = $IntentDisplay/IntentLabel
 @onready var _name_label: Label                 = $NameLabel
+@onready var _sprite_container: Control         = $SpriteContainer
 @onready var _sprite: AnimatedSprite2D          = $SpriteContainer/Sprite
 @onready var _portrait: TextureRect             = $SpriteContainer/Portrait
+@onready var _placeholder_label: Label          = $SpriteContainer/PlaceholderLabel
 @onready var _health_bar: ProgressBar           = $HealthBar
 @onready var _health_label: Label               = $HealthLabel
 @onready var _block_display: HBoxContainer      = $StatusRow/BlockDisplay
@@ -44,8 +46,10 @@ var _current_phase: EnemyPhase = null
 # ── Lifecycle ──────────────────────────────────────────────────────────────────
 
 func _ready() -> void:
+	size_flags_vertical = Control.SIZE_SHRINK_END
 	if data:
 		setup(data)
+	_sprite.animation_finished.connect(_on_sprite_animation_finished)
 
 # ── Setup ──────────────────────────────────────────────────────────────────────
 
@@ -67,13 +71,21 @@ func setup(enemy_data: EnemyData) -> void:
 
 	if data.sprite_frames:
 		_sprite.sprite_frames = data.sprite_frames
+		var resolved_scale: Vector2 = _resolve_sprite_scale(data)
+		_sprite.scale = resolved_scale
+		# Resize the container so the health bar sits below the sprite's feet.
+		var container_height: float = ceil(270.0 * resolved_scale.y) + 10.0
+		_sprite_container.custom_minimum_size = Vector2(160.0, container_height)
+		_sprite.position = Vector2(80.0, container_height * 0.5)
 		_sprite.visible = true
 		_portrait.visible = false
+		_placeholder_label.hide()
 		_sprite.play("idle")
 	elif data.portrait_texture:
 		_portrait.texture = data.portrait_texture
 		_portrait.visible = true
 		_sprite.visible = false
+		_placeholder_label.hide()
 	else:
 		_sprite.visible = false
 		_portrait.visible = false
@@ -148,6 +160,32 @@ func clear_block() -> void:
 	current_block = 0
 	_update_display()
 
+# ── Animations ─────────────────────────────────────────────────────────────────
+
+## Plays the attack animation if the enemy has sprite_frames with an "attack"
+## animation defined. Automatically returns to "idle" when the animation ends.
+func play_attack() -> void:
+	if data == null or data.sprite_frames == null:
+		return
+	if not data.sprite_frames.has_animation(&"attack"):
+		return
+	_sprite.play(&"attack")
+
+## Flashes the sprite red to give immediate feedback when the enemy takes a hit.
+## Only fires if the enemy has an animated sprite — silently skips otherwise.
+func play_damaged() -> void:
+	if data == null or data.sprite_frames == null:
+		return
+	var damaged_tween: Tween = create_tween()
+	damaged_tween.tween_property(_sprite, "self_modulate", Color(2.0, 0.3, 0.3, 1.0), 0.0)
+	damaged_tween.tween_property(_sprite, "self_modulate", Color.WHITE, 0.3)
+
+func _on_sprite_animation_finished() -> void:
+	if data == null or data.sprite_frames == null:
+		return
+	if _sprite.animation == &"attack":
+		_sprite.play(&"idle")
+
 # ── Input ──────────────────────────────────────────────────────────────────────
 
 func _gui_input(event: InputEvent) -> void:
@@ -217,6 +255,20 @@ func _is_condition_met(modifier: ActionWeightModifier) -> bool:
 	return false
 
 # ── Display ────────────────────────────────────────────────────────────────────
+
+## Returns the sprite scale to use. Respects data.visual_scale if explicitly set;
+## otherwise falls back to a tier-appropriate default so minions appear smaller
+## than elites/commanders, which appear smaller than bosses.
+func _resolve_sprite_scale(enemy_data: EnemyData) -> Vector2:
+	if enemy_data.visual_scale != Vector2.ONE:
+		return enemy_data.visual_scale
+	match enemy_data.tier:
+		EnemyData.Tier.BOSS:
+			return Vector2(1.5, 1.5)
+		EnemyData.Tier.ELITE, EnemyData.Tier.COMMANDER:
+			return Vector2(1.3, 1.3)
+		_:
+			return Vector2(0.5, 0.5)
 
 func _update_display() -> void:
 	_health_bar.value = current_health

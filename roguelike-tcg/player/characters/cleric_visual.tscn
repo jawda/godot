@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://b3charvisual1" path="res://player/character_visual.tscn" id="1_base"]
 [ext_resource type="Texture2D" uid="uid://dkr7761ud4ap1" path="res://player/characters/cleric.png" id="2_tex"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bu4bn"]
+load_path = "res://.godot/imported/cleric.png-3319bcfa6c17057286b9be95b40cbcd3.ctex"
+
 [sub_resource type="ParticleProcessMaterial" id="PPM_blast"]
 particle_flag_disable_z = true
 inherit_velocity_ratio = 30.0
@@ -17,7 +20,6 @@ color = Color(1, 0.79607844, 0.20784314, 0.8509804)
 
 [sub_resource type="ParticleProcessMaterial" id="PPM_death"]
 particle_flag_disable_z = true
-direction = Vector3(1, 0, 0)
 spread = 30.0
 initial_velocity_min = 80.0
 initial_velocity_max = 160.0
@@ -179,7 +181,7 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_stqqc"]
-resource_name = "damage"
+resource_name = "damaged"
 length = 1.5
 step = 0.33
 tracks/0/type = "value"
@@ -280,7 +282,7 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_bu4bn"),
 &"attack": SubResource("Animation_qlxpg"),
-&"damage": SubResource("Animation_stqqc"),
+&"damaged": SubResource("Animation_stqqc"),
 &"death": SubResource("Animation_j6s7s"),
 &"idle": SubResource("Animation_vlyw8")
 }
@@ -288,7 +290,7 @@ _data = {
 [node name="ClericVisual" unique_id=1003211838 instance=ExtResource("1_base")]
 
 [node name="Sprite" parent="." index="0"]
-texture = ExtResource("2_tex")
+texture = SubResource("CompressedTexture2D_bu4bn")
 hframes = 5
 vframes = 3
 
@@ -308,7 +310,7 @@ one_shot = true
 explosiveness = 0.9
 process_material = SubResource("PPM_blast")
 
-[node name="DeathParticles" parent="." index="4"]
+[node name="DeathParticles" parent="." index="3"]
 position = Vector2(50, -60)
 amount = 24
 lifetime = 0.5
@@ -316,5 +318,5 @@ one_shot = true
 explosiveness = 0.9
 process_material = SubResource("PPM_death")
 
-[node name="AnimationPlayer" parent="." index="3"]
+[node name="AnimationPlayer" parent="." index="4"]
 libraries/ = SubResource("AnimationLibrary_j6s7s")

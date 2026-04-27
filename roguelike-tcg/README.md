@@ -14,6 +14,8 @@ Start Screen → Character Select → Battlefield (combat)
 - **Character Select** (`gui/character_select/`) — animated character sprites, click to reveal info card and Begin Run
 - **Battlefield** (`gui/battlefield.tscn`) — full combat loop with hand, energy, enemies, end turn
 
+Scene transitions use a fade-to-black handled by the `SceneTransition` autoload (`gui/scene_transition/`).
+
 ---
 
 ## Project Structure
@@ -45,19 +47,25 @@ roguelike-tcg/
 │       ├── starter_deck.tres      # Neutral starter deck
 │       └── cleric_starter_deck.tres  # Cleric starter deck (Mace Strike × 4, Ward × 4, Prayer × 2)
 ├── enemy/
-│   ├── enemy.gd                   # Enemy — HP, block, statuses, AI, phase transitions
-│   ├── enemy_data.gd              # EnemyData resource — identity, stats, action pool, phases
+│   ├── enemy.gd                   # Enemy — HP, block, statuses, AI, phase transitions, tier scaling
+│   ├── enemy_data.gd              # EnemyData resource — identity, stats, tier, action pool, phases
 │   ├── enemy_action.gd            # EnemyAction resource — one action in an AI pool
 │   ├── enemy_phase.gd             # EnemyPhase resource — alternate action pool at HP threshold
 │   ├── action_weight_modifier.gd  # ActionWeightModifier — conditional weight bonuses for WEIGHTED AI
 │   ├── enemy.tscn                 # Enemy scene — health bar, intent display, block display, sprite
-│   └── data/
-│       ├── shambling_corpse.tres  # Minion
-│       ├── grave_rat.tres         # Minion
-│       ├── restless_skeleton.tres # Minion (summonable)
-│       ├── bone_sergeant.tres     # Commander
-│       ├── plague_priest.tres     # Elite (1 phase)
-│       └── gravewarden.tres       # Boss (2 phases)
+│   ├── data/
+│   │   ├── deathbloom.tres        # Elite
+│   │   ├── grave_rat.tres         # Minion
+│   │   ├── restless_skeleton.tres # Minion (summonable)
+│   │   ├── bone_sergeant.tres     # Commander
+│   │   ├── plague_priest.tres     # Elite (1 phase)
+│   │   └── gravewarden.tres       # Boss (2 phases)
+│   ├── sprites/                   # Enemy sprite sheet PNGs
+│   └── frames/
+│       ├── bone_sergeant_frames.tres   # SpriteFrames resource for bone sergeant
+│       ├── grave_rat_frames.tres       # SpriteFrames resource for grave rat
+│       ├── gravewarden_frames.tres     # SpriteFrames resource for gravewarden
+│       └── gravewarden_visual.tscn    # CharacterVisual scene for gravewarden
 ├── gui/
 │   ├── start_screen/
 │   │   ├── start_screen.tscn      # Start screen — title, New Game, Continue, Settings, Quit
@@ -65,25 +73,32 @@ roguelike-tcg/
 │   ├── character_select/
 │   │   ├── character_select.tscn  # Character select — animated sprites, info card, Begin Run
 │   │   └── character_select.gd    # CharacterSelect — loads characters, SubViewport animations, scene swap
+│   ├── character_menu/
+│   │   ├── character_menu.tscn    # Tabbed character menu overlay (used during combat)
+│   │   ├── character_menu.gd      # CharacterMenu — tab routing, save/quit signals
+│   │   └── tabs/
+│   │       ├── stats_menu.tscn / stats_tab.gd      # Character name, class, stat labels
+│   │       ├── gear_menu.tscn / gear_tab.gd        # Gear slot buttons, info panel on hover
+│   │       ├── save_menu.tscn / save_tab.gd        # Exit to menu / quit buttons
+│   │       └── settings_menu.tscn / settings_tab.gd  # Audio sliders, fullscreen toggle
+│   ├── scene_transition/
+│   │   ├── scene_transition.tscn  # Fade overlay (registered as SceneTransition autoload)
+│   │   └── scene_transition.gd    # transition_to(path) — fade out, swap scene, fade in
 │   ├── battlefield.tscn           # Battlefield scene — full combat layout
-│   ├── battlefield.gd             # Battlefield — combat wiring, targeting, pile buttons, HUD
-│   ├── deck_viewer.gd             # DeckViewer — overlay panel for viewing card piles
-│   └── character_menu/
-│       ├── character_menu.tscn    # Tabbed character menu overlay (used during combat)
-│       ├── character_menu.gd      # CharacterMenu — tab routing, save/quit signals
-│       └── tabs/
-│           ├── stats_tab.gd       # StatsTab — character name, class, stat labels
-│           ├── gear_tab.gd        # GearTab — gear slot buttons, info panel on hover
-│           ├── save_tab.gd        # SaveTab — exit to menu / quit buttons
-│           └── settings_tab.gd    # SettingsTab — audio sliders, fullscreen toggle
+│   ├── battlefield.gd             # Battlefield — combat wiring, targeting, deck viewer, HUD
+│   ├── combat_result.tscn         # Victory/defeat overlay sub-scene
+│   ├── combat_result.gd           # CombatResult — animated panel with win/loss colours
+│   ├── toast.tscn                 # Floating notification sub-scene
+│   ├── toast.gd                   # Toast — show_message() with rise-and-fade animation
+│   └── deck_viewer.gd             # DeckViewer — overlay panel for viewing card piles
 ├── player/
 │   ├── player_data.gd             # PlayerData resource — character identity, stats, gear slots, starter deck
-│   ├── character_visual.tscn      # Base character scene — Sprite2D + AnimationPlayer state machine
+│   ├── character_visual.tscn      # Base character scene — AnimatedSprite2D state machine
 │   ├── character_visual.gd        # CharacterVisual — idle/attacking/hit/damaged/dead state machine
 │   └── characters/
 │       ├── cleric.tres            # Cleric PlayerData (CON 2, FAITH 3, 75 HP)
 │       ├── cleric_visual.tscn     # Cleric visual scene — sprite sheet + animations
-│       └── cleric.png             # Cleric sprite sheet (1500×810, 5×3 frames)
+│       └── cleric.png             # Cleric sprite sheet (1500×810, 5×3 frames, 300×270 each)
 │   └── gear/
 │       ├── gear_data.gd           # GearData resource — item name, slot, rarity, effects
 │       └── gear_effect.gd         # GearEffect resource — one passive or triggered gear effect
@@ -100,7 +115,6 @@ roguelike-tcg/
 │   └── enemies/
 │       └── *.html                 # Enemy design sheets (dev reference)
 ├── hand.gd                        # Hand — curved fan layout, drag-to-cast, hover/focus
-├── test_game_interface.gd         # TestGameInterface — wires draw/discard/reset buttons (dev scene)
 └── project.godot
 ```
 
@@ -198,13 +212,27 @@ adds 1 bonus block per `gain_block` call.
 ### Enemy System
 
 Each enemy is an `EnemyData` resource with:
+- **Tier:** `MINION`, `COMMANDER`, `ELITE`, `BOSS` — drives automatic sprite scaling on the battlefield
 - **Stats:** `max_health`, `base_attack`, `base_block`
 - **AI pattern:** `SEQUENTIAL` (cycles pool in order) or `WEIGHTED` (picks by effective weight)
 - **Action pool:** Array of `EnemyAction` resources — Attack, Block, Apply Status, Buff Self/Allies, Special
 - **Phases:** optional `EnemyPhase` resources — when HP drops to or below `hp_threshold`, the phase's action pool replaces the default one
 
+**Tier-based scaling** is automatic — no manual `visual_scale` needed:
+
+| Tier | Scale |
+|---|---|
+| BOSS | 1.1× |
+| ELITE / COMMANDER | 0.55× |
+| MINION | 0.4× |
+
+Override by setting `visual_scale` on the `EnemyData` resource if a specific enemy needs a custom size.
+
 The `SPECIAL` action type fires a `special_action_triggered(param)` signal that `Battlefield`
 resolves via `SUMMON_LOOKUP` (e.g. `"summon_skeleton"` spawns a restless skeleton).
+
+**Sprite sheets** live in `enemy/sprites/` as PNGs. `SpriteFrames` resources live in `enemy/frames/`.
+All sheets use 300×270px per frame.
 
 ---
 
@@ -247,6 +275,14 @@ The **Continue** button on the start screen is hidden until `SaveData.character_
 
 ---
 
+### Scene Transitions
+
+`SceneTransition` is an autoload (`gui/scene_transition/scene_transition.tscn`). Call
+`SceneTransition.transition_to("res://path/to/scene.tscn")` to fade out, swap the scene, and fade
+back in. Await the call if you need to know when the transition finishes.
+
+---
+
 ### Rarity Tiers
 
 | Tier | Description |
@@ -269,13 +305,6 @@ The **Continue** button on the start screen is hidden until `SaveData.character_
 
 Wiring: call `character_menu.open(player_data, character_save_data)` to populate and show it.
 Connect `character_menu.closed` to resume the game.
-
----
-
-## Active Test Scene
-
-`main.tscn` — displays a single card using the `CardData` editor. Useful for previewing card
-visuals and rarity palettes in isolation. Not part of the main game flow.
 
 ---
 

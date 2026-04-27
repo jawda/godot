@@ -1,0 +1,68 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://gui/combat_result.gd" id="1_cr"]
+
+[sub_resource type="StyleBoxFlat" id="PanelStyle"]
+bg_color = Color(0.07, 0.03, 0.12, 0.97)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.55, 0.28, 0.85, 1.0)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+content_margin_left = 60.0
+content_margin_right = 60.0
+content_margin_top = 36.0
+content_margin_bottom = 36.0
+
+[node name="CombatResult" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+visible = false
+script = ExtResource("1_cr")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+modulate = Color(1, 1, 1, 0)
+color = Color(0, 0, 0, 0.6)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultPanel" type="PanelContainer" parent="Center"]
+layout_mode = 2
+modulate = Color(1, 1, 1, 0)
+theme_override_styles/panel = SubResource("PanelStyle")
+
+[node name="Contents" type="VBoxContainer" parent="Center/ResultPanel"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="ResultLabel" type="Label" parent="Center/ResultPanel/Contents"]
+layout_mode = 2
+text = "Victory!"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 52
+
+[node name="Continue" type="Button" parent="Center/ResultPanel/Contents"]
+layout_mode = 2
+text = "Continue"
+theme_override_font_sizes/font_size = 18

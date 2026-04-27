@@ -1,40 +1,69 @@
-[gd_scene format=3 uid="uid://startscreen001"]
+[gd_scene format=3 uid="uid://bbaym4xccpdie"]
 
-[ext_resource type="Script" path="res://gui/start_screen/start_screen.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://cqcny3sq0kkl7" path="res://gui/start_screen/start_screen.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://bl4lbrfnao0b6" path="res://gui/character_menu/tabs/settings_menu.tscn" id="2_settings_menu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu_normal"]
-bg_color = Color(0.08, 0.04, 0.14, 0.90)
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.08, 0.04, 0.14, 0.9)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.40, 0.20, 0.62, 0.70)
+border_color = Color(0.4, 0.2, 0.62, 0.7)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-content_margin_left = 0.0
-content_margin_right = 0.0
-content_margin_top = 0.0
-content_margin_bottom = 0.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu_hover"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
 bg_color = Color(0.14, 0.07, 0.24, 0.95)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.65, 0.38, 0.90, 1.0)
+border_color = Color(0.65, 0.38, 0.9, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-content_margin_left = 0.0
-content_margin_right = 0.0
-content_margin_top = 0.0
-content_margin_bottom = 0.0
 
-[node name="StartScreen" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu_focus"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.14, 0.07, 0.24, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.85, 0.6, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dialog_panel"]
+bg_color = Color(0.07, 0.04, 0.12, 0.97)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.22, 0.66, 0.8)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="StartScreen" type="Control" unique_id=883240992]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,16 +72,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_script")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1992544596]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.055, 0.043, 0.1, 1.0)
+color = Color(0.055, 0.043, 0.1, 1)
 
-[node name="Center" type="CenterContainer" parent="."]
+[node name="Center" type="CenterContainer" parent="." unique_id=2112034740]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,69 +89,108 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Content" type="VBoxContainer" parent="Center"]
+[node name="Content" type="VBoxContainer" parent="Center" unique_id=1064223461]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Title" type="Label" parent="Center/Content"]
+[node name="Title" type="Label" parent="Center/Content" unique_id=975811252]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.88, 1, 1)
 theme_override_font_sizes/font_size = 72
-theme_override_colors/font_color = Color(0.95, 0.88, 1.0, 1.0)
 text = "Last Rites"
 horizontal_alignment = 1
 
-[node name="TitleGap" type="Control" parent="Center/Content"]
+[node name="TitleGap" type="Control" parent="Center/Content" unique_id=767302022]
 custom_minimum_size = Vector2(0, 56)
 layout_mode = 2
 
-[node name="ButtonList" type="VBoxContainer" parent="Center/Content"]
+[node name="ButtonList" type="VBoxContainer" parent="Center/Content" unique_id=1950512369]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="NewGame" type="Button" parent="Center/Content/ButtonList"]
+[node name="NewGame" type="Button" parent="Center/Content/ButtonList" unique_id=2016695919]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(280, 52)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.88, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_menu_normal")
 theme_override_styles/hover = SubResource("StyleBoxFlat_menu_hover")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_menu_hover")
-theme_override_font_sizes/font_size = 16
-theme_override_colors/font_color = Color(0.88, 0.80, 1.0, 1.0)
+theme_override_styles/focus = SubResource("StyleBoxFlat_menu_focus")
 text = "New Game"
 
-[node name="Continue" type="Button" parent="Center/Content/ButtonList"]
+[node name="Continue" type="Button" parent="Center/Content/ButtonList" unique_id=106379444]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(280, 52)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.88, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_menu_normal")
 theme_override_styles/hover = SubResource("StyleBoxFlat_menu_hover")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_menu_hover")
-theme_override_font_sizes/font_size = 16
-theme_override_colors/font_color = Color(0.88, 0.80, 1.0, 1.0)
+theme_override_styles/focus = SubResource("StyleBoxFlat_menu_focus")
 text = "Continue"
 
-[node name="Settings" type="Button" parent="Center/Content/ButtonList"]
+[node name="Settings" type="Button" parent="Center/Content/ButtonList" unique_id=2114583431]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(280, 52)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.88, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_menu_normal")
 theme_override_styles/hover = SubResource("StyleBoxFlat_menu_hover")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_menu_hover")
-theme_override_font_sizes/font_size = 16
-theme_override_colors/font_color = Color(0.88, 0.80, 1.0, 1.0)
+theme_override_styles/focus = SubResource("StyleBoxFlat_menu_focus")
 text = "Settings"
 
-[node name="Quit" type="Button" parent="Center/Content/ButtonList"]
+[node name="Quit" type="Button" parent="Center/Content/ButtonList" unique_id=330123133]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(280, 52)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.88, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_menu_normal")
 theme_override_styles/hover = SubResource("StyleBoxFlat_menu_hover")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_menu_hover")
-theme_override_font_sizes/font_size = 16
-theme_override_colors/font_color = Color(0.88, 0.80, 1.0, 1.0)
+theme_override_styles/focus = SubResource("StyleBoxFlat_menu_focus")
 text = "Quit"
+
+[node name="SettingsOverlay" type="Control" parent="." unique_id=108984221]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Backdrop" type="ColorRect" parent="SettingsOverlay" unique_id=1061995160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.82)
+
+[node name="Centered" type="CenterContainer" parent="SettingsOverlay" unique_id=923605618]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialog" type="PanelContainer" parent="SettingsOverlay/Centered" unique_id=1742471049]
+custom_minimum_size = Vector2(560, 480)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dialog_panel")
+
+[node name="SettingsMenu" parent="SettingsOverlay/Centered/Dialog" unique_id=175330299 instance=ExtResource("2_settings_menu")]
+layout_mode = 2

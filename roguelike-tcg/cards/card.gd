@@ -158,7 +158,7 @@ func _make_style(background: Color, border: Color, radius: int = 6, border_width
 func _update_labels() -> void:
 	if data == null:
 		return
-	_cost_label.text = str(data.card_cost)
+	_cost_label.text = str(data.effective_cost)
 	_card_name_label.text = data.card_name
 	_type_label.text = "— " + data.get_type_label() + " —"
 	_description_text.text = data.get_description(data.upgraded)

@@ -4,8 +4,12 @@
 [ext_resource type="Script" uid="uid://cdvtrv2pe7jl7" path="res://gui/battlefield.gd" id="2_battlefield"]
 [ext_resource type="Resource" uid="uid://rkl5bjnb1uls" path="res://player/characters/cleric.tres" id="2_lnu6c"]
 [ext_resource type="Script" uid="uid://tjsk1hd7cekh" path="res://enemy/enemy_data.gd" id="3_vdhtw"]
-[ext_resource type="Resource" uid="uid://b8tqthakb60x0" path="res://enemy/data/grave_rat.tres" id="4_lnu6c"]
-[ext_resource type="Resource" uid="uid://c8qurn3pvr168" path="res://enemy/data/restless_skeleton.tres" id="5_vdhtw"]
+[ext_resource type="Resource" uid="uid://clthx76ew05ru" path="res://enemy/data/deathbloom.tres" id="4_kymki"]
+[ext_resource type="Resource" uid="uid://b43knepycada" path="res://enemy/data/gravewarden.tres" id="5_mvwwy"]
+[ext_resource type="Script" uid="uid://casd0dnk3a8wf" path="res://gui/deck_viewer.gd" id="10_dv"]
+[ext_resource type="PackedScene" path="res://gui/combat_result.tscn" id="11_cr"]
+[ext_resource type="PackedScene" path="res://gui/toast.tscn" id="12_toast"]
+[ext_resource type="PackedScene" path="res://gui/combat_reward/combat_reward.tscn" id="13_creward"]
 
 [sub_resource type="StyleBoxFlat" id="HPBarBg"]
 bg_color = Color(0.08, 0.04, 0.12, 1)
@@ -71,6 +75,38 @@ _limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0, -1), 0.0, 6.0, 0, 0, Vector2(0.5, 1.4901161e-08), 0.0, 0.0, 0, 0, Vector2(0.99601597, 1), 6.0, 0.0, 0, 0]
 point_count = 3
 
+[sub_resource type="StyleBoxFlat" id="PileBtnNormal"]
+content_margin_left = 10.0
+content_margin_top = 6.0
+content_margin_right = 10.0
+content_margin_bottom = 6.0
+bg_color = Color(0.07, 0.04, 0.12, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.22, 0.66, 0.85)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="PileBtnHover"]
+content_margin_left = 10.0
+content_margin_top = 6.0
+content_margin_right = 10.0
+content_margin_bottom = 6.0
+bg_color = Color(0.12, 0.07, 0.2, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.65, 0.35, 0.9, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="Battlefield" type="Control" unique_id=1136549708]
 layout_mode = 3
 anchors_preset = 15
@@ -80,7 +116,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_battlefield")
 player_data = ExtResource("2_lnu6c")
-enemy_data_list = Array[ExtResource("3_vdhtw")]([ExtResource("4_lnu6c"), ExtResource("5_vdhtw"), ExtResource("4_lnu6c")])
+enemy_data_list = Array[ExtResource("3_vdhtw")]([ExtResource("4_kymki"), ExtResource("5_mvwwy")])
 
 [node name="Background" type="ColorRect" parent="." unique_id=2079431227]
 layout_mode = 1
@@ -107,9 +143,10 @@ size_flags_vertical = 3
 
 [node name="EnemyRow" type="HBoxContainer" parent="MainLayout/BattleArea" unique_id=834258680]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = -1
 anchor_right = 1.0
-offset_bottom = 240.0
+anchor_bottom = 1.0
+offset_bottom = -280.0
 grow_horizontal = 2
 theme_override_constants/separation = 24
 alignment = 1
@@ -120,7 +157,7 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -200.0
+offset_top = -280.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 0
@@ -131,7 +168,7 @@ size_flags_horizontal = 0
 theme_override_constants/separation = 12
 
 [node name="PlayerVisualSlot" type="Control" parent="MainLayout/BattleArea/PlayerSection/PlayerArea" unique_id=1570538503]
-custom_minimum_size = Vector2(120, 160)
+custom_minimum_size = Vector2(220, 260)
 layout_mode = 2
 
 [node name="PlayerVisualPlaceholder" type="Label" parent="MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerVisualSlot" unique_id=895402124]
@@ -167,6 +204,10 @@ show_percentage = false
 visible = false
 layout_mode = 2
 text = "Block: 0"
+
+[node name="EnergyPips" type="HBoxContainer" parent="MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox" unique_id=335479934]
+layout_mode = 2
+theme_override_constants/separation = 5
 
 [node name="Spacer" type="Control" parent="MainLayout/BattleArea/PlayerSection" unique_id=156864252]
 layout_mode = 2
@@ -211,3 +252,84 @@ color = Color(1, 1, 1, 0.039)
 script = ExtResource("1")
 hand_curve = SubResource("Curve_hand")
 rotation_curve = SubResource("Curve_rotation")
+
+[node name="DeckViewer" type="Control" parent="." unique_id=522866498]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_dv")
+
+[node name="Toast" parent="." unique_id=1792129870 instance=ExtResource("12_toast")]
+layout_mode = 1
+
+[node name="DrawPileButton" type="Button" parent="." unique_id=985206701]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -44.0
+offset_right = 120.0
+offset_bottom = -12.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.78, 0.68, 0.92, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("PileBtnNormal")
+theme_override_styles/hover = SubResource("PileBtnHover")
+text = "Draw  5"
+
+[node name="DeckButton" type="Button" parent="." unique_id=828981976]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = 44.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.78, 0.68, 0.92, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("PileBtnNormal")
+theme_override_styles/hover = SubResource("PileBtnHover")
+text = "Deck  10"
+
+[node name="ExileButton" type="Button" parent="." unique_id=553732969]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 120.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0.78, 0.55, 0.55, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("PileBtnNormal")
+theme_override_styles/hover = SubResource("PileBtnHover")
+text = "Exile  0"
+
+[node name="DiscardButton" type="Button" parent="." unique_id=1934052967]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -44.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.78, 0.68, 0.92, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("PileBtnNormal")
+theme_override_styles/hover = SubResource("PileBtnHover")
+text = "Discard  0"
+
+[node name="CombatResult" parent="." unique_id=1661875398 instance=ExtResource("11_cr")]
+layout_mode = 1
+
+[node name="CombatReward" parent="." unique_id=329892920 instance=ExtResource("13_creward")]
+layout_mode = 1

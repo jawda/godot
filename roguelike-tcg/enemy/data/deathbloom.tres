@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://clthx76ew05ru"]
+
+[ext_resource type="Script" uid="uid://tjsk1hd7cekh" path="res://enemy/enemy_data.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://v1p8ha6pj8k1" path="res://enemy/frames/deathbloom_frames.tres" id="1_frames"]
+[ext_resource type="Script" uid="uid://bkc62cbaws0dm" path="res://enemy/enemy_action.gd" id="2"]
+[ext_resource type="Script" uid="uid://g4b1gdtbj5a0" path="res://enemy/action_weight_modifier.gd" id="2_sf4g8"]
+[ext_resource type="Script" uid="uid://dx226mur6wr8k" path="res://enemy/enemy_phase.gd" id="3_5cni2"]
+
+[sub_resource type="Resource" id="Action_snap"]
+script = ExtResource("2")
+intent_description = "Lunges with a snapping maw — preparing to bite for 5 damage."
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_lash"]
+script = ExtResource("2")
+value = 3
+intent_description = "Extends a thorned vine — preparing to lash for 8 damage."
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[sub_resource type="Resource" id="Action_root"]
+script = ExtResource("2")
+action_type = 1
+value = 3
+intent_description = "Digs roots deeper into the stone — bracing for 3 block."
+target = 1
+metadata/_custom_type_script = "uid://bkc62cbaws0dm"
+
+[resource]
+script = ExtResource("1")
+enemy_name = "Deathbloom"
+tier = 1
+description = "It does not hunt. It simply waits, and the dungeon obliges. Whatever passes through here, passes through it too."
+tags = Array[String](["plant"])
+sprite_frames = ExtResource("1_frames")
+max_health = 65
+actions = Array[ExtResource("2")]([SubResource("Action_snap"), SubResource("Action_lash"), SubResource("Action_root")])

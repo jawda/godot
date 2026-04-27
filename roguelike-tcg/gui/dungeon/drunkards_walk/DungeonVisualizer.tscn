@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bofx1ljhe5h70"]
+
+[ext_resource type="Script" uid="uid://b3kmr0n4a6m1f" path="res://gui/dungeon/drunkards_walk/dungeon_visualizer.gd" id="1_tvbaw"]
+[ext_resource type="Script" uid="uid://cvvcgv8ysjqug" path="res://gui/dungeon/drunkards_walk/drunkards_walk_generator.gd" id="2_iu1tv"]
+
+[node name="DungeonVisualizer" type="Node2D" unique_id=990817271]
+texture_filter = 1
+script = ExtResource("1_tvbaw")
+map_size = Vector2i(240, 135)
+
+[node name="DrunkardsWalkGenerator" type="Node" parent="." unique_id=1460489856]
+script = ExtResource("2_iu1tv")
+spawn_count = 150
+minimum_steps = 600
+
+[node name="UpdateTimer" type="Timer" parent="." unique_id=1923678764]
+wait_time = 0.001
+autostart = true
+
+[connection signal="new_position_carved" from="DrunkardsWalkGenerator" to="." method="_on_drunkards_walk_generator_new_position_carved"]
+[connection signal="timeout" from="UpdateTimer" to="." method="_on_update_timer_timeout"]

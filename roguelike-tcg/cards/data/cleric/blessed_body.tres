@@ -8,6 +8,7 @@ script = ExtResource("2")
 metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
 effect_type = 3
 value = 2
+upgraded_value = 3
 target = 0
 power_trigger = 1
 
@@ -15,6 +16,7 @@ power_trigger = 1
 script = ExtResource("1")
 card_name = "Blessed Body"
 card_cost = 1
+upgraded_cost = 0
 card_type = 2
 base_rarity = 1
 card_description = "At the start of each turn, heal [b]{0}[/b] HP."

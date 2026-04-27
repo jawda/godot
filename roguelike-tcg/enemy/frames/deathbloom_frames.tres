@@ -1,0 +1,147 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://v1p8ha6pj8k1"]
+
+[ext_resource type="Texture2D" uid="uid://cke6okc4bx4uq" path="res://enemy/sprites/deathbloom.png" id="1_dbtex"]
+
+[sub_resource type="AtlasTexture" id="AT_a0"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(300, 270, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_a1"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(600, 270, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_a2"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(900, 270, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_a3"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(1200, 270, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_a4"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(0, 540, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_a5"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(300, 540, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_a6"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(600, 540, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_a7"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(900, 540, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_h0"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(1200, 540, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_h1"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(0, 810, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_h2"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(300, 810, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_h3"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(600, 810, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_i0"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(0, 0, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_i1"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(300, 0, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_i2"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(600, 0, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_i3"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(900, 0, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_i4"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(1200, 0, 300, 270)
+
+[sub_resource type="AtlasTexture" id="AT_i5"]
+atlas = ExtResource("1_dbtex")
+region = Rect2(0, 270, 300, 270)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AT_a0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_a1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_a2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_a3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_a4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_a5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_a6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_a7")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AT_h0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_h1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_h2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_h3")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AT_i0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_i2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_i3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_i4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_i5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}]

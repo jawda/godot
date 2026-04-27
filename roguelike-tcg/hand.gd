@@ -62,8 +62,10 @@ func _input(event: InputEvent) -> void:
 		var mouse_pos: Vector2 = get_local_mouse_position()
 		if _drag_card != null:
 			_update_drag(mouse_pos)
-		else:
+		elif Rect2(Vector2.ZERO, size).has_point(mouse_pos):
 			_set_focus(_card_at_position(mouse_pos))
+		else:
+			_set_focus(null)
 	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			if _focused_card != null and _focused_card.data != null:
@@ -120,6 +122,24 @@ func _update_drag(mouse_pos: Vector2) -> void:
 	_drag_ready = (new_pos.y - _resting_positions[card_index].y) < DRAG_PLAY_THRESHOLD
 	if _drag_ready != was_ready:
 		_drag_card.modulate = Color(1.4, 1.3, 0.7) if _drag_ready else Color.WHITE
+
+## Snaps a card with the given data back to its resting position after a drag
+## that did not result in a play (missed target, not enough energy, etc.).
+## The card stays in the hand — this only restores its visual position.
+func return_dragged_card(card_data: CardData) -> void:
+	for card_index: int in get_child_count():
+		var card: Card = get_child(card_index) as Card
+		if card == null or card.data != card_data:
+			continue
+		if card_index >= _resting_positions.size():
+			return
+		var layout_rotations: Array[float] = (_calc_layout() as Array)[1]
+		var snap_tween: Tween = create_tween().set_parallel(true)
+		snap_tween.tween_property(card, "position", _resting_positions[card_index], 0.3) \
+				.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+		snap_tween.tween_property(card, "rotation_degrees", layout_rotations[card_index], 0.3) \
+				.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+		return
 
 func _resolve_drag() -> void:
 	var card: Card = _drag_card
@@ -205,6 +225,24 @@ func discard_all() -> void:
 		remove_child(card)
 		card.queue_free()
 	_resting_positions.clear()
+
+## Finds and exiles the first Card node whose data reference matches card_data.
+## Used for played Power/Blessing cards — they leave the hand and cannot be
+## redrawn this combat, but return to the deck at the start of the next combat.
+func exile_specific_data(card_data: CardData) -> void:
+	for card_index: int in get_child_count():
+		var card: Card = get_child(card_index) as Card
+		if card == null or card.data != card_data:
+			continue
+		if _focused_card == card:
+			_set_focus(null)
+		if _deck != null:
+			_deck.exile_card(card_data)
+		_reflow_tweens.erase(card)
+		if card_index < _resting_positions.size():
+			_resting_positions[card_index] = Vector2(-9999.0, -9999.0)
+		_finish_discard_animation(card)
+		return
 
 ## Finds and discards the first Card node whose data reference matches card_data.
 func discard_specific_data(card_data: CardData) -> void:

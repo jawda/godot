@@ -7,6 +7,7 @@
 script = ExtResource("2")
 metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
 value = 6
+upgraded_value = 4
 target = 0
 
 [sub_resource type="Resource" id="Resource_draw"]
