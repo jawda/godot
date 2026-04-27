@@ -36,7 +36,8 @@ const CARD_SCENE: PackedScene = preload("res://cards/card.tscn")
 
 # ── Node references ────────────────────────────────────────────────────────────
 
-@onready var _title_label: Label           = $Panel/Contents/Header/Title
+@onready var _title_label: Label           = $Panel/Contents/Header/Info/Title
+@onready var _gold_label: Label            = $Panel/Contents/Header/Info/Gold
 @onready var _card_list: VBoxContainer     = $Panel/Contents/Scroll/CardPadding/CardList
 @onready var _skip_button: Button          = $Panel/Contents/Footer/Skip
 
@@ -60,11 +61,18 @@ func _ready() -> void:
 
 # ── Public API ─────────────────────────────────────────────────────────────────
 
-func open(combat_type: CombatType) -> void:
+func open(combat_type: CombatType, gold_amount: int = 0) -> void:
 	var run: RunSaveData = RunState.active_run
 	if run == null:
 		reward_completed.emit()
 		return
+
+	if gold_amount > 0:
+		run.gold += gold_amount
+		SaveManager.save()
+
+	_gold_label.text = "+%d Gold" % gold_amount
+	_gold_label.visible = gold_amount > 0
 
 	var player_class_string: String = ""
 	if RunState.active_player != null:

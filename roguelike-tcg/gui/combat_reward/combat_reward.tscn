@@ -59,12 +59,23 @@ theme_override_constants/margin_right = 20
 theme_override_constants/margin_top = 14
 theme_override_constants/margin_bottom = 14
 
-[node name="Title" type="Label" parent="Panel/Contents/Header"]
+[node name="Info" type="VBoxContainer" parent="Panel/Contents/Header"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="Panel/Contents/Header/Info"]
 layout_mode = 2
 text = "Choose a Reward"
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 18
 theme_override_colors/font_color = Color(0.90, 0.80, 1.00, 1.0)
+
+[node name="Gold" type="Label" parent="Panel/Contents/Header/Info"]
+layout_mode = 2
+visible = false
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.90, 0.78, 0.18, 1.0)
 
 [node name="Divider" type="HSeparator" parent="Panel/Contents"]
 layout_mode = 2

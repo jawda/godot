@@ -27,6 +27,7 @@ func start_new_run(
 	run.current_health = starting_max_hp
 	run.current_max_health = starting_max_hp
 	run.current_floor = 1
+	run.gold = 100
 	run.floor_map = FloorMapGenerator.generate(sequence[0])
 
 	if player.starter_deck != null:

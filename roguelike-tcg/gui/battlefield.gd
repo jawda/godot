@@ -32,6 +32,14 @@ const PIP_FILLED: Color       = Color(0.9, 0.72, 0.18, 1.0)
 const PIP_EMPTY: Color        = Color(0.12, 0.08, 0.06, 1.0)
 const PIP_BORDER: Color       = Color(0.55, 0.42, 0.10, 0.8)
 
+## Gold drop range [min, max] per enemy tier. Summons are included.
+const GOLD_RANGE_BY_TIER: Dictionary = {
+	EnemyData.Tier.MINION:    Vector2i(8,  14),
+	EnemyData.Tier.COMMANDER: Vector2i(14, 22),
+	EnemyData.Tier.ELITE:     Vector2i(25, 40),
+	EnemyData.Tier.BOSS:      Vector2i(45, 65),
+}
+
 # ── Node references ────────────────────────────────────────────────────────────
 
 @onready var _hand_area: Hand                  = $MainLayout/HandArea
@@ -55,6 +63,7 @@ const PIP_BORDER: Color       = Color(0.55, 0.42, 0.10, 0.8)
 @onready var _btn_full_deck: Button            = $DeckButton
 @onready var _btn_discard: Button              = $DiscardButton
 @onready var _btn_exile: Button                = $ExileButton
+@onready var _gold_label: Label                = $GoldLabel
 
 # ── Runtime ────────────────────────────────────────────────────────────────────
 
@@ -65,6 +74,7 @@ var _pending_card: CardData = null
 var _energy_pips: Array[Panel] = []
 var _combat_over: bool = false
 var _player_visual: CharacterVisual = null
+var _gold_reward: int = 0
 
 # ── Lifecycle ──────────────────────────────────────────────────────────────────
 
@@ -126,6 +136,8 @@ func _setup_combat() -> void:
 	_energy_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 
 	_btn_full_deck.text = "Deck  %d" % _deck.total_count()
+	if RunState.active_run != null:
+		_gold_label.text = "Gold: %d" % RunState.active_run.gold
 	_combat_manager.start_combat()
 
 # ── Player visual setup ────────────────────────────────────────────────────────
@@ -332,6 +344,8 @@ func _on_combat_ended(victory: bool) -> void:
 	_hand_area.discard_all()
 	if not victory and _player_visual != null:
 		_player_visual.play_death()
+	if victory:
+		_gold_reward = _calculate_gold_reward()
 	await get_tree().create_timer(0.5).timeout
 	_combat_result.show_result(victory)
 	_cleanup_enemies()
@@ -342,6 +356,15 @@ func _on_combat_ended(victory: bool) -> void:
 			combat_completed.emit(false),
 		CONNECT_ONE_SHOT)
 
+func _calculate_gold_reward() -> int:
+	var total: int = 0
+	for enemy: Enemy in _enemies:
+		if enemy.data == null:
+			continue
+		var tier_range: Vector2i = GOLD_RANGE_BY_TIER.get(enemy.data.tier, Vector2i(5, 10))
+		total += randi_range(tier_range.x, tier_range.y)
+	return total
+
 func _show_card_reward() -> void:
 	var combat_type: CombatReward.CombatType
 	match room_type:
@@ -351,7 +374,7 @@ func _show_card_reward() -> void:
 			combat_type = CombatReward.CombatType.BOSS
 		_:
 			combat_type = CombatReward.CombatType.STANDARD
-	_combat_reward.open(combat_type)
+	_combat_reward.open(combat_type, _gold_reward)
 	_combat_reward.reward_completed.connect(
 			func() -> void: combat_completed.emit(true), CONNECT_ONE_SHOT)
 

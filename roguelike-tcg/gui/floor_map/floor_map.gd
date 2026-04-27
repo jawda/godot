@@ -24,6 +24,7 @@ signal room_selected(room_index: int)
 # ── Node references ─────────────────────────────────────────────────────────────
 
 @onready var _floor_title: Label = $FloorTitle
+@onready var _gold_label: Label  = $GoldLabel
 @onready var _map_content: Control = $ScrollContainer/MapContent
 @onready var _corridor_layer: CorridorLayer = $ScrollContainer/MapContent/CorridorLayer
 @onready var _room_layer: Control = $ScrollContainer/MapContent/RoomLayer
@@ -36,6 +37,8 @@ func refresh(floor_map_data: FloorMapData, floor_name: String = "") -> void:
 	if floor_map_data == null:
 		return
 	_floor_title.text = floor_name
+	if RunState.active_run != null:
+		_gold_label.text = "Gold: %d" % RunState.active_run.gold
 	_resize_map_content(floor_map_data.rooms)
 	_rebuild_corridors(floor_map_data)
 	_rebuild_rooms(floor_map_data)

@@ -14,6 +14,8 @@ extends Control
 
 const BATTLEFIELD_SCENE: PackedScene      = preload("res://gui/battlefield.tscn")
 const REST_SITE_SCENE: PackedScene        = preload("res://gui/rest_site/rest_site.tscn")
+const SHOP_SCENE: PackedScene             = preload("res://gui/shop/shop.tscn")
+const SHELL_GAME_SCENE: PackedScene       = preload("res://gui/events/shell_game/shell_game_event.tscn")
 const ROOM_PLACEHOLDER_SCENE: PackedScene = preload("res://gui/floor_loop/room_placeholder.tscn")
 
 # ── Node references ─────────────────────────────────────────────────────────────
@@ -93,9 +95,11 @@ func _instantiate_room_scene(room: RoomData) -> Node:
 			return battlefield
 		RoomData.RoomType.REST:
 			return REST_SITE_SCENE.instantiate()
+		RoomData.RoomType.SHOP:
+			return SHOP_SCENE.instantiate()
+		RoomData.RoomType.EVENT:
+			return SHELL_GAME_SCENE.instantiate()
 		# TODO: replace stubs as each room type is built:
-		# RoomData.RoomType.SHOP:       return SHOP_SCENE.instantiate()
-		# RoomData.RoomType.EVENT:      return EVENT_SCENE.instantiate()
 		# RoomData.RoomType.TREASURE:   return TREASURE_SCENE.instantiate()
 		# RoomData.RoomType.BLACKSMITH: return BLACKSMITH_SCENE.instantiate()
 	return ROOM_PLACEHOLDER_SCENE.instantiate()

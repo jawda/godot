@@ -1,0 +1,308 @@
+[gd_scene format=3 uid="uid://b85p1v7uugevt"]
+
+[ext_resource type="Script" uid="uid://btswvguvbx8tk" path="res://gui/events/shell_game/shell_game_event.gd" id="1_sge"]
+[ext_resource type="PackedScene" path="res://gui/rest_site/card_picker.tscn" id="2_cp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.06, 0.04, 0.1, 0.97)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.78, 0.6, 0.18, 0.85)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+content_margin_left = 18.0
+content_margin_top = 8.0
+content_margin_right = 18.0
+content_margin_bottom = 8.0
+bg_color = Color(0.12, 0.08, 0.2, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.52, 0.4, 0.14, 0.75)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
+content_margin_left = 18.0
+content_margin_top = 8.0
+content_margin_right = 18.0
+content_margin_bottom = 8.0
+bg_color = Color(0.08, 0.05, 0.14, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.78, 0.6, 0.18, 0.9)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+content_margin_left = 18.0
+content_margin_top = 8.0
+content_margin_right = 18.0
+content_margin_bottom = 8.0
+bg_color = Color(0.2, 0.14, 0.32, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.78, 0.6, 0.18, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_disabled"]
+content_margin_left = 18.0
+content_margin_top = 8.0
+content_margin_right = 18.0
+content_margin_bottom = 8.0
+bg_color = Color(0.08, 0.05, 0.14, 0.55)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.28, 0.2, 0.08, 0.35)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="ShellGameEvent" type="Control" unique_id=1880065980]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sge")
+
+[node name="Background" type="ColorRect" parent="." unique_id=379886192]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.03, 0.07, 1)
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1245972701]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -320.0
+offset_right = 270.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Contents" type="VBoxContainer" parent="Panel" unique_id=1171049480]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Header" type="MarginContainer" parent="Panel/Contents" unique_id=2105394350]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 12
+
+[node name="Info" type="VBoxContainer" parent="Panel/Contents/Header" unique_id=1284938607]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="Panel/Contents/Header/Info" unique_id=1688408358]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.82, 0.42, 1)
+theme_override_font_sizes/font_size = 24
+text = "The Shell Game"
+horizontal_alignment = 1
+
+[node name="Flavour" type="Label" parent="Panel/Contents/Header/Info" unique_id=1289383799]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.58, 0.72, 0.85)
+theme_override_font_sizes/font_size = 12
+text = "\"Double or nothing, friend. Pick the right cup.\""
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Offered" type="Label" parent="Panel/Contents/Header/Info" unique_id=1279370094]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.78, 0.18, 1)
+theme_override_font_sizes/font_size = 13
+text = "Offering: —"
+horizontal_alignment = 1
+
+[node name="Divider" type="HSeparator" parent="Panel/Contents" unique_id=1623678715]
+layout_mode = 2
+
+[node name="CupSection" type="MarginContainer" parent="Panel/Contents" unique_id=1952285689]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 28
+
+[node name="CupStage" type="Control" parent="Panel/Contents/CupSection" unique_id=575468986]
+custom_minimum_size = Vector2(460, 310)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="StatusSection" type="MarginContainer" parent="Panel/Contents" unique_id=2082648531]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 8
+
+[node name="Status" type="Label" parent="Panel/Contents/StatusSection" unique_id=1348005173]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.82, 0.74, 0.9, 1)
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="FooterDivider" type="HSeparator" parent="Panel/Contents" unique_id=1129834416]
+layout_mode = 2
+
+[node name="Footer" type="MarginContainer" parent="Panel/Contents" unique_id=781540004]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="Action" type="Button" parent="Panel/Contents/Footer" unique_id=912727404]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9, 0.78, 0.18, 1)
+theme_override_colors/font_disabled_color = Color(0.42, 0.32, 0.1, 0.5)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_btn_disabled")
+text = "Begin"
+
+[node name="CardPicker" parent="." unique_id=430022516 instance=ExtResource("2_cp")]
+layout_mode = 1
+
+[node name="IntroOverlay" type="Control" parent="." unique_id=1062693842]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="IntroOverlay" unique_id=151744326]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.01, 0.04, 0.88)
+
+[node name="Dialog" type="PanelContainer" parent="IntroOverlay" unique_id=793003897]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -195.0
+offset_right = 240.0
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Contents" type="VBoxContainer" parent="IntroOverlay/Dialog" unique_id=2054585098]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Header" type="MarginContainer" parent="IntroOverlay/Dialog/Contents" unique_id=1908636962]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 12
+
+[node name="Location" type="Label" parent="IntroOverlay/Dialog/Contents/Header" unique_id=1060876322]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.82, 0.42, 1)
+theme_override_font_sizes/font_size = 18
+text = "The Wandering Flagon"
+horizontal_alignment = 1
+
+[node name="Divider" type="HSeparator" parent="IntroOverlay/Dialog/Contents" unique_id=1875108573]
+layout_mode = 2
+
+[node name="Body" type="MarginContainer" parent="IntroOverlay/Dialog/Contents" unique_id=488017281]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 14
+
+[node name="Text" type="Label" parent="IntroOverlay/Dialog/Contents/Body" unique_id=1363718835]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.82, 0.75, 0.9, 1)
+theme_override_font_sizes/font_size = 13
+text = "A weathered barkeep slides three worn cups across the counter. Something clinks softly beneath one of them.
+
+\"Card shark, are you? How about a simple game — you pick a card, I hide it, give the cups a shuffle. If you find it and I'll get you a second copy.\"
+
+He shrugs. \"Lose and it's mine. What do you say?\""
+autowrap_mode = 3
+
+[node name="FooterDivider" type="HSeparator" parent="IntroOverlay/Dialog/Contents" unique_id=1315964995]
+layout_mode = 2
+
+[node name="Footer" type="MarginContainer" parent="IntroOverlay/Dialog/Contents" unique_id=1463085377]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="Choices" type="HBoxContainer" parent="IntroOverlay/Dialog/Contents/Footer" unique_id=1047759572]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Decline" type="Button" parent="IntroOverlay/Dialog/Contents/Footer/Choices" unique_id=1197390682]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.55, 0.48, 0.68, 1)
+theme_override_font_sizes/font_size = 13
+text = "Walk Away"
+flat = true
+
+[node name="Accept" type="Button" parent="IntroOverlay/Dialog/Contents/Footer/Choices" unique_id=689029184]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9, 0.78, 0.18, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_btn_disabled")
+text = "Try My Luck"

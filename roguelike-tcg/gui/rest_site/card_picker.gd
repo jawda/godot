@@ -105,8 +105,8 @@ func _build_card_row(card: CardData) -> Control:
 		if event is InputEventMouseButton \
 				and (event as InputEventMouseButton).button_index == MOUSE_BUTTON_LEFT \
 				and (event as InputEventMouseButton).pressed:
-			close()
-			card_chosen.emit(card))
+			card_chosen.emit(card)
+			close())
 
 	var row_content: HBoxContainer = HBoxContainer.new()
 	row_content.add_theme_constant_override("separation", 12)

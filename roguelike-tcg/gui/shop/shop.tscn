@@ -1,0 +1,136 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://gui/shop/shop.gd" id="1_shop"]
+[ext_resource type="PackedScene" path="res://gui/rest_site/card_picker.tscn" id="2_cp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.06, 0.04, 0.10, 0.97)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.78, 0.60, 0.18, 0.85)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_shop")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.03, 0.07, 1.0)
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -490.0
+offset_right = 380.0
+offset_bottom = 490.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Contents" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Header" type="MarginContainer" parent="Panel/Contents"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="Info" type="VBoxContainer" parent="Panel/Contents/Header"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="Panel/Contents/Header/Info"]
+layout_mode = 2
+text = "Shop"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 28
+theme_override_colors/font_color = Color(0.95, 0.82, 0.42, 1.0)
+
+[node name="GoldDisplay" type="Label" parent="Panel/Contents/Header/Info"]
+layout_mode = 2
+text = "Gold: 0"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.90, 0.78, 0.18, 1.0)
+
+[node name="Divider" type="HSeparator" parent="Panel/Contents"]
+layout_mode = 2
+theme_override_colors/color = Color(0.78, 0.60, 0.18, 0.40)
+
+[node name="Scroll" type="ScrollContainer" parent="Panel/Contents"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 1
+
+[node name="ShopPadding" type="MarginContainer" parent="Panel/Contents/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="ShopList" type="VBoxContainer" parent="Panel/Contents/Scroll/ShopPadding"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="CardsLabel" type="Label" parent="Panel/Contents/Scroll/ShopPadding/ShopList"]
+layout_mode = 2
+text = "— Cards —"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.75, 0.60, 0.25, 0.65)
+
+[node name="CardRow" type="GridContainer" parent="Panel/Contents/Scroll/ShopPadding/ShopList"]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 4
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 12
+
+[node name="FooterDivider" type="HSeparator" parent="Panel/Contents"]
+layout_mode = 2
+theme_override_colors/color = Color(0.78, 0.60, 0.18, 0.40)
+
+[node name="Footer" type="MarginContainer" parent="Panel/Contents"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 12
+
+[node name="Leave" type="Button" parent="Panel/Contents/Footer"]
+layout_mode = 2
+size_flags_horizontal = 3
+flat = true
+text = "Leave"
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.55, 0.48, 0.68, 1.0)
+
+[node name="CardPicker" parent="." instance=ExtResource("2_cp")]
+layout_mode = 1

@@ -309,6 +309,16 @@ theme_override_styles/normal = SubResource("PileBtnNormal")
 theme_override_styles/hover = SubResource("PileBtnHover")
 text = "Exile  0"
 
+[node name="GoldLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 50.0
+offset_right = 130.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.90, 0.78, 0.18, 1.0)
+text = "Gold: 0"
+
 [node name="DiscardButton" type="Button" parent="." unique_id=1934052967]
 layout_mode = 1
 anchors_preset = 3
