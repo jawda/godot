@@ -1,0 +1,17 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://player/mastery/mastery_data.gd" id="1_md"]
+[ext_resource type="Script" path="res://player/mastery/mastery_effect.gd" id="2_me"]
+
+[sub_resource type="Resource" id="Effect_heal_on_kill"]
+script = ExtResource("2_me")
+trigger = 3
+effect_type = 0
+value = 4
+
+[resource]
+script = ExtResource("1_md")
+character_class = "cleric"
+mastery_name = "Last Rites"
+description = "When an enemy dies to your attack, restore 4 HP."
+effects = Array[ExtResource("2_me")]([SubResource("Effect_heal_on_kill")])

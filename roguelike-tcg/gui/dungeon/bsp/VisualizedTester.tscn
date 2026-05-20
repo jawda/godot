@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ybigfrcqtet2"]
+
+[ext_resource type="Script" uid="uid://ctjrnnc7myaqa" path="res://gui/dungeon/bsp/bsp_generator.gd" id="1_bi8oo"]
+[ext_resource type="Script" uid="uid://b4u4rv8und7r8" path="res://gui/dungeon/bsp/visualized_tester.gd" id="1_wvwla"]
+
+[node name="Dungeon" type="Node2D" unique_id=760566630]
+script = ExtResource("1_wvwla")
+
+[node name="DungeonDrawTimer" type="Timer" parent="." unique_id=401319971]
+wait_time = 0.1
+autostart = true
+
+[node name="BSPGenerator" type="Node" parent="." unique_id=2082030749]
+script = ExtResource("1_bi8oo")
+
+[connection signal="timeout" from="DungeonDrawTimer" to="." method="_on_dungeon_draw_timer_timeout"]
+[connection signal="new_split_made" from="BSPGenerator" to="." method="_on_bsp_generator_new_split_made"]

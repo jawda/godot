@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Enemy Sheet — The Gravewarden</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+:root {
+  --bg-deep:#0e0b1a; --bg-panel:#16112a; --bg-card:#1e1735; --bg-accent:#261e42;
+  --accent:#a03030; --accent-bright:#c85050; --accent-dim:#601818;
+  --text-primary:#e8dcc8; --text-secondary:#a8997e; --text-faint:#5a5040;
+  --border-gold:#3d3020; --divider:rgba(160,48,48,0.25);
+  --atk:#c87060; --blk:#6090c8; --sts:#c8a830; --buf:#80b060; --spc:#9860c0;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg-deep);color:var(--text-primary);font-family:'Crimson Text',Georgia,serif;font-size:17px;line-height:1.65;min-height:100vh;padding:48px 24px;}
+.sheet{max-width:860px;margin:0 auto;display:grid;gap:2px;border:1px solid var(--accent-dim);box-shadow:0 0 60px rgba(160,48,48,0.10),0 0 120px rgba(0,0,0,0.6);}
+.header{background:var(--bg-panel);border-bottom:1px solid var(--accent-dim);padding:36px 40px 28px;display:grid;grid-template-columns:160px 1fr;gap:32px;align-items:start;position:relative;}
+.header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);}
+.portrait-frame{width:160px;height:200px;border:1px solid var(--accent-dim);background:var(--bg-card);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;position:relative;flex-shrink:0;}
+.portrait-frame::before,.portrait-frame::after{content:'';position:absolute;width:12px;height:12px;border-color:var(--accent);border-style:solid;}
+.portrait-frame::before{top:-1px;left:-1px;border-width:2px 0 0 2px;}
+.portrait-frame::after{bottom:-1px;right:-1px;border-width:0 2px 2px 0;}
+.portrait-placeholder{font-size:42px;opacity:0.18;line-height:1;}
+.portrait-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.15em;color:var(--text-faint);text-transform:uppercase;}
+.eyebrow{font-family:'Cinzel',serif;font-size:10px;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:6px;}
+.name{font-family:'Cinzel',serif;font-size:34px;font-weight:700;color:var(--accent-bright);line-height:1.1;margin-bottom:14px;}
+.tagline{font-style:italic;font-size:17px;color:var(--text-secondary);border-left:2px solid var(--accent-dim);padding-left:14px;margin-bottom:16px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;}
+.tag{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--border-gold);color:var(--text-secondary);background:var(--bg-accent);}
+.body{display:grid;grid-template-columns:1fr 240px;background:var(--bg-panel);}
+.main{padding:32px 40px;border-right:1px solid var(--divider);display:flex;flex-direction:column;gap:28px;}
+.side{padding:32px 24px;display:flex;flex-direction:column;gap:24px;}
+.section-title{font-family:'Cinzel',serif;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.section-title::after{content:'';flex:1;height:1px;background:var(--divider);}
+.desc p{color:var(--text-primary);margin-bottom:10px;}
+.desc p:last-child{margin-bottom:0;}
+.action{background:var(--bg-card);border:1px solid var(--border-gold);padding:10px 14px;margin-bottom:8px;}
+.action:last-child{margin-bottom:0;}
+.action-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
+.action-name{font-family:'Cinzel',serif;font-size:12px;letter-spacing:0.08em;color:var(--text-primary);}
+.atype{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;padding:2px 8px;border:1px solid currentColor;}
+.atype.atk{color:var(--atk);}.atype.blk{color:var(--blk);}.atype.sts{color:var(--sts);}.atype.buf{color:var(--buf);}.atype.spc{color:var(--spc);}
+.action-val{font-size:13px;font-weight:600;color:var(--accent-bright);margin-bottom:3px;}
+.action-intent{font-size:13px;font-style:italic;color:var(--text-secondary);}
+.action-note{font-size:12px;color:var(--text-faint);margin-top:3px;}
+.hp-display{background:var(--bg-card);border:1px solid var(--border-gold);padding:14px 16px;text-align:center;}
+.hp-value{font-family:'Cinzel',serif;font-size:36px;font-weight:700;color:#c87070;line-height:1;}
+.hp-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-faint);margin-top:4px;}
+.stat-block{display:flex;flex-direction:column;gap:6px;}
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--bg-card);border-left:2px solid var(--accent-dim);}
+.stat-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-secondary);}
+.stat-val{font-family:'Cinzel',serif;font-size:13px;font-weight:600;color:var(--accent-bright);}
+.lore-placeholder{background:var(--bg-card);border:1px dashed var(--border-gold);padding:18px;text-align:center;color:var(--text-faint);font-style:italic;font-size:14px;}
+.phase-header{background:var(--bg-accent);border:1px solid var(--accent-dim);border-bottom:none;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;}
+.phase-name{font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.1em;color:var(--accent-bright);}
+.phase-threshold{font-family:'Cinzel',serif;font-size:10px;color:var(--text-faint);}
+.phase-trigger{font-size:13px;font-style:italic;color:var(--text-secondary);background:var(--bg-card);border:1px solid var(--border-gold);border-top:none;padding:8px 14px;margin-bottom:8px;}
+.footer{background:var(--bg-panel);border-top:1px solid var(--divider);padding:12px 40px;display:flex;justify-content:space-between;}
+.footer-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.15em;color:var(--text-faint);text-transform:uppercase;}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="header">
+    <div class="portrait-frame">
+      <div class="portrait-placeholder">⚰</div>
+      <div class="portrait-label">Portrait TBD</div>
+    </div>
+    <div class="identity">
+      <div class="eyebrow">Boss — Undead</div>
+      <h1 class="name">The Gravewarden</h1>
+      <p class="tagline">It was built to guard something — no one living remembers what. Whatever it protected is long gone. The Gravewarden remains, and it has grown very tired of intruders.</p>
+      <div class="tags">
+        <span class="tag">Undead</span>
+        <span class="tag">Boss</span>
+        <span class="tag">Sequential AI</span>
+        <span class="tag">Holy Weakness</span>
+        <span class="tag">Three-Phase</span>
+        <span class="tag">Summoner</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="main">
+
+      <div class="desc">
+        <div class="section-title">Description</div>
+        <p>It was built to guard something — no one living remembers what. The Gravewarden is ancient beyond reckoning, its bones fused with stone and rune-carved iron. It does not move quickly. It does not need to.</p>
+        <p>The fight unfolds in three distinct stages. The Gravewarden begins measured and methodical. When it cracks, runes ignite and everything hits harder. At near death it stops holding back entirely — desperate, wild, and more dangerous than at full strength. Throughout all three phases it calls skeletons from the earth, and each summon extends the encounter further.</p>
+      </div>
+
+      <!-- Phase 1 -->
+      <div class="actions-section">
+        <div class="phase-header">
+          <span class="phase-name">Phase 1 — The Sentinel</span>
+          <span class="phase-threshold">Full HP → 75%</span>
+        </div>
+        <div class="phase-trigger">Sequential — actions repeat in order: Slam → Harden → Crush → Summon.</div>
+
+        <div class="action" style="border-left:3px solid var(--atk);">
+          <div class="action-header">
+            <span class="action-name">Slam</span>
+            <span class="atype atk">Attack</span>
+          </div>
+          <div class="action-val">20 damage</div>
+          <div class="action-intent">"Slams with a massive fist — preparing to deal 20 damage."</div>
+          <div class="action-note">Turn 1 of cycle</div>
+        </div>
+
+        <div class="action" style="border-left:3px solid var(--blk);">
+          <div class="action-header">
+            <span class="action-name">Harden</span>
+            <span class="atype blk">Block</span>
+          </div>
+          <div class="action-val">18 block</div>
+          <div class="action-intent">"Hardens its ancient bones — bracing for 18 block."</div>
+          <div class="action-note">Turn 2 of cycle — the window to clear block before Crush</div>
+        </div>
+
+        <div class="action" style="border-left:3px solid var(--atk);">
+          <div class="action-header">
+            <span class="action-name">Crush</span>
+            <span class="atype atk">Attack</span>
+          </div>
+          <div class="action-val">23 damage</div>
+          <div class="action-intent">"Brings down its full weight — preparing to deal 23 damage."</div>
+          <div class="action-note">Turn 3 of cycle — hits hardest, follows the block turn</div>
+        </div>
+
+        <div class="action" style="border-left:3px solid var(--spc);">
+          <div class="action-header">
+            <span class="action-name">Call the Buried</span>
+            <span class="atype spc">Special</span>
+          </div>
+          <div class="action-val">Summons 1 Restless Skeleton</div>
+          <div class="action-intent">"Calls to the buried dead — summoning a Restless Skeleton."</div>
+          <div class="action-note">Turn 4 of cycle — spawns a new enemy into the battlefield</div>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="actions-section">
+        <div class="phase-header" style="border-color:#c87830;">
+          <span class="phase-name">Phase 2 — The Cracked</span>
+          <span class="phase-threshold">≤ 75% HP</span>
+        </div>
+        <div class="phase-trigger">"Cracks split across the Gravewarden's chest. Ancient runes ignite along its ribcage."</div>
+
+        <div class="action" style="border-left:3px solid var(--atk);">
+          <div class="action-header">
+            <span class="action-name">Ground Slam</span>
+            <span class="atype atk">Attack</span>
+          </div>
+          <div class="action-val">23 damage</div>
+          <div class="action-intent">"Drives a fist into the ground — preparing to deal 23 damage."</div>
+          <div class="action-note">Turn 1 of phase 2 cycle</div>
+        </div>
+
+        <div class="action" style="border-left:3px solid var(--buf);">
+          <div class="action-header">
+            <span class="action-name">Rune Flare</span>
+            <span class="atype buf">Buff</span>
+          </div>
+          <div class="action-val">+5 Attack (permanent)</div>
+          <div class="action-intent">"Runes flare — Attack +5 for the rest of combat."</div>
+          <div class="action-note">Turn 2 — all subsequent attacks become more threatening</div>
+        </div>
+
+        <div class="action" style="border-left:3px solid var(--atk);">
+          <div class="action-header">
+            <span class="action-name">Erupt</span>
+            <span class="atype atk">Attack</span>
+          </div>
+          <div class="action-val">27 damage</div>
+          <div class="action-intent">"Erupts upward — preparing to deal 27 damage."</div>
+          <div class="action-note">Turn 3 — heaviest hit in phase 2</div>
+        </div>
+
+        <div class="action" style="border-left:3px solid var(--spc);">
+          <div class="action-header">
+            <span class="action-name">Draw the Dead</span>
+            <span class="atype spc">Special</span>
+          </div>
+          <div class="action-val">Summons 1 Restless Skeleton</div>
+          <div class="action-intent">"Draws more dead from the earth — summoning a Restless Skeleton."</div>
+          <div class="action-note">Turn 4 of phase 2 cycle — summons continue throughout</div>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="actions-section">
+        <div class="phase-header" style="border-color:var(--atk);">
+          <span class="phase-name">Phase 3 — The Fury</span>
+          <span class="phase-threshold">≤ 25% HP</span>
+        </div>
+        <div class="phase-trigger">"The Gravewarden ROARS. The chamber shakes. Its eyes burn with desperate fury."</div>
+
+        <div class="action" style="border-left:3px solid var(--atk);">
+          <div class="action-header">
+            <span class="action-name">Collapse</span>
+            <span class="atype atk">Attack</span>
+          </div>
+          <div class="action-val">30 damage</div>
+          <div class="action-intent">"Collapses forward — desperate and wild — preparing to deal 30 damage."</div>
+          <div class="action-note">Turn 1 of phase 3 cycle</div>
+        </div>
+
+        <div class="action" style="border-left:3px solid var(--atk);">
+          <div class="action-header">
+            <span class="action-name">Fury</span>
+            <span class="atype atk">Attack</span>
+          </div>
+          <div class="action-val">25 damage</div>
+          <div class="action-intent">"Strikes again before you recover — preparing to deal 25 damage."</div>
+          <div class="action-note">Turn 2 — two attacks in rapid succession with Collapse</div>
+        </div>
+
+        <div class="action" style="border-left:3px solid var(--spc);">
+          <div class="action-header">
+            <span class="action-name">Bone Storm</span>
+            <span class="atype spc">Special</span>
+          </div>
+          <div class="action-val">AoE damage to player (value TBD)</div>
+          <div class="action-intent">"Shards of its own skeleton tear outward — dealing damage to all."</div>
+          <div class="action-note">Turn 3 — self-destructive AoE; exact damage to be tuned</div>
+        </div>
+
+        <div class="action" style="border-left:3px solid var(--buf);">
+          <div class="action-header">
+            <span class="action-name">Pain-Fed</span>
+            <span class="atype buf">Buff</span>
+          </div>
+          <div class="action-val">+8 Attack (permanent)</div>
+          <div class="action-intent">"Feeds on its own pain — Attack +8 for the rest of combat."</div>
+          <div class="action-note">Turn 4 — massive final buff; end the fight before this lands twice</div>
+        </div>
+      </div>
+
+      <div class="lore">
+        <div class="section-title">Compendium Lore</div>
+        <div class="lore-placeholder">Unlocks after first kill. Lore to be written.</div>
+      </div>
+
+    </div>
+
+    <div class="side">
+      <div>
+        <div class="section-title">Health</div>
+        <div class="hp-display">
+          <div class="hp-value">250</div>
+          <div class="hp-label">Max HP</div>
+        </div>
+      </div>
+      <div>
+        <div class="section-title">Combat Stats</div>
+        <div class="stat-block">
+          <div class="stat-row"><span class="stat-label">Base Attack</span><span class="stat-val">15</span></div>
+          <div class="stat-row"><span class="stat-label">Base Block</span><span class="stat-val">10</span></div>
+          <div class="stat-row"><span class="stat-label">AI Pattern</span><span class="stat-val" style="font-size:10px;">Sequential</span></div>
+          <div class="stat-row"><span class="stat-label">Tier</span><span class="stat-val" style="font-size:10px;">Boss</span></div>
+          <div class="stat-row"><span class="stat-label">Phase Count</span><span class="stat-val">3</span></div>
+          <div class="stat-row"><span class="stat-label">Summons</span><span class="stat-val" style="font-size:10px;">Restless Skeleton</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-title">Design Notes</div>
+        <div class="lore-placeholder" style="text-align:left;padding:12px;">Final boss. Sequential pattern is readable but damage output climbs steeply across phases. Key questions: can the player out-damage the summons, clear block before Crush, and close out before Phase 3 buffs stack? Bone Storm is the panic button — it hurts the Warden to hurt you.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-label">Roguelike TCG — Enemy Reference</span>
+    <span class="footer-label">The Gravewarden — v0.1</span>
+  </div>
+
+</div>
+</body>
+</html>

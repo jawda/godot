@@ -1,0 +1,19 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" uid="uid://jcy4dqsdch66" path="res://player/gear/gear_data.gd" id="1_gd"]
+[ext_resource type="Script" uid="uid://do3rqpru07f4j" path="res://player/gear/gear_effect.gd" id="2_ge"]
+
+[sub_resource type="Resource" id="Effect_draw"]
+script = ExtResource("2_ge")
+trigger = 3
+effect_type = 1
+value = 2
+
+[resource]
+script = ExtResource("1_gd")
+gear_name = "Bone Charm"
+gear_slot = 1
+rarity = 2
+gear_description = "On kill, draw {0} cards."
+effects = Array[ExtResource("2_ge")]([SubResource("Effect_draw")])
+in_shop_pool = true

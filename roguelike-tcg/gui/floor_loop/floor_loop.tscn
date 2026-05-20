@@ -1,0 +1,110 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://gui/floor_loop/floor_loop.gd" id="1_fl"]
+[ext_resource type="PackedScene" path="res://gui/floor_map/floor_map.tscn" id="2_fm"]
+[ext_resource type="PackedScene" uid="uid://drruwnyrcdie1" path="res://gui/character_menu/character_menu.tscn" id="3_cm"]
+[ext_resource type="PackedScene" path="res://gui/level_up/level_up_screen.tscn" id="4_lvl"]
+
+[sub_resource type="StyleBoxFlat" id="IndicatorNormal"]
+bg_color = Color(0.18, 0.12, 0.06, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.90, 0.78, 0.18, 0.85)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="IndicatorHover"]
+bg_color = Color(0.28, 0.20, 0.06, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.90, 0.78, 0.18, 1.0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+
+[node name="FloorLoop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fl")
+
+[node name="MapView" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FloorMap" parent="MapView" instance=ExtResource("2_fm")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RoomView" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+visible = false
+
+[node name="LevelUpIndicator" type="Button" parent="MapView"]
+mouse_default_cursor_shape = 2
+layout_mode = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -172.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = 44.0
+grow_horizontal = 0
+grow_vertical = 2
+visible = false
+flat = true
+text = "⬆  Level Up!"
+theme_override_styles/normal = SubResource("IndicatorNormal")
+theme_override_styles/hover = SubResource("IndicatorHover")
+theme_override_styles/pressed = SubResource("IndicatorHover")
+theme_override_colors/font_color = Color(0.90, 0.78, 0.18, 1.0)
+theme_override_font_sizes/font_size = 13
+
+[node name="CharacterMenu" parent="." instance=ExtResource("3_cm")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LevelUpScreen" parent="." instance=ExtResource("4_lvl")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

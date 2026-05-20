@@ -1,0 +1,34 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://gui/toast.gd" id="1_toast"]
+
+[sub_resource type="StyleBoxFlat" id="PanelStyle"]
+bg_color = Color(0.1, 0.04, 0.16, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.75, 0.2, 0.2, 0.9)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="Toast" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+visible = false
+script = ExtResource("1_toast")
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 0
+theme_override_styles/panel = SubResource("PanelStyle")
+
+[node name="Message" type="Label" parent="Panel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.0, 0.45, 0.45, 1.0)

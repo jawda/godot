@@ -1,0 +1,20 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" uid="uid://jcy4dqsdch66" path="res://player/gear/gear_data.gd" id="1_gd"]
+[ext_resource type="Script" uid="uid://do3rqpru07f4j" path="res://player/gear/gear_effect.gd" id="2_ge"]
+
+[sub_resource type="Resource" id="Effect_strength"]
+script = ExtResource("2_ge")
+trigger = 0
+effect_type = 0
+value = 1
+param = "strength"
+
+[resource]
+script = ExtResource("1_gd")
+gear_name = "Rusty Helm"
+gear_slot = 0
+rarity = 0
+gear_description = "+{0} Strength."
+effects = Array[ExtResource("2_ge")]([SubResource("Effect_strength")])
+in_shop_pool = true

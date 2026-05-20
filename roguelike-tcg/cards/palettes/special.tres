@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="CardPalette" format=3 uid="uid://bfm62xjk2apiq"]
+
+[ext_resource type="Script" uid="uid://c5itqofv4kw58" path="res://cards/card_palette.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+body_bg = Color(0.13, 0.03, 0.09, 1)
+border = Color(0.75, 0.31, 0.56, 1)
+shadow = Color(0.75, 0.31, 0.56, 0.72)
+border_width = 3
+shadow_base = 10
+shadow_peak = 22
+cost_bg = Color(0.22, 0.05, 0.16, 1)
+cost_border = Color(0.94, 0.56, 0.75, 1)
+cost_text = Color(0.82, 0.66, 0.91, 1)
+art_border = Color(0.75, 0.31, 0.56, 0.52)
+name_bg = Color(0.35, 0.06, 0.22, 1)
+name_border = Color(0.75, 0.31, 0.56, 1)
+name_text = Color(1, 1, 1, 1)
+name_outline = Color(0.22, 0.09, 0.28, 1)
+name_outline_size = 3
+type_text = Color(0.94, 0.56, 0.75, 0.85)
+desc_border = Color(0.75, 0.31, 0.56, 0.32)
+desc_text = Color(0.82, 0.66, 0.91, 1)
+rarity_bg = Color(0.22, 0.05, 0.16, 1)
+rarity_border = Color(0.75, 0.31, 0.56, 1)
+rarity_text = Color(0.94, 0.56, 0.75, 1)
+rarity_strip_x0 = 20
+rarity_strip_x1 = 124

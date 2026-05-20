@@ -1,0 +1,18 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://player/mastery/mastery_data.gd" id="1_md"]
+[ext_resource type="Script" path="res://player/mastery/mastery_effect.gd" id="2_me"]
+
+[sub_resource type="Resource" id="Effect_bonus_block"]
+script = ExtResource("2_me")
+trigger = 4
+effect_type = 2
+value = 1
+param = "faith"
+
+[resource]
+script = ExtResource("1_md")
+character_class = "cleric"
+mastery_name = "Iron Devotion"
+description = "Whenever you gain block, gain 1 additional block per point of Faith."
+effects = Array[ExtResource("2_me")]([SubResource("Effect_bonus_block")])

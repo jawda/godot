@@ -1,0 +1,31 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://world/event_data.gd" id="1_ed"]
+[ext_resource type="Script" path="res://world/event_choice.gd" id="2_ec"]
+[ext_resource type="Script" path="res://world/event_outcome.gd" id="3_eo"]
+
+[sub_resource type="Resource" id="Outcome_remove_card"]
+script = ExtResource("3_eo")
+outcome_type = 6
+
+[sub_resource type="Resource" id="Outcome_gain_gold"]
+script = ExtResource("3_eo")
+outcome_type = 0
+value = 30
+
+[sub_resource type="Resource" id="Choice_offer"]
+script = ExtResource("2_ec")
+label = "Make an offering"
+result_text = "You press your palm to the stone and push something of yourself into it. The altar pulses once — cold, satisfied — and a handful of coins clatters to the floor at your feet."
+outcomes = Array[ExtResource("3_eo")]([SubResource("Outcome_remove_card"), SubResource("Outcome_gain_gold")])
+
+[sub_resource type="Resource" id="Choice_leave"]
+script = ExtResource("2_ec")
+label = "Leave it alone"
+result_text = "You back away slowly. The hum fades. Whatever it wanted, it didn't get it."
+
+[resource]
+script = ExtResource("1_ed")
+event_name = "The Cursed Altar"
+narrative = "A cracked altar dominates the centre of the chamber, its stone face stained dark with something old. Carved deep into the base, in a script you shouldn't be able to read:\n\n*Give, and receive.*\n\nThe air around it presses against you."
+choices = Array[ExtResource("2_ec")]([SubResource("Choice_offer"), SubResource("Choice_leave")])

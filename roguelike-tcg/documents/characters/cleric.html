@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Character Sheet — The Cleric</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+    :root {
+      --bg-deep:        #0e0b1a;
+      --bg-panel:       #16112a;
+      --bg-card:        #1e1735;
+      --bg-accent:      #261e42;
+      --gold-bright:    #f5e06a;
+      --gold-mid:       #c9a83c;
+      --gold-dim:       #7a6120;
+      --holy-glow:      #fff8c2;
+      --text-primary:   #e8dcc8;
+      --text-secondary: #a8997e;
+      --text-faint:     #5a5040;
+      --border-gold:    #3d3020;
+      --stat-con:       #6ec4a8;
+      --stat-faith:     #b8a0f0;
+      --stat-neutral:   #6a8098;
+      --divider:        rgba(197, 168, 60, 0.2);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-deep);
+      color: var(--text-primary);
+      font-family: 'Crimson Text', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.65;
+      min-height: 100vh;
+      padding: 48px 24px;
+    }
+
+    /* ── Page container ── */
+    .sheet {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      gap: 2px;
+      border: 1px solid var(--gold-dim);
+      box-shadow: 0 0 60px rgba(197, 168, 60, 0.08), 0 0 120px rgba(0,0,0,0.6);
+    }
+
+    /* ── Header ── */
+    .header {
+      background: var(--bg-panel);
+      border-bottom: 1px solid var(--gold-dim);
+      padding: 36px 40px 28px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 32px;
+      align-items: start;
+      position: relative;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold-mid), transparent);
+    }
+
+    /* ── Portrait ── */
+    .portrait-frame {
+      width: 160px;
+      height: 200px;
+      border: 1px solid var(--gold-dim);
+      background: var(--bg-card);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .portrait-frame::before,
+    .portrait-frame::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-color: var(--gold-mid);
+      border-style: solid;
+    }
+
+    .portrait-frame::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+    .portrait-frame::after  { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+    .portrait-placeholder {
+      font-size: 42px;
+      opacity: 0.18;
+      line-height: 1;
+    }
+
+    .portrait-label {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      color: var(--text-faint);
+      text-transform: uppercase;
+    }
+
+    /* ── Identity block ── */
+    .identity {
+      padding-top: 4px;
+    }
+
+    .class-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--gold-mid);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .character-name {
+      font-family: 'Cinzel', serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--gold-bright);
+      line-height: 1.1;
+      text-shadow: 0 0 30px rgba(245, 224, 106, 0.3);
+      margin-bottom: 14px;
+    }
+
+    .character-tagline {
+      font-style: italic;
+      font-size: 18px;
+      color: var(--text-secondary);
+      border-left: 2px solid var(--gold-dim);
+      padding-left: 14px;
+      margin-bottom: 18px;
+    }
+
+    .identity-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border: 1px solid var(--border-gold);
+      color: var(--text-secondary);
+      background: var(--bg-accent);
+    }
+
+    /* ── Body panels ── */
+    .body {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      background: var(--bg-panel);
+    }
+
+    .main-column {
+      padding: 32px 40px;
+      border-right: 1px solid var(--divider);
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .side-column {
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* ── Section titles ── */
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-mid);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--divider);
+    }
+
+    /* ── Bio ── */
+    .bio p {
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .bio p:last-child { margin-bottom: 0; }
+
+    /* ── Mechanics ── */
+    .mechanic {
+      display: grid;
+      grid-template-columns: 3px 1fr;
+      gap: 0 14px;
+      margin-bottom: 16px;
+    }
+
+    .mechanic:last-child { margin-bottom: 0; }
+
+    .mechanic-bar {
+      background: var(--gold-dim);
+      border-radius: 2px;
+      grid-row: span 2;
+      align-self: stretch;
+    }
+
+    .mechanic-title {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--gold-bright);
+      margin-bottom: 3px;
+    }
+
+    .mechanic-desc {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* ── Story role ── */
+    .story-placeholder {
+      background: var(--bg-card);
+      border: 1px dashed var(--border-gold);
+      padding: 20px;
+      text-align: center;
+      color: var(--text-faint);
+      font-style: italic;
+      font-size: 15px;
+    }
+
+    /* ── Stats ── */
+    .stats-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .stat-name {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .stat-pips {
+      display: flex;
+      gap: 3px;
+    }
+
+    .pip {
+      width: 7px;
+      height: 7px;
+      border: 1px solid currentColor;
+      border-radius: 1px;
+      opacity: 0.3;
+    }
+
+    .pip.filled {
+      opacity: 1;
+      background: currentColor;
+    }
+
+    .stat-value {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      font-weight: 600;
+      min-width: 18px;
+      text-align: right;
+    }
+
+    .stat-row.highlight .stat-name { color: var(--text-primary); }
+
+    /* ── Starter deck ── */
+    .deck-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .deck-entry {
+      display: grid;
+      grid-template-columns: 24px 1fr auto;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      background: var(--bg-card);
+      border-left: 2px solid transparent;
+      font-size: 14px;
+    }
+
+    .deck-entry.attack  { border-left-color: #c87060; }
+    .deck-entry.defense { border-left-color: #6090c8; }
+    .deck-entry.quirk   { border-left-color: #70b870; }
+
+    .deck-qty {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      color: var(--text-faint);
+      text-align: center;
+    }
+
+    .deck-name { color: var(--text-primary); }
+
+    .deck-cost {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      color: var(--text-faint);
+    }
+
+    /* ── Health ── */
+    .health-display {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .health-value {
+      font-family: 'Cinzel', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #c87070;
+      line-height: 1;
+    }
+
+    .health-label {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-top: 4px;
+    }
+
+    .health-note {
+      font-size: 12px;
+      color: var(--text-faint);
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background: var(--bg-panel);
+      border-top: 1px solid var(--divider);
+      padding: 12px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-label {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      color: var(--text-faint);
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <!-- ── Header ── -->
+  <div class="header">
+    <div class="portrait-frame">
+      <div class="portrait-placeholder">✝</div>
+      <div class="portrait-label">Portrait TBD</div>
+    </div>
+
+    <div class="identity">
+      <div class="class-eyebrow">Player Class</div>
+      <h1 class="character-name">The Cleric</h1>
+      <p class="character-tagline">Faith is not a shield — it is a weapon.</p>
+      <div class="identity-tags">
+        <span class="tag">Holy Damage</span>
+        <span class="tag">Block Stacking</span>
+        <span class="tag">Life Economy</span>
+        <span class="tag">Anti-Undead</span>
+        <span class="tag">Faith Scaling</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Body ── -->
+  <div class="body">
+
+    <!-- ── Main column ── -->
+    <div class="main-column">
+
+      <!-- Bio -->
+      <div class="bio">
+        <div class="section-title">Biography</div>
+        <p>
+          Once an ordained healer within the Order of the Pale Flame, the Cleric departed the temple when the hierarchy chose silence over action — allowing the undead sickness spreading through the lower cities to go unanswered. What the Order called patience, the Cleric called complicity.
+        </p>
+        <p>
+          They carry their faith not as doctrine but as discipline: a set of principles hammered sharp against the years. Where other wanderers fight to survive, the Cleric fights to purge — and endures punishment that would break anyone without their particular relationship with pain.
+        </p>
+      </div>
+
+      <!-- Core mechanics -->
+      <div class="mechanics">
+        <div class="section-title">Class Mechanics</div>
+
+        <div class="mechanic">
+          <div class="mechanic-bar" style="background: #c9913c;"></div>
+          <div class="mechanic-title">Holy Damage</div>
+          <div class="mechanic-desc">
+            Holy attacks deal double damage to undead enemies. The Cleric's basic strikes carry this damage type, making them uniquely effective in corrupted regions.
+          </div>
+        </div>
+
+        <div class="mechanic">
+          <div class="mechanic-bar" style="background: #6090c8;"></div>
+          <div class="mechanic-title">Block Stacking</div>
+          <div class="mechanic-desc">
+            The Cleric builds mitigation through layered defence rather than evasion. Blessings and Quirks compound block across turns, rewarding a patient, deliberate playstyle.
+          </div>
+        </div>
+
+        <div class="mechanic">
+          <div class="mechanic-bar" style="background: #c87070;"></div>
+          <div class="mechanic-title">Life Economy</div>
+          <div class="mechanic-desc">
+            Several cards scale off current HP or total life gained in combat. Healing is not just survival — it fuels damage and block. Faith increases all HP restored.
+          </div>
+        </div>
+      </div>
+
+      <!-- Story role -->
+      <div class="story">
+        <div class="section-title">Story Role</div>
+        <div class="story-placeholder">
+          Story contribution and narrative arc to be documented as the world design develops.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── Side column ── -->
+    <div class="side-column">
+
+      <!-- HP -->
+      <div>
+        <div class="section-title">Base Health</div>
+        <div class="health-display">
+          <div class="health-value">75</div>
+          <div class="health-label">Base Max HP</div>
+          <div class="health-note">+CON scaling at runtime</div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div>
+        <div class="section-title">Starting Stats</div>
+        <div class="stats-grid">
+
+          <div class="stat-row">
+            <span class="stat-name">Strength</span>
+            <span class="stat-pips" style="color: var(--stat-neutral);">
+              <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+            </span>
+            <span class="stat-value" style="color: var(--stat-neutral);">0</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-name">Dexterity</span>
+            <span class="stat-pips" style="color: var(--stat-neutral);">
+              <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+            </span>
+            <span class="stat-value" style="color: var(--stat-neutral);">0</span>
+          </div>
+
+          <div class="stat-row highlight">
+            <span class="stat-name">Constitution</span>
+            <span class="stat-pips" style="color: var(--stat-con);">
+              <span class="pip filled"></span><span class="pip filled"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+            </span>
+            <span class="stat-value" style="color: var(--stat-con);">2</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-name">Intelligence</span>
+            <span class="stat-pips" style="color: var(--stat-neutral);">
+              <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+            </span>
+            <span class="stat-value" style="color: var(--stat-neutral);">0</span>
+          </div>
+
+          <div class="stat-row highlight">
+            <span class="stat-name">Faith</span>
+            <span class="stat-pips" style="color: var(--stat-faith);">
+              <span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip"></span><span class="pip"></span>
+            </span>
+            <span class="stat-value" style="color: var(--stat-faith);">3</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Starter deck -->
+      <div>
+        <div class="section-title">Starter Deck</div>
+        <div class="deck-list">
+          <div class="deck-entry attack">
+            <span class="deck-qty">×4</span>
+            <span class="deck-name">Mace Strike</span>
+            <span class="deck-cost">1</span>
+          </div>
+          <div class="deck-entry defense">
+            <span class="deck-qty">×4</span>
+            <span class="deck-name">Ward</span>
+            <span class="deck-cost">1</span>
+          </div>
+          <div class="deck-entry quirk">
+            <span class="deck-qty">×2</span>
+            <span class="deck-name">Prayer</span>
+            <span class="deck-cost">0</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <div class="footer">
+    <span class="footer-label">Roguelike TCG — Design Reference</span>
+    <span class="footer-label">The Cleric — v0.1</span>
+  </div>
+
+</div>
+
+</body>
+</html>

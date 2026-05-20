@@ -1,0 +1,18 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://player/mastery/mastery_data.gd" id="1_md"]
+[ext_resource type="Script" path="res://player/mastery/mastery_effect.gd" id="2_me"]
+
+[sub_resource type="Resource" id="Effect_prevent_death"]
+script = ExtResource("2_me")
+trigger = 8
+effect_type = 4
+value = 1
+charges = 1
+
+[resource]
+script = ExtResource("1_md")
+character_class = "cleric"
+mastery_name = "Martyrdom"
+description = "Once per combat, when you would die, survive at 1 HP instead."
+effects = Array[ExtResource("2_me")]([SubResource("Effect_prevent_death")])

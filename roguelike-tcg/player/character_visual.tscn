@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b3charvisual1"]
+
+[ext_resource type="Script" path="res://player/character_visual.gd" id="1_script"]
+
+[node name="CharacterVisual" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+
+[node name="BlastSprite" type="Sprite2D" parent="."]
+visible = false
+
+[node name="BlastParticles" type="GPUParticles2D" parent="."]
+emitting = false
+
+[node name="DeathParticles" type="GPUParticles2D" parent="."]
+emitting = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

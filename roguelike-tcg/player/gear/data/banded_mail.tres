@@ -1,0 +1,20 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" uid="uid://jcy4dqsdch66" path="res://player/gear/gear_data.gd" id="1_gd"]
+[ext_resource type="Script" uid="uid://do3rqpru07f4j" path="res://player/gear/gear_effect.gd" id="2_ge"]
+
+[sub_resource type="Resource" id="Effect_dexterity"]
+script = ExtResource("2_ge")
+trigger = 0
+effect_type = 0
+value = 2
+param = "dexterity"
+
+[resource]
+script = ExtResource("1_gd")
+gear_name = "Banded Mail"
+gear_slot = 3
+rarity = 0
+gear_description = "+{0} Dexterity."
+effects = Array[ExtResource("2_ge")]([SubResource("Effect_dexterity")])
+in_shop_pool = true

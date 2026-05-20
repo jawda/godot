@@ -1,0 +1,38 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://world/event_data.gd" id="1_ed"]
+[ext_resource type="Script" path="res://world/event_choice.gd" id="2_ec"]
+[ext_resource type="Script" path="res://world/event_outcome.gd" id="3_eo"]
+
+[sub_resource type="Resource" id="Outcome_lose_hp"]
+script = ExtResource("3_eo")
+outcome_type = 3
+value = 10
+
+[sub_resource type="Resource" id="Outcome_card_1"]
+script = ExtResource("3_eo")
+outcome_type = 5
+param = "random_class_card"
+
+[sub_resource type="Resource" id="Outcome_card_2"]
+script = ExtResource("3_eo")
+outcome_type = 5
+param = "random_class_card"
+
+[sub_resource type="Resource" id="Choice_perform"]
+script = ExtResource("2_ec")
+label = "Perform the rites"
+result_text = "You kneel beside him and speak the words. His body stills — and as it does, something passes from him to you. A warmth that should not exist this deep in the tomb."
+required_hp = 15
+outcomes = Array[ExtResource("3_eo")]([SubResource("Outcome_lose_hp"), SubResource("Outcome_card_1"), SubResource("Outcome_card_2")])
+
+[sub_resource type="Resource" id="Choice_refuse"]
+script = ExtResource("2_ec")
+label = "You cannot help him"
+result_text = "You turn away. He doesn't call after you. By the time you reach the door, he has gone quiet."
+
+[resource]
+script = ExtResource("1_ed")
+event_name = "The Dying Soldier"
+narrative = "A soldier lies slumped against the tomb wall, his armor pierced through. He reaches toward you with a trembling hand.\n\n'Please — the rites. I can't rest without them.'\n\nHis eyes are already going dark."
+choices = Array[ExtResource("2_ec")]([SubResource("Choice_perform"), SubResource("Choice_refuse")])

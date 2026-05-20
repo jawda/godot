@@ -1,0 +1,44 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://world/event_data.gd" id="1_ed"]
+[ext_resource type="Script" path="res://world/event_choice.gd" id="2_ec"]
+[ext_resource type="Script" path="res://world/event_outcome.gd" id="3_eo"]
+
+[sub_resource type="Resource" id="Outcome_lose_gold"]
+script = ExtResource("3_eo")
+outcome_type = 1
+value = 20
+
+[sub_resource type="Resource" id="Outcome_gain_hp"]
+script = ExtResource("3_eo")
+outcome_type = 2
+value = 20
+
+[sub_resource type="Resource" id="Outcome_take_coins"]
+script = ExtResource("3_eo")
+outcome_type = 0
+value = 5
+
+[sub_resource type="Resource" id="Choice_offer"]
+script = ExtResource("2_ec")
+label = "Leave an offering  [20 gold]"
+result_text = "You place the coins in the bowl. The idol's cracked eyes seem to catch the light differently. The ache in your wounds dulls."
+required_gold = 20
+outcomes = Array[ExtResource("3_eo")]([SubResource("Outcome_lose_gold"), SubResource("Outcome_gain_hp")])
+
+[sub_resource type="Resource" id="Choice_take"]
+script = ExtResource("2_ec")
+label = "Take the coins"
+result_text = "You pocket the coins. They're cold. Colder than they should be."
+outcomes = Array[ExtResource("3_eo")]([SubResource("Outcome_take_coins")])
+
+[sub_resource type="Resource" id="Choice_pass"]
+script = ExtResource("2_ec")
+label = "Walk past"
+result_text = "Some things are better left undisturbed."
+
+[resource]
+script = ExtResource("1_ed")
+event_name = "The Old Shrine"
+narrative = "A small shrine sits half-buried in an alcove, nearly swallowed by the stone. A crude bowl rests at the idol's feet, holding a handful of tarnished coins.\n\nThe idol's face is cracked but its posture is peaceful — a rare thing in this place."
+choices = Array[ExtResource("2_ec")]([SubResource("Choice_offer"), SubResource("Choice_take"), SubResource("Choice_pass")])

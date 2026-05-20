@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DeckData" format=3 uid="uid://b3yq6brqes3qy"]
+
+[ext_resource type="Script" uid="uid://c7ttgynpb7ql4" path="res://decks/deck_data.gd" id="1"]
+[ext_resource type="Resource" uid="uid://clericmacestrike1" path="res://cards/data/cleric/mace_strike.tres" id="2"]
+[ext_resource type="Resource" uid="uid://clericward000001" path="res://cards/data/cleric/ward.tres" id="3"]
+[ext_resource type="Resource" uid="uid://clericprayer001" path="res://cards/data/cleric/prayer.tres" id="4"]
+
+[resource]
+script = ExtResource("1")
+deck_name = "Cleric Starter Deck"
+description = "The Cleric's starting deck. Built around holy strikes, block, and a touch of healing."
+class_id = "cleric"
+starter_cards = [ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("3"), ExtResource("3"), ExtResource("3"), ExtResource("3"), ExtResource("4"), ExtResource("4")]

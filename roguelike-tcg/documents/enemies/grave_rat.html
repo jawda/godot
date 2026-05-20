@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Enemy Sheet — Grave Rat</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+:root {
+  --bg-deep:#0e0b1a; --bg-panel:#16112a; --bg-card:#1e1735; --bg-accent:#261e42;
+  --accent:#8a7a50; --accent-bright:#b0a070; --accent-dim:#4a3a20;
+  --text-primary:#e8dcc8; --text-secondary:#a8997e; --text-faint:#5a5040;
+  --border-gold:#3d3020; --divider:rgba(138,122,80,0.2);
+  --atk:#c87060; --blk:#6090c8; --sts:#c8a830; --buf:#80b060; --spc:#9860c0;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg-deep);color:var(--text-primary);font-family:'Crimson Text',Georgia,serif;font-size:17px;line-height:1.65;min-height:100vh;padding:48px 24px;}
+.sheet{max-width:860px;margin:0 auto;display:grid;gap:2px;border:1px solid var(--accent-dim);box-shadow:0 0 60px rgba(138,122,80,0.08),0 0 120px rgba(0,0,0,0.6);}
+.header{background:var(--bg-panel);border-bottom:1px solid var(--accent-dim);padding:36px 40px 28px;display:grid;grid-template-columns:160px 1fr;gap:32px;align-items:start;position:relative;}
+.header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);}
+.portrait-frame{width:160px;height:200px;border:1px solid var(--accent-dim);background:var(--bg-card);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;position:relative;flex-shrink:0;}
+.portrait-frame::before,.portrait-frame::after{content:'';position:absolute;width:12px;height:12px;border-color:var(--accent);border-style:solid;}
+.portrait-frame::before{top:-1px;left:-1px;border-width:2px 0 0 2px;}
+.portrait-frame::after{bottom:-1px;right:-1px;border-width:0 2px 2px 0;}
+.portrait-placeholder{font-size:42px;opacity:0.18;line-height:1;}
+.portrait-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.15em;color:var(--text-faint);text-transform:uppercase;}
+.eyebrow{font-family:'Cinzel',serif;font-size:10px;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:6px;}
+.name{font-family:'Cinzel',serif;font-size:36px;font-weight:700;color:var(--accent-bright);line-height:1.1;margin-bottom:14px;}
+.tagline{font-style:italic;font-size:17px;color:var(--text-secondary);border-left:2px solid var(--accent-dim);padding-left:14px;margin-bottom:16px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;}
+.tag{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--border-gold);color:var(--text-secondary);background:var(--bg-accent);}
+.body{display:grid;grid-template-columns:1fr 240px;background:var(--bg-panel);}
+.main{padding:32px 40px;border-right:1px solid var(--divider);display:flex;flex-direction:column;gap:28px;}
+.side{padding:32px 24px;display:flex;flex-direction:column;gap:24px;}
+.section-title{font-family:'Cinzel',serif;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.section-title::after{content:'';flex:1;height:1px;background:var(--divider);}
+.desc p{color:var(--text-primary);margin-bottom:10px;}
+.desc p:last-child{margin-bottom:0;}
+.action{background:var(--bg-card);border:1px solid var(--border-gold);padding:10px 14px;margin-bottom:8px;}
+.action:last-child{margin-bottom:0;}
+.action-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
+.action-name{font-family:'Cinzel',serif;font-size:12px;letter-spacing:0.08em;color:var(--text-primary);}
+.atype{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;padding:2px 8px;border:1px solid currentColor;}
+.atype.atk{color:var(--atk);}.atype.blk{color:var(--blk);}.atype.sts{color:var(--sts);}.atype.buf{color:var(--buf);}.atype.spc{color:var(--spc);}
+.action-val{font-size:13px;font-weight:600;color:var(--accent-bright);margin-bottom:3px;}
+.action-intent{font-size:13px;font-style:italic;color:var(--text-secondary);}
+.action-note{font-size:12px;color:var(--text-faint);margin-top:3px;}
+.hp-display{background:var(--bg-card);border:1px solid var(--border-gold);padding:14px 16px;text-align:center;}
+.hp-value{font-family:'Cinzel',serif;font-size:36px;font-weight:700;color:#c87070;line-height:1;}
+.hp-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-faint);margin-top:4px;}
+.stat-block{display:flex;flex-direction:column;gap:6px;}
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--bg-card);border-left:2px solid var(--accent-dim);}
+.stat-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-secondary);}
+.stat-val{font-family:'Cinzel',serif;font-size:13px;font-weight:600;color:var(--accent-bright);}
+.lore-placeholder{background:var(--bg-card);border:1px dashed var(--border-gold);padding:18px;text-align:center;color:var(--text-faint);font-style:italic;font-size:14px;}
+.footer{background:var(--bg-panel);border-top:1px solid var(--divider);padding:12px 40px;display:flex;justify-content:space-between;}
+.footer-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.15em;color:var(--text-faint);text-transform:uppercase;}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="header">
+    <div class="portrait-frame">
+      <div class="portrait-placeholder">🐀</div>
+      <div class="portrait-label">Portrait TBD</div>
+    </div>
+    <div class="identity">
+      <div class="eyebrow">Minion — Beast</div>
+      <h1 class="name">Grave Rat</h1>
+      <p class="tagline">A scavenger grown fat on buried things. It has learned that the living are easier to take from than the dead.</p>
+      <div class="tags">
+        <span class="tag">Beast</span>
+        <span class="tag">Minion</span>
+        <span class="tag">Weighted AI</span>
+        <span class="tag">Pack Animal</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="main">
+
+      <div class="desc">
+        <div class="section-title">Description</div>
+        <p>A scavenger grown fat on buried things. It has learned that the living are easier to take from than the dead. Alone, manageable. In a pack, genuinely dangerous.</p>
+        <p>Its attacks are minor individually, but the Fester bite leaves a lingering Weak debuff that compounds with everything else you're already dealing with. A rat that gets a Fester in early enough will define the shape of the fight.</p>
+      </div>
+
+      <div class="actions-section">
+        <div class="section-title">Actions — Weighted</div>
+
+        <div class="action" style="border-left:3px solid var(--atk);">
+          <div class="action-header">
+            <span class="action-name">Gnaw</span>
+            <span class="atype atk">Attack</span>
+          </div>
+          <div class="action-val">3 damage</div>
+          <div class="action-intent">"Gnaws at exposed flesh — preparing to deal 3 damage."</div>
+          <div class="action-note">Weight 2 — most common action</div>
+        </div>
+
+        <div class="action" style="border-left:3px solid var(--atk);">
+          <div class="action-header">
+            <span class="action-name">Scratch</span>
+            <span class="atype atk">Attack</span>
+          </div>
+          <div class="action-val">5 damage</div>
+          <div class="action-intent">"Rakes with filthy claws — preparing to deal 5 damage."</div>
+          <div class="action-note">Weight 2</div>
+        </div>
+
+        <div class="action" style="border-left:3px solid var(--sts);">
+          <div class="action-header">
+            <span class="action-name">Fester</span>
+            <span class="atype sts">Status</span>
+          </div>
+          <div class="action-val">2 Weak (2 turns)</div>
+          <div class="action-intent">"Bites deep into the joint — preparing to apply 2 Weak."</div>
+          <div class="action-note">Weight 1 — Weak reduces player damage dealt by 25%</div>
+        </div>
+
+      </div>
+
+      <div class="lore">
+        <div class="section-title">Compendium Lore</div>
+        <div class="lore-placeholder">Unlocks after first kill. Lore to be written.</div>
+      </div>
+
+    </div>
+
+    <div class="side">
+      <div>
+        <div class="section-title">Health</div>
+        <div class="hp-display">
+          <div class="hp-value">12</div>
+          <div class="hp-label">Max HP</div>
+        </div>
+      </div>
+      <div>
+        <div class="section-title">Combat Stats</div>
+        <div class="stat-block">
+          <div class="stat-row"><span class="stat-label">Base Attack</span><span class="stat-val">3</span></div>
+          <div class="stat-row"><span class="stat-label">Base Block</span><span class="stat-val">0</span></div>
+          <div class="stat-row"><span class="stat-label">AI Pattern</span><span class="stat-val" style="font-size:10px;">Weighted</span></div>
+          <div class="stat-row"><span class="stat-label">Tier</span><span class="stat-val" style="font-size:10px;">Minion</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-title">Design Notes</div>
+        <div class="lore-placeholder" style="text-align:left;padding:12px;">Swarm enemy — low HP, low damage, but Fester introduces status pressure early. Teaches players to prioritise debuff sources before raw damage.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-label">Roguelike TCG — Enemy Reference</span>
+    <span class="footer-label">Grave Rat — v0.1</span>
+  </div>
+
+</div>
+</body>
+</html>

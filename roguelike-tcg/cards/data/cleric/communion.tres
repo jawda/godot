@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://rklrevbrwdaf"]
+
+[ext_resource type="Script" uid="uid://di60eb7g2a5us" path="res://cards/card_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://cs5vvdsqlp4gn" path="res://cards/card_effect.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_heal"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+effect_type = 3
+target = 0
+value_source = 2
+
+[sub_resource type="Resource" id="Resource_clear"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://cs5vvdsqlp4gn"
+effect_type = 7
+target = 0
+
+[resource]
+script = ExtResource("1")
+card_name = "Communion"
+card_cost = 2
+card_type = 1
+base_rarity = 2
+card_description = "Heal HP equal to your current Block.
+Lose all Block."
+effects = Array[ExtResource("2")]([SubResource("Resource_heal"), SubResource("Resource_clear")])
+card_class = 1

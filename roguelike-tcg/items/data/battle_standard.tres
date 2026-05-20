@@ -1,0 +1,16 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://items/consumable_data.gd" id="1_cd"]
+[ext_resource type="Script" path="res://items/consumable_effect.gd" id="2_ce"]
+
+[sub_resource type="Resource" id="Effect_bonus_damage"]
+script = ExtResource("2_ce")
+effect_type = 5
+value = 2
+
+[resource]
+script = ExtResource("1_cd")
+item_name = "Battle Standard"
+description = "All attacks deal +2 damage for the rest of this combat."
+use_timing = 1
+effects = Array[ExtResource("2_ce")]([SubResource("Effect_bonus_damage")])

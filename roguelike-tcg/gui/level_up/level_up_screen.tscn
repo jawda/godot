@@ -1,0 +1,102 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://gui/level_up/level_up_screen.gd" id="1_lvl"]
+
+[sub_resource type="StyleBoxFlat" id="PanelStyle"]
+bg_color = Color(0.07, 0.04, 0.12, 0.97)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.78, 0.65, 0.12, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxLine" id="DividerStyle"]
+color = Color(0.78, 0.65, 0.12, 0.5)
+thickness = 1
+
+[sub_resource type="SystemFont" id="TitleFont"]
+font_weight = 700
+
+[node name="LevelUpScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+visible = false
+script = ExtResource("1_lvl")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0, 0.0, 0.0, 0.75)
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -260.0
+offset_right = 270.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("PanelStyle")
+
+[node name="Contents" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Header" type="MarginContainer" parent="Panel/Contents"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_bottom = 14
+
+[node name="Info" type="VBoxContainer" parent="Panel/Contents/Header"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Title" type="Label" parent="Panel/Contents/Header/Info"]
+layout_mode = 2
+text = "LEVEL UP!"
+horizontal_alignment = 1
+label_settings = null
+theme_override_fonts/font = SubResource("TitleFont")
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.90, 0.78, 0.18, 1.0)
+
+[node name="Subtitle" type="Label" parent="Panel/Contents/Header/Info"]
+layout_mode = 2
+text = "Choose a stat to improve"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.60, 0.55, 0.72, 1.0)
+
+[node name="Divider" type="HSeparator" parent="Panel/Contents"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("DividerStyle")
+
+[node name="StatArea" type="MarginContainer" parent="Panel/Contents"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_bottom = 16
+
+[node name="StatList" type="VBoxContainer" parent="Panel/Contents/StatArea"]
+layout_mode = 2
+theme_override_constants/separation = 8
