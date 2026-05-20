@@ -38,6 +38,7 @@ const CARD_SCENE: PackedScene = preload("res://cards/card.tscn")
 
 @onready var _title_label: Label           = $Panel/Contents/Header/Info/Title
 @onready var _gold_label: Label            = $Panel/Contents/Header/Info/Gold
+@onready var _xp_label: Label              = $Panel/Contents/Header/Info/XP
 @onready var _card_list: VBoxContainer     = $Panel/Contents/Scroll/CardPadding/CardList
 @onready var _skip_button: Button          = $Panel/Contents/Footer/Skip
 
@@ -61,7 +62,7 @@ func _ready() -> void:
 
 # ── Public API ─────────────────────────────────────────────────────────────────
 
-func open(combat_type: CombatType, gold_amount: int = 0) -> void:
+func open(combat_type: CombatType, gold_amount: int = 0, xp_amount: int = 0) -> void:
 	var run: RunSaveData = RunState.active_run
 	if run == null:
 		reward_completed.emit()
@@ -69,10 +70,20 @@ func open(combat_type: CombatType, gold_amount: int = 0) -> void:
 
 	if gold_amount > 0:
 		run.gold += gold_amount
-		SaveManager.save()
 
 	_gold_label.text = "+%d Gold" % gold_amount
 	_gold_label.visible = gold_amount > 0
+
+	var levels_gained: int = 0
+	if xp_amount > 0:
+		levels_gained = _grant_xp(run, xp_amount)
+	if xp_amount > 0 and levels_gained > 0:
+		_xp_label.text = "+%d XP  —  Level %d!" % [xp_amount, run.level]
+	elif xp_amount > 0:
+		_xp_label.text = "+%d XP" % xp_amount
+	_xp_label.visible = xp_amount > 0
+
+	SaveManager.save()
 
 	var player_class_string: String = ""
 	if RunState.active_player != null:
@@ -142,6 +153,24 @@ func _cards_of_rarity(pool: Array[CardData], rarity: CardData.Rarity, exclude: A
 		if card.base_rarity == rarity and not exclude.has(card):
 			result.append(card)
 	return result
+
+## Adds xp_amount to the run, levels up as many times as needed, and returns
+## the number of levels gained. Each level up grants +8 max HP (and current HP
+## is increased by the same amount to avoid a sudden health drop). Every 5th
+## level sets pending_mastery so the player can claim it at a rest site.
+func _grant_xp(run: RunSaveData, xp_amount: int) -> int:
+	run.xp += xp_amount
+	var levels_gained: int = 0
+	while run.xp >= 100 * run.level:
+		run.xp -= 100 * run.level
+		run.level += 1
+		run.current_max_health += 8
+		run.current_health += 8
+		run.pending_stat_choices += 1
+		levels_gained += 1
+		if run.level % 5 == 0:
+			run.pending_mastery = true
+	return levels_gained
 
 func _apply_offset_update(offered: Array[CardData], run: RunSaveData) -> void:
 	var commons_rolled: int = 0

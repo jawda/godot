@@ -1,6 +1,9 @@
 class_name SaveData
 extends Resource
 
+## Player-entered name for this save slot.
+@export var slot_name: String = ""
+
 ## One entry per character the player has started a run with.
 @export var character_saves: Array[CharacterSaveData] = []
 

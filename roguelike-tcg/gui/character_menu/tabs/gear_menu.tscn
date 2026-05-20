@@ -86,7 +86,8 @@ theme_override_constants/v_separation = 8
 columns = 2
 
 [node name="HelmetSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
-custom_minimum_size = Vector2(110, 140)
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
 theme_override_styles/normal = SubResource("SlotNormal")
 theme_override_styles/hover = SubResource("SlotHover")
@@ -121,7 +122,8 @@ horizontal_alignment = 1
 text = "Empty"
 
 [node name="NecklaceSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
-custom_minimum_size = Vector2(110, 140)
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
 theme_override_styles/normal = SubResource("SlotNormal")
 theme_override_styles/hover = SubResource("SlotHover")
@@ -156,7 +158,8 @@ horizontal_alignment = 1
 text = "Empty"
 
 [node name="RingLeftSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
-custom_minimum_size = Vector2(110, 140)
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
 theme_override_styles/normal = SubResource("SlotNormal")
 theme_override_styles/hover = SubResource("SlotHover")
@@ -191,7 +194,8 @@ horizontal_alignment = 1
 text = "Empty"
 
 [node name="RingRightSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
-custom_minimum_size = Vector2(110, 140)
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
 theme_override_styles/normal = SubResource("SlotNormal")
 theme_override_styles/hover = SubResource("SlotHover")
@@ -226,7 +230,8 @@ horizontal_alignment = 1
 text = "Empty"
 
 [node name="ArmorSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
-custom_minimum_size = Vector2(110, 140)
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
 theme_override_styles/normal = SubResource("SlotNormal")
 theme_override_styles/hover = SubResource("SlotHover")
@@ -261,7 +266,8 @@ horizontal_alignment = 1
 text = "Empty"
 
 [node name="BootsSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
-custom_minimum_size = Vector2(110, 140)
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
 theme_override_styles/normal = SubResource("SlotNormal")
 theme_override_styles/hover = SubResource("SlotHover")
@@ -296,7 +302,8 @@ horizontal_alignment = 1
 text = "Empty"
 
 [node name="WeaponRightSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
-custom_minimum_size = Vector2(110, 140)
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
 theme_override_styles/normal = SubResource("SlotNormal")
 theme_override_styles/hover = SubResource("SlotHover")
@@ -331,7 +338,8 @@ horizontal_alignment = 1
 text = "Empty"
 
 [node name="WeaponLeftSlot" type="Button" parent="ContentMargin/ContentLayout/SlotGrid"]
-custom_minimum_size = Vector2(110, 140)
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
 theme_override_styles/normal = SubResource("SlotNormal")
 theme_override_styles/hover = SubResource("SlotHover")

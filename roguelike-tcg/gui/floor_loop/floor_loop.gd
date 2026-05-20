@@ -20,15 +20,36 @@ const ROOM_PLACEHOLDER_SCENE: PackedScene = preload("res://gui/floor_loop/room_p
 
 # ── Node references ─────────────────────────────────────────────────────────────
 
-@onready var _map_view: Control = $MapView
-@onready var _floor_map: FloorMap = $MapView/FloorMap
-@onready var _room_view: Control = $RoomView
+@onready var _map_view: Control             = $MapView
+@onready var _floor_map: FloorMap           = $MapView/FloorMap
+@onready var _level_up_indicator: Button    = $MapView/LevelUpIndicator
+@onready var _room_view: Control            = $RoomView
+@onready var _character_menu: CharacterMenu = $CharacterMenu
+@onready var _level_up_screen: LevelUpScreen = $LevelUpScreen
 
 # ── Lifecycle ──────────────────────────────────────────────────────────────────
 
 func _ready() -> void:
 	_floor_map.room_selected.connect(_on_room_selected)
+	_character_menu.closed.connect(func() -> void: pass)
+	_character_menu.exit_to_main_menu_requested.connect(_on_exit_to_main_menu_requested)
+	_character_menu.level_up_requested.connect(_on_level_up_requested)
+	_level_up_indicator.pressed.connect(_on_level_up_requested)
+	_level_up_screen.closed.connect(_on_level_up_screen_closed)
 	_enter_map()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("Pause"):
+		if _character_menu.visible:
+			_character_menu.close()
+		else:
+			_open_character_menu()
+		get_viewport().set_input_as_handled()
+
+func _open_character_menu() -> void:
+	if RunState.active_player == null or RunState.active_run == null:
+		return
+	_character_menu.open_for_run(RunState.active_player, RunState.active_run)
 
 # ── Map mode ───────────────────────────────────────────────────────────────────
 
@@ -37,6 +58,7 @@ func _enter_map() -> void:
 		child.queue_free()
 	_room_view.hide()
 	_map_view.show()
+	_refresh_level_up_indicator()
 
 	var floor_map_data: FloorMapData = RunState.active_run.floor_map
 
@@ -152,6 +174,22 @@ func _on_floor_cleared() -> void:
 	# For now, fall back to the map so navigation can be tested end-to-end.
 	_enter_map()
 
+func _on_exit_to_main_menu_requested() -> void:
+	SceneTransition.transition_to("res://gui/start_screen/start_screen.tscn")
+
 func _on_player_defeated() -> void:
 	# TODO: dedicated game over scene with run summary.
 	SceneTransition.transition_to("res://gui/start_screen/start_screen.tscn")
+
+# ── Level up ───────────────────────────────────────────────────────────────────
+
+func _refresh_level_up_indicator() -> void:
+	var run: RunSaveData = RunState.active_run
+	_level_up_indicator.visible = run != null and run.pending_stat_choices > 0
+
+func _on_level_up_requested() -> void:
+	_character_menu.close()
+	_level_up_screen.open()
+
+func _on_level_up_screen_closed() -> void:
+	_refresh_level_up_indicator()

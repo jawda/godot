@@ -10,6 +10,7 @@ const CARD_SCENE: PackedScene = preload("res://cards/card.tscn")
 
 const CARDS_DATA_PATH: String       = "res://cards/data"
 const CONSUMABLES_DATA_PATH: String = "res://items/data"
+const GEAR_DATA_PATH: String        = "res://player/gear/data"
 
 const CARDS_TOTAL_COUNT: int   = 8
 const CARDS_NEUTRAL_MAX: int   = 2
@@ -24,6 +25,14 @@ const CONSUMABLE_PRICE: int      = 40
 const SERVICE_REMOVE_PRICE: int  = 75
 const SERVICE_UPGRADE_PRICE: int = 100
 
+const GEAR_PRICES: Dictionary = {
+	GearData.Rarity.COMMON:   80,
+	GearData.Rarity.UNCOMMON: 130,
+	GearData.Rarity.RARE:     200,
+	GearData.Rarity.MYTHIC:   300,
+}
+const GEAR_SHOP_COUNT: int = 2
+
 const COLOR_SECTION: Color = Color(0.75, 0.60, 0.25, 0.65)
 const COLOR_PRICE: Color   = Color(0.90, 0.78, 0.18, 1.0)
 const COLOR_SOLD: Color    = Color(0.40, 0.36, 0.30, 0.55)
@@ -34,11 +43,12 @@ const CARD_HOVER_SCALE: Vector2 = Vector2(1.06, 1.06)
 
 # ── Node references ────────────────────────────────────────────────────────────
 
-@onready var _gold_display: Label           = $Panel/Contents/Header/Info/GoldDisplay
-@onready var _card_row: GridContainer       = $Panel/Contents/Scroll/ShopPadding/ShopList/CardRow
-@onready var _shop_list: VBoxContainer      = $Panel/Contents/Scroll/ShopPadding/ShopList
-@onready var _leave_button: Button          = $Panel/Contents/Footer/Leave
-@onready var _card_picker: CardPickerScript = $CardPicker
+@onready var _gold_display: Label              = $Panel/Contents/Header/Info/GoldDisplay
+@onready var _card_row: GridContainer          = $Panel/Contents/Scroll/ShopPadding/ShopList/CardRow
+@onready var _shop_list: VBoxContainer         = $Panel/Contents/Scroll/ShopPadding/ShopList
+@onready var _leave_button: Button             = $Panel/Contents/Footer/Leave
+@onready var _card_picker: CardPickerScript    = $CardPicker
+@onready var _gear_confirm_dialog: GearConfirmDialog = $GearConfirmDialog
 
 # ── State ──────────────────────────────────────────────────────────────────────
 
@@ -51,6 +61,9 @@ var _service_upgrade_button: Button = null
 ## Tracks unsold card slots so gold refreshes can update their buy button state.
 ## Each entry: { button: Button, price: int, sold: bool }
 var _card_slot_data: Array[Dictionary] = []
+
+## Tracks unsold gear rows for gold refresh. Same structure as _card_slot_data.
+var _gear_slot_data: Array[Dictionary] = []
 
 # ── Lifecycle ──────────────────────────────────────────────────────────────────
 
@@ -77,6 +90,10 @@ func _refresh_gold() -> void:
 		return
 	_gold_display.text = "Gold: %d" % run.gold
 	for slot_info: Dictionary in _card_slot_data:
+		if not slot_info["sold"]:
+			var button: Button = slot_info["button"] as Button
+			button.disabled = run.gold < slot_info["price"]
+	for slot_info: Dictionary in _gear_slot_data:
 		if not slot_info["sold"]:
 			var button: Button = slot_info["button"] as Button
 			button.disabled = run.gold < slot_info["price"]
@@ -191,6 +208,7 @@ func _build_card_slot(card: CardData) -> Control:
 	buy_button.text = "Buy"
 	buy_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	buy_button.disabled = not can_afford
+	buy_button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	slot.add_child(buy_button)
 
 	var slot_info: Dictionary = {"button": buy_button, "price": price, "sold": false}
@@ -297,6 +315,7 @@ func _build_consumable_row(consumable: ConsumableData) -> Control:
 	var buy_button: Button = Button.new()
 	buy_button.custom_minimum_size = Vector2(64, 0)
 	buy_button.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	buy_button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	if belt_full:
 		buy_button.text = "Full"
 		buy_button.disabled = true
@@ -331,7 +350,207 @@ func _buy_consumable(
 
 func _build_gear_section() -> void:
 	_add_section_header("— EQUIPMENT —")
-	_shop_list.add_child(_make_empty_label("No equipment available."))
+	var gear_pool: Array[GearData] = _scan_gear_pool()
+	gear_pool.shuffle()
+	var offered_count: int = mini(GEAR_SHOP_COUNT, gear_pool.size())
+	if offered_count == 0:
+		_shop_list.add_child(_make_empty_label("No equipment available."))
+		return
+	for gear_index: int in offered_count:
+		_shop_list.add_child(_build_gear_row(gear_pool[gear_index]))
+
+func _scan_gear_pool() -> Array[GearData]:
+	var pool: Array[GearData] = []
+	var dir: DirAccess = DirAccess.open(GEAR_DATA_PATH)
+	if dir == null:
+		return pool
+	dir.list_dir_begin()
+	var entry: String = dir.get_next()
+	while entry != "":
+		if entry.ends_with(".tres"):
+			var resource: Resource = load(GEAR_DATA_PATH + "/" + entry)
+			if resource is GearData:
+				var gear: GearData = resource as GearData
+				if gear.in_shop_pool:
+					pool.append(gear)
+		entry = dir.get_next()
+	dir.list_dir_end()
+	return pool
+
+func _build_gear_row(gear: GearData) -> Control:
+	var run: RunSaveData = RunState.active_run
+	var price: int = GEAR_PRICES.get(gear.rarity, 80)
+	var can_afford: bool = run != null and run.gold >= price
+
+	var row: PanelContainer = PanelContainer.new()
+	var row_normal_style: StyleBoxFlat = StyleBoxFlat.new()
+	row_normal_style.bg_color = Color(0.11, 0.07, 0.18, 1.0)
+	row_normal_style.set_border_width_all(1)
+	row_normal_style.border_color = Color(0.28, 0.16, 0.42, 1.0)
+	row_normal_style.set_corner_radius_all(4)
+	row_normal_style.content_margin_left   = 10.0
+	row_normal_style.content_margin_right  = 14.0
+	row_normal_style.content_margin_top    = 8.0
+	row_normal_style.content_margin_bottom = 8.0
+	row.add_theme_stylebox_override("panel", row_normal_style)
+
+	var row_content: HBoxContainer = HBoxContainer.new()
+	row_content.add_theme_constant_override("separation", 10)
+	row.add_child(row_content)
+
+	var text_column: VBoxContainer = VBoxContainer.new()
+	text_column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	text_column.add_theme_constant_override("separation", 2)
+	row_content.add_child(text_column)
+
+	var name_label: Label = Label.new()
+	name_label.text = gear.gear_name
+	name_label.add_theme_font_size_override("font_size", 14)
+	name_label.add_theme_color_override("font_color", COLOR_NAME)
+	text_column.add_child(name_label)
+
+	var slot_label: Label = Label.new()
+	slot_label.text = "— %s" % _slot_name(gear.gear_slot)
+	slot_label.add_theme_font_size_override("font_size", 11)
+	slot_label.add_theme_color_override("font_color", COLOR_SUB)
+	text_column.add_child(slot_label)
+
+	var desc_label: Label = Label.new()
+	desc_label.text = gear.get_description()
+	desc_label.add_theme_font_size_override("font_size", 11)
+	desc_label.add_theme_color_override("font_color", COLOR_SUB)
+	desc_label.autowrap_mode = TextServer.AUTOWRAP_WORD
+	text_column.add_child(desc_label)
+
+	var right_column: VBoxContainer = VBoxContainer.new()
+	right_column.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	right_column.add_theme_constant_override("separation", 4)
+	row_content.add_child(right_column)
+
+	var price_label: Label = Label.new()
+	price_label.text = "%dg" % price
+	price_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	price_label.add_theme_font_size_override("font_size", 13)
+	price_label.add_theme_color_override("font_color", COLOR_PRICE)
+	right_column.add_child(price_label)
+
+	var buy_button: Button = Button.new()
+	buy_button.text = "Buy"
+	buy_button.disabled = not can_afford
+	buy_button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	right_column.add_child(buy_button)
+
+	var slot_info: Dictionary = {"button": buy_button, "price": price, "sold": false}
+	_gear_slot_data.append(slot_info)
+
+	buy_button.pressed.connect(func() -> void:
+		_buy_gear(gear, price, buy_button, price_label, row, slot_info))
+
+	return row
+
+func _buy_gear(
+		gear: GearData,
+		price: int,
+		buy_button: Button,
+		price_label: Label,
+		row: PanelContainer,
+		slot_info: Dictionary) -> void:
+	var run: RunSaveData = RunState.active_run
+	if run == null or run.gold < price:
+		return
+	var displaced: OwnedGear = _get_displaced_gear(gear.gear_slot, run)
+	_gear_confirm_dialog.show_for_equip(gear, _slot_name(gear.gear_slot), displaced)
+	_gear_confirm_dialog.confirmed.connect(
+		func() -> void:
+			_complete_gear_purchase(gear, price, buy_button, price_label, row, slot_info),
+		CONNECT_ONE_SHOT)
+
+func _complete_gear_purchase(
+		gear: GearData,
+		price: int,
+		buy_button: Button,
+		price_label: Label,
+		row: PanelContainer,
+		slot_info: Dictionary) -> void:
+	var run: RunSaveData = RunState.active_run
+	if run == null or run.gold < price:
+		return
+	run.gold -= price
+	var owned: OwnedGear = OwnedGear.new()
+	owned.base_gear = gear
+	_equip_gear_to_run(owned, run)
+	SaveManager.save()
+
+	slot_info["sold"] = true
+	buy_button.text = "Sold"
+	buy_button.disabled = true
+	price_label.add_theme_color_override("font_color", COLOR_SOLD)
+	var sold_style: StyleBoxFlat = StyleBoxFlat.new()
+	sold_style.bg_color = Color(0.08, 0.05, 0.12, 0.65)
+	sold_style.set_border_width_all(1)
+	sold_style.border_color = Color(0.22, 0.16, 0.28, 0.5)
+	sold_style.set_corner_radius_all(4)
+	sold_style.content_margin_left   = 10.0
+	sold_style.content_margin_right  = 14.0
+	sold_style.content_margin_top    = 8.0
+	sold_style.content_margin_bottom = 8.0
+	row.add_theme_stylebox_override("panel", sold_style)
+	_refresh_gold()
+
+func _get_displaced_gear(gear_slot: GearData.GearSlot, run: RunSaveData) -> OwnedGear:
+	match gear_slot:
+		GearData.GearSlot.HELMET:       return run.helmet
+		GearData.GearSlot.NECKLACE:     return run.necklace
+		GearData.GearSlot.RING:
+			if run.ring_left == null:   return null
+			if run.ring_right == null:  return null
+			return run.ring_right
+		GearData.GearSlot.ARMOR:        return run.armor
+		GearData.GearSlot.BOOTS:        return run.boots
+		GearData.GearSlot.WEAPON_RIGHT: return run.weapon_right
+		GearData.GearSlot.WEAPON_LEFT:  return run.weapon_left
+	return null
+
+func _equip_gear_to_run(owned: OwnedGear, run: RunSaveData) -> void:
+	var displaced: OwnedGear = null
+	match owned.base_gear.gear_slot:
+		GearData.GearSlot.HELMET:
+			displaced = run.helmet
+			run.helmet = owned
+		GearData.GearSlot.NECKLACE:
+			displaced = run.necklace
+			run.necklace = owned
+		GearData.GearSlot.RING:
+			if run.ring_left == null:
+				run.ring_left = owned
+			else:
+				displaced = run.ring_right
+				run.ring_right = owned
+		GearData.GearSlot.ARMOR:
+			displaced = run.armor
+			run.armor = owned
+		GearData.GearSlot.BOOTS:
+			displaced = run.boots
+			run.boots = owned
+		GearData.GearSlot.WEAPON_RIGHT:
+			displaced = run.weapon_right
+			run.weapon_right = owned
+		GearData.GearSlot.WEAPON_LEFT:
+			displaced = run.weapon_left
+			run.weapon_left = owned
+	if displaced != null:
+		run.pending_stash.append(displaced)
+
+func _slot_name(gear_slot: GearData.GearSlot) -> String:
+	match gear_slot:
+		GearData.GearSlot.HELMET:      return "Helmet"
+		GearData.GearSlot.NECKLACE:    return "Necklace"
+		GearData.GearSlot.RING:        return "Ring"
+		GearData.GearSlot.ARMOR:       return "Armor"
+		GearData.GearSlot.BOOTS:       return "Boots"
+		GearData.GearSlot.WEAPON_RIGHT: return "Weapon"
+		GearData.GearSlot.WEAPON_LEFT:  return "Off-hand"
+	return "Unknown"
 
 # ── Services ───────────────────────────────────────────────────────────────────
 
@@ -340,11 +559,13 @@ func _build_services_section() -> void:
 
 	_service_remove_button = Button.new()
 	_service_remove_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_service_remove_button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	_service_remove_button.pressed.connect(_on_remove_service_pressed)
 	_shop_list.add_child(_service_remove_button)
 
 	_service_upgrade_button = Button.new()
 	_service_upgrade_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_service_upgrade_button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	_service_upgrade_button.pressed.connect(_on_upgrade_service_pressed)
 	_shop_list.add_child(_service_upgrade_button)
 

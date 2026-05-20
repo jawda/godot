@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://gui/shop/shop.gd" id="1_shop"]
 [ext_resource type="PackedScene" path="res://gui/rest_site/card_picker.tscn" id="2_cp"]
+[ext_resource type="PackedScene" path="res://gui/shop/gear_confirm_dialog.tscn" id="3_gcd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 bg_color = Color(0.06, 0.04, 0.10, 0.97)
@@ -125,6 +126,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 12
 
 [node name="Leave" type="Button" parent="Panel/Contents/Footer"]
+mouse_default_cursor_shape = 2
 layout_mode = 2
 size_flags_horizontal = 3
 flat = true
@@ -133,4 +135,7 @@ theme_override_font_sizes/font_size = 13
 theme_override_colors/font_color = Color(0.55, 0.48, 0.68, 1.0)
 
 [node name="CardPicker" parent="." instance=ExtResource("2_cp")]
+layout_mode = 1
+
+[node name="GearConfirmDialog" parent="." instance=ExtResource("3_gcd")]
 layout_mode = 1

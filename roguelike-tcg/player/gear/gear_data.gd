@@ -40,6 +40,13 @@ enum Rarity    { COMMON, UNCOMMON, RARE, MYTHIC, SPECIAL }
 				new_effect.changed.connect(_on_effect_changed)
 		emit_changed()
 
+@export_group("Shop")
+## Whether this item can appear in shop loot pools.
+@export var in_shop_pool: bool = true:
+	set(new_in_shop_pool):
+		in_shop_pool = new_in_shop_pool
+		emit_changed()
+
 @export_group("Upgrade")
 ## First-level upgrade choices available at a blacksmith. Empty = this item cannot be upgraded.
 @export var upgrade_options: Array[GearUpgradeNode] = []:

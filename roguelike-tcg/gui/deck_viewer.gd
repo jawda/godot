@@ -173,6 +173,7 @@ func _build_header(title: String, count: int) -> Control:
 	var close_btn: Button = Button.new()
 	close_btn.text = "✕"
 	close_btn.flat = true
+	close_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	close_btn.custom_minimum_size = Vector2(44, 0)
 	close_btn.add_theme_font_size_override("font_size", 16)
 	close_btn.add_theme_color_override("font_color", Color(0.80, 0.40, 0.40))

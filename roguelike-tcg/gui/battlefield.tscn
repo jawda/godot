@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" path="res://gui/combat_result.tscn" id="11_cr"]
 [ext_resource type="PackedScene" path="res://gui/toast.tscn" id="12_toast"]
 [ext_resource type="PackedScene" path="res://gui/combat_reward/combat_reward.tscn" id="13_creward"]
+[ext_resource type="PackedScene" path="res://gui/potion_belt.tscn" id="14_pb"]
 
 [sub_resource type="StyleBoxFlat" id="HPBarBg"]
 bg_color = Color(0.08, 0.04, 0.12, 1)
@@ -209,6 +210,9 @@ text = "Block: 0"
 layout_mode = 2
 theme_override_constants/separation = 5
 
+[node name="PotionBelt" parent="MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox" instance=ExtResource("14_pb")]
+layout_mode = 2
+
 [node name="Spacer" type="Control" parent="MainLayout/BattleArea/PlayerSection" unique_id=156864252]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -236,6 +240,7 @@ layout_mode = 2
 text = "Discard: 0"
 
 [node name="EndTurnButton" type="Button" parent="MainLayout/BattleArea/PlayerSection/HUD" unique_id=731399791]
+mouse_default_cursor_shape = 2
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 theme_override_styles/normal = SubResource("EndTurnNormal")
@@ -266,6 +271,7 @@ script = ExtResource("10_dv")
 layout_mode = 1
 
 [node name="DrawPileButton" type="Button" parent="." unique_id=985206701]
+mouse_default_cursor_shape = 2
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -282,6 +288,7 @@ theme_override_styles/hover = SubResource("PileBtnHover")
 text = "Draw  5"
 
 [node name="DeckButton" type="Button" parent="." unique_id=828981976]
+mouse_default_cursor_shape = 2
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -298,6 +305,7 @@ theme_override_styles/hover = SubResource("PileBtnHover")
 text = "Deck  10"
 
 [node name="ExileButton" type="Button" parent="." unique_id=553732969]
+mouse_default_cursor_shape = 2
 layout_mode = 1
 offset_left = 12.0
 offset_top = 12.0
@@ -308,6 +316,17 @@ theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("PileBtnNormal")
 theme_override_styles/hover = SubResource("PileBtnHover")
 text = "Exile  0"
+
+[node name="LevelUpBadge" type="Label" parent="."]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 190.0
+offset_bottom = 32.0
+visible = false
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.90, 0.78, 0.18, 1.0)
+text = "⬆ Level Up Pending"
 
 [node name="GoldLabel" type="Label" parent="."]
 layout_mode = 1
@@ -320,6 +339,7 @@ theme_override_colors/font_color = Color(0.90, 0.78, 0.18, 1.0)
 text = "Gold: 0"
 
 [node name="DiscardButton" type="Button" parent="." unique_id=1934052967]
+mouse_default_cursor_shape = 2
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0

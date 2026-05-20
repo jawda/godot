@@ -66,19 +66,41 @@ var _cards_played_this_turn: int = 0
 ## Power/Blessing effects installed this combat (Array[Dictionary] with "effect" and "card" keys).
 var _active_powers: Array[Dictionary] = []
 
+## Equipped gear for this combat, used to fire trigger-based effects.
+var _active_gear: Array[OwnedGear] = []
+
+var _first_turn: bool = true
+
+## Consumable-sourced persistent modifiers that last for the rest of this combat.
+var _consumable_bonus_damage: int        = 0
+var _consumable_extra_draw: int          = 0
+var _consumable_damage_per_turn: int     = 0
+var _consumable_heal_scale: int          = 0
+var _consumable_heal_scale_remaining: int = 0
+
 # ── Setup ───────────────────────────────────────────────────────────────────────
 
 ## Call before start_combat(). Provide the same Deck instance set on the Hand.
+## gear is the list of OwnedGear items currently equipped — passive bonuses are
+## applied immediately and triggered effects fire during the appropriate combat phases.
 func setup(player_data: PlayerData, hand: Hand, deck: Deck, enemies: Array[Enemy],
-		run_health: int = -1) -> void:
+		run_health: int = -1, gear: Array[OwnedGear] = [], run_data: RunSaveData = null) -> void:
 	_player = CombatPlayer.new()
-	_player.setup(player_data, run_health)
+	_player.setup(player_data, run_health, run_data)
 	_hand = hand
 	_deck = deck
 	_enemies = enemies
 	_active_powers.clear()
+	_active_gear = gear
 	_cards_played_this_turn = 0
+	_first_turn = true
 	turn_state = TurnState.IDLE
+	_apply_gear_passives()
+	_consumable_bonus_damage        = 0
+	_consumable_extra_draw          = 0
+	_consumable_damage_per_turn     = 0
+	_consumable_heal_scale          = 0
+	_consumable_heal_scale_remaining = 0
 	_hand.card_drawn.connect(_emit_deck_ui)
 
 ## Starts the combat: emits combat_started and begins the first player turn.
@@ -98,6 +120,10 @@ func _begin_player_turn() -> void:
 	_player.clear_block()
 	_player.refill_energy()
 
+	if _first_turn:
+		_first_turn = false
+		_fire_gear_triggers(GearEffect.Trigger.COMBAT_START)
+
 	# Clear one-turn status flags before ticking DoTs
 	_player.statuses.erase("double_heal")
 
@@ -107,8 +133,9 @@ func _begin_player_turn() -> void:
 
 	_emit_player_ui()
 
-	_hand.draw_multiple(INITIAL_HAND_SIZE)
+	_hand.draw_multiple(INITIAL_HAND_SIZE + _consumable_extra_draw)
 
+	_fire_gear_triggers(GearEffect.Trigger.TURN_START)
 	# Fire TURN_START power triggers
 	_fire_power_triggers(CardEffect.PowerTrigger.TURN_START, 0)
 
@@ -167,6 +194,94 @@ func play_card(card_data: CardData, target_enemy: Enemy) -> bool:
 	_emit_deck_ui()
 	return true
 
+## Applies all PASSIVE gear effects at setup time.
+func _apply_gear_passives() -> void:
+	_fire_gear_triggers(GearEffect.Trigger.PASSIVE)
+
+## Resolves all gear effects for a given trigger across every equipped item.
+func _fire_gear_triggers(trigger: GearEffect.Trigger) -> void:
+	for owned_gear: OwnedGear in _active_gear:
+		if owned_gear == null:
+			continue
+		for effect: GearEffect in owned_gear.get_active_effects():
+			if effect.trigger == trigger:
+				_resolve_gear_effect(effect)
+
+func _resolve_gear_effect(gear_effect: GearEffect) -> void:
+	match gear_effect.effect_type:
+		GearEffect.EffectType.STAT_BONUS:
+			match gear_effect.param:
+				"strength":  _player.strength  += gear_effect.value
+				"dexterity": _player.dexterity += gear_effect.value
+				"faith":     _player.faith     += gear_effect.value
+		GearEffect.EffectType.EXTRA_DRAW:
+			_hand.draw_multiple(gear_effect.value, 0.1)
+		GearEffect.EffectType.GAIN_BLOCK:
+			_player.gain_block(gear_effect.value)
+			player_block_changed.emit(_player.current_block)
+		GearEffect.EffectType.DEAL_DAMAGE:
+			var gear_target: Enemy = _first_living_enemy()
+			if gear_target != null:
+				gear_target.take_damage(gear_effect.value)
+				if gear_target.is_dead():
+					enemy_died.emit(_enemies.find(gear_target))
+					_check_victory()
+		GearEffect.EffectType.APPLY_STATUS:
+			_player.apply_status(gear_effect.param, gear_effect.value)
+			status_applied.emit("Player", gear_effect.param, gear_effect.value)
+
+## Resolves all effects on a consumable immediately.
+## target_enemy can be null; DEAL_DAMAGE will hit the first living enemy if so.
+func use_consumable(consumable: ConsumableData, target_enemy: Enemy) -> void:
+	if turn_state != TurnState.PLAYER_TURN:
+		return
+	var resolved_target: Enemy = target_enemy if target_enemy != null else _first_living_enemy()
+	for effect: ConsumableEffect in consumable.effects:
+		_resolve_consumable_effect(effect, resolved_target)
+	_emit_player_ui()
+
+func _resolve_consumable_effect(effect: ConsumableEffect, target_enemy: Enemy) -> void:
+	match effect.effect_type:
+		ConsumableEffect.EffectType.RESTORE_HP:
+			var heal_amount: int = effect.value
+			if _consumable_heal_scale > 0 and _consumable_heal_scale_remaining > 0:
+				heal_amount = roundi(heal_amount * _consumable_heal_scale)
+				_consumable_heal_scale_remaining -= 1
+				if _consumable_heal_scale_remaining <= 0:
+					_consumable_heal_scale = 0
+			_player.heal(heal_amount)
+			player_hp_changed.emit(_player.current_health, _player.max_health)
+
+		ConsumableEffect.EffectType.DEAL_DAMAGE:
+			if target_enemy != null and not target_enemy.is_dead():
+				target_enemy.take_damage(effect.value)
+				if target_enemy.is_dead():
+					enemy_died.emit(_enemies.find(target_enemy))
+					_check_victory()
+
+		ConsumableEffect.EffectType.GAIN_STAT:
+			_apply_player_stat(effect.param, effect.value)
+
+		ConsumableEffect.EffectType.GAIN_BLOCK:
+			_player.gain_block(effect.value)
+			player_block_changed.emit(_player.current_block)
+
+		ConsumableEffect.EffectType.DRAW_CARDS:
+			_hand.draw_multiple(effect.value, 0.1)
+
+		ConsumableEffect.EffectType.BONUS_ATTACK_DAMAGE:
+			_consumable_bonus_damage += effect.value
+
+		ConsumableEffect.EffectType.SCALE_HEALS:
+			_consumable_heal_scale           = effect.value
+			_consumable_heal_scale_remaining = effect.count
+
+		ConsumableEffect.EffectType.EXTRA_CARDS_PER_TURN:
+			_consumable_extra_draw += effect.value
+
+		ConsumableEffect.EffectType.DAMAGE_PER_TURN:
+			_consumable_damage_per_turn += effect.value
+
 # ── Effect resolution ───────────────────────────────────────────────────────────
 
 func _resolve_card_effect(effect: CardEffect, card: CardData, target_enemy: Enemy,
@@ -188,6 +303,11 @@ func _resolve_card_effect(effect: CardEffect, card: CardData, target_enemy: Enem
 			var heal_amount: int = magnitude
 			if _player.get_status("double_heal") > 0:
 				heal_amount *= 2
+			if _consumable_heal_scale > 0 and _consumable_heal_scale_remaining > 0:
+				heal_amount = roundi(heal_amount * _consumable_heal_scale)
+				_consumable_heal_scale_remaining -= 1
+				if _consumable_heal_scale_remaining <= 0:
+					_consumable_heal_scale = 0
 			var healed: int = _player.heal(heal_amount)
 			player_hp_changed.emit(_player.current_health, _player.max_health)
 			if fire_triggers and healed > 0:
@@ -224,7 +344,7 @@ func _deal_player_damage_to_enemy(effect: CardEffect, base_magnitude: int,
 		target_enemy: Enemy) -> void:
 	if target_enemy == null or target_enemy.is_dead():
 		return
-	var damage: int = base_magnitude + _player.strength
+	var damage: int = base_magnitude + _player.strength + _consumable_bonus_damage
 	# Holy damage doubles against undead
 	if effect.damage_type == CardEffect.DamageType.HOLY and target_enemy.has_tag("undead"):
 		damage *= 2
@@ -237,6 +357,7 @@ func _deal_player_damage_to_enemy(effect: CardEffect, base_magnitude: int,
 	player_attacked.emit()
 	target_enemy.take_damage(damage)
 	if target_enemy.is_dead():
+		_fire_gear_triggers(GearEffect.Trigger.ON_KILL)
 		enemy_died.emit(_enemies.find(target_enemy))
 		_check_victory()
 	else:
@@ -306,6 +427,9 @@ func _run_enemy_actions() -> void:
 			return
 		await get_tree().create_timer(ENEMY_ACTION_DELAY).timeout
 
+	for enemy: Enemy in _living_enemies():
+		enemy.tick_statuses()
+
 	enemy_turn_ended.emit()
 	if not _check_defeat():
 		_begin_player_turn()
@@ -358,6 +482,9 @@ func _apply_dot_damage() -> void:
 	var bleed: int = _player.get_status("bleed")
 	if bleed > 0:
 		_player.take_damage(bleed)
+		player_hp_changed.emit(_player.current_health, _player.max_health)
+	if _consumable_damage_per_turn > 0:
+		_player.take_damage(_consumable_damage_per_turn)
 		player_hp_changed.emit(_player.current_health, _player.max_health)
 
 # ── Win / lose ──────────────────────────────────────────────────────────────────

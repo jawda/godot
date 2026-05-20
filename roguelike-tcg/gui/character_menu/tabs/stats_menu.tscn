@@ -70,9 +70,11 @@ layout_mode = 2
 label_settings = SubResource("CharacterNameSettings")
 text = "Character Name"
 
-[node name="CharacterClass" type="Label" parent="ContentMargin/OuterVBox"]
+[node name="LevelXP" type="Label" parent="ContentMargin/OuterVBox"]
 layout_mode = 2
 text = ""
+theme_override_colors/font_color = Color(0.55, 0.75, 0.95, 1.0)
+theme_override_font_sizes/font_size = 13
 
 [node name="ContentLayout" type="HBoxContainer" parent="ContentMargin/OuterVBox"]
 layout_mode = 2
@@ -234,3 +236,11 @@ theme_override_constants/separation = 6
 layout_mode = 2
 autowrap_mode = 3
 text = "This is the character Bio"
+
+[node name="LevelUpButton" type="Button" parent="ContentMargin/OuterVBox"]
+mouse_default_cursor_shape = 2
+layout_mode = 2
+visible = false
+text = "⬆  Level Up — Choose a Stat Boost"
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.90, 0.78, 0.18, 1.0)

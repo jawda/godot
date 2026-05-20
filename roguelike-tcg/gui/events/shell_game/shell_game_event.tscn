@@ -189,6 +189,7 @@ theme_override_constants/margin_right = 14
 theme_override_constants/margin_bottom = 12
 
 [node name="Action" type="Button" parent="Panel/Contents/Footer" unique_id=912727404]
+mouse_default_cursor_shape = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.9, 0.78, 0.18, 1)
@@ -289,6 +290,7 @@ layout_mode = 2
 theme_override_constants/separation = 12
 
 [node name="Decline" type="Button" parent="IntroOverlay/Dialog/Contents/Footer/Choices" unique_id=1197390682]
+mouse_default_cursor_shape = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.55, 0.48, 0.68, 1)
@@ -297,6 +299,7 @@ text = "Walk Away"
 flat = true
 
 [node name="Accept" type="Button" parent="IntroOverlay/Dialog/Contents/Footer/Choices" unique_id=689029184]
+mouse_default_cursor_shape = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.9, 0.78, 0.18, 1)

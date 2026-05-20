@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://d3p0t10nb3lt1"]
+
+[ext_resource type="Script" path="res://gui/potion_belt.gd" id="1_pb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hover_card"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+bg_color = Color(0.06, 0.04, 0.10, 0.97)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.78, 0.60, 0.18, 0.85)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0, 0, 0, 0.45)
+shadow_size = 4
+
+[node name="PotionBelt" type="HBoxContainer"]
+theme_override_constants/separation = 6
+script = ExtResource("1_pb")
+
+[node name="Slot1" type="Button" parent="."]
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+
+[node name="Slot2" type="Button" parent="."]
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+
+[node name="Slot3" type="Button" parent="."]
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+
+[node name="HoverCard" type="PanelContainer" parent="."]
+top_level = true
+visible = false
+theme_override_styles/panel = SubResource("StyleBoxFlat_hover_card")
+
+[node name="Contents" type="VBoxContainer" parent="HoverCard"]
+layout_mode = 2
+theme_override_constants/separation = 6
+custom_minimum_size = Vector2(180, 0)
+
+[node name="ItemName" type="Label" parent="HoverCard/Contents"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.82, 0.42, 1)
+theme_override_font_sizes/font_size = 14
+
+[node name="Divider" type="HSeparator" parent="HoverCard/Contents"]
+layout_mode = 2
+
+[node name="ItemDescription" type="Label" parent="HoverCard/Contents"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.72, 0.90, 0.90)
+theme_override_font_sizes/font_size = 12
+autowrap_mode = 3

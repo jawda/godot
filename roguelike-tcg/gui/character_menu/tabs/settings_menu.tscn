@@ -216,9 +216,11 @@ layout_mode = 2
 theme_override_constants/separation = 6
 
 [node name="ExitToMenuButton" type="Button" parent="ContentBox/ExitQuitMargin/ExitQuitButtons" unique_id=1232334746]
+mouse_default_cursor_shape = 2
 layout_mode = 2
 text = "Exit to Main Menu"
 
 [node name="QuitButton" type="Button" parent="ContentBox/ExitQuitMargin/ExitQuitButtons" unique_id=365818094]
+mouse_default_cursor_shape = 2
 layout_mode = 2
 text = "Quit Game"

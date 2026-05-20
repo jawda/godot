@@ -19,9 +19,11 @@ layout_mode = 2
 text = "Progress is saved automatically when you exit."
 
 [node name="ExitToMenuButton" type="Button" parent="ContentBox"]
+mouse_default_cursor_shape = 2
 layout_mode = 2
 text = "Exit to Main Menu"
 
 [node name="QuitButton" type="Button" parent="ContentBox"]
+mouse_default_cursor_shape = 2
 layout_mode = 2
 text = "Quit Game"

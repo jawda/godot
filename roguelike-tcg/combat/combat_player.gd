@@ -30,16 +30,18 @@ var statuses: Dictionary = {}
 # ── Setup ───────────────────────────────────────────────────────────────────────
 
 ## Initialises combat state from a PlayerData resource.
+## Pass run_data to include level-up stat bonuses earned during the run.
 ## Pass current_run_health to restore mid-run health; -1 uses full max health.
-func setup(player_data: PlayerData, current_run_health: int = -1) -> void:
-	max_health = player_data.base_max_health + player_data.constitution * HP_PER_CONSTITUTION
+func setup(player_data: PlayerData, current_run_health: int = -1, run_data: RunSaveData = null) -> void:
+	var bonus_con: int   = run_data.bonus_constitution if run_data != null else 0
+	max_health = player_data.base_max_health + (player_data.constitution + bonus_con) * HP_PER_CONSTITUTION
 	current_health = current_run_health if current_run_health > 0 else max_health
 	current_block = 0
 	current_energy = max_energy
 	life_gained_this_combat = 0
-	strength = player_data.strength
-	dexterity = player_data.dexterity
-	faith = player_data.faith
+	strength = player_data.strength + (run_data.bonus_strength if run_data != null else 0)
+	dexterity = player_data.dexterity + (run_data.bonus_dexterity if run_data != null else 0)
+	faith = player_data.faith + (run_data.bonus_faith if run_data != null else 0)
 	statuses.clear()
 
 # ── Combat interface ────────────────────────────────────────────────────────────

@@ -96,6 +96,48 @@ corner_radius_bottom_left = 4
 [sub_resource type="StyleBoxLine" id="SeparatorStyle"]
 color = Color(0.44, 0.22, 0.66, 1)
 
+[sub_resource type="StyleBoxFlat" id="SavePromptPanelStyle"]
+content_margin_left = 24.0
+content_margin_top = 20.0
+content_margin_right = 24.0
+content_margin_bottom = 20.0
+bg_color = Color(0.09, 0.05, 0.16, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.44, 0.22, 0.66, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.5)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="SaveButtonNormal"]
+bg_color = Color(0.10, 0.07, 0.04, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.95, 0.82, 0.42, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="SaveButtonHover"]
+bg_color = Color(0.22, 0.16, 0.06, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.95, 0.82, 0.42, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [node name="CharacterMenu" type="Control" unique_id=891649116]
 layout_mode = 3
 anchors_preset = 15
@@ -145,6 +187,7 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="StatsButton" type="Button" parent="MenuPanel/VBox/TabBar" unique_id=1823551923]
+mouse_default_cursor_shape = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("TabNormal")
@@ -157,6 +200,7 @@ button_group = SubResource("TabButtonGroup")
 text = "Stats"
 
 [node name="GearButton" type="Button" parent="MenuPanel/VBox/TabBar" unique_id=2074213682]
+mouse_default_cursor_shape = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("TabNormal")
@@ -168,6 +212,7 @@ button_group = SubResource("TabButtonGroup")
 text = "Gear"
 
 [node name="SettingsButton" type="Button" parent="MenuPanel/VBox/TabBar" unique_id=820545289]
+mouse_default_cursor_shape = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("TabNormal")
@@ -183,6 +228,7 @@ custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
 
 [node name="CloseButton" type="Button" parent="MenuPanel/VBox/TabBar" unique_id=2143910380]
+mouse_default_cursor_shape = 2
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_r7fij")
@@ -212,3 +258,81 @@ grow_vertical = 2
 [node name="Settings" parent="MenuPanel/VBox/ContentStack" unique_id=931580847 instance=ExtResource("scene_settings_menu")]
 visible = false
 layout_mode = 1
+
+[node name="SavePrompt" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+visible = false
+
+[node name="Backdrop" type="ColorRect" parent="SavePrompt"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Dialog" type="PanelContainer" parent="SavePrompt"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -100.0
+offset_right = 210.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("SavePromptPanelStyle")
+
+[node name="Contents" type="VBoxContainer" parent="SavePrompt/Dialog"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Message" type="Label" parent="SavePrompt/Dialog/Contents"]
+layout_mode = 2
+autowrap_mode = 3
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.88, 0.84, 0.96, 1)
+text = "Save your progress?"
+
+[node name="Divider" type="HSeparator" parent="SavePrompt/Dialog/Contents"]
+layout_mode = 2
+theme_override_colors/color = Color(0.44, 0.22, 0.66, 0.4)
+
+[node name="Buttons" type="VBoxContainer" parent="SavePrompt/Dialog/Contents"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="SaveAndLeave" type="Button" parent="SavePrompt/Dialog/Contents/Buttons"]
+mouse_default_cursor_shape = 2
+layout_mode = 2
+theme_override_styles/normal = SubResource("SaveButtonNormal")
+theme_override_styles/hover = SubResource("SaveButtonHover")
+theme_override_styles/pressed = SubResource("SaveButtonNormal")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.95, 0.82, 0.42, 1)
+text = "Save & Exit"
+
+[node name="LeaveWithoutSaving" type="Button" parent="SavePrompt/Dialog/Contents/Buttons"]
+mouse_default_cursor_shape = 2
+layout_mode = 2
+flat = true
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.80, 0.45, 0.45, 1)
+text = "Exit Without Saving"
+
+[node name="Cancel" type="Button" parent="SavePrompt/Dialog/Contents/Buttons"]
+mouse_default_cursor_shape = 2
+layout_mode = 2
+flat = true
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.55, 0.48, 0.68, 1)
+text = "Cancel"

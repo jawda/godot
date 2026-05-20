@@ -40,6 +40,14 @@ const GOLD_RANGE_BY_TIER: Dictionary = {
 	EnemyData.Tier.BOSS:      Vector2i(45, 65),
 }
 
+## Flat XP granted per enemy tier.
+const XP_BY_TIER: Dictionary = {
+	EnemyData.Tier.MINION:    20,
+	EnemyData.Tier.COMMANDER: 50,
+	EnemyData.Tier.ELITE:     90,
+	EnemyData.Tier.BOSS:      250,
+}
+
 # ── Node references ────────────────────────────────────────────────────────────
 
 @onready var _hand_area: Hand                  = $MainLayout/HandArea
@@ -64,6 +72,8 @@ const GOLD_RANGE_BY_TIER: Dictionary = {
 @onready var _btn_discard: Button              = $DiscardButton
 @onready var _btn_exile: Button                = $ExileButton
 @onready var _gold_label: Label                = $GoldLabel
+@onready var _potion_belt: PotionBelt          = $MainLayout/BattleArea/PlayerSection/PlayerArea/PlayerStatsBox/PotionBelt
+@onready var _level_up_badge: Label            = $LevelUpBadge
 
 # ── Runtime ────────────────────────────────────────────────────────────────────
 
@@ -75,6 +85,7 @@ var _energy_pips: Array[Panel] = []
 var _combat_over: bool = false
 var _player_visual: CharacterVisual = null
 var _gold_reward: int = 0
+var _xp_reward: int = 0
 
 # ── Lifecycle ──────────────────────────────────────────────────────────────────
 
@@ -102,7 +113,7 @@ func _setup_combat() -> void:
 
 	_combat_manager = CombatManager.new()
 	add_child(_combat_manager)
-	_combat_manager.setup(player_data, _hand_area, _deck, _enemies)
+	_combat_manager.setup(player_data, _hand_area, _deck, _enemies, -1, _collect_equipped_gear(), RunState.active_run)
 
 	_combat_manager.player_hp_changed.connect(_on_player_hp_changed)
 	_combat_manager.player_block_changed.connect(_on_player_block_changed)
@@ -138,6 +149,11 @@ func _setup_combat() -> void:
 	_btn_full_deck.text = "Deck  %d" % _deck.total_count()
 	if RunState.active_run != null:
 		_gold_label.text = "Gold: %d" % RunState.active_run.gold
+		_potion_belt.setup(RunState.active_run.consumables)
+		_level_up_badge.visible = RunState.active_run.pending_stat_choices > 0
+	else:
+		_potion_belt.setup([])
+	_potion_belt.consumable_used.connect(_on_consumable_used)
 	_combat_manager.start_combat()
 
 # ── Player visual setup ────────────────────────────────────────────────────────
@@ -325,9 +341,18 @@ func _on_enemy_died(enemy_index: int) -> void:
 
 func _on_player_turn_began(_energy: int, _max_energy: int) -> void:
 	_end_turn_button.disabled = false
+	_potion_belt.set_interactive(true)
 
 func _on_enemy_turn_began() -> void:
 	_end_turn_button.disabled = true
+	_potion_belt.set_interactive(false)
+
+func _on_consumable_used(consumable: ConsumableData, slot_index: int) -> void:
+	_combat_manager.use_consumable(consumable, null)
+	var run: RunSaveData = RunState.active_run
+	if run != null and slot_index < run.consumables.size():
+		run.consumables.remove_at(slot_index)
+		SaveManager.save()
 
 func _on_player_attacked() -> void:
 	if _player_visual != null:
@@ -346,6 +371,7 @@ func _on_combat_ended(victory: bool) -> void:
 		_player_visual.play_death()
 	if victory:
 		_gold_reward = _calculate_gold_reward()
+		_xp_reward = _calculate_xp_reward()
 	await get_tree().create_timer(0.5).timeout
 	_combat_result.show_result(victory)
 	_cleanup_enemies()
@@ -365,6 +391,14 @@ func _calculate_gold_reward() -> int:
 		total += randi_range(tier_range.x, tier_range.y)
 	return total
 
+func _calculate_xp_reward() -> int:
+	var total: int = 0
+	for enemy: Enemy in _enemies:
+		if enemy.data == null:
+			continue
+		total += XP_BY_TIER.get(enemy.data.tier, 20)
+	return total
+
 func _show_card_reward() -> void:
 	var combat_type: CombatReward.CombatType
 	match room_type:
@@ -374,9 +408,21 @@ func _show_card_reward() -> void:
 			combat_type = CombatReward.CombatType.BOSS
 		_:
 			combat_type = CombatReward.CombatType.STANDARD
-	_combat_reward.open(combat_type, _gold_reward)
+	_combat_reward.open(combat_type, _gold_reward, _xp_reward)
 	_combat_reward.reward_completed.connect(
 			func() -> void: combat_completed.emit(true), CONNECT_ONE_SHOT)
+
+func _collect_equipped_gear() -> Array[OwnedGear]:
+	var run: RunSaveData = RunState.active_run
+	if run == null:
+		return []
+	var gear_list: Array[OwnedGear] = []
+	var candidates: Array = [run.helmet, run.necklace, run.ring_left, run.ring_right,
+							  run.armor, run.boots, run.weapon_right, run.weapon_left]
+	for candidate: Variant in candidates:
+		if candidate is OwnedGear:
+			gear_list.append(candidate as OwnedGear)
+	return gear_list
 
 func _cleanup_enemies() -> void:
 	for enemy: Enemy in _enemies:

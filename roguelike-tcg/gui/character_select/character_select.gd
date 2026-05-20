@@ -151,7 +151,9 @@ func _on_begin_run_pressed() -> void:
 		if floor_data != null:
 			sequence.append(floor_data)
 
-	RunState.start_new_run(_selected_player_data, sequence, max_hp)
+	var character_save: CharacterSaveData = SaveManager.get_or_create_character_save(
+			_selected_player_data.resource_path)
+	RunState.start_new_run(_selected_player_data, character_save, sequence, FLOOR_SEQUENCE, max_hp)
 	SceneTransition.transition_to("res://gui/floor_loop/floor_loop.tscn")
 
 

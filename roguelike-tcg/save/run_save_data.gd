@@ -2,6 +2,8 @@ class_name RunSaveData
 extends Resource
 
 ## Snapshot of an in-progress run. Created at run start, discarded on death or victory.
+## floor_sequence_paths is stored so a resumed run can reconstruct RunState.floor_sequence
+## without going back through character select.
 ## Gear found mid-run that the player hasn't equipped is tracked here until run end,
 ## at which point it is merged into CharacterSaveData.gear_stash.
 
@@ -48,6 +50,12 @@ extends Resource
 		xp = new_xp
 		emit_changed()
 
+## Level-up stat choices not yet claimed. Incremented once per level gained.
+@export var pending_stat_choices: int = 0:
+	set(new_pending_stat_choices):
+		pending_stat_choices = new_pending_stat_choices
+		emit_changed()
+
 ## True when the player has earned a Mastery but has not yet claimed it at a rest site.
 @export var pending_mastery: bool = false:
 	set(new_pending_mastery):
@@ -58,6 +66,35 @@ extends Resource
 @export var active_masteries: Array[MasteryData] = []:
 	set(new_active_masteries):
 		active_masteries = new_active_masteries
+		emit_changed()
+
+# ── Level stat bonuses ─────────────────────────────────────────────────────────
+## +1 increments earned through level-up choices during this run.
+## Applied on top of base PlayerData stats at the start of each combat.
+
+@export var bonus_strength: int = 0:
+	set(new_bonus_strength):
+		bonus_strength = new_bonus_strength
+		emit_changed()
+
+@export var bonus_dexterity: int = 0:
+	set(new_bonus_dexterity):
+		bonus_dexterity = new_bonus_dexterity
+		emit_changed()
+
+@export var bonus_constitution: int = 0:
+	set(new_bonus_constitution):
+		bonus_constitution = new_bonus_constitution
+		emit_changed()
+
+@export var bonus_intelligence: int = 0:
+	set(new_bonus_intelligence):
+		bonus_intelligence = new_bonus_intelligence
+		emit_changed()
+
+@export var bonus_faith: int = 0:
+	set(new_bonus_faith):
+		bonus_faith = new_bonus_faith
 		emit_changed()
 
 # ── Deck ───────────────────────────────────────────────────────────────────────
@@ -135,6 +172,14 @@ extends Resource
 @export var rarity_offset: float = -5.0:
 	set(new_rarity_offset):
 		rarity_offset = new_rarity_offset
+		emit_changed()
+
+# ── Floor sequence ─────────────────────────────────────────────────────────────
+
+## Resource paths for every FloorData in the run's sequence, in order.
+@export var floor_sequence_paths: Array[String] = []:
+	set(new_floor_sequence_paths):
+		floor_sequence_paths = new_floor_sequence_paths
 		emit_changed()
 
 # ── Pending stash items ────────────────────────────────────────────────────────

@@ -160,6 +160,19 @@ func clear_block() -> void:
 	current_block = 0
 	_update_display()
 
+## Decrements duration-based statuses by 1 and removes them when they reach zero.
+func tick_statuses() -> void:
+	var to_remove: Array[String] = []
+	for status_name: String in statuses:
+		match status_name:
+			"vulnerable", "weak":
+				statuses[status_name] -= 1
+				if statuses[status_name] <= 0:
+					to_remove.append(status_name)
+	for status_name: String in to_remove:
+		statuses.erase(status_name)
+	_update_display()
+
 # ── Animations ─────────────────────────────────────────────────────────────────
 
 ## Plays the attack animation if the enemy has sprite_frames with an "attack"
