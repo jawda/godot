@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://d4nspch4evk04"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pk41b"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_3prpf"]
+_limits = [0.0, 0.3, 0.0, 1.0]
+_data = [Vector2(0.005376339, 0.0053571463), 0.0, 0.8220534, 0, 0, Vector2(0.50537634, 0.3), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.80070156, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_38o05"]
+curve = SubResource("Curve_3prpf")
+
+[sub_resource type="Gradient" id="Gradient_43xbk"]
+colors = PackedColorArray(0.99607843, 0.99607843, 0.99607843, 0.078431375, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5trfl"]
+gradient = SubResource("Gradient_43xbk")
+
+[sub_resource type="Curve" id="Curve_kwfd8"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_ci28e"]
+_limits = [0.0, 30.0, 0.0, 1.0]
+_data = [Vector2(0, 15.80357), 0.0, 69.19643, 0, 0, Vector2(0.2580645, 30), 0.0, 0.0, 0, 0, Vector2(1, 30), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_agfoc"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_d8874"]
+curve_x = SubResource("Curve_kwfd8")
+curve_y = SubResource("Curve_ci28e")
+curve_z = SubResource("Curve_agfoc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_06ef1"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -200, 0)
+emission_shape = 3
+emission_box_extents = Vector3(350, 1, 1)
+gravity = Vector3(0, 3000, 0)
+scale_min = 0.19999999
+scale_over_velocity_curve = SubResource("CurveXYZTexture_d8874")
+color_ramp = SubResource("GradientTexture1D_5trfl")
+alpha_curve = SubResource("CurveTexture_38o05")
+
+[node name="Node2D" type="Node2D" unique_id=2083700157]
+
+[node name="RainParticles" type="GPUParticles2D" parent="." unique_id=1048516086]
+material = SubResource("CanvasItemMaterial_pk41b")
+amount = 1000
+lifetime = 0.5
+preprocess = 0.5
+visibility_rect = Rect2(-350, -200, 700, 400)
+process_material = SubResource("ParticleProcessMaterial_06ef1")

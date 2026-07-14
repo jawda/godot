@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://m0evqmsa0gmo"]
+
+[ext_resource type="Script" uid="uid://cvm44d1j2pe5t" path="res://assets/characters/synced_markdown_label.gd" id="1_pf652"]
+[ext_resource type="Script" uid="uid://dcx7crs23nf4" path="res://addons/markdownlabel/header_formats/h1_format.gd" id="2_ogemo"]
+[ext_resource type="Script" uid="uid://d0sin64i4v3op" path="res://addons/markdownlabel/header_formats/h2_format.gd" id="3_61tfw"]
+[ext_resource type="Script" uid="uid://dlok0dv1tq2bf" path="res://addons/markdownlabel/header_formats/h3_format.gd" id="4_qlrso"]
+[ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="5_0g6dj"]
+[ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="6_408sa"]
+[ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="7_05667"]
+
+[sub_resource type="Resource" id="Resource_7blfh"]
+resource_local_to_scene = true
+script = ExtResource("2_ogemo")
+
+[sub_resource type="Resource" id="Resource_w8h2d"]
+resource_local_to_scene = true
+script = ExtResource("3_61tfw")
+
+[sub_resource type="Resource" id="Resource_enyck"]
+resource_local_to_scene = true
+script = ExtResource("4_qlrso")
+
+[sub_resource type="Resource" id="Resource_ui8h3"]
+resource_local_to_scene = true
+script = ExtResource("5_0g6dj")
+
+[sub_resource type="Resource" id="Resource_m2604"]
+resource_local_to_scene = true
+script = ExtResource("6_408sa")
+
+[sub_resource type="Resource" id="Resource_ppuu3"]
+resource_local_to_scene = true
+script = ExtResource("7_05667")
+
+[node name="Node2D" type="Node2D" unique_id=343783603]
+
+[node name="MarkdownLabel" type="RichTextLabel" parent="." unique_id=1875036572]
+offset_right = 1154.0
+offset_bottom = 648.0
+bbcode_enabled = true
+script = ExtResource("1_pf652")
+markdown_text = "# Character Notes
+
+Working notes for the playable / NPC character sprites. Each entry lists the
+asset folder, the base sprite file, and a short description. Names are still
+undecided unless stated otherwise.
+
+---
+
+## Female Characters
+
+### Character 02 — `female/02/Character_002.png`
+![Character 02](res://assets/characters/female/02/Character_002_Face_64x64.png)
+- _Name undecided._ No description yet.
+
+### Character 05 — `female/05/Character_005.png`
+![Character 05](res://assets/characters/female/05/Character_005_Face_64x64.png)
+- _Name undecided._ Brown hair, red eyes, yellow shirt.
+
+---
+
+## Male Characters
+
+### Character 09 — `male/09/Character_009.png`
+![Character 09](res://assets/characters/male/09/Character_009_Face_64x64.png)
+- _Name undecided._ Red beanie, blue eyes, red shirt.
+
+### Character 10 — `male/10/Character_010.png`
+![Character 10](res://assets/characters/male/10/Character_010_Face_64x64.png)
+- _Name undecided._ Armored, brown eyes, platemail.
+
+### Character 11 — `male/11/Character_011.png`
+![Character 11](res://assets/characters/male/11/Character_011_Face_64x64.png)
+- _Name undecided._ Bald, blue eyes, pink shirt.
+
+### Character 13 — `male/13/Character_013.png`
+![Character 13](res://assets/characters/male/13/Character_013_Face_64x64.png)
+- _Name undecided._ Purple/blue hair, red eyes, green shirt. **Possible main.**
+
+### Character 14 — `male/14/Character_014.png`
+![Character 14](res://assets/characters/male/14/Character_014_Face_64x64.png)
+- _Name undecided._ Blonde hair, blue eyes, brown shirt. **Possible main.**
+"
+h1 = SubResource("Resource_7blfh")
+h2 = SubResource("Resource_w8h2d")
+h3 = SubResource("Resource_enyck")
+h4 = SubResource("Resource_ui8h3")
+h5 = SubResource("Resource_m2604")
+h6 = SubResource("Resource_ppuu3")
