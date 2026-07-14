@@ -52,8 +52,10 @@ alpha_curve = SubResource("CurveTexture_38o05")
 
 [node name="RainParticles" type="GPUParticles2D" parent="." unique_id=1048516086]
 material = SubResource("CanvasItemMaterial_pk41b")
+position = Vector2(348, 199)
 amount = 1000
 lifetime = 0.5
 preprocess = 0.5
+speed_scale = 0.4
 visibility_rect = Rect2(-350, -200, 700, 400)
 process_material = SubResource("ParticleProcessMaterial_06ef1")

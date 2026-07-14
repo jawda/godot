@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bw0n3thpte8s"]
+
+[sub_resource type="Curve" id="Curve_38o05"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -1.6103903, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_5trfl"]
+curve = SubResource("Curve_38o05")
+
+[sub_resource type="Gradient" id="Gradient_ov2c2"]
+offsets = PackedFloat32Array(0.43464053, 0.7091503)
+colors = PackedColorArray(0.98039216, 0.98039216, 0.98039216, 0.3529412, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_d8874"]
+gradient = SubResource("Gradient_ov2c2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_06ef1"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(500, 1, 1)
+gravity = Vector3(45, 98, 0)
+scale_max = 4.0
+color_ramp = SubResource("GradientTexture1D_d8874")
+alpha_curve = SubResource("CurveTexture_5trfl")
+turbulence_enabled = true
+turbulence_influence_min = 0.020000001
+turbulence_influence_max = 0.080000006
+turbulence_initial_displacement_min = 1.490116e-06
+turbulence_initial_displacement_max = 0.10000149
+
+[node name="Node2D" type="Node2D" unique_id=771291249]
+position = Vector2(500, 0)
+
+[node name="snow" type="GPUParticles2D" parent="." unique_id=806955019]
+position = Vector2(2, -1)
+amount = 200
+lifetime = 10.0
+preprocess = 30.0
+process_material = SubResource("ParticleProcessMaterial_06ef1")
