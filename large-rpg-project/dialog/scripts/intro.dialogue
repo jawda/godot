@@ -1,0 +1,20 @@
+~ start
+
+Mira: Oh! You startled me.
+Mira: I've been looking everywhere for my cat. Have you seen her?
+Bren: Which way did she run off to?
+Stranger: Who am I? Why am I here?
+Mira: That's just it — I'm honestly not sure.
+Mira: Which way do you think we should look?
+- Toward the river
+	Mira: The river? Oh no, she hates getting wet. Let's hurry!
+	Bren: Right behind you.
+	=> END
+- Up into the hills
+	Bren: The hills are a long climb.
+	Mira: She does love to climb, though. Worth a try.
+	=> END
+- I haven't seen your cat
+	Mira: ...You're not very helpful, are you?
+	Bren: Be nice. Not everyone's a cat person.
+	=> END
