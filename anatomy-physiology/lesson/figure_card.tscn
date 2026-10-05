@@ -1,0 +1,45 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://lesson/figure_card.gd" id="1_figure"]
+
+[node name="FigureCard" type="VBoxContainer"]
+theme_override_constants/separation = 6
+script = ExtResource("1_figure")
+
+[node name="Frame" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 280)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+tooltip_text = "Click to enlarge"
+theme_type_variation = &"FigureFrame"
+
+[node name="Picture" type="TextureRect" parent="Frame"]
+texture_filter = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Caption" type="Label" parent="."]
+layout_mode = 2
+theme_type_variation = &"FigureCaption"
+text = "Caption"
+autowrap_mode = 3
+
+[node name="Credit" type="Label" parent="."]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+theme_override_font_sizes/font_size = 13
+text = "Credit"
+autowrap_mode = 3

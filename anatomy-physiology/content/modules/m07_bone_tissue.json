@@ -1,0 +1,420 @@
+{
+  "id": "m07_bone_tissue",
+  "order": 7,
+  "course": "A&P I",
+  "title": "Bone Tissue and Bone Structure",
+  "summary": "What bones do, how they are built from the gross to the microscopic level, how they form, grow, remodel, and heal, and how blood calcium is regulated.",
+  "objectives": [
+    "List the functions of the skeletal system",
+    "Classify bones by shape and give examples of each",
+    "Identify the parts of a long bone and their functions",
+    "Describe the microscopic structure of compact and spongy bone",
+    "Compare the four bone cell types",
+    "Contrast intramembranous and endochondral ossification",
+    "Describe the zones of the epiphyseal plate and explain growth in length and width",
+    "Explain bone remodeling and the hormonal control of blood calcium",
+    "Classify fractures and describe the stages of fracture repair",
+    "Explain the causes and risk factors of osteoporosis"
+  ],
+  "lesson": [
+    {
+      "heading": "Functions and Composition of Bone",
+      "body": [
+        "The skeletal system includes bones, cartilage, ligaments, and other connective tissues. Its functions:",
+        "- [b]Support[/b]: a framework for the body and attachment for soft tissues.",
+        "- [b]Protection[/b]: the skull protects the brain, the rib cage protects the heart and lungs, and vertebrae protect the spinal cord.",
+        "- [b]Movement[/b]: bones act as levers pulled by skeletal muscles.",
+        "- [b]Mineral storage[/b]: bone holds about 99 percent of the body's calcium and much of its phosphate, releasing them into the blood as needed.",
+        "- [b]Blood cell formation (hematopoiesis)[/b]: occurs in [b]red bone marrow[/b].",
+        "- [b]Fat (triglyceride) storage[/b]: in [b]yellow bone marrow[/b].",
+        "Bone matrix has two main components that together make it both hard and resilient:",
+        "- [b]Organic portion[/b] (about one third): mainly [b]collagen[/b] fibers, which give bone flexibility and tensile strength so it does not shatter.",
+        "- [b]Inorganic portion[/b] (about two thirds): mineral salts, mainly calcium phosphate in the form of [b]hydroxyapatite[/b] crystals, which give hardness and resistance to compression.",
+        "Without minerals, bone becomes rubbery and bends (as in rickets). Without collagen, bone becomes brittle and breaks easily (as in osteogenesis imperfecta)."
+      ],
+      "tip": "Collagen = Can bend. Calcium = Compression resistance."
+    },
+    {
+      "heading": "Classification of Bones by Shape",
+      "body": [
+        "- [b]Long bones[/b]: longer than they are wide, with a shaft and two ends. Examples: femur, humerus, radius, ulna, tibia, fibula, metacarpals, metatarsals, and phalanges. \"Long\" describes shape, not size: the small finger bones are long bones.",
+        "- [b]Short bones[/b]: roughly cube shaped, about equal in length and width. Examples: [b]carpals[/b] (wrist) and [b]tarsals[/b] (ankle).",
+        "- [b]Flat bones[/b]: thin, flattened, and often curved; two plates of compact bone with spongy bone between. Examples: most cranial bones, ribs, sternum, and scapulae.",
+        "- [b]Irregular bones[/b]: complex shapes that fit no other category. Examples: [b]vertebrae[/b], many facial bones, and the hip bones (os coxae; some texts call these flat).",
+        "- [b]Sesamoid bones[/b] (Hole's also calls them round bones): small bones that develop within tendons where they pass over a joint. The largest and best known is the [b]patella[/b] (kneecap).",
+        "Some textbooks also mention [b]sutural (Wormian) bones[/b], tiny extra bones in the sutures of the skull whose number varies between individuals."
+      ],
+      "tip": "Short bones are in the wrist and ankle: Carpals and tarsals are \"Cubes.\"",
+      "figure": {
+        "file": "m07_bone_shapes.jpg",
+        "caption": "One example of each shape: the femur (long), the tarsal cuneiforms (short), the sternum (flat), a vertebra (irregular), and the patella (sesamoid). Notice that \"long\" means a shaft with two ends, not large size.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 6.6, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-2-bone-classification"
+      }
+    },
+    {
+      "heading": "Anatomy of a Long Bone",
+      "body": [
+        "- [b]Diaphysis[/b]: the tubular shaft. Its wall is thick compact bone surrounding a central [b]medullary cavity[/b].",
+        "- [b]Epiphyses[/b] (singular epiphysis): the expanded ends. A thin shell of compact bone surrounds spongy bone, whose spaces contain red marrow. The proximal and distal epiphyses form joints with other bones.",
+        "- [b]Metaphysis[/b]: the region where the diaphysis meets the epiphysis (OpenStax term). In a growing bone it contains the [b]epiphyseal plate[/b] (growth plate), a layer of hyaline cartilage where the bone grows in length. When growth ends in early adulthood, the plate is replaced by bone, leaving the [b]epiphyseal line[/b].",
+        "- [b]Articular cartilage[/b]: [b]hyaline cartilage[/b] covering the joint surfaces of the epiphyses, reducing friction and absorbing shock. It has no perichondrium.",
+        "- [b]Periosteum[/b]: a tough membrane covering the outer surface of the bone except at the articular cartilage. Its outer fibrous layer is dense irregular connective tissue; its inner layer contains osteogenic cells and osteoblasts used in growth in width and fracture repair. It is richly supplied with blood vessels and nerves (which is why a bone bruise hurts) and is anchored to the bone by [b]perforating (Sharpey's) fibers[/b] of collagen. Tendons and ligaments attach to it.",
+        "- [b]Endosteum[/b]: a thin membrane lining the medullary cavity and the internal spaces of spongy bone; it also contains bone-forming and bone-resorbing cells.",
+        "- [b]Medullary cavity[/b]: the hollow space in the diaphysis. In adults it contains [b]yellow marrow[/b] (mostly fat). In infants, most marrow cavities contain red marrow.",
+        "- [b]Nutrient foramen[/b]: a small hole in the diaphysis through which an artery enters to supply the marrow and bone."
+      ],
+      "tip": "Peri = around (outside), Endo = within (inside). The periosteum wraps the outside; the endosteum lines the cavity.",
+      "clinical": "In adults, red marrow persists mainly in the spongy bone of flat and irregular bones (sternum, ribs, vertebrae, hip bones) and the proximal epiphyses of the femur and humerus. That is why bone marrow samples are commonly taken from the posterior iliac crest of the hip bone.",
+      "figure": {
+        "file": "m07_long_bone.jpg",
+        "caption": "Trace the regions down the bone: proximal epiphysis, metaphysis, diaphysis, metaphysis, distal epiphysis. Notice spongy bone with red marrow in the epiphysis, yellow marrow in the medullary cavity, the periosteum outside and the endosteum inside, and the epiphyseal line left where the growth plate used to be.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 6.7, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-3-bone-structure"
+      }
+    },
+    {
+      "heading": "Microscopic Structure: Compact and Spongy Bone",
+      "body": [
+        "[b]Compact bone[/b] is dense and solid looking. Its structural unit is the [b]osteon[/b] (Haversian system), a cylinder running parallel to the long axis of the bone. Each osteon contains:",
+        "- A [b]central (Haversian) canal[/b]: runs lengthwise through the center of the osteon and contains blood vessels and nerves.",
+        "- [b]Concentric lamellae[/b]: rings of mineralized matrix surrounding the central canal, like the rings of a tree trunk. Collagen fibers alternate direction between neighboring lamellae, which helps resist twisting.",
+        "- [b]Lacunae[/b]: small chambers between lamellae, each housing one [b]osteocyte[/b].",
+        "- [b]Canaliculi[/b]: tiny channels radiating from the lacunae that connect neighboring osteocytes to each other and to the central canal. Osteocyte processes extend into them and communicate through gap junctions, allowing nutrients and wastes to pass through otherwise solid matrix.",
+        "[b]Perforating (Volkmann's) canals[/b] run [b]perpendicular[/b] (crosswise) to the long axis. They connect the blood vessels of central canals to each other and to vessels of the periosteum and medullary cavity.",
+        "Between osteons are [b]interstitial lamellae[/b], remnants of old osteons that were partially removed during remodeling. [b]Circumferential lamellae[/b] wrap around the entire outer and inner surfaces of the shaft.",
+        "[b]Spongy (cancellous) bone[/b] is made of a lattice of thin plates and rods called [b]trabeculae[/b]. It has [b]no osteons[/b] and no central canals. Osteocytes in its lacunae get nutrients by diffusion through canaliculi from the marrow-filled spaces between trabeculae. The trabeculae align along lines of stress, making spongy bone strong yet light. It is found in the epiphyses of long bones and the interior of flat, short, and irregular bones, where its spaces often hold red marrow. In flat bones of the skull, the spongy layer between compact plates is called the [b]diploe[/b]."
+      ],
+      "tip": "Central canals run Lengthwise (Long). Perforating canals Perpendicular. Both carry blood vessels.",
+      "figure": {
+        "file": "m07_compact_bone.jpg",
+        "caption": "In the 3D wedge, each osteon is a set of concentric lamellae around a central canal carrying vessels and nerves, while perforating canals cross between them at right angles. Find the interstitial lamellae between osteons, the circumferential lamellae under the periosteum, and the trabeculae of spongy bone at the right; panel (b) is a real osteon under the microscope.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 6.12, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-3-bone-structure"
+      }
+    },
+    {
+      "heading": "Bone Cells",
+      "body": [
+        "- [b]Osteogenic (osteoprogenitor) cells[/b]: stem cells found in the inner periosteum, the endosteum, and canals. They are the only bone cells that undergo cell division; their daughter cells become osteoblasts.",
+        "- [b]Osteoblasts[/b]: bone-building cells. They secrete [b]osteoid[/b], the unmineralized organic matrix (mostly collagen), and help it calcify. They are found on bone surfaces and cannot divide.",
+        "- [b]Osteocytes[/b]: mature bone cells. An osteocyte is an osteoblast that has become trapped in the matrix it secreted and now sits in a lacuna. Osteocytes are the most numerous bone cells. They maintain the matrix, exchange nutrients and wastes through canaliculi, and sense mechanical stress, signaling osteoblasts and osteoclasts to remodel.",
+        "- [b]Osteoclasts[/b]: large, [b]multinucleated[/b] cells that [b]break down (resorb) bone[/b]. They form from the fusion of cells of the monocyte/macrophage line from bone marrow, a completely different origin from the other three cell types. At a ruffled border they release acid, which dissolves minerals, and enzymes, which digest collagen, releasing calcium into the blood."
+      ],
+      "tip": "Osteo[b]B[/b]lasts [b]B[/b]uild bone. Osteo[b]C[/b]lasts [b]C[/b]arve (or Chew) bone. Osteocytes are the Caretakers living in the matrix.",
+      "figure": {
+        "file": "m07_bone_cells.jpg",
+        "caption": "Compare the four bone cells: the osteogenic cell is the dividing stem cell, the osteoblast builds matrix, the osteocyte with its long processes maintains bone from inside a lacuna, and the large multinucleated osteoclast with its ruffled border resorbs bone.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 6.11, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-3-bone-structure"
+      }
+    },
+    {
+      "heading": "Bone Development: Ossification",
+      "body": [
+        "Bone formation is called [b]ossification[/b] (or osteogenesis). In the embryo, bones form by two processes:",
+        "[b]Intramembranous ossification[/b] forms bone directly from sheet-like layers of embryonic connective tissue (mesenchyme), with no cartilage stage. It produces the [b]flat bones of the skull[/b] (frontal, parietal, parts of the occipital and temporal), most facial bones, the mandible, and part of the clavicle. Steps:",
+        "- Mesenchymal cells cluster and differentiate into osteoblasts at an ossification center.",
+        "- Osteoblasts secrete osteoid, which calcifies. Osteoblasts that become trapped become osteocytes.",
+        "- The new bone forms a network of trabeculae (spongy bone), and blood vessels in the spaces become red marrow.",
+        "- Mesenchyme on the surface condenses into the periosteum, and compact bone forms at the surfaces, sandwiching the spongy bone.",
+        "[b]Endochondral ossification[/b] replaces a model made of [b]hyaline cartilage[/b] with bone. It forms [b]most bones of the body[/b], including all long bones (except part of the clavicle), vertebrae, and the bones of the skull base. Steps:",
+        "- Mesenchyme forms a hyaline cartilage model of the future bone, covered by perichondrium.",
+        "- In the center of the diaphysis, chondrocytes enlarge (hypertrophy), the matrix calcifies, and the chondrocytes die because nutrients can no longer diffuse through. Meanwhile the perichondrium becomes periosteum and forms a collar of compact bone around the diaphysis.",
+        "- Blood vessels and osteogenic cells invade the center (the periosteal bud), forming the [b]primary ossification center[/b], where osteoblasts lay down spongy bone on the calcified cartilage.",
+        "- Osteoclasts break down spongy bone in the center to form the [b]medullary cavity[/b], and ossification spreads toward the ends.",
+        "- Around the time of birth, [b]secondary ossification centers[/b] appear in the epiphyses.",
+        "- Hyaline cartilage remains in only two places: the [b]articular cartilage[/b] and the [b]epiphyseal plates[/b]."
+      ],
+      "tip": "Intramembranous = In a membrane, mostly the flat skull bones. Endochondral = Endo + chondro, \"within cartilage.\"",
+      "clinical": "The skull bones of a newborn are still incompletely ossified, leaving soft membranous fontanels (soft spots) between them. They allow the skull to compress slightly during birth and the brain to grow during infancy.",
+      "figure": {
+        "file": "m07_endochondral.jpg",
+        "caption": "These are the steps of endochondral ossification: (a) a hyaline cartilage model, (b) the matrix calcifies in the center, (c) a nutrient artery brings in the primary ossification center and a periosteum forms, (d) the medullary cavity opens, (e) a secondary ossification center appears in the epiphysis, and (f) cartilage remains only as articular cartilage and the epiphyseal plate.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 6.17, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-4-bone-formation-and-development"
+      }
+    },
+    {
+      "heading": "Bone Growth: The Epiphyseal Plate",
+      "body": [
+        "[b]Growth in length[/b] occurs at the epiphyseal plate. New cartilage is constantly added on the epiphyseal side while older cartilage is replaced by bone on the diaphyseal side, so the plate stays about the same thickness while the diaphysis lengthens. Its zones, from the [b]epiphyseal side toward the diaphysis[/b]:",
+        "- [b]Zone of resting (reserve) cartilage[/b]: small, scattered chondrocytes that anchor the plate to the epiphysis. They are not actively dividing.",
+        "- [b]Zone of proliferating cartilage[/b]: chondrocytes divide rapidly and stack up in columns like coins. This is the zone that actually generates new cells for lengthening.",
+        "- [b]Zone of hypertrophic (maturing) cartilage[/b]: older chondrocytes enlarge.",
+        "- [b]Zone of calcified cartilage[/b]: the matrix calcifies and the chondrocytes die. Osteoclasts dissolve the calcified cartilage, and osteoblasts and capillaries invade from the diaphysis to lay down bone on what remains. Some texts list this final bone-forming region as a separate [b]zone of ossification[/b].",
+        "Hole's and OpenStax name the zones slightly differently (for example, OpenStax combines \"maturation and hypertrophy\" and uses \"calcified matrix\"), but the order is the same.",
+        "Growth ends when the chondrocytes of the plate stop dividing and the cartilage is replaced by bone, leaving the epiphyseal line. This [b]epiphyseal plate closure[/b] typically occurs in the late teens to early twenties, earlier in females than in males.",
+        "[b]Growth in width[/b] (diameter) is called [b]appositional growth[/b]. Osteoblasts beneath the periosteum add new bone to the outer surface, while osteoclasts on the endosteal surface remove bone, enlarging the medullary cavity. This keeps bones from becoming too heavy as they thicken. Appositional growth can continue throughout life."
+      ],
+      "tip": "Plate zones, epiphysis to diaphysis: \"Real People Have Calcium\" (Resting, Proliferating, Hypertrophic, Calcified).",
+      "clinical": "A fracture through the epiphyseal plate in a child can damage the proliferating zone and cause that limb to stop growing early or grow unevenly, so growth-plate fractures need careful follow-up.",
+      "figure": {
+        "file": "m07_epiphyseal_plate.jpg",
+        "caption": "Read the zones from the epiphysis (top) toward the diaphysis: reserve (resting), proliferative, maturation and hypertrophy, and calcified matrix, ending in the zone of ossification. Notice the chondrocytes stacking in columns in the proliferative zone and enlarging below it.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 6.18, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-4-bone-formation-and-development"
+      }
+    },
+    {
+      "heading": "Remodeling and Hormonal Regulation of Calcium",
+      "body": [
+        "Bone is constantly [b]remodeled[/b] throughout life: osteoclasts remove old bone ([b]resorption[/b]) and osteoblasts lay down new bone ([b]deposition[/b]). Remodeling repairs microdamage, reshapes bones in response to stress, and adjusts blood calcium. [b]Wolff's law[/b] states that bone grows or remodels in response to the forces placed on it: heavily used bones become thicker and stronger, while unused bones (as in bed rest, a cast, or spaceflight) lose mass.",
+        "Blood calcium must stay in a narrow range because calcium is needed for nerve impulses, muscle contraction, and blood clotting. Three hormones control it:",
+        "- [b]Parathyroid hormone (PTH)[/b]: released by the [b]parathyroid glands[/b] when blood calcium is [b]low[/b]. It stimulates osteoclast activity (indirectly, by signaling osteoblasts), releasing calcium from bone; increases calcium reabsorption by the kidneys so less is lost in urine; and stimulates the kidneys to produce calcitriol. Net effect: [b]raises[/b] blood calcium.",
+        "- [b]Calcitonin[/b]: released by the parafollicular (C) cells of the [b]thyroid gland[/b] when blood calcium is [b]high[/b]. It inhibits osteoclasts and promotes calcium deposition in bone. Net effect: [b]lowers[/b] blood calcium. Its role is important in children but relatively minor in adults.",
+        "- [b]Calcitriol[/b] (active vitamin D): made in the kidneys (with PTH stimulation). It increases calcium absorption from the small intestine, raising blood calcium.",
+        "Other influences on bone: [b]growth hormone[/b] stimulates cartilage cell division at the epiphyseal plates; [b]thyroid hormone[/b] supports growth; [b]sex hormones[/b] (estrogen and testosterone) promote the adolescent growth spurt and then cause the plates to close; [b]vitamin C[/b] is needed for collagen synthesis; and weight-bearing exercise stimulates deposition."
+      ],
+      "tip": "PTH Pulls calcium out of bone (raises blood calcium). Calcitonin \"tones down\" blood calcium by keeping it in bone.",
+      "clinical": "Hyperparathyroidism (often from a benign parathyroid tumor) causes excessive osteoclast activity, weakening bones and raising blood calcium, which can lead to kidney stones.",
+      "figure": {
+        "file": "m07_calcium.jpg",
+        "caption": "Follow the loop in both directions from normal blood calcium. When calcium rises, the thyroid releases calcitonin and osteoclasts are inhibited; when calcium falls, the parathyroid glands release PTH, so osteoclasts free calcium from bone, the kidneys reabsorb more, and the gut absorbs more through vitamin D (calcitriol).",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 6.24, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-7-calcium-homeostasis-interactions-of-the-skeletal-system-and-other-organ-systems"
+      }
+    },
+    {
+      "heading": "Fractures, Repair, and Osteoporosis",
+      "body": [
+        "A [b]fracture[/b] is a break in a bone. Common classifications:",
+        "- [b]Closed (simple)[/b]: the skin is not broken. [b]Open (compound)[/b]: the bone breaks through the skin, greatly increasing infection risk.",
+        "- [b]Complete[/b] (broken all the way through) versus [b]incomplete[/b].",
+        "- [b]Greenstick[/b]: an incomplete break in which one side bends and the other breaks, common in children whose bones have relatively more collagen.",
+        "- [b]Comminuted[/b]: the bone shatters into three or more fragments, common in older adults with brittle bones.",
+        "- [b]Transverse[/b] (straight across), [b]oblique[/b] (at an angle), and [b]spiral[/b] (caused by twisting forces).",
+        "- [b]Compression[/b]: bone is crushed, common in osteoporotic vertebrae. [b]Depressed[/b]: broken bone pressed inward, typical of skull fractures. [b]Impacted[/b]: one broken end is driven into the other.",
+        "- [b]Colles fracture[/b]: a break of the distal radius, often from falling on an outstretched hand. [b]Pott fracture[/b]: a break at the distal end of the fibula (often with tibial injury) at the ankle.",
+        "[b]Stages of fracture repair[/b]:",
+        "- [b]Hematoma formation[/b]: broken blood vessels bleed and a clot (fracture hematoma) forms. Bone cells deprived of blood die, and the area becomes inflamed.",
+        "- [b]Fibrocartilaginous (soft) callus formation[/b]: capillaries grow into the hematoma, phagocytes clear debris, and fibroblasts and chondroblasts produce collagen fibers and cartilage that bridge the break.",
+        "- [b]Bony (hard) callus formation[/b]: osteoblasts convert the soft callus into spongy bone, typically over several weeks to a couple of months.",
+        "- [b]Remodeling[/b]: osteoclasts remove excess material and compact bone replaces spongy bone at the shaft walls. Over months, the bone returns close to its original shape; a slight thickening may remain.",
+        "[b]Osteoporosis[/b] is a condition in which bone resorption outpaces deposition, so bone mass and density decrease and bones become porous and fragile. Spongy bone is affected first, so common fracture sites are the vertebrae (compression fractures, leading to loss of height and a hunched posture), the hip (femoral neck), and the wrist. Risk factors: being female and postmenopausal (falling [b]estrogen[/b] removes a brake on osteoclast activity), advanced age, low calcium or vitamin D intake, physical inactivity, smoking, excess alcohol, small body frame, and long-term corticosteroid use. Prevention and treatment include weight-bearing exercise, adequate calcium and vitamin D, and medications that slow osteoclasts."
+      ],
+      "tip": "Fracture repair: \"Hello, Soft Hard Remodel\" (Hematoma, Soft callus, Hard callus, Remodeling).",
+      "clinical": "Osteoporosis is different from osteomalacia. In osteoporosis the bone that is present is normally mineralized but there is too little of it. In osteomalacia (rickets in children), the bone matrix is poorly mineralized because of vitamin D or calcium deficiency, so bones are soft.",
+      "figure": {
+        "file": "m07_fracture_repair.jpg",
+        "caption": "The four stages of repair: (a) a fracture hematoma forms, (b) new vessels grow in and a soft callus bridges the break (OpenStax labels it internal and external callus), (c) the soft callus becomes a bony callus of spongy bone, and (d) remodeling leaves a healed fracture.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 6.21, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-5-fractures-bone-repair"
+      }
+    }
+  ],
+  "flashcards": [
+    { "id": "m07_fc01", "term": "Hematopoiesis", "definition": "Blood cell formation; occurs in red bone marrow." },
+    { "id": "m07_fc02", "term": "Hydroxyapatite", "definition": "Calcium phosphate crystals forming about two thirds of bone matrix; provide hardness." },
+    { "id": "m07_fc03", "term": "Role of collagen in bone", "definition": "Organic part of matrix (about one third); provides flexibility and tensile strength so bone is not brittle." },
+    { "id": "m07_fc04", "term": "Short bones", "definition": "Cube-shaped bones about equal in length and width: carpals and tarsals." },
+    { "id": "m07_fc05", "term": "Sesamoid bone", "definition": "Bone that forms within a tendon; the patella is the classic example." },
+    { "id": "m07_fc06", "term": "Diaphysis", "definition": "Shaft of a long bone; compact bone around a medullary cavity." },
+    { "id": "m07_fc07", "term": "Epiphysis", "definition": "Expanded end of a long bone; spongy bone with red marrow inside a thin layer of compact bone." },
+    { "id": "m07_fc08", "term": "Epiphyseal plate", "definition": "Hyaline cartilage growth plate between epiphysis and diaphysis; site of growth in length. Becomes the epiphyseal line in adults." },
+    { "id": "m07_fc09", "term": "Periosteum", "definition": "Membrane covering the outer bone surface except at joints; fibrous outer layer, osteogenic inner layer; anchored by perforating fibers." },
+    { "id": "m07_fc10", "term": "Endosteum", "definition": "Thin membrane lining the medullary cavity and spaces of spongy bone." },
+    { "id": "m07_fc11", "term": "Medullary cavity", "definition": "Hollow center of the diaphysis; contains yellow marrow in adults." },
+    { "id": "m07_fc12", "term": "Articular cartilage", "definition": "Hyaline cartilage covering the joint surfaces of epiphyses." },
+    { "id": "m07_fc13", "term": "Osteon (Haversian system)", "definition": "Structural unit of compact bone: concentric lamellae around a central canal." },
+    { "id": "m07_fc14", "term": "Central (Haversian) canal", "definition": "Lengthwise canal in the center of an osteon carrying blood vessels and nerves." },
+    { "id": "m07_fc15", "term": "Perforating (Volkmann's) canal", "definition": "Canal running perpendicular to the long axis, connecting central canals with each other and with periosteal and marrow vessels." },
+    { "id": "m07_fc16", "term": "Lacuna", "definition": "Small chamber in bone (or cartilage) matrix housing a cell; in bone it holds an osteocyte." },
+    { "id": "m07_fc17", "term": "Canaliculi", "definition": "Tiny channels connecting lacunae to each other and to the central canal; allow nutrient and waste exchange between osteocytes." },
+    { "id": "m07_fc18", "term": "Trabeculae", "definition": "Thin bony plates and rods forming spongy bone; aligned along stress lines; no osteons." },
+    { "id": "m07_fc19", "term": "Osteogenic cell", "definition": "Bone stem cell in periosteum and endosteum; the only bone cell that divides; becomes an osteoblast." },
+    { "id": "m07_fc20", "term": "Osteoblast", "definition": "Bone-forming cell that secretes osteoid (unmineralized matrix)." },
+    { "id": "m07_fc21", "term": "Osteocyte", "definition": "Mature bone cell trapped in a lacuna; maintains matrix and senses stress." },
+    { "id": "m07_fc22", "term": "Osteoclast", "definition": "Large multinucleated cell derived from monocyte/macrophage line; resorbs bone with acid and enzymes." },
+    { "id": "m07_fc23", "term": "Intramembranous ossification", "definition": "Bone forms directly from mesenchyme with no cartilage stage; flat skull bones, mandible, part of clavicle." },
+    { "id": "m07_fc24", "term": "Endochondral ossification", "definition": "Bone replaces a hyaline cartilage model; forms most bones including long bones." },
+    { "id": "m07_fc25", "term": "Zone of proliferating cartilage", "definition": "Epiphyseal plate zone where chondrocytes divide rapidly and stack in columns, driving growth in length." },
+    { "id": "m07_fc26", "term": "Appositional growth", "definition": "Growth in bone width: osteoblasts add bone under the periosteum while osteoclasts enlarge the medullary cavity." },
+    { "id": "m07_fc27", "term": "Wolff's law", "definition": "Bone remodels in response to the mechanical stresses placed on it." },
+    { "id": "m07_fc28", "term": "Parathyroid hormone (PTH)", "definition": "Released when blood calcium is low; increases osteoclast activity, kidney calcium reabsorption, and calcitriol production; raises blood calcium." },
+    { "id": "m07_fc29", "term": "Calcitonin", "definition": "Thyroid hormone released when blood calcium is high; inhibits osteoclasts; lowers blood calcium." },
+    { "id": "m07_fc30", "term": "Greenstick fracture", "definition": "Incomplete fracture where the bone bends on one side and breaks on the other; common in children." },
+    { "id": "m07_fc31", "term": "Comminuted fracture", "definition": "Bone breaks into three or more fragments." },
+    { "id": "m07_fc32", "term": "Osteoporosis", "definition": "Bone resorption exceeds deposition, reducing bone mass; common after menopause due to falling estrogen." }
+  ],
+  "quiz": [
+    {
+      "id": "m07_q01",
+      "type": "multiple_choice",
+      "prompt": "Bone that has had its minerals removed in acid becomes so flexible it can be tied in a knot. Which component remains and is responsible for that flexibility?",
+      "choices": ["Collagen fibers", "Hydroxyapatite crystals", "Calcium carbonate", "Ground substance alone"],
+      "answer": 0,
+      "explanation": "Acid dissolves the mineral salts, leaving the organic collagen framework, which provides flexibility and tensile strength. Hydroxyapatite is the mineral that the acid removed; it is responsible for hardness."
+    },
+    {
+      "id": "m07_q02",
+      "type": "multiple_choice",
+      "prompt": "The carpals of the wrist are classified as which type of bone?",
+      "choices": ["Short bones", "Long bones", "Irregular bones", "Sesamoid bones"],
+      "answer": 0,
+      "explanation": "Carpals and tarsals are short, roughly cube-shaped bones. Irregular bones (vertebrae, some facial bones) have complex shapes. Sesamoid bones form inside tendons."
+    },
+    {
+      "id": "m07_q03",
+      "type": "multiple_choice",
+      "prompt": "Which of these is classified as a long bone?",
+      "choices": ["A phalanx of the finger", "The patella", "A vertebra", "The sternum"],
+      "answer": 0,
+      "explanation": "Long bones are defined by shape (a shaft with two ends), not size, so even the small phalanges are long bones. The patella is sesamoid, a vertebra is irregular, and the sternum is flat."
+    },
+    {
+      "id": "m07_q04",
+      "type": "multiple_choice",
+      "prompt": "An X-ray of a 30-year-old's femur shows a thin line of dense bone near each end. What is it?",
+      "choices": ["The epiphyseal line, a remnant of the growth plate", "An active epiphyseal plate", "A healing fracture", "The nutrient foramen"],
+      "answer": 0,
+      "explanation": "After growth ends, the cartilage of the epiphyseal plate is replaced by bone, leaving the epiphyseal line. An active plate would appear as a dark gap of cartilage, which is not present in a 30-year-old."
+    },
+    {
+      "id": "m07_q05",
+      "type": "multiple_choice",
+      "prompt": "Which structure anchors the periosteum firmly to the underlying bone?",
+      "choices": ["Perforating (Sharpey's) fibers", "Perforating (Volkmann's) canals", "Canaliculi", "Trabeculae"],
+      "answer": 0,
+      "explanation": "Perforating (Sharpey's) fibers are collagen bundles that penetrate from the periosteum into the bone matrix. The similar-sounding perforating (Volkmann's) canals are channels for blood vessels, not anchoring fibers."
+    },
+    {
+      "id": "m07_q06",
+      "type": "multiple_choice",
+      "prompt": "In compact bone, which structures connect the central canals of neighboring osteons and run perpendicular to the long axis of the bone?",
+      "choices": ["Perforating (Volkmann's) canals", "Canaliculi", "Lacunae", "Concentric lamellae"],
+      "answer": 0,
+      "explanation": "Perforating canals run crosswise and carry vessels between central canals and the periosteum and marrow. Canaliculi are much smaller channels that connect individual lacunae to each other and to the central canal within an osteon."
+    },
+    {
+      "id": "m07_q07",
+      "type": "multiple_choice",
+      "prompt": "How do osteocytes deep within a solid osteon receive nutrients?",
+      "choices": ["By diffusion through canaliculi connecting them to the central canal", "From capillaries that run inside each lacuna", "Directly from the periosteum by diffusion through the matrix", "By absorbing yellow marrow"],
+      "answer": 0,
+      "explanation": "Mineralized matrix is impermeable, so osteocytes rely on a network of canaliculi, linked by gap junctions between osteocyte processes, to pass nutrients outward from the central canal's vessels. Lacunae do not contain capillaries."
+    },
+    {
+      "id": "m07_q08",
+      "type": "multiple_choice",
+      "prompt": "Which statement about spongy bone is correct?",
+      "choices": ["It is made of trabeculae and lacks osteons", "It is organized into osteons with central canals", "It forms the walls of the diaphysis", "It never contains red marrow"],
+      "answer": 0,
+      "explanation": "Spongy bone is a lattice of trabeculae without osteons; its cells are nourished from the marrow spaces. Compact bone, not spongy bone, has osteons and forms the diaphysis wall. Red marrow is typically found within spongy bone."
+    },
+    {
+      "id": "m07_q09",
+      "type": "multiple_choice",
+      "prompt": "Which bone cell type is the only one capable of cell division?",
+      "choices": ["Osteogenic (osteoprogenitor) cell", "Osteoblast", "Osteocyte", "Osteoclast"],
+      "answer": 0,
+      "explanation": "Osteogenic cells are the stem cells of bone and divide to produce osteoblasts. Osteoblasts are tempting because they are active builders, but they do not divide."
+    },
+    {
+      "id": "m07_q10",
+      "type": "multiple_choice",
+      "prompt": "A large cell with several nuclei is found on a bone surface in a shallow pit, releasing acid and enzymes. What is it?",
+      "choices": ["Osteoclast", "Osteoblast", "Osteocyte", "Chondrocyte"],
+      "answer": 0,
+      "explanation": "Osteoclasts are multinucleated and resorb bone by secreting acid (dissolving mineral) and enzymes (digesting collagen). Osteoblasts are single-nucleus cells that build bone."
+    },
+    {
+      "id": "m07_q11",
+      "type": "multiple_choice",
+      "prompt": "Which bone forms by intramembranous ossification?",
+      "choices": ["Parietal bone", "Femur", "Vertebra", "Humerus"],
+      "answer": 0,
+      "explanation": "Flat bones of the skull such as the parietal bones form directly from mesenchyme without a cartilage model. The femur, humerus, and vertebrae form by endochondral ossification from hyaline cartilage."
+    },
+    {
+      "id": "m07_q12",
+      "type": "multiple_choice",
+      "prompt": "In which zone of the epiphyseal plate do chondrocytes divide rapidly and stack into columns, directly causing growth in length?",
+      "choices": ["Zone of proliferating cartilage", "Zone of resting cartilage", "Zone of hypertrophic cartilage", "Zone of calcified cartilage"],
+      "answer": 0,
+      "explanation": "Proliferation (cell division) is what drives lengthening. The resting zone is tempting because it supplies cells, but its chondrocytes are not actively dividing; they mainly anchor the plate to the epiphysis."
+    },
+    {
+      "id": "m07_q13",
+      "type": "multiple_choice",
+      "prompt": "Blood calcium drops below normal. Which response is expected?",
+      "choices": ["The parathyroid glands release PTH, increasing osteoclast activity", "The thyroid releases calcitonin, increasing osteoclast activity", "The parathyroid glands release PTH, decreasing kidney calcium reabsorption", "Osteoblasts increase calcium deposition in bone"],
+      "answer": 0,
+      "explanation": "Low calcium triggers PTH, which increases bone resorption, increases kidney reabsorption of calcium, and boosts calcitriol production. Calcitonin is released when calcium is high and inhibits osteoclasts, the opposite effect."
+    },
+    {
+      "id": "m07_q14",
+      "type": "multiple_choice",
+      "prompt": "Which hormone increases the absorption of calcium from the small intestine?",
+      "choices": ["Calcitriol", "Calcitonin", "Growth hormone", "Insulin"],
+      "answer": 0,
+      "explanation": "Calcitriol, the active form of vitamin D made in the kidneys, increases intestinal calcium absorption. PTH contributes indirectly by stimulating calcitriol production, but calcitriol is the hormone acting on the intestine. Calcitonin lowers blood calcium."
+    },
+    {
+      "id": "m07_q15",
+      "type": "multiple_choice",
+      "prompt": "An astronaut returns from six months in space with reduced bone density in the legs. Which principle explains this?",
+      "choices": ["Wolff's law: bone remodels according to the stress placed on it", "Appositional growth continues only in childhood", "Calcitonin levels rise in microgravity", "Endochondral ossification reverses without gravity"],
+      "answer": 0,
+      "explanation": "Without weight-bearing stress, resorption exceeds deposition and bone is lost, as Wolff's law predicts. Appositional growth actually continues throughout life, and endochondral ossification is a developmental process, not something that reverses."
+    },
+    {
+      "id": "m07_q16",
+      "type": "multiple_choice",
+      "prompt": "A 7-year-old falls from a tree. The X-ray shows the radius bent and cracked on one side only. What type of fracture is this?",
+      "choices": ["Greenstick", "Comminuted", "Compression", "Spiral"],
+      "answer": 0,
+      "explanation": "A greenstick fracture is an incomplete break in which one side bends and the other breaks, common in children whose bones contain relatively more collagen. Comminuted fractures shatter into fragments and are more typical in older adults."
+    },
+    {
+      "id": "m07_q17",
+      "type": "multiple_choice",
+      "prompt": "A 70-year-old woman has lost two inches of height and has a hunched upper back. Which condition and mechanism are most likely?",
+      "choices": ["Osteoporosis with vertebral compression fractures from reduced estrogen", "Osteomalacia from too much collagen", "Rickets from excess vitamin D", "Hyperparathyroidism from too little PTH"],
+      "answer": 0,
+      "explanation": "After menopause, falling estrogen allows osteoclast activity to outpace deposition. Vertebrae, rich in spongy bone, collapse in compression fractures, causing height loss and a hunched posture. Osteomalacia is poor mineralization, not excess collagen, and rickets results from too little vitamin D."
+    },
+    {
+      "id": "m07_q18",
+      "type": "true_false",
+      "prompt": "In adults, the medullary cavity of a long bone is filled mainly with yellow marrow.",
+      "answer": true,
+      "explanation": "In adults, the medullary cavity holds yellow (fatty) marrow. Red marrow persists mainly in spongy bone of flat and irregular bones and the proximal epiphyses of the femur and humerus."
+    },
+    {
+      "id": "m07_q19",
+      "type": "true_false",
+      "prompt": "Calcitonin raises blood calcium by stimulating osteoclasts to break down bone.",
+      "answer": false,
+      "explanation": "Calcitonin lowers blood calcium by inhibiting osteoclasts. PTH is the hormone that raises blood calcium by increasing bone resorption."
+    },
+    {
+      "id": "m07_q20",
+      "type": "true_false",
+      "prompt": "Osteoclasts arise from the same stem cell line as osteoblasts and osteocytes.",
+      "answer": false,
+      "explanation": "Osteoblasts and osteocytes come from osteogenic (mesenchymal) cells. Osteoclasts form by fusion of cells from the monocyte/macrophage line of the bone marrow."
+    },
+    {
+      "id": "m07_q21",
+      "type": "ordering",
+      "prompt": "Order the stages of fracture repair from first to last.",
+      "items": ["Fracture hematoma forms", "Fibrocartilaginous (soft) callus forms", "Bony (hard) callus forms", "Bone is remodeled"],
+      "explanation": "A blood clot forms first, then fibroblasts and chondroblasts build a soft callus of collagen and cartilage, which osteoblasts convert to a bony callus of spongy bone. Finally osteoclasts and osteoblasts remodel the area toward its original shape."
+    },
+    {
+      "id": "m07_q22",
+      "type": "ordering",
+      "prompt": "Order the zones of the epiphyseal plate from the epiphyseal side to the diaphyseal side.",
+      "items": ["Zone of resting cartilage", "Zone of proliferating cartilage", "Zone of hypertrophic cartilage", "Zone of calcified cartilage"],
+      "explanation": "Resting cells anchor the plate near the epiphysis, proliferating cells divide in columns, hypertrophic cells enlarge, and the matrix calcifies near the diaphysis, where bone replaces it. Mnemonic: Real People Have Calcium."
+    },
+    {
+      "id": "m07_q23",
+      "type": "ordering",
+      "prompt": "Order these events of endochondral ossification from first to last.",
+      "items": ["A hyaline cartilage model forms", "Chondrocytes in the diaphysis enlarge, the matrix calcifies, and a bone collar forms", "Blood vessels invade and a primary ossification center forms in the diaphysis", "The medullary cavity forms and secondary ossification centers appear in the epiphyses", "Hyaline cartilage remains only as articular cartilage and epiphyseal plates"],
+      "explanation": "The cartilage model comes first. Calcification in the center and the periosteal bone collar precede the invasion of vessels that creates the primary ossification center. The medullary cavity and secondary centers follow, leaving cartilage only at the joint surfaces and growth plates."
+    }
+  ]
+}

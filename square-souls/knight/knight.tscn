@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://b40uy7v03502l"]
+
+[ext_resource type="Script" uid="uid://l0evc823j6k5" path="res://knight/knight.gd" id="1_knight"]
+[ext_resource type="PackedScene" uid="uid://cmv2h0w2ao7wt" path="res://Knight.glb" id="2_model"]
+[ext_resource type="PackedScene" uid="uid://bwj6vipvs84ch" path="res://Sword.glb" id="3_sword"]
+[ext_resource type="PackedScene" uid="uid://dk3k4svf5hp76" path="res://Shield.glb" id="4_shield"]
+[ext_resource type="Script" path="res://characters/character_state_machine.gd" id="5_sm"]
+[ext_resource type="Script" path="res://knight/states/knight_idle.gd" id="6_idle"]
+[ext_resource type="Script" path="res://knight/states/knight_walk.gd" id="7_walk"]
+[ext_resource type="Script" path="res://knight/states/knight_attack.gd" id="8_attack"]
+
+[sub_resource type="CapsuleShape3D" id="Capsule_body"]
+radius = 0.3
+height = 5.0
+
+[node name="Knight" type="CharacterBody3D" unique_id=934054070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5103273, -0.44933164, 0)
+script = ExtResource("1_knight")
+target_height = 5.0
+feet_offset = 0.2
+sword_offset = Vector3(0, 0.25, 0)
+sword_rotation = Vector3(0, 90, 90)
+sword_scale = 1.0
+shield_offset = Vector3(-0.3, 0.2, -0.2)
+shield_rotation = Vector3(0, 270, -90)
+shield_scale = 0.8
+
+[node name="Model" parent="." unique_id=1332436878 instance=ExtResource("2_model")]
+transform = Transform3D(-1.0840509, 0, -9.477074e-08, 0, 1.0840509, 0, 9.477074e-08, 0, -1.0840509, 30.116306, 3.8301046, -7.8452883)
+
+[node name="Skeleton3D" parent="Model/RootNode/Armature" parent_id_path=PackedInt32Array(1332436878, 1786004801) index="0" unique_id=141625668]
+bones/6/rotation = Quaternion(0.011704078, -0.00036882889, -0.44801366, 0.89395)
+bones/11/rotation = Quaternion(0.011704068, 0.00036877906, 0.44801366, 0.89395)
+
+[node name="Hand_L_end" parent="Model/RootNode/Armature/Skeleton3D" index="1" unique_id=432860106]
+transform = Transform3D(-0.97257656, 0.22937293, 0.03850098, -0.028590562, 0.04637544, -0.9985144, -0.23081772, -0.97223294, -0.03854578, 0.01093924, -4.4152635e-05, -0.0027744824)
+
+[node name="Hand_R_end" parent="Model/RootNode/Armature/Skeleton3D" index="2" unique_id=320510372]
+transform = Transform3D(-0.9725763, -0.22937316, -0.03850097, 0.028590512, 0.046375487, -0.9985145, 0.23081776, -0.9722326, -0.03854582, -0.0097647775, -4.415342e-05, -0.0027744777)
+
+[node name="Bounds" type="CollisionShape3D" parent="." unique_id=2024632451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+shape = SubResource("Capsule_body")
+
+[node name="Sword" parent="." unique_id=803671578 instance=ExtResource("3_sword")]
+transform = Transform3D(0.22937268, 0.038501225, 0.97257686, -0.9722332, -0.038545586, 0.23081754, 0.046375293, -0.9985149, 0.028590862, 1.0973363, 2.341289, 0.28731436)
+
+[node name="Shield" parent="." unique_id=1936767303 instance=ExtResource("4_shield")]
+transform = Transform3D(0.18349917, -0.030800058, -0.77806133, 0.7777863, -0.030836692, 0.18465503, -0.037100274, -0.7988119, 0.022871695, -1.3699446, 2.466855, 0.4932757)
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("5_sm")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("6_idle")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("7_walk")
+
+[node name="Attack" type="Node" parent="StateMachine"]
+script = ExtResource("8_attack")
+
+[editable path="Model"]

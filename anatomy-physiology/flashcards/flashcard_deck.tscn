@@ -1,0 +1,97 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://flashcards/flashcard_deck.gd" id="1_deck"]
+
+[sub_resource type="InputEventKey" id="key_space"]
+keycode = 32
+
+[sub_resource type="Shortcut" id="flip_shortcut"]
+events = [SubResource("key_space")]
+
+[sub_resource type="InputEventKey" id="key_one"]
+keycode = 49
+
+[sub_resource type="Shortcut" id="still_learning_shortcut"]
+events = [SubResource("key_one")]
+
+[sub_resource type="InputEventKey" id="key_two"]
+keycode = 50
+
+[sub_resource type="Shortcut" id="know_it_shortcut"]
+events = [SubResource("key_two")]
+
+[node name="FlashcardDeck" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_deck")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Toolbar" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Counter" type="Label" parent="Layout/Toolbar"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Card 1 of 1"
+
+[node name="DefinitionFirst" type="CheckButton" parent="Layout/Toolbar"]
+layout_mode = 2
+tooltip_text = "Show the definition and recall the term."
+text = "Definition first"
+
+[node name="HideKnown" type="CheckButton" parent="Layout/Toolbar"]
+layout_mode = 2
+tooltip_text = "Leave out cards you have already marked as known."
+text = "Hide known cards"
+
+[node name="Restart" type="Button" parent="Layout/Toolbar"]
+layout_mode = 2
+text = "Shuffle & restart"
+
+[node name="Card" type="Button" parent="Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_type_variation = &"FlashcardFace"
+shortcut = SubResource("flip_shortcut")
+shortcut_feedback = false
+shortcut_in_tooltip = false
+text = "Term"
+autowrap_mode = 3
+
+[node name="Hint" type="Label" parent="Layout"]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "Click the card or press Space to flip it."
+horizontal_alignment = 1
+
+[node name="Grading" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 16
+
+[node name="StillLearning" type="Button" parent="Layout/Grading"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+focus_mode = 0
+shortcut = SubResource("still_learning_shortcut")
+text = "Still learning  (1)"
+
+[node name="KnowIt" type="Button" parent="Layout/Grading"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"AccentButton"
+shortcut = SubResource("know_it_shortcut")
+text = "Know it  (2)"

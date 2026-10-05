@@ -1,0 +1,139 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://lesson/lesson_view.gd" id="1_lesson"]
+[ext_resource type="PackedScene" path="res://lesson/figure_card.tscn" id="2_figure"]
+[ext_resource type="PackedScene" path="res://lesson/callout.tscn" id="3_callout"]
+
+[sub_resource type="InputEventKey" id="key_left"]
+keycode = 4194319
+
+[sub_resource type="Shortcut" id="previous_shortcut"]
+events = [SubResource("key_left")]
+
+[sub_resource type="InputEventKey" id="key_right"]
+keycode = 4194321
+
+[sub_resource type="Shortcut" id="next_shortcut"]
+events = [SubResource("key_right")]
+
+[node name="LessonView" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_lesson")
+
+[node name="Outline" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(290, 0)
+layout_mode = 2
+theme_type_variation = &"OutlinePanel"
+
+[node name="Layout" type="VBoxContainer" parent="Outline"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Heading" type="Label" parent="Outline/Layout"]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "SECTIONS"
+
+[node name="ReadCount" type="Label" parent="Outline/Layout"]
+layout_mode = 2
+text = "0 of 0 complete"
+
+[node name="ReadProgress" type="ProgressBar" parent="Outline/Layout"]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+max_value = 1.0
+show_percentage = false
+
+[node name="Sections" type="ScrollContainer" parent="Outline/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Entries" type="VBoxContainer" parent="Outline/Layout/Sections"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="Page" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 18
+
+[node name="Layout" type="VBoxContainer" parent="Page"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Breadcrumb" type="Label" parent="Page/Layout"]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "Section 1 of 1"
+
+[node name="Heading" type="Label" parent="Page/Layout"]
+layout_mode = 2
+theme_type_variation = &"SectionHeading"
+text = "Section heading"
+autowrap_mode = 3
+
+[node name="Reading" type="ScrollContainer" parent="Page/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Content" type="VBoxContainer" parent="Page/Layout/Reading"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 18
+
+[node name="Figure" parent="Page/Layout/Reading/Content" instance=ExtResource("2_figure")]
+layout_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="Page/Layout/Reading/Content"]
+layout_mode = 2
+focus_mode = 0
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+selection_enabled = true
+
+[node name="Tip" parent="Page/Layout/Reading/Content" instance=ExtResource("3_callout")]
+layout_mode = 2
+
+[node name="Clinical" parent="Page/Layout/Reading/Content" instance=ExtResource("3_callout")]
+layout_mode = 2
+is_clinical = true
+
+[node name="Navigation" type="HBoxContainer" parent="Page/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Previous" type="Button" parent="Page/Layout/Navigation"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+focus_mode = 0
+shortcut = SubResource("previous_shortcut")
+shortcut_in_tooltip = false
+text = "←  Back"
+
+[node name="Pages" type="Label" parent="Page/Layout/Navigation"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"PageDots"
+text = "● ○ ○"
+horizontal_alignment = 1
+
+[node name="Next" type="Button" parent="Page/Layout/Navigation"]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"AccentButton"
+shortcut = SubResource("next_shortcut")
+shortcut_in_tooltip = false
+text = "Next  →"

@@ -1,0 +1,31 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://main/main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://menu/module_menu.tscn" id="2_menu"]
+[ext_resource type="PackedScene" path="res://profiles/profile_select.tscn" id="5_profiles"]
+[ext_resource type="PackedScene" path="res://module_study/module_study.tscn" id="3_study"]
+[ext_resource type="PackedScene" path="res://review/review_session.tscn" id="4_review"]
+
+[node name="StudyGuide" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main")
+
+[node name="ProfileSelect" parent="." instance=ExtResource("5_profiles")]
+layout_mode = 1
+
+[node name="ModuleMenu" parent="." instance=ExtResource("2_menu")]
+visible = false
+layout_mode = 1
+
+[node name="ModuleStudy" parent="." instance=ExtResource("3_study")]
+visible = false
+layout_mode = 1
+
+[node name="ReviewSession" parent="." instance=ExtResource("4_review")]
+visible = false
+layout_mode = 1

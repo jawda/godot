@@ -1,0 +1,37 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://quiz/ordering_item.gd" id="1_item"]
+
+[node name="OrderingItem" type="PanelContainer"]
+size_flags_horizontal = 3
+theme_type_variation = &"OrderingCard"
+script = ExtResource("1_item")
+
+[node name="Layout" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Position" type="Label" parent="Layout"]
+custom_minimum_size = Vector2(28, 0)
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "1"
+horizontal_alignment = 1
+
+[node name="Text" type="Label" parent="Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Item"
+autowrap_mode = 3
+
+[node name="MoveUp" type="Button" parent="Layout"]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+tooltip_text = "Move up"
+text = "▲"
+
+[node name="MoveDown" type="Button" parent="Layout"]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+tooltip_text = "Move down"
+text = "▼"

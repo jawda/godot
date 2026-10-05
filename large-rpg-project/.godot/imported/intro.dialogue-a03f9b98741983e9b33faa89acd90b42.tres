@@ -1,0 +1,176 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_a3lv8"]
+
+[resource]
+script = ExtResource("1_a3lv8")
+using_states = PackedStringArray()
+cues = {
+"start": "2"
+}
+character_names = PackedStringArray("Mira", "Bren", "Stranger")
+first_cue = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "2",
+&"type": "cue"
+},
+"1": {
+&"id": "1",
+&"next_id": "2",
+&"type": ""
+},
+"10": {
+&"character": "Bren",
+&"id": "10",
+&"next_id": "11",
+&"static_id": "",
+&"text": "Right behind you.",
+&"type": "dialogue"
+},
+"11": {
+&"id": "11",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"12": {
+&"id": "12",
+&"next_id": "13",
+&"static_id": "",
+&"text": "Up into the hills",
+&"type": "response"
+},
+"13": {
+&"character": "Bren",
+&"id": "13",
+&"next_id": "14",
+&"static_id": "",
+&"text": "The hills are a long climb.",
+&"type": "dialogue"
+},
+"14": {
+&"character": "Mira",
+&"id": "14",
+&"next_id": "15",
+&"static_id": "",
+&"text": "She does love to climb, though. Worth a try.",
+&"type": "dialogue"
+},
+"15": {
+&"id": "15",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"16": {
+&"id": "16",
+&"next_id": "17",
+&"static_id": "",
+&"text": "I haven't seen your cat",
+&"type": "response"
+},
+"17": {
+&"character": "Mira",
+&"id": "17",
+&"next_id": "18",
+&"static_id": "",
+&"text": "...You're not very helpful, are you?",
+&"type": "dialogue"
+},
+"18": {
+&"character": "Bren",
+&"id": "18",
+&"next_id": "19",
+&"static_id": "",
+&"text": "Be nice. Not everyone's a cat person.",
+&"type": "dialogue"
+},
+"19": {
+&"id": "19",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"2": {
+&"character": "Mira",
+&"id": "2",
+&"next_id": "3",
+&"static_id": "",
+&"text": "Oh! You startled me.",
+&"type": "dialogue"
+},
+"20": {
+&"id": "20",
+&"next_id": "21",
+&"type": ""
+},
+"21": {
+&"id": "21",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"3": {
+&"character": "Mira",
+&"id": "3",
+&"next_id": "4",
+&"static_id": "",
+&"text": "I've been looking everywhere for my cat. Have you seen her?",
+&"type": "dialogue"
+},
+"4": {
+&"character": "Bren",
+&"id": "4",
+&"next_id": "5",
+&"static_id": "",
+&"text": "Which way did she run off to?",
+&"type": "dialogue"
+},
+"5": {
+&"character": "Stranger",
+&"id": "5",
+&"next_id": "6",
+&"static_id": "",
+&"text": "Who am I? Why am I here?",
+&"type": "dialogue"
+},
+"6": {
+&"character": "Mira",
+&"id": "6",
+&"next_id": "7",
+&"static_id": "",
+&"text": "That's just it — I'm honestly not sure.",
+&"type": "dialogue"
+},
+"7": {
+&"character": "Mira",
+&"id": "7",
+&"next_id": "8",
+&"static_id": "",
+&"text": "Which way do you think we should look?",
+&"type": "dialogue"
+},
+"8": {
+&"id": "8",
+&"next_id": "9",
+&"responses": PackedStringArray("8", "12", "16"),
+&"static_id": "",
+&"text": "Toward the river",
+&"type": "response"
+},
+"9": {
+&"character": "Mira",
+&"id": "9",
+&"next_id": "10",
+&"static_id": "",
+&"text": "The river? Oh no, she hates getting wet. Let's hurry!",
+&"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "3.10.1"

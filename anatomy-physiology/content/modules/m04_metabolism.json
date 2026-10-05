@@ -1,0 +1,671 @@
+{
+  "id": "m04_metabolism",
+  "order": 4,
+  "course": "A&P I",
+  "title": "Cellular Metabolism and Protein Synthesis",
+  "summary": "How enzymes control metabolism, how cells turn glucose into ATP, and how DNA is copied and used to build proteins.",
+  "objectives": [
+    "Distinguish anabolism from catabolism and connect each to dehydration synthesis and hydrolysis",
+    "Explain how enzymes work, including the active site, cofactors, coenzymes, regulation, and denaturation",
+    "Explain how ATP transfers energy within the cell",
+    "Describe glycolysis, the citric acid cycle, and the electron transport chain, including where each occurs and what it produces",
+    "Compare aerobic and anaerobic pathways and their ATP yields",
+    "Describe the structure of DNA and the steps of DNA replication",
+    "Describe transcription and translation, including the roles of mRNA, tRNA, rRNA, codons, and anticodons",
+    "Explain how different types of mutations affect proteins"
+  ],
+  "lesson": [
+    {
+      "heading": "Metabolism, Anabolism, Catabolism, and ATP",
+      "body": [
+        "[b]Metabolism[/b] is the sum of all chemical reactions in the body. It has two complementary parts:",
+        "- [b]Anabolism[/b]: building larger molecules from smaller ones. These reactions [b]require energy[/b]. They use [b]dehydration synthesis[/b], which removes water to join building blocks: monosaccharides into glycogen, glycerol and fatty acids into triglycerides, amino acids into proteins, and nucleotides into nucleic acids.",
+        "- [b]Catabolism[/b]: breaking larger molecules into smaller ones. These reactions [b]release energy[/b]. They use [b]hydrolysis[/b], which adds water to break bonds, as in digestion. (The breakdown of glucose for energy is also catabolic, but it works mainly by oxidation, removing electrons and hydrogen, rather than by hydrolysis.)",
+        "The two are linked by ATP: catabolic reactions release energy that is captured in ATP, and anabolic reactions spend that ATP. A cell's metabolism is organized into [b]metabolic pathways[/b], sequences of enzyme-controlled reactions in which the product of one reaction becomes the substrate for the next.",
+        "[b]ATP[/b] (adenosine triphosphate) consists of adenine, ribose, and three phosphate groups. The bonds linking the second and third phosphates hold energy that is easy to release. When the terminal phosphate is removed by hydrolysis, energy is released for cellular work and ATP becomes [b]ADP[/b] plus an inorganic phosphate (Pi).",
+        "Cells do not store much ATP. Instead, they continually regenerate it: energy released by catabolism of glucose and other fuels is used to reattach a phosphate to ADP. This reaction is called [b]phosphorylation[/b]. When a phosphate is transferred from ATP to another molecule, that molecule is energized for the next step of a pathway.",
+        "Energy release from glucose is not 100 percent efficient. Only part of the energy (often cited as roughly 40 percent) is captured in ATP; the rest is released as [b]heat[/b], which helps maintain body temperature."
+      ],
+      "tip": "Anabolic steroids build muscle: anabolism builds. Catabolism is like a \"cat\" knocking things apart. ATP is a rechargeable battery: ATP is charged, ADP is partly drained, and catabolism is the charger.",
+      "figure": {
+        "file": "m04_metabolism.jpg",
+        "caption": "Catabolism breaks food down into small building blocks and releases energy; anabolism assembles those blocks into larger molecules and requires energy. ATP is the link that carries energy from the first process to the second.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 1.6, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-3-functions-of-human-life"
+      }
+    },
+    {
+      "heading": "Enzymes in Depth",
+      "body": [
+        "[b]Enzymes[/b] are catalysts, almost always proteins, that speed reactions by lowering [b]activation energy[/b]. They are not consumed and can be reused many times. A cell's metabolism is controlled largely by which enzymes it makes and how active they are.",
+        "- [b]Active site[/b]: the region of the enzyme where the [b]substrate[/b] binds. Its shape and chemistry match a specific substrate, which explains enzyme specificity. When the substrate binds, it forms an [b]enzyme-substrate complex[/b]. The enzyme often changes shape slightly to grip the substrate (the [i]induced fit[/i] model, a refinement of the older lock-and-key model). The reaction occurs, the products are released, and the enzyme returns to its original shape.",
+        "- [b]Cofactors[/b]: nonprotein helpers some enzymes need to function. Cofactors can be metal ions such as zinc, iron, copper, or magnesium. [b]Coenzymes[/b] are organic cofactors, and many are made from [b]vitamins[/b]. NAD⁺ (from niacin) and FAD (from riboflavin) carry electrons and hydrogen in cellular respiration; coenzyme A (from pantothenic acid) carries acetyl groups into the citric acid cycle. This is why vitamin deficiencies can disrupt metabolism.",
+        "- [b]Regulation[/b]: a metabolic pathway's speed is often set by one [b]rate-limiting enzyme[/b], typically the one that catalyzes the slowest step, often near the start of the pathway. Often, the final product of a pathway inhibits the rate-limiting enzyme, so as product builds up the pathway slows down. This is [b]negative feedback[/b] (also called feedback inhibition). Cells also regulate enzymes by changing how much enzyme they make.",
+        "- [b]Factors affecting enzyme activity[/b]: substrate concentration (more substrate speeds the reaction until all enzymes are busy, or saturated), enzyme concentration, temperature, and pH. Each enzyme has an optimal temperature and pH; pepsin in the stomach works best at a very acidic pH, while most enzymes work best near pH 7.",
+        "- [b]Denaturation[/b]: heat, radiation, extreme pH, or certain chemicals can disrupt the weak bonds that hold an enzyme's three-dimensional shape. The active site loses its shape, so the substrate no longer fits and the enzyme stops working. Denaturation is often permanent."
+      ],
+      "tip": "Cofactor = co-worker the enzyme needs. If the co-worker is an organic molecule (often made from a vitamin), call it a coenzyme. Remember \"NAD from Niacin\" and \"FAD from riboFlAvin\".",
+      "clinical": "Many drugs work by inhibiting enzymes. Statins lower cholesterol by inhibiting HMG-CoA reductase, the rate-limiting enzyme in cholesterol synthesis. In phenylketonuria (PKU), a defective enzyme cannot convert the amino acid phenylalanine, which builds up and can damage the developing brain unless diet is controlled.",
+      "figure": {
+        "file": "m04_activation_energy.jpg",
+        "caption": "Compare the height of the hill in each graph: the enzyme lowers the activation energy needed to start the reaction. Notice that the starting reactants and the final product are at the same energy levels in both graphs; the enzyme changes only the barrier, not the overall reaction.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 2.13, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/2-3-chemical-reactions"
+      }
+    },
+    {
+      "heading": "Cellular Respiration Overview and Glycolysis",
+      "body": [
+        "[b]Cellular respiration[/b] is the catabolism of glucose (and other fuels) to release energy and make ATP. The overall equation for complete aerobic breakdown of glucose is:",
+        "- C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + energy (ATP and heat)",
+        "This happens in three linked stages: [b]glycolysis[/b], the [b]citric acid cycle[/b], and the [b]electron transport chain[/b]. Along the way, high-energy electrons and hydrogen are removed from fuel molecules and carried by the coenzymes [b]NAD⁺[/b] (which becomes NADH) and [b]FAD[/b] (which becomes FADH₂). These carriers deliver electrons to the electron transport chain, where most ATP is made.",
+        "[b]Glycolysis[/b] (\"sugar splitting\") is the first stage.",
+        "- Location: the [b]cytosol[/b].",
+        "- Oxygen: [b]not required[/b] (anaerobic).",
+        "- What happens: one six-carbon glucose is split into two three-carbon molecules of [b]pyruvic acid[/b] (pyruvate). The pathway uses 2 ATP early on (an energy investment) and produces 4 ATP later.",
+        "- Net yield per glucose: [b]2 ATP[/b], [b]2 NADH[/b], and [b]2 pyruvic acid[/b].",
+        "What happens to pyruvic acid next depends on whether enough oxygen is available."
+      ],
+      "tip": "Glyco-lysis literally means glucose splitting. Its numbers are all 2: net 2 ATP, 2 NADH, 2 pyruvic acid.",
+      "figure": {
+        "file": "m04_cellular_respiration.jpg",
+        "caption": "Follow glucose from top to bottom: glycolysis splits it into two pyruvate molecules in the cytoplasm, then pyruvate becomes acetyl CoA, enters the Krebs (citric acid) cycle in the matrix, and the electrons removed along the way drive most ATP production on the inner mitochondrial membrane.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 24.4, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-2-carbohydrate-metabolism"
+      }
+    },
+    {
+      "heading": "Anaerobic vs Aerobic Pathways",
+      "body": [
+        "[b]Anaerobic pathway (lactic acid formation)[/b]: when oxygen is in short supply, such as during intense exercise, pyruvic acid accepts hydrogen from NADH and becomes [b]lactic acid[/b] (lactate). This regenerates NAD⁺, which glycolysis needs to keep running. The cell therefore keeps producing a small amount of ATP, only the [b]net 2 ATP from glycolysis[/b] per glucose. Lactic acid diffuses into the blood, and the liver can later convert it back into glucose when oxygen is available. The extra oxygen needed afterward to process lactic acid and restore cell energy stores is called the [i]oxygen debt[/i].",
+        "[b]Aerobic pathway[/b]: when oxygen is available, pyruvic acid enters the [b]mitochondria[/b]. Each pyruvic acid loses one carbon as CO₂ and joins coenzyme A to form [b]acetyl CoA[/b], producing an NADH in the process. Acetyl CoA enters the citric acid cycle, and the electrons collected are passed down the electron transport chain to oxygen. This pathway produces far more ATP than glycolysis alone.",
+        "[b]ATP yield per glucose[/b]: textbooks differ. Modern estimates, used by OpenStax and many current texts, give about [b]30 to 32 ATP[/b] for complete aerobic respiration. Older texts, and some editions of Hole's, give [b]36 to 38 ATP[/b]. The difference comes from how much ATP is credited to each NADH and FADH₂ and the cost of moving molecules into mitochondria. Use the number your instructor uses on exams; the key idea is that aerobic respiration yields roughly 15 times more ATP than anaerobic glycolysis alone."
+      ],
+      "clinical": "Blood lactate levels rise in conditions where tissues do not get enough oxygen, such as shock or severe infection (sepsis). Hospitals measure lactate as a sign of how poorly tissues are being oxygenated.",
+      "figure": {
+        "file": "m04_muscle_metabolism.jpg",
+        "caption": "Panel (b) shows glycolysis making a net 2 ATP and 2 pyruvic acid (pyruvate); with oxygen the pyruvate goes on to aerobic respiration, and without oxygen it becomes lactic acid that enters the blood. Panel (c) shows aerobic respiration in mitochondria producing far more ATP, along with heat, CO₂, and water.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 10.12, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation"
+      }
+    },
+    {
+      "heading": "Citric Acid Cycle and Electron Transport Chain",
+      "body": [
+        "[b]Citric acid cycle[/b] (also called the Krebs cycle or TCA cycle):",
+        "- Location: the [b]mitochondrial matrix[/b] (the fluid inside the inner membrane).",
+        "- What happens: acetyl CoA (two carbons) combines with a four-carbon molecule (oxaloacetic acid) to form six-carbon [b]citric acid[/b]. Through a series of reactions, the carbons are removed as [b]CO₂[/b], and the four-carbon starting molecule is regenerated, so the cycle can turn again.",
+        "- Each glucose produces two acetyl CoA, so the cycle turns [b]twice per glucose[/b]. Per glucose it produces [b]2 ATP[/b] (made as GTP in some cells), [b]6 NADH[/b], [b]2 FADH₂[/b], and [b]4 CO₂[/b].",
+        "- The cycle itself makes little ATP directly. Its main job is to strip high-energy electrons from fuel and load them onto NADH and FADH₂. The CO₂ you exhale comes from this stage and from the formation of acetyl CoA.",
+        "[b]Electron transport chain (ETC)[/b]:",
+        "- Location: the [b]inner mitochondrial membrane[/b] (the cristae).",
+        "- What happens: NADH and FADH₂ deliver electrons to a series of protein carriers in the membrane. As electrons pass down the chain, they release energy that is used to pump hydrogen ions (H⁺) across the inner membrane, building up a concentration gradient. The H⁺ then flows back through the enzyme [b]ATP synthase[/b], which uses that flow to make ATP from ADP and phosphate. This mechanism is called [b]chemiosmosis[/b] (oxidative phosphorylation).",
+        "- [b]Oxygen is the final electron acceptor[/b]. At the end of the chain, oxygen combines with electrons and hydrogen ions to form [b]water[/b]. Without oxygen, electrons back up, the chain stops, and the cell must rely on glycolysis alone.",
+        "- The ETC produces the [b]large majority[/b] of the ATP from aerobic respiration."
+      ],
+      "tip": "Location summary: glycolysis happens in the cytosol, outside the mitochondria. The citric acid cycle happens in the matrix, inside the mitochondria. The electron transport chain is built into the inner mitochondrial membrane. Oxygen waits at the end of the chain and leaves as water.",
+      "clinical": "Cyanide is lethal because it blocks a protein of the electron transport chain, so oxygen cannot accept electrons. Cells cannot make enough ATP even though the blood is full of oxygen, and tissues with high energy needs, such as the heart and brain, fail quickly.",
+      "figure": {
+        "file": "m04_mitochondrion.jpg",
+        "caption": "The inner membrane folds into cristae, where the electron transport chain and ATP synthase are located. The space enclosed by the inner membrane is the matrix, where the citric acid cycle runs; the hydrogen ions are pumped into the intermembrane space.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.16, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-2-the-cytoplasm-and-cellular-organelles"
+      }
+    },
+    {
+      "heading": "Other Fuels and Glucose Storage",
+      "body": [
+        "Glucose is not the only fuel. Cells can also use fats and proteins, which feed into the same pathways:",
+        "- [b]Glycogenesis[/b]: excess glucose is stored as glycogen, mainly in liver and skeletal muscle. [b]Glycogenolysis[/b] breaks glycogen back down to glucose when needed.",
+        "- [b]Gluconeogenesis[/b]: making new glucose from noncarbohydrate sources such as amino acids, glycerol, and lactic acid, mainly in the liver.",
+        "- [b]Lipids[/b]: triglycerides are hydrolyzed into glycerol and fatty acids. Fatty acids are broken into two-carbon pieces (beta oxidation) that become acetyl CoA and enter the citric acid cycle. Excess acetyl CoA can be converted to ketone bodies in the liver.",
+        "- [b]Proteins[/b]: amino acids are normally used to build proteins, but they can be used as fuel after [b]deamination[/b], removal of the nitrogen-containing amino group. The nitrogen is converted in the liver to urea, which the kidneys excrete."
+      ],
+      "tip": "Word parts help: glyco- (glycogen), -genesis (making), -lysis (splitting), neo- (new). Glycogenesis makes glycogen; glycogenolysis splits it; gluconeogenesis makes new glucose.",
+      "figure": {
+        "file": "m04_nutrient_pathways.jpg",
+        "caption": "Teal arrows are catabolic and green arrows are anabolic. Notice that glycogen, triglycerides, and amino acids all feed into the same central route through pyruvate, acetyl CoA, and the Krebs cycle.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 24.20, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-4-protein-metabolism"
+      }
+    },
+    {
+      "heading": "DNA Structure and Replication",
+      "body": [
+        "[b]DNA[/b] is the molecule of heredity. A [b]gene[/b] is a segment of DNA that contains the instructions for making a particular protein (or functional RNA). The complete set of genetic instructions is the [b]genome[/b].",
+        "DNA structure:",
+        "- Each nucleotide has a deoxyribose sugar, a phosphate, and one of four bases: adenine (A), thymine (T), guanine (G), or cytosine (C).",
+        "- The sugars and phosphates form the backbone of each strand; the bases point inward.",
+        "- Two strands twist into a [b]double helix[/b], like a twisted ladder. The bases form the rungs and are held together by hydrogen bonds following [b]complementary base pairing[/b]: A with T, and G with C.",
+        "- The two strands run in opposite directions (they are [b]antiparallel[/b]).",
+        "- The [b]sequence[/b] of bases is the genetic information. Three bases in a row specify one amino acid.",
+        "[b]DNA replication[/b] occurs during the [b]S phase[/b] of interphase, so each daughter cell receives a complete copy.",
+        "- An enzyme ([b]helicase[/b]) unwinds the double helix and breaks the hydrogen bonds between base pairs, separating the two strands.",
+        "- Each original strand serves as a [b]template[/b]. [b]DNA polymerase[/b] adds new complementary nucleotides one at a time (A opposite T, G opposite C), building a new strand. DNA polymerase can only add nucleotides in one direction, so one new strand is made continuously and the other is made in short segments.",
+        "- [b]DNA ligase[/b] joins the segments into a continuous strand.",
+        "- The result is two identical DNA molecules, each containing [b]one original strand and one new strand[/b]. This is called [b]semiconservative replication[/b].",
+        "DNA polymerase also proofreads its work, and other enzymes repair many errors, but some mistakes remain as mutations."
+      ],
+      "tip": "Semiconservative: each new double helix \"conserves\" half (one strand) of the original, like a zipper where each side gets a brand new partner.",
+      "figure": {
+        "file": "m04_dna_replication.jpg",
+        "caption": "Helicase unwinds the double helix at the replication fork, and DNA polymerase adds complementary nucleotides to each original (template) strand. The leading strand is built continuously and the lagging strand in short segments, and each new double helix keeps one original strand.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.24, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-3-the-nucleus-and-dna-replication"
+      }
+    },
+    {
+      "heading": "Protein Synthesis: Transcription and Translation",
+      "body": [
+        "Genetic information flows from [b]DNA → RNA → protein[/b]. Because DNA stays in the nucleus but proteins are made on ribosomes in the cytoplasm, a messenger is needed. Three kinds of RNA take part:",
+        "- [b]Messenger RNA (mRNA)[/b]: a copy of a gene's instructions that travels from the nucleus to a ribosome.",
+        "- [b]Transfer RNA (tRNA)[/b]: carries a specific amino acid to the ribosome and matches it to the mRNA.",
+        "- [b]Ribosomal RNA (rRNA)[/b]: together with proteins, forms the ribosome.",
+        "[b]Transcription[/b] (making mRNA from DNA) occurs in the [b]nucleus[/b].",
+        "- [b]RNA polymerase[/b] binds to a [b]promoter[/b], a DNA sequence at the start of a gene, and unwinds a section of DNA.",
+        "- One DNA strand, the [b]template strand[/b], is read. RNA polymerase builds a complementary mRNA strand using RNA nucleotides. Base pairing is the same as in DNA except that [b]uracil (U)[/b] pairs with adenine: DNA's A is copied as U, T as A, G as C, and C as G.",
+        "- When RNA polymerase reaches a termination signal, the mRNA is released.",
+        "- The new mRNA is processed: noncoding regions called [b]introns[/b] are cut out, and the coding regions called [b]exons[/b] are spliced together. The mature mRNA exits through a nuclear pore.",
+        "The [b]genetic code[/b] is read in triplets. Each three-base sequence on mRNA is a [b]codon[/b] that specifies one amino acid or a stop signal. There are 64 codons: 61 specify amino acids and 3 are [b]stop codons[/b] (UAA, UAG, UGA). The [b]start codon[/b] AUG also codes for methionine. Because there are only 20 amino acids, most amino acids have more than one codon; the code is said to be redundant (degenerate).",
+        "[b]Translation[/b] (building a protein from mRNA) occurs at [b]ribosomes in the cytoplasm[/b].",
+        "- The mRNA binds to a ribosome, and translation begins at the start codon AUG.",
+        "- Each tRNA has an [b]anticodon[/b], three bases complementary to an mRNA codon, at one end, and carries the matching amino acid at the other. For the codon AUG, the anticodon is UAC.",
+        "- The ribosome moves along the mRNA one codon at a time. Each new tRNA delivers its amino acid, and the ribosome links it to the growing chain with a [b]peptide bond[/b]. The empty tRNA leaves to pick up another amino acid.",
+        "- When the ribosome reaches a stop codon, the completed polypeptide is released. It then folds into its functional shape, sometimes with help from other proteins, and may be modified further in the ER and Golgi."
+      ],
+      "tip": "Transcription = transcribing notes in the same \"language\" (nucleic acid to nucleic acid). Translation = translating into a different language (nucleic acid to amino acids). Codon on mRNA, anticodon on tRNA.",
+      "clinical": "Some antibiotics, such as tetracyclines and erythromycin, work by blocking bacterial ribosomes. Bacterial ribosomes differ enough from human ribosomes that the drugs stop bacterial protein synthesis with fewer effects on human cells.",
+      "figure": {
+        "file": "m04_translation.jpg",
+        "caption": "The tRNA carrying methionine has the anticodon UAC, which pairs with the start codon AUG on the mRNA. The ribosome then moves one codon at a time, and each new amino acid is joined to the growing polypeptide chain by a peptide bond.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.28, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-4-protein-synthesis"
+      }
+    },
+    {
+      "heading": "Mutations",
+      "body": [
+        "A [b]mutation[/b] is a change in the DNA sequence. Mutations can arise from copying errors during replication or from [b]mutagens[/b], agents such as radiation (including UV light) and certain chemicals. Mutations in body cells affect only that person and can contribute to cancer; mutations in egg or sperm cells can be inherited.",
+        "Types of mutations and their effects:",
+        "- [b]Substitution (point mutation)[/b]: one base is replaced by another. Its effect depends on the resulting codon. A [b]silent[/b] mutation still codes for the same amino acid because of the redundancy of the code, so the protein is unchanged. A [b]missense[/b] mutation codes for a different amino acid, which may or may not change the protein's function. A [b]nonsense[/b] mutation creates a stop codon, ending the protein early, usually making it nonfunctional.",
+        "- [b]Insertion or deletion[/b]: one or more bases are added or removed. If the number is not a multiple of three, the reading frame shifts, so every codon after the change is read incorrectly. These [b]frameshift[/b] mutations usually produce a badly altered, nonfunctional protein.",
+        "Not all mutations are harmful. Many have no effect, and a few may be beneficial. Cells have DNA repair enzymes that fix much of the damage before it becomes permanent."
+      ],
+      "tip": "Use a sentence of three-letter words: THE CAT ATE THE RAT. Substitution: THE BAT ATE THE RAT (one word changed). Deletion of the first C: THE ATA TET HER AT (everything after is garbled). That is why frameshifts are usually worse.",
+      "clinical": "Sickle cell disease is caused by a single missense substitution in the gene for a hemoglobin chain: one amino acid (glutamic acid) is replaced by another (valine). This small change makes hemoglobin clump when oxygen is low, bending red blood cells into a sickle shape.",
+      "figure": {
+        "file": "m04_genetic_code.jpg",
+        "caption": "The DNA template strand is transcribed into mRNA, which is read in groups of three bases (codons), each specifying one amino acid. Imagine changing one base to see a substitution, or adding one base to see how a frameshift would change every codon after it.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.25, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-4-protein-synthesis"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "m04_fc01",
+      "term": "Anabolism",
+      "definition": "Metabolic reactions that build larger molecules from smaller ones, using energy. Uses dehydration synthesis."
+    },
+    {
+      "id": "m04_fc02",
+      "term": "Catabolism",
+      "definition": "Metabolic reactions that break larger molecules into smaller ones, releasing energy. Uses hydrolysis."
+    },
+    {
+      "id": "m04_fc03",
+      "term": "Active site",
+      "definition": "The region of an enzyme where the substrate binds and the reaction occurs."
+    },
+    {
+      "id": "m04_fc04",
+      "term": "Substrate",
+      "definition": "The specific molecule an enzyme acts on."
+    },
+    {
+      "id": "m04_fc05",
+      "term": "Induced fit",
+      "definition": "Model in which the enzyme changes shape slightly when the substrate binds, gripping it more tightly. Refines the lock-and-key model."
+    },
+    {
+      "id": "m04_fc06",
+      "term": "Cofactor",
+      "definition": "A nonprotein helper an enzyme needs to work, such as a metal ion (Zn²⁺, Mg²⁺, Fe²⁺)."
+    },
+    {
+      "id": "m04_fc07",
+      "term": "Coenzyme",
+      "definition": "An organic cofactor, often derived from a vitamin. Examples: NAD⁺ (niacin), FAD (riboflavin), coenzyme A (pantothenic acid)."
+    },
+    {
+      "id": "m04_fc08",
+      "term": "Rate-limiting enzyme",
+      "definition": "The enzyme catalyzing the slowest step of a pathway; it sets the pathway's overall speed and is often controlled by negative feedback from the end product."
+    },
+    {
+      "id": "m04_fc09",
+      "term": "Enzyme denaturation",
+      "definition": "Loss of an enzyme's 3D shape (and active site) due to heat, extreme pH, radiation, or chemicals. The enzyme stops working."
+    },
+    {
+      "id": "m04_fc10",
+      "term": "Phosphorylation",
+      "definition": "Adding a phosphate group to a molecule, as when ADP becomes ATP, or when ATP energizes another molecule."
+    },
+    {
+      "id": "m04_fc11",
+      "term": "Overall equation for cellular respiration",
+      "definition": "C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + energy (ATP and heat)."
+    },
+    {
+      "id": "m04_fc12",
+      "term": "NADH and FADH₂",
+      "definition": "Reduced coenzymes that carry high-energy electrons and hydrogen from glycolysis and the citric acid cycle to the electron transport chain."
+    },
+    {
+      "id": "m04_fc13",
+      "term": "Glycolysis",
+      "definition": "Splitting of glucose into 2 pyruvic acid in the cytosol. Anaerobic. Net yield: 2 ATP and 2 NADH per glucose."
+    },
+    {
+      "id": "m04_fc14",
+      "term": "Lactic acid formation",
+      "definition": "When oxygen is low, pyruvic acid is converted to lactic acid, regenerating NAD⁺ so glycolysis can continue."
+    },
+    {
+      "id": "m04_fc15",
+      "term": "Acetyl CoA",
+      "definition": "Formed in the mitochondria when pyruvic acid loses a CO₂ and joins coenzyme A. Enters the citric acid cycle."
+    },
+    {
+      "id": "m04_fc16",
+      "term": "Citric acid cycle",
+      "definition": "Krebs cycle in the mitochondrial matrix. Per glucose (2 turns): 2 ATP, 6 NADH, 2 FADH₂, 4 CO₂."
+    },
+    {
+      "id": "m04_fc17",
+      "term": "Electron transport chain",
+      "definition": "Carrier proteins on the inner mitochondrial membrane that pass electrons to oxygen, pumping H⁺ to drive ATP synthase. Makes most ATP."
+    },
+    {
+      "id": "m04_fc18",
+      "term": "Final electron acceptor",
+      "definition": "Oxygen. It accepts electrons and H⁺ at the end of the electron transport chain, forming water."
+    },
+    {
+      "id": "m04_fc19",
+      "term": "ATP synthase",
+      "definition": "Enzyme in the inner mitochondrial membrane that uses the flow of H⁺ back across the membrane to make ATP (chemiosmosis)."
+    },
+    {
+      "id": "m04_fc20",
+      "term": "ATP yield per glucose",
+      "definition": "Anaerobic (glycolysis only): net 2 ATP. Aerobic: about 30 to 32 ATP by modern estimates; older texts say 36 to 38."
+    },
+    {
+      "id": "m04_fc21",
+      "term": "Glycogenesis / glycogenolysis / gluconeogenesis",
+      "definition": "Glycogenesis: making glycogen. Glycogenolysis: breaking glycogen to glucose. Gluconeogenesis: making new glucose from noncarbohydrates."
+    },
+    {
+      "id": "m04_fc22",
+      "term": "Deamination",
+      "definition": "Removal of the amino group from an amino acid so it can be used as fuel. The nitrogen becomes urea in the liver."
+    },
+    {
+      "id": "m04_fc23",
+      "term": "Gene",
+      "definition": "A segment of DNA that carries the instructions for one protein (or functional RNA)."
+    },
+    {
+      "id": "m04_fc24",
+      "term": "Complementary base pairing",
+      "definition": "In DNA: A with T, G with C. In RNA: A with U, G with C."
+    },
+    {
+      "id": "m04_fc25",
+      "term": "Semiconservative replication",
+      "definition": "DNA replication in which each new DNA molecule contains one original strand and one newly made strand."
+    },
+    {
+      "id": "m04_fc26",
+      "term": "DNA polymerase",
+      "definition": "Enzyme that builds a new DNA strand by adding complementary nucleotides to a template strand, and proofreads."
+    },
+    {
+      "id": "m04_fc27",
+      "term": "Transcription",
+      "definition": "Making mRNA from a DNA template, by RNA polymerase, in the nucleus."
+    },
+    {
+      "id": "m04_fc28",
+      "term": "Introns and exons",
+      "definition": "Introns: noncoding sequences cut out of pre-mRNA. Exons: coding sequences spliced together in mature mRNA."
+    },
+    {
+      "id": "m04_fc29",
+      "term": "Translation",
+      "definition": "Building a polypeptide from the mRNA code at a ribosome in the cytoplasm, using tRNA to deliver amino acids."
+    },
+    {
+      "id": "m04_fc30",
+      "term": "Codon",
+      "definition": "A three-base sequence on mRNA that specifies one amino acid or a stop signal."
+    },
+    {
+      "id": "m04_fc31",
+      "term": "Anticodon",
+      "definition": "A three-base sequence on tRNA that is complementary to an mRNA codon."
+    },
+    {
+      "id": "m04_fc32",
+      "term": "Start and stop codons",
+      "definition": "Start: AUG (also codes for methionine). Stop: UAA, UAG, UGA."
+    },
+    {
+      "id": "m04_fc33",
+      "term": "Missense / nonsense / silent mutation",
+      "definition": "Missense: codes a different amino acid. Nonsense: creates an early stop codon. Silent: codes the same amino acid."
+    },
+    {
+      "id": "m04_fc34",
+      "term": "Frameshift mutation",
+      "definition": "Insertion or deletion of bases (not in multiples of three) that shifts the reading frame and changes every codon after it."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m04_q01",
+      "type": "multiple_choice",
+      "prompt": "Which of these is an example of anabolism?",
+      "choices": [
+        "Linking amino acids into a protein",
+        "Digesting starch into glucose",
+        "Breaking glucose into pyruvic acid",
+        "Hydrolyzing ATP to ADP"
+      ],
+      "answer": 0,
+      "explanation": "Anabolism builds larger molecules from smaller ones, and joining amino acids by dehydration synthesis is a classic example. The other three choices all break molecules down, so they are catabolic."
+    },
+    {
+      "id": "m04_q02",
+      "type": "multiple_choice",
+      "prompt": "An enzyme that normally works at pH 7 is placed in a strong acid and stops working. The best explanation is that:",
+      "choices": [
+        "The enzyme's shape changed, so the active site no longer fits the substrate",
+        "The acid used up the enzyme as a reactant",
+        "The acid supplied too much substrate",
+        "The enzyme's amino acid sequence was rewritten"
+      ],
+      "answer": 0,
+      "explanation": "Extreme pH disrupts the hydrogen and ionic bonds that hold the enzyme's shape, denaturing it and distorting the active site. Enzymes are not used up as reactants, and denaturation does not change the amino acid sequence (primary structure)."
+    },
+    {
+      "id": "m04_q03",
+      "type": "multiple_choice",
+      "prompt": "NAD⁺ and FAD are examples of:",
+      "choices": [
+        "Coenzymes derived from vitamins",
+        "Metal ion cofactors",
+        "Substrates of glycolysis",
+        "Products of the electron transport chain"
+      ],
+      "answer": 0,
+      "explanation": "NAD⁺ comes from niacin and FAD from riboflavin; both are organic coenzymes that carry electrons. Metal ions such as zinc are cofactors too, but they are inorganic, which is what distinguishes them from coenzymes."
+    },
+    {
+      "id": "m04_q04",
+      "type": "multiple_choice",
+      "prompt": "The end product of a metabolic pathway binds to and inhibits the first enzyme in the pathway. This is an example of:",
+      "choices": [
+        "Negative feedback",
+        "Positive feedback",
+        "Denaturation",
+        "Substrate saturation"
+      ],
+      "answer": 0,
+      "explanation": "When enough product builds up, it slows its own production by inhibiting the rate-limiting enzyme, which opposes the change, so it is negative feedback. Denaturation is tempting because the enzyme stops working, but feedback inhibition is reversible and does not destroy the enzyme's structure."
+    },
+    {
+      "id": "m04_q05",
+      "type": "true_false",
+      "prompt": "Enzymes are permanently changed by the reactions they catalyze and must be replaced after each reaction.",
+      "answer": false,
+      "explanation": "Enzymes are catalysts: they come out of the reaction unchanged and can be reused many times. Cells do eventually break down and replace enzymes, but not because each reaction uses them up."
+    },
+    {
+      "id": "m04_q06",
+      "type": "multiple_choice",
+      "prompt": "Where does glycolysis take place?",
+      "choices": [
+        "Cytosol",
+        "Mitochondrial matrix",
+        "Inner mitochondrial membrane",
+        "Nucleus"
+      ],
+      "answer": 0,
+      "explanation": "Glycolysis happens in the cytosol and does not need mitochondria or oxygen. The mitochondrial matrix is the tempting answer because the rest of respiration happens in mitochondria, but that is where the citric acid cycle occurs."
+    },
+    {
+      "id": "m04_q07",
+      "type": "multiple_choice",
+      "prompt": "What is the net ATP yield of glycolysis per molecule of glucose?",
+      "choices": [
+        "2 ATP",
+        "4 ATP",
+        "36 ATP",
+        "0 ATP"
+      ],
+      "answer": 0,
+      "explanation": "Glycolysis makes 4 ATP but spends 2 ATP in its early steps, for a net gain of 2. Answering 4 forgets the investment phase; 36 is an older estimate for complete aerobic respiration, not glycolysis."
+    },
+    {
+      "id": "m04_q08",
+      "type": "multiple_choice",
+      "prompt": "During a sprint, a runner's leg muscles cannot get enough oxygen. Pyruvic acid is converted to lactic acid. What is the main benefit of this conversion?",
+      "choices": [
+        "It regenerates NAD⁺ so glycolysis can keep producing ATP",
+        "It produces large amounts of ATP directly",
+        "It supplies oxygen to the electron transport chain",
+        "It converts pyruvic acid into acetyl CoA"
+      ],
+      "answer": 0,
+      "explanation": "Glycolysis needs NAD⁺ to continue. Converting pyruvic acid to lactic acid uses NADH and frees NAD⁺, allowing glycolysis to keep making its small 2 ATP. The step itself produces no extra ATP, which is why the second choice is wrong."
+    },
+    {
+      "id": "m04_q09",
+      "type": "multiple_choice",
+      "prompt": "Where does the citric acid cycle occur?",
+      "choices": [
+        "Mitochondrial matrix",
+        "Cytosol",
+        "Inner mitochondrial membrane",
+        "Rough ER"
+      ],
+      "answer": 0,
+      "explanation": "The citric acid cycle runs in the matrix, the fluid inside the inner mitochondrial membrane. The inner membrane itself is the tempting choice, but that is where the electron transport chain is located."
+    },
+    {
+      "id": "m04_q10",
+      "type": "multiple_choice",
+      "prompt": "What is the main contribution of the citric acid cycle to ATP production?",
+      "choices": [
+        "It loads high-energy electrons onto NADH and FADH₂ for the electron transport chain",
+        "It produces most of the cell's ATP directly",
+        "It uses oxygen as its final electron acceptor",
+        "It splits glucose into pyruvic acid"
+      ],
+      "answer": 0,
+      "explanation": "The cycle makes only 2 ATP per glucose directly. Its big contribution is the NADH and FADH₂ it produces, which feed the electron transport chain where most ATP is made. Oxygen acts only at the end of the electron transport chain."
+    },
+    {
+      "id": "m04_q11",
+      "type": "multiple_choice",
+      "prompt": "What is the role of oxygen in cellular respiration?",
+      "choices": [
+        "Final electron acceptor in the electron transport chain, forming water",
+        "Splitting glucose during glycolysis",
+        "Combining with carbon to form the CO₂ released in the citric acid cycle",
+        "Serving as a coenzyme for ATP synthase"
+      ],
+      "answer": 0,
+      "explanation": "Oxygen accepts electrons and hydrogen ions at the end of the chain, producing water. A common misconception is that the oxygen we inhale becomes the CO₂ we exhale; in fact, the CO₂ comes from carbons removed from fuel during acetyl CoA formation and the citric acid cycle."
+    },
+    {
+      "id": "m04_q12",
+      "type": "multiple_choice",
+      "prompt": "A person is poisoned with cyanide, which blocks the electron transport chain. Which statement best describes the effect on their cells?",
+      "choices": [
+        "Cells can make only the small amount of ATP from glycolysis",
+        "Cells switch to making more ATP through the citric acid cycle",
+        "Cells make normal amounts of ATP but cannot release CO₂",
+        "Cells stop glycolysis but continue the electron transport chain"
+      ],
+      "answer": 0,
+      "explanation": "With the electron transport chain blocked, aerobic ATP production stops, and the citric acid cycle soon stalls too because NADH and FADH₂ cannot unload their electrons. Cells are left with glycolysis alone, which is not enough for energy-hungry tissues like the heart and brain."
+    },
+    {
+      "id": "m04_q13",
+      "type": "true_false",
+      "prompt": "Most of the ATP produced by aerobic respiration is made by the electron transport chain and ATP synthase.",
+      "answer": true,
+      "explanation": "Glycolysis and the citric acid cycle together make only about 4 ATP directly per glucose. The large majority comes from oxidative phosphorylation, driven by the H⁺ gradient that the electron transport chain builds."
+    },
+    {
+      "id": "m04_q14",
+      "type": "ordering",
+      "prompt": "Put the stages of aerobic cellular respiration in order.",
+      "items": [
+        "Glycolysis",
+        "Formation of acetyl CoA",
+        "Citric acid cycle",
+        "Electron transport chain"
+      ],
+      "explanation": "Glucose is split into pyruvic acid in the cytosol, pyruvic acid is converted to acetyl CoA in the mitochondria, acetyl CoA feeds the citric acid cycle, and NADH and FADH₂ from earlier steps feed the electron transport chain. Some texts treat acetyl CoA formation as part of the citric acid cycle stage, but it always comes between glycolysis and the cycle."
+    },
+    {
+      "id": "m04_q15",
+      "type": "multiple_choice",
+      "prompt": "The liver makes new glucose from lactic acid and amino acids during a long fast. This process is called:",
+      "choices": [
+        "Gluconeogenesis",
+        "Glycogenesis",
+        "Glycogenolysis",
+        "Glycolysis"
+      ],
+      "answer": 0,
+      "explanation": "Gluconeogenesis means making new (neo) glucose from noncarbohydrate sources. Glycogenolysis is the tempting answer because it also raises blood glucose, but it breaks down stored glycogen rather than building glucose from other molecules."
+    },
+    {
+      "id": "m04_q16",
+      "type": "multiple_choice",
+      "prompt": "After DNA replication, each new DNA molecule contains:",
+      "choices": [
+        "One original strand and one new strand",
+        "Two original strands",
+        "Two new strands",
+        "Old and new DNA mixed randomly along each strand"
+      ],
+      "answer": 0,
+      "explanation": "Replication is semiconservative: each original strand serves as a template and stays paired with the new strand built on it. The other options describe models that experiments ruled out."
+    },
+    {
+      "id": "m04_q17",
+      "type": "multiple_choice",
+      "prompt": "A DNA template strand reads T-A-C-G-G-A. What is the complementary mRNA sequence produced by transcription?",
+      "choices": [
+        "A-U-G-C-C-U",
+        "A-T-G-C-C-T",
+        "T-A-C-G-G-A",
+        "U-A-C-G-G-U"
+      ],
+      "answer": 0,
+      "explanation": "RNA pairs A with U (replacing T), T with A, G with C, and C with G. So TAC becomes AUG and GGA becomes CCU. A-T-G-C-C-T is tempting, but it uses thymine, which RNA does not contain."
+    },
+    {
+      "id": "m04_q18",
+      "type": "multiple_choice",
+      "prompt": "An mRNA codon reads AUG. What is the anticodon on the tRNA that pairs with it?",
+      "choices": [
+        "UAC",
+        "TAC",
+        "AUG",
+        "CAU"
+      ],
+      "answer": 0,
+      "explanation": "The anticodon is complementary to the codon: A pairs with U, U with A, and G with C, giving UAC. TAC is the matching DNA template sequence, which is tempting, but tRNA is RNA and uses U instead of T."
+    },
+    {
+      "id": "m04_q19",
+      "type": "multiple_choice",
+      "prompt": "Where does translation take place?",
+      "choices": [
+        "At ribosomes in the cytoplasm",
+        "In the nucleolus",
+        "In the nucleus on the DNA",
+        "In the Golgi apparatus"
+      ],
+      "answer": 0,
+      "explanation": "Translation happens on ribosomes, free in the cytosol or attached to rough ER. Transcription is the step that happens in the nucleus. The nucleolus builds ribosomal subunits but does not translate mRNA."
+    },
+    {
+      "id": "m04_q20",
+      "type": "ordering",
+      "prompt": "Put the steps of protein synthesis in order.",
+      "items": [
+        "RNA polymerase binds the promoter of a gene",
+        "mRNA is made from the DNA template",
+        "Introns are removed and the mRNA leaves the nucleus",
+        "mRNA binds to a ribosome at the start codon",
+        "tRNAs deliver amino acids matched to codons",
+        "A stop codon is reached and the polypeptide is released"
+      ],
+      "explanation": "Transcription (the first three steps) happens in the nucleus; translation (the last three) happens at a ribosome. The main idea is that the code is copied into mRNA first, processed, and only then read by ribosomes."
+    },
+    {
+      "id": "m04_q21",
+      "type": "ordering",
+      "prompt": "Put the flow of genetic information in order.",
+      "items": [
+        "DNA",
+        "mRNA",
+        "Polypeptide",
+        "Functional folded protein"
+      ],
+      "explanation": "DNA is transcribed into mRNA, mRNA is translated into a polypeptide, and the polypeptide folds (and sometimes is modified) into its working shape. This direction of information flow is often called the central dogma."
+    },
+    {
+      "id": "m04_q22",
+      "type": "multiple_choice",
+      "prompt": "A mutation changes a codon from GAA to GAG. Both codons code for the amino acid glutamic acid. This is a:",
+      "choices": [
+        "Silent mutation",
+        "Missense mutation",
+        "Nonsense mutation",
+        "Frameshift mutation"
+      ],
+      "answer": 0,
+      "explanation": "Because the genetic code is redundant, the new codon still specifies the same amino acid, so the protein is unchanged: a silent mutation. Missense is tempting because a base was substituted, but missense means the amino acid actually changes."
+    },
+    {
+      "id": "m04_q23",
+      "type": "multiple_choice",
+      "prompt": "Which type of mutation is most likely to change every amino acid after the point of mutation?",
+      "choices": [
+        "Deletion of a single base",
+        "Substitution of one base",
+        "A silent mutation",
+        "Deletion of three consecutive bases"
+      ],
+      "answer": 0,
+      "explanation": "Deleting one base shifts the reading frame, so every codon downstream is read differently. Deleting three bases removes one codon but keeps the rest of the frame intact, which is why it is less disruptive. A single substitution affects at most one codon."
+    },
+    {
+      "id": "m04_q24",
+      "type": "true_false",
+      "prompt": "Sickle cell disease results from a single base substitution that changes one amino acid in a hemoglobin chain.",
+      "answer": true,
+      "explanation": "It is a missense mutation: glutamic acid is replaced by valine in the beta chain of hemoglobin. This one change alters how hemoglobin molecules behave at low oxygen, deforming red blood cells."
+    }
+  ]
+}

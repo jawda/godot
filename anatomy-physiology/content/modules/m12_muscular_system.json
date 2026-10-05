@@ -1,0 +1,711 @@
+{
+  "id": "m12_muscular_system",
+  "order": 12,
+  "course": "A&P I",
+  "title": "The Muscular System",
+  "summary": "How muscles produce movement as levers and teams, how they are named, and the major muscles by region.",
+  "objectives": [
+    "Define origin, insertion, and action, and the roles of prime movers, synergists, antagonists, and fixators",
+    "Describe the three lever classes and give a body example of each",
+    "Use naming criteria and fascicle arrangement to interpret muscle names",
+    "Identify the major muscles of facial expression, mastication, and the neck, and their actions",
+    "Identify the major muscles of the trunk, shoulder, arm, and forearm, including the rotator cuff",
+    "Identify the major muscles of the hip, thigh, and leg, including the quadriceps and hamstrings"
+  ],
+  "lesson": [
+    {
+      "heading": "Origin, Insertion, Action, and Muscle Roles",
+      "body": [
+        "Most skeletal muscles cross at least one joint and attach to two bones. When the muscle contracts, one attachment moves toward the other.",
+        "- [b]Origin:[/b] the attachment on the more stationary bone, usually the more proximal one in the limbs.",
+        "- [b]Insertion:[/b] the attachment on the bone that moves, usually more distal. When a muscle contracts, the insertion is pulled toward the origin.",
+        "- [b]Action:[/b] the movement the muscle produces, such as flexion of the elbow.",
+        "Origins and insertions can switch depending on which bone is fixed. In a pull-up, for example, the arm is fixed and the trunk moves toward it.",
+        "Muscles work in groups, and each muscle can play different roles in different movements:",
+        "- [b]Prime mover (agonist):[/b] the muscle mainly responsible for a movement. Example: biceps brachii and brachialis in elbow flexion.",
+        "- [b]Synergist:[/b] helps the prime mover by adding force or by reducing unwanted movement. Example: brachioradialis assists in elbow flexion.",
+        "- [b]Antagonist:[/b] opposes the prime mover and relaxes (or contracts slightly to control the movement) while the agonist acts. Example: triceps brachii is the antagonist of elbow flexion. Antagonists are usually on the opposite side of the joint.",
+        "- [b]Fixator:[/b] a type of synergist that stabilizes the origin of the prime mover so its force goes into moving the insertion. Example: muscles that hold the scapula steady while the deltoid lifts the arm."
+      ],
+      "tip": "To work out a muscle's action, find what joint it crosses and which side of the joint it lies on. Anterior muscles of the arm flex the elbow; posterior ones extend it.",
+      "figure": {
+        "file": "m12_prime_movers.jpg",
+        "caption": "During elbow flexion the biceps brachii is the prime mover (agonist), while the brachialis and brachioradialis act as synergists that assist it. The biceps is cut away in the right panel to reveal the brachialis beneath it.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 11.2, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-1-interactions-of-skeletal-muscles-their-fascicle-arrangement-and-their-lever-systems"
+      }
+    },
+    {
+      "heading": "Lever Systems",
+      "body": [
+        "Muscles move bones as levers. In the body:",
+        "- [b]Lever:[/b] the bone.",
+        "- [b]Fulcrum:[/b] the joint, the pivot point.",
+        "- [b]Effort (applied force):[/b] the pull of the muscle at its insertion.",
+        "- [b]Load (resistance):[/b] the weight of the body part plus anything it is moving.",
+        "Levers are classified by which element is in the middle:",
+        "- [b]First-class lever:[/b] the [b]fulcrum[/b] is between effort and load, like a seesaw or scissors. Example: tilting the head back, where the atlanto-occipital joint is the fulcrum, the face is the load, and the posterior neck muscles provide the effort.",
+        "- [b]Second-class lever:[/b] the [b]load[/b] is between fulcrum and effort, like a wheelbarrow. These give a mechanical advantage (a small effort moves a large load) but limited speed and range. Standard example: standing on the toes, with the ball of the foot as the fulcrum, body weight as the load, and the calf muscles pulling on the heel. Some anatomists dispute this example, but it is the one textbooks use; true second-class levers are uncommon in the body.",
+        "- [b]Third-class lever:[/b] the [b]effort[/b] is between fulcrum and load, like tweezers or a fishing rod. This is the [b]most common lever in the body[/b]. Example: flexing the elbow with the biceps brachii, which inserts close to the elbow while the load is in the hand. It sacrifices force for speed and range of motion."
+      ],
+      "tip": "'1, 2, 3: F, L, E.' The element in the middle is the Fulcrum in first class, the Load in second class, and the Effort in third class."
+    },
+    {
+      "heading": "Naming Muscles and Fascicle Arrangement",
+      "body": [
+        "Muscle names are descriptive. Learning the criteria lets you decode names you have never seen.",
+        "- [b]Size:[/b] maximus (largest), minimus (smallest), longus (long), brevis (short), major and minor.",
+        "- [b]Shape:[/b] deltoid (triangular), trapezius (trapezoid), rhomboid (diamond), serratus (saw-toothed), orbicularis (circular).",
+        "- [b]Location:[/b] temporalis (over the temporal bone), tibialis anterior (front of the tibia), intercostals (between ribs).",
+        "- [b]Direction of fibers:[/b] rectus (straight, parallel to the midline), transversus (across), oblique (diagonal).",
+        "- [b]Number of origins (heads):[/b] biceps (two), triceps (three), quadriceps (four).",
+        "- [b]Origin and insertion:[/b] sternocleidomastoid (sternum and clavicle to the mastoid process), brachioradialis (arm to radius).",
+        "- [b]Action:[/b] flexor, extensor, adductor, abductor, levator (lifts), supinator, pronator.",
+        "Many names combine several criteria: [i]flexor carpi radialis[/i] is a flexor (action) of the wrist (carpi) on the radial side (location).",
+        "[b]Fascicle arrangements[/b] affect a muscle's range of motion and power:",
+        "- [b]Parallel:[/b] fascicles run parallel to the long axis, giving a long range of shortening. Strap-like (sartorius) or [b]fusiform[/b] with a wide belly (biceps brachii).",
+        "- [b]Convergent:[/b] a broad origin narrows to a single tendon, so fibers can pull in different directions (pectoralis major).",
+        "- [b]Pennate[/b] (feather-like): short fascicles attach obliquely to a central tendon, packing in many fibers for great power but less range. [b]Unipennate[/b]: fibers on one side (extensor digitorum longus). [b]Bipennate[/b]: both sides (rectus femoris). [b]Multipennate[/b]: several tendons (deltoid).",
+        "- [b]Circular:[/b] concentric rings around an opening; sphincters (orbicularis oris, orbicularis oculi)."
+      ],
+      "tip": "Rule of thumb: parallel muscles shorten the most (range), pennate muscles pull the hardest (power).",
+      "figure": {
+        "file": "m12_muscle_shapes.jpg",
+        "caption": "Each inset shows a fascicle arrangement with an example muscle: circular (orbicularis oris), convergent (pectoralis major), parallel (sartorius), fusiform (biceps brachii), and unipennate, bipennate, and multipennate (extensor digitorum, rectus femoris, deltoid).",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 11.3, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-1-interactions-of-skeletal-muscles-their-fascicle-arrangement-and-their-lever-systems"
+      }
+    },
+    {
+      "heading": "Muscles of the Head and Neck",
+      "body": [
+        "[b]Muscles of facial expression[/b] are unusual: many insert into the [b]skin[/b] rather than bone, so they move the skin of the face. All are innervated by the [b]facial nerve (cranial nerve VII)[/b].",
+        "- [b]Frontalis[/b] (frontal belly of the occipitofrontalis or epicranius): raises the eyebrows and wrinkles the forehead.",
+        "- [b]Orbicularis oculi:[/b] circles the eye; closes the eyelids (blinking, squinting).",
+        "- [b]Orbicularis oris:[/b] circles the mouth; closes and protrudes the lips (the 'kissing muscle').",
+        "- [b]Buccinator:[/b] in the cheek; compresses the cheeks (whistling, blowing) and holds food between the teeth while chewing.",
+        "- [b]Zygomaticus major and minor:[/b] raise the corners of the mouth (the 'smiling muscles').",
+        "- [b]Platysma:[/b] thin sheet over the anterior neck; tenses neck skin and depresses the mandible and corners of the mouth.",
+        "[b]Muscles of mastication[/b] move the mandible and are innervated by the [b]trigeminal nerve (cranial nerve V)[/b].",
+        "- [b]Masseter:[/b] the prime mover of jaw closing; elevates the mandible. Feel it bulge when you clench your teeth.",
+        "- [b]Temporalis:[/b] fan-shaped over the temporal bone; elevates and retracts the mandible.",
+        "- [b]Medial pterygoid:[/b] elevates the mandible and moves it side to side.",
+        "- [b]Lateral pterygoid:[/b] protracts the mandible and moves it side to side for grinding; helps open the mouth.",
+        "[b]Muscles that move the head:[/b]",
+        "- [b]Sternocleidomastoid:[/b] from the sternum and clavicle to the mastoid process. Both sides together [b]flex the neck[/b]; one side alone laterally flexes the neck toward the same side and [b]rotates the face toward the opposite side[/b].",
+        "- [b]Splenius capitis:[/b] posterior neck; both sides extend the head; one side rotates and tilts the head toward the same side.",
+        "- [b]Trapezius[/b] (upper fibers) also helps extend the head."
+      ],
+      "tip": "Facial expression = facial nerve (VII). Chewing = trigeminal (V). For sternocleidomastoid, contract the right one and your face turns to the left.",
+      "clinical": "[b]Bell's palsy[/b] is sudden, usually temporary paralysis of the facial nerve on one side, causing that side of the face to droop: the person cannot close the eye, smile, or wrinkle the forehead on the affected side. [b]Torticollis[/b] (wryneck) is a twisted neck from a shortened or spasming sternocleidomastoid.",
+      "figure": {
+        "file": "m12_facial.jpg",
+        "caption": "Locate the muscles of facial expression: the frontal and occipital bellies of the occipitofrontalis joined by the epicranial aponeurosis, the corrugator supercilii, the orbicularis oculi around the eye, the orbicularis oris around the mouth, and the buccinator in the cheek.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 11.7, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-3-axial-muscles-of-the-head-neck-and-back"
+      }
+    },
+    {
+      "heading": "Muscles of the Trunk: Breathing, Abdominal Wall, and Back",
+      "body": [
+        "[b]Muscles of breathing:[/b]",
+        "- [b]Diaphragm:[/b] dome-shaped sheet between thoracic and abdominal cavities; the [b]prime mover of inspiration[/b]. Contracting flattens it and enlarges the thoracic cavity. Innervated by the phrenic nerve.",
+        "- [b]External intercostals:[/b] elevate the ribs during inspiration.",
+        "- [b]Internal intercostals:[/b] depress the ribs during forced expiration.",
+        "[b]Abdominal wall[/b] (four pairs of muscles, from superficial to deep on the side):",
+        "- [b]Rectus abdominis:[/b] vertical straps from pubis to the rib cage, separated in the midline by the [b]linea alba[/b] and crossed by tendinous intersections (the 'six-pack'). Flexes the vertebral column and compresses the abdomen.",
+        "- [b]External oblique:[/b] superficial lateral muscle; fibers run inferomedially, the direction of your fingers when your hands are in your front pockets.",
+        "- [b]Internal oblique:[/b] fibers run at right angles to the external oblique.",
+        "- [b]Transversus abdominis:[/b] deepest; fibers run horizontally like a corset; compresses the abdomen.",
+        "Together the abdominal muscles compress the abdominal contents (forced expiration, defecation, childbirth), flex the trunk, and rotate and laterally flex it (obliques). Their criss-crossing layers make the wall strong despite having no bone.",
+        "[b]Back:[/b]",
+        "- [b]Erector spinae:[/b] three columns (iliocostalis, longissimus, spinalis) running along the vertebral column; the [b]prime mover of back extension[/b] and important in posture.",
+        "- [b]Quadratus lumborum:[/b] laterally flexes the vertebral column."
+      ],
+      "tip": "Abdominal wall from superficial to deep: 'Every Inch Tight' for External oblique, Internal oblique, Transversus abdominis, with rectus abdominis running vertically in front.",
+      "clinical": "An [b]inguinal hernia[/b] occurs when abdominal contents push through a weak spot in the abdominal wall at the inguinal canal, more common in males. Lifting with a strained back rather than the legs can injure the erector spinae.",
+      "figure": {
+        "file": "m12_abdomen.jpg",
+        "caption": "Panel (a) shows the layered abdominal wall: rectus abdominis in its rectus sheath beside the linea alba, then external oblique, internal oblique, and transversus abdominis from superficial to deep. Panel (b) shows the posterior wall muscles, quadratus lumborum, psoas major, and iliacus.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 11.16, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-4-axial-muscles-of-the-abdominal-wall-and-thorax"
+      }
+    },
+    {
+      "heading": "Muscles of the Shoulder and Arm, Including the Rotator Cuff",
+      "body": [
+        "[b]Muscles that move the scapula[/b] (pectoral girdle):",
+        "- [b]Trapezius:[/b] large diamond of the upper back. Upper fibers elevate the scapula (shrug) and help extend the head; middle fibers retract (adduct) it; lower fibers depress it.",
+        "- [b]Levator scapulae:[/b] elevates the scapula.",
+        "- [b]Rhomboid major and minor:[/b] retract the scapula (squeeze the shoulder blades together) and elevate it.",
+        "- [b]Serratus anterior:[/b] saw-toothed on the lateral ribs; [b]protracts[/b] the scapula and rotates it upward (reaching, punching; the 'boxer's muscle').",
+        "- [b]Pectoralis minor:[/b] pulls the scapula forward and downward.",
+        "[b]Muscles that move the arm at the shoulder:[/b]",
+        "- [b]Pectoralis major:[/b] large chest muscle; [b]flexes, adducts, and medially rotates[/b] the arm.",
+        "- [b]Latissimus dorsi:[/b] broad lower back muscle; [b]extends, adducts, and medially rotates[/b] the arm (the 'swimmer's muscle', used in pull-ups and rowing).",
+        "- [b]Deltoid:[/b] caps the shoulder; [b]prime mover of arm abduction[/b]. Its anterior fibers flex and medially rotate the arm; its posterior fibers extend and laterally rotate it.",
+        "- [b]Teres major:[/b] extends, adducts, and medially rotates the arm (helps the latissimus dorsi).",
+        "- [b]Coracobrachialis:[/b] flexes and adducts the arm.",
+        "[b]The rotator cuff (SITS)[/b] is four muscles whose tendons blend with the shoulder joint capsule and hold the humeral head in the shallow glenoid cavity:",
+        "- [b]Supraspinatus:[/b] in the supraspinous fossa; [b]abducts[/b] the arm (it starts abduction, and the deltoid takes over).",
+        "- [b]Infraspinatus:[/b] in the infraspinous fossa; [b]laterally rotates[/b] the arm.",
+        "- [b]Teres minor:[/b] along the lateral border of the scapula; [b]laterally rotates[/b] and adducts the arm.",
+        "- [b]Subscapularis:[/b] on the anterior surface of the scapula; [b]medially rotates[/b] the arm.",
+        "Supraspinatus, infraspinatus, and teres minor insert on the greater tubercle of the humerus; subscapularis inserts on the lesser tubercle."
+      ],
+      "tip": "SITS: Supraspinatus, Infraspinatus, Teres minor, Subscapularis. Teres MINOR is in the cuff; teres MAJOR is not. Subscapularis, the only one on the front of the scapula, is the only medial rotator.",
+      "clinical": "Rotator cuff injuries are common in pitchers, swimmers, and older adults; the [b]supraspinatus[/b] tendon is most often torn because it is pinched under the acromion. The deltoid is a common intramuscular injection site. Damage to the long thoracic nerve paralyzes serratus anterior, causing a 'winged scapula' that sticks out from the back.",
+      "figure": {
+        "file": "m12_humerus_movers.jpg",
+        "caption": "Find the large movers of the humerus, pectoralis major, latissimus dorsi, and deltoid, then the rotator cuff in the deep views: subscapularis in front, and supraspinatus, infraspinatus, and teres minor behind. Teres major lies just below the cuff but is not part of it.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 11.23, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-5-muscles-of-the-pectoral-girdle-and-upper-limbs"
+      }
+    },
+    {
+      "heading": "Muscles of the Elbow, Forearm, and Wrist",
+      "body": [
+        "[b]Muscles that move the forearm at the elbow[/b] lie in the arm:",
+        "- [b]Biceps brachii:[/b] two heads from the scapula, inserts on the radial tuberosity. [b]Flexes the elbow[/b] and is a powerful [b]supinator[/b] of the forearm; also weakly flexes the shoulder.",
+        "- [b]Brachialis:[/b] deep to the biceps, inserts on the ulna. A major elbow flexor that works whatever the forearm's position; many texts call it the prime mover of elbow flexion, while others list it alongside the biceps.",
+        "- [b]Brachioradialis:[/b] in the lateral forearm, from humerus to the distal radius; a synergist in elbow flexion, strongest when the forearm is half pronated (like holding a mug).",
+        "- [b]Triceps brachii:[/b] three heads on the posterior arm, inserts on the olecranon; the [b]prime mover of elbow extension[/b]. The long head also extends the shoulder.",
+        "[b]Muscles that rotate the forearm:[/b]",
+        "- [b]Pronator teres[/b] and [b]pronator quadratus[/b] pronate the forearm; the quadratus, near the wrist, is the prime mover of pronation.",
+        "- [b]Supinator[/b] supinates the forearm, assisted by the biceps brachii.",
+        "[b]Muscles that move the wrist and fingers[/b] are in the forearm. As a rule, [b]flexors are anterior and arise from the medial epicondyle[/b] of the humerus; [b]extensors are posterior and arise from the lateral epicondyle[/b].",
+        "- [b]Flexor carpi radialis[/b] and [b]flexor carpi ulnaris:[/b] flex the wrist; they also abduct and adduct it respectively.",
+        "- [b]Palmaris longus:[/b] weak wrist flexor; absent in some people.",
+        "- [b]Flexor digitorum superficialis[/b] and [b]flexor digitorum profundus:[/b] flex the fingers.",
+        "- [b]Extensor carpi radialis longus and brevis[/b] and [b]extensor carpi ulnaris:[/b] extend the wrist (and abduct and adduct it).",
+        "- [b]Extensor digitorum:[/b] extends the fingers."
+      ],
+      "tip": "Biceps and supinator: a corkscrew is turned with supination, and the biceps provides the power. 'Carpi' means wrist; 'digitorum' means fingers.",
+      "clinical": "[b]Lateral epicondylitis[/b] ('tennis elbow') is irritation of the common extensor tendon at the lateral epicondyle from repetitive wrist extension. [b]Medial epicondylitis[/b] ('golfer's elbow') affects the common flexor origin. The tendons of the finger flexors pass through the carpal tunnel along with the median nerve.",
+      "figure": {
+        "file": "m12_forearm_movers.jpg",
+        "caption": "In the arm, the biceps brachii and brachialis flex the elbow and the triceps brachii extends it. In the forearm, the wrist and finger flexors lie on the palmar side and arise near the medial epicondyle, while the extensors lie on the dorsal side and arise near the lateral epicondyle.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 11.25, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-5-muscles-of-the-pectoral-girdle-and-upper-limbs"
+      }
+    },
+    {
+      "heading": "Muscles of the Hip and Thigh",
+      "body": [
+        "[b]Muscles that move the thigh at the hip:[/b]",
+        "- [b]Iliopsoas[/b] (psoas major plus iliacus): from the lumbar vertebrae and iliac fossa to the lesser trochanter; the [b]prime mover of hip flexion[/b].",
+        "- [b]Gluteus maximus:[/b] the largest and most superficial buttock muscle; the [b]prime mover of hip extension[/b] in forceful movements such as climbing stairs, running, and rising from a squat; also laterally rotates the thigh.",
+        "- [b]Gluteus medius[/b] and [b]gluteus minimus:[/b] lateral and deep to the maximus; [b]abduct and medially rotate[/b] the thigh and keep the pelvis level when you stand on one leg while walking.",
+        "- [b]Tensor fasciae latae:[/b] flexes and abducts the thigh; tightens the iliotibial tract.",
+        "- [b]Adductor group[/b] (adductor longus, adductor brevis, adductor magnus, pectineus, gracilis): medial thigh; [b]adduct[/b] the thigh. Gracilis also flexes the knee.",
+        "[b]Anterior thigh:[/b]",
+        "- [b]Sartorius:[/b] the [b]longest muscle in the body[/b], a strap running diagonally from the ASIS to the medial tibia. Flexes, abducts, and laterally rotates the thigh and flexes the knee, the movements for sitting cross-legged.",
+        "- [b]Quadriceps femoris:[/b] four heads, [b]rectus femoris, vastus lateralis, vastus medialis, and vastus intermedius[/b]. They share the quadriceps tendon, which surrounds the patella and continues as the patellar ligament to the tibial tuberosity. All four [b]extend the knee[/b]. Rectus femoris is the only one that crosses the hip (it arises from the AIIS), so it also [b]flexes the hip[/b].",
+        "[b]Posterior thigh: the hamstrings[/b]",
+        "- [b]Biceps femoris[/b] (lateral), [b]semitendinosus[/b], and [b]semimembranosus[/b] (both medial). They arise from the [b]ischial tuberosity[/b] (except the short head of biceps femoris, from the linea aspera) and insert on the tibia and fibula.",
+        "- Actions: [b]flex the knee[/b] and [b]extend the hip[/b]. They are the antagonists of the quadriceps at the knee."
+      ],
+      "tip": "Hamstrings: 'Bi, Semi, Semi' (biceps femoris, semitendinosus, semimembranosus). Quads: three vasti plus rectus femoris, and only the Rectus Reaches the hip.",
+      "clinical": "Intramuscular injections in adults are given in the [b]ventrogluteal site[/b] (gluteus medius) or the upper outer part of the buttock to avoid the sciatic nerve, which runs deep to the gluteus maximus. In infants the [b]vastus lateralis[/b] is preferred. A 'pulled hamstring' is a strain, common in sprinters; a 'groin pull' is a strain of the adductors.",
+      "figure": {
+        "file": "m12_hip_thigh.jpg",
+        "caption": "The anterior view shows the iliopsoas (psoas major and iliacus), sartorius, and the quadriceps (rectus femoris, vastus lateralis, vastus medialis); the deep view shows the adductor group. The posterior view shows the gluteal muscles and the hamstrings: biceps femoris, semitendinosus, and semimembranosus.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 11.29, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-6-appendicular-muscles-of-the-pelvic-girdle-and-lower-limbs"
+      }
+    },
+    {
+      "heading": "Muscles of the Leg and Foot",
+      "body": [
+        "Leg muscles are arranged in compartments that act on the ankle and toes.",
+        "[b]Anterior compartment[/b] (dorsiflexors):",
+        "- [b]Tibialis anterior:[/b] along the lateral side of the shin; the [b]prime mover of dorsiflexion[/b]; also [b]inverts[/b] the foot.",
+        "- [b]Extensor digitorum longus:[/b] extends toes 2 to 5 and dorsiflexes the foot.",
+        "[b]Lateral compartment:[/b]",
+        "- [b]Fibularis (peroneus) longus[/b] and [b]fibularis brevis:[/b] [b]evert[/b] the foot and assist plantar flexion; support the arches. ('Fibularis' is the newer name; many texts still use 'peroneus'.)",
+        "[b]Posterior compartment[/b] (plantar flexors):",
+        "- [b]Gastrocnemius:[/b] the two-headed superficial calf muscle; [b]plantar flexes[/b] the foot and [b]flexes the knee[/b], because it arises from the femoral condyles and crosses the knee.",
+        "- [b]Soleus:[/b] deep to the gastrocnemius; plantar flexes the foot; an important postural muscle rich in slow oxidative fibers.",
+        "- Gastrocnemius and soleus together (the [b]triceps surae[/b]) insert by the [b]calcaneal (Achilles) tendon[/b] on the calcaneus.",
+        "- [b]Tibialis posterior:[/b] deep; plantar flexes and inverts the foot.",
+        "- [b]Flexor digitorum longus:[/b] flexes toes 2 to 5."
+      ],
+      "tip": "Tibialis anterior is the anterior partner of the dorsiflexion pair; the calf (gastrocnemius and soleus) points the toes. The fibularis muscles sit on the fibula, the lateral side, so they turn the sole outward (eversion).",
+      "clinical": "A [b]ruptured calcaneal (Achilles) tendon[/b] makes plantar flexion against resistance nearly impossible; it often happens during sudden push-off in sports. [b]Shin splints[/b] are painful irritation of the tibialis anterior and surrounding tissues from overuse. Swelling inside a tight compartment can compress vessels and nerves ([b]compartment syndrome[/b]).",
+      "figure": {
+        "file": "m12_lower_leg.jpg",
+        "caption": "The anterior compartment holds the dorsiflexors, led by tibialis anterior; the fibularis (peroneus) longus and brevis lie laterally. The posterior views show the gastrocnemius and soleus joining the calcaneal (Achilles) tendon, with tibialis posterior and the long toe flexors deep to them.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 11.32, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-6-appendicular-muscles-of-the-pelvic-girdle-and-lower-limbs"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "m12_fc01",
+      "term": "Origin",
+      "definition": "Muscle attachment on the more stationary bone, usually proximal."
+    },
+    {
+      "id": "m12_fc02",
+      "term": "Insertion",
+      "definition": "Muscle attachment on the bone that moves, usually distal; pulled toward the origin."
+    },
+    {
+      "id": "m12_fc03",
+      "term": "Prime mover",
+      "definition": "The muscle mainly responsible for a movement; also called the agonist."
+    },
+    {
+      "id": "m12_fc04",
+      "term": "Synergist",
+      "definition": "A muscle that assists the prime mover or reduces unwanted movement."
+    },
+    {
+      "id": "m12_fc05",
+      "term": "Antagonist",
+      "definition": "A muscle that opposes the prime mover, usually on the opposite side of the joint."
+    },
+    {
+      "id": "m12_fc06",
+      "term": "Fixator",
+      "definition": "A synergist that stabilizes the origin of the prime mover."
+    },
+    {
+      "id": "m12_fc07",
+      "term": "First-class lever",
+      "definition": "Fulcrum between effort and load (seesaw). Example: tilting the head back on the atlas."
+    },
+    {
+      "id": "m12_fc08",
+      "term": "Second-class lever",
+      "definition": "Load between fulcrum and effort (wheelbarrow). Textbook example: standing on the toes."
+    },
+    {
+      "id": "m12_fc09",
+      "term": "Third-class lever",
+      "definition": "Effort between fulcrum and load (tweezers); most common in the body. Example: biceps flexing the elbow."
+    },
+    {
+      "id": "m12_fc10",
+      "term": "Pennate muscle",
+      "definition": "Feather-like fascicles attached obliquely to a tendon; uni-, bi-, or multipennate; powerful with less range."
+    },
+    {
+      "id": "m12_fc11",
+      "term": "Orbicularis oculi",
+      "definition": "Circular muscle around the eye that closes the eyelids."
+    },
+    {
+      "id": "m12_fc12",
+      "term": "Buccinator",
+      "definition": "Cheek muscle that compresses the cheek, used in whistling and keeping food between the teeth."
+    },
+    {
+      "id": "m12_fc13",
+      "term": "Zygomaticus major",
+      "definition": "Raises the corner of the mouth; the smiling muscle."
+    },
+    {
+      "id": "m12_fc14",
+      "term": "Masseter",
+      "definition": "Prime mover of jaw closing; elevates the mandible."
+    },
+    {
+      "id": "m12_fc15",
+      "term": "Sternocleidomastoid",
+      "definition": "Both sides flex the neck; one side rotates the face to the opposite side and laterally flexes the neck to the same side."
+    },
+    {
+      "id": "m12_fc16",
+      "term": "Diaphragm",
+      "definition": "Prime mover of inspiration; flattens when it contracts."
+    },
+    {
+      "id": "m12_fc17",
+      "term": "Rectus abdominis",
+      "definition": "Vertical abdominal muscle that flexes the vertebral column; split by the linea alba."
+    },
+    {
+      "id": "m12_fc18",
+      "term": "Transversus abdominis",
+      "definition": "Deepest abdominal muscle with horizontal fibers; compresses the abdomen."
+    },
+    {
+      "id": "m12_fc19",
+      "term": "Erector spinae",
+      "definition": "Iliocostalis, longissimus, spinalis; prime mover of back extension."
+    },
+    {
+      "id": "m12_fc20",
+      "term": "Trapezius",
+      "definition": "Elevates, retracts, and depresses the scapula; helps extend the head."
+    },
+    {
+      "id": "m12_fc21",
+      "term": "Serratus anterior",
+      "definition": "Protracts and upwardly rotates the scapula; the boxer's muscle."
+    },
+    {
+      "id": "m12_fc22",
+      "term": "Pectoralis major",
+      "definition": "Flexes, adducts, and medially rotates the arm."
+    },
+    {
+      "id": "m12_fc23",
+      "term": "Latissimus dorsi",
+      "definition": "Extends, adducts, and medially rotates the arm; the swimmer's muscle."
+    },
+    {
+      "id": "m12_fc24",
+      "term": "Deltoid",
+      "definition": "Prime mover of arm abduction; multipennate; common injection site."
+    },
+    {
+      "id": "m12_fc25",
+      "term": "Rotator cuff (SITS)",
+      "definition": "Supraspinatus (abducts), infraspinatus (laterally rotates), teres minor (laterally rotates), subscapularis (medially rotates)."
+    },
+    {
+      "id": "m12_fc26",
+      "term": "Biceps brachii",
+      "definition": "Flexes the elbow and supinates the forearm; inserts on the radial tuberosity."
+    },
+    {
+      "id": "m12_fc27",
+      "term": "Triceps brachii",
+      "definition": "Prime mover of elbow extension; inserts on the olecranon."
+    },
+    {
+      "id": "m12_fc28",
+      "term": "Iliopsoas",
+      "definition": "Psoas major plus iliacus; prime mover of hip flexion."
+    },
+    {
+      "id": "m12_fc29",
+      "term": "Gluteus maximus",
+      "definition": "Prime mover of hip extension; laterally rotates the thigh."
+    },
+    {
+      "id": "m12_fc30",
+      "term": "Gluteus medius",
+      "definition": "Abducts and medially rotates the thigh; keeps the pelvis level when walking; injection site."
+    },
+    {
+      "id": "m12_fc31",
+      "term": "Quadriceps femoris",
+      "definition": "Rectus femoris, vastus lateralis, vastus medialis, vastus intermedius; extend the knee. Rectus femoris also flexes the hip."
+    },
+    {
+      "id": "m12_fc32",
+      "term": "Hamstrings",
+      "definition": "Biceps femoris, semitendinosus, semimembranosus; flex the knee and extend the hip."
+    },
+    {
+      "id": "m12_fc33",
+      "term": "Tibialis anterior",
+      "definition": "Prime mover of dorsiflexion; inverts the foot."
+    },
+    {
+      "id": "m12_fc34",
+      "term": "Gastrocnemius and soleus",
+      "definition": "Calf muscles that plantar flex the foot via the calcaneal tendon; gastrocnemius also flexes the knee."
+    },
+    {
+      "id": "m12_fc35",
+      "term": "Fibularis longus",
+      "definition": "Lateral leg muscle that everts and plantar flexes the foot; also called peroneus longus."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m12_q01",
+      "type": "multiple_choice",
+      "prompt": "During elbow flexion, the triceps brachii acts as the:",
+      "choices": [
+        "Prime mover",
+        "Synergist",
+        "Antagonist",
+        "Fixator"
+      ],
+      "answer": 2,
+      "explanation": "The triceps extends the elbow, so it opposes flexion and is the antagonist. It is the prime mover only for elbow extension, the opposite movement."
+    },
+    {
+      "id": "m12_q02",
+      "type": "multiple_choice",
+      "prompt": "Which statement about origin and insertion is correct?",
+      "choices": [
+        "The origin is usually the more movable attachment",
+        "During contraction, the insertion moves toward the origin",
+        "The insertion is always on a more proximal bone",
+        "Origins and insertions can never switch roles"
+      ],
+      "answer": 1,
+      "explanation": "The insertion is on the moving bone and is pulled toward the fixed origin. Origins are typically the stationary, proximal attachment, and the roles can reverse when the usual insertion is fixed, as in a pull-up."
+    },
+    {
+      "id": "m12_q03",
+      "type": "multiple_choice",
+      "prompt": "Flexing the elbow to lift a weight in the hand uses which class of lever?",
+      "choices": [
+        "First class",
+        "Second class",
+        "Third class",
+        "None, because the elbow is a hinge joint"
+      ],
+      "answer": 2,
+      "explanation": "The biceps inserts between the elbow (fulcrum) and the weight in the hand (load), so effort is in the middle: a third-class lever, the most common type in the body. A hinge joint can still act as the fulcrum of a lever."
+    },
+    {
+      "id": "m12_q04",
+      "type": "multiple_choice",
+      "prompt": "In a first-class lever, which element lies between the other two?",
+      "choices": [
+        "Load",
+        "Effort",
+        "Fulcrum",
+        "Insertion"
+      ],
+      "answer": 2,
+      "explanation": "A first-class lever has the fulcrum in the middle, like a seesaw. The load is in the middle in second-class levers and the effort is in the middle in third-class levers."
+    },
+    {
+      "id": "m12_q05",
+      "type": "multiple_choice",
+      "prompt": "The name 'flexor carpi ulnaris' tells you the muscle:",
+      "choices": [
+        "Flexes the elbow and lies along the ulna",
+        "Flexes the wrist and lies on the ulnar side",
+        "Has two heads that attach to the carpals",
+        "Flexes the fingers on the little finger side"
+      ],
+      "answer": 1,
+      "explanation": "'Flexor' is the action, 'carpi' refers to the wrist, and 'ulnaris' gives its location on the ulnar side. Finger flexors are named 'digitorum'."
+    },
+    {
+      "id": "m12_q06",
+      "type": "multiple_choice",
+      "prompt": "Which fascicle arrangement is found in the deltoid and provides great power?",
+      "choices": [
+        "Parallel",
+        "Circular",
+        "Multipennate",
+        "Convergent"
+      ],
+      "answer": 2,
+      "explanation": "The deltoid is multipennate, with many short fibers packed around several tendons. Parallel muscles such as the sartorius trade power for a greater range of shortening."
+    },
+    {
+      "id": "m12_q07",
+      "type": "multiple_choice",
+      "prompt": "A patient cannot close one eye or smile on the left side of the face after a viral illness. Which nerve is most likely affected?",
+      "choices": [
+        "Trigeminal nerve (cranial nerve V)",
+        "Facial nerve (cranial nerve VII)",
+        "Hypoglossal nerve (cranial nerve XII)",
+        "Accessory nerve (cranial nerve XI)"
+      ],
+      "answer": 1,
+      "explanation": "Muscles of facial expression, including orbicularis oculi and zygomaticus, are supplied by the facial nerve, and this pattern fits Bell's palsy. The trigeminal nerve supplies the chewing muscles, so it is the common mix-up."
+    },
+    {
+      "id": "m12_q08",
+      "type": "multiple_choice",
+      "prompt": "Which muscle is the prime mover of jaw closure?",
+      "choices": [
+        "Buccinator",
+        "Masseter",
+        "Lateral pterygoid",
+        "Platysma"
+      ],
+      "answer": 1,
+      "explanation": "The masseter elevates the mandible powerfully. The lateral pterygoid protracts the jaw and helps open it, and the buccinator is a facial muscle in the cheek, not a muscle of mastication."
+    },
+    {
+      "id": "m12_q09",
+      "type": "multiple_choice",
+      "prompt": "Contraction of the right sternocleidomastoid alone turns the face toward the:",
+      "choices": [
+        "Right",
+        "Left",
+        "Ceiling (extension)",
+        "Chest (flexion)"
+      ],
+      "answer": 1,
+      "explanation": "The SCM attaches behind the ear to the mastoid process; pulling that point forward and down rotates the face toward the opposite side. Both sides contracting together flex the neck."
+    },
+    {
+      "id": "m12_q10",
+      "type": "multiple_choice",
+      "prompt": "Which muscle is the prime mover of inspiration?",
+      "choices": [
+        "External intercostals",
+        "Internal intercostals",
+        "Diaphragm",
+        "Rectus abdominis"
+      ],
+      "answer": 2,
+      "explanation": "The diaphragm does most of the work of quiet breathing by flattening and enlarging the thoracic cavity. External intercostals assist by elevating the ribs; internal intercostals act in forced expiration."
+    },
+    {
+      "id": "m12_q11",
+      "type": "multiple_choice",
+      "prompt": "Which rotator cuff muscle medially rotates the arm?",
+      "choices": [
+        "Supraspinatus",
+        "Infraspinatus",
+        "Teres minor",
+        "Subscapularis"
+      ],
+      "answer": 3,
+      "explanation": "The subscapularis lies on the anterior scapula and inserts on the lesser tubercle, producing medial rotation. Infraspinatus and teres minor are lateral rotators, and supraspinatus abducts."
+    },
+    {
+      "id": "m12_q12",
+      "type": "multiple_choice",
+      "prompt": "A baseball pitcher has pain when lifting his arm out to the side, and imaging shows a tendon pinched under the acromion. Which muscle's tendon is most likely injured?",
+      "choices": [
+        "Supraspinatus",
+        "Teres major",
+        "Latissimus dorsi",
+        "Subscapularis"
+      ],
+      "answer": 0,
+      "explanation": "The supraspinatus tendon passes under the acromion to the greater tubercle and helps abduct the arm, making it the most commonly injured rotator cuff tendon. Teres major is not part of the rotator cuff, despite its similar name to teres minor."
+    },
+    {
+      "id": "m12_q13",
+      "type": "multiple_choice",
+      "prompt": "Which muscle is the prime mover of arm abduction?",
+      "choices": [
+        "Pectoralis major",
+        "Deltoid",
+        "Latissimus dorsi",
+        "Teres major"
+      ],
+      "answer": 1,
+      "explanation": "The deltoid is the prime mover of abduction, with supraspinatus helping to start the movement. The other three muscles all adduct the arm."
+    },
+    {
+      "id": "m12_q14",
+      "type": "multiple_choice",
+      "prompt": "Pulling yourself up on a chin-up bar relies most on which muscle, which extends and adducts the arm?",
+      "choices": [
+        "Deltoid",
+        "Latissimus dorsi",
+        "Serratus anterior",
+        "Trapezius"
+      ],
+      "answer": 1,
+      "explanation": "The latissimus dorsi extends, adducts, and medially rotates the arm, pulling the body toward the bar. Serratus anterior protracts the scapula, which is used more in pushing and reaching."
+    },
+    {
+      "id": "m12_q15",
+      "type": "multiple_choice",
+      "prompt": "Which muscle both flexes the elbow and supinates the forearm?",
+      "choices": [
+        "Brachialis",
+        "Brachioradialis",
+        "Biceps brachii",
+        "Pronator teres"
+      ],
+      "answer": 2,
+      "explanation": "The biceps brachii inserts on the radial tuberosity, so it can spin the radius into supination as well as flex the elbow. The brachialis inserts on the ulna, which cannot rotate, so it only flexes."
+    },
+    {
+      "id": "m12_q16",
+      "type": "multiple_choice",
+      "prompt": "Which muscle of the quadriceps femoris group also flexes the hip?",
+      "choices": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "answer": 3,
+      "explanation": "Rectus femoris arises from the anterior inferior iliac spine, so it crosses the hip as well as the knee. The three vasti arise from the femur and act only on the knee."
+    },
+    {
+      "id": "m12_q17",
+      "type": "multiple_choice",
+      "prompt": "A sprinter feels a sudden pain in the back of the thigh. Which action would most likely be painful and weak?",
+      "choices": [
+        "Extending the knee",
+        "Flexing the knee",
+        "Flexing the hip",
+        "Dorsiflexing the ankle"
+      ],
+      "answer": 1,
+      "explanation": "A pulled hamstring injures the posterior thigh muscles, which flex the knee and extend the hip. Knee extension and hip flexion are quadriceps and iliopsoas actions, the hamstrings' antagonists."
+    },
+    {
+      "id": "m12_q18",
+      "type": "multiple_choice",
+      "prompt": "Which muscle is the prime mover of dorsiflexion?",
+      "choices": [
+        "Gastrocnemius",
+        "Tibialis anterior",
+        "Fibularis longus",
+        "Soleus"
+      ],
+      "answer": 1,
+      "explanation": "Tibialis anterior lifts the top of the foot and also inverts it. Gastrocnemius and soleus are plantar flexors, the antagonists of dorsiflexion."
+    },
+    {
+      "id": "m12_q19",
+      "type": "true_false",
+      "prompt": "The gastrocnemius can flex the knee as well as plantar flex the foot.",
+      "answer": true,
+      "explanation": "The gastrocnemius arises from the femoral condyles, so it crosses the knee as well as the ankle. The soleus arises below the knee and acts only at the ankle."
+    },
+    {
+      "id": "m12_q20",
+      "type": "true_false",
+      "prompt": "Teres major is one of the four rotator cuff muscles.",
+      "answer": false,
+      "explanation": "The rotator cuff (SITS) includes teres minor, not teres major. Teres major helps the latissimus dorsi extend, adduct, and medially rotate the arm."
+    },
+    {
+      "id": "m12_q21",
+      "type": "true_false",
+      "prompt": "The second-class lever, with the load between fulcrum and effort, is the most common lever type in the human body.",
+      "answer": false,
+      "explanation": "Third-class levers, with the effort in the middle, are the most common. Second-class levers are rare; standing on the toes is the usual textbook example."
+    },
+    {
+      "id": "m12_q22",
+      "type": "ordering",
+      "prompt": "Order the abdominal wall muscles on the side of the abdomen from superficial to deep.",
+      "items": [
+        "External oblique",
+        "Internal oblique",
+        "Transversus abdominis"
+      ],
+      "explanation": "The external oblique is outermost with fibers running down and toward the midline, the internal oblique runs at right angles to it, and the transversus abdominis is deepest with horizontal fibers."
+    },
+    {
+      "id": "m12_q23",
+      "type": "ordering",
+      "prompt": "Order the rotator cuff muscles as they appear in the SITS mnemonic.",
+      "items": [
+        "Supraspinatus",
+        "Infraspinatus",
+        "Teres minor",
+        "Subscapularis"
+      ],
+      "explanation": "SITS moves from superior to posterior to anterior: supraspinatus above the spine, infraspinatus below it, teres minor along the lateral border, and subscapularis on the anterior surface."
+    },
+    {
+      "id": "m12_q24",
+      "type": "ordering",
+      "prompt": "Order the lever classes by which element is in the middle: fulcrum first, then load, then effort.",
+      "items": [
+        "First-class lever (seesaw, head on atlas)",
+        "Second-class lever (wheelbarrow, standing on toes)",
+        "Third-class lever (tweezers, biceps flexing the elbow)"
+      ],
+      "explanation": "Use '1, 2, 3: F, L, E': the fulcrum is in the middle of a first-class lever, the load in a second-class lever, and the effort in a third-class lever."
+    }
+  ]
+}

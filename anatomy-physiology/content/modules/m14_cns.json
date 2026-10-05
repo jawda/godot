@@ -1,0 +1,449 @@
+{
+  "id": "m14_cns",
+  "order": 14,
+  "course": "A&P I",
+  "title": "The Central Nervous System",
+  "summary": "Meninges, CSF, spinal cord, cerebrum, diencephalon, brainstem, cerebellum, and common CNS disorders.",
+  "objectives": [
+    "Name the three meninges and the spaces associated with them",
+    "Trace the production, flow, and reabsorption of cerebrospinal fluid",
+    "Explain what the blood-brain barrier is and what crosses it",
+    "Describe the gray and white matter of the spinal cord and name major ascending and descending tracts",
+    "Locate the lobes of the cerebrum and the major functional areas of the cortex",
+    "Describe the functions of the basal nuclei, limbic system, thalamus, and hypothalamus",
+    "List the parts of the brainstem and their vital functions",
+    "Explain the roles of the cerebellum and reticular formation",
+    "Distinguish types of memory and the four main brain wave patterns",
+    "Describe the basic cause of stroke, concussion, Alzheimer's disease, and Parkinson's disease"
+  ],
+  "lesson": [
+    {
+      "heading": "The Meninges",
+      "body": [
+        "The brain and spinal cord are protected by bone (skull and vertebrae), by cerebrospinal fluid, and by three connective tissue membranes called the [b]meninges[/b]. From outside in:",
+        "- [b]Dura mater[/b] ('tough mother'): the thick, tough outer layer of dense connective tissue. Around the brain it has two layers, an outer periosteal layer fused to the skull and an inner meningeal layer. Where these separate, they enclose [b]dural venous sinuses[/b] that collect venous blood. Folds of the dura, such as the [b]falx cerebri[/b] between the hemispheres and the [b]tentorium cerebelli[/b] between cerebrum and cerebellum, help hold the brain in place. Around the spinal cord the dura is a single layer.",
+        "- [b]Arachnoid mater[/b]: a thin, weblike middle layer. It has no blood vessels of its own.",
+        "- [b]Pia mater[/b] ('gentle mother'): a very thin, delicate layer that clings tightly to the surface of the brain and spinal cord, following every groove. It carries many small blood vessels.",
+        "[b]Spaces[/b]:",
+        "- [b]Epidural space[/b]: outside the dura. Around the spinal cord it is a real space between the dura and the vertebrae, filled with fat and veins. In the skull the dura is attached to bone, so it is only a potential space.",
+        "- [b]Subdural space[/b]: a thin potential space between the dura and the arachnoid.",
+        "- [b]Subarachnoid space[/b]: between the arachnoid and the pia. It contains [b]cerebrospinal fluid (CSF)[/b] and the larger blood vessels of the brain surface."
+      ],
+      "tip": "From outside in: 'DAP' = Dura, Arachnoid, Pia. The dura is 'durable'.",
+      "clinical": "[b]Meningitis[/b] is inflammation of the meninges, usually from bacterial or viral infection; bacterial meningitis can be fatal. An [b]epidural[/b] anesthetic is injected into the spinal epidural space during childbirth to block nerve roots without entering the CSF.",
+      "figure": {
+        "file": "m14_meninges.jpg",
+        "caption": "From the skull inward, find the dura mater, arachnoid mater, subarachnoid space, and pia mater hugging the cortex. The superior sagittal sinus is a dural venous sinus where the dura splits, and arachnoid granulations (villi) poke into it to return CSF to the blood.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 13.17, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-3-circulation-and-the-central-nervous-system"
+      }
+    },
+    {
+      "heading": "Ventricles, CSF, and the Blood-Brain Barrier",
+      "body": [
+        "The brain contains four interconnected cavities called [b]ventricles[/b], lined by ependymal cells and filled with CSF.",
+        "- Two [b]lateral ventricles[/b], one in each cerebral hemisphere.",
+        "- The [b]third ventricle[/b], a narrow cavity in the diencephalon, connected to each lateral ventricle by an [b]interventricular foramen[/b].",
+        "- The [b]cerebral aqueduct[/b], a narrow canal through the midbrain, connecting the third ventricle to the fourth.",
+        "- The [b]fourth ventricle[/b], between the pons and medulla in front and the cerebellum behind. It continues downward as the [b]central canal[/b] of the spinal cord and opens through small apertures into the subarachnoid space.",
+        "[b]CSF[/b] is a clear fluid filtered from blood by the [b]choroid plexuses[/b], networks of capillaries covered by ependymal cells found in all four ventricles (most in the lateral ventricles). It cushions the brain, makes it buoyant so it does not crush its own lower parts, and carries nutrients and wastes. About 500 mL is made each day, but only about 150 mL is present at any time because it is constantly reabsorbed.",
+        "CSF flows from the lateral ventricles to the third ventricle, through the cerebral aqueduct to the fourth ventricle, then out into the subarachnoid space, where it circulates around the brain and spinal cord. It returns to the blood through [b]arachnoid granulations (villi)[/b] that project into the dural venous sinuses, mainly the superior sagittal sinus.",
+        "The [b]blood-brain barrier (BBB)[/b] protects neurons from changes in blood composition. It is formed mainly by [b]tight junctions between capillary endothelial cells[/b] in the brain, supported by astrocytes. Water, O₂, CO₂, glucose (by carriers), and lipid-soluble substances such as alcohol, nicotine, and anesthetics cross easily. Most ions, proteins, many toxins, and many drugs do not."
+      ],
+      "tip": "CSF flow: 'Lateral, Third, Aqueduct, Fourth, Subarachnoid, Sinus.' Made by the choroid plexus, drained by the arachnoid granulations.",
+      "clinical": "[b]Hydrocephalus[/b] occurs when CSF flow or reabsorption is blocked, so fluid builds up and enlarges the ventricles; in infants the skull expands. It is treated with a shunt. Because many drugs cannot cross the BBB, treating brain infections and tumors is difficult.",
+      "figure": {
+        "file": "m14_csf_flow.jpg",
+        "caption": "Follow the arrows: CSF made by the choroid plexus flows from the lateral ventricles through the interventricular foramen to the third ventricle, down the cerebral aqueduct to the fourth ventricle, then out into the subarachnoid space and back to the blood at the arachnoid granulations.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 13.18, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-3-circulation-and-the-central-nervous-system"
+      }
+    },
+    {
+      "heading": "Spinal Cord Structure",
+      "body": [
+        "The [b]spinal cord[/b] runs from the foramen magnum to about the level of the first or second lumbar vertebra (L1 to L2) in adults. It ends in a tapered [b]conus medullaris[/b]. A thread of pia, the [b]filum terminale[/b], anchors it to the coccyx. Below the conus, the lumbar and sacral nerve roots hang down in the vertebral canal like a horse's tail: the [b]cauda equina[/b]. The cord has [b]cervical[/b] and [b]lumbar enlargements[/b] where nerves to the upper and lower limbs arise, and it gives rise to 31 pairs of spinal nerves.",
+        "In cross section, an [b]anterior median fissure[/b] and a [b]posterior median sulcus[/b] divide the cord into right and left halves. Unlike the brain, the spinal cord has [b]gray matter on the inside[/b], shaped like a butterfly or letter H, and [b]white matter on the outside[/b].",
+        "[b]Gray matter[/b]:",
+        "- [b]Posterior (dorsal) horns[/b]: contain interneurons that receive sensory input. Sensory fibers enter through the dorsal root, whose cell bodies sit in the [b]dorsal root ganglion[/b].",
+        "- [b]Anterior (ventral) horns[/b]: contain cell bodies of somatic motor neurons whose axons leave through the ventral root to skeletal muscles.",
+        "- [b]Lateral horns[/b]: present only in the thoracic and upper lumbar segments; contain cell bodies of sympathetic autonomic motor neurons.",
+        "- The [b]gray commissure[/b] connects the two sides and surrounds the [b]central canal[/b].",
+        "[b]White matter[/b] is divided on each side into [b]posterior, lateral, and anterior columns (funiculi)[/b]. Each column contains [b]tracts[/b], bundles of myelinated axons carrying information up or down the cord."
+      ],
+      "tip": "Dorsal = sensory in, Ventral = motor out. 'SAME DAVE': Sensory Afferent, Motor Efferent; Dorsal Afferent, Ventral Efferent.",
+      "clinical": "A [b]lumbar puncture (spinal tap)[/b] is done between L3 and L4 or L4 and L5. Because the cord ends near L1 to L2, the needle enters the subarachnoid space among the cauda equina roots, which tend to slide aside, without hitting the cord.",
+      "figure": {
+        "file": "m14_cord_section.jpg",
+        "caption": "The butterfly shaped gray matter sits inside, with posterior (dorsal), lateral, and anterior (ventral) horns, surrounded by white matter columns. The lower panel is a stained slide of the same arrangement.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 13.14, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-2-the-central-nervous-system"
+      }
+    },
+    {
+      "heading": "Spinal Cord Tracts",
+      "body": [
+        "Tract names usually tell you the origin first and the destination second. A [b]spinothalamic[/b] tract goes from spinal cord to thalamus (ascending, sensory). A [b]corticospinal[/b] tract goes from cerebral cortex to spinal cord (descending, motor).",
+        "[b]Ascending (sensory) tracts[/b]:",
+        "- [b]Posterior (dorsal) column tracts[/b], the [b]fasciculus gracilis[/b] and [b]fasciculus cuneatus[/b]: fine touch, vibration, pressure, and proprioception (body position). These fibers cross to the opposite side in the [b]medulla[/b].",
+        "- [b]Spinothalamic tracts[/b]: the lateral tract carries [b]pain and temperature[/b]; the anterior tract carries crude touch and pressure. These fibers cross in the [b]spinal cord[/b] near where they enter.",
+        "- [b]Spinocerebellar tracts[/b]: carry unconscious proprioceptive information from muscles and joints to the cerebellum for coordination.",
+        "[b]Descending (motor) tracts[/b]:",
+        "- [b]Corticospinal (pyramidal) tracts[/b]: carry voluntary motor commands from the primary motor cortex to motor neurons. Most fibers (about 80 to 90 percent) cross in the [b]pyramids of the medulla[/b] and descend as the lateral corticospinal tract; the rest descend uncrossed in the anterior corticospinal tract and cross at the spinal level where they end.",
+        "- [b]Extrapyramidal tracts[/b], such as the [b]reticulospinal[/b], [b]rubrospinal[/b], and [b]vestibulospinal[/b] tracts: carry subconscious commands for posture, balance, and muscle tone.",
+        "Because the major pathways cross over, each side of the brain senses and controls the opposite side of the body."
+      ],
+      "tip": "Spinothalamic: 'Spine to Thalamus' = sensory up. Corticospinal: 'Cortex to Spine' = motor down.",
+      "clinical": "Damage to one half of the cord (Brown-Séquard syndrome) causes loss of fine touch and voluntary movement on the same side but loss of pain and temperature on the opposite side, because the dorsal columns and corticospinal fibers cross in the medulla while spinothalamic fibers cross in the cord.",
+      "figure": {
+        "file": "m14_ascending_tracts.jpg",
+        "caption": "Compare where each pathway crosses. Fine touch and proprioception travel up the fasciculus gracilis and cuneatus and cross in the medulla; pain and temperature cross in the spinal cord right where they enter and ascend in the lateral spinothalamic tract. Both relay in the thalamus before reaching the postcentral gyrus.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 14.19, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-2-central-processing"
+      }
+    },
+    {
+      "heading": "The Cerebrum: Lobes and Functional Areas",
+      "body": [
+        "The [b]cerebrum[/b] is the largest part of the brain. A deep [b]longitudinal fissure[/b] separates it into right and left [b]cerebral hemispheres[/b], connected by a thick band of white matter, the [b]corpus callosum[/b]. The surface is folded into ridges ([b]gyri[/b]) and grooves ([b]sulci[/b]), which greatly increase the area of the [b]cerebral cortex[/b], a thin layer of gray matter only a few millimeters thick. Beneath it lies white matter and deeper islands of gray matter (basal nuclei).",
+        "[b]Lobes[/b] (named for the overlying skull bones):",
+        "- [b]Frontal lobe[/b]: anterior to the [b]central sulcus[/b]. Voluntary motor control, speech production, planning, judgment, personality (prefrontal cortex).",
+        "- [b]Parietal lobe[/b]: posterior to the central sulcus. General sensations such as touch, temperature, pain, and body position.",
+        "- [b]Temporal lobe[/b]: below the [b]lateral sulcus[/b]. Hearing, language comprehension, memory, smell.",
+        "- [b]Occipital lobe[/b]: at the back. Vision.",
+        "- [b]Insula[/b]: hidden deep within the lateral sulcus. Taste and visceral sensation.",
+        "[b]Functional areas[/b]:",
+        "- [b]Primary motor cortex[/b]: in the [b]precentral gyrus[/b] of the frontal lobe. Controls voluntary skeletal muscle on the opposite side of the body. Body parts needing fine control, such as hands and lips, get disproportionately large areas (the motor homunculus).",
+        "- [b]Primary somatosensory cortex[/b]: in the [b]postcentral gyrus[/b] of the parietal lobe. Receives general sensation from the opposite side of the body.",
+        "- [b]Broca's area (motor speech area)[/b]: in the frontal lobe, usually the left, just anterior to the motor cortex that controls the face. Coordinates the muscle movements needed to speak.",
+        "- [b]Wernicke's area[/b]: usually in the left hemisphere, in the posterior temporal lobe near the parietal lobe. Needed to understand spoken and written language. Hole's describes it as part of a general interpretive area where temporal, parietal, and occipital lobes meet.",
+        "- [b]Primary visual cortex[/b]: occipital lobe.",
+        "- [b]Primary auditory cortex[/b]: superior temporal lobe.",
+        "[b]Association areas[/b] surrounding each primary area interpret the raw input, for example recognizing a face rather than just seeing shapes."
+      ],
+      "tip": "Pre-central = motor (you move BEFORE you feel); Post-central = sensory. Broca's = Broken speech (production); Wernicke's = Words make no sense (comprehension).",
+      "clinical": "A stroke in Broca's area causes [b]expressive aphasia[/b]: the person understands but speaks slowly with great effort. Damage to Wernicke's area causes [b]receptive aphasia[/b]: speech is fluent but makes little sense, and comprehension is poor.",
+      "figure": {
+        "file": "m14_lobes.jpg",
+        "caption": "The central sulcus separates the frontal lobe (with the precentral gyrus, primary motor) from the parietal lobe (with the postcentral gyrus, primary sensory). The lateral sulcus sets off the temporal lobe, and the occipital lobe sits at the back.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 13.7, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-2-the-central-nervous-system"
+      }
+    },
+    {
+      "heading": "Lateralization, Basal Nuclei, and the Limbic System",
+      "body": [
+        "[b]Hemispheric lateralization[/b]: the two hemispheres look alike but specialize somewhat. In about 90 percent of people the [b]left hemisphere[/b] is dominant for language and is stronger at analytical tasks, math, and logic. The [b]right hemisphere[/b] is stronger at spatial and visual tasks, face recognition, music, and the emotional tone of speech. Both hemispheres work together through the corpus callosum; the popular idea of 'left-brained' or 'right-brained' personalities is not supported by evidence.",
+        "[b]White matter fibers[/b] of the cerebrum come in three kinds: [b]commissural[/b] fibers connect the two hemispheres (corpus callosum), [b]association[/b] fibers connect areas within one hemisphere, and [b]projection[/b] fibers connect the cerebrum to lower brain regions and the spinal cord.",
+        "[b]Basal nuclei (basal ganglia)[/b] are masses of gray matter deep in the cerebrum: the [b]caudate nucleus[/b], [b]putamen[/b], and [b]globus pallidus[/b]. Working with the substantia nigra of the midbrain, they help start and stop movements, regulate muscle tone, and suppress unwanted movements. They do not send commands directly to the spinal cord; they modify output from the motor cortex.",
+        "The [b]limbic system[/b] is a ring of structures on the medial border of the cerebrum and diencephalon, including the [b]amygdala[/b], [b]hippocampus[/b], [b]cingulate gyrus[/b], parts of the thalamus and hypothalamus, and the fornix. It is the emotional brain: it produces feelings such as fear, anger, and pleasure, links emotion to memory, and connects to the hypothalamus to produce physical responses to emotion. The amygdala is central to fear; the hippocampus is essential for forming new long-term memories."
+      ],
+      "tip": "Hippocampus looks like a seahorse, and seahorses 'remember the way home.' Amygdala = alarm (fear).",
+      "clinical": "Huntington's disease degenerates the basal nuclei and causes involuntary jerky movements. Parkinson's disease reduces dopamine input to the basal nuclei and makes movement hard to start.",
+      "figure": {
+        "file": "m14_basal_nuclei.jpg",
+        "caption": "This frontal section shows the basal nuclei deep inside the cerebrum: the caudate nucleus beside the lateral ventricle, the putamen, and the globus pallidus. The corpus callosum, the commissural fibers joining the hemispheres, arches over the top.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 13.9, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-2-the-central-nervous-system"
+      }
+    },
+    {
+      "heading": "The Diencephalon",
+      "body": [
+        "The [b]diencephalon[/b] sits between the cerebral hemispheres and the brainstem, surrounding the third ventricle.",
+        "- [b]Thalamus[/b]: paired egg-shaped masses forming most of the diencephalon. It is the major [b]relay station[/b] for sensory impulses heading to the cerebral cortex. All senses except smell pass through it. It also gives a crude awareness of sensations such as pain and helps relay motor signals.",
+        "- [b]Hypothalamus[/b]: below the thalamus, forming the floor of the third ventricle. Small but vital, it is the main link between the nervous and endocrine systems and a key homeostatic center.",
+        "Hypothalamus functions:",
+        "- Controls the autonomic nervous system (heart rate, blood pressure, digestive activity).",
+        "- Regulates body temperature.",
+        "- Regulates hunger, satiety, and thirst, and water balance through ADH.",
+        "- Controls the pituitary gland through releasing hormones and produces ADH and oxytocin.",
+        "- Regulates sleep-wake cycles and circadian rhythms.",
+        "- Takes part in emotional responses through the limbic system, such as rage, fear, and pleasure.",
+        "- [b]Epithalamus[/b]: the roof of the third ventricle, containing the [b]pineal gland[/b], which secretes melatonin to help regulate sleep.",
+        "Other structures on the underside of the diencephalon include the [b]optic chiasma[/b], the [b]infundibulum[/b] (stalk of the pituitary), and the [b]mammillary bodies[/b], which relay smell signals and take part in memory."
+      ],
+      "tip": "Thalamus = switchboard or relay station. Hypothalamus = thermostat, pantry, and water tower for the body, plus boss of the pituitary.",
+      "figure": {
+        "file": "m14_diencephalon.jpg",
+        "caption": "In this midsagittal view, the thalamus sits at the center of the brain, and the hypothalamus lies just below it, connected to the pituitary gland.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 13.11, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-2-the-central-nervous-system"
+      }
+    },
+    {
+      "heading": "Brainstem, Cerebellum, and Reticular Formation",
+      "body": [
+        "The [b]brainstem[/b] connects the cerebrum to the spinal cord. It carries all ascending and descending tracts, contains nuclei for cranial nerves III through XII, and controls functions essential for life. Top to bottom:",
+        "- [b]Midbrain (mesencephalon)[/b]: contains the cerebral aqueduct. Its front has the [b]cerebral peduncles[/b], bundles of descending motor fibers. Its back has four bumps, the [b]corpora quadrigemina[/b]: the [b]superior colliculi[/b] control visual reflexes (turning the eyes and head toward a sudden sight), and the [b]inferior colliculi[/b] control auditory reflexes (turning toward a sudden sound). The [b]substantia nigra[/b] is here too.",
+        "- [b]Pons[/b] ('bridge'): a bulge relaying signals between the cerebrum and cerebellum. Its respiratory areas help regulate the rate and depth of breathing together with the medulla.",
+        "- [b]Medulla oblongata[/b]: continuous with the spinal cord. Contains vital reflex centers: the [b]cardiac center[/b] (heart rate and force), the [b]vasomotor center[/b] (blood vessel diameter and blood pressure), and the [b]respiratory center[/b] (basic rhythm of breathing). Nonvital reflex centers handle coughing, sneezing, swallowing, and vomiting. The [b]pyramids[/b] on its front are where most corticospinal fibers cross.",
+        "The [b]cerebellum[/b] sits behind the brainstem, under the occipital lobes. Its white matter forms a branching pattern called the [b]arbor vitae[/b], and the vermis connects its two hemispheres. It [b]coordinates[/b] skilled movement, maintains posture and balance, and supports motor learning. It does not start movements; it compares intended movements from the cortex with actual movement reported by proprioceptors and corrects errors.",
+        "The [b]reticular formation[/b] is a network of nuclei and fibers running through the core of the brainstem. Part of it, the [b]reticular activating system (RAS)[/b], keeps the cerebral cortex awake and alert and filters incoming sensory information so you ignore unimportant stimuli, such as the feel of your clothing."
+      ],
+      "tip": "Cranial nerve nuclei: midbrain has III and IV, pons has V through VIII, and medulla has IX through XII. 'Medulla = must have' (heart, vessels, breathing).",
+      "clinical": "Damage to the medulla is often fatal because it controls breathing and heart rate. Cerebellar damage, or alcohol intoxication, causes [b]ataxia[/b]: clumsy, uncoordinated movement and an unsteady, wide-based walk. Severe injury to the RAS can cause a coma.",
+      "figure": {
+        "file": "m14_brainstem.jpg",
+        "caption": "The brainstem runs from the midbrain at the top, through the bulging pons, to the medulla oblongata, which continues into the spinal cord.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 13.12, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-2-the-central-nervous-system"
+      }
+    },
+    {
+      "heading": "Memory, Brain Waves, and CNS Disorders",
+      "body": [
+        "[b]Memory[/b]: [b]short-term (working) memory[/b] holds a small amount of information, roughly 7 items, for seconds to minutes. With repetition and emotional significance, information is consolidated into [b]long-term memory[/b], which can last a lifetime. The [b]hippocampus[/b] is essential for this consolidation, though long-term memories are eventually stored across the cerebral cortex. At the cellular level, learning strengthens synapses (long-term potentiation).",
+        "[b]Brain waves[/b] recorded on an [b]electroencephalogram (EEG)[/b] reflect the combined electrical activity of cortical neurons:",
+        "- [b]Alpha waves[/b]: about 8 to 13 Hz; awake but relaxed with eyes closed.",
+        "- [b]Beta waves[/b]: higher frequency (above about 13 Hz); alert, concentrating, or problem solving.",
+        "- [b]Theta waves[/b]: about 4 to 7 Hz; normal in children and in drowsy adults.",
+        "- [b]Delta waves[/b]: below 4 Hz, high amplitude; deep sleep and infants. In an awake adult they suggest brain damage.",
+        "Exact frequency cutoffs vary slightly between textbooks. A flat EEG indicates absence of brain activity, a criterion used in determining brain death.",
+        "[b]Common disorders[/b]:",
+        "- [b]Stroke (cerebrovascular accident, CVA)[/b]: brain tissue dies from loss of blood flow. Most are [b]ischemic[/b] (a clot blocks an artery); others are [b]hemorrhagic[/b] (a vessel ruptures). Symptoms depend on the region affected and appear on the opposite side of the body. A transient ischemic attack (TIA) is a temporary episode that warns of possible future stroke.",
+        "- [b]Concussion[/b]: a mild traumatic brain injury from a blow or jolt that causes temporary disruption of brain function, such as confusion, headache, dizziness, or brief loss of consciousness. Repeated concussions can cause lasting damage.",
+        "- [b]Alzheimer's disease[/b]: progressive dementia with memory loss, confusion, and personality changes. The brain develops [b]amyloid beta plaques[/b] between neurons and [b]neurofibrillary tangles[/b] (tau protein) inside them, with loss of ACh-releasing neurons and shrinkage of the hippocampus and cortex.",
+        "- [b]Parkinson's disease[/b]: degeneration of dopamine-releasing neurons in the substantia nigra, reducing dopamine in the basal nuclei. Signs include resting tremor, muscle rigidity, slow movement (bradykinesia), and a shuffling gait."
+      ],
+      "tip": "Brain waves from fastest to slowest: 'BATD' = Beta, Alpha, Theta, Delta. Delta = Deep sleep.",
+      "clinical": "Stroke warning signs: [b]FAST[/b] = Face drooping, Arm weakness, Speech difficulty, Time to call 911. Clot-busting drugs work only if given within a few hours. Parkinson's is treated with L-dopa, a precursor that crosses the blood-brain barrier, because dopamine itself cannot."
+    }
+  ],
+  "flashcards": [
+    { "id": "m14_fc01", "term": "Dura mater", "definition": "Tough outermost meninx; two layers around the brain enclosing dural venous sinuses; single layer around the spinal cord." },
+    { "id": "m14_fc02", "term": "Arachnoid mater", "definition": "Weblike middle meninx; the subarachnoid space beneath it contains CSF." },
+    { "id": "m14_fc03", "term": "Pia mater", "definition": "Thin innermost meninx that clings to the brain and spinal cord surface and carries small blood vessels." },
+    { "id": "m14_fc04", "term": "Epidural space", "definition": "Space outside the dura; a real fat-filled space around the spinal cord, only a potential space in the skull. Site of epidural anesthesia." },
+    { "id": "m14_fc05", "term": "Subarachnoid space", "definition": "Space between the arachnoid and pia mater, filled with cerebrospinal fluid." },
+    { "id": "m14_fc06", "term": "Choroid plexus", "definition": "Capillaries covered by ependymal cells in each ventricle; produces cerebrospinal fluid." },
+    { "id": "m14_fc07", "term": "Arachnoid granulations (villi)", "definition": "Projections of the arachnoid into the dural venous sinuses where CSF is reabsorbed into the blood." },
+    { "id": "m14_fc08", "term": "Cerebral aqueduct", "definition": "Narrow canal through the midbrain connecting the third and fourth ventricles." },
+    { "id": "m14_fc09", "term": "Blood-brain barrier", "definition": "Tight junctions between brain capillary endothelial cells, supported by astrocytes, that block most substances; lipid-soluble molecules, O₂, CO₂, and water cross easily." },
+    { "id": "m14_fc10", "term": "Conus medullaris and cauda equina", "definition": "The conus is the tapered end of the spinal cord near L1 to L2; the cauda equina is the bundle of lumbar and sacral nerve roots below it." },
+    { "id": "m14_fc11", "term": "Anterior (ventral) horn", "definition": "Spinal cord gray matter containing cell bodies of somatic motor neurons." },
+    { "id": "m14_fc12", "term": "Posterior (dorsal) horn", "definition": "Spinal cord gray matter containing interneurons that receive sensory input." },
+    { "id": "m14_fc13", "term": "Lateral horn", "definition": "Gray matter in thoracic and upper lumbar cord segments containing sympathetic motor neuron cell bodies." },
+    { "id": "m14_fc14", "term": "Spinothalamic tract", "definition": "Ascending tract carrying pain, temperature, crude touch, and pressure to the thalamus; crosses in the spinal cord." },
+    { "id": "m14_fc15", "term": "Dorsal column tracts", "definition": "Fasciculus gracilis and cuneatus; ascending tracts for fine touch, vibration, and proprioception; cross in the medulla." },
+    { "id": "m14_fc16", "term": "Corticospinal (pyramidal) tract", "definition": "Descending tract carrying voluntary motor commands from the motor cortex; most fibers cross at the pyramids of the medulla." },
+    { "id": "m14_fc17", "term": "Central sulcus", "definition": "Groove separating the frontal lobe (precentral gyrus, motor) from the parietal lobe (postcentral gyrus, somatosensory)." },
+    { "id": "m14_fc18", "term": "Primary motor cortex", "definition": "Precentral gyrus of the frontal lobe; controls voluntary movement of the opposite side of the body." },
+    { "id": "m14_fc19", "term": "Primary somatosensory cortex", "definition": "Postcentral gyrus of the parietal lobe; receives general sensation from the opposite side of the body." },
+    { "id": "m14_fc20", "term": "Broca's area", "definition": "Motor speech area in the frontal lobe, usually left; damage causes expressive aphasia." },
+    { "id": "m14_fc21", "term": "Wernicke's area", "definition": "Language comprehension area in the posterior temporal lobe, usually left; damage causes fluent but meaningless speech and poor comprehension." },
+    { "id": "m14_fc22", "term": "Corpus callosum", "definition": "Large band of commissural white matter fibers connecting the two cerebral hemispheres." },
+    { "id": "m14_fc23", "term": "Basal nuclei", "definition": "Caudate nucleus, putamen, and globus pallidus; deep cerebral gray matter that regulates starting, stopping, and smoothing movement." },
+    { "id": "m14_fc24", "term": "Limbic system", "definition": "Amygdala, hippocampus, cingulate gyrus, and related structures; emotion and memory." },
+    { "id": "m14_fc25", "term": "Thalamus", "definition": "Relay station that sends sensory information (all except smell) to the cerebral cortex." },
+    { "id": "m14_fc26", "term": "Hypothalamus", "definition": "Controls the ANS, body temperature, hunger, thirst, water balance, sleep cycles, and the pituitary gland." },
+    { "id": "m14_fc27", "term": "Midbrain", "definition": "Upper brainstem with the cerebral aqueduct, cerebral peduncles, substantia nigra, and colliculi for visual (superior) and auditory (inferior) reflexes." },
+    { "id": "m14_fc28", "term": "Pons", "definition": "Brainstem bridge relaying signals between cerebrum and cerebellum; helps regulate breathing." },
+    { "id": "m14_fc29", "term": "Medulla oblongata", "definition": "Lowest brainstem region; cardiac, vasomotor, and respiratory centers plus reflexes for coughing, sneezing, swallowing, and vomiting." },
+    { "id": "m14_fc30", "term": "Cerebellum", "definition": "Coordinates skilled movement, posture, and balance by comparing intended movement with actual movement." },
+    { "id": "m14_fc31", "term": "Reticular activating system", "definition": "Part of the brainstem reticular formation that maintains alertness and filters incoming sensory stimuli." },
+    { "id": "m14_fc32", "term": "Alpha vs delta waves", "definition": "Alpha: awake, relaxed, eyes closed. Delta: slow, high-amplitude waves of deep sleep and infancy." },
+    { "id": "m14_fc33", "term": "Ischemic vs hemorrhagic stroke", "definition": "Ischemic: a clot blocks blood flow (most common). Hemorrhagic: a blood vessel ruptures and bleeds into brain tissue." }
+  ],
+  "quiz": [
+    {
+      "id": "m14_q01",
+      "type": "multiple_choice",
+      "prompt": "Cerebrospinal fluid circulates around the brain within which space?",
+      "choices": ["Epidural space", "Subdural space", "Subarachnoid space", "Dural venous sinus"],
+      "answer": 2,
+      "explanation": "CSF fills the subarachnoid space between the arachnoid and pia mater. The subdural space is tempting by name but is only a thin potential space with no CSF."
+    },
+    {
+      "id": "m14_q02",
+      "type": "multiple_choice",
+      "prompt": "Which structures produce cerebrospinal fluid?",
+      "choices": ["Arachnoid granulations", "Choroid plexuses", "Dural venous sinuses", "Astrocytes"],
+      "answer": 1,
+      "explanation": "Choroid plexuses in the ventricles filter CSF from blood. Arachnoid granulations are the tempting answer, but they do the opposite job: they return CSF to the blood."
+    },
+    {
+      "id": "m14_q03",
+      "type": "multiple_choice",
+      "prompt": "Which feature is mainly responsible for the blood-brain barrier?",
+      "choices": [
+        "Tight junctions between capillary endothelial cells",
+        "The thickness of the dura mater",
+        "Ependymal cells lining the ventricles",
+        "Microglia surrounding every capillary"
+      ],
+      "answer": 0,
+      "explanation": "Tight junctions seal brain capillaries so substances must pass through the endothelial cells, not between them. Astrocytes support this barrier, but ependymal cells line ventricles and are not the barrier."
+    },
+    {
+      "id": "m14_q04",
+      "type": "multiple_choice",
+      "prompt": "A lumbar puncture is performed between L3 and L4 rather than higher because:",
+      "choices": [
+        "The spinal cord ends near L1 to L2, so only nerve roots are present lower down",
+        "CSF is produced only in the lumbar region",
+        "The dura mater is absent below L2",
+        "The cauda equina is part of the brainstem"
+      ],
+      "answer": 0,
+      "explanation": "Below the conus medullaris, the vertebral canal holds the cauda equina, whose roots tend to move aside from the needle. The dura is still present there; the subarachnoid space continues to about S2."
+    },
+    {
+      "id": "m14_q05",
+      "type": "multiple_choice",
+      "prompt": "Cell bodies of somatic motor neurons that control skeletal muscle are located in the:",
+      "choices": ["Posterior horns", "Anterior horns", "Dorsal root ganglia", "Lateral white columns"],
+      "answer": 1,
+      "explanation": "Anterior (ventral) horns hold motor neuron cell bodies whose axons exit in the ventral root. Dorsal root ganglia are tempting, but they hold sensory neuron cell bodies."
+    },
+    {
+      "id": "m14_q06",
+      "type": "multiple_choice",
+      "prompt": "A patient cannot feel pain or temperature in part of the body but still has fine touch and proprioception there. Which tract is most likely damaged?",
+      "choices": ["Lateral spinothalamic tract", "Fasciculus gracilis", "Lateral corticospinal tract", "Spinocerebellar tract"],
+      "answer": 0,
+      "explanation": "The lateral spinothalamic tract carries pain and temperature. The fasciculus gracilis is a dorsal column tract carrying fine touch and proprioception, which are intact here."
+    },
+    {
+      "id": "m14_q07",
+      "type": "multiple_choice",
+      "prompt": "A stroke damages the left precentral gyrus. The most likely result is:",
+      "choices": [
+        "Loss of sensation on the left side of the body",
+        "Weakness or paralysis on the right side of the body",
+        "Loss of vision in both eyes",
+        "Inability to understand spoken language"
+      ],
+      "answer": 1,
+      "explanation": "The precentral gyrus is the primary motor cortex, and motor pathways cross, so the left gyrus controls the right side. Loss of sensation is tempting, but that would involve the postcentral gyrus, and still on the opposite side."
+    },
+    {
+      "id": "m14_q08",
+      "type": "multiple_choice",
+      "prompt": "After a stroke, a patient understands questions perfectly but speaks slowly, with great effort, in short broken phrases. The damaged area is most likely:",
+      "choices": ["Wernicke's area", "Broca's area", "Primary auditory cortex", "Occipital lobe"],
+      "answer": 1,
+      "explanation": "Broca's area in the frontal lobe coordinates speech production, so damage causes expressive aphasia with preserved comprehension. Wernicke's damage is the tempting choice, but it causes fluent speech with poor comprehension."
+    },
+    {
+      "id": "m14_q09",
+      "type": "multiple_choice",
+      "prompt": "Which lobe contains the primary visual cortex?",
+      "choices": ["Temporal", "Parietal", "Occipital", "Frontal"],
+      "answer": 2,
+      "explanation": "Vision is processed at the back of the brain in the occipital lobe. The temporal lobe is tempting because it holds the auditory cortex, but not vision."
+    },
+    {
+      "id": "m14_q10",
+      "type": "multiple_choice",
+      "prompt": "Which structure relays nearly all incoming sensory information, except smell, to the cerebral cortex?",
+      "choices": ["Hypothalamus", "Thalamus", "Cerebellum", "Pons"],
+      "answer": 1,
+      "explanation": "The thalamus is the sensory relay station. The hypothalamus is right below it and similarly named, but it regulates homeostasis and the pituitary rather than relaying sensation."
+    },
+    {
+      "id": "m14_q11",
+      "type": "multiple_choice",
+      "prompt": "A person's body temperature regulation, thirst, and pituitary hormone release are all disrupted by a tumor. The tumor most likely involves the:",
+      "choices": ["Hypothalamus", "Cerebellum", "Medulla oblongata", "Basal nuclei"],
+      "answer": 0,
+      "explanation": "The hypothalamus controls temperature, thirst, hunger, and the pituitary. The medulla is tempting because it controls vital functions, but those are heart rate, blood pressure, and breathing."
+    },
+    {
+      "id": "m14_q12",
+      "type": "multiple_choice",
+      "prompt": "The cardiac, vasomotor, and respiratory centers are located in the:",
+      "choices": ["Midbrain", "Medulla oblongata", "Cerebellum", "Thalamus"],
+      "answer": 1,
+      "explanation": "The medulla holds these vital reflex centers, which is why medulla damage is often fatal. The pons also helps regulate breathing, but the cardiac and vasomotor centers are in the medulla."
+    },
+    {
+      "id": "m14_q13",
+      "type": "multiple_choice",
+      "prompt": "After drinking heavily, a person walks with an unsteady, wide-based gait and cannot touch their finger to their nose accurately. Which brain region is most affected?",
+      "choices": ["Cerebellum", "Hypothalamus", "Occipital lobe", "Corpus callosum"],
+      "answer": 0,
+      "explanation": "The cerebellum coordinates movement and balance, and alcohol impairs it, producing ataxia. The motor cortex starts movements, but the cerebellum is what keeps them accurate."
+    },
+    {
+      "id": "m14_q14",
+      "type": "multiple_choice",
+      "prompt": "Which structure of the limbic system is most essential for converting short-term memories into long-term memories?",
+      "choices": ["Amygdala", "Hippocampus", "Pineal gland", "Globus pallidus"],
+      "answer": 1,
+      "explanation": "The hippocampus consolidates new long-term memories. The amygdala is also limbic and links emotion to memory, but its main role is fear and emotional responses."
+    },
+    {
+      "id": "m14_q15",
+      "type": "multiple_choice",
+      "prompt": "An EEG of an awake adult sitting quietly with eyes closed would most likely show:",
+      "choices": ["Alpha waves", "Beta waves", "Delta waves", "A flat line"],
+      "answer": 0,
+      "explanation": "Alpha waves characterize the relaxed, awake state with eyes closed. Beta waves appear when the person is alert and concentrating, and delta waves in an awake adult suggest brain damage."
+    },
+    {
+      "id": "m14_q16",
+      "type": "multiple_choice",
+      "prompt": "Brain tissue from a patient with progressive memory loss shows amyloid plaques and neurofibrillary tangles. The diagnosis is most likely:",
+      "choices": ["Parkinson's disease", "Alzheimer's disease", "Multiple sclerosis", "Hydrocephalus"],
+      "answer": 1,
+      "explanation": "Amyloid beta plaques and tau tangles are the hallmarks of Alzheimer's disease. Parkinson's is tempting as another degenerative disease, but it is defined by dopamine neuron loss in the substantia nigra and mainly affects movement."
+    },
+    {
+      "id": "m14_q17",
+      "type": "true_false",
+      "prompt": "In the spinal cord, gray matter is on the outside and white matter is on the inside, just as in the cerebrum.",
+      "answer": false,
+      "explanation": "The spinal cord has central gray matter surrounded by white matter. The cerebrum has the reverse arrangement, with gray cortex outside and white matter beneath."
+    },
+    {
+      "id": "m14_q18",
+      "type": "true_false",
+      "prompt": "Most corticospinal fibers cross to the opposite side in the pyramids of the medulla oblongata.",
+      "answer": true,
+      "explanation": "About 80 to 90 percent cross at the pyramids, which is why each motor cortex controls the opposite side of the body. The remaining fibers cross lower, in the spinal cord."
+    },
+    {
+      "id": "m14_q19",
+      "type": "true_false",
+      "prompt": "The cerebellum initiates voluntary movements and sends commands directly to skeletal muscles.",
+      "answer": false,
+      "explanation": "The primary motor cortex initiates voluntary movement. The cerebellum coordinates and corrects movement by comparing intended and actual movement."
+    },
+    {
+      "id": "m14_q20",
+      "type": "ordering",
+      "prompt": "Put the meninges and spaces in order from the skull inward to the brain surface.",
+      "items": ["Dura mater", "Subdural space", "Arachnoid mater", "Subarachnoid space", "Pia mater"],
+      "explanation": "Dura, then the potential subdural space, then arachnoid, then the CSF-filled subarachnoid space, then the pia clinging to the brain."
+    },
+    {
+      "id": "m14_q21",
+      "type": "ordering",
+      "prompt": "Put these in the order cerebrospinal fluid flows, starting where most of it is made.",
+      "items": [
+        "Lateral ventricles",
+        "Third ventricle",
+        "Cerebral aqueduct",
+        "Fourth ventricle",
+        "Subarachnoid space",
+        "Arachnoid granulations into the dural venous sinus"
+      ],
+      "explanation": "CSF moves from the lateral ventricles through the interventricular foramina to the third ventricle, down the cerebral aqueduct to the fourth, out through its apertures into the subarachnoid space, and is reabsorbed into venous blood."
+    },
+    {
+      "id": "m14_q22",
+      "type": "ordering",
+      "prompt": "Put the parts of the brainstem in order from superior to inferior.",
+      "items": ["Midbrain", "Pons", "Medulla oblongata"],
+      "explanation": "The midbrain is just below the diencephalon, the pons bulges beneath it, and the medulla is continuous with the spinal cord at the foramen magnum."
+    },
+    {
+      "id": "m14_q23",
+      "type": "ordering",
+      "prompt": "Put these EEG brain wave types in order from highest frequency to lowest frequency.",
+      "items": ["Beta", "Alpha", "Theta", "Delta"],
+      "explanation": "Beta is fastest (alert thinking), alpha next (relaxed), theta slower (drowsy, children), and delta slowest (deep sleep)."
+    }
+  ]
+}

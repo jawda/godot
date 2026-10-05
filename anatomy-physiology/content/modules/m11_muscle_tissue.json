@@ -1,0 +1,679 @@
+{
+  "id": "m11_muscle_tissue",
+  "order": 11,
+  "course": "A&P I",
+  "title": "Muscle Tissue and Contraction",
+  "summary": "How skeletal muscle is built from the organ down to the sarcomere, and how a nerve signal becomes a contraction.",
+  "objectives": [
+    "Compare skeletal, cardiac, and smooth muscle tissue",
+    "Describe the connective tissue organization of a skeletal muscle",
+    "Identify the bands and zones of a sarcomere and how they change during contraction",
+    "Explain events at the neuromuscular junction and excitation-contraction coupling",
+    "Describe the cross-bridge cycle and the roles of Ca²⁺, troponin, tropomyosin, and ATP",
+    "Explain motor units, recruitment, twitch, summation, and tetanus",
+    "Compare the energy sources for contraction and explain fatigue and oxygen debt",
+    "Distinguish slow oxidative and fast glycolytic fibers"
+  ],
+  "lesson": [
+    {
+      "heading": "Functions and the Three Muscle Types",
+      "body": [
+        "Muscle tissue is specialized to [b]contract[/b], pulling on whatever it is attached to. Its functions include:",
+        "- [b]Movement[/b] of the body (skeletal) and of substances through hollow organs (smooth) and blood through vessels (cardiac).",
+        "- [b]Maintaining posture[/b] and [b]stabilizing joints[/b] through continuous small contractions.",
+        "- [b]Generating heat:[/b] much of the energy from ATP is released as heat, which is why you shiver when cold.",
+        "- [b]Guarding openings[/b] with sphincters and protecting internal organs.",
+        "Muscle tissue has four special properties: [b]excitability[/b] (responds to stimuli), [b]contractility[/b] (shortens forcibly), [b]extensibility[/b] (can be stretched), and [b]elasticity[/b] (recoils to resting length).",
+        "[b]The three types compared:[/b]",
+        "- [b]Skeletal:[/b] long, cylindrical, [b]multinucleated[/b] cells with peripheral nuclei; [b]striated[/b]; [b]voluntary[/b]; attached to bones and skin. Contracts rapidly and fatigues relatively easily.",
+        "- [b]Cardiac:[/b] branched cells with usually [b]one (sometimes two) central nuclei[/b]; [b]striated[/b]; [b]involuntary[/b]; joined by [b]intercalated discs[/b]; found only in the heart wall. Autorhythmic.",
+        "- [b]Smooth:[/b] spindle-shaped cells with a [b]single central nucleus[/b]; [b]nonstriated[/b]; [b]involuntary[/b]; in walls of hollow organs (stomach, intestines, bladder, uterus, blood vessels, airways). Contracts slowly and can sustain contraction with little fatigue."
+      ],
+      "tip": "Striated = skeletal and cardiac. Voluntary = skeletal only. Multinucleated = skeletal only. Intercalated discs = cardiac only."
+    },
+    {
+      "heading": "Organization of a Skeletal Muscle",
+      "body": [
+        "A skeletal muscle is an organ made of muscle fibers plus connective tissue, blood vessels, and nerves. The connective tissue is arranged in nested wrappings:",
+        "- [b]Epimysium:[/b] dense irregular connective tissue surrounding the [b]whole muscle[/b]. Outside it lies [b]fascia[/b], which separates muscles from each other and from skin.",
+        "- [b]Perimysium:[/b] surrounds each [b]fascicle[/b], a bundle of muscle fibers. It carries blood vessels and nerves into the muscle.",
+        "- [b]Endomysium:[/b] a thin layer of areolar connective tissue around each individual [b]muscle fiber[/b] (cell).",
+        "These layers merge at the ends of the muscle to form a cordlike [b]tendon[/b] or a broad sheet called an [b]aponeurosis[/b], which attaches muscle to bone, cartilage, or other connective tissue. Because the wrappings are continuous with the tendon, the pull of every fiber is transmitted to the bone.",
+        "Inside each fiber, the levels continue to shrink:",
+        "- [b]Muscle fiber[/b] (one cell, can be several centimeters long; formed by fusion of embryonic myoblasts, which is why it is multinucleated)",
+        "- [b]Myofibrils:[/b] rodlike bundles of contractile proteins filling the fiber",
+        "- [b]Sarcomeres:[/b] repeating contractile units along each myofibril",
+        "- [b]Myofilaments:[/b] thick filaments (myosin) and thin filaments (actin)"
+      ],
+      "tip": "Prefixes from outside in: EPI = upon (whole muscle), PERI = around (fascicles), ENDO = within (each fiber). Order: Muscle, Fascicle, Fiber, Myofibril, Myofilament ('My Friend Felt Mighty Mean').",
+      "figure": {
+        "file": "m11_connective_layers.jpg",
+        "caption": "Follow the nesting from whole muscle to myofibril: the epimysium wraps the whole muscle, the perimysium wraps each fascicle, and the endomysium wraps each muscle fiber. Inside the fiber, many myofibrils lie under the sarcolemma.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 10.3, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-2-skeletal-muscle"
+      }
+    },
+    {
+      "heading": "Fiber Anatomy and the Sarcomere",
+      "body": [
+        "Muscle cell parts have their own names, often with the prefix [i]sarco-[/i] (flesh):",
+        "- [b]Sarcolemma:[/b] the plasma membrane of the muscle fiber; it conducts action potentials.",
+        "- [b]Sarcoplasm:[/b] cytoplasm; contains many mitochondria, glycogen, and [b]myoglobin[/b], a red pigment that stores oxygen.",
+        "- [b]Sarcoplasmic reticulum (SR):[/b] specialized smooth ER that surrounds each myofibril and [b]stores and releases Ca²⁺[/b]. Its enlarged ends are the [b]terminal cisternae[/b].",
+        "- [b]Transverse (T) tubules:[/b] inward extensions of the sarcolemma that carry action potentials deep into the fiber. A T tubule with a terminal cisterna on each side forms a [b]triad[/b].",
+        "[b]The sarcomere[/b] runs from one [b]Z disc[/b] (Z line) to the next and is the functional unit of contraction. Its banding pattern gives skeletal muscle its striations:",
+        "- [b]A band:[/b] the [b]dark[/b] band; spans the full length of the [b]thick filaments[/b], including the zones where they overlap thin filaments.",
+        "- [b]I band:[/b] the [b]light[/b] band; contains [b]thin filaments only[/b]; bisected by a Z disc, so each I band belongs to two neighboring sarcomeres.",
+        "- [b]H zone:[/b] the lighter center of the A band where there are [b]thick filaments only[/b] (no overlap).",
+        "- [b]M line:[/b] proteins in the middle of the H zone that hold the thick filaments together.",
+        "- [b]Z disc:[/b] protein plate that anchors the thin filaments and the elastic protein [b]titin[/b].",
+        "[b]Filament proteins:[/b] thick filaments are made of [b]myosin[/b], each with a tail and two heads that bind actin and hydrolyze ATP. Thin filaments are [b]actin[/b] with two regulatory proteins: [b]tropomyosin[/b], a strand that covers the myosin-binding sites on actin at rest, and [b]troponin[/b], a complex that binds Ca²⁺ and holds tropomyosin in place.",
+        "[b]During contraction[/b] the filaments do not shorten. Thin filaments slide toward the M line, so the Z discs move closer. The [b]I band and H zone narrow[/b] (and may disappear), while the [b]A band stays the same length[/b]."
+      ],
+      "tip": "'dArk = A band, lIght = I band.' When a muscle contracts, the A band stays the same; the H and I bands shrink. Say it as 'HI goes away, A stays.'",
+      "figure": {
+        "file": "m11_sarcomere.jpg",
+        "caption": "One sarcomere runs from Z line to Z line (the Z disc of the lesson). The dark A band spans the thick filaments, the light I band holds thin filaments only, and the H zone and M line sit at the center. The enlargements show myosin heads on the thick filament and actin, troponin, and tropomyosin on the thin filament.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 10.5, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-2-skeletal-muscle"
+      }
+    },
+    {
+      "heading": "The Neuromuscular Junction and Excitation-Contraction Coupling",
+      "body": [
+        "Skeletal muscle contracts only when stimulated by a [b]motor neuron[/b]. The connection is the [b]neuromuscular junction (NMJ)[/b]: the motor neuron's axon terminal (synaptic knob), a narrow [b]synaptic cleft[/b], and the [b]motor end plate[/b], a folded region of sarcolemma packed with acetylcholine receptors.",
+        "[b]Events at the NMJ:[/b]",
+        "- A nerve action potential reaches the axon terminal and opens voltage-gated Ca²⁺ channels. Ca²⁺ enters the terminal.",
+        "- Ca²⁺ triggers exocytosis of synaptic vesicles, releasing the neurotransmitter [b]acetylcholine (ACh)[/b] into the cleft.",
+        "- ACh binds receptors on the motor end plate. These are ligand-gated channels that open and let [b]Na⁺ rush in[/b], depolarizing the end plate.",
+        "- The depolarization triggers a [b]muscle action potential[/b] that spreads along the sarcolemma and down the [b]T tubules[/b].",
+        "- [b]Acetylcholinesterase[/b], an enzyme in the cleft, rapidly breaks ACh into acetic acid and choline, so one nerve impulse produces only one muscle impulse.",
+        "[b]Excitation-contraction coupling[/b] links that electrical signal to the mechanical contraction. As the action potential travels down the T tubules, voltage-sensitive proteins in the T tubule membrane trigger Ca²⁺ release channels in the adjacent terminal cisternae. The [b]SR releases Ca²⁺[/b] into the sarcoplasm. Ca²⁺ binds [b]troponin[/b], which changes shape and pulls [b]tropomyosin[/b] off the binding sites on actin. Myosin heads can now attach."
+      ],
+      "tip": "Think of the chain as Nerve, ACh, Na⁺, Action potential, T tubule, SR, Ca²⁺, Troponin, Tropomyosin moves, Cross-bridges.",
+      "clinical": "Many drugs and diseases act at the NMJ. [b]Myasthenia gravis[/b] is an autoimmune disease in which antibodies destroy ACh receptors, causing weakness that often shows first in eyelid and eye muscles. [b]Botulinum toxin[/b] blocks ACh release, causing flaccid paralysis (and is used in small doses as Botox). [b]Curare[/b] blocks ACh receptors. [b]Organophosphate[/b] insecticides and nerve agents inhibit acetylcholinesterase, so ACh accumulates and muscles spasm.",
+      "figure": {
+        "file": "m11_contraction.jpg",
+        "caption": "Read the figure top to bottom as the sequence of events: an action potential reaches the neuromuscular junction, ACh opens sodium channels to start a muscle action potential, the action potential travels down the T tubules, the SR releases calcium, and calcium binding to troponin lets the filaments interact.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 10.8, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation"
+      }
+    },
+    {
+      "heading": "The Sliding Filament Model and the Cross-Bridge Cycle",
+      "body": [
+        "In the [b]sliding filament model[/b], myosin heads repeatedly grab actin and pull the thin filaments toward the center of the sarcomere. Each cycle moves the thin filament a tiny distance, and thousands of asynchronous cycles shorten the fiber.",
+        "[b]The cross-bridge cycle[/b], once Ca²⁺ has exposed the binding sites:",
+        "- [b]Cocked myosin head:[/b] the head has already hydrolyzed ATP to ADP and phosphate (Pi), which stay bound. The energy released has 'cocked' the head into a high-energy position.",
+        "- [b]Cross-bridge formation:[/b] the energized head binds an exposed site on actin.",
+        "- [b]Power stroke:[/b] release of Pi (and then ADP) causes the head to pivot, pulling the thin filament toward the M line.",
+        "- [b]Detachment:[/b] a [b]new ATP[/b] binds the myosin head, causing it to release actin.",
+        "- [b]Re-cocking:[/b] myosin hydrolyzes the new ATP to ADP + Pi, returning the head to the cocked position, ready to bind again.",
+        "The cycle repeats as long as Ca²⁺ remains bound to troponin and ATP is available.",
+        "[b]Relaxation:[/b] when nerve stimulation stops, acetylcholinesterase removes ACh, the muscle action potentials stop, and [b]Ca²⁺ is actively pumped back into the SR[/b] by Ca²⁺ ATPase pumps. Without Ca²⁺, troponin and tropomyosin return to cover the binding sites, cross-bridges stop forming, and the muscle relaxes passively (elastic recoil and titin help restore length).",
+        "[b]ATP has three jobs:[/b] energizing (cocking) the myosin head, detaching myosin from actin, and powering the Ca²⁺ pumps that end contraction. Note that the power stroke itself is driven by energy stored when ATP was hydrolyzed earlier."
+      ],
+      "tip": "Calcium is the 'on switch' (it moves the guard tropomyosin out of the way). ATP is needed to let go, not just to pull.",
+      "clinical": "[b]Rigor mortis[/b] is stiffening after death. Cells can no longer make ATP, Ca²⁺ leaks out of the SR and allows cross-bridges to form, and without ATP the myosin heads cannot detach. Stiffness begins a few hours after death, peaks around 12 hours, and fades over the next 1 to 3 days as muscle proteins break down.",
+      "figure": {
+        "file": "m11_cross_bridge.jpg",
+        "caption": "Match each panel to a step of the cycle: the cocked myosin head (holding ADP and Pi) binds exposed actin to form a cross-bridge, the power stroke follows as ADP and Pi are released, a new ATP detaches the head, and splitting that ATP re-cocks the head.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 10.11, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation"
+      }
+    },
+    {
+      "heading": "Motor Units and Whole-Muscle Contraction",
+      "body": [
+        "A [b]motor unit[/b] is one motor neuron plus all the muscle fibers it stimulates. When the neuron fires, all of its fibers contract.",
+        "- [b]Small motor units[/b] (as few as about 10 fibers) give fine control, as in the muscles that move the eyes and fingers.",
+        "- [b]Large motor units[/b] (hundreds to over a thousand fibers) give power, as in the thigh and back.",
+        "A single fiber, when stimulated at or above [b]threshold[/b], contracts fully under the given conditions; this is often described as the [b]all-or-none[/b] response of a fiber. A whole muscle, however, produces [b]graded[/b] contractions by two mechanisms:",
+        "- [b]Recruitment (multiple motor unit summation):[/b] activating more motor units, usually small ones first and larger ones as more force is needed.",
+        "- [b]Increasing stimulation frequency[/b] (wave or temporal summation).",
+        "[b]The twitch:[/b] a single contraction in response to one stimulus, recorded on a myogram, has three phases: the [b]latent period[/b] (excitation-contraction coupling; no tension yet), the [b]period of contraction[/b] (cross-bridges cycling, tension rising), and the [b]period of relaxation[/b] (Ca²⁺ being pumped back, tension falling). A brief [b]refractory period[/b] follows each stimulus when the fiber cannot respond.",
+        "[b]Summation and tetanus:[/b] if a second stimulus arrives before the fiber fully relaxes, the second twitch adds to the first and produces more force ([b]summation[/b]). At higher frequencies, the fiber partially relaxes between stimuli ([b]incomplete or unfused tetanus[/b]). At very high frequencies, there is no relaxation at all and tension is smooth and maximal ([b]complete or fused tetanus[/b]). Normal voluntary movements are brief tetanic contractions, not single twitches.",
+        "[b]Muscle tone:[/b] even at rest, a few motor units are always active, keeping muscles firm and ready.",
+        "[b]Isotonic vs isometric contractions:[/b]",
+        "- [b]Isotonic:[/b] the muscle changes length while tension stays fairly constant and moves a load. [b]Concentric[/b]: the muscle shortens (lifting a dumbbell in a curl). [b]Eccentric[/b]: the muscle lengthens while still contracting (slowly lowering the dumbbell).",
+        "- [b]Isometric:[/b] tension rises but the muscle does not change length because the load equals or exceeds the force (pushing against a wall, holding a plank)."
+      ],
+      "tip": "Iso-METRIC = same 'meter' (length). Iso-TONIC = same tone (tension), so length changes.",
+      "clinical": "The bacterial toxin of [b]tetanus[/b] (lockjaw) is different from physiological tetanus: it blocks inhibitory neurons in the spinal cord, so motor neurons fire uncontrollably and muscles go into sustained spasm.",
+      "figure": {
+        "file": "m11_twitch.jpg",
+        "caption": "This myogram of a single twitch shows the three phases: a short latent period after the stimulus with no tension yet, a contraction period as tension rises, and a longer relaxation period as calcium is pumped back into the SR.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 10.15, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-4-nervous-system-control-of-muscle-tension"
+      }
+    },
+    {
+      "heading": "Energy for Contraction, Fatigue, and Oxygen Debt",
+      "body": [
+        "A muscle fiber stores only enough ATP for a few seconds of contraction, so it must regenerate ATP continuously. Three pathways do this, overlapping in time:",
+        "- [b]Creatine phosphate:[/b] transfers its phosphate to ADP, catalyzed by [b]creatine kinase[/b]. Fastest way to regenerate ATP; supplies roughly 10 to 15 seconds of maximal effort (a sprint or a heavy lift).",
+        "- [b]Anaerobic glycolysis:[/b] glucose (from blood or stored glycogen) is broken into pyruvic acid in the cytoplasm, netting [b]2 ATP per glucose[/b] without oxygen. When oxygen is short, pyruvic acid is converted to [b]lactic acid (lactate)[/b]. Fast but inefficient; supports about a minute or so of intense activity.",
+        "- [b]Aerobic (cellular) respiration:[/b] in the mitochondria, pyruvic acid and fatty acids are fully oxidized to CO₂ and water, yielding far more ATP per glucose (textbooks give values from about 30 to 38, since older books such as Hole's use higher numbers). Slower but sustainable for hours; it supplies most ATP at rest and during endurance exercise. [b]Myoglobin[/b] stores oxygen inside the fiber for this pathway.",
+        "[b]Muscle fatigue[/b] is the inability to maintain force despite continued stimulation. It has multiple causes: reduced ATP and glycogen, ionic imbalances (K⁺, Ca²⁺, and Pi) that interfere with excitation-contraction coupling, and acid buildup that lowers pH. Lactic acid accumulation has traditionally been blamed, and Hole's emphasizes it; current research views lactate as only one contributor. A true lack of ACh at the NMJ is rarely the cause.",
+        "[b]Oxygen debt[/b] (excess postexercise oxygen consumption, EPOC) is the extra oxygen needed after exercise to restore the muscle to its resting state. It is used to convert lactic acid back to glucose in the liver, rebuild ATP and creatine phosphate, replenish glycogen, and reload myoglobin with O₂. It explains why you keep breathing hard after you stop running.",
+        "More than half of the energy released during muscle metabolism (often cited as roughly 70 to 75 percent) is lost as [b]heat[/b], which helps maintain body temperature."
+      ],
+      "tip": "The three energy systems from fastest to slowest and shortest to longest lasting: stored ATP, creatine phosphate, anaerobic glycolysis, aerobic respiration. 'Sprinter, then 400 meter runner, then marathoner.'",
+      "clinical": "Creatine kinase leaks from damaged muscle into the blood, so elevated blood creatine kinase is a lab sign of muscle injury, as in rhabdomyolysis or muscular dystrophy.",
+      "figure": {
+        "file": "m11_metabolism.jpg",
+        "caption": "The three ways a fiber regenerates ATP: (a) creatine phosphate donates its phosphate to ADP through creatine kinase, (b) glycolysis yields 2 ATP and pyruvic acid, which becomes lactic acid without oxygen, and (c) aerobic respiration in the mitochondria yields far more ATP plus CO₂, water, and heat.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 10.12, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation"
+      }
+    },
+    {
+      "heading": "Skeletal Muscle Fiber Types",
+      "body": [
+        "Skeletal muscle fibers differ in how fast they contract (speed of their myosin ATPase) and how they make ATP. Most muscles contain a mix, and the proportions are partly genetic and partly shaped by training.",
+        "- [b]Slow oxidative fibers (type I, slow-twitch, 'red'):[/b] thin fibers with lots of [b]myoglobin[/b], [b]many mitochondria[/b], and a rich capillary supply. They rely on aerobic respiration, contract slowly, and are very [b]fatigue resistant[/b]. Examples: postural muscles of the back and neck, the soleus; dominant in marathon runners.",
+        "- [b]Fast oxidative fibers (type IIa, intermediate):[/b] fast-contracting but with fairly good aerobic capacity and moderate fatigue resistance. Used in walking and moderate sprinting.",
+        "- [b]Fast glycolytic fibers (type IIx or IIb, fast-twitch, 'white'):[/b] large diameter, many myofibrils, little myoglobin, few mitochondria and capillaries. They rely on [b]anaerobic glycolysis[/b] and stored glycogen, contract fast and powerfully, but [b]fatigue quickly[/b]. Dominant in sprinters and in arm muscles used for short bursts of lifting.",
+        "Hole's describes these mainly as slow-twitch (red) and fast-twitch (white) fibers, with an intermediate fast-twitch fatigue-resistant type; OpenStax uses the SO, FO, FG names."
+      ],
+      "tip": "Think of poultry: chicken legs and duck breast muscles are dark (red, slow oxidative, used for sustained activity), while chicken breast is white (fast glycolytic, for short bursts of flapping)."
+    },
+    {
+      "heading": "Smooth and Cardiac Muscle",
+      "body": [
+        "[b]Smooth muscle[/b] lines hollow organs and contracts slowly and steadily.",
+        "- Cells are spindle-shaped with one nucleus; thick and thin filaments are present but [b]not arranged in sarcomeres[/b], so there are no striations. Thin filaments anchor to [b]dense bodies[/b] instead of Z discs, and the cell contracts in a twisting, corkscrew fashion.",
+        "- No T tubules and a poorly developed SR; much of the Ca²⁺ for contraction enters from the [b]extracellular fluid[/b].",
+        "- Regulation differs: Ca²⁺ binds [b]calmodulin[/b] (not troponin), which activates [b]myosin light chain kinase[/b]. That enzyme phosphorylates myosin heads so they can bind actin.",
+        "- Contraction is slower and longer lasting, uses less ATP, and resists fatigue. Smooth muscle can be stretched and then adapt its tension (the [b]stress-relaxation response[/b]), useful in the bladder and stomach.",
+        "- [b]Visceral (single-unit) smooth muscle[/b]: cells connected by gap junctions contract as a unit; often self-exciting and rhythmic; produces [b]peristalsis[/b] in the digestive tract. Found in most hollow organs.",
+        "- [b]Multiunit smooth muscle[/b]: cells act independently, each stimulated by nerves; found in the iris, the walls of large blood vessels, and the arrector pili muscles.",
+        "- Stimulated by the autonomic nervous system, hormones, and stretch, rather than by voluntary motor neurons.",
+        "[b]Cardiac muscle[/b] is found only in the heart.",
+        "- Branched, striated cells with one or two central nuclei, joined end to end by [b]intercalated discs[/b] that contain [b]desmosomes[/b] (hold cells together) and [b]gap junctions[/b] (let ions pass directly so the cells contract as a coordinated unit, a functional syncytium).",
+        "- [b]Self-exciting (autorhythmic):[/b] pacemaker cells start contractions without nervous input; the nervous system only adjusts the rate.",
+        "- Ca²⁺ comes from both the SR and the extracellular fluid, through T tubules that are larger than those of skeletal muscle.",
+        "- A [b]long refractory period[/b] prevents summation and tetanus, so the heart always relaxes and refills between beats.",
+        "- Highly dependent on aerobic respiration, with abundant mitochondria and myoglobin, which makes it very fatigue resistant but vulnerable to oxygen loss."
+      ],
+      "tip": "Smooth muscle uses Calmodulin; skeletal and cardiac use Troponin. Cardiac = intercalated discs and a long refractory period, so it cannot be tetanized.",
+      "clinical": "In a [b]heart attack[/b] (myocardial infarction), blocked coronary blood flow starves cardiac muscle of oxygen. Because cardiac muscle depends so heavily on aerobic respiration and has very limited ability to regenerate, the dead tissue is replaced by scar tissue.",
+      "figure": {
+        "file": "m11_smooth_contraction.jpg",
+        "caption": "In smooth muscle the filaments anchor to dense bodies rather than Z discs, linked by intermediate filaments. When the cell contracts, the pull on the dense bodies makes it shorten and bulge in a twisting, corkscrew fashion.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 10.24, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-8-smooth-muscle"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "m11_fc01",
+      "term": "Excitability, contractility, extensibility, elasticity",
+      "definition": "The four special properties of muscle tissue: respond to stimuli, shorten forcibly, stretch, and recoil."
+    },
+    {
+      "id": "m11_fc02",
+      "term": "Skeletal muscle",
+      "definition": "Long, cylindrical, multinucleated, striated, voluntary muscle attached to bones."
+    },
+    {
+      "id": "m11_fc03",
+      "term": "Cardiac muscle",
+      "definition": "Branched, striated, involuntary muscle with intercalated discs; found only in the heart."
+    },
+    {
+      "id": "m11_fc04",
+      "term": "Smooth muscle",
+      "definition": "Spindle-shaped, uninucleate, nonstriated, involuntary muscle in walls of hollow organs."
+    },
+    {
+      "id": "m11_fc05",
+      "term": "Epimysium",
+      "definition": "Dense irregular connective tissue around an entire muscle."
+    },
+    {
+      "id": "m11_fc06",
+      "term": "Perimysium",
+      "definition": "Connective tissue around each fascicle (bundle of fibers)."
+    },
+    {
+      "id": "m11_fc07",
+      "term": "Endomysium",
+      "definition": "Thin areolar connective tissue around each individual muscle fiber."
+    },
+    {
+      "id": "m11_fc08",
+      "term": "Fascicle",
+      "definition": "A bundle of skeletal muscle fibers wrapped in perimysium."
+    },
+    {
+      "id": "m11_fc09",
+      "term": "Myofibril",
+      "definition": "Rodlike bundle of contractile proteins inside a muscle fiber, made of repeating sarcomeres."
+    },
+    {
+      "id": "m11_fc10",
+      "term": "Sarcomere",
+      "definition": "Functional contractile unit of a myofibril, extending from Z disc to Z disc."
+    },
+    {
+      "id": "m11_fc11",
+      "term": "A band",
+      "definition": "Dark band spanning the length of the thick filaments; does not change length during contraction."
+    },
+    {
+      "id": "m11_fc12",
+      "term": "I band",
+      "definition": "Light band containing thin filaments only; bisected by a Z disc; shortens during contraction."
+    },
+    {
+      "id": "m11_fc13",
+      "term": "H zone",
+      "definition": "Central region of the A band with thick filaments only; narrows or disappears during contraction."
+    },
+    {
+      "id": "m11_fc14",
+      "term": "M line",
+      "definition": "Line in the center of the H zone where proteins hold thick filaments together."
+    },
+    {
+      "id": "m11_fc15",
+      "term": "Z disc",
+      "definition": "Protein disc anchoring thin filaments; marks the boundaries of each sarcomere."
+    },
+    {
+      "id": "m11_fc16",
+      "term": "Sarcolemma",
+      "definition": "Plasma membrane of a muscle fiber."
+    },
+    {
+      "id": "m11_fc17",
+      "term": "Sarcoplasmic reticulum",
+      "definition": "Specialized smooth ER surrounding myofibrils that stores and releases Ca²⁺."
+    },
+    {
+      "id": "m11_fc18",
+      "term": "T tubules",
+      "definition": "Inward extensions of the sarcolemma that carry action potentials deep into the fiber, next to the SR."
+    },
+    {
+      "id": "m11_fc19",
+      "term": "Neuromuscular junction",
+      "definition": "Synapse between a motor neuron's axon terminal and the motor end plate of a muscle fiber."
+    },
+    {
+      "id": "m11_fc20",
+      "term": "Acetylcholine (ACh)",
+      "definition": "Neurotransmitter released at the NMJ; binds receptors on the motor end plate and opens Na⁺ channels."
+    },
+    {
+      "id": "m11_fc21",
+      "term": "Acetylcholinesterase",
+      "definition": "Enzyme in the synaptic cleft that breaks down ACh, ending stimulation of the muscle fiber."
+    },
+    {
+      "id": "m11_fc22",
+      "term": "Troponin",
+      "definition": "Regulatory protein on the thin filament that binds Ca²⁺ and shifts tropomyosin."
+    },
+    {
+      "id": "m11_fc23",
+      "term": "Tropomyosin",
+      "definition": "Strand-like protein that covers myosin-binding sites on actin when the muscle is at rest."
+    },
+    {
+      "id": "m11_fc24",
+      "term": "Power stroke",
+      "definition": "Pivoting of a myosin head that pulls the thin filament toward the M line; triggered by release of Pi."
+    },
+    {
+      "id": "m11_fc25",
+      "term": "Rigor mortis",
+      "definition": "Post-death muscle stiffness caused by cross-bridges that cannot detach because no ATP is available."
+    },
+    {
+      "id": "m11_fc26",
+      "term": "Motor unit",
+      "definition": "One motor neuron and all the muscle fibers it innervates."
+    },
+    {
+      "id": "m11_fc27",
+      "term": "Recruitment",
+      "definition": "Increasing contraction force by activating more motor units."
+    },
+    {
+      "id": "m11_fc28",
+      "term": "Twitch phases",
+      "definition": "Latent period, period of contraction, period of relaxation."
+    },
+    {
+      "id": "m11_fc29",
+      "term": "Complete (fused) tetanus",
+      "definition": "Smooth, sustained maximal contraction from stimuli so frequent that no relaxation occurs between them."
+    },
+    {
+      "id": "m11_fc30",
+      "term": "Isotonic vs isometric",
+      "definition": "Isotonic: muscle changes length (concentric shortens, eccentric lengthens). Isometric: tension without length change."
+    },
+    {
+      "id": "m11_fc31",
+      "term": "Creatine phosphate",
+      "definition": "High-energy molecule that quickly regenerates ATP from ADP via creatine kinase; lasts about 10 to 15 seconds of maximal effort."
+    },
+    {
+      "id": "m11_fc32",
+      "term": "Oxygen debt",
+      "definition": "Extra oxygen consumed after exercise to convert lactic acid back to glucose, restore ATP and creatine phosphate, and reload myoglobin."
+    },
+    {
+      "id": "m11_fc33",
+      "term": "Slow oxidative fibers",
+      "definition": "Red, myoglobin-rich, mitochondria-rich, fatigue-resistant fibers for endurance and posture."
+    },
+    {
+      "id": "m11_fc34",
+      "term": "Fast glycolytic fibers",
+      "definition": "White, large fibers relying on anaerobic glycolysis; powerful but fatigue quickly."
+    },
+    {
+      "id": "m11_fc35",
+      "term": "Calmodulin",
+      "definition": "Ca²⁺-binding protein that triggers contraction in smooth muscle by activating myosin light chain kinase."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m11_q01",
+      "type": "multiple_choice",
+      "prompt": "Which connective tissue layer surrounds each fascicle?",
+      "choices": [
+        "Epimysium",
+        "Perimysium",
+        "Endomysium",
+        "Sarcolemma"
+      ],
+      "answer": 1,
+      "explanation": "The perimysium wraps fascicles. The endomysium is the tempting pick, but it surrounds individual fibers, and the sarcolemma is a cell membrane, not connective tissue."
+    },
+    {
+      "id": "m11_q02",
+      "type": "multiple_choice",
+      "prompt": "Which feature is found in cardiac muscle but not in skeletal muscle?",
+      "choices": [
+        "Striations",
+        "Sarcomeres",
+        "Intercalated discs",
+        "Troponin"
+      ],
+      "answer": 2,
+      "explanation": "Intercalated discs, with desmosomes and gap junctions, join cardiac cells end to end. Striations, sarcomeres, and troponin are shared by both striated muscle types."
+    },
+    {
+      "id": "m11_q03",
+      "type": "multiple_choice",
+      "prompt": "During a muscle contraction, which part of the sarcomere stays the same length?",
+      "choices": [
+        "I band",
+        "H zone",
+        "A band",
+        "The distance between Z discs"
+      ],
+      "answer": 2,
+      "explanation": "The A band equals the length of the thick filaments, which do not shorten. The I band and H zone narrow as thin filaments slide inward, and the Z discs move closer together."
+    },
+    {
+      "id": "m11_q04",
+      "type": "multiple_choice",
+      "prompt": "What is the immediate role of Ca²⁺ in skeletal muscle contraction?",
+      "choices": [
+        "It binds myosin heads and cocks them",
+        "It binds troponin, causing tropomyosin to uncover binding sites on actin",
+        "It breaks down acetylcholine in the synaptic cleft",
+        "It provides the energy for the power stroke"
+      ],
+      "answer": 1,
+      "explanation": "Ca²⁺ binds troponin, which moves tropomyosin off actin's myosin-binding sites. ATP hydrolysis, not calcium, cocks the myosin head and supplies the energy for the power stroke."
+    },
+    {
+      "id": "m11_q05",
+      "type": "multiple_choice",
+      "prompt": "Which event directly causes the myosin head to detach from actin?",
+      "choices": [
+        "Release of Ca²⁺ from the SR",
+        "Hydrolysis of ATP to ADP and Pi",
+        "Binding of a new ATP molecule to myosin",
+        "Release of Pi from the myosin head"
+      ],
+      "answer": 2,
+      "explanation": "Binding of a fresh ATP releases myosin from actin. Hydrolysis of that ATP comes afterward and re-cocks the head; release of Pi triggers the power stroke rather than detachment."
+    },
+    {
+      "id": "m11_q06",
+      "type": "multiple_choice",
+      "prompt": "The sarcoplasmic reticulum's main function is to:",
+      "choices": [
+        "Conduct action potentials into the fiber interior",
+        "Store and release Ca²⁺",
+        "Produce ATP aerobically",
+        "Store oxygen for aerobic respiration"
+      ],
+      "answer": 1,
+      "explanation": "The SR stores Ca²⁺ and releases it when stimulated. Conducting action potentials inward is the job of the T tubules, which sit right beside the SR and are easy to confuse with it."
+    },
+    {
+      "id": "m11_q07",
+      "type": "multiple_choice",
+      "prompt": "A farmworker exposed to an organophosphate insecticide develops muscle twitching and spasms. Organophosphates inhibit acetylcholinesterase. Why do the muscles spasm?",
+      "choices": [
+        "ACh release from the motor neuron is blocked",
+        "ACh receptors on the motor end plate are destroyed",
+        "ACh is not broken down, so it keeps stimulating the motor end plate",
+        "Ca²⁺ cannot be released from the sarcoplasmic reticulum"
+      ],
+      "answer": 2,
+      "explanation": "Without acetylcholinesterase, ACh lingers in the cleft and keeps triggering muscle action potentials. Blocked ACh release describes botulinum toxin, and destroyed receptors describes myasthenia gravis; both cause weakness, not spasm."
+    },
+    {
+      "id": "m11_q08",
+      "type": "multiple_choice",
+      "prompt": "A patient has drooping eyelids and muscle weakness that worsens with use. Antibodies against ACh receptors are found. The diagnosis is most likely:",
+      "choices": [
+        "Myasthenia gravis",
+        "Muscular dystrophy",
+        "Tetanus",
+        "Botulism"
+      ],
+      "answer": 0,
+      "explanation": "Myasthenia gravis is an autoimmune attack on ACh receptors at the NMJ; eye muscles are often affected first. Botulism also causes weakness, but it results from a toxin blocking ACh release, not from antibodies against receptors."
+    },
+    {
+      "id": "m11_q09",
+      "type": "multiple_choice",
+      "prompt": "Rigor mortis occurs because:",
+      "choices": [
+        "Calcium can no longer bind troponin after death",
+        "Without ATP, myosin heads cannot detach from actin",
+        "Acetylcholine continuously stimulates the muscles",
+        "Lactic acid causes the filaments to fuse"
+      ],
+      "answer": 1,
+      "explanation": "After death, Ca²⁺ leaks into the sarcoplasm and cross-bridges form, but there is no ATP to release them, so muscles lock. The stiffness fades only as proteins degrade, not because ATP returns."
+    },
+    {
+      "id": "m11_q10",
+      "type": "multiple_choice",
+      "prompt": "Which muscles would you expect to have the smallest motor units?",
+      "choices": [
+        "Quadriceps femoris",
+        "Gastrocnemius",
+        "Muscles that move the eyeball",
+        "Erector spinae"
+      ],
+      "answer": 2,
+      "explanation": "Small motor units, with few fibers per neuron, allow precise control, as needed for eye movements. Large leg and back muscles have large motor units for power rather than precision."
+    },
+    {
+      "id": "m11_q11",
+      "type": "multiple_choice",
+      "prompt": "A muscle is stimulated so rapidly that there is no relaxation between stimuli, producing a smooth, sustained maximal contraction. This is:",
+      "choices": [
+        "A single twitch",
+        "Incomplete tetanus",
+        "Complete (fused) tetanus",
+        "Treppe"
+      ],
+      "answer": 2,
+      "explanation": "Complete tetanus occurs when stimulation frequency is high enough that no relaxation occurs between stimuli. In incomplete tetanus the fiber partially relaxes between stimuli, producing a wavy tension tracing."
+    },
+    {
+      "id": "m11_q12",
+      "type": "multiple_choice",
+      "prompt": "Holding a heavy box motionless in front of you, with your elbows bent, is an example of which type of contraction?",
+      "choices": [
+        "Concentric isotonic",
+        "Eccentric isotonic",
+        "Isometric",
+        "Twitch"
+      ],
+      "answer": 2,
+      "explanation": "Your biceps generate tension, but their length does not change because the box is not moving, so the contraction is isometric. Lifting the box would be concentric; lowering it slowly would be eccentric."
+    },
+    {
+      "id": "m11_q13",
+      "type": "multiple_choice",
+      "prompt": "During the first 10 seconds or so of an all-out sprint, which source rapidly regenerates most of the ATP used after the small stored supply runs out?",
+      "choices": [
+        "Aerobic respiration",
+        "Creatine phosphate",
+        "Anaerobic glycolysis",
+        "Fatty acid oxidation"
+      ],
+      "answer": 1,
+      "explanation": "Creatine phosphate transfers its phosphate directly to ADP almost instantly and supports roughly 10 to 15 seconds of maximal effort. Anaerobic glycolysis takes over as creatine phosphate runs low, and aerobic pathways are too slow to meet the demand of an all-out sprint."
+    },
+    {
+      "id": "m11_q14",
+      "type": "multiple_choice",
+      "prompt": "Which characteristic best describes slow oxidative (type I) muscle fibers?",
+      "choices": [
+        "Few mitochondria and rapid fatigue",
+        "Abundant myoglobin and high fatigue resistance",
+        "Large diameter and reliance on anaerobic glycolysis",
+        "White color and use in short bursts of power"
+      ],
+      "answer": 1,
+      "explanation": "Slow oxidative fibers are red because of myoglobin, have many mitochondria and capillaries, and resist fatigue. The other choices describe fast glycolytic fibers."
+    },
+    {
+      "id": "m11_q15",
+      "type": "multiple_choice",
+      "prompt": "In smooth muscle, Ca²⁺ triggers contraction by binding to:",
+      "choices": [
+        "Troponin",
+        "Tropomyosin",
+        "Calmodulin",
+        "Myoglobin"
+      ],
+      "answer": 2,
+      "explanation": "Smooth muscle lacks troponin; Ca²⁺ binds calmodulin, which activates myosin light chain kinase to phosphorylate myosin. Troponin is the Ca²⁺ receptor in skeletal and cardiac muscle."
+    },
+    {
+      "id": "m11_q16",
+      "type": "multiple_choice",
+      "prompt": "Why can cardiac muscle not undergo tetanus?",
+      "choices": [
+        "It lacks sarcoplasmic reticulum",
+        "It has a long refractory period",
+        "It has no T tubules",
+        "It is not stimulated by acetylcholine"
+      ],
+      "answer": 1,
+      "explanation": "Cardiac muscle's long refractory period lasts until the contraction is nearly over, so a second stimulus cannot summate. Cardiac muscle does have SR and T tubules; in fact, its T tubules are larger than skeletal muscle's."
+    },
+    {
+      "id": "m11_q17",
+      "type": "true_false",
+      "prompt": "During contraction, the thick and thin filaments themselves shorten.",
+      "answer": false,
+      "explanation": "Neither filament changes length. They slide past each other, increasing overlap, which shortens the sarcomere."
+    },
+    {
+      "id": "m11_q18",
+      "type": "true_false",
+      "prompt": "ATP is needed both to detach myosin from actin and to pump Ca²⁺ back into the sarcoplasmic reticulum.",
+      "answer": true,
+      "explanation": "ATP binding releases the cross-bridge, and Ca²⁺ ATPase pumps use ATP to remove calcium so the muscle can relax. ATP hydrolysis also re-cocks the myosin head."
+    },
+    {
+      "id": "m11_q19",
+      "type": "true_false",
+      "prompt": "A whole skeletal muscle obeys the all-or-none principle, contracting either fully or not at all.",
+      "answer": false,
+      "explanation": "The all-or-none idea applies to individual muscle fibers (and motor units). Whole muscles produce graded contractions by recruiting different numbers of motor units and varying stimulation frequency."
+    },
+    {
+      "id": "m11_q20",
+      "type": "ordering",
+      "prompt": "Order the structures from largest to smallest.",
+      "items": [
+        "Whole muscle (epimysium)",
+        "Fascicle (perimysium)",
+        "Muscle fiber (endomysium)",
+        "Myofibril",
+        "Myofilament"
+      ],
+      "explanation": "A muscle contains fascicles, each fascicle contains fibers (cells), each fiber contains myofibrils, and each myofibril is made of thick and thin myofilaments arranged into sarcomeres."
+    },
+    {
+      "id": "m11_q21",
+      "type": "ordering",
+      "prompt": "Order the events from a motor neuron impulse to exposure of binding sites on actin.",
+      "items": [
+        "Action potential reaches the axon terminal",
+        "ACh is released into the synaptic cleft",
+        "ACh binds receptors on the motor end plate and Na⁺ enters",
+        "Muscle action potential spreads along the sarcolemma and T tubules",
+        "Sarcoplasmic reticulum releases Ca²⁺",
+        "Ca²⁺ binds troponin and tropomyosin shifts"
+      ],
+      "explanation": "The nerve signal releases ACh, which depolarizes the end plate and starts a muscle action potential. That signal travels down the T tubules, triggering Ca²⁺ release from the SR, and Ca²⁺ binding to troponin uncovers actin's binding sites."
+    },
+    {
+      "id": "m11_q22",
+      "type": "ordering",
+      "prompt": "Starting with a cocked myosin head next to an exposed binding site, order the steps of one cross-bridge cycle.",
+      "items": [
+        "Myosin head binds actin, forming a cross-bridge",
+        "Pi is released and the power stroke pulls the thin filament",
+        "New ATP binds and myosin detaches from actin",
+        "ATP is hydrolyzed, re-cocking the myosin head"
+      ],
+      "explanation": "The energized head attaches, pivots during the power stroke, lets go when a new ATP binds, and then re-cocks by hydrolyzing that ATP. The most common mistake is placing ATP hydrolysis before detachment."
+    },
+    {
+      "id": "m11_q23",
+      "type": "ordering",
+      "prompt": "Order the phases of a muscle twitch.",
+      "items": [
+        "Latent period",
+        "Period of contraction",
+        "Period of relaxation"
+      ],
+      "explanation": "The latent period is the delay for excitation-contraction coupling before tension develops. Cross-bridge cycling then raises tension, and tension falls as Ca²⁺ is pumped back into the SR."
+    },
+    {
+      "id": "m11_q24",
+      "type": "ordering",
+      "prompt": "Order the ATP sources by how quickly each becomes the main supply during sustained intense exercise, from first to last.",
+      "items": [
+        "ATP already stored in the fiber",
+        "Creatine phosphate",
+        "Anaerobic glycolysis",
+        "Aerobic respiration"
+      ],
+      "explanation": "Stored ATP lasts only seconds, creatine phosphate supplies about 10 to 15 seconds, anaerobic glycolysis supports up to roughly a minute, and aerobic respiration dominates prolonged activity. In reality the systems overlap rather than switching cleanly."
+    }
+  ]
+}

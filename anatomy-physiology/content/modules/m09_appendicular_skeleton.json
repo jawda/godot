@@ -1,0 +1,679 @@
+{
+  "id": "m09_appendicular_skeleton",
+  "order": 9,
+  "course": "A&P I",
+  "title": "Appendicular Skeleton",
+  "summary": "The bones of the shoulder and pelvic girdles and the limbs, with the landmarks exams love.",
+  "objectives": [
+    "Identify the bones of the pectoral girdle and upper limb and their key markings",
+    "Name the eight carpals in order using a mnemonic",
+    "Describe the three parts of the os coxae and the structure of the acetabulum",
+    "Compare male and female pelves",
+    "Identify the bones and markings of the lower limb and foot",
+    "Describe the three arches of the foot and their function"
+  ],
+  "lesson": [
+    {
+      "heading": "Overview of the Appendicular Skeleton",
+      "body": [
+        "The [b]appendicular skeleton[/b] is the skeleton of the limbs plus the girdles that attach them to the axial skeleton. Of the 206 bones in a typical adult, 80 are axial and [b]126 are appendicular[/b].",
+        "- [b]Pectoral (shoulder) girdles:[/b] 4 bones (a clavicle and a scapula on each side).",
+        "- [b]Upper limbs:[/b] 60 bones (30 per limb: humerus, radius, ulna, 8 carpals, 5 metacarpals, 14 phalanges).",
+        "- [b]Pelvic girdle:[/b] 2 hip bones (os coxae, also called coxal bones).",
+        "- [b]Lower limbs:[/b] 60 bones (30 per limb: femur, patella, tibia, fibula, 7 tarsals, 5 metatarsals, 14 phalanges).",
+        "Notice the parallel design: one bone in the proximal segment (humerus, femur), two in the middle segment (radius and ulna, tibia and fibula), then a cluster of short bones (carpals, tarsals), five long bones (metacarpals, metatarsals), and 14 phalanges. The upper limb is built for mobility, the lower limb for weight bearing and stability, and that tradeoff shows up in every joint and girdle.",
+        "Directional terms assume [b]anatomical position[/b]: palms face forward, so the thumb is [b]lateral[/b] and the little finger is [b]medial[/b]. In the leg, the big toe is medial."
+      ],
+      "tip": "Each limb has 30 bones. 4 girdle bones + 60 upper limb + 2 hip bones + 60 lower limb = 126."
+    },
+    {
+      "heading": "Pectoral Girdle: Clavicle and Scapula",
+      "body": [
+        "The pectoral girdle anchors the upper limb to the trunk. Its only joint with the axial skeleton is the [b]sternoclavicular joint[/b]; the scapula is held to the thorax by muscles, not by a bony joint. This loose attachment gives the shoulder huge mobility at the cost of stability.",
+        "[b]Clavicle (collarbone):[/b] an S-shaped bone that acts as a strut, holding the shoulder out away from the thorax.",
+        "- [b]Sternal end:[/b] medial, rounded, articulates with the manubrium of the sternum.",
+        "- [b]Acromial end:[/b] lateral, flattened, articulates with the acromion of the scapula at the [b]acromioclavicular (AC) joint[/b].",
+        "[b]Scapula (shoulder blade):[/b] a flat, triangular bone on the posterior thorax, roughly over ribs 2 through 7.",
+        "- [b]Spine:[/b] the ridge across the posterior surface; it divides the [b]supraspinous fossa[/b] (above) from the [b]infraspinous fossa[/b] (below).",
+        "- [b]Acromion:[/b] the lateral end of the spine, forming the bony tip of the shoulder.",
+        "- [b]Coracoid process:[/b] the beak-like anterior projection; attachment for the biceps brachii (short head), coracobrachialis, and pectoralis minor.",
+        "- [b]Glenoid cavity (fossa):[/b] the shallow socket on the lateral angle that receives the head of the humerus.",
+        "- [b]Subscapular fossa:[/b] the shallow anterior (costal) surface, where the subscapularis muscle sits.",
+        "- [b]Borders and angles:[/b] superior, medial (vertebral), and lateral (axillary) borders; superior, inferior, and lateral angles."
+      ],
+      "tip": "Coracoid sounds like 'crow' (Greek korax): a crow's beak pointing forward. The acromion is the 'apex of the shoulder' (akros = tip, omos = shoulder).",
+      "clinical": "The clavicle is the most commonly fractured bone in the body, usually from a fall on the shoulder or an outstretched arm. Because it is the only bony link between the arm and the trunk, a broken clavicle lets the shoulder slump forward and down.",
+      "figure": {
+        "file": "m09_scapula.jpg",
+        "caption": "Compare the two views of the right scapula: the spine on the posterior side splits the supraspinous fossa from the infraspinous fossa and ends laterally as the acromion, while the coracoid process and subscapular fossa face anteriorly. The glenoid cavity on the lateral angle is the socket for the head of the humerus.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 8.4, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-1-the-pectoral-girdle"
+      }
+    },
+    {
+      "heading": "The Arm: Humerus",
+      "body": [
+        "The [b]humerus[/b] is the single bone of the arm (brachium). In anatomy, 'arm' means shoulder to elbow only; elbow to wrist is the forearm.",
+        "[b]Proximal end:[/b]",
+        "- [b]Head:[/b] smooth hemisphere that fits into the glenoid cavity.",
+        "- [b]Anatomical neck:[/b] the slight groove just around the head, the former epiphyseal plate region.",
+        "- [b]Greater tubercle[/b] (lateral) and [b]lesser tubercle[/b] (anterior): attachments for rotator cuff muscles.",
+        "- [b]Intertubercular sulcus (bicipital groove):[/b] between the tubercles; holds the tendon of the long head of the biceps brachii.",
+        "- [b]Surgical neck:[/b] the narrowing below the tubercles, named because it is the most common fracture site of the proximal humerus.",
+        "[b]Shaft:[/b] the [b]deltoid tuberosity[/b] is a roughened area on the lateral shaft where the deltoid inserts. The [b]radial groove[/b] on the posterior shaft carries the radial nerve.",
+        "[b]Distal end:[/b]",
+        "- [b]Capitulum:[/b] lateral, ball-shaped; articulates with the head of the [b]radius[/b].",
+        "- [b]Trochlea:[/b] medial, spool-shaped; articulates with the trochlear notch of the [b]ulna[/b].",
+        "- [b]Medial and lateral epicondyles:[/b] bumps above the condyles for forearm muscle attachment (flexors medial, extensors lateral).",
+        "- [b]Coronoid fossa[/b] (anterior) receives the ulna's coronoid process during elbow flexion; [b]olecranon fossa[/b] (posterior) receives the olecranon during extension; [b]radial fossa[/b] (anterior, lateral) receives the radial head in full flexion."
+      ],
+      "tip": "Capitulum = little head, and it meets the head of the radius. Trochlea = pulley, and the ulna wraps around it like a rope on a pulley.",
+      "clinical": "The ulnar nerve runs in a groove behind the medial epicondyle. Bumping it is the 'funny bone' tingle down the little finger side of the hand. Fractures of the surgical neck can injure the axillary nerve, weakening the deltoid.",
+      "figure": {
+        "file": "m09_humerus.jpg",
+        "caption": "Trace the humerus from the head, anatomical neck, and surgical neck down past the deltoid tuberosity to the elbow. Note that the capitulum (lateral) meets the radius and the trochlea (medial) meets the ulna, with the coronoid fossa in front and the olecranon fossa behind.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 8.5, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-2-bones-of-the-upper-limb"
+      }
+    },
+    {
+      "heading": "The Forearm: Radius and Ulna",
+      "body": [
+        "The forearm (antebrachium) has two parallel bones connected along their shafts by the [b]interosseous membrane[/b].",
+        "[b]Ulna (medial, little finger side):[/b] it dominates the elbow.",
+        "- [b]Olecranon process:[/b] the point of the elbow; fits into the olecranon fossa when the elbow is extended.",
+        "- [b]Coronoid process:[/b] anterior lip of the trochlear notch; fits into the coronoid fossa during flexion.",
+        "- [b]Trochlear notch:[/b] C-shaped surface that grips the trochlea of the humerus, forming the hinge of the elbow.",
+        "- [b]Radial notch:[/b] lateral facet where the head of the radius rotates (proximal radioulnar joint).",
+        "- [b]Head of the ulna[/b] is at the [b]distal[/b] end, with a small [b]styloid process[/b]. The ulna is separated from the carpals by an articular disc and does not directly join the wrist.",
+        "[b]Radius (lateral, thumb side):[/b] it dominates the wrist.",
+        "- [b]Head:[/b] disc-shaped, at the [b]proximal[/b] end; spins against the capitulum and radial notch during pronation and supination.",
+        "- [b]Radial tuberosity:[/b] just below the head; insertion of the biceps brachii.",
+        "- [b]Distal end:[/b] broad; articulates with the scaphoid and lunate (radiocarpal joint), has an [b]ulnar notch[/b] for the head of the ulna, and a [b]styloid process[/b] laterally.",
+        "During pronation the radius crosses over the ulna; the ulna stays mostly still."
+      ],
+      "tip": "'Radius rotates, ulna under the pinky.' The two 'heads' are at opposite ends: radial head up at the elbow, ulnar head down at the wrist. Each bone's notch is named for the bone that fits into it.",
+      "clinical": "A [b]Colles fracture[/b] is a break of the distal radius, typically from falling on an outstretched hand; the wrist takes on a 'dinner fork' deformity. It is especially common in older adults with osteoporosis.",
+      "figure": {
+        "file": "m09_radius_ulna.jpg",
+        "caption": "The ulna sits on the medial side with the olecranon process and trochlear notch at the elbow; the radius sits laterally, its head at the elbow and its wide end at the wrist. Notice the interosseous membrane joining the shafts and the styloid process at the distal end of each bone.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 8.6, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-2-bones-of-the-upper-limb"
+      }
+    },
+    {
+      "heading": "The Hand: Carpals, Metacarpals, Phalanges",
+      "body": [
+        "Each hand has [b]27 bones[/b]: 8 carpals, 5 metacarpals, and 14 phalanges.",
+        "[b]Carpals (wrist):[/b] eight short bones in two rows. Listed lateral (thumb side) to medial in anatomical position:",
+        "- [b]Proximal row:[/b] scaphoid, lunate, triquetrum, pisiform.",
+        "- [b]Distal row:[/b] trapezium, trapezoid, capitate, hamate.",
+        "The scaphoid and lunate articulate with the radius. The pisiform is a small sesamoid bone in the tendon of flexor carpi ulnaris. The hamate has a hook (hamulus). The carpals form a concave arch whose roof is the flexor retinaculum, creating the [b]carpal tunnel[/b].",
+        "[b]Metacarpals:[/b] five bones of the palm, numbered [b]I to V starting at the thumb[/b]. Their distal heads are the knuckles.",
+        "[b]Phalanges:[/b] the finger bones. Fingers 2 to 5 each have proximal, middle, and distal phalanges; the thumb ([b]pollex[/b]) has only proximal and distal. That gives 4 × 3 + 2 = 14."
+      ],
+      "tip": "Carpals, proximal row then distal row, thumb side to pinky side: 'Some Lovers Try Positions That They Can't Handle' (Scaphoid, Lunate, Triquetrum, Pisiform, Trapezium, Trapezoid, Capitate, Hamate). To keep the two T's straight: trapez[b]ium[/b] sits by the th[b]um[/b]b.",
+      "clinical": "The [b]scaphoid[/b] is the most commonly fractured carpal, usually after a fall on an outstretched hand; tenderness in the 'anatomical snuffbox' is the classic sign. Its blood supply enters distally, so fractures can heal poorly. [b]Carpal tunnel syndrome[/b] is compression of the median nerve in the carpal tunnel.",
+      "figure": {
+        "file": "m09_hand.jpg",
+        "caption": "Find the two rows of carpals: scaphoid, lunate, triquetrum, and pisiform in the proximal row, and trapezium, trapezoid, capitate, and hamate in the distal row. Metacarpals are numbered 1 to 5 from the thumb, and the thumb has only proximal and distal phalanges.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 8.7, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-2-bones-of-the-upper-limb"
+      }
+    },
+    {
+      "heading": "Pelvic Girdle: The Os Coxae",
+      "body": [
+        "Each [b]os coxae[/b] (hip bone, coxal bone) forms from three bones that fuse by about the late teens. All three meet at the [b]acetabulum[/b], the deep cup that receives the head of the femur.",
+        "[b]Ilium (superior, largest):[/b]",
+        "- [b]Iliac crest:[/b] the upper rim you feel at your 'hips'; ends anteriorly at the [b]anterior superior iliac spine (ASIS)[/b] and posteriorly at the [b]posterior superior iliac spine (PSIS)[/b]. Below these are the anterior and posterior inferior iliac spines.",
+        "- [b]Iliac fossa:[/b] the smooth inner concavity (iliacus muscle).",
+        "- [b]Auricular surface:[/b] ear-shaped area that articulates with the sacrum at the [b]sacroiliac joint[/b].",
+        "- [b]Greater sciatic notch:[/b] the large notch through which the sciatic nerve passes.",
+        "[b]Ischium (posteroinferior):[/b]",
+        "- [b]Ischial tuberosity:[/b] the rough 'sit bone' that bears weight when sitting; origin of the hamstrings.",
+        "- [b]Ischial spine[/b] and the [b]lesser sciatic notch[/b] below it; the [b]ischial ramus[/b] joins the pubis.",
+        "[b]Pubis (anterior):[/b]",
+        "- [b]Superior and inferior pubic rami[/b] and a body. The two pubic bones meet at the [b]pubic symphysis[/b], a fibrocartilage joint.",
+        "- The inferior rami of both sides form the [b]pubic arch[/b], and the angle between them is the [b]subpubic angle[/b].",
+        "The ischium and pubis together surround the [b]obturator foramen[/b], the largest foramen in the body, mostly closed by a membrane.",
+        "[b]Pelvis terminology:[/b] the two hip bones, sacrum, and coccyx together form the bony [b]pelvis[/b]. The [b]pelvic brim[/b] separates the [b]false (greater) pelvis[/b] above, which supports abdominal organs, from the [b]true (lesser) pelvis[/b] below, which surrounds the birth canal. The opening at the brim is the [b]pelvic inlet[/b]; the bottom opening is the [b]pelvic outlet[/b]. Textbooks differ slightly on wording: Hole's describes the pelvic girdle as the two hip bones together, while OpenStax describes each hip bone as forming the pelvic girdle of its side."
+      ],
+      "tip": "Superior to inferior on the hip bone: Ilium is 'up high', ISchium is where you SIt, Pubis is in front. Acetabulum means 'vinegar cup' in Latin.",
+      "clinical": "The ASIS and iliac crest are key surface landmarks for locating injection sites and for measuring leg length. The posterior iliac crest is a common site for red bone marrow biopsy.",
+      "figure": {
+        "file": "m09_hip_bone.jpg",
+        "caption": "The colors show the three fused bones of the os coxae: ilium (green), ischium (orange), and pubis (purple), all meeting at the acetabulum. Locate the iliac crest, the anterior and posterior iliac spines, the ischial tuberosity, and the obturator foramen.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 8.13, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-3-the-pelvic-girdle-and-pelvis"
+      }
+    },
+    {
+      "heading": "Male vs Female Pelvis",
+      "body": [
+        "The female pelvis is adapted for childbirth, so it is wider and shallower with a larger, rounder opening. The differences are tendencies with real overlap, but on exams these are the standard contrasts:",
+        "- [b]Overall:[/b] female bones lighter and thinner with less prominent markings; male heavier and thicker.",
+        "- [b]Iliac bones:[/b] flare more laterally in females, giving broader hips; the female pelvis is shallower.",
+        "- [b]Pelvic inlet:[/b] larger and more oval or round in females; smaller and heart-shaped in males.",
+        "- [b]Subpubic angle (pubic arch):[/b] wide in females, about 90 degrees or more; narrow in males, often well under 90 degrees. Exact numbers vary by textbook (OpenStax gives greater than 80 degrees for females and less than 70 for males).",
+        "- [b]Ischial spines and tuberosities:[/b] farther apart and more everted in females, widening the outlet.",
+        "- [b]Sacrum:[/b] shorter, wider, and less curved in females; [b]coccyx[/b] more movable and straighter.",
+        "- [b]Acetabula:[/b] smaller and farther apart in females.",
+        "- [b]Obturator foramen:[/b] more oval or triangular in females, rounder in males."
+      ],
+      "tip": "Compare the pubic arch to your hand: the female angle is like the angle between an outstretched thumb and index finger (about 90 degrees); the male angle is more like the narrow V between index and middle finger.",
+      "figure": {
+        "file": "m09_pelvis_sex.jpg",
+        "caption": "The red outline marks the pelvic brim, which bounds the pelvic inlet: rounder and wider in the female, narrower and heart-shaped in the male. Compare the subpubic angles at the bottom, wide in the female and narrow in the male.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 8.15, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-3-the-pelvic-girdle-and-pelvis"
+      }
+    },
+    {
+      "heading": "Thigh and Leg: Femur, Patella, Tibia, Fibula",
+      "body": [
+        "[b]Femur:[/b] the longest, heaviest, and strongest bone in the body.",
+        "- [b]Head[/b] fits into the acetabulum; the small pit on it, the [b]fovea capitis[/b], anchors the ligament of the head of the femur.",
+        "- [b]Neck:[/b] angles the shaft away from the hip; the weakest part of the femur.",
+        "- [b]Greater trochanter[/b] (lateral, palpable) and [b]lesser trochanter[/b] (posteromedial): attachments for hip muscles. They are connected by the [b]intertrochanteric line[/b] anteriorly and [b]intertrochanteric crest[/b] posteriorly.",
+        "- [b]Linea aspera:[/b] a rough ridge on the posterior shaft for thigh muscle attachment; the [b]gluteal tuberosity[/b] is above it.",
+        "- Distally: [b]medial and lateral condyles[/b] (articulate with the tibia), [b]epicondyles[/b] above them, the [b]intercondylar fossa[/b] posteriorly, and the [b]patellar surface[/b] anteriorly.",
+        "[b]Patella (kneecap):[/b] a triangular [b]sesamoid bone[/b] that develops within the quadriceps tendon. It protects the knee and improves the leverage of the quadriceps.",
+        "[b]Tibia (shinbone, medial):[/b] the weight-bearing bone of the leg.",
+        "- [b]Medial and lateral condyles[/b] with the [b]intercondylar eminence[/b] between them.",
+        "- [b]Tibial tuberosity:[/b] anterior bump where the patellar ligament attaches.",
+        "- [b]Anterior border (crest):[/b] the sharp shin, just under the skin.",
+        "- [b]Medial malleolus:[/b] the inner ankle bump.",
+        "[b]Fibula (lateral):[/b] thin and not weight bearing; mainly for muscle attachment and ankle stability. Its [b]head[/b] is proximal (articulates with the lateral tibial condyle, not the femur), and its [b]lateral malleolus[/b] forms the outer ankle bump."
+      ],
+      "tip": "The tibia is the thick, weight-bearing one; the fibula is the little one. Fibula and lateral both contain an L: the fibula is lateral and forms the lateral malleolus.",
+      "clinical": "A 'broken hip' is usually a fracture of the [b]femoral neck[/b] or intertrochanteric region, very common in older adults with osteoporosis. A [b]Pott fracture[/b] is a break of the distal fibula, often with damage to the medial malleolus, caused by a forceful twisting of the ankle.",
+      "figure": {
+        "file": "m09_femur.jpg",
+        "caption": "On the femur, find the head and neck, the greater and lesser trochanters, and the linea aspera on the posterior shaft. At the knee, the medial and lateral condyles meet the tibia, and the patella sits in front of the distal femur.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 8.16, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
+      }
+    },
+    {
+      "heading": "The Foot and Its Arches",
+      "body": [
+        "Each foot has [b]26 bones[/b]: 7 tarsals, 5 metatarsals, and 14 phalanges.",
+        "[b]Tarsals:[/b]",
+        "- [b]Talus:[/b] the only tarsal that articulates with the tibia and fibula, forming the ankle (talocrural) joint. It transfers body weight down to the calcaneus.",
+        "- [b]Calcaneus:[/b] the heel bone, the largest tarsal; the calcaneal (Achilles) tendon inserts on it.",
+        "- [b]Navicular:[/b] boat-shaped, medial, in front of the talus.",
+        "- [b]Cuboid:[/b] lateral, in front of the calcaneus.",
+        "- [b]Medial, intermediate, and lateral cuneiforms:[/b] in front of the navicular.",
+        "[b]Metatarsals:[/b] five, numbered I to V from the big toe (medial). The first metatarsal is the thickest and bears much of the weight in push-off.",
+        "[b]Phalanges:[/b] 14 per foot; the big toe ([b]hallux[/b]) has two, the others have three.",
+        "[b]Arches of the foot:[/b] bones held in arched positions by ligaments and tendons. They distribute weight between heel and ball of the foot, absorb shock, and act like springs.",
+        "- [b]Medial longitudinal arch:[/b] the highest; calcaneus, talus, navicular, cuneiforms, and metatarsals I to III.",
+        "- [b]Lateral longitudinal arch:[/b] lower; calcaneus, cuboid, and metatarsals IV and V.",
+        "- [b]Transverse arch:[/b] runs side to side across the cuneiforms, cuboid, and bases of the metatarsals."
+      ],
+      "tip": "Tarsals: 'Tiger Cubs Need MILC' (Talus, Calcaneus, Navicular, Medial, Intermediate, Lateral cuneiforms, Cuboid).",
+      "clinical": "[b]Pes planus (flat feet)[/b] occurs when the arch-supporting ligaments and tendons weaken or never develop fully, so the medial arch falls. Prolonged standing and excess weight increase strain on the arches, and plantar fasciitis is inflammation of the tissue along the sole that helps hold them up.",
+      "figure": {
+        "file": "m09_foot.jpg",
+        "caption": "Identify the seven tarsals: talus, calcaneus, navicular, cuboid, and the medial, intermediate, and lateral cuneiforms. The medial view shows the high medial longitudinal arch running from the calcaneus forward to the first metatarsal.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 8.19, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "m09_fc01",
+      "term": "Appendicular skeleton",
+      "definition": "The 126 bones of the pectoral girdles, upper limbs, pelvic girdle, and lower limbs."
+    },
+    {
+      "id": "m09_fc02",
+      "term": "Clavicle",
+      "definition": "S-shaped collarbone; sternal end meets the manubrium, acromial end meets the acromion. Most commonly fractured bone."
+    },
+    {
+      "id": "m09_fc03",
+      "term": "Acromion",
+      "definition": "Lateral end of the scapular spine; forms the tip of the shoulder and articulates with the clavicle (AC joint)."
+    },
+    {
+      "id": "m09_fc04",
+      "term": "Coracoid process",
+      "definition": "Beak-like anterior projection of the scapula; attachment for biceps brachii (short head), coracobrachialis, pectoralis minor."
+    },
+    {
+      "id": "m09_fc05",
+      "term": "Glenoid cavity",
+      "definition": "Shallow socket on the lateral scapula that receives the head of the humerus."
+    },
+    {
+      "id": "m09_fc06",
+      "term": "Supraspinous and infraspinous fossae",
+      "definition": "Posterior scapular depressions above and below the spine; house the supraspinatus and infraspinatus muscles."
+    },
+    {
+      "id": "m09_fc07",
+      "term": "Surgical neck of humerus",
+      "definition": "Narrowing below the tubercles; the most common fracture site of the proximal humerus."
+    },
+    {
+      "id": "m09_fc08",
+      "term": "Intertubercular sulcus",
+      "definition": "Groove between the greater and lesser tubercles of the humerus; holds the tendon of the long head of biceps brachii. Also called the bicipital groove."
+    },
+    {
+      "id": "m09_fc09",
+      "term": "Deltoid tuberosity",
+      "definition": "Rough area on the lateral shaft of the humerus where the deltoid inserts."
+    },
+    {
+      "id": "m09_fc10",
+      "term": "Capitulum",
+      "definition": "Lateral, rounded distal surface of the humerus; articulates with the head of the radius."
+    },
+    {
+      "id": "m09_fc11",
+      "term": "Trochlea",
+      "definition": "Medial, spool-shaped distal surface of the humerus; articulates with the trochlear notch of the ulna."
+    },
+    {
+      "id": "m09_fc12",
+      "term": "Olecranon process",
+      "definition": "Proximal end of the ulna forming the point of the elbow; fits into the olecranon fossa during extension."
+    },
+    {
+      "id": "m09_fc13",
+      "term": "Radial tuberosity",
+      "definition": "Bump just below the head of the radius; insertion of the biceps brachii."
+    },
+    {
+      "id": "m09_fc14",
+      "term": "Styloid processes (forearm)",
+      "definition": "Pointed distal projections on both the radius (lateral) and ulna (medial)."
+    },
+    {
+      "id": "m09_fc15",
+      "term": "Carpals",
+      "definition": "8 wrist bones. Proximal row: scaphoid, lunate, triquetrum, pisiform. Distal row: trapezium, trapezoid, capitate, hamate."
+    },
+    {
+      "id": "m09_fc16",
+      "term": "Pollex",
+      "definition": "The thumb; has only 2 phalanges (proximal and distal). Metacarpal I."
+    },
+    {
+      "id": "m09_fc17",
+      "term": "Os coxae",
+      "definition": "Hip bone (coxal bone), formed by fusion of the ilium, ischium, and pubis, which meet at the acetabulum."
+    },
+    {
+      "id": "m09_fc18",
+      "term": "Acetabulum",
+      "definition": "Deep socket on the lateral hip bone, formed by all three hip bone parts, that receives the head of the femur."
+    },
+    {
+      "id": "m09_fc19",
+      "term": "Iliac crest",
+      "definition": "Superior rim of the ilium, running from the ASIS to the PSIS."
+    },
+    {
+      "id": "m09_fc20",
+      "term": "Ischial tuberosity",
+      "definition": "Rough, weight-bearing 'sit bone' of the ischium; origin of the hamstrings."
+    },
+    {
+      "id": "m09_fc21",
+      "term": "Pubic symphysis",
+      "definition": "Fibrocartilage joint where the two pubic bones meet anteriorly."
+    },
+    {
+      "id": "m09_fc22",
+      "term": "Obturator foramen",
+      "definition": "Large opening in the hip bone surrounded by the ischium and pubis; mostly covered by a membrane."
+    },
+    {
+      "id": "m09_fc23",
+      "term": "True vs false pelvis",
+      "definition": "Divided by the pelvic brim. False (greater) pelvis is above and holds abdominal organs; true (lesser) pelvis is below and forms the birth canal."
+    },
+    {
+      "id": "m09_fc24",
+      "term": "Female pelvis traits",
+      "definition": "Lighter, wider, shallower; larger oval inlet; subpubic angle about 90 degrees or more; ischial spines farther apart; shorter, wider, less curved sacrum."
+    },
+    {
+      "id": "m09_fc25",
+      "term": "Femur",
+      "definition": "Thigh bone; longest and strongest bone. Head, fovea capitis, neck, greater and lesser trochanters, linea aspera, condyles."
+    },
+    {
+      "id": "m09_fc26",
+      "term": "Linea aspera",
+      "definition": "Rough ridge along the posterior shaft of the femur for thigh muscle attachment."
+    },
+    {
+      "id": "m09_fc27",
+      "term": "Patella",
+      "definition": "Kneecap; a sesamoid bone in the quadriceps tendon that protects the knee and improves quadriceps leverage."
+    },
+    {
+      "id": "m09_fc28",
+      "term": "Tibial tuberosity",
+      "definition": "Anterior bump below the tibial condyles where the patellar ligament attaches."
+    },
+    {
+      "id": "m09_fc29",
+      "term": "Medial vs lateral malleolus",
+      "definition": "Medial malleolus is the distal tibia (inner ankle); lateral malleolus is the distal fibula (outer ankle)."
+    },
+    {
+      "id": "m09_fc30",
+      "term": "Talus",
+      "definition": "Tarsal bone that articulates with the tibia and fibula at the ankle and passes weight to the calcaneus."
+    },
+    {
+      "id": "m09_fc31",
+      "term": "Calcaneus",
+      "definition": "Heel bone; largest tarsal; insertion of the calcaneal (Achilles) tendon."
+    },
+    {
+      "id": "m09_fc32",
+      "term": "Tarsals",
+      "definition": "7 ankle bones: talus, calcaneus, navicular, cuboid, medial, intermediate, and lateral cuneiforms."
+    },
+    {
+      "id": "m09_fc33",
+      "term": "Arches of the foot",
+      "definition": "Medial longitudinal (highest), lateral longitudinal, and transverse arches; held by ligaments and tendons; distribute weight and absorb shock."
+    },
+    {
+      "id": "m09_fc34",
+      "term": "Hallux",
+      "definition": "The big toe; has 2 phalanges. Metatarsal I."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m09_q01",
+      "type": "multiple_choice",
+      "prompt": "Which bone is the only bony connection between the upper limb and the axial skeleton?",
+      "choices": [
+        "Clavicle",
+        "Scapula",
+        "Humerus",
+        "Manubrium"
+      ],
+      "answer": 0,
+      "explanation": "The clavicle joins the manubrium at the sternoclavicular joint, the only bony joint linking the pectoral girdle to the axial skeleton. The scapula is tempting because it is large and on the trunk, but it is attached to the thorax only by muscles."
+    },
+    {
+      "id": "m09_q02",
+      "type": "multiple_choice",
+      "prompt": "A patient falls on the shoulder and the bone that holds the shoulder out from the thorax breaks. Which bone is the most commonly fractured bone in the body?",
+      "choices": [
+        "Scapula",
+        "Clavicle",
+        "Humerus",
+        "Radius"
+      ],
+      "answer": 1,
+      "explanation": "The clavicle acts as a strut and absorbs force transmitted from the arm, making it the most frequently fractured bone. The radius (Colles fracture) is also commonly broken but is not the most common overall."
+    },
+    {
+      "id": "m09_q03",
+      "type": "multiple_choice",
+      "prompt": "Which scapular feature receives the head of the humerus?",
+      "choices": [
+        "Acromion",
+        "Coracoid process",
+        "Glenoid cavity",
+        "Subscapular fossa"
+      ],
+      "answer": 2,
+      "explanation": "The glenoid cavity is the shallow socket of the shoulder joint. The acromion and coracoid process are projections nearby that serve as attachment and articulation points, but neither forms the socket."
+    },
+    {
+      "id": "m09_q04",
+      "type": "multiple_choice",
+      "prompt": "The head of the radius articulates with which part of the humerus?",
+      "choices": [
+        "Trochlea",
+        "Capitulum",
+        "Olecranon fossa",
+        "Medial epicondyle"
+      ],
+      "answer": 1,
+      "explanation": "The capitulum is the lateral, ball-like surface that meets the disc-shaped radial head. The trochlea is the tempting wrong answer, but it articulates with the ulna's trochlear notch."
+    },
+    {
+      "id": "m09_q05",
+      "type": "multiple_choice",
+      "prompt": "When the elbow is fully extended, the olecranon process of the ulna fits into the:",
+      "choices": [
+        "Coronoid fossa",
+        "Radial fossa",
+        "Olecranon fossa",
+        "Intertubercular sulcus"
+      ],
+      "answer": 2,
+      "explanation": "The olecranon fossa is on the posterior distal humerus and receives the olecranon during extension. The coronoid fossa is anterior and receives the coronoid process during flexion, the opposite movement."
+    },
+    {
+      "id": "m09_q06",
+      "type": "multiple_choice",
+      "prompt": "Which statement about the forearm bones is correct?",
+      "choices": [
+        "The head of the ulna is at its proximal end",
+        "The radius is on the medial side in anatomical position",
+        "The radius articulates directly with the carpals at the wrist",
+        "The ulnar notch is a feature of the ulna"
+      ],
+      "answer": 2,
+      "explanation": "The distal radius articulates with the scaphoid and lunate to form the radiocarpal (wrist) joint. The head of the ulna is distal, the radius is lateral (thumb side), and the ulnar notch is on the radius, named for the bone that fits into it."
+    },
+    {
+      "id": "m09_q07",
+      "type": "multiple_choice",
+      "prompt": "The biceps brachii inserts on which landmark?",
+      "choices": [
+        "Deltoid tuberosity",
+        "Radial tuberosity",
+        "Olecranon process",
+        "Coracoid process"
+      ],
+      "answer": 1,
+      "explanation": "The biceps brachii inserts on the radial tuberosity, which is why it can supinate the forearm as well as flex the elbow. The coracoid process is one of its origins, not its insertion."
+    },
+    {
+      "id": "m09_q08",
+      "type": "multiple_choice",
+      "prompt": "After falling on an outstretched hand, a patient has tenderness in the 'anatomical snuffbox' at the base of the thumb. Which carpal bone is most likely fractured?",
+      "choices": [
+        "Pisiform",
+        "Hamate",
+        "Scaphoid",
+        "Capitate"
+      ],
+      "answer": 2,
+      "explanation": "The scaphoid lies under the anatomical snuffbox on the lateral (thumb) side of the proximal row and is the most commonly fractured carpal. The pisiform and hamate are on the medial (little finger) side."
+    },
+    {
+      "id": "m09_q09",
+      "type": "multiple_choice",
+      "prompt": "Which carpal bone is in the distal row and articulates with the base of the thumb's metacarpal?",
+      "choices": [
+        "Trapezoid",
+        "Trapezium",
+        "Scaphoid",
+        "Lunate"
+      ],
+      "answer": 1,
+      "explanation": "The trapezium sits at the base of metacarpal I and forms the saddle joint of the thumb. The trapezoid is right next to it and is the classic mix-up; remember 'trapezium by the thumb'."
+    },
+    {
+      "id": "m09_q10",
+      "type": "multiple_choice",
+      "prompt": "How many phalanges are in one hand?",
+      "choices": [
+        "10",
+        "12",
+        "14",
+        "15"
+      ],
+      "answer": 2,
+      "explanation": "Fingers 2 through 5 have three phalanges each (12) and the thumb has two, for 14. Answering 15 assumes the thumb has three like the other fingers."
+    },
+    {
+      "id": "m09_q11",
+      "type": "multiple_choice",
+      "prompt": "Which three bones fuse to form each os coxae?",
+      "choices": [
+        "Ilium, ischium, and sacrum",
+        "Ilium, ischium, and pubis",
+        "Ilium, pubis, and coccyx",
+        "Ischium, pubis, and femur"
+      ],
+      "answer": 1,
+      "explanation": "The ilium, ischium, and pubis fuse and meet at the acetabulum. The sacrum and coccyx are part of the pelvis but belong to the axial skeleton and are not part of the hip bone."
+    },
+    {
+      "id": "m09_q12",
+      "type": "multiple_choice",
+      "prompt": "When you sit upright on a hard chair, your weight rests mainly on the:",
+      "choices": [
+        "Iliac crests",
+        "Ischial tuberosities",
+        "Pubic symphysis",
+        "Anterior superior iliac spines"
+      ],
+      "answer": 1,
+      "explanation": "The ischial tuberosities are the 'sit bones'. The iliac crests are the high rims of the hip you rest your hands on, not weight-bearing points when seated."
+    },
+    {
+      "id": "m09_q13",
+      "type": "multiple_choice",
+      "prompt": "A forensic anthropologist examines a pelvis with a narrow, heart-shaped inlet, a subpubic angle of about 60 degrees, and a long, strongly curved sacrum. The pelvis most likely belongs to:",
+      "choices": [
+        "An adult female",
+        "An adult male",
+        "A child of either sex, since the pelvis is not yet fused",
+        "It cannot be estimated from these features"
+      ],
+      "answer": 1,
+      "explanation": "A narrow heart-shaped inlet, an acute subpubic angle, and a long curved sacrum are classic male traits. The female pelvis has a wider, rounder inlet, a subpubic angle near or above 90 degrees, and a shorter, wider, less curved sacrum. Individual overlap exists, but these features together point strongly to male."
+    },
+    {
+      "id": "m09_q14",
+      "type": "multiple_choice",
+      "prompt": "Which landmark is on the femur?",
+      "choices": [
+        "Tibial tuberosity",
+        "Medial malleolus",
+        "Greater trochanter",
+        "Intercondylar eminence"
+      ],
+      "answer": 2,
+      "explanation": "The greater trochanter is the large lateral projection on the proximal femur. The tibial tuberosity, medial malleolus, and intercondylar eminence are all features of the tibia."
+    },
+    {
+      "id": "m09_q15",
+      "type": "multiple_choice",
+      "prompt": "Which tarsal bone articulates directly with the tibia and fibula?",
+      "choices": [
+        "Calcaneus",
+        "Talus",
+        "Navicular",
+        "Cuboid"
+      ],
+      "answer": 1,
+      "explanation": "The talus forms the ankle joint with the tibia and fibula and passes the load down to the calcaneus. The calcaneus is larger and more famous as the heel bone, but it sits below the talus and does not touch the leg bones."
+    },
+    {
+      "id": "m09_q16",
+      "type": "multiple_choice",
+      "prompt": "The bump on the outside of your ankle is the:",
+      "choices": [
+        "Medial malleolus of the tibia",
+        "Lateral malleolus of the fibula",
+        "Lateral condyle of the tibia",
+        "Head of the fibula"
+      ],
+      "answer": 1,
+      "explanation": "The lateral malleolus is the distal end of the fibula. The medial malleolus belongs to the tibia and forms the inner ankle bump. The head of the fibula is up near the knee."
+    },
+    {
+      "id": "m09_q17",
+      "type": "multiple_choice",
+      "prompt": "Which arch of the foot is the highest and most noticeable?",
+      "choices": [
+        "Transverse arch",
+        "Lateral longitudinal arch",
+        "Medial longitudinal arch",
+        "Plantar arch of the cuboid"
+      ],
+      "answer": 2,
+      "explanation": "The medial longitudinal arch, running from the calcaneus through the talus, navicular, cuneiforms, and first three metatarsals, is the highest. It is the one that collapses in pes planus."
+    },
+    {
+      "id": "m09_q18",
+      "type": "true_false",
+      "prompt": "The fibula is the main weight-bearing bone of the leg.",
+      "answer": false,
+      "explanation": "The tibia bears nearly all body weight in the leg. The fibula is a slender lateral bone for muscle attachment and ankle stability, and it does not even articulate with the femur."
+    },
+    {
+      "id": "m09_q19",
+      "type": "true_false",
+      "prompt": "The patella is a sesamoid bone that forms within the tendon of the quadriceps femoris.",
+      "answer": true,
+      "explanation": "Sesamoid bones develop within tendons. The patella improves the leverage of the quadriceps on the tibia and protects the front of the knee."
+    },
+    {
+      "id": "m09_q20",
+      "type": "true_false",
+      "prompt": "The metacarpals are numbered I through V starting with the little finger.",
+      "answer": false,
+      "explanation": "Numbering starts at the thumb: metacarpal I is the thumb and V is the little finger. The same rule applies to the metatarsals, starting at the big toe."
+    },
+    {
+      "id": "m09_q21",
+      "type": "ordering",
+      "prompt": "Order the bones of the upper limb from proximal to distal.",
+      "items": [
+        "Humerus",
+        "Ulna (with the radius)",
+        "Carpals",
+        "Metacarpals",
+        "Phalanges"
+      ],
+      "explanation": "The arm has the humerus, the forearm has the radius and ulna, then the wrist (carpals), palm (metacarpals), and fingers (phalanges)."
+    },
+    {
+      "id": "m09_q22",
+      "type": "ordering",
+      "prompt": "Order the bones of the proximal carpal row from lateral (thumb side) to medial in anatomical position.",
+      "items": [
+        "Scaphoid",
+        "Lunate",
+        "Triquetrum",
+        "Pisiform"
+      ],
+      "explanation": "'Some Lovers Try Positions' covers the proximal row from the thumb side: scaphoid, lunate, triquetrum, pisiform. The pisiform sits on the palmar surface of the triquetrum on the little finger side."
+    },
+    {
+      "id": "m09_q23",
+      "type": "ordering",
+      "prompt": "Order these hip bone landmarks from most superior to most inferior in anatomical position.",
+      "items": [
+        "Iliac crest",
+        "Anterior superior iliac spine",
+        "Anterior inferior iliac spine",
+        "Acetabulum",
+        "Ischial tuberosity"
+      ],
+      "explanation": "The iliac crest is the top rim and ends anteriorly at the ASIS. The AIIS lies just below, above the acetabulum. The ischial tuberosity is the lowest point of the hip bone."
+    }
+  ]
+}

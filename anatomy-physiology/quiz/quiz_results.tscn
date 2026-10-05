@@ -1,0 +1,46 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://quiz/quiz_results.gd" id="1_results"]
+
+[node name="QuizResults" type="VBoxContainer"]
+theme_override_constants/separation = 12
+script = ExtResource("1_results")
+
+[node name="Heading" type="Label" parent="."]
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "Quiz complete"
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 2
+theme_type_variation = &"ScoreLabel"
+text = "0 / 0"
+
+[node name="BestScore" type="Label" parent="."]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "Best score: 0%"
+
+[node name="Actions" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="RetryMissed" type="Button" parent="Actions"]
+layout_mode = 2
+theme_type_variation = &"AccentButton"
+text = "Retry the ones I missed"
+
+[node name="Retry" type="Button" parent="Actions"]
+layout_mode = 2
+text = "Retake the whole quiz"
+
+[node name="MissedHeading" type="Label" parent="."]
+layout_mode = 2
+theme_type_variation = &"TileTitle"
+text = "Review what you missed"
+
+[node name="Missed" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+selection_enabled = true

@@ -1,0 +1,659 @@
+{
+  "id": "m08_axial_skeleton",
+  "order": 8,
+  "course": "A&P I",
+  "title": "The Axial Skeleton",
+  "summary": "Bones of the skull, hyoid, vertebral column, and thoracic cage, with their key features, sutures, sinuses, and curvatures.",
+  "objectives": [
+    "Distinguish the axial skeleton from the appendicular skeleton and list its parts",
+    "Name and locate the eight cranial and fourteen facial bones",
+    "Identify the major skull sutures, fontanels, and paranasal sinuses",
+    "Locate key skull features such as the foramen magnum, sella turcica, and cribriform plate",
+    "Describe the hyoid bone and its unusual attachment",
+    "State the number of vertebrae in each region and identify the parts of a typical vertebra",
+    "Distinguish cervical, thoracic, and lumbar vertebrae, including the atlas and axis",
+    "Describe normal and abnormal spinal curvatures",
+    "Describe the sacrum, coccyx, sternum, and true, false, and floating ribs"
+  ],
+  "lesson": [
+    {
+      "heading": "Overview of the Axial Skeleton",
+      "body": [
+        "The adult skeleton typically has [b]206 bones[/b], divided into two parts:",
+        "- The [b]axial skeleton[/b] (80 bones) forms the central axis of the body: the skull, the middle ear bones (auditory ossicles), the hyoid, the vertebral column, and the thoracic cage.",
+        "- The [b]appendicular skeleton[/b] (126 bones) includes the limbs plus the pectoral and pelvic girdles that attach them.",
+        "The 80 axial bones break down as:",
+        "- Skull: 22 bones (8 cranial and 14 facial)",
+        "- Auditory ossicles: 6 bones (malleus, incus, and stapes in each ear)",
+        "- Hyoid: 1 bone",
+        "- Vertebral column: 26 bones (24 vertebrae, the sacrum, and the coccyx)",
+        "- Thoracic cage: 25 bones (24 ribs and the sternum)",
+        "The axial skeleton protects the brain, spinal cord, and thoracic organs, supports the head and trunk, and provides attachment for muscles of the head, neck, back, and breathing."
+      ],
+      "tip": "22 + 6 + 1 + 26 + 25 = 80 axial bones.",
+      "figure": {
+        "file": "m08_axial_appendicular.jpg",
+        "caption": "The tan bones are the axial skeleton: skull, vertebral column, and thoracic cage (sternum and ribs). Everything in green, including the pectoral and pelvic girdles, belongs to the appendicular skeleton.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 7.2, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-1-divisions-of-the-skeletal-system"
+      }
+    },
+    {
+      "heading": "Cranial Bones",
+      "body": [
+        "The [b]cranium[/b] (braincase) encloses and protects the brain. It is formed by [b]8 cranial bones[/b]:",
+        "- [b]Frontal bone[/b] (1): forms the forehead, the roof of the orbits, and the anterior cranial floor. Contains the frontal sinuses. The supraorbital foramen above each orbit transmits nerves and vessels.",
+        "- [b]Parietal bones[/b] (2): form most of the roof and sides of the cranium.",
+        "- [b]Temporal bones[/b] (2): form the lower sides of the cranium and part of its floor. Key features: the [b]external acoustic meatus[/b] (ear canal opening); the [b]mastoid process[/b], a bump behind the ear for neck muscle attachment that contains air cells; the [b]styloid process[/b], a slender spike for muscle and ligament attachment; the [b]zygomatic process[/b], which joins the zygomatic bone to form the cheekbone arch (zygomatic arch); and the [b]mandibular fossa[/b], which articulates with the mandible at the temporomandibular joint (TMJ). The temporal bone also houses the middle and inner ear and contains the carotid canal and part of the jugular foramen.",
+        "- [b]Occipital bone[/b] (1): forms the back and base of the skull. It contains the [b]foramen magnum[/b], the large opening through which the spinal cord connects to the brain. On either side are the [b]occipital condyles[/b], which rest on the atlas (first vertebra).",
+        "- [b]Sphenoid bone[/b] (1): a butterfly-shaped bone spanning the width of the cranial floor. It is often called the [b]keystone[/b] of the cranium because it articulates with all other cranial bones. Its central [b]sella turcica[/b] (\"Turkish saddle\") holds the [b]pituitary gland[/b]. It has greater and lesser wings, the optic canals (for the optic nerves), and the sphenoidal sinuses.",
+        "- [b]Ethmoid bone[/b] (1): a delicate bone between the orbits, forming part of the cranial floor, the medial orbit walls, and much of the nasal cavity. Its [b]cribriform plate[/b] is perforated by olfactory foramina through which the olfactory (smell) nerves pass; the [b]crista galli[/b] projects upward for attachment of the membranes covering the brain. The [b]perpendicular plate[/b] forms the upper part of the nasal septum, and the [b]superior and middle nasal conchae[/b] project into the nasal cavity. It contains the ethmoidal sinuses (air cells)."
+      ],
+      "tip": "Cranial bones: \"PEST OF 6\" = Parietal, Ethmoid, Sphenoid, Temporal, Occipital, Frontal (6 kinds; parietal and temporal are paired, making 8 bones).",
+      "clinical": "A blow to the front of the face can fracture the fragile cribriform plate, tearing the olfactory nerves (causing loss of smell) and allowing cerebrospinal fluid to leak into the nasal cavity.",
+      "figure": {
+        "file": "m08_skull_lateral.jpg",
+        "caption": "Locate the cranial bones from this side view: frontal, parietal, temporal, occipital, and the greater wing of the sphenoid. On the temporal bone, find the external acoustic meatus, mastoid process, styloid process, zygomatic process, and the mandibular fossa where the mandible articulates.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 7.5, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+      }
+    },
+    {
+      "heading": "Facial Bones",
+      "body": [
+        "There are [b]14 facial bones[/b]. They form the framework of the face, hold the teeth, form parts of the orbits and nasal cavity, and anchor facial muscles.",
+        "- [b]Maxillae[/b] (2): the upper jaw. They are the keystone of the face because they articulate with all other facial bones except the mandible. They hold the upper teeth in their [b]alveolar processes[/b], and their [b]palatine processes[/b] form the anterior part of the hard palate. They contain the largest paranasal sinuses, the maxillary sinuses.",
+        "- [b]Palatine bones[/b] (2): L-shaped bones that form the [b]posterior part of the hard palate[/b] and part of the nasal cavity floor.",
+        "- [b]Zygomatic bones[/b] (2): the cheekbones; they also form the lateral walls of the orbits. Each joins the zygomatic process of the temporal bone to form the zygomatic arch.",
+        "- [b]Lacrimal bones[/b] (2): the smallest facial bones, in the medial wall of each orbit. Each has a groove for the tear duct that drains tears into the nasal cavity.",
+        "- [b]Nasal bones[/b] (2): form the bridge of the nose. (The rest of the external nose is cartilage.)",
+        "- [b]Vomer[/b] (1): a thin bone forming the [b]lower part of the nasal septum[/b].",
+        "- [b]Inferior nasal conchae[/b] (2): scroll-like bones on the lateral walls of the nasal cavity. Unlike the superior and middle conchae, they are separate bones, not part of the ethmoid.",
+        "- [b]Mandible[/b] (1): the lower jaw, the largest and strongest facial bone, and the [b]only movable bone of the skull[/b] (other than the ear ossicles). Its body holds the lower teeth; its rami rise on each side ending in a [b]condylar process[/b], which articulates with the temporal bone at the TMJ, and a [b]coronoid process[/b], where the temporalis chewing muscle attaches. The [b]mental foramen[/b] on the chin transmits nerves and vessels.",
+        "The [b]nasal septum[/b] is formed by the perpendicular plate of the ethmoid (upper part), the vomer (lower part), and septal cartilage (anterior part).",
+        "Which bones count as \"facial\" varies slightly between books. Hole's and OpenStax both count 14 facial bones as listed here."
+      ],
+      "tip": "Facial bones: \"Virgil Can Not Make My Pet Zebra Laugh\" = Vomer, Conchae (inferior nasal), Nasal, Maxillae, Mandible, Palatine, Zygomatic, Lacrimal.",
+      "clinical": "A cleft palate occurs when the palatine processes of the maxillae and the palatine bones fail to fuse during development, leaving an opening between the mouth and nasal cavity that interferes with feeding and speech until repaired.",
+      "figure": {
+        "file": "m08_skull_anterior.jpg",
+        "caption": "Find the facial bones from the front: maxilla, zygomatic, nasal, lacrimal, inferior nasal concha, vomer, and mandible. The nasal septum is labeled with its two bony parts, the perpendicular plate of the ethmoid above and the vomer below.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 7.4, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+      }
+    },
+    {
+      "heading": "Sutures, Fontanels, and Sinuses",
+      "body": [
+        "[b]Sutures[/b] are immovable fibrous joints that connect most skull bones. The four major sutures:",
+        "- [b]Coronal suture[/b]: between the frontal bone and the two parietal bones (runs across the top of the head like a headband or crown).",
+        "- [b]Sagittal suture[/b]: between the two parietal bones, along the midline of the top of the skull.",
+        "- [b]Lambdoid suture[/b]: between the parietal bones and the occipital bone, at the back of the skull, shaped like the Greek letter lambda.",
+        "- [b]Squamous suture[/b]: between each parietal bone and temporal bone, on the side of the skull.",
+        "[b]Fontanels[/b] are membrane-covered soft spots in the infant skull where ossification is incomplete. They allow the skull to change shape slightly during birth and accommodate rapid brain growth. The largest is the [b]anterior fontanel[/b], a diamond-shaped area where the frontal and parietal bones meet; it closes at about 18 to 24 months. The [b]posterior fontanel[/b], where the parietal and occipital bones meet, closes within the first few months. Smaller [b]sphenoidal (anterolateral)[/b] and [b]mastoid (posterolateral)[/b] fontanels also close in infancy. Textbook closure ages vary somewhat.",
+        "[b]Paranasal sinuses[/b] are air-filled spaces lined with mucous membrane within four bones around the nasal cavity: the [b]frontal, sphenoid, ethmoid, and maxillary[/b] bones. They connect to the nasal cavity, lighten the skull, warm and humidify air, and add resonance to the voice. The maxillary sinuses are the largest."
+      ],
+      "tip": "Coronal = Crown (front, side to side). Sagittal = Splits left and right. Lambdoid = the back of the head, Last. Squamous = Side.",
+      "clinical": "Because sinuses drain into the nasal cavity, a cold or allergy can swell the mucous membranes and block drainage, trapping mucus and causing the pressure and headache of sinusitis.",
+      "figure": {
+        "file": "m08_newborn_skull.jpg",
+        "caption": "In the newborn skull, the blue membrane-covered gaps are the fontanels (OpenStax spells it fontanelle). Find the large, diamond-shaped anterior fontanel between the frontal and parietal bones and the posterior fontanel at the occipital bone, plus the sphenoidal and mastoid fontanels on the side.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 7.33, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-5-embryonic-development-of-the-axial-skeleton"
+      }
+    },
+    {
+      "heading": "The Hyoid Bone",
+      "body": [
+        "The [b]hyoid bone[/b] is a small U-shaped bone in the anterior neck, just above the larynx and below the mandible. It is unique: it does [b]not articulate with any other bone[/b]. Instead, it is suspended from the [b]styloid processes[/b] of the temporal bones by the stylohyoid ligaments and held in place by muscles.",
+        "It has a body and two pairs of projections called horns (greater and lesser cornua). It anchors the muscles of the [b]tongue[/b] and muscles of the neck that raise and lower the larynx during swallowing and speech."
+      ],
+      "clinical": "Because the hyoid is protected by the mandible and rarely breaks in falls or accidents, a fractured hyoid found at autopsy is a classic sign of strangulation.",
+      "figure": {
+        "file": "m08_hyoid.jpg",
+        "caption": "The hyoid sits between the mandible and the larynx without touching another bone. Notice its body and its two pairs of horns (greater and lesser cornua).",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 7.19, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+      }
+    },
+    {
+      "heading": "The Vertebral Column",
+      "body": [
+        "The vertebral column (spine) supports the head and trunk, protects the spinal cord, and provides attachment for the ribs and back muscles. In a child it has 33 separate vertebrae; in an adult, fusion of the sacral and coccygeal vertebrae leaves [b]26 bones[/b]:",
+        "- [b]Cervical[/b]: 7 vertebrae (C1 to C7), in the neck",
+        "- [b]Thoracic[/b]: 12 vertebrae (T1 to T12), in the upper back; each articulates with a pair of ribs",
+        "- [b]Lumbar[/b]: 5 vertebrae (L1 to L5), in the lower back",
+        "- [b]Sacrum[/b]: 1 bone formed from 5 fused vertebrae",
+        "- [b]Coccyx[/b]: 1 bone formed from usually 4 fused vertebrae (range 3 to 5)",
+        "[b]Intervertebral discs[/b] of fibrocartilage separate the bodies of adjacent vertebrae from C2 to the sacrum. Each disc has a tough outer ring, the [b]annulus fibrosus[/b], surrounding a soft gel-like center, the [b]nucleus pulposus[/b]. The discs absorb shock and allow the spine to flex. There is no disc between C1 and C2.",
+        "[b]Spinal curvatures[/b] increase strength and help balance:",
+        "- [b]Primary curvatures[/b]: the [b]thoracic[/b] and [b]sacral[/b] curves. They are present at birth and are concave anteriorly (the same C shape as the fetal spine).",
+        "- [b]Secondary curvatures[/b]: the [b]cervical[/b] and [b]lumbar[/b] curves. They are concave posteriorly and develop after birth: the cervical curve when the infant begins to hold up its head (around 3 months), the lumbar curve when the child begins to stand and walk (around 1 year).",
+        "[b]Abnormal curvatures[/b]:",
+        "- [b]Kyphosis[/b]: exaggerated thoracic curve, producing a hunchback. Common in older adults with osteoporotic compression fractures.",
+        "- [b]Lordosis[/b]: exaggerated lumbar curve, producing a swayback. May be temporary in pregnancy or with heavy abdominal weight.",
+        "- [b]Scoliosis[/b]: an abnormal [b]lateral[/b] (sideways) curvature, most often in the thoracic region, frequently appearing in adolescence."
+      ],
+      "tip": "Vertebra counts: \"Breakfast at 7, lunch at 12, dinner at 5.\" Curvatures: kyphosis = Kyphoid hump (upper back); lordosis = Lower back Leans; scoliosis = S-shaped side curve.",
+      "clinical": "In a herniated (slipped) disc, the nucleus pulposus pushes through a weakened annulus fibrosus, often posterolaterally in the lumbar region, where it can compress a spinal nerve root and cause pain radiating down the leg (sciatica).",
+      "figure": {
+        "file": "m08_vertebral_column.jpg",
+        "caption": "Count the regions: 7 cervical, 12 thoracic, 5 lumbar, then the fused sacrum and coccyx, with intervertebral discs between the bodies. The side view shows the four curvatures; the thoracic and sacral curves are the primary ones present at birth.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 7.20, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      }
+    },
+    {
+      "heading": "Structure of a Vertebra and Regional Differences",
+      "body": [
+        "A typical vertebra has these parts:",
+        "- [b]Body[/b]: the thick, disc-shaped anterior portion that bears weight.",
+        "- [b]Vertebral arch[/b]: extends posteriorly from the body. It is formed by two [b]pedicles[/b] (short stalks from the body) and two [b]laminae[/b] (flat plates that join at the midline).",
+        "- [b]Vertebral foramen[/b]: the opening enclosed by the body and arch, through which the spinal cord passes. Stacked together, the foramina form the vertebral canal.",
+        "- [b]Spinous process[/b]: projects posteriorly from the junction of the laminae; these are the bumps you feel along your back.",
+        "- [b]Transverse processes[/b]: project laterally from each side where the pedicle meets the lamina.",
+        "- [b]Superior and inferior articular processes[/b]: their smooth facets form joints with the vertebrae above and below.",
+        "- [b]Intervertebral foramina[/b]: openings between adjacent vertebrae (formed by notches in the pedicles) through which [b]spinal nerves[/b] exit.",
+        "[b]Cervical vertebrae[/b]: the smallest and lightest bodies. Each has a [b]transverse foramen[/b] in each transverse process, through which the vertebral arteries pass to the brain; this is the unique feature of cervical vertebrae. C2 to C6 usually have a [b]bifid[/b] (forked) spinous process. [b]C7[/b] is the [b]vertebra prominens[/b], with a long, non-bifid spinous process easily felt at the base of the neck and used as a landmark.",
+        "- The [b]atlas (C1)[/b] has [b]no body[/b] and [b]no spinous process[/b]; it is a ring of bone with anterior and posterior arches. Its large superior articular facets cradle the occipital condyles, allowing you to nod \"yes.\"",
+        "- The [b]axis (C2)[/b] has a toothlike projection, the [b]dens[/b] (odontoid process), which projects up into the ring of the atlas and acts as a pivot, allowing you to shake your head \"no.\" (Developmentally, the dens is the body of the atlas fused to the axis.)",
+        "[b]Thoracic vertebrae[/b]: medium-sized, heart-shaped bodies; long, slender spinous processes that point sharply downward. Their unique feature is [b]costal facets[/b] (or demifacets) on the bodies and transverse processes (on T1 to T10) for articulation with the ribs.",
+        "[b]Lumbar vertebrae[/b]: the largest, thickest bodies, because they bear the most weight. Short, thick, blunt spinous processes that project straight back, shaped like a hatchet. No transverse foramina and no costal facets.",
+        "[b]Sacrum[/b]: a triangular bone of 5 fused vertebrae that forms the posterior wall of the pelvis. It joins the hip bones at the [b]sacroiliac joints[/b] via its lateral auricular surfaces. Features: the [b]sacral promontory[/b] (the anterior lip of the first sacral vertebra, an obstetric landmark), [b]anterior and posterior sacral foramina[/b] (for sacral nerves and vessels), the [b]median sacral crest[/b] (fused spinous processes), the sacral canal (continuation of the vertebral canal), and the [b]sacral hiatus[/b] at its lower end.",
+        "[b]Coccyx[/b] (tailbone): a small triangular bone of usually 4 fused vertebrae, attached to the sacrum. It provides attachment for ligaments and pelvic floor muscles."
+      ],
+      "tip": "Atlas holds up the head (the globe), like the Titan Atlas, and nods yes. Axis pivots on its dens to say no.",
+      "clinical": "A hard fall onto the buttocks or a difficult childbirth can fracture or dislocate the coccyx, causing persistent pain when sitting. Physicians sometimes inject anesthetic through the sacral hiatus (a caudal epidural).",
+      "figure": {
+        "file": "m08_typical_vertebra.jpg",
+        "caption": "This is a thoracic vertebra. In the top view, find the body, the vertebral arch made of pedicles and laminae, the vertebral foramen holding the spinal cord, and the spinous and transverse processes. The side view shows a spinal nerve leaving through an intervertebral foramen and the facets for the rib heads.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 7.23, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      }
+    },
+    {
+      "heading": "The Thoracic Cage",
+      "body": [
+        "The thoracic cage (rib cage) is formed by the [b]thoracic vertebrae[/b] posteriorly, the [b]12 pairs of ribs[/b] laterally, the [b]sternum[/b] anteriorly, and the [b]costal cartilages[/b] (hyaline cartilage) that connect ribs to the sternum. It protects the heart, lungs, and some abdominal organs, supports the shoulder girdle, and moves during breathing.",
+        "[b]Sternum[/b] (breastbone): a flat bone with three parts, superior to inferior:",
+        "- [b]Manubrium[/b]: the upper, roughly triangular part. Its superior border has the [b]jugular (suprasternal) notch[/b], and it has clavicular notches where the clavicles articulate. It also attaches to the first pair of ribs.",
+        "- [b]Body[/b]: the long middle portion, which attaches to ribs 2 through 7 directly or by notches.",
+        "- [b]Xiphoid process[/b]: the small inferior tip. It is cartilage in youth and typically ossifies by about age 40 (timing varies).",
+        "The [b]sternal angle[/b] is a slight ridge where the manubrium joins the body. It lies at the level of the [b]second pair of ribs[/b], making it the starting landmark for counting ribs.",
+        "[b]Ribs[/b] are classified by how they attach anteriorly:",
+        "- [b]True ribs[/b] (vertebrosternal): pairs [b]1 through 7[/b]. Each attaches directly to the sternum by its own costal cartilage.",
+        "- [b]False ribs[/b]: pairs [b]8 through 12[/b]. They do not attach directly to the sternum. Pairs 8 to 10 (vertebrochondral) attach to the costal cartilage of the rib above, eventually joining rib 7's cartilage.",
+        "- [b]Floating ribs[/b] (vertebral): pairs [b]11 and 12[/b], a subset of the false ribs, have no anterior attachment at all.",
+        "A typical rib has a [b]head[/b] (articulates with the vertebral bodies), a [b]neck[/b], a [b]tubercle[/b] (articulates with the transverse process), and a curved [b]shaft[/b] with a [b]costal groove[/b] on its inferior border for the intercostal nerve and blood vessels."
+      ],
+      "tip": "True ribs = 7 (\"true to the sternum\"). False = 5. Floating = 2. 7 + 5 = 12 pairs.",
+      "clinical": "During CPR, hands are placed on the lower half of the sternal body, above the xiphoid process. Pressing on the xiphoid can break it off and drive it into the liver or diaphragm.",
+      "figure": {
+        "file": "m08_thoracic_cage.jpg",
+        "caption": "Find the three parts of the sternum (manubrium, body, xiphoid process), the jugular notch, and the sternal angle at the level of rib 2. Count the ribs: 1 to 7 reach the sternum by their own costal cartilages, 8 to 10 join the cartilage above, and 11 and 12 float free.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 7.32, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-4-the-thoracic-cage"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "m08_fc01",
+      "term": "Axial skeleton",
+      "definition": "80 bones: skull, auditory ossicles, hyoid, vertebral column, and thoracic cage."
+    },
+    {
+      "id": "m08_fc02",
+      "term": "Eight cranial bones",
+      "definition": "Frontal, 2 parietal, 2 temporal, occipital, sphenoid, ethmoid (PEST OF 6)."
+    },
+    {
+      "id": "m08_fc03",
+      "term": "Fourteen facial bones",
+      "definition": "2 maxillae, 2 palatine, 2 zygomatic, 2 lacrimal, 2 nasal, 2 inferior nasal conchae, vomer, mandible."
+    },
+    {
+      "id": "m08_fc04",
+      "term": "Foramen magnum",
+      "definition": "Large opening in the occipital bone through which the spinal cord joins the brain."
+    },
+    {
+      "id": "m08_fc05",
+      "term": "Occipital condyles",
+      "definition": "Rounded knobs beside the foramen magnum that articulate with the atlas."
+    },
+    {
+      "id": "m08_fc06",
+      "term": "Sella turcica",
+      "definition": "Saddle-shaped depression in the sphenoid bone that holds the pituitary gland."
+    },
+    {
+      "id": "m08_fc07",
+      "term": "Sphenoid bone",
+      "definition": "Butterfly-shaped keystone of the cranial floor; articulates with all other cranial bones."
+    },
+    {
+      "id": "m08_fc08",
+      "term": "Cribriform plate",
+      "definition": "Perforated part of the ethmoid bone through which olfactory nerves pass."
+    },
+    {
+      "id": "m08_fc09",
+      "term": "Mastoid process",
+      "definition": "Projection of the temporal bone behind the ear; attachment for neck muscles; contains air cells."
+    },
+    {
+      "id": "m08_fc10",
+      "term": "Styloid process",
+      "definition": "Slender spike on the temporal bone; anchors ligaments (including those suspending the hyoid) and muscles."
+    },
+    {
+      "id": "m08_fc11",
+      "term": "Mandibular fossa",
+      "definition": "Depression on the temporal bone that articulates with the mandible's condyle to form the TMJ."
+    },
+    {
+      "id": "m08_fc12",
+      "term": "Hard palate",
+      "definition": "Roof of the mouth; palatine processes of the maxillae (anterior) and palatine bones (posterior)."
+    },
+    {
+      "id": "m08_fc13",
+      "term": "Nasal septum",
+      "definition": "Perpendicular plate of the ethmoid (upper), vomer (lower), and septal cartilage (anterior)."
+    },
+    {
+      "id": "m08_fc14",
+      "term": "Mandible",
+      "definition": "Lower jaw; largest, strongest facial bone and the only movable skull bone apart from the ossicles."
+    },
+    {
+      "id": "m08_fc15",
+      "term": "Coronal suture",
+      "definition": "Joins the frontal bone to the parietal bones."
+    },
+    {
+      "id": "m08_fc16",
+      "term": "Sagittal suture",
+      "definition": "Joins the two parietal bones at the midline."
+    },
+    {
+      "id": "m08_fc17",
+      "term": "Lambdoid suture",
+      "definition": "Joins the parietal bones to the occipital bone."
+    },
+    {
+      "id": "m08_fc18",
+      "term": "Squamous suture",
+      "definition": "Joins each parietal bone to a temporal bone."
+    },
+    {
+      "id": "m08_fc19",
+      "term": "Anterior fontanel",
+      "definition": "Largest infant soft spot, where frontal and parietal bones meet; closes at about 18 to 24 months."
+    },
+    {
+      "id": "m08_fc20",
+      "term": "Paranasal sinuses",
+      "definition": "Air spaces in the frontal, sphenoid, ethmoid, and maxillary bones; lighten skull, add voice resonance."
+    },
+    {
+      "id": "m08_fc21",
+      "term": "Hyoid bone",
+      "definition": "U-shaped neck bone that articulates with no other bone; suspended from the styloid processes; anchors the tongue."
+    },
+    {
+      "id": "m08_fc22",
+      "term": "Vertebral counts",
+      "definition": "7 cervical, 12 thoracic, 5 lumbar, sacrum (5 fused), coccyx (about 4 fused); 26 bones in adults."
+    },
+    {
+      "id": "m08_fc23",
+      "term": "Intervertebral disc",
+      "definition": "Fibrocartilage pad between vertebral bodies: outer annulus fibrosus and inner gel-like nucleus pulposus."
+    },
+    {
+      "id": "m08_fc24",
+      "term": "Vertebral arch",
+      "definition": "Posterior part of a vertebra formed by two pedicles and two laminae; encloses the vertebral foramen with the body."
+    },
+    {
+      "id": "m08_fc25",
+      "term": "Transverse foramen",
+      "definition": "Hole in each transverse process of cervical vertebrae for the vertebral artery; unique to cervical vertebrae."
+    },
+    {
+      "id": "m08_fc26",
+      "term": "Atlas (C1)",
+      "definition": "First cervical vertebra; no body or spinous process; articulates with occipital condyles (yes nod)."
+    },
+    {
+      "id": "m08_fc27",
+      "term": "Axis (C2) and dens",
+      "definition": "Second cervical vertebra; its dens projects into the atlas as a pivot for head rotation (no motion)."
+    },
+    {
+      "id": "m08_fc28",
+      "term": "Vertebra prominens",
+      "definition": "C7; long, non-bifid spinous process palpable at the base of the neck."
+    },
+    {
+      "id": "m08_fc29",
+      "term": "Primary vs secondary curvatures",
+      "definition": "Primary (thoracic, sacral) present at birth; secondary (cervical, lumbar) develop with head holding and walking."
+    },
+    {
+      "id": "m08_fc30",
+      "term": "Kyphosis, lordosis, scoliosis",
+      "definition": "Kyphosis: exaggerated thoracic curve (hunchback). Lordosis: exaggerated lumbar curve (swayback). Scoliosis: lateral curve."
+    },
+    {
+      "id": "m08_fc31",
+      "term": "Sternal angle",
+      "definition": "Junction of manubrium and body of sternum; level of rib pair 2; landmark for counting ribs."
+    },
+    {
+      "id": "m08_fc32",
+      "term": "True, false, floating ribs",
+      "definition": "True: pairs 1 to 7, attach directly to sternum. False: 8 to 12. Floating: 11 and 12, no anterior attachment."
+    },
+    {
+      "id": "m08_fc33",
+      "term": "Parts of the sternum",
+      "definition": "Manubrium (superior), body (middle), xiphoid process (inferior)."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m08_q01",
+      "type": "multiple_choice",
+      "prompt": "Which bone is part of the axial skeleton?",
+      "choices": [
+        "Sternum",
+        "Clavicle",
+        "Scapula",
+        "Hip bone (os coxae)"
+      ],
+      "answer": 0,
+      "explanation": "The sternum belongs to the thoracic cage, which is axial. The clavicle and scapula form the pectoral girdle and the hip bones form the pelvic girdle; girdles belong to the appendicular skeleton even though they are close to the trunk."
+    },
+    {
+      "id": "m08_q02",
+      "type": "multiple_choice",
+      "prompt": "Which cranial bone contains the sella turcica, which houses the pituitary gland?",
+      "choices": [
+        "Sphenoid",
+        "Ethmoid",
+        "Occipital",
+        "Temporal"
+      ],
+      "answer": 0,
+      "explanation": "The sella turcica is a saddle-shaped depression in the body of the sphenoid. The ethmoid is a tempting choice because it sits nearby in the anterior cranial floor, but its key features are the cribriform plate and crista galli."
+    },
+    {
+      "id": "m08_q03",
+      "type": "multiple_choice",
+      "prompt": "After a car accident, a patient loses the sense of smell and has clear fluid dripping from the nose. Which bone feature was most likely fractured?",
+      "choices": [
+        "Cribriform plate of the ethmoid",
+        "Sella turcica of the sphenoid",
+        "Mastoid process of the temporal",
+        "Palatine process of the maxilla"
+      ],
+      "answer": 0,
+      "explanation": "The olfactory nerves pass through the cribriform plate, so a fracture there can sever them and allow cerebrospinal fluid to leak into the nasal cavity. The palatine process forms the roof of the mouth and is unrelated to smell."
+    },
+    {
+      "id": "m08_q04",
+      "type": "multiple_choice",
+      "prompt": "Through which opening does the spinal cord pass to connect with the brain?",
+      "choices": [
+        "Foramen magnum",
+        "Jugular foramen",
+        "Vertebral foramen of the atlas only",
+        "Optic canal"
+      ],
+      "answer": 0,
+      "explanation": "The foramen magnum in the occipital bone is where the brainstem continues as the spinal cord. The jugular foramen transmits the internal jugular vein and several cranial nerves, not the cord."
+    },
+    {
+      "id": "m08_q05",
+      "type": "multiple_choice",
+      "prompt": "Which suture joins the two parietal bones along the midline of the skull?",
+      "choices": [
+        "Sagittal",
+        "Coronal",
+        "Lambdoid",
+        "Squamous"
+      ],
+      "answer": 0,
+      "explanation": "The sagittal suture runs front to back between the parietal bones. The coronal suture runs side to side between the frontal and parietal bones, and the lambdoid joins the parietals to the occipital."
+    },
+    {
+      "id": "m08_q06",
+      "type": "multiple_choice",
+      "prompt": "Which of these bones does NOT contain a paranasal sinus?",
+      "choices": [
+        "Parietal",
+        "Frontal",
+        "Maxilla",
+        "Sphenoid"
+      ],
+      "answer": 0,
+      "explanation": "The paranasal sinuses are in the frontal, sphenoid, ethmoid, and maxillary bones, all of which surround the nasal cavity. The parietal bones form the roof of the cranium and have no sinuses."
+    },
+    {
+      "id": "m08_q07",
+      "type": "multiple_choice",
+      "prompt": "The anterior part of the hard palate is formed by:",
+      "choices": [
+        "The palatine processes of the maxillae",
+        "The palatine bones",
+        "The vomer",
+        "The inferior nasal conchae"
+      ],
+      "answer": 0,
+      "explanation": "The maxillae form the front of the hard palate; the palatine bones form the back. The palatine bones are the tempting answer because of the name, but they contribute only the posterior portion."
+    },
+    {
+      "id": "m08_q08",
+      "type": "multiple_choice",
+      "prompt": "Which bone forms the lower part of the nasal septum?",
+      "choices": [
+        "Vomer",
+        "Perpendicular plate of the ethmoid",
+        "Nasal bones",
+        "Lacrimal bones"
+      ],
+      "answer": 0,
+      "explanation": "The vomer forms the inferior part of the bony nasal septum. The perpendicular plate of the ethmoid forms the superior part, and the nasal bones form the bridge of the nose."
+    },
+    {
+      "id": "m08_q09",
+      "type": "multiple_choice",
+      "prompt": "A patient has pain and clicking in front of the ear when chewing. The joint involved is formed by the mandible and which bone feature?",
+      "choices": [
+        "Mandibular fossa of the temporal bone",
+        "Mastoid process of the temporal bone",
+        "Zygomatic process of the maxilla",
+        "Styloid process of the sphenoid"
+      ],
+      "answer": 0,
+      "explanation": "The temporomandibular joint (TMJ) is formed by the mandible's condylar process and the mandibular fossa of the temporal bone. The mastoid process lies behind the ear and is a muscle attachment site, not a joint surface."
+    },
+    {
+      "id": "m08_q10",
+      "type": "multiple_choice",
+      "prompt": "What makes the hyoid bone unique among the bones of the body?",
+      "choices": [
+        "It does not articulate with any other bone",
+        "It is the only bone formed by intramembranous ossification",
+        "It is the only bone in the neck",
+        "It is a sesamoid bone in the tongue"
+      ],
+      "answer": 0,
+      "explanation": "The hyoid is suspended from the styloid processes by ligaments and held by muscles, but it forms no joint with another bone. The cervical vertebrae are also in the neck, so it is not the only neck bone."
+    },
+    {
+      "id": "m08_q11",
+      "type": "multiple_choice",
+      "prompt": "A vertebra has a small body, a bifid spinous process, and a hole in each transverse process. Which region is it from?",
+      "choices": [
+        "Cervical",
+        "Thoracic",
+        "Lumbar",
+        "Sacral"
+      ],
+      "answer": 0,
+      "explanation": "Transverse foramina, which carry the vertebral arteries, are unique to cervical vertebrae, and bifid spinous processes are typical of C2 to C6. Thoracic vertebrae instead have costal facets for ribs."
+    },
+    {
+      "id": "m08_q12",
+      "type": "multiple_choice",
+      "prompt": "A vertebra has a heart-shaped body, a long spinous process pointing sharply downward, and facets on its body and transverse processes. Which region is it from?",
+      "choices": [
+        "Thoracic",
+        "Cervical",
+        "Lumbar",
+        "Coccygeal"
+      ],
+      "answer": 0,
+      "explanation": "Costal facets for rib articulation are the hallmark of thoracic vertebrae. Lumbar vertebrae have larger bodies and short, blunt, hatchet-shaped spinous processes that point straight back."
+    },
+    {
+      "id": "m08_q13",
+      "type": "multiple_choice",
+      "prompt": "Shaking your head \"no\" occurs mainly at the joint between:",
+      "choices": [
+        "The atlas and the dens of the axis",
+        "The occipital condyles and the atlas",
+        "C7 and T1",
+        "The axis and C3"
+      ],
+      "answer": 0,
+      "explanation": "The dens of C2 projects into the atlas and acts as a pivot for rotation. The joint between the occipital condyles and the atlas is the tempting answer, but that joint allows nodding \"yes.\""
+    },
+    {
+      "id": "m08_q14",
+      "type": "multiple_choice",
+      "prompt": "Which vertebrae have the largest, thickest bodies, and why?",
+      "choices": [
+        "Lumbar, because they bear the most body weight",
+        "Thoracic, because they support the ribs",
+        "Cervical, because they support the head",
+        "Sacral, because they are fused"
+      ],
+      "answer": 0,
+      "explanation": "Weight load increases down the column, so the lumbar vertebrae have the most massive bodies. The sacrum is large overall, but it is a fused bone, and the question is about individual vertebral bodies of the movable column."
+    },
+    {
+      "id": "m08_q15",
+      "type": "multiple_choice",
+      "prompt": "A patient has back pain shooting down the leg. Imaging shows gel-like material pushing through the outer ring of a lumbar disc. What has herniated?",
+      "choices": [
+        "The nucleus pulposus through the annulus fibrosus",
+        "The annulus fibrosus through the nucleus pulposus",
+        "The vertebral body through the lamina",
+        "The spinal cord through the intervertebral foramen"
+      ],
+      "answer": 0,
+      "explanation": "The soft nucleus pulposus at the center of the disc bulges through a torn annulus fibrosus and can press on a spinal nerve root exiting at the intervertebral foramen."
+    },
+    {
+      "id": "m08_q16",
+      "type": "multiple_choice",
+      "prompt": "A teenager's spine curves sideways into an S shape when viewed from behind. What is this condition?",
+      "choices": [
+        "Scoliosis",
+        "Kyphosis",
+        "Lordosis",
+        "Spina bifida"
+      ],
+      "answer": 0,
+      "explanation": "Scoliosis is an abnormal lateral curvature, often appearing in adolescence. Kyphosis and lordosis are exaggerations of the normal front-to-back curves in the thoracic and lumbar regions."
+    },
+    {
+      "id": "m08_q17",
+      "type": "multiple_choice",
+      "prompt": "Rib pair 9 is classified as:",
+      "choices": [
+        "False rib that attaches to the sternum indirectly through costal cartilage",
+        "True rib attached directly to the sternum",
+        "Floating rib with no anterior attachment",
+        "True rib attached to the xiphoid process"
+      ],
+      "answer": 0,
+      "explanation": "Pairs 8 to 10 are false ribs whose costal cartilages join the cartilage of the rib above rather than the sternum directly. Floating ribs are only pairs 11 and 12."
+    },
+    {
+      "id": "m08_q18",
+      "type": "multiple_choice",
+      "prompt": "A nurse wants to count ribs to locate the second intercostal space. Which landmark should she find first?",
+      "choices": [
+        "The sternal angle",
+        "The xiphoid process",
+        "The jugular notch",
+        "The vertebra prominens"
+      ],
+      "answer": 0,
+      "explanation": "The sternal angle, at the junction of the manubrium and body, lies at the level of rib pair 2, so the space just below it is the second intercostal space. The jugular notch is easy to feel, but the first rib lies hidden behind the clavicle, making it a poor starting point."
+    },
+    {
+      "id": "m08_q19",
+      "type": "true_false",
+      "prompt": "The thoracic and sacral curvatures are primary curvatures present at birth.",
+      "answer": true,
+      "explanation": "The fetal spine has a single C-shaped curve that persists as the thoracic and sacral curves. The cervical and lumbar curves are secondary and develop after birth."
+    },
+    {
+      "id": "m08_q20",
+      "type": "true_false",
+      "prompt": "The atlas (C1) has a large body that supports the weight of the skull.",
+      "answer": false,
+      "explanation": "The atlas has no body and no spinous process; it is a ring of bone with lateral masses whose superior facets hold the occipital condyles."
+    },
+    {
+      "id": "m08_q21",
+      "type": "true_false",
+      "prompt": "The mandible is the only bone of the skull, apart from the auditory ossicles, that can move freely.",
+      "answer": true,
+      "explanation": "All other skull bones are joined by immovable sutures. The mandible moves at the temporomandibular joints."
+    },
+    {
+      "id": "m08_q22",
+      "type": "ordering",
+      "prompt": "Order the regions of the vertebral column from superior to inferior.",
+      "items": [
+        "Cervical",
+        "Thoracic",
+        "Lumbar",
+        "Sacrum",
+        "Coccyx"
+      ],
+      "explanation": "Cervical (7), thoracic (12), lumbar (5), then the fused sacrum and coccyx. Mnemonic: breakfast at 7, lunch at 12, dinner at 5."
+    },
+    {
+      "id": "m08_q23",
+      "type": "ordering",
+      "prompt": "Order the parts of the sternum from superior to inferior.",
+      "items": [
+        "Manubrium",
+        "Body",
+        "Xiphoid process"
+      ],
+      "explanation": "The manubrium is at the top, with the jugular notch and clavicular notches. The body is in the middle, and the small xiphoid process forms the inferior tip."
+    },
+    {
+      "id": "m08_q24",
+      "type": "ordering",
+      "prompt": "Order the parts of a typical rib from its vertebral (posterior) end toward the sternum.",
+      "items": [
+        "Head",
+        "Neck",
+        "Tubercle",
+        "Shaft"
+      ],
+      "explanation": "The head articulates with the vertebral bodies, the short neck follows, the tubercle articulates with the transverse process of the vertebra, and the long curved shaft sweeps around toward the costal cartilage and sternum."
+    }
+  ]
+}

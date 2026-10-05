@@ -1,0 +1,424 @@
+{
+  "id": "m02_chemistry",
+  "order": 2,
+  "course": "A&P I",
+  "title": "Chemistry of Life",
+  "summary": "Atoms, bonds, water, pH, chemical reactions, and the four classes of organic molecules that build and power the body.",
+  "objectives": [
+    "Describe the structure of an atom and define atomic number, mass number, and isotope",
+    "Explain how ions form and why electrolytes matter in the body",
+    "Compare ionic, nonpolar covalent, polar covalent, and hydrogen bonds",
+    "Explain the properties of water that make it essential to life",
+    "Interpret the pH scale and explain how buffers resist pH change",
+    "Classify reactions as synthesis, decomposition, or exchange, and contrast dehydration synthesis with hydrolysis",
+    "Describe the structure and functions of carbohydrates, lipids, proteins, and nucleic acids",
+    "Describe the four levels of protein structure and what denaturation does",
+    "Explain how ATP stores and releases energy and how enzymes speed reactions"
+  ],
+  "lesson": [
+    {
+      "heading": "Atoms, Elements, and Isotopes",
+      "body": [
+        "[b]Matter[/b] is anything that has mass and takes up space. Matter is made of [b]elements[/b], substances that cannot be broken down into simpler substances by ordinary chemical means. Four elements, [b]oxygen, carbon, hydrogen, and nitrogen[/b], make up roughly 96 percent of body mass. Others, such as calcium, phosphorus, potassium, sulfur, sodium, chlorine, and magnesium, are present in smaller amounts, and trace elements such as iron and iodine are needed in tiny amounts.",
+        "An [b]atom[/b] is the smallest unit of an element that keeps its properties. Atoms contain three main subatomic particles:",
+        "- [b]Protons[/b]: positive charge, located in the nucleus.",
+        "- [b]Neutrons[/b]: no charge, located in the nucleus.",
+        "- [b]Electrons[/b]: negative charge, very little mass, located in electron shells (energy levels) around the nucleus.",
+        "The [b]atomic number[/b] is the number of protons, and it defines which element an atom is. The [b]mass number[/b] is protons plus neutrons. In a neutral atom, the number of electrons equals the number of protons.",
+        "[b]Isotopes[/b] are atoms of the same element with the same number of protons but different numbers of neutrons, so they have different mass numbers. Carbon-12 and carbon-14 are isotopes of carbon. Some isotopes are unstable and release energy or particles as they decay; these are [b]radioactive isotopes[/b] (radioisotopes). Isotopes of an element behave the same way chemically because chemistry depends on electrons, not neutrons."
+      ],
+      "tip": "Protons are Positive, Neutrons are Neutral, and electrons are the leftover negative ones. The atomic number is the element's \"ID number\": change the protons and you have a different element.",
+      "clinical": "Because the thyroid gland absorbs iodine, radioactive iodine can be used to image the thyroid or to destroy overactive or cancerous thyroid tissue. PET scans use radioactive tracers to show metabolic activity in tissues.",
+      "figure": {
+        "file": "m02_atom_models.jpg",
+        "caption": "Both drawings show a helium atom. In the bottom model, the nucleus holds two positively charged protons and two uncharged neutrons, while the two negative electrons form a cloud around it; the top model shows the same electrons as orbits, which is how electron shells are usually drawn.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 2.3, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/2-1-elements-and-atoms-the-building-blocks-of-matter"
+      }
+    },
+    {
+      "heading": "Ions, Electrolytes, and Chemical Bonds",
+      "body": [
+        "Chemical bonds form through interactions of electrons in the outermost shell (the [b]valence shell[/b]). Atoms tend to be most stable when their outer shell is full. For most small atoms in the body, a full outer shell holds 8 electrons (the [i]octet rule[/i]); the first shell holds only 2.",
+        "An [b]ion[/b] is an atom (or group of atoms) that has gained or lost electrons and therefore carries a charge. Losing electrons produces a positive ion, a [b]cation[/b] (Na⁺, K⁺, Ca²⁺). Gaining electrons produces a negative ion, an [b]anion[/b] (Cl⁻, HCO₃⁻). Substances that release ions in water are called [b]electrolytes[/b] because the solution can conduct electric current.",
+        "- [b]Ionic bond[/b]: an attraction between oppositely charged ions formed when one atom [i]transfers[/i] electrons to another. Sodium gives an electron to chlorine, producing Na⁺ and Cl⁻, which attract to form sodium chloride. Ionic compounds such as salts often dissociate (separate into ions) in water.",
+        "- [b]Covalent bond[/b]: atoms [i]share[/i] pairs of electrons. Sharing one pair makes a single bond, two pairs a double bond. Covalent bonds are the strong bonds that hold organic molecules together.",
+        "- [b]Nonpolar covalent bond[/b]: electrons are shared equally, so there are no charged ends. Examples: the bonds in H₂ and O₂, and C to H bonds in fats.",
+        "- [b]Polar covalent bond[/b]: electrons are shared unequally because one atom (often oxygen or nitrogen) pulls them more strongly. That atom becomes partially negative and the other partially positive. Water's O to H bonds are polar.",
+        "- [b]Hydrogen bond[/b]: a weak attraction between a partially positive hydrogen atom in one polar molecule (or part of a molecule) and a partially negative oxygen or nitrogen atom nearby. Hydrogen bonds are not true sharing or transfer of electrons. They are individually weak but very important in groups: they hold water molecules together, hold the two strands of DNA together, and help stabilize protein shape.",
+        "A [b]molecule[/b] is two or more atoms bonded together. A [b]compound[/b] is a molecule made of two or more [i]different[/i] elements; H₂O is both, while O₂ is a molecule but not a compound."
+      ],
+      "tip": "Ionic = \"I own it\": one atom takes the electron. Covalent = \"co-\" means together: the electrons are shared. Cations are \"pawsitive\" (cats have paws).",
+      "clinical": "Electrolytes such as Na⁺, K⁺, Ca²⁺, and Cl⁻ are needed for nerve impulses and muscle contraction. Abnormal blood potassium levels, either too high or too low, can disrupt the heart's rhythm, which is why electrolytes are monitored closely in hospital patients.",
+      "figure": {
+        "file": "m02_ionic_bond.jpg",
+        "caption": "Follow the red electron: sodium transfers its single valence electron to chlorine, leaving Na⁺ with a net positive charge and Cl⁻ with a net negative charge. The attraction between these oppositely charged ions is the ionic bond that builds the sodium chloride crystal at the bottom.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 2.8, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/2-2-chemical-bonds"
+      }
+    },
+    {
+      "heading": "Water and Its Properties",
+      "body": [
+        "Water is the most abundant compound in the body. Its unusual properties come from its [b]polarity[/b]: the oxygen end is partially negative and the hydrogen ends partially positive, so water molecules hydrogen bond to each other and to other polar or charged substances.",
+        "- [b]Excellent solvent[/b]: water dissolves ions and polar molecules, which are called [b]hydrophilic[/b] (water-loving). Nonpolar substances such as fats do not dissolve well and are [b]hydrophobic[/b]. Because so much dissolves in it, water is the medium in which most body reactions occur and in which substances are transported (blood plasma, lymph).",
+        "- [b]High heat capacity[/b]: water absorbs and releases a lot of heat with only a small change in its own temperature, which helps stabilize body temperature.",
+        "- [b]High heat of vaporization[/b]: evaporating water takes a lot of heat with it, which is why sweating cools the body efficiently.",
+        "- [b]Cohesion and lubrication[/b]: hydrogen bonds make water molecules cling together, and watery fluids such as serous fluid and synovial fluid reduce friction between surfaces.",
+        "- [b]Reactant[/b]: water participates directly in many reactions, most importantly hydrolysis.",
+        "A [b]solution[/b] has a solvent (usually water in the body) and dissolved solutes. Concentration describes how much solute is present in a given volume."
+      ],
+      "clinical": "During prolonged exercise in heat, the body can lose large amounts of water and electrolytes through sweat. Because water carries so much heat away as it evaporates, losing the ability to sweat (for example, from severe dehydration) puts a person at risk of heat stroke.",
+      "figure": {
+        "file": "m02_water_hbonds.jpg",
+        "caption": "Solid lines are the polar covalent bonds inside each water molecule; dashed lines are the weaker hydrogen bonds between molecules. Each hydrogen bond links a partially positive hydrogen to the partially negative oxygen of a neighboring molecule.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 2.11, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/2-2-chemical-bonds"
+      }
+    },
+    {
+      "heading": "Acids, Bases, pH, and Buffers",
+      "body": [
+        "An [b]acid[/b] is a substance that releases hydrogen ions (H⁺) in water. A [b]base[/b] is a substance that accepts H⁺ or releases hydroxide ions (OH⁻), which combine with H⁺. A [b]salt[/b] is a compound that dissociates into ions other than H⁺ and OH⁻; acids and bases react to form water and a salt.",
+        "The [b]pH scale[/b] measures hydrogen ion concentration and runs from 0 to 14:",
+        "- pH 7 is [b]neutral[/b] (equal H⁺ and OH⁻), as in pure water.",
+        "- Below 7 is [b]acidic[/b]: more H⁺. Lower numbers mean more acidic.",
+        "- Above 7 is [b]basic[/b] or [b]alkaline[/b]: fewer H⁺ (more OH⁻).",
+        "The scale is [b]logarithmic[/b]: each whole-number step is a tenfold change in hydrogen ion concentration. A solution at pH 4 has 10 times more H⁺ than one at pH 5, and 100 times more than one at pH 6.",
+        "Normal blood pH is about [b]7.35 to 7.45[/b], slightly alkaline. Blood pH below 7.35 is [b]acidosis[/b]; above 7.45 is [b]alkalosis[/b]. Even small changes disrupt enzymes and nerve function.",
+        "[b]Buffers[/b] are chemicals that resist changes in pH by taking up excess H⁺ when there is too much and releasing H⁺ when there is too little. The main buffer in blood is the [b]bicarbonate buffer system[/b]: carbonic acid (H₂CO₃) can release H⁺ and become bicarbonate (HCO₃⁻), and bicarbonate can accept H⁺ to become carbonic acid. Strong acids and bases dissociate completely in water; the weak acids and bases in buffer systems dissociate only partially, which is what lets them act like a sponge for H⁺."
+      ],
+      "tip": "Low pH = lots of H⁺. The number goes down as the acid goes up, because pH is roughly a count of how many decimal places the H⁺ concentration has.",
+      "clinical": "Uncontrolled diabetes can cause ketoacidosis, in which acidic ketone bodies build up and blood pH falls below 7.35. Hyperventilation blows off CO₂, which lowers carbonic acid and can cause respiratory alkalosis.",
+      "figure": {
+        "file": "m02_ph_scale.jpg",
+        "caption": "pH 7 is neutral, values toward the bottom are acidic, and values toward the top are basic. Find blood at about 7.4, just on the alkaline side, and remember that each whole-number step is a tenfold change in hydrogen ion concentration.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 2.17, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/2-4-inorganic-compounds-essential-to-human-functioning"
+      }
+    },
+    {
+      "heading": "Chemical Reactions and Energy",
+      "body": [
+        "In a chemical reaction, bonds are formed, broken, or rearranged. The starting substances are [b]reactants[/b] and the results are [b]products[/b]. [b]Energy[/b] is the capacity to do work: [i]potential energy[/i] is stored energy (such as energy stored in chemical bonds) and [i]kinetic energy[/i] is energy of motion.",
+        "Three basic types of reactions:",
+        "- [b]Synthesis[/b]: A + B → AB. Smaller parts join to form a larger molecule. Synthesis reactions build body structures and are part of [b]anabolism[/b]. They usually require energy.",
+        "- [b]Decomposition[/b]: AB → A + B. A larger molecule breaks into smaller parts, as in digestion. These are part of [b]catabolism[/b] and usually release energy.",
+        "- [b]Exchange[/b]: AB + CD → AD + CB. Parts of molecules trade partners, as when an acid and a base react.",
+        "Many reactions are [b]reversible[/b] (A + B ⇌ AB), going in either direction depending on conditions such as the amount of reactant and product.",
+        "In biology, two specific reaction types build and break the large organic molecules:",
+        "- [b]Dehydration synthesis[/b]: two building blocks are joined by removing a molecule of water (an -OH from one and an -H from the other). This builds polysaccharides, triglycerides, proteins, and nucleic acids.",
+        "- [b]Hydrolysis[/b]: a molecule of water is added to break a bond, splitting a larger molecule into smaller ones. Digestion is mostly hydrolysis.",
+        "Reaction rates increase with higher temperature, higher concentration of reactants, smaller particle size, and the presence of [b]catalysts[/b], substances that speed reactions without being consumed. In the body, the catalysts are enzymes."
+      ],
+      "tip": "\"Hydro-lysis\" means water-splitting: water goes in, the molecule comes apart. \"De-hydration\" means water comes out, and the pieces stick together. They are exact opposites.",
+      "figure": {
+        "file": "m02_dehydration_hydrolysis.jpg",
+        "caption": "In dehydration synthesis (top), an OH from one monomer and an H from the other leave as a water molecule and the monomers join. Hydrolysis (bottom) is the reverse: adding water breaks the bond and splits the molecule apart.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 2.14, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/2-4-inorganic-compounds-essential-to-human-functioning"
+      }
+    },
+    {
+      "heading": "Carbohydrates and Lipids",
+      "body": [
+        "[b]Organic molecules[/b] contain carbon and hydrogen bonded covalently. Carbon can form four covalent bonds, so it can build chains, rings, and branches. The four major classes in the body are carbohydrates, lipids, proteins, and nucleic acids. [b]Inorganic[/b] substances important in the body include water, salts, oxygen, and carbon dioxide.",
+        "[b]Carbohydrates[/b] contain carbon, hydrogen, and oxygen, typically with about twice as many hydrogen atoms as oxygen atoms. Their main role is to supply energy.",
+        "- [b]Monosaccharides[/b] (simple sugars): glucose (the main fuel of cells), fructose, galactose, and the five-carbon sugars ribose (in RNA and ATP) and deoxyribose (in DNA).",
+        "- [b]Disaccharides[/b]: two monosaccharides joined by dehydration synthesis. Sucrose (glucose + fructose), lactose (glucose + galactose), and maltose (glucose + glucose).",
+        "- [b]Polysaccharides[/b]: long chains of glucose. [b]Glycogen[/b] is the storage form in animals (in liver and skeletal muscle). Plants store starch and build cell walls of cellulose, which humans cannot digest but which provides dietary fiber.",
+        "[b]Lipids[/b] are a diverse group that are mostly nonpolar and therefore insoluble in water. They contain C, H, and O, with far less oxygen than carbohydrates.",
+        "- [b]Triglycerides[/b] (fats): one glycerol plus three fatty acids. They store energy, insulate, and cushion organs. Gram for gram they hold more than twice the energy of carbohydrates. [b]Saturated[/b] fatty acids have only single bonds between carbons (packed with hydrogen) and tend to be solid at room temperature. [b]Unsaturated[/b] fatty acids have one or more double bonds, which create kinks, and tend to be liquid (oils).",
+        "- [b]Phospholipids[/b]: glycerol, two fatty acids, and a phosphate-containing group. The phosphate head is polar (hydrophilic) and the fatty acid tails are nonpolar (hydrophobic). This makes them [b]amphipathic[/b], and it is why they form the double layer of cell membranes.",
+        "- [b]Steroids[/b]: four connected carbon rings. Cholesterol is part of cell membranes and is the starting material for steroid hormones (estrogen, testosterone, cortisol) and vitamin D.",
+        "- [b]Eicosanoids[/b], such as prostaglandins, are derived from fatty acids and act as local signals in inflammation and pain."
+      ],
+      "clinical": "People with lactose intolerance make too little lactase, the enzyme that hydrolyzes lactose. Undigested lactose passes to the large intestine, where bacteria ferment it and cause gas, cramping, and diarrhea.",
+      "figure": {
+        "file": "m02_lipids.jpg",
+        "caption": "In the phospholipid, the phosphate-containing head is polar and the two fatty acid tails are nonpolar, which is what makes it amphipathic. Below it, cholesterol shows the four connected carbon rings of a steroid, and prostaglandins are an example of eicosanoids.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 2.23, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/2-5-organic-compounds-essential-to-human-functioning"
+      }
+    },
+    {
+      "heading": "Proteins and Protein Structure",
+      "body": [
+        "[b]Proteins[/b] are the most structurally and functionally diverse organic molecules. They contain C, H, O, and N (and often sulfur). Their functions include structure (collagen, keratin), enzymes, transport (hemoglobin), movement (actin and myosin in muscle), defense (antibodies), signaling (some hormones such as insulin), and membrane receptors and channels.",
+        "Proteins are polymers of [b]amino acids[/b]. There are 20 types of amino acids, each with an amino group, a carboxyl (acid) group, and a variable side chain called the R group, which gives each amino acid its properties. Amino acids are joined by [b]peptide bonds[/b] formed by dehydration synthesis. A chain of many amino acids is a polypeptide.",
+        "Protein structure has four levels:",
+        "- [b]Primary structure[/b]: the specific sequence of amino acids in the chain, determined by genes.",
+        "- [b]Secondary structure[/b]: the chain coils into an [b]alpha helix[/b] or folds into a [b]beta pleated sheet[/b], held by hydrogen bonds along the backbone.",
+        "- [b]Tertiary structure[/b]: the overall three-dimensional folding of a single polypeptide, stabilized by interactions between R groups (including hydrogen bonds, ionic attractions, hydrophobic interactions, and disulfide bridges).",
+        "- [b]Quaternary structure[/b]: two or more polypeptide chains joined into one functional protein. Hemoglobin, with four chains, is the classic example. Not every protein has this level.",
+        "A protein's function depends on its shape. [b]Denaturation[/b] is the loss of a protein's three-dimensional shape when its weaker bonds are disrupted by heat, extreme pH, or certain chemicals. A denatured protein usually loses its function. Denaturation generally does not break peptide bonds, so the primary structure remains."
+      ],
+      "tip": "Primary = the order of beads on a string. Secondary = the string coils or pleats. Tertiary = the whole coil folds into a blob. Quaternary = several blobs team up.",
+      "clinical": "A very high fever is dangerous partly because heat can begin to denature proteins, including enzymes in the brain. Cooking an egg is denaturation you can see: the clear albumin protein turns white and solid and does not go back.",
+      "figure": {
+        "file": "m02_protein_structure.jpg",
+        "caption": "Trace the four levels: the primary structure is the amino acid sequence, the secondary structure is an alpha helix or pleated sheet held by hydrogen bonds (dotted lines), the tertiary structure is the folded shape of one chain, and the quaternary structure is several chains together, as in hemoglobin.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 2.26, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/2-5-organic-compounds-essential-to-human-functioning"
+      }
+    },
+    {
+      "heading": "Nucleic Acids and ATP",
+      "body": [
+        "[b]Nucleic acids[/b] store and express genetic information. They are polymers of [b]nucleotides[/b], each made of three parts: a five-carbon sugar, a phosphate group, and a nitrogenous base.",
+        "- [b]DNA[/b] (deoxyribonucleic acid): sugar is deoxyribose; bases are adenine (A), thymine (T), guanine (G), and cytosine (C). DNA is double-stranded, twisted into a [b]double helix[/b], and the strands are held together by hydrogen bonds between complementary bases: A with T and G with C. DNA holds the genetic instructions and is found mainly in the nucleus.",
+        "- [b]RNA[/b] (ribonucleic acid): sugar is ribose; bases are A, G, C, and [b]uracil (U)[/b] instead of thymine. RNA is usually single-stranded and carries out the instructions in DNA during protein synthesis.",
+        "[b]ATP[/b] (adenosine triphosphate) is a modified nucleotide: adenine, ribose, and three phosphate groups. It is the cell's immediately usable energy source. When the bond to the last phosphate is broken by hydrolysis, energy is released, and ATP becomes [b]ADP[/b] (adenosine diphosphate) plus an inorganic phosphate. Cells use that energy for muscle contraction, active transport, and building molecules. ATP is regenerated from ADP and phosphate using energy released by breaking down nutrients such as glucose, a process covered in the metabolism module."
+      ],
+      "tip": "A and T are straight-line letters and pair together; G and C are curvy letters and pair together. In RNA, U takes T's place: \"U replaces T\".",
+      "clinical": "Some antiviral and anticancer drugs are nucleotide look-alikes. Cells or viruses incorporate them into growing DNA or RNA chains, which stops the chain from being completed.",
+      "figure": {
+        "file": "m02_atp.jpg",
+        "caption": "ATP is adenine plus ribose (together called adenosine) plus three phosphate groups. The red lines mark the bonds between phosphates; removing the last phosphate releases energy and leaves ADP.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 2.30, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/2-5-organic-compounds-essential-to-human-functioning"
+      }
+    },
+    {
+      "heading": "Enzymes",
+      "body": [
+        "[b]Enzymes[/b] are biological catalysts, usually proteins, that speed up chemical reactions without being used up. They work by lowering the [b]activation energy[/b], the energy needed to start a reaction, so reactions happen quickly at body temperature.",
+        "Each enzyme is [b]specific[/b]: it acts on a particular substrate (the molecule it works on). The substrate fits into a region of the enzyme called the [b]active site[/b], forming an enzyme-substrate complex. The reaction occurs, the product is released, and the unchanged enzyme can be used again.",
+        "Enzyme names often end in [b]-ase[/b] and are often named for their substrate: lactase breaks down lactose, lipase breaks down lipids, and protease breaks down proteins.",
+        "Because enzymes are proteins, anything that changes their shape (heat, extreme pH) can denature them and stop them working. Many enzymes also need helpers called cofactors or coenzymes. These details are covered more fully in the metabolism module."
+      ],
+      "tip": "Lock and key: the substrate is the key, the active site is the lock. Only the right key fits, and the lock is not used up after it opens.",
+      "figure": {
+        "file": "m02_enzyme_steps.jpg",
+        "caption": "The substrates fit the enzyme's active sites, react to form a product, and the product detaches. Notice in the last panel that the enzyme is unchanged and ready to be used again.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 2.27, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/2-5-organic-compounds-essential-to-human-functioning"
+      }
+    }
+  ],
+  "flashcards": [
+    { "id": "m02_fc01", "term": "Element", "definition": "A substance that cannot be broken down into simpler substances by ordinary chemical means. O, C, H, and N make up about 96 percent of body mass." },
+    { "id": "m02_fc02", "term": "Atomic number", "definition": "The number of protons in an atom's nucleus. It identifies the element." },
+    { "id": "m02_fc03", "term": "Mass number", "definition": "The number of protons plus neutrons in an atom's nucleus." },
+    { "id": "m02_fc04", "term": "Isotope", "definition": "Atoms of the same element with the same number of protons but different numbers of neutrons." },
+    { "id": "m02_fc05", "term": "Radioisotope", "definition": "An unstable isotope that decays and emits radiation. Used in medical imaging and treatments such as radioactive iodine for the thyroid." },
+    { "id": "m02_fc06", "term": "Ion", "definition": "An atom or group of atoms that has gained or lost electrons and carries an electrical charge." },
+    { "id": "m02_fc07", "term": "Cation / anion", "definition": "Cation: positively charged ion (lost electrons), such as Na⁺. Anion: negatively charged ion (gained electrons), such as Cl⁻." },
+    { "id": "m02_fc08", "term": "Electrolyte", "definition": "A substance that releases ions in water, allowing the solution to conduct electric current. Examples: NaCl, KCl." },
+    { "id": "m02_fc09", "term": "Ionic bond", "definition": "Attraction between oppositely charged ions formed when electrons are transferred from one atom to another. Example: sodium chloride." },
+    { "id": "m02_fc10", "term": "Nonpolar covalent bond", "definition": "A bond in which electrons are shared equally between atoms, so there are no charged ends." },
+    { "id": "m02_fc11", "term": "Polar covalent bond", "definition": "A bond in which electrons are shared unequally, giving one atom a partial negative charge and the other a partial positive charge. Example: O to H in water." },
+    { "id": "m02_fc12", "term": "Hydrogen bond", "definition": "A weak attraction between a partially positive hydrogen and a partially negative O or N atom. Holds water molecules together, DNA strands together, and stabilizes protein shape." },
+    { "id": "m02_fc13", "term": "Hydrophilic / hydrophobic", "definition": "Hydrophilic: water-loving, polar or charged, dissolves in water. Hydrophobic: water-fearing, nonpolar, does not dissolve in water." },
+    { "id": "m02_fc14", "term": "High heat capacity of water", "definition": "Water absorbs or releases a lot of heat with little change in its own temperature, helping stabilize body temperature." },
+    { "id": "m02_fc15", "term": "Acid / base", "definition": "Acid: releases H⁺ in water. Base: accepts H⁺ or releases OH⁻." },
+    { "id": "m02_fc16", "term": "pH scale", "definition": "A 0 to 14 logarithmic scale of hydrogen ion concentration. 7 is neutral, below 7 acidic, above 7 basic. Each unit is a tenfold change." },
+    { "id": "m02_fc17", "term": "Normal blood pH", "definition": "About 7.35 to 7.45. Below 7.35 is acidosis; above 7.45 is alkalosis." },
+    { "id": "m02_fc18", "term": "Buffer", "definition": "A chemical system that resists pH change by taking up or releasing H⁺. Main blood buffer: carbonic acid and bicarbonate." },
+    { "id": "m02_fc19", "term": "Synthesis reaction", "definition": "A + B → AB. Smaller molecules join to form a larger one. Part of anabolism; usually requires energy." },
+    { "id": "m02_fc20", "term": "Decomposition reaction", "definition": "AB → A + B. A larger molecule breaks into smaller ones. Part of catabolism; usually releases energy." },
+    { "id": "m02_fc21", "term": "Exchange reaction", "definition": "AB + CD → AD + CB. Parts of molecules trade partners." },
+    { "id": "m02_fc22", "term": "Dehydration synthesis", "definition": "Joining two molecules by removing a molecule of water. Builds polysaccharides, fats, proteins, and nucleic acids." },
+    { "id": "m02_fc23", "term": "Hydrolysis", "definition": "Breaking a bond by adding a molecule of water. The basis of digestion and of ATP breakdown." },
+    { "id": "m02_fc24", "term": "Monosaccharide", "definition": "A simple sugar, the building block of carbohydrates. Examples: glucose, fructose, galactose, ribose, deoxyribose." },
+    { "id": "m02_fc25", "term": "Glycogen", "definition": "The storage polysaccharide of animals, a branched chain of glucose stored mainly in the liver and skeletal muscle." },
+    { "id": "m02_fc26", "term": "Triglyceride", "definition": "A lipid made of one glycerol and three fatty acids. The body's main form of stored energy." },
+    { "id": "m02_fc27", "term": "Saturated vs unsaturated fatty acid", "definition": "Saturated: only single C to C bonds, solid at room temperature. Unsaturated: one or more C to C double bonds, kinked, liquid at room temperature." },
+    { "id": "m02_fc28", "term": "Phospholipid", "definition": "Glycerol, two fatty acids, and a phosphate group. Has a hydrophilic head and hydrophobic tails; forms the cell membrane bilayer." },
+    { "id": "m02_fc29", "term": "Steroid", "definition": "A lipid with four connected carbon rings. Examples: cholesterol, estrogen, testosterone, cortisol." },
+    { "id": "m02_fc30", "term": "Peptide bond", "definition": "The covalent bond joining two amino acids, formed by dehydration synthesis." },
+    { "id": "m02_fc31", "term": "Levels of protein structure", "definition": "Primary: amino acid sequence. Secondary: alpha helix or beta sheet. Tertiary: overall 3D fold of one chain. Quaternary: two or more chains combined." },
+    { "id": "m02_fc32", "term": "Denaturation", "definition": "Loss of a protein's 3D shape (and usually its function) due to heat, extreme pH, or chemicals. Primary structure stays intact." },
+    { "id": "m02_fc33", "term": "Nucleotide", "definition": "The building block of nucleic acids: a five-carbon sugar, a phosphate group, and a nitrogenous base." },
+    { "id": "m02_fc34", "term": "ATP", "definition": "Adenosine triphosphate: adenine, ribose, and three phosphates. Hydrolysis of the last phosphate bond releases usable energy, forming ADP + phosphate." },
+    { "id": "m02_fc35", "term": "Activation energy", "definition": "The energy needed to start a chemical reaction. Enzymes lower it." }
+  ],
+  "quiz": [
+    {
+      "id": "m02_q01",
+      "type": "multiple_choice",
+      "prompt": "Carbon-12 and carbon-14 are isotopes. How do they differ?",
+      "choices": ["Number of neutrons", "Number of protons", "Number of electrons in a neutral atom", "Atomic number"],
+      "answer": 0,
+      "explanation": "Isotopes have the same number of protons (so the same atomic number and the same element) but different numbers of neutrons, which changes the mass number. If the number of protons changed, it would be a different element, not an isotope."
+    },
+    {
+      "id": "m02_q02",
+      "type": "multiple_choice",
+      "prompt": "An atom has 11 protons, 12 neutrons, and 11 electrons. What is its mass number?",
+      "choices": ["23", "11", "12", "34"],
+      "answer": 0,
+      "explanation": "Mass number is protons plus neutrons: 11 + 12 = 23. Electrons are not counted because their mass is negligible. 11 is the atomic number, the most common mix-up."
+    },
+    {
+      "id": "m02_q03",
+      "type": "multiple_choice",
+      "prompt": "When a sodium atom loses one electron, it becomes:",
+      "choices": ["A cation with a +1 charge", "An anion with a -1 charge", "An isotope of sodium", "A neutral molecule"],
+      "answer": 0,
+      "explanation": "Losing a negatively charged electron leaves one more proton than electrons, so the atom becomes a positive ion, a cation (Na⁺). Students sometimes think losing something makes it negative, but losing negative charge makes the atom more positive."
+    },
+    {
+      "id": "m02_q04",
+      "type": "multiple_choice",
+      "prompt": "What type of bond holds the two strands of a DNA double helix together?",
+      "choices": ["Hydrogen bonds", "Ionic bonds", "Peptide bonds", "Nonpolar covalent bonds"],
+      "answer": 0,
+      "explanation": "Hydrogen bonds between complementary bases (A with T, G with C) hold the strands together. They are weak individually, which allows the strands to separate during replication. Covalent bonds are tempting because they are the strong bonds within each strand, but they do not join the two strands."
+    },
+    {
+      "id": "m02_q05",
+      "type": "multiple_choice",
+      "prompt": "In a water molecule, the oxygen atom has a partial negative charge because:",
+      "choices": ["Oxygen attracts the shared electrons more strongly than hydrogen does", "Oxygen has gained an electron from each hydrogen", "Oxygen has more neutrons than hydrogen", "Water molecules form ionic bonds with each other"],
+      "answer": 0,
+      "explanation": "Water's bonds are polar covalent: electrons are shared, but unequally, spending more time near oxygen. The tempting wrong answer says oxygen gained electrons, but that would be electron transfer and an ionic bond, which is not what happens in water."
+    },
+    {
+      "id": "m02_q06",
+      "type": "true_false",
+      "prompt": "Hydrogen bonds are stronger than covalent bonds.",
+      "answer": false,
+      "explanation": "Hydrogen bonds are weak attractions, much weaker than covalent bonds. Their importance comes from their large numbers, as in water, DNA, and folded proteins. Covalent bonds are the strong bonds that hold molecules together."
+    },
+    {
+      "id": "m02_q07",
+      "type": "multiple_choice",
+      "prompt": "Which property of water best explains why sweating is an effective way to cool the body?",
+      "choices": ["High heat of vaporization", "Ability to dissolve salts", "Role in hydrolysis reactions", "Low density as ice"],
+      "answer": 0,
+      "explanation": "Evaporating water absorbs a large amount of heat from the skin, so sweat carries heat away as it evaporates. High heat capacity is related but describes resisting temperature change, not cooling by evaporation. Being a good solvent explains why sweat contains salts, not why it cools."
+    },
+    {
+      "id": "m02_q08",
+      "type": "multiple_choice",
+      "prompt": "Solution A has a pH of 3 and solution B has a pH of 5. Compared with solution B, solution A has:",
+      "choices": ["100 times more hydrogen ions", "2 times more hydrogen ions", "100 times fewer hydrogen ions", "20 times more hydrogen ions"],
+      "answer": 0,
+      "explanation": "The pH scale is logarithmic, so each unit is a tenfold change. Two units apart means 10 × 10 = 100 times different. The lower pH is more acidic, so A has more H⁺. Answering 2 times treats the scale as linear, which is the classic error."
+    },
+    {
+      "id": "m02_q09",
+      "type": "multiple_choice",
+      "prompt": "A patient's arterial blood pH is 7.30. This condition is called:",
+      "choices": ["Acidosis", "Alkalosis", "Neutral pH", "Normal blood pH"],
+      "answer": 0,
+      "explanation": "Normal blood pH is 7.35 to 7.45. A value of 7.30 is below that range, which is acidosis. It is tempting to think 7.30 is basic because it is above 7, but clinically the reference point is the normal blood range, not neutral water."
+    },
+    {
+      "id": "m02_q10",
+      "type": "multiple_choice",
+      "prompt": "What does a buffer do?",
+      "choices": ["Resists changes in pH by taking up or releasing H⁺", "Raises the pH of any solution to 7", "Speeds up chemical reactions by lowering activation energy", "Converts acids permanently into salts"],
+      "answer": 0,
+      "explanation": "Buffers act like sponges for H⁺, absorbing excess when pH falls and releasing it when pH rises, keeping pH within a range. They do not force pH to exactly 7; blood is buffered near 7.4. Lowering activation energy describes enzymes, not buffers."
+    },
+    {
+      "id": "m02_q11",
+      "type": "multiple_choice",
+      "prompt": "During digestion, a disaccharide is split into two monosaccharides when a water molecule is added. This reaction is:",
+      "choices": ["Hydrolysis", "Dehydration synthesis", "An exchange reaction", "A synthesis reaction"],
+      "answer": 0,
+      "explanation": "Adding water to break a bond is hydrolysis, a decomposition reaction. Dehydration synthesis is the reverse, removing water to join molecules, and it is the most common mix-up because both names involve water."
+    },
+    {
+      "id": "m02_q12",
+      "type": "true_false",
+      "prompt": "Dehydration synthesis releases a molecule of water each time two building blocks are joined.",
+      "answer": true,
+      "explanation": "An -OH from one molecule and an -H from the other are removed and form water, and the two building blocks become covalently joined. This is how amino acids, monosaccharides, and nucleotides are linked into polymers."
+    },
+    {
+      "id": "m02_q13",
+      "type": "multiple_choice",
+      "prompt": "The reaction AB + CD → AD + CB is an example of a(n):",
+      "choices": ["Exchange reaction", "Synthesis reaction", "Decomposition reaction", "Hydrolysis reaction"],
+      "answer": 0,
+      "explanation": "In an exchange reaction, parts of the reactants trade partners. A synthesis reaction would combine parts into one product, and a decomposition reaction would break one reactant into parts."
+    },
+    {
+      "id": "m02_q14",
+      "type": "multiple_choice",
+      "prompt": "Which molecule is the storage form of glucose in human liver and muscle?",
+      "choices": ["Glycogen", "Starch", "Cellulose", "Triglyceride"],
+      "answer": 0,
+      "explanation": "Animals store glucose as glycogen, a highly branched polysaccharide. Starch is the plant storage form and cellulose is a plant structural polysaccharide. Triglycerides store energy too, but they are lipids, not stored glucose."
+    },
+    {
+      "id": "m02_q15",
+      "type": "multiple_choice",
+      "prompt": "Why do phospholipids form a double layer in water?",
+      "choices": ["They have hydrophilic heads and hydrophobic tails", "They are completely hydrophobic", "They form ionic bonds with water", "They are made of four carbon rings"],
+      "answer": 0,
+      "explanation": "Phospholipids are amphipathic: the phosphate heads face the watery fluid on both sides, while the nonpolar fatty acid tails hide from water in the middle. If they were completely hydrophobic, like triglycerides, they would clump into droplets rather than a bilayer. Four carbon rings describes steroids."
+    },
+    {
+      "id": "m02_q16",
+      "type": "multiple_choice",
+      "prompt": "Cholesterol is classified as which type of molecule?",
+      "choices": ["Steroid", "Triglyceride", "Phospholipid", "Polysaccharide"],
+      "answer": 0,
+      "explanation": "Cholesterol has the four-ring structure that defines steroids and is the precursor for steroid hormones and vitamin D. It is a lipid like triglycerides and phospholipids, but its structure has no glycerol or fatty acid chains."
+    },
+    {
+      "id": "m02_q17",
+      "type": "ordering",
+      "prompt": "Put the levels of protein structure in order from simplest to most complex.",
+      "items": ["Primary: amino acid sequence", "Secondary: alpha helix or beta pleated sheet", "Tertiary: overall 3D fold of one chain", "Quaternary: multiple polypeptide chains combined"],
+      "explanation": "Each level builds on the last: the sequence determines how the chain coils and pleats, those coils fold into the overall 3D shape, and in some proteins several folded chains join. Not every protein reaches quaternary structure; it requires more than one chain."
+    },
+    {
+      "id": "m02_q18",
+      "type": "multiple_choice",
+      "prompt": "A patient runs a fever of 42 °C (107.6 °F) and enzymes in the brain stop working properly. The most likely reason is that the heat:",
+      "choices": ["Changed the enzymes' three-dimensional shape", "Broke the peptide bonds between amino acids", "Changed the sequence of amino acids", "Added extra substrate to the active sites"],
+      "answer": 0,
+      "explanation": "Heat disrupts the weaker bonds (such as hydrogen bonds) that maintain secondary and tertiary structure, so the active site loses its shape: denaturation. Denaturation generally leaves peptide bonds and the amino acid sequence intact, which is why those tempting choices are wrong."
+    },
+    {
+      "id": "m02_q19",
+      "type": "multiple_choice",
+      "prompt": "Which feature is found in RNA but not in DNA?",
+      "choices": ["Uracil", "Thymine", "Deoxyribose", "A double helix"],
+      "answer": 0,
+      "explanation": "RNA contains uracil in place of thymine and uses ribose as its sugar. Thymine, deoxyribose, and the double helix are all features of DNA. Both contain adenine, guanine, and cytosine."
+    },
+    {
+      "id": "m02_q20",
+      "type": "multiple_choice",
+      "prompt": "In DNA, a strand with the base sequence A-T-G-C pairs with which complementary sequence?",
+      "choices": ["T-A-C-G", "A-T-G-C", "U-A-C-G", "G-C-A-T"],
+      "answer": 0,
+      "explanation": "A pairs with T and G pairs with C, so A-T-G-C pairs with T-A-C-G. U-A-C-G is tempting, but uracil appears only in RNA; it would be the RNA complement, not the DNA complement."
+    },
+    {
+      "id": "m02_q21",
+      "type": "true_false",
+      "prompt": "Energy for cell work is released when ATP is hydrolyzed to ADP and inorganic phosphate.",
+      "answer": true,
+      "explanation": "Breaking the bond to the terminal phosphate by hydrolysis releases energy the cell can use. The cell then rebuilds ATP from ADP and phosphate using energy from nutrient breakdown."
+    },
+    {
+      "id": "m02_q22",
+      "type": "multiple_choice",
+      "prompt": "Enzymes speed up chemical reactions by:",
+      "choices": ["Lowering the activation energy", "Raising body temperature", "Being consumed as reactants", "Increasing the activation energy"],
+      "answer": 0,
+      "explanation": "Enzymes lower the energy needed to start a reaction, so it can happen quickly at body temperature. They are not consumed and can be reused. Raising temperature does speed reactions, but that is not how enzymes work."
+    },
+    {
+      "id": "m02_q23",
+      "type": "ordering",
+      "prompt": "Put these in order from smallest to largest.",
+      "items": ["Proton", "Atom", "Amino acid", "Polypeptide", "Protein with quaternary structure"],
+      "explanation": "A proton is a subatomic particle inside the atom's nucleus. Atoms bond into molecules such as amino acids, amino acids link into a polypeptide chain, and two or more polypeptides combine into a protein with quaternary structure."
+    },
+    {
+      "id": "m02_q24",
+      "type": "ordering",
+      "prompt": "Put these carbohydrates in order from smallest to largest.",
+      "items": ["Glucose", "Sucrose", "Glycogen"],
+      "explanation": "Glucose is a monosaccharide, sucrose is a disaccharide (glucose plus fructose), and glycogen is a polysaccharide made of many glucose units. Each larger one is built by dehydration synthesis."
+    }
+  ]
+}

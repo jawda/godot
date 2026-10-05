@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BruteBossStats" load_steps=2 format=3 uid="uid://c0brutestats01"]
+
+[ext_resource type="Script" path="res://enemies/brute_boss/brute_boss_stats.gd" id="1_stats"]
+
+[resource]
+script = ExtResource("1_stats")
+max_health = 600
+move_speed = 2.4
+turn_speed = 3.0
+slam_damage = 45
+sweep_damage = 30
+slam_knockback = 9.0
+sweep_knockback = 5.0
+hurt_threshold = 40
+attack_cooldown = 1.2
+aggro_radius = 14.0
+attack_radius = 2.6

@@ -1,0 +1,637 @@
+{
+  "id": "m13_nervous_tissue",
+  "order": 13,
+  "course": "A&P I",
+  "title": "Nervous Tissue and Neurophysiology",
+  "summary": "Neurons, neuroglia, membrane potentials, action potentials, synapses, and reflex arcs.",
+  "objectives": [
+    "Describe the structural and functional divisions of the nervous system",
+    "Identify the parts of a neuron and classify neurons by structure and by function",
+    "Name the six types of neuroglia and state where each is found and what it does",
+    "Explain how myelin forms and why it speeds conduction",
+    "Explain why the resting membrane potential is about -70 mV",
+    "Compare graded potentials with action potentials",
+    "Sequence the phases of an action potential and the ion channels responsible for each",
+    "Describe the events of synaptic transmission and the roles of major neurotransmitters",
+    "Distinguish EPSPs from IPSPs and spatial from temporal summation",
+    "List the five components of a reflex arc in order"
+  ],
+  "lesson": [
+    {
+      "heading": "Organization of the Nervous System",
+      "body": [
+        "The nervous system has three overlapping jobs: [b]sensory[/b] (gathering information about changes inside and outside the body), [b]integrative[/b] (processing that information and deciding on a response), and [b]motor[/b] (carrying out the response through muscles and glands, which are called [i]effectors[/i]).",
+        "[b]Structural divisions[/b]:",
+        "- [b]Central nervous system (CNS)[/b]: the brain and spinal cord. This is where integration happens.",
+        "- [b]Peripheral nervous system (PNS)[/b]: everything outside the CNS, mainly the 12 pairs of cranial nerves and 31 pairs of spinal nerves, plus ganglia and sensory receptors.",
+        "[b]Functional divisions of the PNS[/b]:",
+        "- [b]Sensory (afferent) division[/b]: carries signals [i]toward[/i] the CNS from receptors.",
+        "- [b]Motor (efferent) division[/b]: carries signals [i]away[/i] from the CNS to effectors.",
+        "The motor division splits again. The [b]somatic nervous system[/b] controls skeletal muscle and is usually voluntary. The [b]autonomic nervous system (ANS)[/b] controls smooth muscle, cardiac muscle, and glands and is involuntary. The ANS has a [b]sympathetic[/b] division ('fight or flight') and a [b]parasympathetic[/b] division ('rest and digest'). OpenStax also describes an [b]enteric nervous system[/b] in the wall of the digestive tract; Hole's treats it more briefly.",
+        "Two pairs of terms help with anatomy: a cluster of neuron cell bodies is a [b]nucleus[/b] in the CNS but a [b]ganglion[/b] in the PNS, and a bundle of axons is a [b]tract[/b] in the CNS but a [b]nerve[/b] in the PNS."
+      ],
+      "tip": "Afferent Arrives at the CNS; Efferent Exits the CNS. SAME: Sensory = Afferent, Motor = Efferent.",
+      "figure": {
+        "file": "m13_cns_pns.jpg",
+        "caption": "The brain and spinal cord form the CNS; everything branching out from them, the nerves and ganglia, is the PNS. Notice how the spinal nerves leave the cord in pairs all the way down.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 12.2, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-1-basic-structure-and-function-of-the-nervous-system"
+      }
+    },
+    {
+      "heading": "Neuron Structure",
+      "body": [
+        "A [b]neuron[/b] is the excitable cell that carries electrical signals. Mature neurons are [i]amitotic[/i]: they generally do not divide, which is why lost neurons are hard to replace. They have a very high metabolic rate and depend on a constant supply of oxygen and glucose.",
+        "- [b]Cell body (soma)[/b]: contains the nucleus and most organelles. It is packed with [b]chromatophilic substance (Nissl bodies)[/b], which is rough endoplasmic reticulum, reflecting heavy protein synthesis. [b]Neurofibrils[/b] (neurofilaments) give structural support.",
+        "- [b]Dendrites[/b]: short, highly branched processes that [i]receive[/i] input and carry it toward the cell body. A neuron may have many.",
+        "- [b]Axon[/b]: a single process that carries impulses [i]away[/i] from the cell body. It arises at a cone-shaped [b]axon hillock[/b]; the region just beyond it, the [b]initial segment[/b], is the [b]trigger zone[/b] where action potentials usually start because it has a high density of voltage-gated Na⁺ channels.",
+        "- [b]Axon collaterals[/b]: side branches of the axon.",
+        "- [b]Axon terminals (synaptic knobs or terminal boutons)[/b]: the endings that store neurotransmitter in [b]synaptic vesicles[/b].",
+        "Because the axon has no rough ER, proteins made in the cell body must be shipped down it by [b]axonal transport[/b] along microtubules. Some viruses and toxins (rabies, tetanus toxin) exploit the reverse direction to travel from the periphery to the CNS."
+      ],
+      "tip": "Dendrites Deliver to the cell body; Axons carry signals Away.",
+      "figure": {
+        "file": "m13_neuron_parts.jpg",
+        "caption": "Follow the signal from the branched dendrites into the cell body, then out along the single axon to its terminals. The myelin sheath is interrupted by nodes of Ranvier; in the CNS, as here, an oligodendrocyte makes the myelin.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 12.8, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-2-nervous-tissue"
+      }
+    },
+    {
+      "heading": "Classifying Neurons",
+      "body": [
+        "[b]By structure[/b] (number of processes extending from the cell body):",
+        "- [b]Multipolar[/b]: many dendrites and one axon. The most common type; includes nearly all motor neurons and interneurons, mostly in the CNS.",
+        "- [b]Bipolar[/b]: one dendrite and one axon on opposite ends. Rare; found in special sense organs such as the retina, olfactory epithelium, and inner ear.",
+        "- [b]Unipolar (pseudounipolar)[/b]: a single short process that splits into two branches, one running to the periphery and one into the CNS. Most sensory neurons are this type, and their cell bodies sit in [b]dorsal root ganglia[/b] or cranial nerve ganglia.",
+        "OpenStax also lists [b]anaxonic[/b] neurons, which have no distinguishable axon (found in the brain and retina). Hole's focuses on the first three.",
+        "[b]By function[/b] (direction of signal):",
+        "- [b]Sensory (afferent) neurons[/b]: carry impulses from receptors to the CNS. Most are unipolar.",
+        "- [b]Interneurons (association neurons)[/b]: lie entirely within the CNS and link sensory and motor neurons. They are by far the most numerous neurons and do the integrating. Most are multipolar.",
+        "- [b]Motor (efferent) neurons[/b]: carry impulses from the CNS to effectors. They are multipolar."
+      ],
+      "tip": "Structure and function line up: most sensory neurons are unipolar, while interneurons and motor neurons are multipolar.",
+      "figure": {
+        "file": "m13_neuron_shapes.jpg",
+        "caption": "Count the processes leaving each cell body: one for unipolar, two for bipolar, many for multipolar. In the unipolar neuron the single process splits, with one branch heading to the periphery and one into the CNS.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 12.9, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-2-nervous-tissue"
+      }
+    },
+    {
+      "heading": "Neuroglia, Myelin, and Regeneration",
+      "body": [
+        "[b]Neuroglia (glial cells)[/b] support, protect, and nourish neurons. They are smaller than neurons, far more numerous, and unlike neurons they can still divide.",
+        "[b]Neuroglia of the CNS[/b] (four types):",
+        "- [b]Astrocytes[/b]: star-shaped and the most abundant. They anchor neurons to capillaries, help form the [b]blood-brain barrier[/b], take up excess K⁺ and neurotransmitter, and form scar tissue after injury.",
+        "- [b]Oligodendrocytes[/b]: form myelin in the CNS. One oligodendrocyte extends several processes and can myelinate segments of many axons.",
+        "- [b]Microglia[/b]: small phagocytes that engulf microbes and debris. They are the immune defenders of the CNS.",
+        "- [b]Ependymal cells[/b]: cuboidal to columnar cells, often ciliated, that line the ventricles of the brain and the central canal of the spinal cord. They help produce and circulate cerebrospinal fluid.",
+        "[b]Neuroglia of the PNS[/b] (two types):",
+        "- [b]Schwann cells[/b]: form myelin in the PNS. Each Schwann cell wraps one segment of one axon.",
+        "- [b]Satellite cells[/b]: surround neuron cell bodies in ganglia and regulate their environment.",
+        "[b]Myelin[/b] is many layers of glial cell membrane wrapped around an axon. Because it is mostly lipid, it insulates the axon. In the PNS, the outermost layer of the Schwann cell, containing its cytoplasm and nucleus, is the [b]neurilemma[/b]. Gaps between adjacent myelin segments are [b]nodes of Ranvier[/b], where the axon membrane is exposed and voltage-gated channels are concentrated. Myelinated axons look white, giving [b]white matter[/b]; regions rich in cell bodies, dendrites, and unmyelinated fibers form [b]gray matter[/b].",
+        "[b]Regeneration[/b]: a neuron whose cell body is destroyed dies and is not replaced. If only the axon is cut, regeneration may be possible, but only reliably in the PNS.",
+        "[b]In the PNS[/b]: the part of the axon distal to the cut degenerates and its myelin breaks down (Wallerian degeneration). Macrophages clear the debris. The surviving Schwann cells and their neurilemma form a [b]regeneration tube[/b] that guides a new axon sprout from the proximal stump. Growth is slow, and recovery depends on the gap being small and the tube aligning with the original pathway.",
+        "[b]In the CNS[/b]: regeneration is very limited. Oligodendrocytes do not form a neurilemma, CNS myelin contains proteins that inhibit axon growth, and astrocytes form scar tissue that physically blocks regrowth. This is why spinal cord injuries are usually permanent."
+      ],
+      "tip": "CNS glia: 'A MOE' = Astrocytes, Microglia, Oligodendrocytes, Ependymal. PNS glia: 'SS' = Schwann and Satellite.",
+      "clinical": "[b]Multiple sclerosis[/b] is an autoimmune disease that destroys CNS myelin, slowing or blocking conduction and producing patchy hardened scars (scleroses). Because mature neurons rarely divide, most brain tumors (gliomas) arise from neuroglia instead. A cut peripheral nerve in a finger can slowly regain sensation over months as the axon regrows, but a severed spinal cord does not reconnect on its own.",
+      "figure": {
+        "file": "m13_cns_glia.jpg",
+        "caption": "Find the four CNS neuroglia: astrocytes linking neurons to their surroundings, oligodendrocytes wrapping several axons in myelin, small microglia, and ependymal cells lining a fluid filled space. The PNS glia, Schwann cells and satellite cells, are not shown here.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 12.11, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-2-nervous-tissue"
+      }
+    },
+    {
+      "heading": "The Resting Membrane Potential",
+      "body": [
+        "Every cell has a voltage across its membrane, but neurons and muscle cells use it to signal. In a resting neuron, the inside is negative compared with the outside, typically about [b]-70 mV[/b].",
+        "The ion distribution: [b]K⁺ is high inside[/b] the cell, while [b]Na⁺ and Cl⁻ are high outside[/b]. The inside also holds many large negatively charged proteins and phosphates that cannot leave.",
+        "Why the inside is negative:",
+        "- The resting membrane is much more permeable to K⁺ than to Na⁺ because it has many more K⁺ leak channels.",
+        "- K⁺ diffuses out down its concentration gradient, carrying positive charge out and leaving the trapped anions behind. This makes the inside negative.",
+        "- A small Na⁺ leak inward keeps the resting value a bit less negative than it would be from K⁺ alone.",
+        "- The [b]Na⁺/K⁺ pump[/b] uses ATP to move 3 Na⁺ out for every 2 K⁺ in. Its direct electrical contribution is small; its main job is to [i]maintain the concentration gradients[/i] that the leak channels depend on.",
+        "A membrane with this charge separation is said to be [b]polarized[/b]. Moving toward zero (less negative) is [b]depolarization[/b]; becoming more negative than rest is [b]hyperpolarization[/b]."
+      ],
+      "tip": "Think 'K⁺ leaks out, inside goes negative.' The pump is the battery charger, not the battery.",
+      "clinical": "Blood K⁺ level directly affects the resting potential. High blood K⁺ ([b]hyperkalemia[/b]) reduces the outward K⁺ gradient, so cells depolarize; this can cause dangerous heart arrhythmias. Low K⁺ ([b]hypokalemia[/b]) hyperpolarizes cells and makes them harder to excite, causing weakness.",
+      "figure": {
+        "file": "m13_voltmeter.jpg",
+        "caption": "An electrode inside the cell and one outside measure the resting membrane potential, about -70 mV. Notice the positive charges along the outside of the membrane and the negative charges along the inside: the membrane is polarized.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 12.22, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-4-the-action-potential"
+      }
+    },
+    {
+      "heading": "Graded Potentials and Action Potentials",
+      "body": [
+        "[b]Graded potentials[/b] are small, local changes in membrane potential, usually on dendrites and the cell body, caused by stimuli or neurotransmitters opening gated channels. They are [i]graded[/i] because their size varies with stimulus strength. They can be depolarizing or hyperpolarizing, they fade with distance, and they can add together (summate).",
+        "If graded potentials depolarize the trigger zone to [b]threshold[/b], typically about -55 mV, an [b]action potential[/b] fires. Its phases:",
+        "- [b]Depolarization[/b]: voltage-gated [b]Na⁺ channels[/b] open rapidly. Na⁺ rushes in, and the inside swings positive, peaking near +30 mV.",
+        "- [b]Repolarization[/b]: Na⁺ channels inactivate, and slower voltage-gated [b]K⁺ channels[/b] open. K⁺ flows out, returning the inside toward negative.",
+        "- [b]Hyperpolarization (after-hyperpolarization)[/b]: K⁺ channels are slow to close, so extra K⁺ leaves and the membrane briefly dips below -70 mV before leak channels and the pump restore rest.",
+        "Action potentials are [b]all-or-none[/b]: if threshold is reached, a full-size action potential occurs; if not, none occurs. A stronger stimulus does not make a bigger action potential. Instead, it makes action potentials [i]more frequent[/i], and the nervous system reads stimulus intensity from that frequency.",
+        "[b]Refractory periods[/b] limit firing rate and keep impulses moving one way:",
+        "- [b]Absolute refractory period[/b]: from the opening of Na⁺ channels until they reset. No stimulus, however strong, can trigger another action potential.",
+        "- [b]Relative refractory period[/b]: during the rest of repolarization and hyperpolarization. A stronger than normal stimulus can trigger an action potential.",
+        "Only a tiny fraction of ions actually cross during one action potential, so concentration gradients barely change. The Na⁺/K⁺ pump restores them over time; it does not drive repolarization."
+      ],
+      "tip": "'Na⁺ in, K⁺ out': sodium in for the rise, potassium out for the fall. Graded potentials are like a dimmer switch; action potentials are like a light switch.",
+      "clinical": "Local anesthetics such as lidocaine block voltage-gated Na⁺ channels, so pain fibers cannot fire action potentials. Tetrodotoxin from pufferfish blocks the same channels and can cause fatal paralysis.",
+      "figure": {
+        "file": "m13_ap_stages.jpg",
+        "caption": "Trace the action potential: graded depolarization reaches threshold near -55 mV, the voltage rises to about +30 mV as Na+ rushes in, falls as K+ flows out, dips below rest (hyperpolarization), then returns to -70 mV.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 12.24, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-4-the-action-potential"
+      }
+    },
+    {
+      "heading": "Impulse Conduction",
+      "body": [
+        "An action potential at one spot depolarizes the adjacent membrane to threshold, so a new action potential forms next door, and so on down the axon. The region just behind is refractory, so the impulse cannot reverse direction.",
+        "- [b]Continuous conduction[/b]: in unmyelinated axons, every patch of membrane must fire in turn. This is slow, around 0.5 to 2 m/s.",
+        "- [b]Saltatory conduction[/b]: in myelinated axons, current flows under the insulating myelin and action potentials occur only at the [b]nodes of Ranvier[/b], so the impulse appears to jump from node to node (saltare, 'to leap'). This is much faster, up to about 120 m/s, and uses less energy because fewer ions must be pumped back.",
+        "[b]Factors that increase conduction speed[/b]:",
+        "- [b]Myelination[/b]: the biggest factor.",
+        "- [b]Larger axon diameter[/b]: less internal resistance to current flow.",
+        "- Temperature also matters: cooling slows conduction, which is why ice numbs an area."
+      ]
+    },
+    {
+      "heading": "Synaptic Transmission",
+      "body": [
+        "A [b]synapse[/b] is the junction between a neuron and another cell. Most are chemical: the [b]presynaptic neuron[/b] releases neurotransmitter across a narrow [b]synaptic cleft[/b] to the [b]postsynaptic cell[/b].",
+        "Sequence of events:",
+        "- An action potential arrives at the axon terminal.",
+        "- Voltage-gated [b]Ca²⁺ channels[/b] open, and Ca²⁺ flows into the terminal.",
+        "- Ca²⁺ triggers synaptic vesicles to fuse with the membrane and release neurotransmitter by [b]exocytosis[/b].",
+        "- Neurotransmitter diffuses across the cleft and binds receptors on the postsynaptic membrane, opening [b]chemically gated (ligand-gated)[/b] ion channels.",
+        "- The resulting ion flow produces a postsynaptic potential.",
+        "- The neurotransmitter is removed by enzyme breakdown (for example, [b]acetylcholinesterase[/b] breaks down ACh), by [b]reuptake[/b] into the presynaptic terminal, or by diffusion away.",
+        "This one-way release explains why impulses travel in only one direction across a synapse. The short delay for these steps is called synaptic delay.",
+        "[b]Postsynaptic potentials[/b] are graded:",
+        "- [b]EPSP (excitatory postsynaptic potential)[/b]: a depolarization, usually from Na⁺ entering. It brings the cell closer to threshold.",
+        "- [b]IPSP (inhibitory postsynaptic potential)[/b]: a hyperpolarization, usually from K⁺ leaving or Cl⁻ entering. It moves the cell away from threshold.",
+        "A single EPSP is too small to reach threshold. A typical neuron receives thousands of synapses, and the trigger zone adds up all incoming EPSPs and IPSPs. [b]Temporal summation[/b] is one presynaptic neuron firing rapidly so its EPSPs build on each other. [b]Spatial summation[/b] is many presynaptic neurons firing at the same time at different locations. If the sum at the trigger zone reaches threshold, the neuron fires."
+      ],
+      "tip": "Temporal = Time (one neuron, fast repeats). Spatial = Space (many neurons, same moment).",
+      "figure": {
+        "file": "m13_synapse.jpg",
+        "caption": "In the enlarged view, synaptic vesicles in the axon terminal release neurotransmitter into the synaptic cleft, where it binds ligand gated (chemically gated) channels on the postsynaptic membrane.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 12.27, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-5-communication-between-neurons"
+      }
+    },
+    {
+      "heading": "Neurotransmitters and Reflex Arcs",
+      "body": [
+        "Whether a neurotransmitter excites or inhibits depends on the [i]receptor[/i] it binds, so some act both ways.",
+        "- [b]Acetylcholine (ACh)[/b]: released at neuromuscular junctions (excites skeletal muscle), by all preganglionic autonomic neurons, and by parasympathetic postganglionic neurons (it slows the heart). Broken down by acetylcholinesterase.",
+        "- [b]Norepinephrine (NE)[/b]: a monoamine (catecholamine) released by most sympathetic postganglionic neurons and by brainstem neurons involved in arousal and alertness.",
+        "- [b]Dopamine[/b]: a monoamine involved in movement control and reward. Neurons from the substantia nigra that release it are lost in Parkinson's disease.",
+        "- [b]Serotonin[/b]: a monoamine involved in mood, sleep, appetite, and temperature regulation. Many antidepressants (SSRIs) block its reuptake.",
+        "- [b]GABA[/b]: the main [b]inhibitory[/b] neurotransmitter in the brain; it typically opens Cl⁻ channels. Alcohol and anti-anxiety drugs such as benzodiazepines enhance its effect.",
+        "- [b]Glutamate[/b]: the main [b]excitatory[/b] neurotransmitter in the CNS; important in learning and memory.",
+        "- [b]Endorphins[/b] (and enkephalins): neuropeptides that act as natural opiates, reducing pain perception.",
+        "A [b]reflex[/b] is a rapid, automatic, involuntary response to a stimulus. Its pathway, the [b]reflex arc[/b], has five parts in order:",
+        "- [b]Receptor[/b]: detects the stimulus.",
+        "- [b]Sensory neuron[/b]: carries the impulse into the CNS.",
+        "- [b]Interneuron (integration center)[/b] in the brain or spinal cord: processes the signal. The simplest reflexes, such as the knee-jerk, skip this step and are monosynaptic.",
+        "- [b]Motor neuron[/b]: carries the impulse out of the CNS.",
+        "- [b]Effector[/b]: muscle or gland that responds."
+      ],
+      "tip": "Reflex arc: 'Real Smart Individuals Make Errors' = Receptor, Sensory neuron, Interneuron, Motor neuron, Effector.",
+      "clinical": "Myasthenia gravis is an autoimmune attack on ACh receptors at the neuromuscular junction, causing muscle weakness. It is treated with drugs that inhibit acetylcholinesterase, so ACh lingers longer in the cleft."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "m13_fc01",
+      "term": "Central nervous system (CNS)",
+      "definition": "The brain and spinal cord; the integration center of the nervous system."
+    },
+    {
+      "id": "m13_fc02",
+      "term": "Peripheral nervous system (PNS)",
+      "definition": "All nervous tissue outside the CNS: cranial nerves, spinal nerves, ganglia, and sensory receptors."
+    },
+    {
+      "id": "m13_fc03",
+      "term": "Afferent vs efferent",
+      "definition": "Afferent (sensory) fibers carry signals toward the CNS; efferent (motor) fibers carry signals away from the CNS to effectors."
+    },
+    {
+      "id": "m13_fc04",
+      "term": "Somatic vs autonomic nervous system",
+      "definition": "Somatic: motor control of skeletal muscle, usually voluntary. Autonomic: involuntary control of smooth muscle, cardiac muscle, and glands, with sympathetic and parasympathetic divisions."
+    },
+    {
+      "id": "m13_fc05",
+      "term": "Chromatophilic substance (Nissl bodies)",
+      "definition": "Clusters of rough ER in the neuron cell body; sites of protein synthesis. Absent from the axon."
+    },
+    {
+      "id": "m13_fc06",
+      "term": "Dendrite",
+      "definition": "Short, branched neuron process that receives input and carries it toward the cell body."
+    },
+    {
+      "id": "m13_fc07",
+      "term": "Axon hillock and trigger zone",
+      "definition": "The axon hillock is where the axon leaves the cell body; the adjacent initial segment is the trigger zone, rich in voltage-gated Na⁺ channels, where action potentials usually begin."
+    },
+    {
+      "id": "m13_fc08",
+      "term": "Multipolar neuron",
+      "definition": "Many dendrites and one axon; most common type; includes motor neurons and interneurons."
+    },
+    {
+      "id": "m13_fc09",
+      "term": "Bipolar neuron",
+      "definition": "One dendrite and one axon; found in special sense organs such as the retina, olfactory epithelium, and inner ear."
+    },
+    {
+      "id": "m13_fc10",
+      "term": "Unipolar (pseudounipolar) neuron",
+      "definition": "Single process that splits into peripheral and central branches; most sensory neurons; cell bodies in dorsal root ganglia."
+    },
+    {
+      "id": "m13_fc11",
+      "term": "Interneuron",
+      "definition": "Neuron located entirely within the CNS that connects sensory and motor neurons; the most numerous type."
+    },
+    {
+      "id": "m13_fc12",
+      "term": "Astrocyte",
+      "definition": "Most abundant CNS glial cell; anchors neurons to capillaries, helps form the blood-brain barrier, regulates K⁺ and neurotransmitter levels, forms scar tissue."
+    },
+    {
+      "id": "m13_fc13",
+      "term": "Oligodendrocyte",
+      "definition": "CNS glial cell that forms myelin; one cell can myelinate segments of several axons."
+    },
+    {
+      "id": "m13_fc14",
+      "term": "Microglia",
+      "definition": "Small phagocytic CNS glial cells that engulf microbes and debris."
+    },
+    {
+      "id": "m13_fc15",
+      "term": "Ependymal cells",
+      "definition": "Glial cells lining the brain ventricles and spinal cord central canal; help produce and circulate cerebrospinal fluid."
+    },
+    {
+      "id": "m13_fc16",
+      "term": "Schwann cell",
+      "definition": "PNS glial cell that myelinates one segment of a single axon; its outer layer forms the neurilemma, which aids regeneration."
+    },
+    {
+      "id": "m13_fc17",
+      "term": "Satellite cell",
+      "definition": "PNS glial cell that surrounds neuron cell bodies in ganglia."
+    },
+    {
+      "id": "m13_fc18",
+      "term": "Node of Ranvier",
+      "definition": "Gap between adjacent myelin segments where the axon membrane is exposed; site of action potentials in saltatory conduction."
+    },
+    {
+      "id": "m13_fc19",
+      "term": "Resting membrane potential",
+      "definition": "About -70 mV in a typical neuron; inside negative mainly because K⁺ leaks out through numerous leak channels, leaving trapped anions behind."
+    },
+    {
+      "id": "m13_fc20",
+      "term": "Na⁺/K⁺ pump",
+      "definition": "ATP-driven pump moving 3 Na⁺ out and 2 K⁺ in; maintains the concentration gradients behind the resting potential."
+    },
+    {
+      "id": "m13_fc21",
+      "term": "Graded potential",
+      "definition": "Local, variable-size change in membrane potential that fades with distance and can summate; can depolarize or hyperpolarize."
+    },
+    {
+      "id": "m13_fc22",
+      "term": "Threshold",
+      "definition": "Membrane potential (about -55 mV) at which voltage-gated Na⁺ channels open enough to trigger an action potential."
+    },
+    {
+      "id": "m13_fc23",
+      "term": "All-or-none principle",
+      "definition": "An action potential either fires at full strength or not at all; stimulus strength is coded by firing frequency, not size."
+    },
+    {
+      "id": "m13_fc24",
+      "term": "Absolute refractory period",
+      "definition": "Time during an action potential when no stimulus can trigger another, because Na⁺ channels are open or inactivated."
+    },
+    {
+      "id": "m13_fc25",
+      "term": "Relative refractory period",
+      "definition": "Period after the absolute refractory period when only a stronger than normal stimulus can trigger an action potential."
+    },
+    {
+      "id": "m13_fc26",
+      "term": "Saltatory conduction",
+      "definition": "Impulse conduction in myelinated axons, with action potentials only at nodes of Ranvier; faster and more energy efficient than continuous conduction."
+    },
+    {
+      "id": "m13_fc27",
+      "term": "EPSP vs IPSP",
+      "definition": "EPSP: depolarizing postsynaptic potential that moves toward threshold. IPSP: hyperpolarizing postsynaptic potential that moves away from threshold."
+    },
+    {
+      "id": "m13_fc28",
+      "term": "Temporal vs spatial summation",
+      "definition": "Temporal: one presynaptic neuron fires rapidly. Spatial: many presynaptic neurons fire at the same time."
+    },
+    {
+      "id": "m13_fc29",
+      "term": "GABA",
+      "definition": "Main inhibitory neurotransmitter in the brain; typically opens Cl⁻ channels to produce IPSPs."
+    },
+    {
+      "id": "m13_fc30",
+      "term": "Glutamate",
+      "definition": "Main excitatory neurotransmitter in the CNS; important in learning and memory."
+    },
+    {
+      "id": "m13_fc31",
+      "term": "Endorphins",
+      "definition": "Neuropeptides that act as natural opiates to reduce pain."
+    },
+    {
+      "id": "m13_fc32",
+      "term": "Reflex arc",
+      "definition": "Receptor, sensory neuron, interneuron (integration center), motor neuron, effector."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m13_q01",
+      "type": "multiple_choice",
+      "prompt": "Which division of the nervous system controls the smooth muscle of the digestive tract?",
+      "choices": [
+        "Somatic motor division",
+        "Autonomic motor division",
+        "Sensory division",
+        "Central nervous system only"
+      ],
+      "answer": 1,
+      "explanation": "The autonomic division is the involuntary motor branch that controls smooth muscle, cardiac muscle, and glands. The somatic division is tempting because it is also motor, but it controls skeletal muscle only."
+    },
+    {
+      "id": "m13_q02",
+      "type": "multiple_choice",
+      "prompt": "Which glial cell forms myelin around axons in the brain and spinal cord?",
+      "choices": [
+        "Schwann cell",
+        "Oligodendrocyte",
+        "Astrocyte",
+        "Satellite cell"
+      ],
+      "answer": 1,
+      "explanation": "Oligodendrocytes myelinate CNS axons, and one can wrap segments of several axons. Schwann cells are the most tempting answer, but they myelinate PNS axons only."
+    },
+    {
+      "id": "m13_q03",
+      "type": "multiple_choice",
+      "prompt": "A biopsy of brain tissue shows small cells actively engulfing bacteria and dead cell debris. These are most likely:",
+      "choices": [
+        "Microglia",
+        "Ependymal cells",
+        "Astrocytes",
+        "Oligodendrocytes"
+      ],
+      "answer": 0,
+      "explanation": "Microglia are the phagocytes of the CNS. Astrocytes are tempting because they respond to injury, but their role is support and scar formation, not phagocytosis of microbes."
+    },
+    {
+      "id": "m13_q04",
+      "type": "multiple_choice",
+      "prompt": "Most sensory neurons that carry touch information from the skin are structurally classified as:",
+      "choices": [
+        "Multipolar",
+        "Bipolar",
+        "Unipolar (pseudounipolar)",
+        "Anaxonic"
+      ],
+      "answer": 2,
+      "explanation": "Most sensory neurons are unipolar, with their cell bodies in dorsal root ganglia. Bipolar is tempting because those neurons are sensory too, but they are limited to special senses like the retina and inner ear."
+    },
+    {
+      "id": "m13_q05",
+      "type": "multiple_choice",
+      "prompt": "What is the main reason the inside of a resting neuron is negative relative to the outside?",
+      "choices": [
+        "The Na⁺/K⁺ pump moves more negative ions into the cell than out",
+        "Na⁺ leaks into the cell faster than K⁺ leaks out",
+        "The membrane is more permeable to K⁺, which diffuses out and leaves trapped anions behind",
+        "Cl⁻ is actively pumped into the cell"
+      ],
+      "answer": 2,
+      "explanation": "More K⁺ leak channels than Na⁺ leak channels let K⁺ diffuse out, carrying positive charge and leaving large anions inside. The pump is the tempting answer, but its direct contribution is small; its main role is maintaining the gradients."
+    },
+    {
+      "id": "m13_q06",
+      "type": "multiple_choice",
+      "prompt": "During the depolarization phase of an action potential, which event occurs?",
+      "choices": [
+        "Voltage-gated K⁺ channels open and K⁺ leaves the cell",
+        "Voltage-gated Na⁺ channels open and Na⁺ enters the cell",
+        "The Na⁺/K⁺ pump moves Na⁺ into the cell",
+        "Ligand-gated Cl⁻ channels open and Cl⁻ enters the cell"
+      ],
+      "answer": 1,
+      "explanation": "Rapid influx of Na⁺ through voltage-gated channels makes the inside positive. K⁺ efflux is the tempting answer, but that is repolarization, the falling phase."
+    },
+    {
+      "id": "m13_q07",
+      "type": "multiple_choice",
+      "prompt": "A stronger stimulus applied to a neuron above threshold results in:",
+      "choices": [
+        "Larger action potentials",
+        "Action potentials that travel faster",
+        "A higher frequency of action potentials",
+        "A longer absolute refractory period"
+      ],
+      "answer": 2,
+      "explanation": "Because action potentials are all-or-none, intensity is coded by how often they fire. Larger action potentials is tempting, but the amplitude is fixed once threshold is reached."
+    },
+    {
+      "id": "m13_q08",
+      "type": "multiple_choice",
+      "prompt": "Which change would increase the speed of impulse conduction along an axon?",
+      "choices": [
+        "Removing the myelin sheath",
+        "Increasing the axon diameter",
+        "Cooling the axon",
+        "Decreasing the axon diameter"
+      ],
+      "answer": 1,
+      "explanation": "A larger diameter lowers internal resistance and speeds conduction; myelination is the other major factor. Removing myelin, cooling the axon, or narrowing it all slow conduction."
+    },
+    {
+      "id": "m13_q09",
+      "type": "multiple_choice",
+      "prompt": "What directly triggers synaptic vesicles to release neurotransmitter at the axon terminal?",
+      "choices": [
+        "Influx of Ca²⁺",
+        "Influx of Na⁺",
+        "Efflux of K⁺",
+        "Influx of Cl⁻"
+      ],
+      "answer": 0,
+      "explanation": "The action potential opens voltage-gated Ca²⁺ channels, and Ca²⁺ entering the terminal triggers exocytosis. Na⁺ influx is tempting because it carries the action potential down the axon, but it is Ca²⁺ that couples the signal to release."
+    },
+    {
+      "id": "m13_q10",
+      "type": "multiple_choice",
+      "prompt": "A neurotransmitter opens Cl⁻ channels on a postsynaptic neuron, and Cl⁻ flows in. The result is:",
+      "choices": [
+        "An EPSP",
+        "An IPSP",
+        "An action potential",
+        "Depolarization to threshold"
+      ],
+      "answer": 1,
+      "explanation": "Cl⁻ entering makes the inside more negative, a hyperpolarizing IPSP that moves the neuron away from threshold. This is how GABA usually inhibits."
+    },
+    {
+      "id": "m13_q11",
+      "type": "multiple_choice",
+      "prompt": "Several different presynaptic neurons fire at the same moment, and their EPSPs add together to reach threshold. This is:",
+      "choices": [
+        "Temporal summation",
+        "Spatial summation",
+        "Saltatory conduction",
+        "Facilitation by refractory period"
+      ],
+      "answer": 1,
+      "explanation": "Spatial summation combines inputs from multiple locations at once. Temporal summation is tempting, but it refers to one presynaptic neuron firing in rapid succession."
+    },
+    {
+      "id": "m13_q12",
+      "type": "multiple_choice",
+      "prompt": "Loss of dopamine-releasing neurons in the substantia nigra is associated with:",
+      "choices": [
+        "Multiple sclerosis",
+        "Myasthenia gravis",
+        "Parkinson's disease",
+        "Depression treated with SSRIs"
+      ],
+      "answer": 2,
+      "explanation": "Parkinson's disease results from degeneration of dopaminergic neurons that help control movement. SSRIs target serotonin reuptake, not dopamine neurons."
+    },
+    {
+      "id": "m13_q13",
+      "type": "multiple_choice",
+      "prompt": "Why does a cut peripheral nerve have a better chance of regenerating than a cut spinal cord tract?",
+      "choices": [
+        "PNS neurons can undergo mitosis to replace themselves",
+        "Schwann cells form a neurilemma and regeneration tube, while CNS myelin and astrocyte scars inhibit regrowth",
+        "CNS axons lack myelin, so they cannot be guided",
+        "Microglia in the PNS secrete new axons"
+      ],
+      "answer": 1,
+      "explanation": "Schwann cells guide a regrowing axon, while the CNS has growth-inhibiting myelin proteins and glial scarring. The mitosis answer is tempting, but regeneration regrows the axon of a surviving neuron; mature neurons do not divide."
+    },
+    {
+      "id": "m13_q14",
+      "type": "multiple_choice",
+      "prompt": "A patient receives lidocaine before a dental procedure. Lidocaine prevents pain signals by:",
+      "choices": [
+        "Blocking voltage-gated Na⁺ channels",
+        "Blocking the Na⁺/K⁺ pump",
+        "Destroying acetylcholinesterase",
+        "Opening extra K⁺ leak channels permanently"
+      ],
+      "answer": 0,
+      "explanation": "Without functioning voltage-gated Na⁺ channels, axons cannot depolarize to fire action potentials. Blocking the pump would not stop conduction quickly, because gradients run down only slowly."
+    },
+    {
+      "id": "m13_q15",
+      "type": "multiple_choice",
+      "prompt": "During which period can a stronger than normal stimulus trigger a second action potential?",
+      "choices": [
+        "Absolute refractory period",
+        "Relative refractory period",
+        "Depolarization phase",
+        "Synaptic delay"
+      ],
+      "answer": 1,
+      "explanation": "During the relative refractory period some Na⁺ channels have reset, so a strong enough stimulus can fire the cell. In the absolute refractory period, no stimulus can."
+    },
+    {
+      "id": "m13_q16",
+      "type": "true_false",
+      "prompt": "The Na⁺/K⁺ pump is responsible for the repolarization phase of the action potential.",
+      "answer": false,
+      "explanation": "Repolarization is caused by Na⁺ channels inactivating and voltage-gated K⁺ channels opening so K⁺ flows out. The pump works slowly in the background to maintain gradients over many action potentials."
+    },
+    {
+      "id": "m13_q17",
+      "type": "true_false",
+      "prompt": "Graded potentials decrease in strength as they spread away from the point of stimulation.",
+      "answer": true,
+      "explanation": "Graded potentials are local and decremental: they fade with distance. Action potentials, by contrast, are regenerated at full strength along the axon."
+    },
+    {
+      "id": "m13_q18",
+      "type": "true_false",
+      "prompt": "Satellite cells and Schwann cells are the neuroglia of the peripheral nervous system.",
+      "answer": true,
+      "explanation": "These are the two PNS glial types. Astrocytes, oligodendrocytes, microglia, and ependymal cells are all CNS glia."
+    },
+    {
+      "id": "m13_q19",
+      "type": "true_false",
+      "prompt": "Acetylcholine is always excitatory.",
+      "answer": false,
+      "explanation": "ACh excites skeletal muscle at the neuromuscular junction but slows the heart when released by parasympathetic fibers. The effect depends on the receptor type, not the neurotransmitter alone."
+    },
+    {
+      "id": "m13_q20",
+      "type": "ordering",
+      "prompt": "Put the phases of an action potential in order, starting from rest.",
+      "items": [
+        "Resting membrane potential of about -70 mV",
+        "Depolarization to threshold of about -55 mV",
+        "Na⁺ rushes in and the membrane peaks near +30 mV",
+        "Repolarization as K⁺ flows out",
+        "Hyperpolarization below resting potential"
+      ],
+      "explanation": "Graded depolarization reaches threshold, voltage-gated Na⁺ channels open for the rising phase, K⁺ channels open for the falling phase, and slow-closing K⁺ channels cause a brief undershoot before rest is restored."
+    },
+    {
+      "id": "m13_q21",
+      "type": "ordering",
+      "prompt": "Put the events of chemical synaptic transmission in order.",
+      "items": [
+        "Action potential arrives at the axon terminal",
+        "Voltage-gated Ca²⁺ channels open and Ca²⁺ enters",
+        "Synaptic vesicles release neurotransmitter by exocytosis",
+        "Neurotransmitter binds receptors on the postsynaptic membrane",
+        "Ligand-gated ion channels open, producing a postsynaptic potential",
+        "Neurotransmitter is broken down or taken back up"
+      ],
+      "explanation": "Electrical signal, then Ca²⁺ entry, then chemical release, then binding, then a new electrical change in the postsynaptic cell. Removal ends the signal so the synapse can respond again."
+    },
+    {
+      "id": "m13_q22",
+      "type": "ordering",
+      "prompt": "Put the components of a reflex arc in the order a signal travels through them.",
+      "items": [
+        "Receptor",
+        "Sensory neuron",
+        "Interneuron in the CNS",
+        "Motor neuron",
+        "Effector"
+      ],
+      "explanation": "The receptor detects the stimulus, the sensory neuron carries it in, the interneuron integrates it, the motor neuron carries the command out, and the effector responds. Monosynaptic reflexes such as the knee-jerk skip the interneuron."
+    }
+  ]
+}

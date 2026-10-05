@@ -1,0 +1,425 @@
+{
+  "id": "m03_cells",
+  "order": 3,
+  "course": "A&P I",
+  "title": "Cells: Structure, Transport, and Division",
+  "summary": "The plasma membrane, organelles, how substances cross membranes, and how cells divide, specialize, and die.",
+  "objectives": [
+    "Describe the fluid mosaic model and the roles of membrane proteins",
+    "Identify each major organelle and state its function",
+    "Describe the structure and functions of the nucleus",
+    "Compare the three types of cytoskeleton filaments",
+    "Distinguish passive transport (diffusion, facilitated diffusion, osmosis, filtration) from active transport",
+    "Predict what happens to a cell in hypotonic, isotonic, and hypertonic solutions",
+    "Explain how the Na⁺/K⁺ pump works and why it matters",
+    "Describe endocytosis and exocytosis",
+    "Describe the stages of the cell cycle and the phases of mitosis and cytokinesis",
+    "Explain cell differentiation and apoptosis"
+  ],
+  "lesson": [
+    {
+      "heading": "The Plasma Membrane",
+      "body": [
+        "The [b]plasma membrane[/b] (cell membrane) is the boundary of the cell. It holds the cell contents in, controls what enters and leaves, receives signals, and helps cells attach to each other. It is [b]selectively permeable[/b]: some substances cross easily and others cannot cross without help.",
+        "The membrane is described by the [b]fluid mosaic model[/b]. It is a double layer of [b]phospholipids[/b] (the bilayer) with proteins scattered through it like tiles in a mosaic. It is fluid because the lipids and many proteins can drift sideways within the layer.",
+        "- The [b]phospholipid bilayer[/b] has hydrophilic phosphate heads facing the watery fluid inside and outside the cell, and hydrophobic fatty acid tails facing each other in the middle. Small nonpolar substances such as O₂, CO₂, and lipid-soluble molecules (including steroid hormones) pass through easily. Ions and most large polar molecules such as glucose cannot cross the lipid layer on their own.",
+        "- [b]Cholesterol[/b] molecules are tucked between phospholipids and help stabilize the membrane and keep its fluidity in a useful range.",
+        "- [b]Integral (transmembrane) proteins[/b] extend into or through the bilayer. [b]Peripheral proteins[/b] attach loosely to the inner or outer surface.",
+        "Membrane proteins perform many jobs:",
+        "- [b]Channels[/b]: pores that let specific ions or water through. Some are always open (leak channels) and some open and close (gated channels).",
+        "- [b]Carriers (transporters)[/b]: bind a specific substance and change shape to move it across.",
+        "- [b]Receptors[/b]: bind signal molecules such as hormones and trigger a response inside the cell.",
+        "- [b]Enzymes[/b]: catalyze reactions at the membrane surface.",
+        "- [b]Cell adhesion molecules (CAMs)[/b]: help cells stick to each other and to surrounding material.",
+        "- [b]Cell recognition (identity) proteins[/b]: often glycoproteins, they mark the cell as part of the body so the immune system can tell self from nonself.",
+        "Carbohydrate chains attached to proteins and lipids on the outer surface form the [b]glycocalyx[/b], which helps with recognition and adhesion.",
+        "Cells are joined by intercellular junctions: [b]tight junctions[/b] seal neighboring cells to prevent leakage between them (as in the intestinal lining), [b]desmosomes[/b] rivet cells together to resist pulling (as in skin), and [b]gap junctions[/b] form tiny channels that let ions pass directly between cells (as in heart muscle)."
+      ],
+      "tip": "Think of the membrane as a crowded swimming pool of phospholipids with protein \"pool floats\" drifting around. Some floats are tunnels (channels), some are revolving doors (carriers), and some are doorbells (receptors).",
+      "clinical": "Cystic fibrosis is caused by a faulty chloride channel protein (CFTR) in the membranes of cells lining the airways and other organs. Without normal Cl⁻ movement, secretions become thick, sticky mucus that clogs the lungs and pancreatic ducts.",
+      "figure": {
+        "file": "m03_membrane.jpg",
+        "caption": "Find the phospholipid bilayer, with heads facing outward and tails in the middle, then locate the integral proteins that span it, the peripheral proteins on its surface, cholesterol tucked between the phospholipids, and the glycoproteins that act as identity markers.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.4, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-1-the-cell-membrane"
+      }
+    },
+    {
+      "heading": "Organelles and Their Functions",
+      "body": [
+        "The [b]cytoplasm[/b] is everything between the plasma membrane and the nucleus: the fluid [b]cytosol[/b] plus the organelles suspended in it.",
+        "- [b]Ribosomes[/b]: small particles of rRNA and protein that are the sites of [b]protein synthesis[/b]. Free ribosomes in the cytosol make proteins used inside the cell; ribosomes bound to the ER make proteins for membranes, for lysosomes, or for export.",
+        "- [b]Rough endoplasmic reticulum (rough ER)[/b]: a network of membranes studded with ribosomes. It makes and modifies proteins and sends them on in vesicles, usually to the Golgi.",
+        "- [b]Smooth endoplasmic reticulum (smooth ER)[/b]: lacks ribosomes. It synthesizes lipids (including phospholipids and steroid hormones), helps detoxify drugs and alcohol (especially in liver cells), and stores calcium ions in muscle cells.",
+        "- [b]Golgi apparatus[/b]: a stack of flattened membrane sacs that [b]modifies, sorts, and packages[/b] proteins from the ER, for example by adding sugars. It ships them in vesicles to the plasma membrane for secretion, to lysosomes, or to other destinations.",
+        "- [b]Vesicles[/b]: small membrane sacs that carry substances within the cell, to and from the plasma membrane.",
+        "- [b]Mitochondria[/b]: double-membrane organelles where aerobic cellular respiration produces most of the cell's [b]ATP[/b]. The inner membrane is folded into cristae, which increase surface area. Mitochondria contain their own small DNA. Cells with high energy needs, such as muscle and liver cells, have many.",
+        "- [b]Lysosomes[/b]: vesicles containing digestive (hydrolytic) enzymes that break down worn-out organelles, bacteria taken in by the cell, and other large molecules. They work best in an acidic interior.",
+        "- [b]Peroxisomes[/b]: vesicles with enzymes that break down fatty acids and detoxify harmful substances such as hydrogen peroxide (H₂O₂), which an enzyme called catalase converts to water and oxygen. They are abundant in liver and kidney cells.",
+        "- [b]Centrosome[/b]: a region near the nucleus containing two [b]centrioles[/b] (made of microtubules). It organizes microtubules and the mitotic spindle during cell division.",
+        "- [b]Cilia and flagella[/b]: motile extensions built from microtubules. Cilia are short and numerous and move fluid across the cell surface (such as mucus in the airway). A flagellum is long and single and moves the cell itself; in humans, only sperm cells have a flagellum.",
+        "- [b]Microvilli[/b]: tiny finger-like folds of the plasma membrane that increase surface area for absorption, as in the small intestine. They are supported by actin filaments and do not move like cilia."
+      ],
+      "tip": "Follow a secreted protein like a package: made at the factory (ribosomes on rough ER), sent to the post office for labeling and boxing (Golgi), shipped in a delivery truck (vesicle), and dropped off at the door (exocytosis). Mitochondria are the power plant; lysosomes are the recycling center.",
+      "clinical": "In Tay-Sachs disease, a missing lysosomal enzyme allows a lipid to build up in nerve cells, destroying them. Heavy alcohol use increases smooth ER in liver cells, which also speeds breakdown of some drugs and changes how patients respond to medications.",
+      "figure": {
+        "file": "m03_cell.jpg",
+        "caption": "Notice that rough ER is continuous with the nucleus and studded with ribosomes, while smooth ER has none. Follow the path a secreted protein takes from rough ER to the Golgi apparatus to a secretory vesicle at the plasma membrane.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.13, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-2-the-cytoplasm-and-cellular-organelles"
+      }
+    },
+    {
+      "heading": "The Nucleus",
+      "body": [
+        "The [b]nucleus[/b] is the control center of the cell. It contains the DNA that directs protein synthesis and is usually the largest structure in the cell. Most cells have one nucleus; mature red blood cells have none, and skeletal muscle cells have many.",
+        "- The [b]nuclear envelope[/b] is a double membrane that surrounds the nucleus. It contains [b]nuclear pores[/b] that allow molecules such as mRNA and ribosomal subunits to move out to the cytoplasm and proteins to move in.",
+        "- The [b]nucleolus[/b] is a dense region (not membrane-bound) where ribosomal RNA is made and ribosome subunits are assembled.",
+        "- [b]Chromatin[/b] is DNA wound around proteins called histones. In a nondividing cell it is loosely coiled, which allows genes to be read. Before division it condenses into compact, visible [b]chromosomes[/b]. Human body cells contain 46 chromosomes (23 pairs)."
+      ],
+      "tip": "Nucleolus = \"little nucleus\" inside the nucleus, and it makes the little ribosome parts.",
+      "figure": {
+        "file": "m03_nucleus.jpg",
+        "caption": "The nuclear envelope is a double membrane pierced by nuclear pores, and the dense nucleolus sits inside among the chromatin. Notice that the envelope is continuous with the rough ER outside it, shown here as the flattened cisternae.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.19, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-3-the-nucleus-and-dna-replication"
+      }
+    },
+    {
+      "heading": "The Cytoskeleton",
+      "body": [
+        "The [b]cytoskeleton[/b] is a network of protein filaments throughout the cytoplasm. It supports the cell, gives it shape, holds organelles in place, and allows movement of the cell and of materials within it. There are three types, from thinnest to thickest:",
+        "- [b]Microfilaments[/b]: thin filaments of the protein [b]actin[/b]. They help the cell change shape, support microvilli, form the contractile ring that pinches cells in two during cytokinesis, and (with myosin) produce muscle contraction.",
+        "- [b]Intermediate filaments[/b]: tough, ropelike fibers that resist pulling forces and help anchor cells together at desmosomes. Keratin in skin cells is an example.",
+        "- [b]Microtubules[/b]: hollow tubes of the protein [b]tubulin[/b]. They act as tracks for moving vesicles and organelles, form centrioles, cilia, and flagella, and make up the mitotic spindle that separates chromosomes."
+      ],
+      "tip": "Micro-filaments are \"mini\" and actin-based (actin = action, movement). Micro-tubules are tubes, and tubes are made of tubulin.",
+      "figure": {
+        "file": "m03_cytoskeleton.jpg",
+        "caption": "From left to right: microtubules are hollow tubes of tubulin (about 25 nm), microfilaments are twisted strands of actin (about 7 nm), and intermediate filaments are ropelike fibers such as keratin (8 to 12 nm), in between the other two in thickness.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.18, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-2-the-cytoplasm-and-cellular-organelles"
+      }
+    },
+    {
+      "heading": "Passive Transport: Diffusion and Osmosis",
+      "body": [
+        "Substances cross membranes by [b]passive[/b] processes, which need no cellular energy (no ATP), or [b]active[/b] processes, which require ATP. Passive transport always moves substances [b]down[/b] their concentration gradient, from higher to lower concentration.",
+        "- [b]Simple diffusion[/b]: random molecular motion spreads molecules from an area of higher concentration to lower concentration until they are evenly distributed (equilibrium). Across the membrane, this works for small nonpolar molecules such as O₂ and CO₂ that pass through the lipid bilayer. Diffusion is faster at higher temperature, with a steeper gradient, and with smaller molecules.",
+        "- [b]Facilitated diffusion[/b]: substances that cannot cross the lipid layer move down their gradient with the help of a membrane protein, either a channel (for ions) or a carrier (for molecules such as glucose). It is still passive, but it can be limited by how many carrier proteins are available (saturation).",
+        "- [b]Osmosis[/b]: the diffusion of [b]water[/b] across a selectively permeable membrane. Water moves from where water is more concentrated (fewer solutes) toward where water is less concentrated (more solutes). In short: [i]water follows solute[/i]. Much of this water moves through channel proteins called aquaporins. [b]Osmotic pressure[/b] is the ability of a solution to pull water toward it; the more nonpenetrating solute it has, the higher its osmotic pressure.",
+        "- [b]Filtration[/b]: hydrostatic (fluid) pressure forces water and small solutes through a membrane from higher pressure to lower pressure. Blood pressure pushes fluid out of capillaries this way, and the kidneys filter blood to begin forming urine."
+      ],
+      "tip": "Water follows solute (\"where salt goes, water flows\"). If you know where the solute concentration is higher, you know which way water will move.",
+      "figure": {
+        "file": "m03_facilitated_diffusion.jpg",
+        "caption": "Both panels show facilitated diffusion: substances move down their concentration gradient through a channel protein (top) or by binding a carrier protein that changes shape (bottom). No ATP appears, because the process is passive.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.6, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-1-the-cell-membrane"
+      }
+    },
+    {
+      "heading": "Tonicity",
+      "body": [
+        "[b]Tonicity[/b] describes how a solution surrounding a cell affects the cell's water volume. It depends on the concentration of solutes that cannot cross the membrane, compared with the inside of the cell.",
+        "- [b]Isotonic[/b]: the same solute concentration as the cell. There is no net water movement, so the cell keeps its normal shape. 0.9% sodium chloride (normal saline) is isotonic to human cells.",
+        "- [b]Hypotonic[/b]: a [i]lower[/i] solute concentration than the cell (more water). Water moves [b]into[/b] the cell, which swells and may burst. Bursting of red blood cells is called [b]hemolysis[/b]. Pure water is hypotonic.",
+        "- [b]Hypertonic[/b]: a [i]higher[/i] solute concentration than the cell. Water moves [b]out of[/b] the cell, which shrinks. Shrinking of red blood cells is called [b]crenation[/b]."
+      ],
+      "tip": "Hypo- sounds like \"hippo\": the cell swells up like a hippo. Hypotonic makes cells swell; hypertonic makes cells shrivel.",
+      "clinical": "IV fluids must be chosen carefully. Isotonic normal saline replaces volume without damaging cells. Giving a hypotonic solution too fast can cause cells to swell, which is especially dangerous in the brain. Hypertonic saline is sometimes used on purpose to pull fluid out of swollen brain tissue.",
+      "figure": {
+        "file": "m03_tonicity.jpg",
+        "caption": "In a hypertonic solution water leaves the red blood cells and they shrink (crenation). In an isotonic solution water moves in and out equally and the cells keep their shape. In a hypotonic solution water rushes in and the cells swell and may burst (hemolysis).",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.8, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-1-the-cell-membrane"
+      }
+    },
+    {
+      "heading": "Active Transport and Vesicular Transport",
+      "body": [
+        "[b]Active transport[/b] uses a carrier protein and energy from [b]ATP[/b] to move substances [b]against[/b] their concentration gradient, from lower to higher concentration. These carriers are often called pumps.",
+        "The most important example is the [b]sodium-potassium pump (Na⁺/K⁺ ATPase)[/b]. For each ATP used, it moves [b]3 Na⁺ out[/b] of the cell and [b]2 K⁺ into[/b] the cell. This keeps sodium concentration high outside the cell and potassium concentration high inside. These gradients are essential for nerve impulses and muscle contraction, help control cell volume, and power other transport processes. A large share of the body's resting energy is spent running this pump.",
+        "[b]Vesicular transport[/b] moves large particles or large amounts of material inside membrane vesicles, and it also requires ATP.",
+        "- [b]Endocytosis[/b] brings substances [b]into[/b] the cell by folding the plasma membrane around them to form a vesicle. [b]Pinocytosis[/b] (\"cell drinking\") takes in droplets of fluid and dissolved substances. [b]Phagocytosis[/b] (\"cell eating\") engulfs large solid particles such as bacteria; white blood cells use it, and the vesicle then fuses with a lysosome for digestion. [b]Receptor-mediated endocytosis[/b] is highly selective: specific molecules (such as cholesterol-carrying LDL particles) bind receptors on the membrane before being brought in.",
+        "- [b]Exocytosis[/b] moves substances [b]out of[/b] the cell: a vesicle fuses with the plasma membrane and releases its contents outside. Cells use it to secrete hormones, mucus, and neurotransmitters.",
+        "- [b]Transcytosis[/b] combines the two: a substance is taken in on one side of a cell by endocytosis, carried across, and released on the other side by exocytosis."
+      ],
+      "tip": "Pump: 3 Na⁺ out, 2 K⁺ in. \"Salty outside, potassium inside\": think of the cell as a banana (potassium) floating in the salty sea.",
+      "clinical": "Digoxin, a drug used for some heart conditions, partially blocks the Na⁺/K⁺ pump in heart muscle cells, which indirectly increases calcium inside the cells and strengthens contraction. In familial hypercholesterolemia, LDL receptors are defective, so cells cannot take up cholesterol by receptor-mediated endocytosis and blood cholesterol rises.",
+      "figure": {
+        "file": "m03_na_k_pump.jpg",
+        "caption": "Read the pump from left to right: it binds sodium inside the cell, uses ATP to change shape and release the sodium outside, then binds potassium outside and releases it inside. The bars on the right show why this is active transport: both ions move toward the side where they are already more concentrated.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.9, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-1-the-cell-membrane"
+      }
+    },
+    {
+      "heading": "The Cell Cycle, Mitosis, and Cytokinesis",
+      "body": [
+        "The [b]cell cycle[/b] is the series of events from one cell division to the next. It has two major parts: interphase and the mitotic phase.",
+        "[b]Interphase[/b] is the longest part. The cell is not \"resting\": it grows, does its normal work, and prepares to divide.",
+        "- [b]G₁ (first gap)[/b]: the cell grows and makes organelles and proteins.",
+        "- [b]S (synthesis)[/b]: DNA is replicated, so each chromosome now has two identical copies called [b]sister chromatids[/b].",
+        "- [b]G₂ (second gap)[/b]: the cell finishes growing and makes the proteins needed for division.",
+        "Cells that stop dividing, such as most mature neurons, leave the cycle and enter a nondividing state often called G₀. Checkpoints along the cycle check for problems, such as damaged or incompletely copied DNA, before the cell continues.",
+        "The [b]mitotic phase[/b] includes [b]mitosis[/b] (division of the nucleus) and [b]cytokinesis[/b] (division of the cytoplasm). Mitosis produces two daughter nuclei that are genetically identical to the original. Hole's describes four phases; OpenStax adds a fifth, [i]prometaphase[/i], between prophase and metaphase.",
+        "- [b]Prophase[/b]: chromatin condenses into visible chromosomes, each made of two sister chromatids joined at a [b]centromere[/b]. Centrioles move toward opposite poles and the [b]spindle[/b] of microtubules forms. The nuclear envelope and nucleolus break down.",
+        "- [b]Metaphase[/b]: spindle fibers attach to the centromeres, and chromosomes line up along the middle of the cell (the metaphase plate or equator).",
+        "- [b]Anaphase[/b]: the centromeres separate, and the sister chromatids, now individual chromosomes, are pulled to opposite poles of the cell.",
+        "- [b]Telophase[/b]: chromosomes arrive at the poles and begin to uncoil into chromatin. A nuclear envelope forms around each set, nucleoli reappear, and the spindle disassembles.",
+        "[b]Cytokinesis[/b] usually begins during late anaphase or telophase. A ring of actin microfilaments contracts around the middle of the cell, forming a [b]cleavage furrow[/b] that pinches the cell into two daughter cells."
+      ],
+      "tip": "IPMAT: Interphase, Prophase, Metaphase, Anaphase, Telophase. Metaphase = Middle. Anaphase = Apart. Telophase = Two nuclei.",
+      "clinical": "Cancer is a disease of the cell cycle: cells divide uncontrollably because genes that control the checkpoints are mutated. Many chemotherapy drugs target dividing cells; some, such as the taxanes, interfere with microtubules of the spindle. This is also why chemotherapy affects other rapidly dividing cells, causing hair loss and digestive side effects.",
+      "figure": {
+        "file": "m03_mitosis.jpg",
+        "caption": "Track the chromosomes (red) through each stage: they condense in prophase, line up at the metaphase plate, separate to opposite poles in anaphase, and decondense inside new nuclear envelopes in telophase. OpenStax shows prometaphase as an extra stage that Hole's folds into prophase and metaphase.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.32, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-5-cell-growth-and-division"
+      }
+    },
+    {
+      "heading": "Cell Differentiation and Apoptosis",
+      "body": [
+        "Every cell in the body (except a few, such as mature red blood cells) contains the same genetic information, yet a neuron looks and works very differently from a skin cell. [b]Differentiation[/b] is the process by which cells become specialized. It happens because different cells [b]express different genes[/b], switching some genes on and others off.",
+        "[b]Stem cells[/b] are undifferentiated cells that can divide to produce more stem cells (self-renewal) and also produce cells that will specialize. [b]Progenitor cells[/b] are partly specialized daughters of stem cells; their offspring are restricted to certain cell types. Stem cells in bone marrow, for example, continually produce new blood cells.",
+        "Cell numbers are also controlled by cell death. [b]Apoptosis[/b] is programmed cell death: an orderly, genetically controlled process in which a cell shrinks, its DNA breaks into pieces, and it is broken into fragments that are engulfed by phagocytes. It does not cause inflammation. Apoptosis removes excess cells during development (for example, the webbing between fingers in the embryo), old or damaged cells, and cells with DNA damage that could otherwise become cancerous.",
+        "Apoptosis differs from [b]necrosis[/b], which is uncontrolled cell death caused by injury (such as loss of blood supply). In necrosis, cells swell and burst, releasing contents that trigger inflammation."
+      ],
+      "tip": "Apoptosis comes from a Greek word for leaves falling from a tree: a natural, planned, tidy loss. Necrosis is a messy accident.",
+      "clinical": "Many cancer cells survive because they evade apoptosis. Some cancer treatments work by restoring the cell's ability to trigger its own programmed death.",
+      "figure": {
+        "file": "m03_hematopoiesis.jpg",
+        "caption": "This family tree shows differentiation in the bone marrow. The stem cell at the top renews itself (the arrow looping back) and also produces myeloid and lymphoid progenitor cells, whose offspring are restricted to particular kinds of blood cells.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 3.34, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-6-cellular-differentiation"
+      }
+    }
+  ],
+  "flashcards": [
+    { "id": "m03_fc01", "term": "Fluid mosaic model", "definition": "Describes the plasma membrane as a fluid phospholipid bilayer with proteins scattered through it that can move laterally." },
+    { "id": "m03_fc02", "term": "Selectively permeable", "definition": "A membrane that lets some substances cross freely while restricting others." },
+    { "id": "m03_fc03", "term": "Integral vs peripheral proteins", "definition": "Integral: embedded in or spanning the bilayer (channels, carriers). Peripheral: loosely attached to the inner or outer surface." },
+    { "id": "m03_fc04", "term": "Glycocalyx", "definition": "Carbohydrate chains on the outer surface of the plasma membrane, used for cell recognition and adhesion." },
+    { "id": "m03_fc05", "term": "Tight junction / desmosome / gap junction", "definition": "Tight junction seals cells to prevent leaks. Desmosome rivets cells together. Gap junction forms channels for ions to pass between cells." },
+    { "id": "m03_fc06", "term": "Ribosome", "definition": "Organelle made of rRNA and protein; the site of protein synthesis. Free in cytosol or bound to rough ER." },
+    { "id": "m03_fc07", "term": "Rough ER", "definition": "Ribosome-studded membranes that make and modify proteins for membranes, lysosomes, or export." },
+    { "id": "m03_fc08", "term": "Smooth ER", "definition": "ER without ribosomes. Makes lipids and steroid hormones, detoxifies drugs in the liver, stores Ca²⁺ in muscle." },
+    { "id": "m03_fc09", "term": "Golgi apparatus", "definition": "Stack of flattened sacs that modifies, sorts, and packages proteins into vesicles for secretion or delivery." },
+    { "id": "m03_fc10", "term": "Mitochondria", "definition": "Double-membrane organelles where aerobic respiration produces most of the cell's ATP. Have folded inner membranes (cristae) and their own DNA." },
+    { "id": "m03_fc11", "term": "Lysosome", "definition": "Vesicle of digestive enzymes that breaks down worn-out organelles, engulfed bacteria, and debris." },
+    { "id": "m03_fc12", "term": "Peroxisome", "definition": "Vesicle with enzymes that break down fatty acids and detoxify substances like hydrogen peroxide (via catalase). Abundant in liver and kidney." },
+    { "id": "m03_fc13", "term": "Centrosome / centrioles", "definition": "Region near the nucleus with two centrioles; organizes microtubules and the mitotic spindle." },
+    { "id": "m03_fc14", "term": "Cilia vs flagella vs microvilli", "definition": "Cilia: short, many, move fluid over the surface. Flagellum: long, single, moves the cell (sperm). Microvilli: nonmotile folds that increase surface area." },
+    { "id": "m03_fc15", "term": "Nucleolus", "definition": "Dense region in the nucleus where rRNA is made and ribosomal subunits are assembled." },
+    { "id": "m03_fc16", "term": "Chromatin vs chromosome", "definition": "Chromatin: loosely coiled DNA and histone proteins in a nondividing cell. Chromosome: tightly condensed chromatin visible during division." },
+    { "id": "m03_fc17", "term": "Cytoskeleton filaments", "definition": "Microfilaments (actin, thinnest), intermediate filaments (tough, resist tension), microtubules (tubulin, hollow, thickest)." },
+    { "id": "m03_fc18", "term": "Simple diffusion", "definition": "Passive movement of molecules from higher to lower concentration. Small nonpolar molecules (O₂, CO₂) cross the bilayer this way." },
+    { "id": "m03_fc19", "term": "Facilitated diffusion", "definition": "Passive movement down a concentration gradient using a channel or carrier protein. Example: glucose entering most cells." },
+    { "id": "m03_fc20", "term": "Osmosis", "definition": "Diffusion of water across a selectively permeable membrane toward the side with the higher solute concentration." },
+    { "id": "m03_fc21", "term": "Filtration", "definition": "Hydrostatic pressure pushes water and small solutes through a membrane. Example: fluid leaving capillaries; kidney filtration." },
+    { "id": "m03_fc22", "term": "Isotonic solution", "definition": "Same solute concentration as the cell; no net water movement. Example: 0.9% NaCl." },
+    { "id": "m03_fc23", "term": "Hypotonic solution", "definition": "Lower solute concentration than the cell; water enters and the cell swells, possibly bursting (hemolysis in RBCs)." },
+    { "id": "m03_fc24", "term": "Hypertonic solution", "definition": "Higher solute concentration than the cell; water leaves and the cell shrinks (crenation in RBCs)." },
+    { "id": "m03_fc25", "term": "Active transport", "definition": "Movement of a substance against its concentration gradient using a carrier protein and ATP." },
+    { "id": "m03_fc26", "term": "Sodium-potassium pump", "definition": "Na⁺/K⁺ ATPase. Uses one ATP to move 3 Na⁺ out and 2 K⁺ into the cell." },
+    { "id": "m03_fc27", "term": "Phagocytosis / pinocytosis", "definition": "Phagocytosis: \"cell eating\", engulfing solid particles like bacteria. Pinocytosis: \"cell drinking\", taking in fluid droplets." },
+    { "id": "m03_fc28", "term": "Receptor-mediated endocytosis", "definition": "Selective endocytosis in which specific molecules bind membrane receptors before being taken into the cell. Example: LDL cholesterol." },
+    { "id": "m03_fc29", "term": "Exocytosis", "definition": "A vesicle fuses with the plasma membrane and releases its contents outside the cell. Used for secretion." },
+    { "id": "m03_fc30", "term": "Interphase stages", "definition": "G₁: growth. S: DNA replication. G₂: final growth and preparation for division." },
+    { "id": "m03_fc31", "term": "Phases of mitosis", "definition": "Prophase, metaphase, anaphase, telophase (OpenStax adds prometaphase after prophase). Followed by cytokinesis." },
+    { "id": "m03_fc32", "term": "Sister chromatids", "definition": "The two identical copies of a replicated chromosome, joined at the centromere until anaphase." },
+    { "id": "m03_fc33", "term": "Cytokinesis", "definition": "Division of the cytoplasm, by a contracting ring of actin that forms a cleavage furrow." },
+    { "id": "m03_fc34", "term": "Differentiation", "definition": "The process by which cells become specialized by expressing different genes, even though they carry the same DNA." },
+    { "id": "m03_fc35", "term": "Apoptosis", "definition": "Programmed, orderly cell death that removes unneeded or damaged cells without causing inflammation." }
+  ],
+  "quiz": [
+    {
+      "id": "m03_q01",
+      "type": "multiple_choice",
+      "prompt": "Which substance can cross the phospholipid bilayer by simple diffusion without a protein?",
+      "choices": ["Oxygen (O₂)", "Sodium ions (Na⁺)", "Glucose", "Potassium ions (K⁺)"],
+      "answer": 0,
+      "explanation": "O₂ is small and nonpolar, so it dissolves through the hydrophobic interior of the bilayer. Ions are charged and glucose is large and polar, so they need channels or carriers. Glucose is the tempting choice because it is a small fuel molecule, but it uses facilitated diffusion."
+    },
+    {
+      "id": "m03_q02",
+      "type": "multiple_choice",
+      "prompt": "A membrane glycoprotein that allows the immune system to recognize a cell as \"self\" is functioning as a(n):",
+      "choices": ["Cell recognition protein", "Channel protein", "Carrier protein", "Enzyme"],
+      "answer": 0,
+      "explanation": "Recognition (identity) proteins, often glycoproteins in the glycocalyx, act as markers of self. Channel and carrier proteins are tempting because they are also membrane proteins, but they move substances across the membrane rather than labeling the cell."
+    },
+    {
+      "id": "m03_q03",
+      "type": "multiple_choice",
+      "prompt": "Cells of the pancreas secrete large amounts of digestive enzymes, which are proteins. Which organelle pair would you expect to be especially abundant in these cells?",
+      "choices": ["Rough ER and Golgi apparatus", "Smooth ER and peroxisomes", "Lysosomes and centrioles", "Microvilli and cilia"],
+      "answer": 0,
+      "explanation": "Secreted proteins are made on ribosomes of the rough ER and then modified and packaged by the Golgi for exocytosis. Smooth ER is the tempting choice, but it makes lipids, not proteins."
+    },
+    {
+      "id": "m03_q04",
+      "type": "multiple_choice",
+      "prompt": "Which organelle contains digestive enzymes that break down worn-out organelles and engulfed bacteria?",
+      "choices": ["Lysosome", "Peroxisome", "Golgi apparatus", "Ribosome"],
+      "answer": 0,
+      "explanation": "Lysosomes are the cell's digestive and recycling compartments. Peroxisomes also contain enzymes, but they mainly break down fatty acids and detoxify hydrogen peroxide rather than digesting organelles and bacteria."
+    },
+    {
+      "id": "m03_q05",
+      "type": "multiple_choice",
+      "prompt": "Liver cells of a person who drinks alcohol heavily develop more of which organelle, to help detoxify the alcohol?",
+      "choices": ["Smooth ER", "Rough ER", "Nucleolus", "Centrosome"],
+      "answer": 0,
+      "explanation": "Smooth ER contains enzymes that detoxify alcohol and many drugs, and it expands in liver cells with heavy use. Peroxisomes also help detoxify, but among these choices smooth ER is correct; rough ER is mainly for protein synthesis."
+    },
+    {
+      "id": "m03_q06",
+      "type": "multiple_choice",
+      "prompt": "Where are ribosomal subunits assembled?",
+      "choices": ["Nucleolus", "Golgi apparatus", "Rough ER", "Mitochondria"],
+      "answer": 0,
+      "explanation": "The nucleolus makes ribosomal RNA and assembles ribosomal subunits, which leave the nucleus through nuclear pores. Rough ER is tempting because ribosomes attach to it, but it does not build them."
+    },
+    {
+      "id": "m03_q07",
+      "type": "multiple_choice",
+      "prompt": "Which cytoskeletal element forms the mitotic spindle?",
+      "choices": ["Microtubules", "Microfilaments", "Intermediate filaments", "Microvilli"],
+      "answer": 0,
+      "explanation": "The spindle is made of microtubules (tubulin), which also form centrioles, cilia, and flagella. Microfilaments (actin) are tempting because they also act during division, but they form the contractile ring of cytokinesis, not the spindle."
+    },
+    {
+      "id": "m03_q08",
+      "type": "multiple_choice",
+      "prompt": "Glucose moves into most body cells down its concentration gradient using a carrier protein and no ATP. This is:",
+      "choices": ["Facilitated diffusion", "Active transport", "Simple diffusion", "Pinocytosis"],
+      "answer": 0,
+      "explanation": "Movement down a gradient is passive, and using a carrier protein makes it facilitated diffusion. Active transport also uses carriers, which makes it tempting, but it moves substances against their gradient and requires ATP."
+    },
+    {
+      "id": "m03_q09",
+      "type": "multiple_choice",
+      "prompt": "A patient's IV fluid causes their red blood cells to shrink. The solution was:",
+      "choices": ["Hypertonic", "Hypotonic", "Isotonic", "Normal saline"],
+      "answer": 0,
+      "explanation": "Cells shrink (crenate) when the surrounding solution has a higher solute concentration, so water leaves the cell by osmosis. Hypotonic is the common mix-up; it would make the cells swell. Normal saline is isotonic and would cause no change."
+    },
+    {
+      "id": "m03_q10",
+      "type": "multiple_choice",
+      "prompt": "Red blood cells are placed in distilled water. What happens?",
+      "choices": ["Water enters the cells and they may burst", "Water leaves the cells and they shrink", "There is no net water movement", "Salt moves out of the cells until they shrink"],
+      "answer": 0,
+      "explanation": "Distilled water is hypotonic to cells, so water moves into the cells by osmosis, causing swelling and hemolysis. Remember that water moves toward higher solute concentration, which here is inside the cell."
+    },
+    {
+      "id": "m03_q11",
+      "type": "true_false",
+      "prompt": "In osmosis, water moves toward the side of the membrane with the higher solute concentration.",
+      "answer": true,
+      "explanation": "Water moves from where water is more concentrated (fewer solutes) to where it is less concentrated (more solutes). The shortcut is \"water follows solute\"."
+    },
+    {
+      "id": "m03_q12",
+      "type": "multiple_choice",
+      "prompt": "For each ATP it uses, the sodium-potassium pump moves:",
+      "choices": ["3 Na⁺ out and 2 K⁺ in", "2 Na⁺ out and 3 K⁺ in", "3 Na⁺ in and 2 K⁺ out", "1 Na⁺ out and 1 K⁺ in"],
+      "answer": 0,
+      "explanation": "The pump moves 3 sodium ions out and 2 potassium ions in, keeping Na⁺ high outside and K⁺ high inside the cell. The reversed version (2 out, 3 in) is the most common mistake; remember that sodium, the bigger number, leaves."
+    },
+    {
+      "id": "m03_q13",
+      "type": "true_false",
+      "prompt": "Facilitated diffusion requires ATP because it uses a membrane protein.",
+      "answer": false,
+      "explanation": "Facilitated diffusion is passive: the protein simply provides a path, and the substance moves down its own concentration gradient. Using a protein does not by itself mean energy is used; what requires ATP is moving a substance against its gradient."
+    },
+    {
+      "id": "m03_q14",
+      "type": "multiple_choice",
+      "prompt": "A white blood cell engulfs a bacterium by wrapping its membrane around it. This process is:",
+      "choices": ["Phagocytosis", "Pinocytosis", "Exocytosis", "Facilitated diffusion"],
+      "answer": 0,
+      "explanation": "Phagocytosis (\"cell eating\") engulfs large solid particles. Pinocytosis is also a form of endocytosis, which makes it tempting, but it takes in fluid droplets, not whole cells. The vesicle formed by phagocytosis then fuses with a lysosome."
+    },
+    {
+      "id": "m03_q15",
+      "type": "multiple_choice",
+      "prompt": "A neuron releases neurotransmitter by fusing vesicles with its plasma membrane. This is:",
+      "choices": ["Exocytosis", "Endocytosis", "Osmosis", "Filtration"],
+      "answer": 0,
+      "explanation": "Exocytosis moves material out of the cell by vesicle fusion with the plasma membrane. Endocytosis is the reverse, bringing material in."
+    },
+    {
+      "id": "m03_q16",
+      "type": "multiple_choice",
+      "prompt": "During which phase of the cell cycle is DNA replicated?",
+      "choices": ["S phase of interphase", "Prophase", "G₁ phase", "Anaphase"],
+      "answer": 0,
+      "explanation": "DNA is copied during the S (synthesis) phase of interphase, before mitosis begins. Prophase is a common wrong answer because that is when chromosomes become visible as two chromatids, but the copying happened earlier."
+    },
+    {
+      "id": "m03_q17",
+      "type": "multiple_choice",
+      "prompt": "In which phase of mitosis do sister chromatids separate and move to opposite poles?",
+      "choices": ["Anaphase", "Metaphase", "Telophase", "Prophase"],
+      "answer": 0,
+      "explanation": "In anaphase the centromeres split and chromatids are pulled apart. Metaphase is the tempting choice because spindle fibers are attached then, but in metaphase chromosomes are only lined up at the middle."
+    },
+    {
+      "id": "m03_q18",
+      "type": "ordering",
+      "prompt": "Put the phases of mitosis in order (using the four-phase model).",
+      "items": ["Prophase", "Metaphase", "Anaphase", "Telophase"],
+      "explanation": "Prophase: chromosomes condense and the spindle forms. Metaphase: chromosomes line up in the middle. Anaphase: chromatids pull apart. Telophase: nuclei re-form. OpenStax inserts prometaphase between prophase and metaphase, but the order of these four does not change."
+    },
+    {
+      "id": "m03_q19",
+      "type": "ordering",
+      "prompt": "Put the stages of the cell cycle in order, starting right after a cell is formed by division.",
+      "items": ["G₁ phase", "S phase", "G₂ phase", "Mitosis", "Cytokinesis"],
+      "explanation": "A new cell grows in G₁, replicates its DNA in S, prepares for division in G₂, divides its nucleus in mitosis, and divides its cytoplasm in cytokinesis. Cytokinesis often overlaps the end of mitosis, but it finishes last."
+    },
+    {
+      "id": "m03_q20",
+      "type": "ordering",
+      "prompt": "Put the path of a secreted protein in order, from where it is made to its release.",
+      "items": ["Ribosome on rough ER", "Transport vesicle", "Golgi apparatus", "Secretory vesicle", "Exocytosis at the plasma membrane"],
+      "explanation": "The protein is made on ribosomes attached to rough ER, carried in a transport vesicle to the Golgi, modified and packaged into a secretory vesicle, and released when that vesicle fuses with the plasma membrane. A frequent mistake is placing the Golgi before the rough ER."
+    },
+    {
+      "id": "m03_q21",
+      "type": "true_false",
+      "prompt": "A skin cell and a neuron from the same person contain the same genes but express different ones.",
+      "answer": true,
+      "explanation": "Differentiation comes from differential gene expression, not from having different DNA. Each specialized cell turns on the genes it needs for its role and silences others."
+    },
+    {
+      "id": "m03_q22",
+      "type": "multiple_choice",
+      "prompt": "During embryonic development, the cells of the webbing between the fingers die in an orderly way without inflammation. This process is:",
+      "choices": ["Apoptosis", "Necrosis", "Differentiation", "Cytokinesis"],
+      "answer": 0,
+      "explanation": "Apoptosis is programmed, orderly cell death; the fragments are cleaned up by phagocytes without inflammation. Necrosis is the tempting choice because it is also cell death, but it is caused by injury and does trigger inflammation."
+    },
+    {
+      "id": "m03_q23",
+      "type": "multiple_choice",
+      "prompt": "Which structure increases the surface area of intestinal cells for absorption but does not beat or move fluid?",
+      "choices": ["Microvilli", "Cilia", "Flagella", "Centrioles"],
+      "answer": 0,
+      "explanation": "Microvilli are nonmotile folds of the plasma membrane supported by actin. Cilia are the tempting answer because they are also surface projections, but cilia beat to move fluid and are built from microtubules."
+    },
+    {
+      "id": "m03_q24",
+      "type": "multiple_choice",
+      "prompt": "Which type of cell junction allows ions to pass directly between neighboring heart muscle cells?",
+      "choices": ["Gap junction", "Tight junction", "Desmosome", "Glycocalyx"],
+      "answer": 0,
+      "explanation": "Gap junctions form protein channels that connect the cytoplasm of adjacent cells, letting electrical signals spread. Desmosomes are also abundant in heart muscle, but they hold cells together mechanically rather than allowing ions to pass. Tight junctions seal cells to prevent leakage."
+    }
+  ]
+}

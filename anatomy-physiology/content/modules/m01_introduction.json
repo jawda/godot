@@ -1,0 +1,414 @@
+{
+  "id": "m01_introduction",
+  "order": 1,
+  "course": "A&P I",
+  "title": "Introduction to Anatomy & Physiology",
+  "summary": "Levels of organization, homeostasis, and the shared vocabulary of directions, planes, cavities, and regions used for the rest of the course.",
+  "objectives": [
+    "List the levels of organization from atom to organism and give an example of each",
+    "Describe the characteristics of life and the requirements organisms need to survive",
+    "Explain how a homeostatic mechanism works using receptor, control center, and effector",
+    "Distinguish negative from positive feedback and give body examples of each",
+    "Describe anatomical position and use directional terms correctly",
+    "Identify sagittal, transverse, and frontal planes and the sections they produce",
+    "Name the body cavities, the organs they contain, and the serous membranes that line them",
+    "Locate organs using the nine abdominopelvic regions and the four quadrants",
+    "Match common regional terms to the body parts they describe"
+  ],
+  "lesson": [
+    {
+      "heading": "Anatomy, Physiology, and Levels of Organization",
+      "body": [
+        "[b]Anatomy[/b] is the study of body structure: what parts exist and where they are. [b]Physiology[/b] is the study of body function: what those parts do and how they do it. The two cannot really be separated, because structure determines function. The thin walls of lung air sacs, for example, exist because gases must diffuse across them quickly. This idea, often called the [i]complementarity of structure and function[/i], shows up in every chapter of the course.",
+        "The body is organized in a hierarchy, with each level built from the one below it:",
+        "- [b]Atoms[/b]: the smallest units of an element, such as carbon, hydrogen, and oxygen.",
+        "- [b]Molecules[/b]: two or more atoms bonded together, such as water or glucose. Very large molecules such as proteins and DNA are called [b]macromolecules[/b].",
+        "- [b]Organelles[/b]: specialized structures inside a cell, such as mitochondria and the nucleus.",
+        "- [b]Cells[/b]: the basic units of structure and function in living things. The cell is the smallest level that is considered alive.",
+        "- [b]Tissues[/b]: groups of similar cells working together. There are four basic types: epithelial, connective, muscle, and nervous.",
+        "- [b]Organs[/b]: two or more tissue types combined into a structure with a specific function, such as the stomach or the skin.",
+        "- [b]Organ systems[/b]: groups of organs that work together, such as the digestive system.",
+        "- [b]Organism[/b]: the complete living individual.",
+        "Hole's lists the levels as atom, molecule, macromolecule, organelle, cell, tissue, organ, organ system, organism. OpenStax groups atoms and molecules together as the [i]chemical level[/i]. Both describe the same idea; know the full list for exams."
+      ],
+      "tip": "Build it like a house: atoms are the raw materials, molecules are bricks, organelles are rooms' fixtures, cells are rooms, tissues are walls, organs are whole floors, organ systems are the plumbing or wiring that run through the house, and the organism is the finished house. Each level is the one before it, grouped and organized.",
+      "clinical": "Diseases can be traced through the levels. In sickle cell disease, a single change in one molecule (hemoglobin) changes the shape of red blood cells, which damages tissues and organs throughout the body.",
+      "figure": {
+        "file": "m01_levels.jpg",
+        "caption": "Read the pyramid from the top down: atoms bond into molecules, molecules build the cell, similar cells form a tissue, tissues form an organ, organs form an organ system, and systems form the organism. OpenStax groups atoms and molecules into one chemical level and places organelles inside the cellular level; Hole's lists macromolecules and organelles as separate levels.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 1.3, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-2-structural-organization-of-the-human-body"
+      }
+    },
+    {
+      "heading": "Characteristics and Requirements of Life",
+      "body": [
+        "Living organisms share a set of characteristics. Hole's lists them as:",
+        "- [b]Movement[/b]: change in position of the body or its parts, including internal movement such as blood flow.",
+        "- [b]Responsiveness[/b]: sensing and reacting to changes inside or outside the body.",
+        "- [b]Growth[/b]: increase in body size without major change in shape.",
+        "- [b]Reproduction[/b]: producing new cells (for growth and repair) or new organisms.",
+        "- [b]Respiration[/b]: obtaining oxygen, using it to release energy from nutrients, and removing carbon dioxide.",
+        "- [b]Digestion[/b]: breaking down food into simpler molecules that can be absorbed.",
+        "- [b]Absorption[/b]: passage of substances through membranes into body fluids.",
+        "- [b]Circulation[/b]: movement of substances through the body in body fluids.",
+        "- [b]Assimilation[/b]: changing absorbed substances into chemically different forms.",
+        "- [b]Excretion[/b]: removal of wastes produced by metabolic reactions.",
+        "Together, all of the chemical reactions in the body are called [b]metabolism[/b]. OpenStax uses a shorter list: organization, metabolism, responsiveness, movement, growth, development, and reproduction. The ideas overlap; your instructor's list is the one to memorize.",
+        "To stay alive, an organism also needs certain things from its environment: [b]water[/b] (the most abundant substance in the body and the medium for most reactions), [b]food[/b] (nutrients for energy and building materials), [b]oxygen[/b] (to release energy from nutrients), [b]heat[/b] (a form of energy that helps control the rate of chemical reactions), and appropriate [b]pressure[/b] (atmospheric pressure for breathing and hydrostatic pressure, such as blood pressure, to move fluids)."
+      ],
+      "clinical": "Hypothermia shows why heat is a requirement: as body temperature falls, metabolic reactions slow, which produces even less heat. Without outside warming, this can become life threatening."
+    },
+    {
+      "heading": "Homeostasis and Homeostatic Mechanisms",
+      "body": [
+        "[b]Homeostasis[/b] is the maintenance of a relatively stable internal environment. \"Relatively\" matters: values such as body temperature, blood glucose, and blood pressure are not fixed. They fluctuate within a narrow normal range around a [b]set point[/b]. This is often called a [i]dynamic equilibrium[/i].",
+        "Most homeostatic mechanisms share three components:",
+        "- [b]Receptor[/b] (sensor): detects a change in a variable, called a stimulus. Example: temperature-sensitive nerve cells in the skin and brain.",
+        "- [b]Control center[/b]: compares the incoming information to the set point and decides on a response. Often this is the brain, especially the hypothalamus, but it can also be an endocrine gland.",
+        "- [b]Effector[/b]: a muscle or gland that carries out the response and changes the variable. Examples: sweat glands, skeletal muscles that shiver, smooth muscle in blood vessel walls.",
+        "Information moves from receptor to control center along an afferent pathway, and from control center to effector along an efferent pathway. The nervous system and the endocrine system are the two main communication systems that carry out homeostatic control."
+      ],
+      "tip": "Think of a home thermostat. The thermometer inside it is the receptor, the thermostat setting is the set point, the thermostat's logic is the control center, and the furnace or air conditioner is the effector.",
+      "figure": {
+        "file": "m01_neg_feedback.jpg",
+        "caption": "Match each box to the three components: the sensor (receptor) detects the stimulus, the control center compares it to the set point, and the effector produces the response. In the temperature example, nerve cells are the receptors, the brain is the control center, and sweat glands are the effectors.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 1.10, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-5-homeostasis"
+      }
+    },
+    {
+      "heading": "Negative and Positive Feedback",
+      "body": [
+        "[b]Negative feedback[/b] is the most common homeostatic mechanism. The response [i]reverses or opposes[/i] the original change, moving the variable back toward its set point. Once the variable returns to normal, the stimulus is removed and the response shuts off.",
+        "- [b]Body temperature[/b]: if temperature rises, the hypothalamus triggers sweating and dilation of skin blood vessels, which release heat. If temperature falls, it triggers shivering and constriction of skin blood vessels, which conserve heat.",
+        "- [b]Blood glucose[/b]: after a meal, rising glucose stimulates the pancreas to release [b]insulin[/b], which helps cells take up glucose and lowers blood glucose. Between meals, falling glucose triggers release of [b]glucagon[/b], which raises blood glucose.",
+        "- [b]Blood pressure[/b]: if blood pressure rises, receptors in large arteries signal the brain, which slows the heart and dilates blood vessels so pressure falls back toward normal.",
+        "[b]Positive feedback[/b] does the opposite: the response [i]reinforces or amplifies[/i] the original change, so the change grows larger. Positive feedback does not maintain a set point. It is used for processes that must be pushed to completion quickly, and it ends when some outside event stops the cycle.",
+        "- [b]Childbirth[/b]: the baby's head stretches the cervix, which signals the brain to release [b]oxytocin[/b]. Oxytocin strengthens uterine contractions, which push the baby harder against the cervix, causing more stretch and more oxytocin. The cycle ends with delivery.",
+        "- [b]Blood clotting[/b]: platelets at a damaged vessel release chemicals that attract more platelets, which release more chemicals. The cycle ends when the clot seals the vessel.",
+        "- [b]Milk ejection[/b] during breastfeeding: suckling triggers oxytocin release, which ejects milk, which encourages more suckling."
+      ],
+      "tip": "Negative feedback Negates the change. Positive feedback Pushes the change further. If the question describes a process that ends with an event (birth, a sealed clot), think positive.",
+      "clinical": "Many diseases are failures of homeostasis. In type 1 diabetes, the pancreas produces little or no insulin, so the negative feedback loop that lowers blood glucose cannot work. Some positive feedback loops become harmful when they are not stopped; for example, severe blood loss can lower blood pressure so much that the heart itself is poorly supplied, which weakens it and lowers pressure further.",
+      "figure": {
+        "file": "m01_pos_feedback.jpg",
+        "caption": "Follow the arrows around the loop: stretch of the cervix leads to oxytocin release, which strengthens contractions, which causes more stretch. Notice that nothing in the loop reverses the change; it keeps amplifying until delivery ends it.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 1.11, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-5-homeostasis"
+      }
+    },
+    {
+      "heading": "Anatomical Position and Directional Terms",
+      "body": [
+        "All anatomical descriptions assume the body is in [b]anatomical position[/b]: standing upright, facing forward, feet flat and slightly apart, arms at the sides, and [b]palms facing forward[/b] with thumbs pointing away from the body. Directions are always described from the [i]patient's[/i] point of view, so the patient's right side is on your left when you face them.",
+        "Directional terms come in opposite pairs:",
+        "- [b]Superior[/b] (toward the head or upper part) vs [b]inferior[/b] (away from the head, lower). The nose is superior to the mouth.",
+        "- [b]Anterior[/b] or [b]ventral[/b] (toward the front) vs [b]posterior[/b] or [b]dorsal[/b] (toward the back). The sternum is anterior to the heart.",
+        "- [b]Medial[/b] (toward the midline) vs [b]lateral[/b] (away from the midline). The nose is medial to the eyes; the ears are lateral to the eyes.",
+        "- [b]Proximal[/b] (closer to the point of attachment of a limb to the trunk) vs [b]distal[/b] (farther from that point). The elbow is proximal to the wrist. These terms are used mainly for limbs.",
+        "- [b]Superficial[/b] (toward the body surface) vs [b]deep[/b] (away from the surface). The skin is superficial to the skeletal muscles.",
+        "- [b]Bilateral[/b] means paired structures on both sides (the kidneys). [b]Ipsilateral[/b] means on the same side; [b]contralateral[/b] means on opposite sides. The right arm and right leg are ipsilateral; the right arm and left leg are contralateral."
+      ],
+      "tip": "Proximal sounds like \"proximity\": close to where the limb attaches. Distal sounds like \"distant\". Medial sounds like \"middle\".",
+      "clinical": "Contralateral matters in neurology. Most motor pathways cross, so a stroke in the left side of the brain usually causes weakness on the right side of the body.",
+      "figure": {
+        "file": "m01_directional.jpg",
+        "caption": "The front view is in anatomical position, with palms facing forward, and right and left are the subject's own sides. Notice that proximal and distal are drawn along the limbs, while medial and lateral are measured from the body's midline. Cranial and caudal are alternative terms for superior and inferior.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 1.13, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-6-anatomical-terminology"
+      }
+    },
+    {
+      "heading": "Body Planes and Sections",
+      "body": [
+        "A [b]plane[/b] is an imaginary flat surface used to cut the body or an organ. The cut surface produced is called a [b]section[/b]. Medical imaging such as CT and MRI displays the body as sections along these planes.",
+        "- [b]Sagittal plane[/b]: a vertical plane dividing the body into [b]right and left[/b] parts. A [b]midsagittal[/b] (median) plane passes exactly through the midline, producing equal halves. A [b]parasagittal[/b] plane is off center, producing unequal right and left parts.",
+        "- [b]Frontal (coronal) plane[/b]: a vertical plane dividing the body into [b]anterior and posterior[/b] parts.",
+        "- [b]Transverse (horizontal) plane[/b]: divides the body into [b]superior and inferior[/b] parts. A transverse section is also called a cross section.",
+        "Organs such as tubes and blood vessels can also be described by longitudinal sections (along the long axis), cross sections (perpendicular to the long axis), and oblique sections (at an angle)."
+      ],
+      "tip": "Coronal and frontal: a crown (corona) sits on your head running ear to ear, which is the line of a frontal plane. Sagittal: an arrow (Latin sagitta) shot straight at you from the front would split you right and left.",
+      "figure": {
+        "file": "m01_planes.jpg",
+        "caption": "The sagittal plane separates right from left, the frontal (coronal) plane separates front from back, and the transverse plane separates top from bottom. The sagittal plane drawn here runs through the midline, so it is a midsagittal plane.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 1.14, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-6-anatomical-terminology"
+      }
+    },
+    {
+      "heading": "Body Cavities and Serous Membranes",
+      "body": [
+        "Hole's divides the body's major cavities into two groups. OpenStax uses the terms posterior (for dorsal) and anterior (for ventral).",
+        "- [b]Dorsal cavity[/b]: the [b]cranial cavity[/b], which houses the brain, and the [b]vertebral canal[/b] (spinal cavity), which houses the spinal cord. Both are surrounded by bone and lined by membranes called meninges.",
+        "- [b]Ventral cavity[/b]: the larger [b]thoracic cavity[/b] and [b]abdominopelvic cavity[/b], separated by the dome-shaped [b]diaphragm[/b] muscle.",
+        "The thoracic cavity contains the two [b]pleural cavities[/b] (around the lungs) and the [b]mediastinum[/b], the central region between the lungs. The mediastinum contains the heart (inside the [b]pericardial cavity[/b]), the esophagus, trachea, thymus, and large blood vessels.",
+        "The abdominopelvic cavity has an upper [b]abdominal cavity[/b] (stomach, liver, spleen, gallbladder, most of the small and large intestines) and a lower [b]pelvic cavity[/b] (urinary bladder, internal reproductive organs, and the end of the large intestine). There is no wall between them. The head also contains smaller cavities: oral, nasal, orbital, and middle ear cavities.",
+        "The walls of the ventral cavity and the surfaces of its organs are covered by [b]serous membranes[/b], thin double-layered membranes that secrete watery [b]serous fluid[/b]. The [b]parietal[/b] layer lines the cavity wall, and the [b]visceral[/b] layer covers the organ surface. The thin potential space between them holds serous fluid, which reduces friction as organs move.",
+        "- [b]Pleura[/b]: parietal pleura lines the thoracic wall; visceral pleura covers each lung.",
+        "- [b]Pericardium[/b]: parietal pericardium forms a sac around the heart; visceral pericardium covers the heart surface.",
+        "- [b]Peritoneum[/b]: parietal peritoneum lines the abdominopelvic wall; visceral peritoneum covers many abdominal organs."
+      ],
+      "tip": "Picture pushing your fist (the organ) into a partly inflated balloon (the serous membrane). The layer touching your fist is visceral; the outer layer is parietal; the air inside is the serous cavity. Visceral = viscera (organs). Parietal = paries (wall).",
+      "clinical": "Inflammation of a serous membrane makes the layers rub painfully: pleurisy (pleura), pericarditis (pericardium), and peritonitis (peritoneum). Peritonitis is a serious risk after a ruptured appendix.",
+      "figure": {
+        "file": "m01_cavities.jpg",
+        "caption": "The dorsal cavity (cranial cavity plus the vertebral cavity, which Hole's calls the vertebral canal) sits along the back, and the ventral cavity is in front. Notice how the diaphragm separates the thoracic cavity, with its pleural cavities and mediastinum, from the abdominopelvic cavity below.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 1.15, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-6-anatomical-terminology"
+      }
+    },
+    {
+      "heading": "Abdominopelvic Regions and Quadrants",
+      "body": [
+        "The abdominopelvic area can be divided in two ways to describe where organs are or where pain is felt.",
+        "[b]Four quadrants[/b] (used most often in clinical practice): two lines cross at the umbilicus, producing the right upper quadrant (RUQ), left upper quadrant (LUQ), right lower quadrant (RLQ), and left lower quadrant (LLQ). Right and left are the patient's right and left.",
+        "[b]Nine regions[/b] (used more often in anatomy): two vertical lines and two horizontal lines form a tic-tac-toe grid.",
+        "- Top row: [b]right hypochondriac[/b], [b]epigastric[/b], [b]left hypochondriac[/b].",
+        "- Middle row: [b]right lumbar[/b], [b]umbilical[/b], [b]left lumbar[/b].",
+        "- Bottom row: [b]right iliac (inguinal)[/b], [b]hypogastric (pubic)[/b], [b]left iliac (inguinal)[/b].",
+        "Useful landmarks: most of the liver and the gallbladder are in the right hypochondriac region and RUQ. Most of the stomach and the spleen are on the left, in the epigastric and left hypochondriac regions (LUQ). The appendix is usually in the right iliac region (RLQ). The urinary bladder sits in the hypogastric region when full."
+      ],
+      "tip": "Hypo- means below and chondr- means cartilage: the hypochondriac regions are just below the cartilage of the lower ribs. Epi- means upon or over, and gastr- means stomach, so the epigastric region sits over the stomach.",
+      "clinical": "Appendicitis classically begins as vague pain near the umbilicus and then moves to the RLQ. Gallbladder pain is typically felt in the RUQ.",
+      "figure": {
+        "file": "m01_regions_quadrants.jpg",
+        "caption": "Compare the nine-region grid on the left with the four quadrants on the right, both labeled from the patient's point of view. Notice that the liver sits mostly in the right hypochondriac region and RUQ, and that the iliac regions are what Hole's also calls the inguinal regions.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 1.16, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-6-anatomical-terminology"
+      }
+    },
+    {
+      "heading": "Regional Terms",
+      "body": [
+        "Regional terms name specific areas of the body. Many are adjectives used in the names of bones, muscles, nerves, and vessels, so learning them now pays off later.",
+        "- Head and neck: [b]cephalic[/b] (head), [b]cranial[/b] (skull), [b]frontal[/b] (forehead), [b]orbital[/b] (eye area), [b]otic[/b] (ear), [b]nasal[/b] (nose), [b]oral[/b] (mouth), [b]buccal[/b] (cheek), [b]mental[/b] (chin), [b]occipital[/b] (back of head), [b]cervical[/b] (neck).",
+        "- Trunk: [b]sternal[/b] (middle of chest), [b]pectoral[/b] (chest), [b]mammary[/b] (breast), [b]costal[/b] (ribs), [b]axillary[/b] (armpit), [b]abdominal[/b] or [b]celiac[/b] (abdomen), [b]umbilical[/b] (navel), [b]inguinal[/b] (groin), [b]pelvic[/b] (pelvis), [b]vertebral[/b] (spine), [b]lumbar[/b] (lower back), [b]sacral[/b] (between the hips at the base of the spine), [b]gluteal[/b] (buttocks), [b]perineal[/b] (region between the anus and external genitalia).",
+        "- Upper limb: [b]brachial[/b] (arm, shoulder to elbow), [b]antecubital[/b] (front of elbow), [b]cubital[/b] (elbow), [b]antebrachial[/b] (forearm), [b]carpal[/b] (wrist), [b]palmar[/b] (palm), [b]digital[/b] (fingers or toes).",
+        "- Lower limb: [b]coxal[/b] (hip), [b]femoral[/b] (thigh), [b]patellar[/b] (front of knee), [b]popliteal[/b] (back of knee), [b]crural[/b] (leg, front of the lower leg), [b]sural[/b] (calf), [b]tarsal[/b] (ankle), [b]pedal[/b] (foot), [b]plantar[/b] (sole of foot).",
+        "Note that in anatomy, \"arm\" means only the part from shoulder to elbow and \"leg\" means only the part from knee to ankle."
+      ],
+      "tip": "Ante- means before or in front: antecubital is in front of the elbow, antebrachial comes before (distal to) the brachium. Plantar: you plant your soles on the ground.",
+      "clinical": "The antecubital region is the usual site for drawing blood because the median cubital vein lies close to the surface there. The femoral and popliteal regions are common sites for checking pulses in the lower limb.",
+      "figure": {
+        "file": "m01_regional_terms.jpg",
+        "caption": "Each label gives the Latin name of the area and, in parentheses, the adjective you will see in later names, such as brachium (brachial) and popliteus (popliteal). Note that brachium is the arm from shoulder to elbow and crus is the leg from knee to ankle.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 1.12, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-6-anatomical-terminology"
+      }
+    }
+  ],
+  "flashcards": [
+    { "id": "m01_fc01", "term": "Anatomy", "definition": "The study of body structure: the parts of the body and their relationships to one another." },
+    { "id": "m01_fc02", "term": "Physiology", "definition": "The study of body function: how the parts of the body work and carry out life-sustaining activities." },
+    { "id": "m01_fc03", "term": "Levels of organization (in order)", "definition": "Atom, molecule, macromolecule, organelle, cell, tissue, organ, organ system, organism." },
+    { "id": "m01_fc04", "term": "Tissue", "definition": "A group of similar cells that perform a common function. The four types are epithelial, connective, muscle, and nervous." },
+    { "id": "m01_fc05", "term": "Organ", "definition": "A structure made of two or more tissue types that performs a specific function, such as the heart or stomach." },
+    { "id": "m01_fc06", "term": "Metabolism", "definition": "The sum of all chemical reactions in the body, including building up (anabolism) and breaking down (catabolism)." },
+    { "id": "m01_fc07", "term": "Assimilation", "definition": "Changing absorbed substances into chemically different forms the body can use." },
+    { "id": "m01_fc08", "term": "Homeostasis", "definition": "Maintenance of a relatively stable internal environment, with variables kept within a narrow range around a set point." },
+    { "id": "m01_fc09", "term": "Set point", "definition": "The normal value or target around which a homeostatic variable is maintained, such as about 37 °C for body temperature." },
+    { "id": "m01_fc10", "term": "Receptor (homeostasis)", "definition": "The component of a homeostatic mechanism that detects a change (stimulus) and sends information to the control center." },
+    { "id": "m01_fc11", "term": "Control center", "definition": "The component that compares input to the set point and directs a response. Often the brain (hypothalamus) or an endocrine gland." },
+    { "id": "m01_fc12", "term": "Effector", "definition": "A muscle or gland that carries out the response that changes the regulated variable." },
+    { "id": "m01_fc13", "term": "Negative feedback", "definition": "A response that reverses the original change and returns the variable toward its set point. Examples: body temperature, blood glucose, blood pressure." },
+    { "id": "m01_fc14", "term": "Positive feedback", "definition": "A response that amplifies the original change. It ends with an outside event. Examples: childbirth contractions (oxytocin), blood clotting, milk ejection." },
+    { "id": "m01_fc15", "term": "Anatomical position", "definition": "Standing upright, facing forward, feet flat, arms at the sides with palms facing forward and thumbs pointing away from the body." },
+    { "id": "m01_fc16", "term": "Proximal / distal", "definition": "Proximal: closer to where a limb attaches to the trunk. Distal: farther from that attachment point." },
+    { "id": "m01_fc17", "term": "Medial / lateral", "definition": "Medial: toward the midline of the body. Lateral: away from the midline." },
+    { "id": "m01_fc18", "term": "Superficial / deep", "definition": "Superficial: toward the body surface. Deep: away from the body surface, more internal." },
+    { "id": "m01_fc19", "term": "Ipsilateral / contralateral", "definition": "Ipsilateral: on the same side of the body. Contralateral: on opposite sides." },
+    { "id": "m01_fc20", "term": "Sagittal plane", "definition": "A vertical plane dividing the body into right and left parts. Midsagittal makes equal halves; parasagittal makes unequal parts." },
+    { "id": "m01_fc21", "term": "Frontal (coronal) plane", "definition": "A vertical plane dividing the body into anterior (front) and posterior (back) parts." },
+    { "id": "m01_fc22", "term": "Transverse (horizontal) plane", "definition": "A plane dividing the body into superior and inferior parts. Produces a cross section." },
+    { "id": "m01_fc23", "term": "Dorsal cavity", "definition": "Contains the cranial cavity (brain) and the vertebral canal (spinal cord). Called the posterior cavity in OpenStax." },
+    { "id": "m01_fc24", "term": "Mediastinum", "definition": "The central region of the thoracic cavity between the lungs. Contains the heart, esophagus, trachea, thymus, and large vessels." },
+    { "id": "m01_fc25", "term": "Diaphragm", "definition": "The dome-shaped muscle that separates the thoracic cavity from the abdominopelvic cavity." },
+    { "id": "m01_fc26", "term": "Parietal vs visceral membrane", "definition": "Parietal layer lines the wall of a body cavity. Visceral layer covers the surface of an organ. Serous fluid between them reduces friction." },
+    { "id": "m01_fc27", "term": "Serous membranes (three)", "definition": "Pleura (lungs), pericardium (heart), and peritoneum (abdominopelvic organs)." },
+    { "id": "m01_fc28", "term": "Nine abdominopelvic regions", "definition": "Top: right hypochondriac, epigastric, left hypochondriac. Middle: right lumbar, umbilical, left lumbar. Bottom: right iliac (inguinal), hypogastric (pubic), left iliac (inguinal)." },
+    { "id": "m01_fc29", "term": "Antecubital", "definition": "The anterior (front) surface of the elbow. A common site for blood draws." },
+    { "id": "m01_fc30", "term": "Popliteal", "definition": "The posterior (back) surface of the knee." },
+    { "id": "m01_fc31", "term": "Brachial / antebrachial", "definition": "Brachial: the arm, from shoulder to elbow. Antebrachial: the forearm, from elbow to wrist." },
+    { "id": "m01_fc32", "term": "Plantar / pedal", "definition": "Plantar: the sole of the foot. Pedal: the foot in general." }
+  ],
+  "quiz": [
+    {
+      "id": "m01_q01",
+      "type": "ordering",
+      "prompt": "Put these levels of organization in order from simplest to most complex.",
+      "items": ["Molecule", "Organelle", "Cell", "Tissue", "Organ", "Organ system"],
+      "explanation": "Molecules build organelles, organelles work together in cells, similar cells form tissues, two or more tissue types form an organ, and organs cooperate in an organ system. A common mistake is placing organelle after cell; organelles are parts inside a cell, so they come first."
+    },
+    {
+      "id": "m01_q02",
+      "type": "multiple_choice",
+      "prompt": "What is the smallest level of organization that is considered alive?",
+      "choices": ["Cell", "Organelle", "Macromolecule", "Tissue"],
+      "answer": 0,
+      "explanation": "The cell is the basic unit of life: it can carry out metabolism, respond, and reproduce. Organelles are tempting because they do specialized jobs, but an organelle removed from a cell cannot sustain itself."
+    },
+    {
+      "id": "m01_q03",
+      "type": "multiple_choice",
+      "prompt": "After a large meal, blood glucose rises and the pancreas releases insulin, which brings glucose back down. This is an example of:",
+      "choices": ["Negative feedback", "Positive feedback", "Assimilation", "A response with no set point"],
+      "answer": 0,
+      "explanation": "Insulin opposes the original change (rising glucose) and returns glucose toward the set point, which is the definition of negative feedback. Positive feedback would make glucose rise even more."
+    },
+    {
+      "id": "m01_q04",
+      "type": "multiple_choice",
+      "prompt": "Which of these is an example of positive feedback?",
+      "choices": ["Oxytocin intensifying uterine contractions during labor", "Shivering when body temperature drops", "Sweating when body temperature rises", "Glucagon release when blood glucose falls"],
+      "answer": 0,
+      "explanation": "During labor, stretch of the cervix triggers oxytocin release, which strengthens contractions and causes more stretch: the response amplifies the stimulus until birth ends the cycle. The other three choices all reverse a change, so they are negative feedback."
+    },
+    {
+      "id": "m01_q05",
+      "type": "multiple_choice",
+      "prompt": "In the body temperature control loop, the sweat glands act as the:",
+      "choices": ["Effector", "Receptor", "Control center", "Set point"],
+      "answer": 0,
+      "explanation": "Effectors are the muscles or glands that carry out the response. Sweat glands produce the change (cooling) that corrects the variable. The hypothalamus is the control center, and temperature-sensitive nerve cells are the receptors."
+    },
+    {
+      "id": "m01_q06",
+      "type": "true_false",
+      "prompt": "Positive feedback mechanisms are the main way the body keeps variables near their set points.",
+      "answer": false,
+      "explanation": "Negative feedback maintains set points. Positive feedback drives a change further in the same direction and is used for short events that must be completed, such as childbirth or clotting."
+    },
+    {
+      "id": "m01_q07",
+      "type": "multiple_choice",
+      "prompt": "In anatomical position, which statement is correct?",
+      "choices": ["The palms face forward", "The palms face the thighs", "The arms are raised to the sides", "The feet are crossed at the ankles"],
+      "answer": 0,
+      "explanation": "Anatomical position has the arms at the sides with palms facing forward (anteriorly). The tempting answer is palms facing the thighs, because that is how people normally stand, but that rotates the forearm bones and would change directional descriptions."
+    },
+    {
+      "id": "m01_q08",
+      "type": "multiple_choice",
+      "prompt": "The wrist is ______ to the elbow.",
+      "choices": ["Distal", "Proximal", "Superior", "Medial"],
+      "answer": 0,
+      "explanation": "Distal means farther from where the limb attaches to the trunk. The wrist is farther from the shoulder than the elbow, so it is distal. Proximal is the tempting wrong answer, but it is the opposite: the elbow is proximal to the wrist. Superior is also wrong, because in anatomical position the wrist hangs below the elbow."
+    },
+    {
+      "id": "m01_q09",
+      "type": "multiple_choice",
+      "prompt": "In anatomical position, the thumb is ______ to the little finger.",
+      "choices": ["Lateral", "Medial", "Proximal", "Deep"],
+      "answer": 0,
+      "explanation": "With palms facing forward, the thumb points away from the body's midline, so it is lateral. Students who picture their hands hanging naturally (palms toward the thighs) often answer anterior or medial; always mentally rotate into anatomical position first."
+    },
+    {
+      "id": "m01_q10",
+      "type": "multiple_choice",
+      "prompt": "Which term describes a structure that is closer to the body surface?",
+      "choices": ["Superficial", "Deep", "Proximal", "Medial"],
+      "answer": 0,
+      "explanation": "Superficial means toward the surface; deep means away from it. Proximal is tempting because it means \"closer\", but it refers to closeness to a limb's attachment point, not to the surface."
+    },
+    {
+      "id": "m01_q11",
+      "type": "multiple_choice",
+      "prompt": "An MRI image divides the body into anterior and posterior portions. Which plane was used?",
+      "choices": ["Frontal (coronal)", "Midsagittal", "Transverse", "Parasagittal"],
+      "answer": 0,
+      "explanation": "A frontal (coronal) plane separates front from back. Sagittal planes (mid or para) separate right from left, and a transverse plane separates top from bottom."
+    },
+    {
+      "id": "m01_q12",
+      "type": "true_false",
+      "prompt": "A parasagittal plane divides the body into equal right and left halves.",
+      "answer": false,
+      "explanation": "A parasagittal plane is parallel to the midline but off center, so the parts are unequal. Only a midsagittal (median) plane produces equal halves."
+    },
+    {
+      "id": "m01_q13",
+      "type": "multiple_choice",
+      "prompt": "Which organ is located in the mediastinum?",
+      "choices": ["Heart", "Lungs", "Liver", "Spleen"],
+      "answer": 0,
+      "explanation": "The mediastinum is the central compartment of the thoracic cavity between the lungs; it holds the heart, esophagus, trachea, and thymus. The lungs are in the thoracic cavity too, but in the pleural cavities on either side of the mediastinum, not in it."
+    },
+    {
+      "id": "m01_q14",
+      "type": "multiple_choice",
+      "prompt": "The membrane that directly covers the surface of the lungs is the:",
+      "choices": ["Visceral pleura", "Parietal pleura", "Visceral peritoneum", "Parietal pericardium"],
+      "answer": 0,
+      "explanation": "Visceral layers cover organs, and pleura is the serous membrane of the lungs. Parietal pleura is the tempting distractor, but it lines the thoracic wall rather than the lung surface."
+    },
+    {
+      "id": "m01_q15",
+      "type": "multiple_choice",
+      "prompt": "A patient has inflammation of the membrane lining the abdominal wall after an infection spreads from a ruptured appendix. What is this condition called?",
+      "choices": ["Peritonitis", "Pleurisy", "Pericarditis", "Meningitis"],
+      "answer": 0,
+      "explanation": "The peritoneum is the serous membrane of the abdominopelvic cavity, and inflammation of it is peritonitis. Pleurisy affects the pleura around the lungs and pericarditis affects the membrane around the heart. Meningitis involves the meninges of the dorsal cavity, which are not serous membranes."
+    },
+    {
+      "id": "m01_q16",
+      "type": "true_false",
+      "prompt": "The diaphragm separates the thoracic cavity from the abdominopelvic cavity.",
+      "answer": true,
+      "explanation": "The diaphragm is the dome-shaped muscle forming the floor of the thoracic cavity. Note that there is no physical wall separating the abdominal cavity from the pelvic cavity; that boundary is imaginary."
+    },
+    {
+      "id": "m01_q17",
+      "type": "ordering",
+      "prompt": "Put these middle-row abdominopelvic regions in order from the patient's right side to the patient's left side.",
+      "items": ["Right lumbar", "Umbilical", "Left lumbar"],
+      "explanation": "The middle row of the nine-region grid runs right lumbar, umbilical (around the navel), left lumbar. Remember that right and left always refer to the patient, not the viewer."
+    },
+    {
+      "id": "m01_q18",
+      "type": "multiple_choice",
+      "prompt": "A patient reports sharp pain in the right lower quadrant with fever. Which organ is most likely involved?",
+      "choices": ["Appendix", "Spleen", "Stomach", "Gallbladder"],
+      "answer": 0,
+      "explanation": "The appendix usually lies in the right iliac region of the RLQ, and RLQ pain with fever is a classic sign of appendicitis. The gallbladder is on the right too, but in the upper quadrant beneath the liver; the spleen and most of the stomach are on the left."
+    },
+    {
+      "id": "m01_q19",
+      "type": "multiple_choice",
+      "prompt": "Which region lies directly superior to the umbilical region?",
+      "choices": ["Epigastric", "Hypogastric", "Right hypochondriac", "Left lumbar"],
+      "answer": 0,
+      "explanation": "The center column of the nine regions is epigastric (top), umbilical (middle), hypogastric (bottom). Hypogastric is the tempting choice because it sounds similar, but hypo- means below, so it is inferior to the umbilical region."
+    },
+    {
+      "id": "m01_q20",
+      "type": "multiple_choice",
+      "prompt": "A nurse draws blood from the front of a patient's elbow. Which regional term describes this site?",
+      "choices": ["Antecubital", "Popliteal", "Antebrachial", "Carpal"],
+      "answer": 0,
+      "explanation": "Antecubital means the anterior surface of the elbow. Antebrachial refers to the whole forearm, and popliteal is the back of the knee, the lower-limb region it is most often confused with."
+    },
+    {
+      "id": "m01_q21",
+      "type": "multiple_choice",
+      "prompt": "Which regional term refers to the calf?",
+      "choices": ["Sural", "Crural", "Femoral", "Tarsal"],
+      "answer": 0,
+      "explanation": "Sural is the calf, the posterior surface of the leg. Crural is tempting because it also refers to the leg, but it describes the anterior part between knee and ankle. Femoral is the thigh and tarsal is the ankle."
+    },
+    {
+      "id": "m01_q22",
+      "type": "ordering",
+      "prompt": "Put the steps of a negative feedback loop for body temperature in order, starting with the stimulus.",
+      "items": ["Body temperature rises above the set point", "Temperature receptors detect the change", "The hypothalamus compares input to the set point", "Sweat glands secrete sweat and skin vessels dilate", "Body temperature returns toward the set point"],
+      "explanation": "Every homeostatic loop runs stimulus, receptor, control center, effector, response. Here the hypothalamus is the control center and the sweat glands and blood vessels are the effectors. Because the response reduces the stimulus, the loop shuts itself off, which is the hallmark of negative feedback."
+    },
+    {
+      "id": "m01_q23",
+      "type": "true_false",
+      "prompt": "Directional terms such as right and left always refer to the patient's right and left, not the observer's.",
+      "answer": true,
+      "explanation": "Descriptions are always from the patient's point of view in anatomical position. When you face a patient, their right side is on your left, which is why anatomy diagrams can look reversed."
+    }
+  ]
+}

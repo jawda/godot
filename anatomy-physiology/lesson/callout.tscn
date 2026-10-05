@@ -1,0 +1,22 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://lesson/callout.gd" id="1_callout"]
+
+[node name="Callout" type="PanelContainer"]
+theme_type_variation = &"CalloutTip"
+script = ExtResource("1_callout")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Kind" type="Label" parent="Layout"]
+layout_mode = 2
+theme_type_variation = &"CalloutTipLabel"
+text = "MEMORY TIP"
+
+[node name="Body" type="RichTextLabel" parent="Layout"]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false

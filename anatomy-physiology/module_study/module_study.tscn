@@ -1,0 +1,77 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://module_study/module_study.gd" id="1_study"]
+[ext_resource type="PackedScene" path="res://lesson/lesson_view.tscn" id="2_lesson"]
+[ext_resource type="PackedScene" path="res://flashcards/flashcard_deck.tscn" id="3_deck"]
+[ext_resource type="PackedScene" path="res://quiz/quiz_runner.tscn" id="4_quiz"]
+[ext_resource type="PackedScene" path="res://lesson/figure_viewer.tscn" id="5_viewer"]
+
+[sub_resource type="InputEventKey" id="key_escape"]
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="back_shortcut"]
+events = [SubResource("key_escape")]
+
+[node name="ModuleStudy" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 24
+script = ExtResource("1_study")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Header" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Back" type="Button" parent="Layout/Header"]
+layout_mode = 2
+size_flags_vertical = 4
+shortcut = SubResource("back_shortcut")
+text = "← All modules"
+
+[node name="Titles" type="VBoxContainer" parent="Layout/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Number" type="Label" parent="Layout/Header/Titles"]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "MODULE 1"
+
+[node name="Title" type="Label" parent="Layout/Header/Titles"]
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "Module title"
+text_overrun_behavior = 3
+
+[node name="Sections" type="TabContainer" parent="Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+
+[node name="Lesson" parent="Layout/Sections" instance=ExtResource("2_lesson")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Flashcards" parent="Layout/Sections" instance=ExtResource("3_deck")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Quiz" parent="Layout/Sections" instance=ExtResource("4_quiz")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="FigureViewer" parent="." instance=ExtResource("5_viewer")]
+layout_mode = 2

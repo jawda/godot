@@ -1,0 +1,7 @@
+res://gui/dialog/dialog_system.gd
+res://dialog/README.md
+res://gui/dialog/dialog_portrait.gd
+res://gui/dialog/speaker_resource.gd
+res://gui/dialog/dialog_system.tscn
+res://gui/dialog/dialog_choice_theme.tres
+res://assets/characters/character_notes.md

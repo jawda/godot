@@ -1,0 +1,408 @@
+{
+  "id": "m06_integumentary",
+  "order": 6,
+  "course": "A&P I",
+  "title": "The Integumentary System",
+  "summary": "Layers and cells of the skin, its accessory structures and functions, and burns, skin cancer, and wound healing.",
+  "objectives": [
+    "List the layers of the epidermis from deep to superficial and describe what happens in each",
+    "Identify the four main epidermal cell types and their functions",
+    "Compare the papillary and reticular layers of the dermis and describe the hypodermis",
+    "Explain the factors that determine skin color and what color changes can indicate",
+    "Describe the structure of hair and nails and compare sebaceous, eccrine, and apocrine glands",
+    "Explain the role of the skin in vitamin D synthesis and thermoregulation",
+    "Classify burns by depth and estimate burned surface area with the rule of nines",
+    "Compare the three major skin cancers and apply the ABCDE rule",
+    "Describe how shallow and deep wounds heal"
+  ],
+  "lesson": [
+    {
+      "heading": "Overview: Skin Structure and Functions",
+      "body": [
+        "The integumentary system is the skin plus its accessory structures (hair, nails, and glands). The skin is the body's largest organ, and it is a true organ because it contains all four tissue types.",
+        "The skin has two layers:",
+        "- [b]Epidermis[/b]: the superficial layer of keratinized stratified squamous epithelium. It is avascular.",
+        "- [b]Dermis[/b]: the deeper, thicker layer of connective tissue, containing blood vessels, nerves, hair follicles, and glands.",
+        "Beneath the skin lies the [b]hypodermis[/b] (subcutaneous layer), which is not considered part of the skin.",
+        "[b]Functions of the skin[/b]:",
+        "- [b]Protection[/b]: a physical barrier against abrasion, microbes, chemicals, and water loss (keratin and lipids waterproof it); melanin shields against UV radiation.",
+        "- [b]Immunity[/b]: dendritic (Langerhans) cells detect invaders and alert the immune system.",
+        "- [b]Sensation[/b]: receptors for touch, pressure, temperature, and pain.",
+        "- [b]Thermoregulation[/b]: sweating and changes in dermal blood flow.",
+        "- [b]Vitamin D synthesis[/b]: the first step happens in the skin with UV light.",
+        "- [b]Excretion[/b]: small amounts of salts, water, and urea leave in sweat.",
+        "- [b]Blood reservoir[/b]: dermal vessels hold a significant volume of blood that can be shifted to other organs."
+      ],
+      "figure": {
+        "file": "m06_skin_layers.jpg",
+        "caption": "The brackets on the right show the epidermis on top, the much thicker dermis below it, and the hypodermis of adipose tissue at the bottom. Notice that the blood vessels, nerves, glands, and hair follicles sit in the dermis, while the epidermis has no vessels.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 5.2, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-1-layers-of-the-skin"
+      }
+    },
+    {
+      "heading": "Layers of the Epidermis",
+      "body": [
+        "New cells are produced in the deepest layer and pushed toward the surface. As they move away from the dermal blood supply, they fill with keratin, flatten, and die. The trip from base to surface and shedding takes roughly 40 to 56 days (textbook figures vary). From [b]deep to superficial[/b]:",
+        "- [b]Stratum basale[/b] (stratum germinativum): a single row of cuboidal or columnar cells attached to the basement membrane. The only layer where cells actively divide by mitosis. Contains keratinocyte stem cells, melanocytes, and Merkel cells.",
+        "- [b]Stratum spinosum[/b]: several layers of cells joined by many desmosomes. When prepared for slides the cells shrink and the desmosomes make them look spiny, hence the name. Dendritic (Langerhans) cells are most abundant here.",
+        "- [b]Stratum granulosum[/b]: three to five layers of flattening cells containing dark granules of keratohyalin (which helps form keratin) and lamellar granules (which release a waterproofing lipid). Cells begin to die in this layer as their nuclei and organelles break down.",
+        "- [b]Stratum lucidum[/b]: a thin, clear layer of dead cells found [b]only in thick skin[/b] (palms of the hands and soles of the feet).",
+        "- [b]Stratum corneum[/b]: the most superficial layer, 20 to 30 layers of dead, flat, keratin-filled cells that are continuously shed. It provides the main barrier against abrasion, water loss, and microbes.",
+        "[b]Thick skin[/b] (palms and soles) has all five layers, a very thick stratum corneum, and no hair. [b]Thin skin[/b], covering the rest of the body, lacks the stratum lucidum and has hair follicles."
+      ],
+      "tip": "Deep to superficial: \"Before Signing, Get Legal Counsel\" (Basale, Spinosum, Granulosum, Lucidum, Corneum). Superficial to deep: \"Come, Let's Get Sun Burned.\"",
+      "clinical": "A callus forms where friction repeatedly stimulates the stratum basale, causing extra cell production and a thickened stratum corneum.",
+      "figure": {
+        "file": "m06_epidermis_layers.jpg",
+        "caption": "Read the layers from the bottom up, deep to superficial: stratum basale, spinosum, granulosum, lucidum, and corneum. This drawing is of thick skin, which is why the stratum lucidum appears; also find the melanocyte and Merkel cell sitting in the stratum basale.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 5.5, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-1-layers-of-the-skin"
+      }
+    },
+    {
+      "heading": "Cells of the Epidermis",
+      "body": [
+        "- [b]Keratinocytes[/b]: the most abundant epidermal cells. They produce [b]keratin[/b], a tough fibrous protein that gives the epidermis its protective properties.",
+        "- [b]Melanocytes[/b]: located in the stratum basale. They produce the pigment [b]melanin[/b] and transfer it to neighboring keratinocytes through their long cell processes. The melanin collects over the keratinocyte nucleus like a sun shield, protecting DNA from UV damage.",
+        "- [b]Dendritic cells[/b], also called [b]Langerhans cells[/b] or epidermal dendritic cells: immune cells derived from the bone marrow, most common in the stratum spinosum. They capture foreign antigens and present them to the immune system.",
+        "- [b]Merkel cells[/b] (tactile cells): located in the stratum basale, mainly in hairless skin like the fingertips. Each connects to a sensory nerve ending, forming a [b]Merkel disc[/b] that detects light touch."
+      ],
+      "tip": "Keratinocyte = Keratin (protection). Melanocyte = Melanin (pigment). Langerhans = Look out (immune lookout). Merkel = touch."
+    },
+    {
+      "heading": "Dermis and Hypodermis",
+      "body": [
+        "The [b]dermis[/b] is made of connective tissue with collagen and elastic fibers, giving skin strength and stretch. It contains blood vessels, nerves, sensory receptors, hair follicles, and glands. It has two regions:",
+        "- [b]Papillary layer[/b]: the thin, superficial layer of [b]areolar[/b] connective tissue. Its fingerlike projections, the [b]dermal papillae[/b], push up into the epidermis, increasing the surface area for nourishing the avascular epidermis and anchoring the two layers together. Papillae contain capillary loops and touch receptors called [b]tactile (Meissner) corpuscles[/b]. On the fingers, palms, and soles, papillae form the ridges that produce [b]fingerprints[/b] and improve grip.",
+        "- [b]Reticular layer[/b]: the thick, deep layer of [b]dense irregular[/b] connective tissue, about 80 percent of the dermis. Its collagen gives skin strength; its elastic fibers allow stretch and recoil. It contains larger blood vessels, sweat and sebaceous glands, hair follicles, and deep pressure receptors called [b]lamellated (Pacinian) corpuscles[/b]. Collagen bundles in this layer run in consistent directions called [b]cleavage (tension) lines[/b]; surgeons cut parallel to them because those incisions gape less and heal with thinner scars.",
+        "The [b]hypodermis[/b] (subcutaneous layer, or superficial fascia) lies beneath the dermis and is [b]not part of the skin[/b]. It is made of areolar and adipose connective tissue. It anchors the skin to underlying muscle, stores fat, insulates, and cushions. It contains major blood vessels that supply the skin.",
+        "With age, collagen and elastic fibers decrease, causing wrinkles and sagging; UV exposure accelerates this."
+      ],
+      "clinical": "Subcutaneous (\"subQ\") injections, such as insulin, go into the hypodermis. Its blood supply is moderate, so drugs are absorbed more slowly and steadily than from muscle.",
+      "tip": "Papillary = Pretty thin and Pokes up into the epidermis. Reticular = Really thick.",
+      "figure": {
+        "file": "m06_dermis.jpg",
+        "caption": "The papillary layer is the thin zone of loose (areolar) tissue forming the dermal papillae that push up into the epidermis. Below it, the reticular layer of dense irregular connective tissue makes up most of the dermis, with its collagen bundles running in many directions.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 5.7, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-1-layers-of-the-skin"
+      }
+    },
+    {
+      "heading": "Skin Color",
+      "body": [
+        "Three pigments contribute to skin color:",
+        "- [b]Melanin[/b]: made by melanocytes from the amino acid tyrosine. It comes in brown-black (eumelanin) and reddish-yellow (pheomelanin) forms. Differences in skin color among people are due to [b]how much melanin melanocytes produce and how it is distributed[/b], not the number of melanocytes, which is about the same in everyone. UV exposure stimulates more melanin production (tanning).",
+        "- [b]Carotene[/b]: a yellow-orange pigment from foods such as carrots. It accumulates in the stratum corneum and in fat of the hypodermis.",
+        "- [b]Hemoglobin[/b]: in the red blood cells of dermal capillaries. Oxygen-rich blood seen through light skin gives a pinkish color.",
+        "Skin color changes can signal disease:",
+        "- [b]Cyanosis[/b]: bluish color from poorly oxygenated blood (airway obstruction, heart or lung problems).",
+        "- [b]Erythema[/b]: redness from dilated dermal vessels (embarrassment, fever, inflammation, allergy, sunburn).",
+        "- [b]Pallor[/b]: paleness from reduced blood flow or anemia (fear, shock, low blood pressure).",
+        "- [b]Jaundice[/b]: yellowing from excess bilirubin, often a sign of liver disease.",
+        "- [b]Bruises[/b] (hematomas): blood that has escaped vessels and clotted in the dermis."
+      ],
+      "clinical": "Albinism is an inherited condition in which melanocytes are present but cannot make melanin, usually because the enzyme tyrosinase does not work. Affected individuals have very light skin and hair and are highly vulnerable to UV damage.",
+      "figure": {
+        "file": "m06_pigmentation.jpg",
+        "caption": "Both skin samples have about the same number of melanocytes at the base. The difference in color comes from how much melanin they make and pass to the keratinocytes in melanosomes: darker skin has more, larger, and darker melanosomes spread higher into the epidermis.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 5.8, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-1-layers-of-the-skin"
+      }
+    },
+    {
+      "heading": "Accessory Structures: Hair and Nails",
+      "body": [
+        "[b]Hair[/b] is made of dead, keratinized cells. It grows from a [b]hair follicle[/b], a tube of epidermal cells that extends down into the dermis (sometimes the hypodermis).",
+        "- The [b]hair bulb[/b] is the expanded base of the follicle. Cells in the bulb's [b]matrix[/b] divide to produce the hair. A [b]hair papilla[/b] of dermal connective tissue projects into the bulb and supplies blood vessels that nourish the growing cells.",
+        "- The [b]root[/b] is the part inside the follicle; the [b]shaft[/b] projects above the skin.",
+        "- In cross section a hair has an inner [b]medulla[/b] (absent in fine hairs), a [b]cortex[/b] (which contains most of the pigment), and an outer [b]cuticle[/b] of overlapping cells.",
+        "- Hair color comes from melanin produced by melanocytes in the bulb. Gray and white hair result from decreased melanin production and air in the medulla.",
+        "- The [b]arrector pili[/b] is a small band of [b]smooth muscle[/b] attached to each follicle. When cold or frightened, it contracts, pulling the hair upright and producing \"goose bumps.\" Its contraction also squeezes sebaceous glands.",
+        "[b]Nails[/b] are plates of tightly packed, hard-keratinized dead cells on the dorsal tips of fingers and toes.",
+        "- The [b]nail plate[/b] (body) rests on the [b]nail bed[/b].",
+        "- Growth occurs at the [b]nail matrix[/b], the actively dividing region under the proximal nail. The [b]lunula[/b] is the whitish half-moon over the thickest part of the matrix.",
+        "- The [b]eponychium[/b] (cuticle) is a fold of stratum corneum over the proximal nail. The [b]hyponychium[/b] is the thickened epidermis under the free edge."
+      ],
+      "tip": "The nail grows from the matrix, not the bed. Damage the matrix and the nail may not grow back normally.",
+      "figure": {
+        "file": "m06_hair.jpg",
+        "caption": "Find the hair bulb at the base of the follicle, with the hair matrix (dividing cells) wrapped around the hair papilla and its blood vessels. The arrector pili muscle attaches to the follicle beside the sebaceous gland, and the hair shaft shows its medulla, cortex, and cuticle.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 5.11, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-2-accessory-structures-of-the-skin"
+      }
+    },
+    {
+      "heading": "Accessory Structures: Glands",
+      "body": [
+        "- [b]Sebaceous (oil) glands[/b]: found almost everywhere except the palms and soles. They usually empty into hair follicles. They secrete [b]sebum[/b], an oily mixture that softens and waterproofs hair and skin and has some antibacterial action. They use [b]holocrine[/b] secretion. Hormones (androgens) increase their activity at puberty.",
+        "- [b]Eccrine sweat glands[/b] (also called merocrine sweat glands): the most numerous sweat glands, distributed over most of the body and especially dense on the palms, soles, and forehead. They open directly onto the skin surface through pores and secrete watery sweat (mostly water, with salts and small amounts of urea). Their main job is [b]thermoregulation[/b] by evaporative cooling. Active from birth.",
+        "- [b]Apocrine sweat glands[/b]: confined mainly to the axillary (armpit) and anogenital regions. They open into [b]hair follicles[/b] and secrete a thicker sweat containing proteins and fatty substances. The secretion is odorless at first; body odor develops when skin bacteria break it down. They become active at [b]puberty[/b] and respond to stress and sexual arousal more than to heat.",
+        "- [b]Modified sweat glands[/b]: [b]ceruminous glands[/b] in the external ear canal produce earwax (cerumen); [b]mammary glands[/b] produce milk."
+      ],
+      "tip": "Eccrine = Everywhere and Evaporative cooling. Apocrine = Armpits, Adolescence, opens into hAir follicles.",
+      "clinical": "Acne develops when sebum and dead cells plug hair follicles, which are then colonized by bacteria. It is common at puberty because rising androgens increase sebaceous gland activity.",
+      "figure": {
+        "file": "m06_eccrine.jpg",
+        "caption": "The eccrine sweat gland is a coiled tube deep in the dermis whose duct opens directly onto the skin surface through a pore. Compare it with the sebaceous glands on the left, which empty into the hair follicle instead.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 5.14, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-2-accessory-structures-of-the-skin"
+      }
+    },
+    {
+      "heading": "Vitamin D and Thermoregulation",
+      "body": [
+        "[b]Vitamin D synthesis[/b]: when UV light strikes the skin, it converts a cholesterol derivative (7-dehydrocholesterol) in the epidermis into [b]cholecalciferol (vitamin D₃)[/b]. This inactive form travels to the [b]liver[/b], which converts it to calcidiol, and then to the [b]kidneys[/b], which convert it to [b]calcitriol[/b], the active hormone. Calcitriol increases calcium and phosphate absorption from the small intestine, which is essential for healthy bones.",
+        "[b]Thermoregulation[/b]: the temperature control center is in the [b]hypothalamus[/b] of the brain. Most heat is produced by metabolism, especially in skeletal muscle and the liver, and the skin is the main site of heat loss.",
+        "- When body temperature rises: dermal blood vessels [b]dilate[/b] (vasodilation), bringing warm blood to the surface where heat radiates away, and [b]eccrine sweat glands[/b] secrete sweat whose evaporation removes heat. This is a negative feedback loop.",
+        "- When body temperature falls: dermal blood vessels [b]constrict[/b] (vasoconstriction), keeping warm blood in the core, and sweat production stops. If temperature keeps dropping, skeletal muscles begin [b]shivering[/b], generating heat."
+      ],
+      "clinical": "Vitamin D deficiency in children causes rickets (soft, bowed bones); in adults it causes osteomalacia. People with dark skin, limited sun exposure, or who live at high latitudes are at higher risk.",
+      "tip": "Hot = flushed and sweaty (vasodilation). Cold = pale and shivering (vasoconstriction).",
+      "figure": {
+        "file": "m06_vitamin_d.jpg",
+        "caption": "Follow the path from skin to active hormone: sunlight makes vitamin D in the skin, the liver converts it to calcidiol, and the kidneys convert that to calcitriol, the active form that boosts calcium absorption from the small intestine.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 6.22, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-6-exercise-nutrition-hormones-and-bone-tissue"
+      }
+    },
+    {
+      "heading": "Burns, Skin Cancer, and Wound Healing",
+      "body": [
+        "[b]Burns[/b] are classified by depth. Hole's uses the terms superficial partial-thickness, deep partial-thickness, and full-thickness; the older degree terms are still common:",
+        "- [b]Superficial partial-thickness (first degree)[/b]: epidermis only. Red, painful, mild swelling, no blisters. Heals in days without scarring (example: most sunburns).",
+        "- [b]Deep partial-thickness (second degree)[/b]: epidermis and part of the dermis. Red, painful, and [b]blistered[/b]. Heals from surviving epidermal cells in hair follicles and glands, usually in a few weeks; scarring is possible if deep.",
+        "- [b]Full-thickness (third degree)[/b]: destroys the entire epidermis and dermis, and sometimes deeper tissue. Skin may look white, tan, brown, black, or leathery. The burned area itself may be [b]painless[/b] because nerve endings are destroyed. Cannot regenerate from the edges except in small areas, so skin grafts are usually required. Some sources add a fourth degree for burns into muscle or bone.",
+        "The biggest immediate dangers of extensive burns are [b]fluid and electrolyte loss[/b] (leading to circulatory shock) and later [b]infection[/b].",
+        "The [b]rule of nines[/b] estimates the percentage of body surface burned in an adult: head and neck 9 percent; each upper limb 9 percent; anterior trunk 18 percent; posterior trunk 18 percent; each lower limb 18 percent; perineum (genital region) 1 percent. Total: 100 percent. (Children have proportionally larger heads, so modified charts are used.)",
+        "[b]Skin cancers[/b], mostly linked to UV exposure:",
+        "- [b]Basal cell carcinoma[/b]: arises from cells of the stratum basale. The [b]most common[/b] and [b]least dangerous[/b]; it grows slowly, rarely metastasizes, and is usually cured by removal. Often a shiny, pearly bump.",
+        "- [b]Squamous cell carcinoma[/b]: arises from keratinocytes of the stratum spinosum. Second most common; grows faster and [b]can metastasize[/b] if not treated. Often a scaly, reddened patch or sore.",
+        "- [b]Melanoma[/b]: arises from [b]melanocytes[/b]. The least common but [b]most deadly[/b], because it metastasizes quickly through lymph and blood. Early detection is critical.",
+        "Use the [b]ABCDE rule[/b] to evaluate moles for melanoma: [b]A[/b]symmetry (two halves do not match); [b]B[/b]order irregularity; [b]C[/b]olor variation (multiple colors); [b]D[/b]iameter larger than 6 mm (about a pencil eraser); [b]E[/b]volving (changing in size, shape, or color).",
+        "[b]Wound healing[/b]: a shallow cut through the epidermis heals as cells in the stratum basale divide and fill the gap. A deeper cut into the dermis follows this sequence: (1) blood vessels break and a [b]clot[/b] forms, which dries into a scab; (2) [b]inflammation[/b] brings white blood cells, and fibroblasts migrate in; (3) fibroblasts and new capillaries form [b]granulation tissue[/b], while epidermal cells regenerate beneath the scab; (4) the scab falls off and the tissue matures, often leaving a [b]scar[/b] of dense collagen. OpenStax summarizes these phases as inflammation, proliferation, and maturation."
+      ],
+      "tip": "Rule of nines: the head is 9, each arm is 9, each leg is 18, the front and back of the trunk are 18 each, and the perineum is 1.",
+      "clinical": "Melanoma is dangerous because melanocytes sit in the stratum basale right next to the dermis, giving cancer cells quick access to lymph and blood vessels.",
+      "figure": {
+        "file": "m06_rule_of_nines.jpg",
+        "caption": "This is the rule of nines: head and neck 9 percent, each upper limb 9 percent, each lower limb 18 percent, and genitalia 1 percent. The figure lumps the anterior and posterior trunk together as 36 percent, which is the same as 18 plus 18 in the lesson.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 5.23, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-4-diseases-disorders-and-injuries-of-the-integumentary-system"
+      }
+    }
+  ],
+  "flashcards": [
+    { "id": "m06_fc01", "term": "Epidermis", "definition": "Superficial, avascular layer of skin made of keratinized stratified squamous epithelium." },
+    { "id": "m06_fc02", "term": "Dermis", "definition": "Deeper layer of skin made of connective tissue; contains vessels, nerves, glands, and hair follicles." },
+    { "id": "m06_fc03", "term": "Hypodermis", "definition": "Subcutaneous layer of areolar and adipose tissue beneath the dermis; not part of the skin. Anchors, insulates, stores fat." },
+    { "id": "m06_fc04", "term": "Stratum basale", "definition": "Deepest epidermal layer; single row of dividing cells. Contains stem cells, melanocytes, and Merkel cells." },
+    { "id": "m06_fc05", "term": "Stratum spinosum", "definition": "Several layers of keratinocytes joined by desmosomes (spiny appearance); dendritic cells are abundant here." },
+    { "id": "m06_fc06", "term": "Stratum granulosum", "definition": "Layer where keratinocytes flatten, gain keratohyalin and lamellar granules, and begin to die." },
+    { "id": "m06_fc07", "term": "Stratum lucidum", "definition": "Thin, clear layer of dead cells found only in thick skin (palms and soles)." },
+    { "id": "m06_fc08", "term": "Stratum corneum", "definition": "Most superficial epidermal layer; many layers of dead, flat, keratin-filled cells that are shed." },
+    { "id": "m06_fc09", "term": "Keratinocyte", "definition": "Most abundant epidermal cell; produces keratin for protection." },
+    { "id": "m06_fc10", "term": "Melanocyte", "definition": "Cell in the stratum basale that makes melanin and transfers it to keratinocytes to shield DNA from UV." },
+    { "id": "m06_fc11", "term": "Dendritic (Langerhans) cell", "definition": "Immune cell of the epidermis that captures antigens and presents them to the immune system." },
+    { "id": "m06_fc12", "term": "Merkel cell", "definition": "Tactile cell in the stratum basale; with a sensory nerve ending forms a Merkel disc for light touch." },
+    { "id": "m06_fc13", "term": "Papillary layer", "definition": "Thin superficial dermis of areolar tissue; dermal papillae with capillaries and tactile (Meissner) corpuscles; forms fingerprints." },
+    { "id": "m06_fc14", "term": "Reticular layer", "definition": "Thick deep dermis of dense irregular tissue (about 80 percent of dermis); strength and elasticity; lamellated corpuscles." },
+    { "id": "m06_fc15", "term": "Cleavage (tension) lines", "definition": "Lines of collagen orientation in the reticular dermis; incisions parallel to them heal with less scarring." },
+    { "id": "m06_fc16", "term": "Melanin", "definition": "Brown-black or reddish pigment made from tyrosine by melanocytes; skin color differences reflect its amount, not melanocyte number." },
+    { "id": "m06_fc17", "term": "Cyanosis", "definition": "Bluish skin from poorly oxygenated blood." },
+    { "id": "m06_fc18", "term": "Jaundice", "definition": "Yellowing of skin and eyes from excess bilirubin, often from liver disease." },
+    { "id": "m06_fc19", "term": "Arrector pili", "definition": "Smooth muscle attached to a hair follicle; contraction raises the hair (goose bumps)." },
+    { "id": "m06_fc20", "term": "Hair papilla", "definition": "Dermal connective tissue projecting into the hair bulb; supplies blood to dividing matrix cells." },
+    { "id": "m06_fc21", "term": "Nail matrix", "definition": "Actively dividing region beneath the proximal nail where the nail grows; the lunula lies over it." },
+    { "id": "m06_fc22", "term": "Sebaceous gland", "definition": "Holocrine oil gland that usually empties into hair follicles; secretes sebum." },
+    { "id": "m06_fc23", "term": "Eccrine sweat gland", "definition": "Most numerous sweat gland; opens onto the skin surface; watery sweat for thermoregulation." },
+    { "id": "m06_fc24", "term": "Apocrine sweat gland", "definition": "Sweat gland of axillary and anogenital regions; opens into hair follicles; active at puberty; secretion broken down by bacteria causes odor." },
+    { "id": "m06_fc25", "term": "Ceruminous gland", "definition": "Modified sweat gland in the external ear canal that produces earwax." },
+    { "id": "m06_fc26", "term": "Vitamin D synthesis pathway", "definition": "UV converts 7-dehydrocholesterol in skin to cholecalciferol; the liver and then kidneys convert it to active calcitriol." },
+    { "id": "m06_fc27", "term": "Full-thickness (third-degree) burn", "definition": "Destroys epidermis and dermis; may be painless at the site; usually needs skin grafts." },
+    { "id": "m06_fc28", "term": "Rule of nines", "definition": "Adult burn estimate: head and neck 9, each arm 9, each leg 18, anterior trunk 18, posterior trunk 18, perineum 1 percent." },
+    { "id": "m06_fc29", "term": "Basal cell carcinoma", "definition": "Most common, least malignant skin cancer; from stratum basale cells; rarely metastasizes." },
+    { "id": "m06_fc30", "term": "Melanoma", "definition": "Cancer of melanocytes; least common but most deadly skin cancer because it metastasizes readily." },
+    { "id": "m06_fc31", "term": "ABCDE rule", "definition": "Asymmetry, Border irregularity, Color variation, Diameter over 6 mm, Evolving: warning signs of melanoma." }
+  ],
+  "quiz": [
+    {
+      "id": "m06_q01",
+      "type": "ordering",
+      "prompt": "Put the layers of the epidermis in order from deep to superficial.",
+      "items": ["Stratum basale", "Stratum spinosum", "Stratum granulosum", "Stratum lucidum", "Stratum corneum"],
+      "explanation": "Cells are born in the basale, bound by desmosomes in the spinosum, begin to die in the granulosum, pass through the lucidum (thick skin only), and are shed from the corneum. Mnemonic: Before Signing, Get Legal Counsel."
+    },
+    {
+      "id": "m06_q02",
+      "type": "multiple_choice",
+      "prompt": "In which epidermal layer do cells actively divide to replace those lost at the surface?",
+      "choices": ["Stratum basale", "Stratum spinosum", "Stratum granulosum", "Stratum corneum"],
+      "answer": 0,
+      "explanation": "The stratum basale lies against the basement membrane, closest to the dermal blood supply, and is the layer of active mitosis. Some cells in the deepest part of the spinosum can divide too, but the basale is the standard answer. Cells in the granulosum and corneum are dying or dead."
+    },
+    {
+      "id": "m06_q03",
+      "type": "multiple_choice",
+      "prompt": "A skin biopsy from the forearm would be expected to lack which layer?",
+      "choices": ["Stratum lucidum", "Stratum granulosum", "Stratum basale", "Papillary dermis"],
+      "answer": 0,
+      "explanation": "The stratum lucidum is found only in thick skin of the palms and soles. The forearm is thin skin, which still has the basale, spinosum, granulosum, and corneum, plus a papillary dermis."
+    },
+    {
+      "id": "m06_q04",
+      "type": "multiple_choice",
+      "prompt": "Which epidermal cell acts as an immune sentinel by capturing antigens and presenting them to the immune system?",
+      "choices": ["Dendritic (Langerhans) cell", "Merkel cell", "Melanocyte", "Keratinocyte"],
+      "answer": 0,
+      "explanation": "Dendritic cells come from the bone marrow and serve as antigen-presenting cells. Merkel cells are tempting because they also have a specialized role, but theirs is sensory (light touch), not immune."
+    },
+    {
+      "id": "m06_q05",
+      "type": "multiple_choice",
+      "prompt": "Two people have very different skin tones. Which statement best explains the difference?",
+      "choices": ["Their melanocytes produce different amounts and types of melanin", "The darker-skinned person has many more melanocytes", "The lighter-skinned person has more carotene", "The darker-skinned person has more hemoglobin in dermal vessels"],
+      "answer": 0,
+      "explanation": "People of all skin colors have roughly the same number of melanocytes. Skin tone depends on how much and which type of melanin those melanocytes produce and how it is distributed. More melanocytes is the most common misconception."
+    },
+    {
+      "id": "m06_q06",
+      "type": "multiple_choice",
+      "prompt": "Which layer of the skin is made mostly of dense irregular connective tissue and provides most of the skin's strength?",
+      "choices": ["Reticular layer of the dermis", "Papillary layer of the dermis", "Hypodermis", "Stratum corneum"],
+      "answer": 0,
+      "explanation": "The reticular layer is about 80 percent of the dermis and is dense irregular tissue whose collagen fibers resist pulling in many directions. The papillary layer is areolar (loose) tissue. The hypodermis is areolar and adipose tissue and is not part of the skin."
+    },
+    {
+      "id": "m06_q07",
+      "type": "multiple_choice",
+      "prompt": "Fingerprints are formed by which structures?",
+      "choices": ["Dermal papillae of the papillary layer", "Collagen bundles of the reticular layer", "Folds of the stratum corneum alone", "Lamellated corpuscles"],
+      "answer": 0,
+      "explanation": "Dermal papillae project into the epidermis and form the ridge patterns of the fingers, palms, and soles. The epidermis follows those ridges, so the corneum alone does not create them."
+    },
+    {
+      "id": "m06_q08",
+      "type": "multiple_choice",
+      "prompt": "A patient brought in from a house fire has bluish lips and nail beds. What does this color change indicate?",
+      "choices": ["Poorly oxygenated blood (cyanosis)", "Excess bilirubin (jaundice)", "Dilated dermal vessels (erythema)", "Low melanin production"],
+      "answer": 0,
+      "explanation": "Cyanosis is a bluish tint caused by poorly oxygenated hemoglobin, here likely from smoke inhalation. Erythema is redness, and jaundice is yellowing from bilirubin."
+    },
+    {
+      "id": "m06_q09",
+      "type": "multiple_choice",
+      "prompt": "Which gland secretes by the holocrine method and usually empties into a hair follicle?",
+      "choices": ["Sebaceous gland", "Eccrine sweat gland", "Apocrine sweat gland", "Ceruminous gland"],
+      "answer": 0,
+      "explanation": "Sebaceous cells fill with sebum and rupture, so the entire cell becomes the secretion. Apocrine sweat glands also open into hair follicles, which is the tempting confusion, but they do not use holocrine secretion."
+    },
+    {
+      "id": "m06_q10",
+      "type": "multiple_choice",
+      "prompt": "A runner on a hot day is cooled mainly by secretions from which glands?",
+      "choices": ["Eccrine sweat glands", "Apocrine sweat glands", "Sebaceous glands", "Ceruminous glands"],
+      "answer": 0,
+      "explanation": "Eccrine glands are distributed over most of the body and secrete watery sweat whose evaporation removes heat. Apocrine glands are limited to the axillae and anogenital area and respond mainly to emotional stress, not heat."
+    },
+    {
+      "id": "m06_q11",
+      "type": "multiple_choice",
+      "prompt": "When a person is cold, the tiny muscle that pulls a hair upright and causes goose bumps is the:",
+      "choices": ["Arrector pili, a smooth muscle", "Arrector pili, a skeletal muscle", "Hair papilla", "Hair matrix"],
+      "answer": 0,
+      "explanation": "The arrector pili is smooth muscle, so its contraction is involuntary. The papilla and matrix are parts of the hair bulb concerned with nourishment and growth, not movement."
+    },
+    {
+      "id": "m06_q12",
+      "type": "multiple_choice",
+      "prompt": "Where does the active form of vitamin D (calcitriol) get its final activation?",
+      "choices": ["Kidneys", "Skin", "Liver", "Small intestine"],
+      "answer": 0,
+      "explanation": "UV light starts the process in the skin, the liver performs an intermediate conversion, and the kidneys complete the conversion to calcitriol. The skin is the tempting answer because that is where synthesis begins, but the form made there is inactive."
+    },
+    {
+      "id": "m06_q13",
+      "type": "multiple_choice",
+      "prompt": "A burn on the forearm is red, painful, and has blisters. How is it classified?",
+      "choices": ["Deep partial-thickness (second degree)", "Superficial partial-thickness (first degree)", "Full-thickness (third degree)", "Fourth degree"],
+      "answer": 0,
+      "explanation": "Blisters indicate damage extending into the dermis, a deep partial-thickness burn. First-degree burns involve only the epidermis and do not blister. Third-degree burns destroy nerve endings and are often painless at the site."
+    },
+    {
+      "id": "m06_q14",
+      "type": "multiple_choice",
+      "prompt": "Using the rule of nines, an adult with burns covering the entire anterior trunk and the entire left upper limb has burns over what percentage of the body?",
+      "choices": ["27 percent", "18 percent", "36 percent", "45 percent"],
+      "answer": 0,
+      "explanation": "The anterior trunk is 18 percent and each upper limb is 9 percent, so 18 plus 9 is 27 percent. A common error is assigning 18 percent to an arm; 18 percent belongs to each lower limb."
+    },
+    {
+      "id": "m06_q15",
+      "type": "multiple_choice",
+      "prompt": "A patient has a full-thickness burn in the center of a wound that is not painful, surrounded by painful reddened skin. Why is the center painless?",
+      "choices": ["Sensory nerve endings in the dermis were destroyed", "The epidermis is intact and protecting the nerves", "Swelling in the hypodermis blocks pain signals", "Melanin absorbs the heat and prevents pain"],
+      "answer": 0,
+      "explanation": "Full-thickness burns destroy the entire dermis, including its pain receptors, so the burned tissue itself cannot signal pain. The surrounding partial-thickness areas still have intact nerves and hurt."
+    },
+    {
+      "id": "m06_q16",
+      "type": "multiple_choice",
+      "prompt": "A mole is asymmetrical, has notched edges, several shades of brown and black, and has grown in the past three months. Which cancer should be suspected?",
+      "choices": ["Melanoma", "Basal cell carcinoma", "Squamous cell carcinoma", "Merkel cell carcinoma"],
+      "answer": 0,
+      "explanation": "These findings match the ABCDE warning signs (asymmetry, border, color, evolving), which apply to melanoma, a cancer of melanocytes. Basal cell carcinoma usually appears as a shiny, pearly bump rather than a changing pigmented mole."
+    },
+    {
+      "id": "m06_q17",
+      "type": "multiple_choice",
+      "prompt": "Which skin cancer is the most common and the least likely to metastasize?",
+      "choices": ["Basal cell carcinoma", "Squamous cell carcinoma", "Melanoma", "Kaposi sarcoma"],
+      "answer": 0,
+      "explanation": "Basal cell carcinoma is the most common skin cancer and rarely spreads. Squamous cell carcinoma is second most common and can metastasize if untreated. Melanoma is the least common of the three but the most deadly."
+    },
+    {
+      "id": "m06_q18",
+      "type": "multiple_choice",
+      "prompt": "A person's core body temperature rises during exercise. Which response helps return it to normal?",
+      "choices": ["Dilation of dermal blood vessels and increased sweating", "Constriction of dermal blood vessels and shivering", "Contraction of the arrector pili muscles", "Decreased activity of eccrine sweat glands"],
+      "answer": 0,
+      "explanation": "Vasodilation brings warm blood to the surface to radiate heat, and evaporating sweat removes more heat: a negative feedback response directed by the hypothalamus. Vasoconstriction and shivering are responses to cold."
+    },
+    {
+      "id": "m06_q19",
+      "type": "true_false",
+      "prompt": "The hypodermis is considered the deepest layer of the skin.",
+      "answer": false,
+      "explanation": "The skin consists of only the epidermis and dermis. The hypodermis (subcutaneous layer) lies beneath the skin and anchors it to underlying structures, but it is not part of the skin itself."
+    },
+    {
+      "id": "m06_q20",
+      "type": "true_false",
+      "prompt": "Apocrine sweat glands become active at puberty and their secretions develop an odor when broken down by skin bacteria.",
+      "answer": true,
+      "explanation": "Apocrine glands in the axillary and anogenital regions activate at puberty. Their protein and lipid secretion is odorless when released; bacteria produce the odor."
+    },
+    {
+      "id": "m06_q21",
+      "type": "true_false",
+      "prompt": "Melanocytes are located in the stratum corneum, where they shield dead cells from UV light.",
+      "answer": false,
+      "explanation": "Melanocytes are in the stratum basale. They transfer melanin to living keratinocytes, where it caps the nucleus to protect DNA. The stratum corneum consists of dead keratinized cells."
+    },
+    {
+      "id": "m06_q22",
+      "type": "ordering",
+      "prompt": "Order the steps of vitamin D activation from first to last.",
+      "items": ["UV light converts 7-dehydrocholesterol in the skin to cholecalciferol", "The liver converts cholecalciferol to calcidiol", "The kidneys convert calcidiol to calcitriol", "Calcitriol increases calcium absorption in the small intestine"],
+      "explanation": "Skin, then liver, then kidney, then action at the intestine. Only calcitriol, the kidney product, is fully active."
+    },
+    {
+      "id": "m06_q23",
+      "type": "ordering",
+      "prompt": "Order the events in healing of a deep cut into the dermis, from first to last.",
+      "items": ["Blood vessels break and a clot forms, later drying into a scab", "Inflammation brings white blood cells, and fibroblasts migrate into the wound", "Granulation tissue fills the wound as epidermal cells regenerate beneath the scab", "The scab falls off and the repaired tissue matures, often leaving a scar"],
+      "explanation": "Clotting stops bleeding first, inflammation clears debris and recruits fibroblasts, granulation tissue rebuilds the dermis while the epidermis regrows, and finally the tissue matures into scar. OpenStax calls these phases inflammation, proliferation, and maturation."
+    }
+  ]
+}

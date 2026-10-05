@@ -1,0 +1,112 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://menu/module_menu.gd" id="1_menu"]
+
+[node name="ModuleMenu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 32
+script = ExtResource("1_menu")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Header" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Titles" type="VBoxContainer" parent="Layout/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="Title" type="Label" parent="Layout/Header/Titles"]
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "Anatomy & Physiology I"
+
+[node name="Subtitle" type="Label" parent="Layout/Header/Titles"]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "BIOL 2010 study guide  ·  read the lesson, drill the flashcards, then take the quiz"
+
+[node name="Profile" type="VBoxContainer" parent="Layout/Header"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="StudyingAs" type="Label" parent="Layout/Header/Profile"]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "Studying as"
+horizontal_alignment = 2
+
+[node name="SwitchProfile" type="Button" parent="Layout/Header/Profile"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Switch profile"
+
+[node name="Actions" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Continue" type="Button" parent="Layout/Actions"]
+layout_mode = 2
+theme_type_variation = &"AccentButton"
+text = "Continue"
+
+[node name="MixedReview" type="Button" parent="Layout/Actions"]
+layout_mode = 2
+tooltip_text = "20 random questions drawn from every module you have started."
+text = "Mixed review"
+
+[node name="MissedQuestions" type="Button" parent="Layout/Actions"]
+layout_mode = 2
+tooltip_text = "Every question whose most recent answer was wrong. Answer it correctly to clear it."
+text = "Missed questions (0)"
+
+[node name="Overall" type="Label" parent="Layout/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"MutedLabel"
+text = "0 of 0 questions mastered"
+horizontal_alignment = 2
+
+[node name="ModuleList" type="ScrollContainer" parent="Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Modules" type="GridContainer" parent="Layout/ModuleList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 3
+
+[node name="Footer" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+
+[node name="LoadNote" type="Label" parent="Layout/Footer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"MutedLabel"
+text = "Progress saves automatically after every answer, card, and page."
+
+[node name="ResetProgress" type="Button" parent="Layout/Footer"]
+layout_mode = 2
+text = "Reset progress"
+
+[node name="ConfirmReset" type="ConfirmationDialog" parent="."]
+title = "Reset progress?"
+size = Vector2i(420, 140)
+ok_button_text = "Reset everything"
+dialog_text = "This clears every quiz result, known flashcard, section read, and best score for this profile."
+dialog_autowrap = true

@@ -1,0 +1,493 @@
+{
+  "id": "m16_special_senses",
+  "order": 16,
+  "course": "A&P I",
+  "title": "General and Special Senses",
+  "summary": "Sensory receptors, pain, smell, taste, hearing, equilibrium, and vision.",
+  "objectives": [
+    "Classify sensory receptors by the type of stimulus they detect",
+    "Explain sensory adaptation and referred pain",
+    "Trace the olfactory pathway from receptor to cortex",
+    "Name the five primary tastes and the cranial nerves that carry taste",
+    "Identify the structures of the outer, middle, and inner ear",
+    "Trace the path of sound from the auricle to the auditory cortex",
+    "Distinguish static and dynamic equilibrium and the receptors for each",
+    "Identify the tunics, lens, humors, and accessory structures of the eye",
+    "Compare rods and cones and explain the role of photopigments",
+    "Trace the visual pathway and explain the optic chiasma",
+    "Describe myopia, hyperopia, astigmatism, glaucoma, and cataracts"
+  ],
+  "lesson": [
+    {
+      "heading": "Sensory Receptors and Sensation",
+      "body": [
+        "A [b]sensory receptor[/b] is a specialized cell or nerve ending that detects a stimulus and converts it into a graded receptor potential; if strong enough, this triggers action potentials in a sensory neuron. Receptors are classified by the stimulus they respond to:",
+        "- [b]Chemoreceptors[/b]: chemicals dissolved in fluid, such as odors, tastes, and blood O₂, CO₂, and pH.",
+        "- [b]Mechanoreceptors[/b]: mechanical deformation such as touch, pressure, vibration, stretch, sound waves, and head movement. Proprioceptors (muscle spindles, Golgi tendon organs) and baroreceptors (blood pressure) are mechanoreceptors.",
+        "- [b]Thermoreceptors[/b]: changes in temperature; there are separate warm and cold receptors.",
+        "- [b]Nociceptors (pain receptors)[/b]: tissue damage from intense mechanical, thermal, or chemical stimuli. Most are free nerve endings.",
+        "- [b]Photoreceptors[/b]: light. Found only in the retina (rods and cones).",
+        "[b]General senses[/b] have receptors widely distributed in skin, muscles, joints, and viscera: touch, pressure, temperature, pain, and body position. Examples include [b]tactile (Meissner) corpuscles[/b] for light touch in hairless skin and [b]lamellated (Pacinian) corpuscles[/b] for deep pressure and vibration. [b]Special senses[/b] have receptors concentrated in complex organs of the head: smell, taste, hearing, equilibrium, and vision.",
+        "A [b]sensation[/b] is the awareness of a stimulus; [b]perception[/b] is the brain's interpretation of it. Which sensation you feel depends on [i]which part of the brain[/i] receives the signal, not on the stimulus itself. The brain also [b]projects[/b] the sensation back to the region of the receptor, so you feel a pinprick in your finger, not in your head.",
+        "[b]Sensory adaptation[/b] is a decreasing response to a constant stimulus. Smell and light touch adapt quickly; you stop noticing your clothes or a room's odor within minutes. Pain receptors and proprioceptors adapt very little, which is protective: you need to keep knowing about injury and body position."
+      ],
+      "tip": "Five receptor types, 'Can My Thumb Notice Pain' = Chemo, Mechano, Thermo, Noci, Photo.",
+      "clinical": "[b]Phantom limb pain[/b] shows projection at work: after amputation, irritated nerve endings in the stump still send signals along pathways the brain maps to the missing limb, so the pain seems to come from it.",
+      "figure": {
+        "file": "m16_receptor_types.jpg",
+        "caption": "Receptors can also be grouped by structure: free nerve endings (most pain and temperature receptors), encapsulated nerve endings such as tactile and lamellated corpuscles, and specialized receptor cells such as a rod that pass the signal to a neuron.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 14.2, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+      }
+    },
+    {
+      "heading": "Pain and Referred Pain",
+      "body": [
+        "Pain receptors are free nerve endings found in nearly every tissue except the brain itself. Tissue damage releases chemicals (such as bradykinin, histamine, K⁺, and prostaglandins) that stimulate them, and lack of blood flow or oxygen also triggers them.",
+        "Two types of pain fibers:",
+        "- [b]Fast (acute) pain fibers[/b]: thin myelinated fibers carrying sharp, well-localized pain, such as a cut. The sensation arrives almost instantly and usually stops when the stimulus stops.",
+        "- [b]Slow (chronic) pain fibers[/b]: thin unmyelinated fibers carrying dull, aching, poorly localized pain that can continue after the stimulus ends.",
+        "[b]Visceral pain[/b] from internal organs is usually caused by stretch, spasm, or lack of blood flow, and is poorly localized.",
+        "[b]Referred pain[/b] is visceral pain felt as if it came from a skin area or surface region instead. It happens because sensory neurons from the organ and from that skin area enter the same spinal cord segments and share ascending pathways, so the brain misinterprets the source. Classic examples:",
+        "- [b]Heart[/b] (angina or heart attack): left chest, left shoulder, and down the medial left arm.",
+        "- [b]Gallbladder and liver[/b]: right upper abdomen and right shoulder region.",
+        "- [b]Appendix[/b] (early appendicitis): around the umbilicus.",
+        "The brain can reduce pain signals with natural opioid neuropeptides, [b]endorphins[/b] and [b]enkephalins[/b], which inhibit pain transmission in the spinal cord and brainstem."
+      ],
+      "clinical": "A patient complaining of left arm and jaw pain may be having a heart attack, not an arm injury. Recognizing referred pain patterns is a key diagnostic skill.",
+      "figure": {
+        "file": "m16_referred_pain.jpg",
+        "caption": "Each colored area is where pain from that organ is felt. Notice heart pain spreading over the left chest and down the left arm, and liver and gallbladder pain felt in the right shoulder area of the back.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 15.7, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/15-2-autonomic-reflexes-and-homeostasis"
+      }
+    },
+    {
+      "heading": "Smell and Taste",
+      "body": [
+        "Smell and taste are both chemical senses: the chemicals must dissolve in fluid (mucus or saliva) to be detected.",
+        "[b]Smell (olfaction)[/b]: the [b]olfactory epithelium[/b] lies in the roof of the nasal cavity. Its [b]olfactory receptor cells[/b] are bipolar neurons with cilia that bear odorant receptor proteins; humans have roughly 400 kinds. Unusually for neurons, they are replaced regularly by basal stem cells. The pathway:",
+        "- Odor molecules dissolve in mucus and bind receptors on the cilia.",
+        "- Axons pass through the [b]cribriform plate[/b] of the ethmoid bone as the olfactory nerve (CN I).",
+        "- They synapse in the [b]olfactory bulbs[/b].",
+        "- Signals travel along the [b]olfactory tracts[/b] to the primary olfactory cortex in the temporal lobe and to the limbic system.",
+        "Smell is the only sense that reaches the cerebral cortex [i]without first relaying through the thalamus[/i], and its strong limbic connections explain why odors trigger vivid memories and emotions. Olfactory receptors adapt quickly.",
+        "[b]Taste (gustation)[/b]: [b]taste buds[/b] sit mainly on the tongue's papillae (fungiform, circumvallate, and foliate; the numerous filiform papillae have no taste buds), with others on the soft palate and pharynx. Each bud contains [b]taste (gustatory) cells[/b] whose microvilli, called taste hairs, poke through a taste pore to contact dissolved chemicals.",
+        "The five primary tastes:",
+        "- [b]Sweet[/b]: sugars.",
+        "- [b]Sour[/b]: acids (H⁺).",
+        "- [b]Salty[/b]: Na⁺ and other metal ions.",
+        "- [b]Bitter[/b]: many alkaloids and toxins; a protective response.",
+        "- [b]Umami[/b]: glutamate and some amino acids, a savory or meaty taste.",
+        "All five can be detected across all taste-bud regions of the tongue; the old 'tongue map' with separate zones is a myth. Taste is carried by three cranial nerves: [b]VII facial[/b] (anterior two-thirds of tongue), [b]IX glossopharyngeal[/b] (posterior one-third), and [b]X vagus[/b] (pharynx and epiglottis). Signals pass to the medulla, then the thalamus, then the gustatory cortex, located in the insula deep in the lateral sulcus (Hole's describes it along the lateral sulcus in the parietal region). Much of what we call flavor is actually smell."
+      ],
+      "tip": "Taste nerves: '7, 9, 10, front to back.' Smell skips the thalamus because it is the oldest sense, wired straight to emotion and memory.",
+      "clinical": "[b]Anosmia[/b], loss of smell, can follow head injury that shears olfactory axons at the cribriform plate, and it is a common symptom of viral infections such as COVID-19. People with anosmia often say food has lost its taste.",
+      "figure": {
+        "file": "m16_olfactory.jpg",
+        "caption": "Odorants dissolve in mucus and bind the cilia of olfactory receptor cells in the roof of the nasal cavity. Their axons pass through the cribriform plate of the ethmoid bone as the olfactory nerve and synapse in the olfactory bulb, which sends signals along the olfactory tract.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 14.4, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+      }
+    },
+    {
+      "heading": "Anatomy of the Ear",
+      "body": [
+        "The ear handles two senses: hearing and equilibrium.",
+        "[b]Outer (external) ear[/b]: collects sound.",
+        "- [b]Auricle (pinna)[/b]: the visible elastic cartilage flap that funnels sound.",
+        "- [b]External acoustic meatus[/b]: the ear canal, lined with skin containing ceruminous glands that make earwax.",
+        "- [b]Tympanic membrane[/b] (eardrum): a thin membrane that vibrates with sound and marks the boundary with the middle ear.",
+        "[b]Middle ear (tympanic cavity)[/b]: an air-filled space in the temporal bone.",
+        "- Three [b]auditory ossicles[/b], the smallest bones in the body: the [b]malleus[/b] (hammer), attached to the eardrum; the [b]incus[/b] (anvil); and the [b]stapes[/b] (stirrup), whose footplate fits into the [b]oval window[/b] of the inner ear.",
+        "- The [b]auditory (pharyngotympanic or Eustachian) tube[/b] connects the middle ear to the nasopharynx and equalizes air pressure on both sides of the eardrum.",
+        "- Two tiny muscles, the tensor tympani and stapedius, contract reflexively to dampen very loud sounds.",
+        "[b]Inner ear[/b]: a system of channels in the temporal bone. The [b]bony labyrinth[/b] is filled with [b]perilymph[/b] and contains a [b]membranous labyrinth[/b] filled with [b]endolymph[/b]. Three regions:",
+        "- [b]Cochlea[/b]: snail-shaped, for hearing.",
+        "- [b]Vestibule[/b]: containing the utricle and saccule, for static equilibrium.",
+        "- [b]Semicircular canals[/b]: three loops at right angles to each other, for dynamic equilibrium.",
+        "The [b]round window[/b], a membrane-covered opening below the oval window, lets pressure waves exit the cochlea."
+      ],
+      "tip": "Ossicles in order, outside in: 'My Inner Self' = Malleus, Incus, Stapes. Or hammer, anvil, stirrup.",
+      "clinical": "[b]Otitis media[/b], a middle ear infection, is common in young children because their auditory tube is shorter and more horizontal, so throat infections spread easily into the middle ear. Fluid buildup can bulge the eardrum and muffle hearing.",
+      "figure": {
+        "file": "m16_ear.jpg",
+        "caption": "The brackets divide the outer (external) ear, middle ear, and inner ear. Find the tympanic membrane, the three ossicles ending with the stapes at the oval window, the Eustachian (auditory) tube, and the cochlea, vestibule, and semicircular canals of the inner ear.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 14.5, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+      }
+    },
+    {
+      "heading": "The Physiology of Hearing",
+      "body": [
+        "Inside the cochlea, three fluid-filled chambers spiral together: the [b]scala vestibuli[/b] (perilymph, starting at the oval window), the [b]cochlear duct (scala media)[/b] (endolymph), and the [b]scala tympani[/b] (perilymph, ending at the round window). The floor of the cochlear duct is the [b]basilar membrane[/b], which supports the [b]spiral organ (organ of Corti)[/b]. Its [b]hair cells[/b] have stereocilia that touch an overhanging [b]tectorial membrane[/b].",
+        "The path of sound:",
+        "- Sound waves enter the external acoustic meatus and make the tympanic membrane vibrate.",
+        "- The ossicles transmit the vibration to the oval window. Because the eardrum is much larger than the oval window, the force is concentrated and pressure is greatly increased.",
+        "- The stapes pushes the oval window in and out, creating pressure waves in the perilymph of the scala vestibuli.",
+        "- The waves pass through the cochlear duct, making the basilar membrane vibrate.",
+        "- Hair cells move against the tectorial membrane, their stereocilia bend, and the hair cells depolarize and release neurotransmitter onto sensory neurons.",
+        "- Impulses travel on the [b]cochlear branch of CN VIII[/b] to the medulla, then through the midbrain (inferior colliculi) and thalamus to the [b]primary auditory cortex[/b] in the temporal lobe.",
+        "- Remaining pressure waves dissipate through the round window.",
+        "[b]Pitch[/b] depends on where the basilar membrane vibrates most: the narrow, stiff end near the oval window responds to [b]high[/b] frequencies, and the wide, flexible end near the apex responds to [b]low[/b] frequencies. [b]Loudness[/b] depends on the amplitude of vibration, which stimulates more hair cells more intensely. Each auditory cortex receives input from both ears."
+      ],
+      "tip": "High pitch is heard near the 'Hallway entrance' (base, near the oval window); low pitch way down at the apex.",
+      "clinical": "[b]Conductive hearing loss[/b] comes from blocked transmission of vibration (earwax, fluid, a stiff stapes in otosclerosis). [b]Sensorineural hearing loss[/b] comes from damage to hair cells or the cochlear nerve; prolonged loud noise destroys hair cells, which are not replaced. Cochlear implants can bypass damaged hair cells.",
+      "figure": {
+        "file": "m16_sound_path.jpg",
+        "caption": "Follow the numbered steps: the tympanic membrane vibrates, the ossicles amplify the vibration, and the stapes sets up pressure waves in the scala vestibuli. The waves bend the basilar membrane under the spiral organ (organ of Corti) at a spot that depends on pitch.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 14.6, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+      }
+    },
+    {
+      "heading": "Equilibrium",
+      "body": [
+        "The vestibular apparatus (vestibule and semicircular canals) uses hair cells, like the cochlea, but they are bent by movement of the head instead of sound. Impulses travel on the [b]vestibular branch of CN VIII[/b] to the brainstem and cerebellum, which adjust posture, eye movements, and balance.",
+        "[b]Static equilibrium[/b]: senses the position of the head relative to gravity (tilt) when the body is still, and also straight-line acceleration such as an elevator starting. The receptors are [b]maculae[/b] in the [b]utricle[/b] and [b]saccule[/b] of the vestibule. Hair cells project into a gelatinous [b]otolithic membrane[/b] weighted with calcium carbonate crystals called [b]otoliths[/b] ('ear stones'). When the head tilts, gravity pulls the heavy membrane, bending the hair cells. OpenStax calls this sensing linear acceleration and head position rather than using the word 'static'.",
+        "[b]Dynamic equilibrium[/b]: senses [b]rotation[/b] of the head, such as turning or spinning. The receptors are [b]crista ampullaris[/b] in the [b]ampulla[/b], the swollen base of each semicircular canal. Hair cells are embedded in a gelatinous cap, the [b]cupula[/b]. When the head rotates, the endolymph lags behind because of inertia, pushing the cupula and bending the hair cells. Because the three canals lie in different planes, rotation in any direction is detected.",
+        "Vision and proprioceptors also contribute to balance, and the brain compares all three inputs."
+      ],
+      "tip": "Maculae in the vestibule = Motionless or straight-line (static). Crista in canals = Circling (rotation, dynamic).",
+      "clinical": "[b]Motion sickness[/b] results when vestibular signals conflict with visual signals, for example reading in a moving car. In [b]benign positional vertigo[/b], loose otoliths drift into a semicircular canal and cause brief spinning sensations when the head changes position.",
+      "figure": {
+        "file": "m16_maculae.jpg",
+        "caption": "The macula in the utricle and saccule has hair cells topped by an otolithic membrane weighted with otoliths. When the head tilts forward, gravity pulls the heavy membrane and bends the hair cells: this is static equilibrium.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 14.11, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+      }
+    },
+    {
+      "heading": "Anatomy of the Eye",
+      "body": [
+        "[b]Accessory structures[/b] protect and move the eye:",
+        "- [b]Eyelids (palpebrae)[/b] and eyelashes shield the eye and spread tears with blinking.",
+        "- The [b]conjunctiva[/b] is a thin mucous membrane lining the inside of the eyelids and covering the white of the eye (but not the cornea).",
+        "- The [b]lacrimal apparatus[/b]: the [b]lacrimal gland[/b], above and lateral to the eye, secretes tears that contain antibacterial lysozyme. Tears wash across the eye toward the medial corner, drain through the lacrimal puncta and canaliculi into the [b]lacrimal sac[/b], and then through the [b]nasolacrimal duct[/b] into the nasal cavity. That is why crying gives you a runny nose.",
+        "- Six [b]extrinsic eye muscles[/b] move the eyeball: superior, inferior, medial, and lateral rectus, and superior and inferior oblique.",
+        "[b]The eyeball has three layers (tunics)[/b]:",
+        "- [b]Fibrous tunic (outer)[/b]: the white, tough [b]sclera[/b], which protects the eye and anchors muscles, and the clear, curved [b]cornea[/b] in front, which lets light in and does most of the eye's light bending (refraction). The cornea has no blood vessels.",
+        "- [b]Vascular tunic (middle, uvea)[/b]: the [b]choroid[/b], a pigmented layer rich in blood vessels that nourishes the retina and absorbs stray light; the [b]ciliary body[/b], containing the [b]ciliary muscle[/b] that changes lens shape through the [b]suspensory ligaments[/b]; and the [b]iris[/b], the colored ring of smooth muscle around the [b]pupil[/b]. Its circular muscle (parasympathetic) constricts the pupil in bright light, and its radial muscle (sympathetic) dilates it in dim light.",
+        "- [b]Nervous tunic (inner, retina)[/b]: contains photoreceptors (rods and cones), bipolar cells, and ganglion cells, over a pigmented layer. The [b]optic disc[/b], where ganglion cell axons leave as the optic nerve, has no photoreceptors and is the [b]blind spot[/b]. Near the center is the [b]macula lutea[/b], with a central pit, the [b]fovea centralis[/b], containing only densely packed cones and giving the sharpest vision.",
+        "The [b]lens[/b] is a clear, flexible, biconvex structure without blood vessels, held behind the iris by the suspensory ligaments. It divides the eye into two cavities:",
+        "- The [b]anterior cavity[/b], in front of the lens, holds watery [b]aqueous humor[/b]. It is constantly secreted by the ciliary body and drains into the [b]scleral venous sinus (canal of Schlemm)[/b]. It nourishes the lens and cornea and maintains eye pressure.",
+        "- The [b]posterior cavity (vitreous chamber)[/b], behind the lens, holds the jellylike [b]vitreous humor[/b], which holds the retina in place and maintains the eye's shape. It is not continually replaced."
+      ],
+      "tip": "Tunics outside in: 'Fibrous, Vascular, Nervous' = 'Flowers Vase Nature.' Eye muscle nerves: LR6 SO4, all others CN III.",
+      "clinical": "[b]Conjunctivitis (pinkeye)[/b] is inflammation of the conjunctiva from bacteria, viruses, or allergies; it makes the whites of the eyes look red. A [b]detached retina[/b] separates from the choroid, often after trauma, and causes a 'curtain' over part of the vision; it is an emergency.",
+      "figure": {
+        "file": "m16_eye.jpg",
+        "caption": "Find the three tunics of the wall: the fibrous sclera (and cornea in front), the vascular choroid, and the retina. In front, the ciliary body and suspensory ligaments hold the lens; the anterior cavity holds aqueous humor and the posterior cavity holds vitreous humor.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 14.15, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+      }
+    },
+    {
+      "heading": "Focusing Light and Common Eye Disorders",
+      "body": [
+        "To focus an image on the retina, light is [b]refracted[/b] (bent) as it passes through the cornea, aqueous humor, lens, and vitreous humor. The cornea does most of the bending, but its shape is fixed; the lens provides the fine, adjustable focusing. The image on the retina is upside down and reversed left to right, and the brain interprets it correctly.",
+        "[b]Accommodation[/b] for near vision: the [b]ciliary muscle contracts[/b], which lets the suspensory ligaments go slack, so the elastic lens becomes [b]thicker and rounder[/b], bending light more. For distant vision the ciliary muscle relaxes, the ligaments pull tight, and the lens flattens. Near vision also involves pupil constriction and convergence of the eyes.",
+        "[b]Refraction disorders[/b]:",
+        "- [b]Myopia (nearsightedness)[/b]: near objects are clear but distant objects blur. The eyeball is usually too long (or the cornea too curved), so light focuses [i]in front of[/i] the retina. Corrected with [b]concave[/b] (diverging) lenses.",
+        "- [b]Hyperopia (farsightedness)[/b]: distant objects are clearer than near ones. The eyeball is usually too short, so light focuses [i]behind[/i] the retina. Corrected with [b]convex[/b] (converging) lenses.",
+        "- [b]Astigmatism[/b]: an unevenly curved cornea or lens bends light differently in different planes, so parts of the image are blurred. Corrected with specially shaped (cylindrical) lenses.",
+        "- [b]Presbyopia[/b]: with age the lens loses elasticity and cannot round up for near vision, so most people need reading glasses in their 40s.",
+        "[b]Common disorders[/b]:",
+        "- [b]Glaucoma[/b]: aqueous humor drains too slowly, so [b]pressure inside the eye rises[/b] and gradually damages the optic nerve and retina. Peripheral vision is lost first, often without pain, so it may go unnoticed. It is a leading cause of blindness, but early detection by measuring eye pressure and treatment with drops or surgery can prevent vision loss.",
+        "- [b]Cataract[/b]: the lens becomes [b]cloudy[/b] and opaque, blurring vision, most often with age, diabetes, or UV exposure. It is treated by surgically replacing the lens with an artificial one."
+      ],
+      "tip": "Myopia: 'My eye is too long, I can only see what's near me.' Concave for myopia ('concave caves in'); convex for hyperopia.",
+      "clinical": "Glaucoma is about pressure and the optic nerve; cataracts are about the cloudy lens. Glaucoma damage is permanent, while cataract vision loss can be restored with surgery."
+    },
+    {
+      "heading": "Photoreceptors and the Visual Pathway",
+      "body": [
+        "Light must pass through the ganglion and bipolar cell layers to reach the photoreceptors at the back of the retina. Signals then flow forward: [b]photoreceptors to bipolar cells to ganglion cells[/b], whose axons form the optic nerve.",
+        "[b]Rods vs cones[/b]:",
+        "- [b]Rods[/b]: far more numerous (on the order of 100 million or more per eye; textbooks give different estimates). Very sensitive, so they work in [b]dim light[/b], but they give only [b]black, white, and gray[/b] vision with low sharpness, because many rods converge on one ganglion cell. Concentrated in the peripheral retina.",
+        "- [b]Cones[/b]: fewer (roughly 6 million per eye). Need [b]bright light[/b], provide [b]color[/b] vision and [b]sharp detail[/b]. Concentrated in the fovea centralis. Three types respond best to blue, green, or red light; the brain compares their activity to perceive all colors.",
+        "[b]Photopigments[/b]: the rod pigment [b]rhodopsin[/b] consists of a protein, [b]opsin[/b], bound to [b]retinal[/b], a light-absorbing molecule made from [b]vitamin A[/b]. Light changes retinal's shape, rhodopsin breaks apart (bleaches), and this changes the rod's membrane potential and signal output. In bright light rhodopsin is mostly bleached; in darkness it regenerates, which is why your eyes need several minutes to adjust to a dark room ([b]dark adaptation[/b]). Cones use similar pigments with different opsins, each tuned to a different color range.",
+        "[b]The visual pathway[/b]:",
+        "- Ganglion cell axons leave each eye as the [b]optic nerve (CN II)[/b].",
+        "- At the [b]optic chiasma[/b], in front of the pituitary, fibers from the [b]medial (nasal) half[/b] of each retina [b]cross[/b] to the opposite side; fibers from the lateral (temporal) half stay on the same side.",
+        "- Beyond the chiasma, the [b]optic tracts[/b] carry fibers to the [b]lateral geniculate nucleus of the thalamus[/b]. Some fibers branch to the superior colliculi for visual reflexes.",
+        "- [b]Optic radiations[/b] carry signals to the [b]primary visual cortex in the occipital lobe[/b].",
+        "Because of the partial crossing, the right visual cortex sees the [b]left half of the visual field[/b] from both eyes, and the left cortex sees the right half. Overlap of the two eyes' fields gives depth perception."
+      ],
+      "tip": "Rods for Rough, dim light; Cones for Color and Clarity. Nasal fibers cross at the chiasma: 'the nose knows to cross.'",
+      "clinical": "[b]Night blindness[/b] can result from vitamin A deficiency, because rods cannot make enough rhodopsin. [b]Red-green color blindness[/b] is an X-linked inherited lack of one cone type, so it is much more common in males. A pituitary tumor pressing on the optic chiasma damages the crossing nasal fibers and causes loss of both outer (temporal) visual fields, called bitemporal hemianopia (often loosely described as tunnel vision).",
+      "figure": {
+        "file": "m16_chiasm.jpg",
+        "caption": "At the optic chiasma (labeled optic chiasm here), fibers from the medial (nasal) half of each retina cross, so each optic tract carries the opposite half of the visual field to the lateral geniculate nucleus of the thalamus and on to the visual cortex. Colors track the left and right visual fields.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 14.22, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-2-central-processing"
+      }
+    }
+  ],
+  "flashcards": [
+    { "id": "m16_fc01", "term": "Chemoreceptor", "definition": "Receptor that responds to dissolved chemicals; examples include taste, smell, and blood chemistry receptors." },
+    { "id": "m16_fc02", "term": "Mechanoreceptor", "definition": "Receptor that responds to mechanical force such as touch, pressure, stretch, sound, and head movement." },
+    { "id": "m16_fc03", "term": "Nociceptor", "definition": "Pain receptor, usually a free nerve ending, stimulated by tissue damage; adapts very little." },
+    { "id": "m16_fc04", "term": "Photoreceptor", "definition": "Light-sensitive receptor in the retina: rods and cones." },
+    { "id": "m16_fc05", "term": "Sensory adaptation", "definition": "Decreased receptor response to a constant stimulus; fast in smell and touch, minimal in pain and proprioception." },
+    { "id": "m16_fc06", "term": "Projection", "definition": "The brain's referral of a sensation back to the region where the receptor was stimulated." },
+    { "id": "m16_fc07", "term": "Referred pain", "definition": "Visceral pain felt in a surface region because the organ and that skin area share spinal cord segments and pathways; heart pain felt in the left arm is an example." },
+    { "id": "m16_fc08", "term": "Olfactory receptor cell", "definition": "Bipolar neuron in the nasal roof with odorant-binding cilia; axons pass through the cribriform plate to the olfactory bulb." },
+    { "id": "m16_fc09", "term": "Olfactory pathway", "definition": "Receptor cells, olfactory nerve through cribriform plate, olfactory bulb, olfactory tract, olfactory cortex in temporal lobe and limbic system; bypasses the thalamus." },
+    { "id": "m16_fc10", "term": "Five primary tastes", "definition": "Sweet, sour, salty, bitter, and umami." },
+    { "id": "m16_fc11", "term": "Taste cranial nerves", "definition": "VII facial (anterior two-thirds of tongue), IX glossopharyngeal (posterior one-third), X vagus (pharynx and epiglottis)." },
+    { "id": "m16_fc12", "term": "Tympanic membrane", "definition": "Eardrum; vibrates with sound and separates the outer ear from the middle ear." },
+    { "id": "m16_fc13", "term": "Auditory ossicles", "definition": "Malleus, incus, and stapes; transmit and amplify eardrum vibrations to the oval window." },
+    { "id": "m16_fc14", "term": "Auditory (Eustachian) tube", "definition": "Connects the middle ear to the nasopharynx and equalizes pressure across the eardrum." },
+    { "id": "m16_fc15", "term": "Perilymph vs endolymph", "definition": "Perilymph fills the bony labyrinth; endolymph fills the membranous labyrinth, including the cochlear duct." },
+    { "id": "m16_fc16", "term": "Spiral organ (organ of Corti)", "definition": "Hearing receptor on the basilar membrane of the cochlea; hair cells bend against the tectorial membrane." },
+    { "id": "m16_fc17", "term": "Basilar membrane and pitch", "definition": "High frequencies vibrate the narrow, stiff base near the oval window; low frequencies vibrate the wide apex." },
+    { "id": "m16_fc18", "term": "Macula (utricle and saccule)", "definition": "Receptor for static equilibrium and linear acceleration; hair cells in an otolithic membrane weighted by otoliths." },
+    { "id": "m16_fc19", "term": "Crista ampullaris", "definition": "Receptor for dynamic (rotational) equilibrium in the ampulla of each semicircular canal; hair cells in a gelatinous cupula." },
+    { "id": "m16_fc20", "term": "Conjunctiva", "definition": "Mucous membrane lining the eyelids and covering the sclera, but not the cornea." },
+    { "id": "m16_fc21", "term": "Lacrimal apparatus", "definition": "Lacrimal gland secretes tears, which drain through puncta, canaliculi, lacrimal sac, and nasolacrimal duct into the nasal cavity." },
+    { "id": "m16_fc22", "term": "Fibrous tunic", "definition": "Outer eye layer: opaque white sclera and transparent cornea." },
+    { "id": "m16_fc23", "term": "Vascular tunic (uvea)", "definition": "Middle eye layer: choroid, ciliary body, and iris." },
+    { "id": "m16_fc24", "term": "Retina", "definition": "Inner nervous tunic containing photoreceptors, bipolar cells, and ganglion cells." },
+    { "id": "m16_fc25", "term": "Fovea centralis", "definition": "Pit in the macula lutea containing only cones; site of sharpest vision." },
+    { "id": "m16_fc26", "term": "Optic disc", "definition": "Where the optic nerve leaves the retina; no photoreceptors, so it is the blind spot." },
+    { "id": "m16_fc27", "term": "Aqueous vs vitreous humor", "definition": "Aqueous: watery fluid in front of the lens, constantly made by the ciliary body and drained by the scleral venous sinus. Vitreous: gel behind the lens that holds the retina in place." },
+    { "id": "m16_fc28", "term": "Accommodation", "definition": "For near vision, the ciliary muscle contracts, suspensory ligaments slacken, and the lens rounds up." },
+    { "id": "m16_fc29", "term": "Rods vs cones", "definition": "Rods: dim light, black and white, peripheral, low acuity. Cones: bright light, color, high acuity, concentrated in the fovea." },
+    { "id": "m16_fc30", "term": "Rhodopsin", "definition": "Rod photopigment made of opsin plus retinal (from vitamin A); bleaches in light and regenerates in darkness." },
+    { "id": "m16_fc31", "term": "Optic chiasma", "definition": "Where fibers from the medial (nasal) half of each retina cross to the opposite side." },
+    { "id": "m16_fc32", "term": "Myopia vs hyperopia", "definition": "Myopia: nearsighted, eyeball too long, focus in front of retina, concave lens. Hyperopia: farsighted, eyeball too short, focus behind retina, convex lens." },
+    { "id": "m16_fc33", "term": "Glaucoma vs cataract", "definition": "Glaucoma: increased intraocular pressure from poor aqueous drainage damages the optic nerve. Cataract: clouding of the lens." }
+  ],
+  "quiz": [
+    {
+      "id": "m16_q01",
+      "type": "multiple_choice",
+      "prompt": "Receptors in the carotid arteries that detect changes in blood pressure by sensing stretch of the vessel wall are classified as:",
+      "choices": ["Mechanoreceptors", "Chemoreceptors", "Thermoreceptors", "Nociceptors"],
+      "answer": 0,
+      "explanation": "Baroreceptors respond to stretch, a mechanical stimulus. Chemoreceptors are tempting because the carotid body nearby has them, but those sense blood O₂, CO₂, and pH, not pressure."
+    },
+    {
+      "id": "m16_q02",
+      "type": "multiple_choice",
+      "prompt": "After a few minutes in a room with a strong odor, you no longer notice it. This is an example of:",
+      "choices": ["Sensory adaptation", "Referred pain", "Projection", "Accommodation"],
+      "answer": 0,
+      "explanation": "Olfactory receptors adapt quickly to a constant stimulus. Accommodation is tempting as a similar-sounding word, but it refers to the lens changing shape for near vision."
+    },
+    {
+      "id": "m16_q03",
+      "type": "multiple_choice",
+      "prompt": "A patient having a heart attack reports pain in the left shoulder and down the inner left arm. Why?",
+      "choices": [
+        "Sensory neurons from the heart and from that skin area enter the same spinal cord segments",
+        "The heart attack has damaged nerves in the arm",
+        "Pain receptors in the heart are located in the arm",
+        "The vagus nerve carries pain directly to the arm"
+      ],
+      "answer": 0,
+      "explanation": "Referred pain arises because visceral and somatic sensory fibers share spinal segments and pathways, so the brain attributes the pain to the more familiar surface region. The arm itself is not injured."
+    },
+    {
+      "id": "m16_q04",
+      "type": "multiple_choice",
+      "prompt": "Which sense is the only one whose signals reach the cerebral cortex without first passing through the thalamus?",
+      "choices": ["Smell", "Taste", "Hearing", "Vision"],
+      "answer": 0,
+      "explanation": "Olfactory signals go from the olfactory bulb and tract directly to the olfactory cortex and limbic system. Taste is tempting as the other chemical sense, but it does relay through the thalamus."
+    },
+    {
+      "id": "m16_q05",
+      "type": "multiple_choice",
+      "prompt": "A person has lost taste on the anterior two-thirds of the tongue on one side. Which cranial nerve is most likely damaged?",
+      "choices": ["Facial (VII)", "Glossopharyngeal (IX)", "Vagus (X)", "Hypoglossal (XII)"],
+      "answer": 0,
+      "explanation": "The facial nerve carries taste from the front two-thirds. The hypoglossal is tempting because it serves the tongue, but it is a motor nerve that moves the tongue and carries no taste."
+    },
+    {
+      "id": "m16_q06",
+      "type": "multiple_choice",
+      "prompt": "Which taste is triggered by glutamate and gives a savory, meaty flavor?",
+      "choices": ["Umami", "Salty", "Bitter", "Sour"],
+      "answer": 0,
+      "explanation": "Umami receptors respond to glutamate, as in broth or MSG. Salty is tempting because savory foods are often salty, but it responds to Na⁺."
+    },
+    {
+      "id": "m16_q07",
+      "type": "multiple_choice",
+      "prompt": "Which ossicle is attached to the oval window?",
+      "choices": ["Stapes", "Malleus", "Incus", "Tympanic membrane"],
+      "answer": 0,
+      "explanation": "The stapes footplate sits in the oval window and pushes on the perilymph. The malleus is the tempting choice, but it attaches to the eardrum at the outer end of the chain."
+    },
+    {
+      "id": "m16_q08",
+      "type": "multiple_choice",
+      "prompt": "Where are the receptor cells for hearing located?",
+      "choices": [
+        "Spiral organ on the basilar membrane of the cochlea",
+        "Maculae of the utricle and saccule",
+        "Crista ampullaris of the semicircular canals",
+        "Tympanic membrane"
+      ],
+      "answer": 0,
+      "explanation": "The spiral organ (organ of Corti) holds the auditory hair cells. The maculae and cristae also contain hair cells, which makes them tempting, but they serve equilibrium."
+    },
+    {
+      "id": "m16_q09",
+      "type": "multiple_choice",
+      "prompt": "Years of loud factory noise destroyed hair cells near the base of a worker's cochlea, close to the oval window. The worker most likely has trouble hearing:",
+      "choices": ["High-pitched sounds", "Low-pitched sounds", "All sounds equally", "Only sounds in one ear"],
+      "answer": 0,
+      "explanation": "The narrow, stiff base of the basilar membrane responds to high frequencies, so high-pitch hearing is lost first. Low pitches are detected near the apex, which is less affected."
+    },
+    {
+      "id": "m16_q10",
+      "type": "multiple_choice",
+      "prompt": "Spinning in an office chair stimulates receptors that detect rotational movement. Which receptors are these?",
+      "choices": ["Crista ampullaris in the semicircular canals", "Maculae in the utricle", "Spiral organ", "Muscle spindles"],
+      "answer": 0,
+      "explanation": "Rotation makes endolymph lag and bend the cupula of the crista ampullaris: dynamic equilibrium. Maculae are tempting because they also serve balance, but they detect head tilt and straight-line acceleration."
+    },
+    {
+      "id": "m16_q11",
+      "type": "multiple_choice",
+      "prompt": "Which part of the eye does most of the refraction (bending) of incoming light?",
+      "choices": ["Cornea", "Lens", "Vitreous humor", "Iris"],
+      "answer": 0,
+      "explanation": "The curved cornea bends light the most. The lens is the tempting answer because it is adjustable and handles fine focusing, but it contributes less total bending than the cornea."
+    },
+    {
+      "id": "m16_q12",
+      "type": "multiple_choice",
+      "prompt": "When you shift focus from a distant mountain to a book in your hands, what happens?",
+      "choices": [
+        "The ciliary muscle contracts, the suspensory ligaments slacken, and the lens becomes rounder",
+        "The ciliary muscle relaxes, the suspensory ligaments tighten, and the lens flattens",
+        "The cornea changes shape to bend light more",
+        "The pupil dilates to let in more light"
+      ],
+      "answer": 0,
+      "explanation": "Accommodation for near vision rounds the lens by releasing ligament tension. The second choice describes distant vision. The pupil actually constricts for near vision."
+    },
+    {
+      "id": "m16_q13",
+      "type": "multiple_choice",
+      "prompt": "A student sees the board clearly from the front row but not from the back. The eyeball is likely too long, focusing light in front of the retina. This condition and its correction are:",
+      "choices": [
+        "Myopia, corrected with a concave lens",
+        "Hyperopia, corrected with a convex lens",
+        "Myopia, corrected with a convex lens",
+        "Astigmatism, corrected with a concave lens"
+      ],
+      "answer": 0,
+      "explanation": "Nearsightedness (myopia) focuses distant images in front of the retina, and a diverging concave lens moves the focus back. Hyperopia is the opposite: the eyeball is too short and needs a convex lens."
+    },
+    {
+      "id": "m16_q14",
+      "type": "multiple_choice",
+      "prompt": "A patient has gradually lost peripheral vision without any pain, and eye pressure is elevated. The most likely diagnosis is:",
+      "choices": ["Glaucoma", "Cataract", "Myopia", "Conjunctivitis"],
+      "answer": 0,
+      "explanation": "Glaucoma raises intraocular pressure because aqueous humor drains poorly, damaging the optic nerve and taking peripheral vision first. A cataract clouds the lens and blurs all vision, but does not raise pressure."
+    },
+    {
+      "id": "m16_q15",
+      "type": "multiple_choice",
+      "prompt": "Walking into a dark movie theater, you can at first see almost nothing, but after several minutes you can see shapes in gray. Which explains this?",
+      "choices": [
+        "Rhodopsin in the rods regenerates in darkness",
+        "Cones become more sensitive to color in the dark",
+        "The lens thickens to collect more light",
+        "The optic chiasma switches to the opposite visual field"
+      ],
+      "answer": 0,
+      "explanation": "Bright light bleaches rhodopsin; in darkness it regenerates, restoring rod sensitivity, and rods give only gray-scale vision. Cones need bright light, which is why you see little color in the dark."
+    },
+    {
+      "id": "m16_q16",
+      "type": "multiple_choice",
+      "prompt": "Light focused precisely on which part of the retina gives the sharpest, most detailed color vision?",
+      "choices": ["Fovea centralis", "Optic disc", "Peripheral retina", "Choroid"],
+      "answer": 0,
+      "explanation": "The fovea contains only tightly packed cones. The optic disc is tempting by location near the center, but it has no photoreceptors and is the blind spot."
+    },
+    {
+      "id": "m16_q17",
+      "type": "multiple_choice",
+      "prompt": "A pituitary tumor compresses the optic chiasma. Which fibers are damaged, and what is the result?",
+      "choices": [
+        "Crossing fibers from the nasal halves of both retinas, causing loss of both outer visual fields",
+        "All fibers of the right optic nerve, causing blindness in the right eye",
+        "Fibers in the optic radiations, causing loss of color vision",
+        "Fibers to the superior colliculi, causing loss of pupil reflexes only"
+      ],
+      "answer": 0,
+      "explanation": "Only nasal retinal fibers cross at the chiasma, and the nasal retina sees the temporal (outer) visual field, so both outer fields are lost. Complete loss of one eye would come from damage to that eye's optic nerve before the chiasma."
+    },
+    {
+      "id": "m16_q18",
+      "type": "true_false",
+      "prompt": "Each region of the tongue can detect only one of the primary tastes, as shown on the classic tongue map.",
+      "answer": false,
+      "explanation": "The tongue map is a myth. Taste buds in all regions can detect all five primary tastes, though sensitivity varies slightly."
+    },
+    {
+      "id": "m16_q19",
+      "type": "true_false",
+      "prompt": "Rods are more sensitive to dim light than cones, but they do not provide color vision.",
+      "answer": true,
+      "explanation": "Rods respond to very low light levels and many converge on single ganglion cells, which boosts sensitivity but lowers sharpness. Color vision depends on the three cone types."
+    },
+    {
+      "id": "m16_q20",
+      "type": "true_false",
+      "prompt": "The auditory tube connects the middle ear to the nasopharynx and equalizes pressure across the tympanic membrane.",
+      "answer": true,
+      "explanation": "This is why yawning or swallowing 'pops' your ears on an airplane. The same connection lets throat infections spread to the middle ear."
+    },
+    {
+      "id": "m16_q21",
+      "type": "ordering",
+      "prompt": "Put the structures in the order that sound energy passes through them.",
+      "items": [
+        "Tympanic membrane",
+        "Malleus, incus, and stapes",
+        "Oval window",
+        "Perilymph of the scala vestibuli",
+        "Basilar membrane and hair cells of the spiral organ",
+        "Cochlear branch of the vestibulocochlear nerve"
+      ],
+      "explanation": "The eardrum vibrates, the ossicles carry the vibration to the oval window, pressure waves travel through perilymph, the basilar membrane vibrates and bends hair cells, and the cochlear nerve carries impulses to the brain."
+    },
+    {
+      "id": "m16_q22",
+      "type": "ordering",
+      "prompt": "Put the structures in the order light passes through them on its way to the photoreceptors.",
+      "items": ["Cornea", "Aqueous humor", "Lens", "Vitreous humor", "Retina"],
+      "explanation": "Light enters through the cornea, crosses the aqueous humor of the anterior cavity and passes through the pupil, is focused by the lens, crosses the vitreous humor, and reaches the retina."
+    },
+    {
+      "id": "m16_q23",
+      "type": "ordering",
+      "prompt": "Put the visual pathway in order from the eye to the brain.",
+      "items": [
+        "Optic nerve",
+        "Optic chiasma",
+        "Optic tract",
+        "Lateral geniculate nucleus of the thalamus",
+        "Optic radiation",
+        "Primary visual cortex in the occipital lobe"
+      ],
+      "explanation": "Ganglion cell axons form the optic nerve, nasal fibers cross at the chiasma, the optic tracts reach the thalamus, and optic radiations carry signals to the occipital lobe."
+    },
+    {
+      "id": "m16_q24",
+      "type": "ordering",
+      "prompt": "Put the path of tears in order from production to drainage.",
+      "items": ["Lacrimal gland", "Surface of the eye", "Lacrimal puncta and canaliculi", "Lacrimal sac", "Nasolacrimal duct", "Nasal cavity"],
+      "explanation": "Tears are secreted above and lateral to the eye, wash across it toward the medial corner, enter the puncta, collect in the lacrimal sac, and drain down the nasolacrimal duct into the nose."
+    }
+  ]
+}

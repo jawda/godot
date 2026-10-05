@@ -1,0 +1,199 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://lesson/figure_viewer.gd" id="1_viewer"]
+[ext_resource type="Texture2D" path="res://theme/icons/zoom_fit.svg" id="2_fit"]
+[ext_resource type="Texture2D" path="res://theme/icons/zoom_out.svg" id="3_out"]
+[ext_resource type="Texture2D" path="res://theme/icons/zoom_in.svg" id="4_in"]
+[ext_resource type="Texture2D" path="res://theme/icons/chevron_down.svg" id="5_chevron"]
+
+[sub_resource type="InputEventKey" id="key_escape"]
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="close_shortcut"]
+events = [SubResource("key_escape")]
+
+[sub_resource type="InputEventKey" id="key_zero"]
+keycode = 48
+
+[sub_resource type="Shortcut" id="fit_shortcut"]
+events = [SubResource("key_zero")]
+
+[sub_resource type="InputEventKey" id="key_minus"]
+keycode = 45
+
+[sub_resource type="InputEventKey" id="key_keypad_minus"]
+keycode = 4194435
+
+[sub_resource type="Shortcut" id="zoom_out_shortcut"]
+events = [SubResource("key_minus"), SubResource("key_keypad_minus")]
+
+[sub_resource type="InputEventKey" id="key_equal"]
+keycode = 61
+
+[sub_resource type="InputEventKey" id="key_plus"]
+keycode = 43
+
+[sub_resource type="InputEventKey" id="key_keypad_plus"]
+keycode = 4194437
+
+[sub_resource type="Shortcut" id="zoom_in_shortcut"]
+events = [SubResource("key_equal"), SubResource("key_plus"), SubResource("key_keypad_plus")]
+
+[node name="FigureViewer" type="Control"]
+visible = false
+top_level = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_viewer")
+
+[node name="Scrim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.043, 0.043, 0.043, 1)
+
+[node name="ScreenPadding" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 16
+
+[node name="Layout" type="VBoxContainer" parent="ScreenPadding"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="Header" type="HBoxContainer" parent="ScreenPadding/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Caption" type="Label" parent="ScreenPadding/Layout/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"FigureCaption"
+text = "Caption"
+autowrap_mode = 3
+max_lines_visible = 3
+text_overrun_behavior = 3
+
+[node name="Close" type="Button" parent="ScreenPadding/Layout/Header"]
+layout_mode = 2
+size_flags_vertical = 0
+focus_mode = 0
+shortcut = SubResource("close_shortcut")
+shortcut_in_tooltip = false
+text = "Close  (Esc)"
+
+[node name="Canvas" type="ScrollContainer" parent="ScreenPadding/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Stage" type="CenterContainer" parent="ScreenPadding/Layout/Canvas"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 13
+
+[node name="Picture" type="TextureRect" parent="ScreenPadding/Layout/Canvas/Stage"]
+texture_filter = 4
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="ToolbarRow" type="CenterContainer" parent="ScreenPadding/Layout"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Toolbar" type="PanelContainer" parent="ScreenPadding/Layout/ToolbarRow"]
+layout_mode = 2
+theme_type_variation = &"ViewerToolbar"
+
+[node name="Controls" type="HBoxContainer" parent="ScreenPadding/Layout/ToolbarRow/Toolbar"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Fit" type="Button" parent="ScreenPadding/Layout/ToolbarRow/Toolbar/Controls"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Fit to window (0)"
+theme_type_variation = &"ToolbarButton"
+shortcut = SubResource("fit_shortcut")
+shortcut_in_tooltip = false
+icon = ExtResource("2_fit")
+
+[node name="ZoomLevel" type="MenuButton" parent="ScreenPadding/Layout/ToolbarRow/Toolbar/Controls"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+tooltip_text = "Zoom level"
+theme_type_variation = &"ZoomLevel"
+text = "100%"
+icon = ExtResource("5_chevron")
+icon_alignment = 2
+item_count = 10
+popup/item_0/text = "Fit to window"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "25%"
+popup/item_2/id = 25
+popup/item_3/text = "50%"
+popup/item_3/id = 50
+popup/item_4/text = "75%"
+popup/item_4/id = 75
+popup/item_5/text = "100%  (actual size)"
+popup/item_5/id = 100
+popup/item_6/text = "150%"
+popup/item_6/id = 150
+popup/item_7/text = "200%"
+popup/item_7/id = 200
+popup/item_8/text = "300%"
+popup/item_8/id = 300
+popup/item_9/text = "400%"
+popup/item_9/id = 400
+
+[node name="ZoomOut" type="Button" parent="ScreenPadding/Layout/ToolbarRow/Toolbar/Controls"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Zoom out (-)"
+theme_type_variation = &"ToolbarButton"
+shortcut = SubResource("zoom_out_shortcut")
+shortcut_in_tooltip = false
+icon = ExtResource("3_out")
+
+[node name="ZoomSlider" type="HSlider" parent="ScreenPadding/Layout/ToolbarRow/Toolbar/Controls"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+min_value = 10.0
+max_value = 400.0
+value = 100.0
+
+[node name="ZoomIn" type="Button" parent="ScreenPadding/Layout/ToolbarRow/Toolbar/Controls"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Zoom in (+)"
+theme_type_variation = &"ToolbarButton"
+shortcut = SubResource("zoom_in_shortcut")
+shortcut_in_tooltip = false
+icon = ExtResource("4_in")
+
+[node name="Hint" type="Label" parent="ScreenPadding/Layout/ToolbarRow/Toolbar/Controls"]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+theme_override_font_sizes/font_size = 13
+text = "Scroll to zoom · drag to pan · double-click to fit"

@@ -1,0 +1,8 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1784046136
+icon.svg::CompressedTexture2D::3735978267597075691::1784036928::1784036937::1::::<><><>0<>0<>ec10a9a09a8c7ea5c29cedf4cc108410<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+rain.tscn::PackedScene::9222695237347530847::1784039244::0::1::::<><><>0<>0<><>::
+snow.tscn::PackedScene::117147794711206188::1784039712::0::1::::<><><>0<>0<><>::
+::res://assets/::1784046275
+rain.png::CompressedTexture2D::5977210841472541809::1784046182::1784046456::1::::<><><>0<>0<>50a7e977c2b409fb5787c4e94f44dfbd<>res://.godot/imported/rain.png-b694551faf805ab4e182738f64955d1f.ctex::
+rain_splash.png::CompressedTexture2D::5898395315411214726::1784046440::1784046456::1::::<><><>0<>0<>8d94332213f951a33e189b3a660cb006<>res://.godot/imported/rain_splash.png-eff8707491e51cb2d2228a3e7b2fd0a5.ctex::

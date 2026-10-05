@@ -1,0 +1,624 @@
+{
+  "id": "m05_tissues",
+  "order": 5,
+  "course": "A&P I",
+  "title": "Tissues (Histology)",
+  "summary": "The four tissue types, how epithelium and connective tissue are classified, body membranes, and how tissues repair.",
+  "objectives": [
+    "Name the four primary tissue types and state the general function of each",
+    "Classify epithelium by number of layers and cell shape, and match each type to a location and function",
+    "Distinguish exocrine from endocrine glands and merocrine, apocrine, and holocrine secretion",
+    "Identify the cells, fibers, and ground substance of connective tissue",
+    "Match each connective tissue type, including the three cartilages, to its structure and location",
+    "Compare skeletal, cardiac, and smooth muscle tissue",
+    "Describe the cells of nervous tissue",
+    "Classify the four body membranes",
+    "Explain regeneration versus fibrosis and predict which tissues heal well"
+  ],
+  "lesson": [
+    {
+      "heading": "The Four Tissue Types",
+      "body": [
+        "A [b]tissue[/b] is a group of similar cells plus the material between them (the extracellular matrix) working together for a common function. The study of tissues is [b]histology[/b]. Every organ in the body is built from just four primary tissue types:",
+        "- [b]Epithelial tissue[/b]: covers body surfaces, lines cavities and hollow organs, and forms glands. Cells are packed tightly with little matrix.",
+        "- [b]Connective tissue[/b]: binds, supports, protects, stores energy, and transports. Cells are usually scattered in abundant matrix.",
+        "- [b]Muscle tissue[/b]: contracts to produce movement.",
+        "- [b]Nervous tissue[/b]: conducts electrochemical signals and processes information.",
+        "Cells in tissues are held together by [b]intercellular junctions[/b]. [b]Tight junctions[/b] fuse neighboring membranes into a leak-proof seal (for example, the lining of the intestine and the urinary bladder). [b]Desmosomes[/b] act like rivets or spot welds that resist pulling forces (abundant in skin and heart muscle). [b]Gap junctions[/b] are protein channels that let ions and small molecules pass directly from one cell to the next (they let cardiac and smooth muscle cells contract in unison)."
+      ],
+      "tip": "Tight = seal, Desmosome = rivet, Gap = tunnel.",
+      "figure": {
+        "file": "m05_four_tissues.jpg",
+        "caption": "Each corner pairs a tissue type with places it is found: epithelium lines the GI tract and forms the epidermis, connective tissue includes fat, bone, and tendon, and muscle and nervous tissue each have their own micrograph. Notice how tightly packed the epithelial cells are compared with the scattered cells of connective tissue.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 4.2, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/4-1-types-of-tissues"
+      }
+    },
+    {
+      "heading": "Epithelial Tissue: General Features and Classification",
+      "body": [
+        "Epithelium has several defining traits. It has a free [b]apical surface[/b] exposed to the outside or to a lumen, and a [b]basal surface[/b] anchored to a [b]basement membrane[/b], a thin layer of nonliving material that attaches it to the connective tissue below. Epithelium is [b]avascular[/b] (no blood vessels of its own), so its cells get nutrients by diffusion from the underlying connective tissue. Its cells divide readily, which is why surfaces like skin and the digestive lining replace themselves constantly.",
+        "Epithelia are named with two words. The first describes [b]layers[/b]:",
+        "- [b]Simple[/b]: one layer of cells, suited to diffusion, filtration, absorption, and secretion.",
+        "- [b]Stratified[/b]: two or more layers, suited to protection against abrasion.",
+        "The second describes the [b]shape of the cells[/b]:",
+        "- [b]Squamous[/b]: flat and thin, like floor tiles.",
+        "- [b]Cuboidal[/b]: about as tall as they are wide, with a round central nucleus.",
+        "- [b]Columnar[/b]: taller than wide, with an elongated nucleus usually near the base.",
+        "For stratified epithelia, the name comes from the shape of the cells in the [b]most superficial (apical) layer[/b], not the deep layers. Stratified squamous epithelium has cuboidal or columnar cells at its base but flat cells at the surface."
+      ],
+      "tip": "Name stratified epithelium by the top layer: look at the cells facing the lumen or the outside.",
+      "figure": {
+        "file": "m05_epithelial_cells.jpg",
+        "caption": "Read the grid as the two-word naming system: columns give the number of layers (simple or stratified) and rows give the cell shape (squamous, cuboidal, columnar). Pseudostratified sits apart because every cell touches the basement membrane (the purple base line) even though the nuclei sit at different heights.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 4.6, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/4-2-epithelial-tissue"
+      }
+    },
+    {
+      "heading": "Types of Epithelium: Locations and Functions",
+      "body": [
+        "- [b]Simple squamous[/b]: a single layer of flat cells. Allows rapid diffusion and filtration. Found in the air sacs (alveoli) of the lungs, walls of capillaries, the filtering parts of the kidney, and the linings of blood vessels (endothelium) and serous membranes (mesothelium).",
+        "- [b]Simple cuboidal[/b]: secretion and absorption. Found in kidney tubules, ducts of many glands, the thyroid follicles, and the surface of the ovaries.",
+        "- [b]Simple columnar[/b]: absorption and secretion. Lines most of the digestive tract from stomach to rectum. Often has [b]microvilli[/b] (to increase absorptive surface) and [b]goblet cells[/b], which secrete protective mucus. A ciliated version lines the uterine tubes, where cilia move the egg toward the uterus.",
+        "- [b]Pseudostratified columnar[/b]: one layer of cells that [i]looks[/i] layered because the cells are different heights and their nuclei sit at different levels. Every cell touches the basement membrane, but not every cell reaches the surface. The ciliated version with goblet cells lines the respiratory passages (nasal cavity, trachea, bronchi), where mucus traps particles and cilia sweep it toward the throat.",
+        "- [b]Stratified squamous[/b]: many layers, flat at the surface. Protects against abrasion. The [b]keratinized[/b] form makes the epidermis of skin (surface cells are dead and filled with keratin, which waterproofs). The [b]nonkeratinized[/b] form lines moist surfaces: oral cavity, esophagus, vagina, and anal canal.",
+        "- [b]Stratified cuboidal[/b]: usually two or three layers. Relatively rare. Lines larger ducts of sweat, salivary, and mammary glands and the pancreas, and the developing ovarian follicles.",
+        "- [b]Stratified columnar[/b]: rare. Found in parts of the male urethra, the vas deferens (ductus deferens), and parts of the pharynx.",
+        "- [b]Transitional epithelium[/b] (OpenStax calls it [b]urothelium[/b]): stratified tissue whose surface cells change shape. When the organ is empty, surface cells are rounded or dome shaped; when it fills and stretches, the cells flatten and the layer thins. Found only in the urinary tract: urinary bladder, ureters, and part of the urethra. It also forms a barrier that keeps urine from diffusing back into the body."
+      ],
+      "tip": "Transitional = Toilet tissue: it is found only in the urinary system and stretches as the bladder fills.",
+      "clinical": "Smoking paralyzes and eventually destroys the cilia of the pseudostratified epithelium in the airways, so mucus cannot be cleared and must be coughed up. Over time the irritated lining can be replaced by tougher stratified squamous epithelium (a change called metaplasia), which offers protection but no mucus clearance."
+    },
+    {
+      "heading": "Glandular Epithelium",
+      "body": [
+        "A [b]gland[/b] is one or more epithelial cells specialized to make and secrete a substance.",
+        "- [b]Exocrine glands[/b] secrete onto a surface or into a lumen, usually through a [b]duct[/b]. Examples: sweat, salivary, sebaceous, and mammary glands. A goblet cell is a [b]unicellular[/b] exocrine gland.",
+        "- [b]Endocrine glands[/b] are [b]ductless[/b] and release hormones into the interstitial fluid, from which they enter the blood. Examples: thyroid, adrenal, and pituitary glands. (The pancreas has both exocrine and endocrine portions.)",
+        "Exocrine glands are also classified by [b]how[/b] the product leaves the cell:",
+        "- [b]Merocrine[/b]: product is released by [b]exocytosis[/b] and the cell stays intact. This is the most common type. Examples: salivary glands, pancreatic glands, and most (eccrine) sweat glands.",
+        "- [b]Apocrine[/b]: the apical portion of the cell, filled with product, pinches off, and the cell then repairs itself. Hole's gives mammary glands as the example (the lipid portion of milk is released this way).",
+        "- [b]Holocrine[/b]: the [b]entire cell[/b] fills with product, dies, and ruptures, so the whole cell becomes the secretion. New cells from cell division replace it. Example: [b]sebaceous (oil) glands[/b].",
+        "Note on naming: the sweat glands of the armpit and groin are called \"apocrine sweat glands,\" but current research shows they actually release their product mostly by exocytosis (a merocrine mechanism). Textbooks keep the traditional name, so do not let the name trick you into assuming the mechanism."
+      ],
+      "tip": "Holocrine = Whole cell dies. Apocrine = Apex pinches off. Merocrine = Merely exocytosis.",
+      "figure": {
+        "file": "m05_secretion_modes.jpg",
+        "caption": "Compare how the product leaves the cell: in merocrine secretion vesicles release it by exocytosis and the cell stays whole, in apocrine secretion the apical part pinches off, and in holocrine secretion the whole cell dies and becomes the secretion, as in sebaceous glands.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 4.10, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/4-2-epithelial-tissue"
+      }
+    },
+    {
+      "heading": "Connective Tissue: Components",
+      "body": [
+        "Connective tissue is the most abundant and widely distributed tissue type. Unlike epithelium, its cells are usually spread apart in an extensive [b]extracellular matrix[/b] made of [b]protein fibers[/b] plus [b]ground substance[/b]. Most connective tissues have a good blood supply (cartilage is the major exception). All connective tissues develop from embryonic [b]mesenchyme[/b].",
+        "[b]Major cells[/b]:",
+        "- [b]Fibroblasts[/b]: the most common resident cell. Large, star-shaped cells that produce the fibers and ground substance. (The suffix [i]-blast[/i] means a cell that is actively building matrix.)",
+        "- [b]Macrophages[/b]: wandering phagocytes that engulf bacteria, debris, and dead cells; important in defense.",
+        "- [b]Mast cells[/b]: located near blood vessels. They release [b]heparin[/b] (an anticoagulant) and [b]histamine[/b] (which dilates vessels and increases their permeability during inflammation and allergic reactions).",
+        "- Others include adipocytes (fat cells) and white blood cells that migrate in from the blood.",
+        "[b]Fibers[/b]:",
+        "- [b]Collagen fibers[/b]: thick, very strong, flexible but only slightly elastic. They resist pulling (high tensile strength). They appear white in fresh tissue, so they are called white fibers.",
+        "- [b]Elastic fibers[/b]: made of the protein elastin. They stretch and recoil like a rubber band. Yellow in fresh tissue.",
+        "- [b]Reticular fibers[/b]: very thin, branched collagen fibers that form delicate supporting networks (for example, the framework of the spleen and lymph nodes).",
+        "[b]Ground substance[/b] is the non-fibrous part of the matrix that fills the space between cells and fibers. It is a gel made of water, proteoglycans, and glycoproteins. It may be fluid (blood plasma), semisolid (areolar tissue), rubbery (cartilage), or rigid and mineralized (bone)."
+      ],
+      "tip": "Mast cells: think of them as the body's alarm bell, releasing histamine to start inflammation.",
+      "figure": {
+        "file": "m05_ct_proper.jpg",
+        "caption": "The drawing shows the three parts of connective tissue in one place: cells (fibroblasts, macrophages, adipocytes, mesenchymal cells), the three fiber types (collagen, elastic, reticular), and the ground substance filling the spaces between them. OpenStax calls the resting form of the fibroblast a fibrocyte.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 4.12, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/4-3-connective-tissue-supports-and-protects"
+      }
+    },
+    {
+      "heading": "Connective Tissue Types",
+      "body": [
+        "[b]Loose (connective tissue proper)[/b]: fibers loosely arranged with lots of ground substance.",
+        "- [b]Areolar[/b]: a loose mesh of collagen and elastic fibers with fibroblasts. The \"packing material\" of the body. Binds skin to underlying organs (in the subcutaneous layer), fills spaces between muscles, and surrounds blood vessels and nerves. Its fluid-filled spaces are where swelling (edema) collects.",
+        "- [b]Adipose[/b]: mostly adipocytes, cells packed with a single large fat droplet that pushes the nucleus to the edge. Stores energy, insulates, and cushions. Found beneath the skin, around the kidneys and heart, behind the eyeballs, and in the abdominal membranes.",
+        "- [b]Reticular[/b]: a network of reticular fibers that supports free blood cells. Forms the internal framework (stroma) of the liver, spleen, lymph nodes, and red bone marrow.",
+        "[b]Dense (connective tissue proper)[/b]: closely packed fibers, few cells, little ground substance, and a relatively poor blood supply, so it heals slowly.",
+        "- [b]Dense regular[/b]: collagen fibers run [b]parallel[/b] in one direction, giving great strength along a single axis. Forms [b]tendons[/b] (muscle to bone) and most [b]ligaments[/b] (bone to bone).",
+        "- [b]Dense irregular[/b]: collagen fibers run in many directions, resisting pulling from multiple directions. Forms the [b]dermis[/b] of the skin, joint capsules, and the fibrous capsules around organs such as the kidneys.",
+        "- [b]Elastic[/b]: dominated by elastic fibers, so it stretches and recoils. Found in the walls of large arteries (such as the aorta), parts of the larynx and the vocal cords, and certain ligaments between vertebrae (the ligamenta flava). Hole's treats this as its own category; OpenStax groups it with the dense connective tissues.",
+        "[b]Specialized connective tissues[/b]:",
+        "- [b]Cartilage[/b]: see the next section.",
+        "- [b]Bone (osseous tissue)[/b]: the most rigid connective tissue. Its matrix is collagen hardened by calcium phosphate salts. Bone cells (osteocytes) sit in small spaces called lacunae. Compact bone is organized into osteons (covered in the bone module). Unlike cartilage, bone has a rich blood supply and heals relatively quickly.",
+        "- [b]Blood[/b]: a fluid connective tissue. Its cells (red blood cells, white blood cells, and platelets, collectively the formed elements) are suspended in a liquid matrix called [b]plasma[/b]. Blood transports gases, nutrients, wastes, and hormones. Its fibers (fibrinogen proteins) are dissolved and become visible only when blood clots."
+      ],
+      "tip": "Tendons connect muscle to bone; ligaments connect bone to bone. Both are dense regular tissue.",
+      "figure": {
+        "file": "m05_dense_ct.jpg",
+        "caption": "In dense regular connective tissue (a, as in tendons and ligaments) the collagen fibers run parallel in one direction; in dense irregular connective tissue (b, as in the dermis) the bundles run every which way. The dark slivers are fibroblast nuclei squeezed between the fibers.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 4.15, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/4-3-connective-tissue-supports-and-protects"
+      }
+    },
+    {
+      "heading": "Cartilage",
+      "body": [
+        "Cartilage is a firm, flexible connective tissue. Its cells, [b]chondrocytes[/b], sit in small chambers called [b]lacunae[/b] within a rubbery matrix. Cartilage is [b]avascular[/b]: it has no blood vessels, so nutrients must diffuse from the [b]perichondrium[/b], a dense connective tissue sheath that surrounds most cartilage. This is why cartilage heals very slowly.",
+        "- [b]Hyaline cartilage[/b]: the most common type. Fine collagen fibers make the matrix look glassy and smooth. Found at the ends of bones in movable joints (articular cartilage), the tip of the nose, the rings of the trachea, the larynx, the costal cartilages that attach ribs to the sternum, and the epiphyseal plates of growing bones. Most of the fetal skeleton is hyaline cartilage before it is replaced by bone.",
+        "- [b]Elastic cartilage[/b]: like hyaline but with a dense network of elastic fibers, so it is very flexible and springs back into shape. Found in the [b]external ear (auricle)[/b] and the [b]epiglottis[/b], plus parts of the larynx.",
+        "- [b]Fibrocartilage[/b]: has thick bundles of collagen fibers, making it the toughest cartilage and very good at resisting compression. Found in the [b]intervertebral discs[/b], the [b]pubic symphysis[/b], and the [b]menisci[/b] of the knee. Fibrocartilage lacks a perichondrium."
+      ],
+      "tip": "Fibrocartilage takes the force (discs, knee). Elastic cartilage is in the ear: fold your ear and it springs back.",
+      "clinical": "Because cartilage has little or no blood supply, a torn meniscus (fibrocartilage) or worn articular (hyaline) cartilage heals poorly. This is a big part of why osteoarthritis tends to progress rather than repair itself.",
+      "figure": {
+        "file": "m05_cartilage.jpg",
+        "caption": "In all three cartilages the chondrocytes sit in lacunae, but the matrix differs: smooth and glassy in hyaline cartilage, packed with thick collagen bundles in fibrocartilage, and threaded with elastic fibers in elastic cartilage. Notice that no blood vessels appear in any of them.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 4.16, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/4-3-connective-tissue-supports-and-protects"
+      }
+    },
+    {
+      "heading": "Muscle Tissue and Nervous Tissue",
+      "body": [
+        "[b]Muscle tissue[/b] is made of elongated cells called [b]muscle fibers[/b] that contract.",
+        "- [b]Skeletal muscle[/b]: long, cylindrical cells with [b]many nuclei[/b] located at the periphery and visible [b]striations[/b] (stripes). Under [b]voluntary[/b] control. Attached to bones; moves the skeleton, maintains posture, and generates heat.",
+        "- [b]Cardiac muscle[/b]: found only in the [b]wall of the heart[/b]. Branched, striated cells, usually with [b]one centrally located nucleus[/b] (sometimes two). Cells join end to end at [b]intercalated discs[/b], which contain desmosomes and gap junctions so the heart contracts as a unit. [b]Involuntary[/b].",
+        "- [b]Smooth muscle[/b]: spindle-shaped cells (thick in the middle, tapered at the ends) with [b]one central nucleus[/b] and [b]no striations[/b]. [b]Involuntary[/b]. Found in the walls of hollow organs: stomach, intestines, urinary bladder, uterus, and blood vessels. Also moves hairs (arrector pili) and changes pupil size.",
+        "[b]Nervous tissue[/b] is found in the brain, spinal cord, and peripheral nerves. It has two cell types:",
+        "- [b]Neurons[/b]: excitable cells that generate and conduct nerve impulses. Each has a cell body, [b]dendrites[/b] (which receive signals), and usually one [b]axon[/b] (which carries signals away from the cell body).",
+        "- [b]Neuroglia[/b] (glial cells): smaller supporting cells that nourish, protect, insulate, and support neurons. They greatly outnumber neurons and, unlike most mature neurons, can still divide."
+      ],
+      "tip": "Only cardiac muscle has intercalated discs. Only skeletal muscle is both striated and voluntary. Only smooth muscle lacks striations.",
+      "figure": {
+        "file": "m05_muscle_types.jpg",
+        "caption": "Panel (a) is skeletal muscle: long fibers with striations and nuclei at the edges. Panel (b) is smooth muscle: spindle-shaped cells with one central nucleus and no striations. Panel (c) is cardiac muscle: branched, striated cells with central nuclei.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 4.18, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/4-4-muscle-tissue-and-motion"
+      }
+    },
+    {
+      "heading": "Body Membranes and Tissue Repair",
+      "body": [
+        "A [b]membrane[/b] here means a thin sheet of tissue that covers a surface or lines a cavity. Most are an epithelium bound to a layer of connective tissue.",
+        "- [b]Mucous membranes (mucosae)[/b]: line cavities and tubes that [b]open to the outside[/b]: the digestive, respiratory, urinary, and reproductive tracts. Their epithelium secretes or is coated by mucus. The underlying areolar connective tissue is called the [b]lamina propria[/b].",
+        "- [b]Serous membranes (serosae)[/b]: line [b]closed body cavities[/b] that do not open to the outside, and cover the organs inside them. Made of simple squamous epithelium (mesothelium) on areolar tissue. They secrete watery [b]serous fluid[/b] that reduces friction. Each has a parietal layer (lining the cavity wall) and a visceral layer (covering the organ): the [b]pleura[/b] (lungs), [b]pericardium[/b] (heart), and [b]peritoneum[/b] (abdominal organs).",
+        "- [b]Cutaneous membrane[/b]: the [b]skin[/b]. Keratinized stratified squamous epithelium (epidermis) over dense irregular connective tissue (dermis). Unlike the others, it is dry.",
+        "- [b]Synovial membranes[/b]: line the cavities of freely movable joints and secrete lubricating [b]synovial fluid[/b]. They are made of [b]connective tissue only[/b], with no epithelium. Hole's and OpenStax therefore classify synovial membranes as connective tissue membranes and the other three as epithelial membranes.",
+        "[b]Tissue repair[/b] happens in two ways:",
+        "- [b]Regeneration[/b]: the damaged tissue is replaced by the same kind of cells, restoring normal function.",
+        "- [b]Fibrosis[/b]: fibroblasts lay down dense collagen to form [b]scar tissue[/b]. A scar holds the area together but does not perform the original tissue's function.",
+        "Repair begins with [b]inflammation[/b] (vessels dilate and become leaky, bringing in white blood cells and clotting proteins). A clot forms, and then [b]granulation tissue[/b], a delicate pink tissue rich in new capillaries and fibroblasts, fills the wound. Finally the surface epithelium regenerates over it and the granulation tissue matures into scar.",
+        "Healing capacity depends on how readily the cells divide and on blood supply:",
+        "- Heal well: epithelia, areolar connective tissue, bone, and blood-forming tissue.",
+        "- Heal slowly or poorly: cartilage and dense connective tissue (tendons, ligaments), because of poor blood supply. Skeletal muscle has limited regeneration through satellite cells.",
+        "- Little or no regeneration: cardiac muscle and the neurons of the brain and spinal cord. Damage is usually repaired by scar tissue (in the CNS, glial scarring)."
+      ],
+      "tip": "Mucous membranes lead outside (mouth, nose, gut). Serous membranes Seal a closed cavity.",
+      "clinical": "After a heart attack, dead cardiac muscle is replaced by fibrous scar tissue. The scar cannot contract, so the heart's pumping strength is permanently reduced in proportion to the size of the damaged area.",
+      "figure": {
+        "file": "m05_membranes.jpg",
+        "caption": "Match each membrane to where it sits: mucous membranes line tracts that open to the outside, serous membranes line closed cavities (pleural, pericardial, and peritoneal), the cutaneous membrane is the skin, and synovial membranes line joint cavities.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 4.4, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/4-1-types-of-tissues"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "m05_fc01",
+      "term": "Histology",
+      "definition": "The study of tissues."
+    },
+    {
+      "id": "m05_fc02",
+      "term": "Four primary tissue types",
+      "definition": "Epithelial, connective, muscle, and nervous tissue."
+    },
+    {
+      "id": "m05_fc03",
+      "term": "Basement membrane",
+      "definition": "Thin nonliving layer that anchors epithelium to the underlying connective tissue."
+    },
+    {
+      "id": "m05_fc04",
+      "term": "Avascular",
+      "definition": "Lacking blood vessels. Epithelium and cartilage are avascular and are nourished by diffusion."
+    },
+    {
+      "id": "m05_fc05",
+      "term": "Simple squamous epithelium",
+      "definition": "One layer of flat cells; diffusion and filtration. Lung air sacs, capillary walls, linings of vessels and serous membranes."
+    },
+    {
+      "id": "m05_fc06",
+      "term": "Simple cuboidal epithelium",
+      "definition": "One layer of cube-shaped cells; secretion and absorption. Kidney tubules, gland ducts, thyroid follicles, ovary surface."
+    },
+    {
+      "id": "m05_fc07",
+      "term": "Simple columnar epithelium",
+      "definition": "One layer of tall cells, often with microvilli and goblet cells; absorption and secretion. Lines stomach and intestines."
+    },
+    {
+      "id": "m05_fc08",
+      "term": "Pseudostratified columnar epithelium",
+      "definition": "A single layer that looks layered because nuclei sit at different heights; all cells touch the basement membrane. Ciliated form with goblet cells lines the respiratory passages."
+    },
+    {
+      "id": "m05_fc09",
+      "term": "Stratified squamous epithelium",
+      "definition": "Many layers with flat surface cells; protection from abrasion. Keratinized in epidermis; nonkeratinized in mouth, esophagus, vagina, anal canal."
+    },
+    {
+      "id": "m05_fc10",
+      "term": "Transitional epithelium (urothelium)",
+      "definition": "Stratified epithelium whose surface cells flatten when stretched. Lines urinary bladder, ureters, and part of the urethra."
+    },
+    {
+      "id": "m05_fc11",
+      "term": "Goblet cell",
+      "definition": "Unicellular exocrine gland that secretes mucus; found in columnar and pseudostratified epithelia."
+    },
+    {
+      "id": "m05_fc12",
+      "term": "Exocrine vs endocrine gland",
+      "definition": "Exocrine glands secrete onto a surface, usually through ducts. Endocrine glands are ductless and release hormones into the blood."
+    },
+    {
+      "id": "m05_fc13",
+      "term": "Merocrine secretion",
+      "definition": "Product released by exocytosis; the cell stays intact. Salivary glands, pancreas, eccrine sweat glands."
+    },
+    {
+      "id": "m05_fc14",
+      "term": "Apocrine secretion",
+      "definition": "Apical portion of the cell pinches off with the product. Classic example: mammary glands."
+    },
+    {
+      "id": "m05_fc15",
+      "term": "Holocrine secretion",
+      "definition": "The whole cell fills with product and ruptures. Example: sebaceous glands."
+    },
+    {
+      "id": "m05_fc16",
+      "term": "Fibroblast",
+      "definition": "Most common connective tissue cell; produces fibers and ground substance."
+    },
+    {
+      "id": "m05_fc17",
+      "term": "Mast cell",
+      "definition": "Connective tissue cell near blood vessels that releases heparin (anticoagulant) and histamine (promotes inflammation)."
+    },
+    {
+      "id": "m05_fc18",
+      "term": "Collagen fibers",
+      "definition": "Thick, strong, white fibers with high tensile strength but little elasticity."
+    },
+    {
+      "id": "m05_fc19",
+      "term": "Reticular fibers",
+      "definition": "Thin, branching collagen fibers forming supportive networks, as in the spleen, lymph nodes, and liver."
+    },
+    {
+      "id": "m05_fc20",
+      "term": "Ground substance",
+      "definition": "Non-fibrous part of the extracellular matrix: water, proteoglycans, and glycoproteins filling the space around cells and fibers."
+    },
+    {
+      "id": "m05_fc21",
+      "term": "Areolar connective tissue",
+      "definition": "Loose mesh of fibers and cells; binds skin to underlying structures and fills spaces between organs."
+    },
+    {
+      "id": "m05_fc22",
+      "term": "Dense regular connective tissue",
+      "definition": "Parallel collagen fibers; tendons and ligaments."
+    },
+    {
+      "id": "m05_fc23",
+      "term": "Dense irregular connective tissue",
+      "definition": "Collagen fibers in many directions; dermis, joint capsules, organ capsules."
+    },
+    {
+      "id": "m05_fc24",
+      "term": "Hyaline cartilage",
+      "definition": "Glassy, most common cartilage: articular cartilage, nose, trachea, costal cartilages, epiphyseal plates, fetal skeleton."
+    },
+    {
+      "id": "m05_fc25",
+      "term": "Elastic cartilage",
+      "definition": "Cartilage with many elastic fibers; external ear and epiglottis."
+    },
+    {
+      "id": "m05_fc26",
+      "term": "Fibrocartilage",
+      "definition": "Toughest cartilage, thick collagen bundles; intervertebral discs, pubic symphysis, knee menisci."
+    },
+    {
+      "id": "m05_fc27",
+      "term": "Intercalated discs",
+      "definition": "Junctions between cardiac muscle cells containing desmosomes and gap junctions; unique to cardiac muscle."
+    },
+    {
+      "id": "m05_fc28",
+      "term": "Neuroglia",
+      "definition": "Supporting cells of nervous tissue that nourish, protect, and insulate neurons."
+    },
+    {
+      "id": "m05_fc29",
+      "term": "Serous membrane",
+      "definition": "Lines closed body cavities and covers their organs; secretes serous fluid. Pleura, pericardium, peritoneum."
+    },
+    {
+      "id": "m05_fc30",
+      "term": "Synovial membrane",
+      "definition": "Connective tissue membrane (no epithelium) lining freely movable joint cavities; secretes synovial fluid."
+    },
+    {
+      "id": "m05_fc31",
+      "term": "Granulation tissue",
+      "definition": "Pink tissue of new capillaries and fibroblasts that fills a wound during repair and later matures into scar."
+    },
+    {
+      "id": "m05_fc32",
+      "term": "Fibrosis",
+      "definition": "Repair by dense collagen scar tissue rather than the original cell type; restores structure but not function."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m05_q01",
+      "type": "multiple_choice",
+      "prompt": "A tissue sample shows a single layer of flat cells forming a very thin barrier. Which location is it most likely from?",
+      "choices": [
+        "Air sacs (alveoli) of the lungs",
+        "Epidermis of the skin",
+        "Lining of the small intestine",
+        "Lining of the trachea"
+      ],
+      "answer": 0,
+      "explanation": "Simple squamous epithelium is thin enough for rapid diffusion of oxygen and carbon dioxide, which is exactly what the alveoli need. The epidermis is also squamous at the surface, but it is stratified (many layers), not a single layer."
+    },
+    {
+      "id": "m05_q02",
+      "type": "multiple_choice",
+      "prompt": "Which epithelium lines the urinary bladder and allows it to stretch?",
+      "choices": [
+        "Transitional epithelium",
+        "Stratified squamous epithelium",
+        "Pseudostratified columnar epithelium",
+        "Simple cuboidal epithelium"
+      ],
+      "answer": 0,
+      "explanation": "Transitional epithelium (urothelium) has surface cells that are dome shaped when the bladder is empty and flatten as it fills. Stratified squamous is the tempting choice because it is also layered and protective, but its cells do not change shape to accommodate stretching."
+    },
+    {
+      "id": "m05_q03",
+      "type": "multiple_choice",
+      "prompt": "Under the microscope, an epithelium looks like it has several layers of nuclei, but every cell contacts the basement membrane and many cells have cilia. What is it, and where is it found?",
+      "choices": [
+        "Pseudostratified ciliated columnar; trachea",
+        "Stratified columnar; male urethra",
+        "Stratified cuboidal; sweat gland ducts",
+        "Simple columnar; stomach"
+      ],
+      "answer": 0,
+      "explanation": "The defining feature of pseudostratified epithelium is that it is truly a single layer (all cells touch the basement membrane) that only appears layered. The ciliated form lines the respiratory passages. Stratified columnar is a real multilayer tissue in which only the deepest cells touch the basement membrane."
+    },
+    {
+      "id": "m05_q04",
+      "type": "multiple_choice",
+      "prompt": "Stratified squamous epithelium is named \"squamous\" because:",
+      "choices": [
+        "The cells in its most superficial layer are flat",
+        "All of its layers are made of flat cells",
+        "The cells in its basal layer are flat",
+        "It contains keratin"
+      ],
+      "answer": 0,
+      "explanation": "Stratified epithelia are named for the shape of the surface (apical) cells. The basal cells of stratified squamous epithelium are actually cuboidal or columnar, so \"all layers are flat\" is wrong. Keratin is present only in the keratinized form and has nothing to do with the name."
+    },
+    {
+      "id": "m05_q05",
+      "type": "multiple_choice",
+      "prompt": "Sebaceous glands release their oily secretion when the entire secretory cell ruptures. This mode of secretion is:",
+      "choices": [
+        "Holocrine",
+        "Merocrine",
+        "Apocrine",
+        "Endocrine"
+      ],
+      "answer": 0,
+      "explanation": "In holocrine secretion the whole cell becomes the product. Apocrine is the tempting distractor, but in apocrine secretion only the apical part of the cell pinches off and the cell survives."
+    },
+    {
+      "id": "m05_q06",
+      "type": "multiple_choice",
+      "prompt": "Which feature distinguishes an endocrine gland from an exocrine gland?",
+      "choices": [
+        "It is ductless and releases its product into the blood",
+        "It releases its product by exocytosis",
+        "It is made of epithelial tissue",
+        "It secretes mucus onto a surface"
+      ],
+      "answer": 0,
+      "explanation": "Endocrine glands lack ducts and secrete hormones that enter the bloodstream. Both endocrine and exocrine glands are epithelial, and many cells of both types use exocytosis, so those choices do not distinguish them."
+    },
+    {
+      "id": "m05_q07",
+      "type": "multiple_choice",
+      "prompt": "During an allergic reaction, a connective tissue cell releases histamine, causing nearby vessels to dilate and leak. Which cell is responsible?",
+      "choices": [
+        "Mast cell",
+        "Fibroblast",
+        "Macrophage",
+        "Adipocyte"
+      ],
+      "answer": 0,
+      "explanation": "Mast cells release histamine and heparin. Macrophages are tempting because they also participate in defense, but their role is phagocytosis (engulfing debris and microbes), not histamine release."
+    },
+    {
+      "id": "m05_q08",
+      "type": "multiple_choice",
+      "prompt": "The Achilles tendon must resist a very strong pull in a single direction. Which tissue forms it?",
+      "choices": [
+        "Dense regular connective tissue",
+        "Dense irregular connective tissue",
+        "Elastic connective tissue",
+        "Areolar connective tissue"
+      ],
+      "answer": 0,
+      "explanation": "Dense regular tissue has collagen fibers lined up in parallel, giving maximum strength along one axis, ideal for tendons and ligaments. Dense irregular tissue has fibers in many directions; it suits the dermis, which is pulled in many directions, but is weaker along any one line."
+    },
+    {
+      "id": "m05_q09",
+      "type": "multiple_choice",
+      "prompt": "Which type of cartilage is found in the intervertebral discs and the knee menisci?",
+      "choices": [
+        "Fibrocartilage",
+        "Hyaline cartilage",
+        "Elastic cartilage",
+        "Dense regular connective tissue"
+      ],
+      "answer": 0,
+      "explanation": "Fibrocartilage has thick collagen bundles that make it the best cartilage at resisting compression and shock. Hyaline cartilage is the most common and covers the ends of bones, which makes it tempting, but the discs and menisci are fibrocartilage."
+    },
+    {
+      "id": "m05_q10",
+      "type": "multiple_choice",
+      "prompt": "Which cartilage forms the external ear, allowing it to bend and spring back into shape?",
+      "choices": [
+        "Elastic cartilage",
+        "Hyaline cartilage",
+        "Fibrocartilage",
+        "Reticular connective tissue"
+      ],
+      "answer": 0,
+      "explanation": "Elastic cartilage contains abundant elastic fibers, giving it flexibility and recoil. Hyaline cartilage forms the tip of the nose, which is also flexible, so it is a common mix-up, but the ear and epiglottis are elastic cartilage."
+    },
+    {
+      "id": "m05_q11",
+      "type": "multiple_choice",
+      "prompt": "A cell has branches, striations, a single central nucleus, and intercalated discs. Where would you find it?",
+      "choices": [
+        "Wall of the heart",
+        "Wall of the stomach",
+        "Biceps brachii",
+        "Wall of the aorta"
+      ],
+      "answer": 0,
+      "explanation": "Intercalated discs are unique to cardiac muscle. Skeletal muscle (biceps) is also striated but has many peripheral nuclei and no intercalated discs. The stomach and aorta walls contain smooth muscle, which has no striations."
+    },
+    {
+      "id": "m05_q12",
+      "type": "multiple_choice",
+      "prompt": "The pleura that surrounds the lungs is an example of which type of membrane?",
+      "choices": [
+        "Serous membrane",
+        "Mucous membrane",
+        "Synovial membrane",
+        "Cutaneous membrane"
+      ],
+      "answer": 0,
+      "explanation": "Serous membranes line closed body cavities and secrete serous fluid that reduces friction as the lungs move. The airways inside the lungs are lined by mucous membrane because they open to the outside, which is why mucous is tempting, but the pleura covers the outside of the lungs."
+    },
+    {
+      "id": "m05_q13",
+      "type": "multiple_choice",
+      "prompt": "Which tissue type is most likely to regenerate completely after an injury?",
+      "choices": [
+        "Stratified squamous epithelium of the skin",
+        "Cardiac muscle",
+        "Neurons of the spinal cord",
+        "Articular cartilage"
+      ],
+      "answer": 0,
+      "explanation": "Epithelial cells divide readily, so superficial skin injuries heal by regeneration. Cardiac muscle and CNS neurons have little or no ability to divide and heal by scarring. Cartilage is avascular and heals very slowly."
+    },
+    {
+      "id": "m05_q14",
+      "type": "multiple_choice",
+      "prompt": "A patient has a fluid-filled swelling just beneath the skin of the ankle. In which tissue does this edema fluid mainly accumulate?",
+      "choices": [
+        "Areolar connective tissue",
+        "Dense regular connective tissue",
+        "Hyaline cartilage",
+        "Stratified squamous epithelium"
+      ],
+      "answer": 0,
+      "explanation": "Areolar tissue has abundant ground substance and open spaces that soak up excess interstitial fluid, which is why it swells in edema. Epithelium has almost no extracellular space, and dense tissues are packed with fibers."
+    },
+    {
+      "id": "m05_q15",
+      "type": "multiple_choice",
+      "prompt": "Which connective tissue forms the internal supporting framework of the spleen and lymph nodes?",
+      "choices": [
+        "Reticular connective tissue",
+        "Adipose tissue",
+        "Dense irregular connective tissue",
+        "Elastic connective tissue"
+      ],
+      "answer": 0,
+      "explanation": "Reticular tissue is a meshwork of thin reticular fibers that holds free blood cells in place in lymphatic organs, the liver, and bone marrow. Dense irregular tissue does form the outer capsule of these organs, which is the tempting confusion, but not the internal framework."
+    },
+    {
+      "id": "m05_q16",
+      "type": "true_false",
+      "prompt": "Synovial membranes are classified as connective tissue membranes because they contain no epithelium.",
+      "answer": true,
+      "explanation": "Synovial membranes are made only of connective tissue (areolar tissue with some fat and specialized cells) and line freely movable joints. Mucous, serous, and cutaneous membranes all include an epithelium."
+    },
+    {
+      "id": "m05_q17",
+      "type": "true_false",
+      "prompt": "Epithelial tissue contains its own capillaries, which deliver nutrients directly to its cells.",
+      "answer": false,
+      "explanation": "Epithelium is avascular. Its cells receive nutrients by diffusion from blood vessels in the underlying connective tissue across the basement membrane."
+    },
+    {
+      "id": "m05_q18",
+      "type": "true_false",
+      "prompt": "Smooth muscle cells are spindle shaped, have a single nucleus, lack striations, and are under involuntary control.",
+      "answer": true,
+      "explanation": "All four features are correct for smooth muscle, found in the walls of hollow organs and blood vessels."
+    },
+    {
+      "id": "m05_q19",
+      "type": "true_false",
+      "prompt": "Mucous membranes line body cavities that are closed to the outside, such as the abdominal cavity.",
+      "answer": false,
+      "explanation": "That describes serous membranes (the peritoneum lines the abdominal cavity). Mucous membranes line passages that open to the outside: the digestive, respiratory, urinary, and reproductive tracts."
+    },
+    {
+      "id": "m05_q20",
+      "type": "ordering",
+      "prompt": "Put these events of tissue repair after a deep cut in order, from first to last.",
+      "items": [
+        "Bleeding is stopped by a clot, and inflammation brings white blood cells to the area",
+        "Fibroblasts and new capillaries form granulation tissue that fills the wound",
+        "Surface epithelium regenerates across the top of the wound",
+        "Granulation tissue matures into fibrous scar tissue"
+      ],
+      "explanation": "Clotting and inflammation begin almost immediately and overlap. Granulation tissue then fills the gap, epithelium regenerates over it, and over weeks to months the granulation tissue below matures into a collagen scar. Textbooks group these steps slightly differently, but the sequence is the same."
+    },
+    {
+      "id": "m05_q21",
+      "type": "ordering",
+      "prompt": "Order these epithelial cell shapes from shortest (flattest) to tallest.",
+      "items": [
+        "Squamous",
+        "Cuboidal",
+        "Columnar"
+      ],
+      "explanation": "Squamous cells are flat and scale-like, cuboidal cells are roughly as tall as they are wide, and columnar cells are taller than they are wide."
+    },
+    {
+      "id": "m05_q22",
+      "type": "ordering",
+      "prompt": "Order these tissues from best blood supply and fastest healing to poorest blood supply and slowest healing.",
+      "items": [
+        "Areolar connective tissue",
+        "Dense regular connective tissue (tendon)",
+        "Hyaline cartilage"
+      ],
+      "explanation": "Areolar tissue is richly vascular and heals quickly. Dense regular tissue has relatively few vessels and heals slowly. Cartilage has no blood vessels at all and heals the slowest, relying on diffusion from the perichondrium."
+    }
+  ]
+}

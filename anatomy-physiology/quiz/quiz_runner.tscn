@@ -1,0 +1,117 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://quiz/quiz_runner.gd" id="1_runner"]
+[ext_resource type="PackedScene" path="res://quiz/ordering_board.tscn" id="2_board"]
+[ext_resource type="PackedScene" path="res://quiz/quiz_results.tscn" id="3_results"]
+
+[sub_resource type="InputEventKey" id="key_enter"]
+keycode = 4194309
+
+[sub_resource type="InputEventKey" id="key_keypad_enter"]
+keycode = 4194310
+
+[sub_resource type="Shortcut" id="advance_shortcut"]
+events = [SubResource("key_enter"), SubResource("key_keypad_enter")]
+
+[node name="QuizRunner" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_runner")
+
+[node name="Session" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Status" type="HBoxContainer" parent="Session"]
+layout_mode = 2
+
+[node name="Position" type="Label" parent="Session/Status"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"MutedLabel"
+text = "Question 1 of 1"
+
+[node name="Score" type="Label" parent="Session/Status"]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "0 correct"
+
+[node name="Progress" type="ProgressBar" parent="Session"]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+max_value = 1.0
+show_percentage = false
+
+[node name="Prompt" type="Label" parent="Session"]
+layout_mode = 2
+theme_type_variation = &"PromptLabel"
+text = "Question prompt"
+autowrap_mode = 3
+
+[node name="Answers" type="ScrollContainer" parent="Session"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="AnswerArea" type="VBoxContainer" parent="Session/Answers"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="Choices" type="VBoxContainer" parent="Session/Answers/AnswerArea"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Ordering" parent="Session/Answers/AnswerArea" instance=ExtResource("2_board")]
+visible = false
+layout_mode = 2
+
+[node name="Feedback" type="PanelContainer" parent="Session/Answers/AnswerArea"]
+visible = false
+layout_mode = 2
+theme_type_variation = &"FeedbackCorrect"
+
+[node name="FeedbackBody" type="VBoxContainer" parent="Session/Answers/AnswerArea/Feedback"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Verdict" type="Label" parent="Session/Answers/AnswerArea/Feedback/FeedbackBody"]
+layout_mode = 2
+theme_type_variation = &"VerdictCorrect"
+text = "Correct!"
+
+[node name="Explanation" type="RichTextLabel" parent="Session/Answers/AnswerArea/Feedback/FeedbackBody"]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="Actions" type="HBoxContainer" parent="Session"]
+layout_mode = 2
+alignment = 2
+
+[node name="KeyHint" type="Label" parent="Session/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"MutedLabel"
+text = "Keys: 1 to 4 pick an answer, Enter continues."
+
+[node name="Advance" type="Button" parent="Session/Actions"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"AccentButton"
+shortcut = SubResource("advance_shortcut")
+shortcut_in_tooltip = false
+text = "Next question"
+
+[node name="Results" parent="." instance=ExtResource("3_results")]
+visible = false
+layout_mode = 2

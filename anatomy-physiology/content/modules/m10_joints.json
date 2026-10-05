@@ -1,0 +1,630 @@
+{
+  "id": "m10_joints",
+  "order": 10,
+  "course": "A&P I",
+  "title": "Joints (Articulations)",
+  "summary": "How joints are classified, how synovial joints are built, every movement they make, and what goes wrong with them.",
+  "objectives": [
+    "Classify joints structurally and functionally and give an example of each type",
+    "Describe the structure of a synovial joint and its accessory structures",
+    "Identify the six types of synovial joints and the movements each allows",
+    "Name and demonstrate the angular, rotational, and special movements",
+    "Describe key features of the shoulder, elbow, hip, and knee, including the ACL, PCL, and menisci",
+    "Distinguish osteoarthritis, rheumatoid arthritis, gout, sprains, dislocations, and bursitis"
+  ],
+  "lesson": [
+    {
+      "heading": "Classifying Joints",
+      "body": [
+        "A [b]joint (articulation)[/b] is any place where two or more bones meet. Joints are classified two ways, and exams expect you to use both.",
+        "[b]Structural classification[/b] is based on the tissue that binds the bones and whether there is a joint cavity:",
+        "- [b]Fibrous:[/b] bones joined by dense regular connective tissue; no cavity.",
+        "- [b]Cartilaginous:[/b] bones joined by hyaline cartilage or fibrocartilage; no cavity.",
+        "- [b]Synovial:[/b] bones separated by a fluid-filled joint cavity enclosed in a capsule.",
+        "[b]Functional classification[/b] is based on how much movement the joint allows:",
+        "- [b]Synarthrosis:[/b] immovable (for example, most sutures).",
+        "- [b]Amphiarthrosis:[/b] slightly movable (for example, the pubic symphysis).",
+        "- [b]Diarthrosis:[/b] freely movable (all synovial joints).",
+        "The two systems overlap but do not map one to one. Fibrous and cartilaginous joints can be either synarthroses or amphiarthroses depending on the specific joint, while every synovial joint is a diarthrosis. In general, the more movable a joint, the less stable it is."
+      ],
+      "tip": "Functional prefixes: SYN = together (fused, no movement), AMPHI = on both sides (a little give), DI = apart (bones separated, free movement). From least to most movable: Syn, Amphi, Di, or 'Stuck, A bit, Dancing'."
+    },
+    {
+      "heading": "Fibrous Joints",
+      "body": [
+        "Fibrous joints lack a cavity and are held together by dense connective tissue. The length of the fibers determines how much movement is possible.",
+        "- [b]Sutures:[/b] found only between bones of the skull. Short, interlocking fibers make them [b]synarthroses[/b]. In infants they are wider (fontanelles allow skull growth and molding during birth). In adults many sutures ossify and become [b]synostoses[/b] (bony unions).",
+        "- [b]Syndesmoses:[/b] bones connected by longer fibers, either a ligament or a sheet called an [b]interosseous membrane[/b]. Examples: the interosseous membrane between the radius and ulna, and the distal tibiofibular joint. Usually classified as [b]amphiarthroses[/b] because the longer fibers allow slight give.",
+        "- [b]Gomphoses:[/b] a peg-in-socket joint between a tooth root and its socket (alveolus) in the maxilla or mandible, held by the [b]periodontal ligament[/b]. Functionally a [b]synarthrosis[/b].",
+        "Textbook note: some books treat gomphoses as a special case rather than a 'true' joint between bones, since a tooth is not a bone, but Hole's and OpenStax both list them as fibrous joints."
+      ],
+      "clinical": "Healthy teeth move very slightly in their sockets under chewing forces. In periodontal disease, inflammation destroys the periodontal ligament and the bone of the socket, so teeth loosen.",
+      "figure": {
+        "file": "m10_fibrous_joints.jpg",
+        "caption": "The three kinds of fibrous joint side by side: (a) a suture between skull bones, (b) a syndesmosis where the interosseous membrane joins the radius and ulna, and (c) a gomphosis where the periodontal ligament holds a tooth root in its socket.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 9.5, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-2-fibrous-joints"
+      }
+    },
+    {
+      "heading": "Cartilaginous Joints",
+      "body": [
+        "Cartilaginous joints connect bones with cartilage and have no joint cavity.",
+        "- [b]Synchondroses:[/b] bones joined by [b]hyaline cartilage[/b]. Examples: the [b]epiphyseal plate[/b] between the diaphysis and epiphysis of a growing long bone, and the joint between the [b]first rib and the manubrium[/b] (first sternocostal joint). These are [b]synarthroses[/b]. Epiphyseal plates are temporary; they ossify in adulthood and become synostoses.",
+        "- [b]Symphyses:[/b] bones joined by a pad of [b]fibrocartilage[/b], which resists compression and allows slight movement. Examples: the [b]pubic symphysis[/b] and the [b]intervertebral joints[/b] between vertebral bodies (the intervertebral discs). These are [b]amphiarthroses[/b].",
+        "Note that costal cartilages 2 to 7 join the sternum at synovial joints, so only the first sternocostal joint is a classic synchondrosis."
+      ],
+      "tip": "Synchondroses use hyaline cartilage and are mostly temporary growth joints (epiphyseal plates). Symphyses use fibrocartilage and sit in the body's midline: pubic symphysis and intervertebral discs.",
+      "clinical": "During late pregnancy the hormone relaxin loosens the pubic symphysis and sacroiliac ligaments, widening the pelvic outlet slightly for childbirth.",
+      "figure": {
+        "file": "m10_cartilaginous_joints.jpg",
+        "caption": "Panel (a) is a synchondrosis: the epiphyseal plate, a temporary hyaline cartilage joint. Panel (b) is a symphysis: the pubic symphysis, where a fibrocartilage pad joins the two pubic bones.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 9.7, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-3-cartilaginous-joints"
+      }
+    },
+    {
+      "heading": "Structure of a Synovial Joint",
+      "body": [
+        "Synovial joints are the most common joints in the body and include nearly all limb joints. Their defining feature is a [b]joint (synovial) cavity[/b] between the bones. Every synovial joint has these features:",
+        "- [b]Articular cartilage:[/b] a thin layer of [b]hyaline cartilage[/b] covering the bone ends. It reduces friction and absorbs shock. It has no blood supply and is nourished by synovial fluid.",
+        "- [b]Articular (joint) capsule:[/b] a two-layered sleeve enclosing the cavity. The outer [b]fibrous layer[/b] of dense irregular connective tissue is continuous with the periosteum and strengthens the joint. The inner [b]synovial membrane[/b] of loose connective tissue lines all nonarticular surfaces and secretes synovial fluid.",
+        "- [b]Synovial fluid:[/b] a small amount of slippery, viscous fluid (its consistency is often compared to egg white) rich in hyaluronic acid. It lubricates, nourishes the articular cartilage, and helps absorb shock. Movement squeezes fluid in and out of the cartilage, so exercise helps keep cartilage healthy.",
+        "- [b]Reinforcing ligaments:[/b] bands of dense regular connective tissue. They may be part of the capsule (intrinsic), outside it (extracapsular), or inside it (intracapsular, like the cruciate ligaments of the knee).",
+        "Accessory structures found at some synovial joints:",
+        "- [b]Menisci (articular discs):[/b] pads of [b]fibrocartilage[/b] that improve the fit between bones and absorb shock, as in the knee and the temporomandibular joint.",
+        "- [b]Bursae:[/b] flattened fibrous sacs lined with synovial membrane and filled with synovial fluid. They sit where tendons, ligaments, skin, or muscles rub against bone and reduce friction.",
+        "- [b]Tendon sheaths:[/b] elongated bursae that wrap around tendons subjected to friction, as in the wrist and ankle.",
+        "- [b]Fat pads:[/b] cushion some joints, such as the knee."
+      ],
+      "tip": "Two kinds of cartilage, two jobs: hyaline ARTICULAR cartilage covers bone ends; fibrocartilage MENISCI sit between them.",
+      "figure": {
+        "file": "m10_synovial_joint.jpg",
+        "caption": "Notice the joint cavity filled with synovial fluid, the articular cartilage capping each bone end, and the two layers of the articular capsule. The figure's fibrous membrane is the fibrous layer of the lesson, and the synovial membrane lines its inner surface.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 9.8, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-4-synovial-joints"
+      }
+    },
+    {
+      "heading": "Six Types of Synovial Joints",
+      "body": [
+        "Synovial joints are subdivided by the shapes of their articulating surfaces, which determine the movements allowed. Movement around one axis is [b]uniaxial[/b], two axes is [b]biaxial[/b], and three or more is [b]multiaxial[/b].",
+        "- [b]Plane (gliding) joint:[/b] flat or slightly curved surfaces slide past each other. Examples: intercarpal and intertarsal joints, joints between the articular processes of vertebrae, acromioclavicular joint. Textbooks differ: some (such as Marieb) call these nonaxial, while OpenStax classifies them as functionally multiaxial because sliding can occur in several directions.",
+        "- [b]Hinge joint:[/b] a convex surface fits into a concave one, allowing flexion and extension only ([b]uniaxial[/b]). Examples: elbow (humeroulnar joint), interphalangeal joints, and the knee (a modified hinge with slight rotation).",
+        "- [b]Pivot joint:[/b] a rounded process rotates within a ring of bone and ligament ([b]uniaxial[/b] rotation). Examples: the atlantoaxial joint (the dens of C2 turning inside the atlas, as in shaking your head 'no') and the proximal radioulnar joint.",
+        "- [b]Condylar (condyloid, ellipsoid) joint:[/b] an oval convex surface fits an oval concave one ([b]biaxial[/b]: flexion and extension, abduction and adduction, and therefore circumduction, but not true rotation). Examples: the radiocarpal (wrist) joint and the metacarpophalangeal (knuckle) joints.",
+        "- [b]Saddle joint:[/b] each surface is concave in one direction and convex in the other, like a rider on a saddle ([b]biaxial[/b], with more freedom than a condylar joint). Classic example: the [b]carpometacarpal joint of the thumb[/b] (trapezium and metacarpal I), which allows opposition.",
+        "- [b]Ball-and-socket joint:[/b] a spherical head fits into a cup ([b]multiaxial[/b]: flexion, extension, abduction, adduction, circumduction, and rotation). Examples: the shoulder (glenohumeral) and hip joints. These are the most freely movable joints."
+      ],
+      "tip": "Group by axes: uniaxial = hinge and pivot; biaxial = condylar and saddle; multiaxial = ball-and-socket; plane joints just glide. For the thumb CMC saddle joint, picture a tiny saddle for your thumb to ride.",
+      "figure": {
+        "file": "m10_synovial_types.jpg",
+        "caption": "Each model shows the shape of the articulating surfaces and the arrows show the movements it allows: pivot (C1 and C2), hinge (elbow), saddle (thumb), plane (tarsals), condyloid (radius and carpals), and ball-and-socket (hip).",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 9.10, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-4-synovial-joints"
+      }
+    },
+    {
+      "heading": "Movements at Synovial Joints, Part 1: Angular and Rotational",
+      "body": [
+        "All movements are described from [b]anatomical position[/b].",
+        "[b]Angular movements[/b] change the angle between bones:",
+        "- [b]Flexion:[/b] decreases the angle along the sagittal plane (bending the elbow, nodding the head forward, bringing the thigh forward). Note: at the knee, flexion moves the leg backward.",
+        "- [b]Extension:[/b] increases the angle, returning toward anatomical position (straightening the elbow or knee).",
+        "- [b]Hyperextension:[/b] extension beyond anatomical position, such as tipping the head back to look at the ceiling. Usage differs: Hole's uses the term for normal movement past the anatomical position, while OpenStax uses it mainly for extension beyond normal limits, often causing injury.",
+        "- [b]Abduction:[/b] movement away from the midline in the frontal plane (raising the arm out to the side). For fingers and toes, the reference line is the middle finger or second toe, so spreading the fingers is abduction.",
+        "- [b]Adduction:[/b] movement toward the midline.",
+        "- [b]Circumduction:[/b] moving a limb so its distal end traces a circle and the limb traces a cone; it is a sequence of flexion, abduction, extension, and adduction, not true rotation. Occurs at ball-and-socket, condylar, and saddle joints.",
+        "[b]Rotation[/b] turns a bone around its own long axis:",
+        "- Shaking the head 'no' (atlantoaxial joint).",
+        "- [b]Medial (internal) rotation[/b] turns the anterior surface toward the midline; [b]lateral (external) rotation[/b] turns it away. Occurs at the shoulder and hip."
+      ],
+      "tip": "ABduction takes the limb AWAY (it is 'abducted', kidnapped); ADDuction ADDs it back to the body.",
+      "figure": {
+        "file": "m10_movements_1.jpg",
+        "caption": "Panels (a) to (d) show flexion and extension in the sagittal plane at the shoulder, knee, neck, and vertebral column; (e) shows abduction, adduction, and circumduction at the shoulder; (f) shows rotation of the head and medial and lateral rotation of the lower limb.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 9.12, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-5-types-of-body-movements"
+      }
+    },
+    {
+      "heading": "Movements at Synovial Joints, Part 2: Special Movements",
+      "body": [
+        "Some movements occur only at particular joints and have their own names. Exams frequently test these in pairs.",
+        "- [b]Supination:[/b] rotating the forearm so the palm faces anteriorly (or upward when the elbow is bent); the radius and ulna are parallel. Anatomical position is supinated.",
+        "- [b]Pronation:[/b] rotating the forearm so the palm faces posteriorly (or downward); the radius crosses over the ulna. These happen at the proximal and distal radioulnar joints, not the wrist.",
+        "- [b]Dorsiflexion:[/b] at the ankle, lifting the top of the foot toward the shin (walking on heels).",
+        "- [b]Plantar flexion:[/b] pointing the toes downward (standing on tiptoes, pressing a gas pedal).",
+        "- [b]Inversion:[/b] turning the sole medially. [b]Eversion:[/b] turning the sole laterally. These occur mainly at the intertarsal (subtalar) joints, not the ankle joint itself.",
+        "- [b]Protraction:[/b] moving a part anteriorly in the horizontal plane (jutting the jaw forward, rounding the shoulders forward). [b]Retraction:[/b] moving it posteriorly (pulling the shoulder blades together).",
+        "- [b]Elevation:[/b] lifting a part superiorly (shrugging, closing the mouth). [b]Depression:[/b] moving it inferiorly (opening the mouth, dropping the shoulders).",
+        "- [b]Opposition:[/b] moving the thumb across the palm to touch the tips of the other fingers, at the saddle joint of the thumb. It makes the human hand able to grasp precisely. [b]Reposition[/b] returns the thumb."
+      ],
+      "tip": "SUPination: you can hold a bowl of SOUP in a supinated palm. PROne = face down, so pronation turns the palm down. Dorsiflexion moves toward the dorsum (top) of the foot.",
+      "clinical": "Most ankle sprains are [b]inversion sprains[/b]: the sole rolls inward and the lateral ligaments (especially the anterior talofibular ligament) are stretched or torn.",
+      "figure": {
+        "file": "m10_movements_2.jpg",
+        "caption": "The special movements in their pairs: pronation and supination of the forearm, dorsiflexion and plantar flexion, inversion and eversion of the foot, protraction and retraction and elevation and depression of the mandible, and opposition of the thumb. In pronation the radius crosses over the ulna; in supination they are parallel.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 9.13, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-5-types-of-body-movements"
+      }
+    },
+    {
+      "heading": "The Shoulder, Elbow, Hip, and Knee",
+      "body": [
+        "[b]Shoulder (glenohumeral) joint:[/b] a ball-and-socket joint and the [b]most freely movable joint[/b] in the body, but also the least stable. The glenoid cavity is shallow, deepened only slightly by a fibrocartilage rim, the [b]glenoid labrum[/b]. The capsule is loose. Stability comes mostly from the tendons of the [b]rotator cuff[/b] muscles (supraspinatus, infraspinatus, teres minor, subscapularis) and the biceps tendon. It is the most commonly dislocated major joint, usually anteriorly and inferiorly.",
+        "[b]Elbow joint:[/b] mainly a hinge between the trochlea of the humerus and the trochlear notch of the ulna (humeroulnar joint), plus the humeroradial joint. The [b]ulnar (medial) collateral[/b] and [b]radial (lateral) collateral ligaments[/b] reinforce the sides, and the [b]annular ligament[/b] wraps the radial head to the ulna at the proximal radioulnar (pivot) joint. It is very stable because the bones fit tightly.",
+        "[b]Hip (coxal) joint:[/b] a ball-and-socket joint built for stability. The acetabulum is deep and is further deepened by the [b]acetabular labrum[/b]. Strong ligaments reinforce the capsule; the [b]iliofemoral ligament[/b] is the strongest. The small [b]ligament of the head of the femur[/b] (ligamentum teres) adds little strength but carries a small artery to the femoral head.",
+        "[b]Knee joint:[/b] the largest and most complex joint; a modified hinge. It includes the tibiofemoral joint and the patellofemoral joint.",
+        "- [b]Menisci:[/b] C-shaped [b]medial and lateral menisci[/b] of fibrocartilage deepen the shallow tibial surfaces and absorb shock.",
+        "- [b]Anterior cruciate ligament (ACL):[/b] runs from the anterior intercondylar area of the tibia up and back to the lateral femoral condyle; prevents the tibia from sliding [b]anteriorly[/b] on the femur and limits hyperextension.",
+        "- [b]Posterior cruciate ligament (PCL):[/b] runs from the posterior intercondylar area of the tibia up and forward to the medial femoral condyle; prevents the tibia from sliding [b]posteriorly[/b] (or the femur from sliding forward off the tibia).",
+        "- [b]Tibial (medial) collateral ligament[/b] resists sideways forces from the lateral side; [b]fibular (lateral) collateral ligament[/b] resists forces from the medial side. The tibial collateral ligament is attached to the medial meniscus.",
+        "- The [b]patellar ligament[/b] (continuation of the quadriceps tendon) runs from patella to tibial tuberosity. Several bursae surround the knee."
+      ],
+      "tip": "Cruciate ligaments are named by where they attach on the [b]tibia[/b], and each stops the tibia from moving in the direction of its name: Anterior cruciate stops Anterior tibial slide.",
+      "clinical": "A blow to the lateral side of a planted knee can tear the tibial collateral ligament, the medial meniscus attached to it, and the ACL, the classic 'unhappy triad' in older textbooks. Newer studies find the lateral meniscus is often injured instead, but the term still appears on exams. Noncontact ACL tears from pivoting and landing are common in sports.",
+      "figure": {
+        "file": "m10_knee.jpg",
+        "caption": "The knee as an example of a complex synovial joint: the sagittal section shows the bursae and the anterior and posterior cruciate ligaments inside the capsule, the superior view shows the C-shaped medial and lateral menisci on the tibia, and the anterior view shows the tibial and fibular collateral ligaments.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 9.19, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-6-anatomy-of-selected-synovial-joints"
+      }
+    },
+    {
+      "heading": "Joint Disorders",
+      "body": [
+        "- [b]Sprain:[/b] stretching or tearing of a [b]ligament[/b], usually from twisting. Ligaments are poorly vascularized and heal slowly. Compare a [b]strain[/b], which is an injury to a muscle or tendon.",
+        "- [b]Dislocation (luxation):[/b] bones forced out of their normal alignment, often with damage to the capsule and ligaments. A partial dislocation is a [b]subluxation[/b]. Shoulders, fingers, and jaws dislocate most often.",
+        "- [b]Bursitis:[/b] inflammation of a bursa from repeated friction, pressure, or infection, causing pain and swelling (for example, prepatellar bursitis, 'housemaid's knee', from kneeling).",
+        "- [b]Osteoarthritis (OA):[/b] the most common form of arthritis. A degenerative 'wear and tear' disease in which [b]articular cartilage breaks down[/b], exposed bone thickens, and bony spurs (osteophytes) form. It mostly affects weight-bearing joints and the hands, worsens with age, and is not primarily inflammatory.",
+        "- [b]Rheumatoid arthritis (RA):[/b] an [b]autoimmune[/b] disease in which the [b]synovial membrane becomes inflamed[/b] and thickens into a pannus that erodes cartilage. Scar tissue can then fuse the bones ([b]ankylosis[/b]). It typically affects joints symmetrically (both hands, for example), often starts in middle age, and is more common in women. Systemic symptoms such as fatigue are common.",
+        "- [b]Gout (gouty arthritis):[/b] high blood levels of uric acid cause [b]monosodium urate crystals[/b] to deposit in joints and soft tissues, triggering intensely painful inflammation. It classically begins at the [b]metatarsophalangeal joint of the big toe[/b] and is more common in men.",
+        "Severely damaged joints can be replaced with prosthetic components ([b]arthroplasty[/b]), most commonly the hip and knee."
+      ],
+      "tip": "OA = Old and Abraded cartilage. RA = Really Autoimmune, Remember the synovial membrane. Gout = crystals in the great toe.",
+      "clinical": "Lyme disease, caused by a tick-borne bacterium, can produce an infectious arthritis that often affects the knee, which is one reason a new swollen joint after a tick bite deserves medical attention.",
+      "figure": {
+        "file": "m10_osteoarthritis.jpg",
+        "caption": "Compare a normal hip joint with one affected by osteoarthritis: the articular cartilage is worn, bone is exposed, and the joint space is narrowed. This cartilage breakdown is what separates osteoarthritis from rheumatoid arthritis, which begins in the synovial membrane.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 9.11, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-4-synovial-joints"
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "m10_fc01",
+      "term": "Articulation",
+      "definition": "A joint: any site where two or more bones meet."
+    },
+    {
+      "id": "m10_fc02",
+      "term": "Structural joint classes",
+      "definition": "Fibrous, cartilaginous, and synovial, based on the binding tissue and the presence of a joint cavity."
+    },
+    {
+      "id": "m10_fc03",
+      "term": "Functional joint classes",
+      "definition": "Synarthrosis (immovable), amphiarthrosis (slightly movable), diarthrosis (freely movable)."
+    },
+    {
+      "id": "m10_fc04",
+      "term": "Suture",
+      "definition": "Fibrous joint between skull bones with short interlocking fibers; synarthrosis. May ossify into a synostosis."
+    },
+    {
+      "id": "m10_fc05",
+      "term": "Syndesmosis",
+      "definition": "Fibrous joint joined by a ligament or interosseous membrane (radius and ulna, distal tibia and fibula); amphiarthrosis."
+    },
+    {
+      "id": "m10_fc06",
+      "term": "Gomphosis",
+      "definition": "Fibrous peg-in-socket joint between a tooth and its alveolus, held by the periodontal ligament; synarthrosis."
+    },
+    {
+      "id": "m10_fc07",
+      "term": "Synchondrosis",
+      "definition": "Cartilaginous joint joined by hyaline cartilage (epiphyseal plate, first rib to manubrium); synarthrosis."
+    },
+    {
+      "id": "m10_fc08",
+      "term": "Symphysis",
+      "definition": "Cartilaginous joint joined by fibrocartilage (pubic symphysis, intervertebral discs); amphiarthrosis."
+    },
+    {
+      "id": "m10_fc09",
+      "term": "Synostosis",
+      "definition": "A bony union that forms when a joint such as a suture or epiphyseal plate ossifies."
+    },
+    {
+      "id": "m10_fc10",
+      "term": "Articular cartilage",
+      "definition": "Hyaline cartilage covering bone ends in a synovial joint; reduces friction and absorbs shock."
+    },
+    {
+      "id": "m10_fc11",
+      "term": "Articular capsule",
+      "definition": "Two layers: outer fibrous layer (strength) and inner synovial membrane (secretes synovial fluid)."
+    },
+    {
+      "id": "m10_fc12",
+      "term": "Synovial fluid",
+      "definition": "Viscous, hyaluronic acid-rich fluid that lubricates the joint, nourishes articular cartilage, and absorbs shock."
+    },
+    {
+      "id": "m10_fc13",
+      "term": "Bursa",
+      "definition": "Fluid-filled sac lined with synovial membrane that reduces friction where tendons, ligaments, or skin rub over bone."
+    },
+    {
+      "id": "m10_fc14",
+      "term": "Meniscus",
+      "definition": "Fibrocartilage pad within some synovial joints (knee, TMJ) that improves fit and absorbs shock."
+    },
+    {
+      "id": "m10_fc15",
+      "term": "Plane joint",
+      "definition": "Flat surfaces glide (intercarpal, intertarsal, vertebral articular processes). Nonaxial or multiaxial depending on the textbook."
+    },
+    {
+      "id": "m10_fc16",
+      "term": "Hinge joint",
+      "definition": "Uniaxial joint allowing flexion and extension (elbow, interphalangeal joints, knee as a modified hinge)."
+    },
+    {
+      "id": "m10_fc17",
+      "term": "Pivot joint",
+      "definition": "Uniaxial joint allowing rotation (atlantoaxial joint, proximal radioulnar joint)."
+    },
+    {
+      "id": "m10_fc18",
+      "term": "Condylar joint",
+      "definition": "Biaxial oval surfaces (radiocarpal wrist joint, metacarpophalangeal joints). Also called condyloid or ellipsoid."
+    },
+    {
+      "id": "m10_fc19",
+      "term": "Saddle joint",
+      "definition": "Biaxial joint with surfaces both concave and convex; carpometacarpal joint of the thumb."
+    },
+    {
+      "id": "m10_fc20",
+      "term": "Ball-and-socket joint",
+      "definition": "Multiaxial joint allowing movement in all planes plus rotation (shoulder, hip)."
+    },
+    {
+      "id": "m10_fc21",
+      "term": "Circumduction",
+      "definition": "Limb's distal end moves in a circle, tracing a cone; a combination of flexion, abduction, extension, and adduction."
+    },
+    {
+      "id": "m10_fc22",
+      "term": "Supination vs pronation",
+      "definition": "Supination turns the palm anterior or up (radius and ulna parallel); pronation turns it posterior or down (radius crosses ulna)."
+    },
+    {
+      "id": "m10_fc23",
+      "term": "Dorsiflexion vs plantar flexion",
+      "definition": "Dorsiflexion lifts the top of the foot toward the shin; plantar flexion points the toes down."
+    },
+    {
+      "id": "m10_fc24",
+      "term": "Inversion vs eversion",
+      "definition": "Inversion turns the sole medially; eversion turns it laterally. Occur at intertarsal joints."
+    },
+    {
+      "id": "m10_fc25",
+      "term": "Protraction vs retraction",
+      "definition": "Anterior vs posterior movement in a horizontal plane (jaw jutting forward, shoulder blades pulled back)."
+    },
+    {
+      "id": "m10_fc26",
+      "term": "Opposition",
+      "definition": "Moving the thumb to touch the fingertips, at the saddle-shaped carpometacarpal joint of the thumb."
+    },
+    {
+      "id": "m10_fc27",
+      "term": "Glenoid labrum",
+      "definition": "Fibrocartilage rim that slightly deepens the shallow glenoid cavity of the shoulder."
+    },
+    {
+      "id": "m10_fc28",
+      "term": "ACL",
+      "definition": "Anterior cruciate ligament; prevents anterior displacement of the tibia on the femur and limits knee hyperextension."
+    },
+    {
+      "id": "m10_fc29",
+      "term": "PCL",
+      "definition": "Posterior cruciate ligament; prevents posterior displacement of the tibia on the femur."
+    },
+    {
+      "id": "m10_fc30",
+      "term": "Osteoarthritis",
+      "definition": "Degenerative breakdown of articular cartilage with bone spurs; most common arthritis; affects weight-bearing joints."
+    },
+    {
+      "id": "m10_fc31",
+      "term": "Rheumatoid arthritis",
+      "definition": "Autoimmune inflammation of the synovial membrane (pannus), often symmetric; can lead to ankylosis."
+    },
+    {
+      "id": "m10_fc32",
+      "term": "Gout",
+      "definition": "Arthritis caused by monosodium urate crystal deposits from high uric acid; classically the big toe."
+    },
+    {
+      "id": "m10_fc33",
+      "term": "Sprain vs strain",
+      "definition": "Sprain injures a ligament; strain injures a muscle or tendon."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m10_q01",
+      "type": "multiple_choice",
+      "prompt": "The joint between a tooth and its bony socket is a:",
+      "choices": [
+        "Suture",
+        "Syndesmosis",
+        "Gomphosis",
+        "Synchondrosis"
+      ],
+      "answer": 2,
+      "explanation": "A gomphosis is a fibrous peg-in-socket joint held by the periodontal ligament. A syndesmosis is also fibrous, but it joins bones by a ligament or interosseous membrane, as between the radius and ulna."
+    },
+    {
+      "id": "m10_q02",
+      "type": "multiple_choice",
+      "prompt": "The epiphyseal plate of a growing long bone is an example of which joint?",
+      "choices": [
+        "Symphysis",
+        "Synchondrosis",
+        "Syndesmosis",
+        "Suture"
+      ],
+      "answer": 1,
+      "explanation": "The epiphyseal plate is hyaline cartilage joining diaphysis and epiphysis, which makes it a synchondrosis. A symphysis is the tempting choice because it is also cartilaginous, but symphyses use fibrocartilage."
+    },
+    {
+      "id": "m10_q03",
+      "type": "multiple_choice",
+      "prompt": "The pubic symphysis is classified structurally and functionally as:",
+      "choices": [
+        "Fibrous, synarthrosis",
+        "Cartilaginous, amphiarthrosis",
+        "Cartilaginous, synarthrosis",
+        "Synovial, diarthrosis"
+      ],
+      "answer": 1,
+      "explanation": "The pubic symphysis is a fibrocartilage pad (cartilaginous) that allows slight movement (amphiarthrosis). Synchondroses such as the epiphyseal plate are the cartilaginous joints that are synarthroses."
+    },
+    {
+      "id": "m10_q04",
+      "type": "multiple_choice",
+      "prompt": "Which structure in a synovial joint secretes synovial fluid?",
+      "choices": [
+        "Articular cartilage",
+        "Fibrous layer of the capsule",
+        "Synovial membrane",
+        "Meniscus"
+      ],
+      "answer": 2,
+      "explanation": "The synovial membrane, the inner layer of the articular capsule, produces synovial fluid. The fibrous layer is the outer, strengthening layer of the same capsule and does not secrete fluid."
+    },
+    {
+      "id": "m10_q05",
+      "type": "multiple_choice",
+      "prompt": "A carpenter who kneels all day develops a swollen, painful, fluid-filled lump over the front of the kneecap. The most likely structure involved is a:",
+      "choices": [
+        "Meniscus",
+        "Bursa",
+        "Cruciate ligament",
+        "Tendon sheath"
+      ],
+      "answer": 1,
+      "explanation": "Repeated friction or pressure inflames the prepatellar bursa, a fluid-filled sac between skin and patella (bursitis). Menisci and cruciate ligaments are deep inside the knee and would not produce a lump on the front of the kneecap."
+    },
+    {
+      "id": "m10_q06",
+      "type": "multiple_choice",
+      "prompt": "Which joint is a saddle joint?",
+      "choices": [
+        "Carpometacarpal joint of the thumb",
+        "Metacarpophalangeal joint of the index finger",
+        "Atlantoaxial joint",
+        "Humeroulnar joint"
+      ],
+      "answer": 0,
+      "explanation": "The thumb's carpometacarpal joint between the trapezium and metacarpal I is the classic saddle joint, allowing opposition. Metacarpophalangeal joints are condylar joints, which are also biaxial and are the usual wrong pick."
+    },
+    {
+      "id": "m10_q07",
+      "type": "multiple_choice",
+      "prompt": "Shaking your head 'no' uses which type of synovial joint?",
+      "choices": [
+        "Hinge",
+        "Plane",
+        "Pivot",
+        "Condylar"
+      ],
+      "answer": 2,
+      "explanation": "The dens of the axis rotates within the ring of the atlas, a pivot joint. Nodding 'yes' occurs mainly at the atlanto-occipital joints, which are condylar, so mixing up the two head movements is the common error."
+    },
+    {
+      "id": "m10_q08",
+      "type": "multiple_choice",
+      "prompt": "Which joints allow movement in three or more axes, including rotation?",
+      "choices": [
+        "Hinge joints such as the elbow",
+        "Condylar joints such as the wrist",
+        "Ball-and-socket joints such as the hip",
+        "Pivot joints such as the proximal radioulnar joint"
+      ],
+      "answer": 2,
+      "explanation": "Ball-and-socket joints are multiaxial. Condylar joints allow flexion, extension, abduction, adduction, and circumduction, but not rotation, so they are biaxial."
+    },
+    {
+      "id": "m10_q09",
+      "type": "multiple_choice",
+      "prompt": "Standing up on your tiptoes is an example of:",
+      "choices": [
+        "Dorsiflexion",
+        "Plantar flexion",
+        "Eversion",
+        "Hyperextension of the knee"
+      ],
+      "answer": 1,
+      "explanation": "Plantar flexion points the foot toward the plantar surface (sole), lifting the heel. Dorsiflexion is the opposite, lifting the top of the foot toward the shin, as in walking on your heels."
+    },
+    {
+      "id": "m10_q10",
+      "type": "multiple_choice",
+      "prompt": "Turning your palm from facing up to facing down, as when turning a doorknob or dribbling a basketball, is:",
+      "choices": [
+        "Supination",
+        "Pronation",
+        "Medial rotation of the humerus",
+        "Abduction of the wrist"
+      ],
+      "answer": 1,
+      "explanation": "Pronation rotates the radius across the ulna so the palm faces down or back. It happens at the radioulnar joints, not by rotating the humerus at the shoulder."
+    },
+    {
+      "id": "m10_q11",
+      "type": "multiple_choice",
+      "prompt": "Shrugging your shoulders toward your ears is:",
+      "choices": [
+        "Protraction",
+        "Abduction",
+        "Elevation",
+        "Circumduction"
+      ],
+      "answer": 2,
+      "explanation": "Elevation lifts a part superiorly, here the scapulae. Protraction moves the scapulae forward, as when reaching or rounding the shoulders."
+    },
+    {
+      "id": "m10_q12",
+      "type": "multiple_choice",
+      "prompt": "Touching the tip of your thumb to the tip of your little finger is called:",
+      "choices": [
+        "Opposition",
+        "Adduction",
+        "Flexion",
+        "Circumduction"
+      ],
+      "answer": 0,
+      "explanation": "Opposition combines movements at the thumb's saddle joint to bring its tip against other fingertips. Thumb flexion alone would only bend the thumb across the palm."
+    },
+    {
+      "id": "m10_q13",
+      "type": "multiple_choice",
+      "prompt": "Which knee ligament primarily prevents the tibia from sliding anteriorly relative to the femur?",
+      "choices": [
+        "Posterior cruciate ligament",
+        "Anterior cruciate ligament",
+        "Fibular collateral ligament",
+        "Patellar ligament"
+      ],
+      "answer": 1,
+      "explanation": "The ACL is named for its anterior attachment on the tibia and prevents anterior tibial displacement and hyperextension. The PCL does the opposite job, preventing posterior displacement of the tibia."
+    },
+    {
+      "id": "m10_q14",
+      "type": "multiple_choice",
+      "prompt": "Which joint is the most freely movable but also the most commonly dislocated major joint?",
+      "choices": [
+        "Hip",
+        "Knee",
+        "Shoulder",
+        "Elbow"
+      ],
+      "answer": 2,
+      "explanation": "The glenohumeral joint has a shallow glenoid cavity and a loose capsule, relying on the rotator cuff for stability. The hip is also ball-and-socket but has a deep acetabulum and very strong ligaments, so it dislocates far less often."
+    },
+    {
+      "id": "m10_q15",
+      "type": "multiple_choice",
+      "prompt": "A 45-year-old woman has painful, swollen joints in both hands, morning stiffness, and fatigue. Tests show autoimmune antibodies and an inflamed, thickened synovial membrane. The most likely diagnosis is:",
+      "choices": [
+        "Osteoarthritis",
+        "Gout",
+        "Rheumatoid arthritis",
+        "Bursitis"
+      ],
+      "answer": 2,
+      "explanation": "Rheumatoid arthritis is autoimmune, targets the synovial membrane, is often symmetric, and is more common in women. Osteoarthritis is the most common arthritis, but it is degenerative cartilage wear rather than autoimmune synovial inflammation."
+    },
+    {
+      "id": "m10_q16",
+      "type": "multiple_choice",
+      "prompt": "A man wakes at night with sudden, severe pain and redness in the joint at the base of his big toe. Blood work shows high uric acid. This is most consistent with:",
+      "choices": [
+        "Gout",
+        "Osteoarthritis",
+        "A sprain",
+        "Rheumatoid arthritis"
+      ],
+      "answer": 0,
+      "explanation": "Gout results from monosodium urate crystals depositing in a joint, classically the first metatarsophalangeal joint. Osteoarthritis develops gradually over years rather than as a sudden overnight flare."
+    },
+    {
+      "id": "m10_q17",
+      "type": "true_false",
+      "prompt": "All synovial joints are diarthroses.",
+      "answer": true,
+      "explanation": "Every synovial joint is functionally freely movable. The reverse mapping does not hold for the other classes: fibrous and cartilaginous joints can be either synarthroses or amphiarthroses."
+    },
+    {
+      "id": "m10_q18",
+      "type": "true_false",
+      "prompt": "A sprain is a stretching or tearing of a muscle or its tendon.",
+      "answer": false,
+      "explanation": "A sprain involves a ligament. An injury to a muscle or tendon is a strain."
+    },
+    {
+      "id": "m10_q19",
+      "type": "true_false",
+      "prompt": "Inversion and eversion of the foot occur mainly at the ankle (talocrural) joint.",
+      "answer": false,
+      "explanation": "The talocrural joint is a hinge that allows dorsiflexion and plantar flexion. Inversion and eversion occur mainly at the intertarsal joints, especially the subtalar joint between talus and calcaneus."
+    },
+    {
+      "id": "m10_q20",
+      "type": "ordering",
+      "prompt": "Order the synovial joint types from least to most freedom of movement.",
+      "items": [
+        "Plane",
+        "Hinge",
+        "Condylar",
+        "Ball-and-socket"
+      ],
+      "explanation": "Plane joints permit only short gliding, hinge joints are uniaxial, condylar joints are biaxial, and ball-and-socket joints are multiaxial with rotation. Plane joints are sometimes called multiaxial in OpenStax, but their actual range of motion is the smallest."
+    },
+    {
+      "id": "m10_q21",
+      "type": "ordering",
+      "prompt": "Order these synovial joint structures from outermost to innermost, moving from the capsule toward the bone.",
+      "items": [
+        "Fibrous layer of the articular capsule",
+        "Synovial membrane",
+        "Joint cavity with synovial fluid",
+        "Articular cartilage",
+        "Bone (epiphysis)"
+      ],
+      "explanation": "The capsule's tough fibrous layer is outermost, lined inside by the synovial membrane. The membrane surrounds the fluid-filled cavity, and the articular cartilage caps the bone end within it."
+    },
+    {
+      "id": "m10_q22",
+      "type": "ordering",
+      "prompt": "Circumduction of the arm at the shoulder can be broken into a sequence of movements. Starting with the arm at the side, moving it forward first and then circling outward away from the body, put them in order.",
+      "items": [
+        "Flexion",
+        "Abduction",
+        "Extension",
+        "Adduction"
+      ],
+      "explanation": "Moving the arm forward (flexion), out to the side (abduction), back (extension), and in toward the body (adduction) traces a cone. Circumduction is not true rotation, because the humerus does not spin on its long axis."
+    }
+  ]
+}

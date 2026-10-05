@@ -1,0 +1,458 @@
+{
+  "id": "m15_pns_autonomic",
+  "order": 15,
+  "course": "A&P I",
+  "title": "Peripheral and Autonomic Nervous System",
+  "summary": "Nerves, cranial and spinal nerves, plexuses, reflexes, and the sympathetic and parasympathetic divisions.",
+  "objectives": [
+    "Describe the connective tissue layers of a peripheral nerve",
+    "Name and number the 12 cranial nerves and classify each as sensory, motor, or mixed",
+    "Describe the formation, branches, and distribution of the 31 pairs of spinal nerves",
+    "Name the four major plexuses, their spinal levels, and their major nerves",
+    "Explain what a dermatome is and why it matters clinically",
+    "Describe the stretch, withdrawal, and crossed extensor reflexes",
+    "Compare sympathetic and parasympathetic divisions by origin, ganglia, and fiber lengths",
+    "Identify the neurotransmitters and receptors used by each autonomic division",
+    "Predict sympathetic and parasympathetic effects on major organs",
+    "Explain the role of the adrenal medulla and the concept of dual innervation"
+  ],
+  "lesson": [
+    {
+      "heading": "Nerve Structure",
+      "body": [
+        "A [b]nerve[/b] is a cordlike bundle of axons in the PNS, wrapped in connective tissue layers much like a skeletal muscle:",
+        "- [b]Endoneurium[/b]: delicate loose connective tissue around each individual axon (with its myelin).",
+        "- [b]Perineurium[/b]: wraps a bundle of axons, called a [b]fascicle[/b].",
+        "- [b]Epineurium[/b]: tough dense connective tissue around the entire nerve, binding fascicles and blood vessels together.",
+        "Nerves are classified by the direction of the fibers they contain:",
+        "- [b]Sensory nerves[/b]: only (or almost only) afferent fibers.",
+        "- [b]Motor nerves[/b]: mostly efferent fibers.",
+        "- [b]Mixed nerves[/b]: both. All spinal nerves and several cranial nerves are mixed.",
+        "Note that even nerves called 'motor' usually carry a few proprioceptive sensory fibers from the muscles they supply, which is why Hole's describes some cranial nerves as [i]primarily[/i] motor."
+      ],
+      "tip": "Endo = inside (each axon), Peri = around (each fascicle), Epi = upon (the whole nerve). The same prefixes as endomysium, perimysium, epimysium in muscle.",
+      "figure": {
+        "file": "m15_nerve_structure.jpg",
+        "caption": "Work from outside in: epineurium wraps the whole nerve and its blood vessels, perineurium wraps each fascicle, and endoneurium surrounds each individual axon. The micrograph shows the same layers in real tissue.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 13.21, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-4-the-peripheral-nervous-system"
+      }
+    },
+    {
+      "heading": "The Twelve Cranial Nerves",
+      "body": [
+        "Twelve pairs of [b]cranial nerves[/b] arise from the brain, mostly from the brainstem, and are numbered with Roman numerals from front to back.",
+        "- [b]I Olfactory[/b] (sensory): smell.",
+        "- [b]II Optic[/b] (sensory): vision.",
+        "- [b]III Oculomotor[/b] (motor): four of the six extrinsic eye muscles (superior, inferior, and medial rectus; inferior oblique) and the muscle that raises the eyelid; parasympathetic fibers constrict the pupil and adjust the lens for near vision.",
+        "- [b]IV Trochlear[/b] (motor): superior oblique eye muscle.",
+        "- [b]V Trigeminal[/b] (mixed): main sensory nerve of the face, scalp, teeth, and cornea through three branches (ophthalmic, maxillary, mandibular); motor to the muscles of chewing.",
+        "- [b]VI Abducens[/b] (motor): lateral rectus eye muscle, which abducts the eye.",
+        "- [b]VII Facial[/b] (mixed): muscles of facial expression; taste from the anterior two-thirds of the tongue; parasympathetic to the tear (lacrimal) glands and the submandibular and sublingual salivary glands.",
+        "- [b]VIII Vestibulocochlear[/b] (sensory): hearing (cochlear branch) and equilibrium (vestibular branch).",
+        "- [b]IX Glossopharyngeal[/b] (mixed): taste and general sensation from the posterior one-third of the tongue and pharynx; swallowing muscles; parasympathetic to the parotid salivary gland; sensory from the carotid sinus and body (blood pressure and blood gases).",
+        "- [b]X Vagus[/b] (mixed): the only cranial nerve that extends beyond the head and neck. Motor to the pharynx and larynx (speech, swallowing); parasympathetic to the heart, lungs, and most abdominal organs; sensory from these viscera.",
+        "- [b]XI Accessory[/b] (motor): sternocleidomastoid and trapezius muscles (turning the head, shrugging). OpenStax calls it the spinal accessory nerve; Hole's also describes a small cranial branch that joins the vagus.",
+        "- [b]XII Hypoglossal[/b] (motor): muscles of the tongue.",
+        "Cranial nerves III, VII, IX, and X carry the cranial part of the parasympathetic output; the rest leaves from sacral segments S2 to S4."
+      ],
+      "tip": "Names: 'Oh Once One Takes The Anatomy Final, Very Good Vacations Are Heavenly.' Function: 'Some Say Marry Money, But My Brother Says Big Brains Matter More' (S = sensory, M = motor, B = both). Eye muscles: LR6 SO4, the rest 3.",
+      "clinical": "[b]Bell's palsy[/b] is inflammation of the facial nerve (VII), causing sudden paralysis of facial muscles on one side, so the eyelid cannot close and the mouth droops. [b]Trigeminal neuralgia[/b] causes stabbing facial pain along branches of V.",
+      "figure": {
+        "file": "m15_cranial_nerves.jpg",
+        "caption": "Seen from below, the cranial nerves are numbered roughly from front to back: olfactory (I) and optic (II) arise from the forebrain, and III through XII emerge from the brainstem.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 13.23, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-4-the-peripheral-nervous-system"
+      }
+    },
+    {
+      "heading": "Spinal Nerves and Their Branches",
+      "body": [
+        "There are [b]31 pairs of spinal nerves[/b], named for the region where they leave the vertebral column:",
+        "- 8 cervical (C1 to C8)",
+        "- 12 thoracic (T1 to T12)",
+        "- 5 lumbar (L1 to L5)",
+        "- 5 sacral (S1 to S5)",
+        "- 1 coccygeal (Co1)",
+        "There are 8 cervical nerves but only 7 cervical vertebrae because C1 exits above the first vertebra and C8 exits below the seventh. From T1 downward, each nerve exits below the vertebra of the same number.",
+        "Each spinal nerve forms where two roots join:",
+        "- The [b]dorsal (posterior) root[/b] carries sensory fibers into the cord. It has a swelling, the [b]dorsal root ganglion[/b], that holds the sensory neuron cell bodies.",
+        "- The [b]ventral (anterior) root[/b] carries motor fibers out of the cord.",
+        "The joined spinal nerve is therefore [b]mixed[/b]. It passes through an intervertebral foramen and almost immediately divides into branches called [b]rami[/b]:",
+        "- [b]Dorsal ramus[/b]: supplies the deep muscles and skin of the back.",
+        "- [b]Ventral ramus[/b]: supplies the muscles and skin of the front and sides of the trunk and the limbs. Ventral rami form the plexuses.",
+        "- [b]Meningeal branch[/b]: returns to supply the meninges and vertebrae.",
+        "- [b]Rami communicantes[/b]: connect the spinal nerve to the sympathetic chain ganglia (part of the autonomic system)."
+      ],
+      "tip": "The spinal nerve count is like a daily schedule: 8 a.m. breakfast (cervical 8), 12 noon lunch (thoracic 12), 5 p.m. dinner (lumbar 5), 5 sacral, 1 coccygeal = 31.",
+      "clinical": "A herniated lumbar disc usually presses on a nerve root, producing pain, tingling, or weakness in the area that root supplies. Pressure on roots forming the sciatic nerve gives the classic shooting leg pain called sciatica."
+    },
+    {
+      "heading": "Plexuses and Dermatomes",
+      "body": [
+        "Except for most thoracic nerves, ventral rami merge and branch to form networks called [b]plexuses[/b]. Because each nerve leaving a plexus carries fibers from several spinal levels, damage to one root rarely paralyzes a whole muscle. Ventral rami of T2 through T12 do not form plexuses; they run between the ribs as [b]intercostal nerves[/b] (T12 runs below the last rib).",
+        "- [b]Cervical plexus (C1 to C4)[/b]: skin and muscles of the neck. Its key branch, the [b]phrenic nerve (C3 to C5)[/b], controls the diaphragm. Some textbooks list the plexus as C1 to C5 because of the phrenic contribution.",
+        "- [b]Brachial plexus (C5 to T1)[/b]: the upper limb. Its five main nerves are the [b]axillary[/b] (deltoid and teres minor), [b]musculocutaneous[/b] (anterior arm flexors such as biceps brachii), [b]radial[/b] (posterior extensors of the arm, forearm, and hand, including triceps), [b]median[/b] (most forearm flexors and thumb muscles), and [b]ulnar[/b] (most intrinsic hand muscles; the 'funny bone' nerve).",
+        "- [b]Lumbar plexus (L1 to L4)[/b]: the anterior and medial thigh. Major nerves are the [b]femoral[/b] (quadriceps and skin of the anterior thigh) and [b]obturator[/b] (adductor muscles of the medial thigh).",
+        "- [b]Sacral plexus (L4 to S4)[/b]: the buttock, posterior thigh, leg, and foot. Its main nerve is the [b]sciatic nerve[/b], the largest nerve in the body, which splits above the knee into the [b]tibial[/b] and [b]common fibular (peroneal)[/b] nerves. Hole's groups the lumbar and sacral plexuses together as the lumbosacral plexus.",
+        "A [b]dermatome[/b] is an area of skin supplied by the sensory fibers of a single spinal nerve. Dermatomes form a striped map from head to toe; useful landmarks are about [b]C6[/b] for the thumb, [b]T4[/b] at the nipple line, and [b]T10[/b] at the umbilicus. Adjacent dermatomes overlap, so loss of one nerve usually reduces rather than eliminates sensation. Clinicians test dermatomes to find the level of a spinal cord or nerve root injury."
+      ],
+      "tip": "'C3, 4, and 5 keep the diaphragm alive.' Brachial plexus structure: 'Randy Travis Drinks Cold Beer' = Roots, Trunks, Divisions, Cords, Branches.",
+      "clinical": "[b]Shingles[/b] (herpes zoster) is reactivated chickenpox virus that has lain dormant in a dorsal root ganglion. The painful blistering rash appears in a band that follows that nerve's dermatome on one side of the body. A spinal injury above C3 to C5 can stop breathing by cutting the phrenic nerve's input.",
+      "figure": {
+        "file": "m15_plexuses.jpg",
+        "caption": "Find the four plexuses and their major nerves: phrenic from the cervical plexus; axillary, radial, median, and ulnar from the brachial plexus; femoral and obturator from the lumbar plexus; and the sciatic nerve, splitting into tibial and common fibular, from the sacral plexus. The drawing brackets the sacral plexus a little differently than the L4 to S4 range used in this lesson.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 13.24, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-4-the-peripheral-nervous-system"
+      }
+    },
+    {
+      "heading": "Spinal Reflexes",
+      "body": [
+        "Many reflexes are integrated in the spinal cord without needing the brain, though the brain is informed and can modify them.",
+        "[b]Stretch reflex (patellar, knee-jerk)[/b]: tapping the patellar tendon stretches the quadriceps. [b]Muscle spindles[/b], stretch receptors in the muscle, send impulses along sensory neurons to the spinal cord (L2 to L4), where they synapse [i]directly[/i] on motor neurons to the quadriceps. The quadriceps contracts and the leg kicks forward. Because only one synapse lies between sensory and motor neuron, this is a [b]monosynaptic[/b] reflex. At the same time, branches of the sensory neuron excite inhibitory interneurons that relax the opposing hamstrings ([b]reciprocal inhibition[/b]). Stretch reflexes help maintain posture and muscle tone.",
+        "[b]Withdrawal (flexor) reflex[/b]: stepping on a tack stimulates pain receptors. Sensory signals reach interneurons in the cord, which activate motor neurons to [b]flexor[/b] muscles, pulling the limb away. This is [b]polysynaptic[/b] and protective. It can override other signals.",
+        "[b]Crossed extensor reflex[/b]: when one leg withdraws, interneurons cross to the opposite side of the cord and activate [b]extensor[/b] muscles in the other leg so it can support the body's weight. It accompanies the withdrawal reflex in weight-bearing limbs.",
+        "Reflex testing gives information about specific spinal segments and nerves. Abnormally weak or absent reflexes suggest damage to the reflex arc itself (nerve, root, or cord segment); exaggerated reflexes often suggest damage to descending pathways from the brain."
+      ],
+      "tip": "Withdrawal = Flexors pull you away; Crossed = the other leg Extends to hold you up.",
+      "clinical": "The [b]Babinski reflex[/b]: stroking the sole normally curls the toes downward in adults. If the big toe extends upward and the others fan out, it suggests corticospinal tract damage. This upward response is normal in infants under about a year because their corticospinal tracts are not yet fully myelinated."
+    },
+    {
+      "heading": "Autonomic Overview and the Sympathetic Division",
+      "body": [
+        "The [b]autonomic nervous system (ANS)[/b] controls smooth muscle, cardiac muscle, and glands automatically, under direction of the hypothalamus and brainstem. Its key structural difference from the somatic system is a [b]two-neuron chain[/b]: a [b]preganglionic neuron[/b] with its cell body in the CNS sends an axon to an [b]autonomic ganglion[/b], where it synapses with a [b]postganglionic neuron[/b] whose axon reaches the effector. Somatic motor pathways use a single neuron from CNS to skeletal muscle.",
+        "Preganglionic axons are myelinated; postganglionic axons are unmyelinated.",
+        "The [b]sympathetic division[/b] prepares the body for 'fight or flight': stress, exercise, emergencies.",
+        "- [b]Origin[/b]: [b]thoracolumbar[/b]. Preganglionic cell bodies are in the lateral horns of spinal segments T1 to L2.",
+        "- [b]Ganglia[/b]: close to the spinal cord, in the [b]sympathetic chain (paravertebral) ganglia[/b] running alongside the vertebral column, or in [b]collateral (prevertebral) ganglia[/b] in front of the vertebral column, such as the celiac, superior mesenteric, and inferior mesenteric ganglia.",
+        "- [b]Fiber lengths[/b]: [b]short preganglionic[/b], [b]long postganglionic[/b].",
+        "- [b]Pathway[/b]: preganglionic axons leave through the ventral root, pass through a [b]white ramus communicans[/b] (white because myelinated) into the chain ganglion, and then synapse there, travel up or down the chain to synapse at another level, or pass through without synapsing to reach a collateral ganglion. Postganglionic fibers rejoin spinal nerves through a [b]gray ramus communicans[/b] (gray because unmyelinated).",
+        "- [b]Divergence[/b]: each preganglionic neuron synapses with many postganglionic neurons, so sympathetic effects tend to be widespread and happen together."
+      ],
+      "tip": "Sympathetic = Short pre, long post, and Spinal cord thoracolumbar. Think of the sympathetic chain as a ladder of ganglia right next to the spine.",
+      "figure": {
+        "file": "m15_sympathetic.jpg",
+        "caption": "Sympathetic preganglionic fibers (solid lines) leave only segments T1 to L2, the thoracolumbar outflow. They synapse in the chain ganglia beside the cord or in collateral ganglia such as the celiac, and postganglionic fibers (dashed lines) reach the organs.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 15.2, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/15-1-divisions-of-the-autonomic-nervous-system"
+      }
+    },
+    {
+      "heading": "The Parasympathetic Division",
+      "body": [
+        "The [b]parasympathetic division[/b] dominates during calm, restful conditions, promoting 'rest and digest' activities that conserve and restore energy.",
+        "- [b]Origin[/b]: [b]craniosacral[/b]. Preganglionic cell bodies are in brainstem nuclei of cranial nerves [b]III, VII, IX, and X[/b] and in the lateral gray matter of sacral segments [b]S2 to S4[/b].",
+        "- [b]Ganglia[/b]: [b]terminal (intramural) ganglia[/b] located near or within the walls of the organs they supply.",
+        "- [b]Fiber lengths[/b]: [b]long preganglionic[/b], [b]short postganglionic[/b].",
+        "- [b]Distribution[/b]: CN III to the eye (pupil constriction, lens focusing); CN VII to tear glands and the submandibular and sublingual salivary glands; CN IX to the parotid gland; CN X, the [b]vagus[/b], carries most of the parasympathetic output, supplying the heart, lungs, and most of the digestive tract. Sacral fibers (pelvic splanchnic nerves) supply the lower colon, rectum, urinary bladder, and reproductive organs.",
+        "- [b]Effects[/b]: more localized than sympathetic effects, because there is less divergence and the ganglia sit at the organs.",
+        "Parasympathetic fibers do not run through the rami communicantes or chain ganglia, and they do not reach the limbs, body wall, or skin. That is why sweat glands, arrector pili muscles, and most blood vessels receive only sympathetic fibers."
+      ],
+      "tip": "Parasympathetic = 'Pair of ends': cranial and sacral. Long pre, short post, because the ganglion sits in the organ itself. 'Rest and digest' or 'feed and breed.'",
+      "figure": {
+        "file": "m15_parasympathetic.jpg",
+        "caption": "Parasympathetic fibers (blue) leave only the brainstem, through cranial nerves III, VII, IX, and X, and the sacral cord. The long preganglionic fibers reach terminal ganglia close to the organs, and the vagus nerve (X) supplies most of the thoracic and abdominal viscera.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 15.4, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/15-1-divisions-of-the-autonomic-nervous-system"
+      }
+    },
+    {
+      "heading": "Autonomic Neurotransmitters and Receptors",
+      "body": [
+        "Fibers are named by what they release: [b]cholinergic[/b] fibers release acetylcholine (ACh), and [b]adrenergic[/b] fibers release norepinephrine (NE).",
+        "- [b]All preganglionic fibers[/b], sympathetic and parasympathetic, are cholinergic.",
+        "- [b]All parasympathetic postganglionic fibers[/b] are cholinergic.",
+        "- [b]Most sympathetic postganglionic fibers[/b] are adrenergic. The main exception is sympathetic fibers to [b]sweat glands[/b], which release ACh (and some fibers to blood vessels in skeletal muscle).",
+        "[b]Cholinergic receptors[/b] (bind ACh):",
+        "- [b]Nicotinic receptors[/b]: on all postganglionic neuron cell bodies in both divisions, on cells of the adrenal medulla, and on skeletal muscle at the neuromuscular junction. ACh binding here is always [b]excitatory[/b].",
+        "- [b]Muscarinic receptors[/b]: on all effector cells stimulated by parasympathetic postganglionic fibers, and on sweat glands. Effects can be excitatory or inhibitory depending on the organ; for example, ACh slows the heart but stimulates digestive smooth muscle.",
+        "[b]Adrenergic receptors[/b] (bind NE and epinephrine):",
+        "- [b]Alpha receptors[/b]: mostly excitatory. Example: constricting blood vessels in the skin and digestive organs, dilating the pupil.",
+        "- [b]Beta receptors[/b]: [b]beta-1[/b] receptors in the heart increase rate and force of contraction; [b]beta-2[/b] receptors mostly cause relaxation, such as dilating bronchioles and dilating blood vessels in skeletal muscle.",
+        "Hole's presents alpha and beta receptors at a general level; OpenStax and most pharmacology courses split them into subtypes such as alpha-1, beta-1, and beta-2. NE acts mainly on alpha and beta-1 receptors, while epinephrine acts strongly on both alpha and beta receptors."
+      ],
+      "tip": "Nicotinic = at every ganglion (N for 'node'), always excites. Muscarinic = at parasympathetic targets (M for 'many organs'), can excite or inhibit.",
+      "clinical": "[b]Beta blockers[/b] such as propranolol block beta receptors to slow the heart and lower blood pressure. [b]Albuterol[/b] inhalers stimulate beta-2 receptors to open airways in asthma. [b]Atropine[/b] blocks muscarinic receptors; eye doctors use related drugs to dilate the pupil, and it is used to speed a dangerously slow heart."
+    },
+    {
+      "heading": "Autonomic Effects, the Adrenal Medulla, and Dual Innervation",
+      "body": [
+        "[b]Effects on major organs[/b] (sympathetic vs parasympathetic):",
+        "- [b]Pupil[/b]: dilates vs constricts.",
+        "- [b]Heart[/b]: increases rate and force vs decreases rate.",
+        "- [b]Bronchioles[/b]: dilate vs constrict.",
+        "- [b]Digestive tract[/b]: decreases motility and secretion vs increases them.",
+        "- [b]Salivary glands[/b]: small amount of thick saliva vs abundant watery saliva.",
+        "- [b]Liver[/b]: releases glucose (glycogen breakdown) vs promotes glycogen storage.",
+        "- [b]Urinary bladder[/b]: relaxes the wall and contracts the internal sphincter vs contracts the wall to empty the bladder.",
+        "- [b]Blood vessels of skin and digestive organs[/b]: constrict vs no innervation for most vessels.",
+        "- [b]Blood vessels of skeletal muscle[/b]: dilate vs no innervation.",
+        "- [b]Sweat glands, arrector pili, adrenal medulla[/b]: stimulated vs no innervation.",
+        "- [b]Male reproductive organs[/b]: ejaculation vs erection.",
+        "[b]Adrenal medulla[/b]: the inner part of each adrenal gland is essentially a modified sympathetic ganglion. Sympathetic preganglionic fibers synapse directly on its cells, which lack axons and instead release hormones into the blood: about 80 percent [b]epinephrine[/b] and 20 percent norepinephrine. These hormones reach every tissue, prolonging and spreading the sympathetic response.",
+        "[b]Dual innervation[/b]: most visceral organs receive fibers from both divisions, which usually have opposite effects. The balance shifts with conditions: the parasympathetic division sets resting heart rate, for example, and the sympathetic takes over during stress. Both divisions are always somewhat active, producing [b]sympathetic tone[/b] and [b]parasympathetic tone[/b]. Organs with only sympathetic innervation, such as most blood vessels, are controlled by increasing or decreasing the rate of sympathetic firing. The two divisions can also cooperate, as in male sexual function."
+      ],
+      "tip": "Male reproductive function: 'Point and Shoot' = Parasympathetic for erection, Sympathetic for ejaculation. Think of a bear chasing you: big pupils, racing heart, open airways, digestion on hold.",
+      "clinical": "During a panic attack, sympathetic activation causes a racing heart, dry mouth, sweating, and dilated pupils, even though there is no physical threat. A pheochromocytoma, a tumor of the adrenal medulla, causes episodes of the same signs with dangerously high blood pressure.",
+      "figure": {
+        "file": "m15_cardio_receptors.jpg",
+        "caption": "The heart shows dual innervation: parasympathetic fibers arrive through the vagus nerve (blue) to slow it, and sympathetic fibers from the upper thoracic segments (red) arrive through the chain ganglia to speed it up.",
+        "credit": "OpenStax Anatomy & Physiology 2e, Figure 15.13, CC BY 4.0",
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/15-4-drugs-that-affect-the-autonomic-system"
+      }
+    }
+  ],
+  "flashcards": [
+    { "id": "m15_fc01", "term": "Endoneurium", "definition": "Loose connective tissue surrounding each individual axon in a nerve." },
+    { "id": "m15_fc02", "term": "Perineurium", "definition": "Connective tissue surrounding a fascicle (bundle) of axons." },
+    { "id": "m15_fc03", "term": "Epineurium", "definition": "Dense connective tissue surrounding an entire nerve." },
+    { "id": "m15_fc04", "term": "Mixed nerve", "definition": "Nerve containing both sensory and motor fibers; all spinal nerves are mixed." },
+    { "id": "m15_fc05", "term": "Cranial nerves in order", "definition": "I Olfactory, II Optic, III Oculomotor, IV Trochlear, V Trigeminal, VI Abducens, VII Facial, VIII Vestibulocochlear, IX Glossopharyngeal, X Vagus, XI Accessory, XII Hypoglossal." },
+    { "id": "m15_fc06", "term": "Purely or primarily sensory cranial nerves", "definition": "I Olfactory, II Optic, VIII Vestibulocochlear." },
+    { "id": "m15_fc07", "term": "Mixed cranial nerves", "definition": "V Trigeminal, VII Facial, IX Glossopharyngeal, X Vagus." },
+    { "id": "m15_fc08", "term": "Oculomotor nerve (III)", "definition": "Moves most extrinsic eye muscles and raises the eyelid; parasympathetic fibers constrict the pupil and focus the lens." },
+    { "id": "m15_fc09", "term": "Trochlear (IV) and abducens (VI)", "definition": "Trochlear moves the superior oblique; abducens moves the lateral rectus (LR6 SO4)." },
+    { "id": "m15_fc10", "term": "Trigeminal nerve (V)", "definition": "Mixed; main sensory nerve of the face via ophthalmic, maxillary, and mandibular branches; motor to chewing muscles." },
+    { "id": "m15_fc11", "term": "Facial nerve (VII)", "definition": "Mixed; facial expression, taste from anterior two-thirds of tongue, tear and submandibular/sublingual salivary glands." },
+    { "id": "m15_fc12", "term": "Glossopharyngeal nerve (IX)", "definition": "Mixed; taste from posterior one-third of tongue, swallowing, parotid gland, carotid sinus and body sensation." },
+    { "id": "m15_fc13", "term": "Vagus nerve (X)", "definition": "Mixed; pharynx and larynx muscles; main parasympathetic supply to heart, lungs, and most abdominal organs." },
+    { "id": "m15_fc14", "term": "Accessory (XI) and hypoglossal (XII)", "definition": "Accessory moves the sternocleidomastoid and trapezius; hypoglossal moves the tongue." },
+    { "id": "m15_fc15", "term": "Spinal nerve count", "definition": "31 pairs: 8 cervical, 12 thoracic, 5 lumbar, 5 sacral, 1 coccygeal." },
+    { "id": "m15_fc16", "term": "Dorsal root vs ventral root", "definition": "Dorsal root: sensory fibers entering the cord, with cell bodies in the dorsal root ganglion. Ventral root: motor fibers leaving the cord." },
+    { "id": "m15_fc17", "term": "Dorsal vs ventral ramus", "definition": "Dorsal ramus: muscles and skin of the back. Ventral ramus: anterior and lateral trunk and limbs; forms plexuses." },
+    { "id": "m15_fc18", "term": "Phrenic nerve", "definition": "Branch of the cervical plexus from C3 to C5 that controls the diaphragm." },
+    { "id": "m15_fc19", "term": "Brachial plexus", "definition": "C5 to T1; supplies the upper limb through the axillary, musculocutaneous, radial, median, and ulnar nerves." },
+    { "id": "m15_fc20", "term": "Lumbar plexus", "definition": "L1 to L4; femoral nerve (quadriceps, anterior thigh) and obturator nerve (medial thigh adductors)." },
+    { "id": "m15_fc21", "term": "Sciatic nerve", "definition": "Largest nerve in the body, from the sacral plexus (L4 to S3 roots); supplies posterior thigh and divides into tibial and common fibular nerves." },
+    { "id": "m15_fc22", "term": "Dermatome", "definition": "Area of skin supplied by the sensory fibers of a single spinal nerve." },
+    { "id": "m15_fc23", "term": "Stretch (patellar) reflex", "definition": "Monosynaptic reflex: stretching a muscle stimulates muscle spindles, causing that muscle to contract." },
+    { "id": "m15_fc24", "term": "Crossed extensor reflex", "definition": "As one limb withdraws, the opposite limb's extensors contract to support body weight." },
+    { "id": "m15_fc25", "term": "Preganglionic vs postganglionic neuron", "definition": "Preganglionic: cell body in the CNS, axon to an autonomic ganglion. Postganglionic: cell body in the ganglion, axon to the effector." },
+    { "id": "m15_fc26", "term": "Sympathetic origin and fibers", "definition": "Thoracolumbar (T1 to L2); short preganglionic, long postganglionic; ganglia in the sympathetic chain or collateral ganglia near the cord." },
+    { "id": "m15_fc27", "term": "Parasympathetic origin and fibers", "definition": "Craniosacral (CN III, VII, IX, X and S2 to S4); long preganglionic, short postganglionic; terminal ganglia in or near organs." },
+    { "id": "m15_fc28", "term": "Cholinergic vs adrenergic fibers", "definition": "Cholinergic fibers release ACh (all preganglionic, all parasympathetic postganglionic). Adrenergic fibers release norepinephrine (most sympathetic postganglionic)." },
+    { "id": "m15_fc29", "term": "Nicotinic vs muscarinic receptors", "definition": "Nicotinic: on all postganglionic neurons, adrenal medulla, and skeletal muscle; always excitatory. Muscarinic: on parasympathetic target cells and sweat glands; excitatory or inhibitory." },
+    { "id": "m15_fc30", "term": "Beta-1 vs beta-2 receptors", "definition": "Beta-1: heart, increases rate and force. Beta-2: bronchiole and skeletal muscle vessel smooth muscle, causes relaxation (dilation)." },
+    { "id": "m15_fc31", "term": "Adrenal medulla", "definition": "Modified sympathetic ganglion that secretes about 80 percent epinephrine and 20 percent norepinephrine into the blood." },
+    { "id": "m15_fc32", "term": "Dual innervation", "definition": "Most visceral organs receive both sympathetic and parasympathetic fibers, usually with opposing effects." }
+  ],
+  "quiz": [
+    {
+      "id": "m15_q01",
+      "type": "multiple_choice",
+      "prompt": "The connective tissue layer that surrounds a fascicle of axons within a nerve is the:",
+      "choices": ["Endoneurium", "Perineurium", "Epineurium", "Neurilemma"],
+      "answer": 1,
+      "explanation": "Perineurium wraps each fascicle. Endoneurium is the tempting answer, but it surrounds single axons; epineurium surrounds the entire nerve."
+    },
+    {
+      "id": "m15_q02",
+      "type": "multiple_choice",
+      "prompt": "A patient's left eye cannot move laterally (outward) and turns inward at rest. Which cranial nerve is most likely damaged?",
+      "choices": ["Oculomotor (III)", "Trochlear (IV)", "Abducens (VI)", "Optic (II)"],
+      "answer": 2,
+      "explanation": "The abducens nerve supplies the lateral rectus, which abducts the eye; without it, the medial rectus pulls the eye inward. The oculomotor is tempting because it moves most eye muscles, but not the lateral rectus."
+    },
+    {
+      "id": "m15_q03",
+      "type": "multiple_choice",
+      "prompt": "Which cranial nerve carries taste from the anterior two-thirds of the tongue and controls the muscles of facial expression?",
+      "choices": ["Trigeminal (V)", "Facial (VII)", "Glossopharyngeal (IX)", "Hypoglossal (XII)"],
+      "answer": 1,
+      "explanation": "The facial nerve handles facial expression and anterior tongue taste. The trigeminal is tempting because it supplies general sensation to the face, but it does not carry taste or move facial expression muscles."
+    },
+    {
+      "id": "m15_q04",
+      "type": "multiple_choice",
+      "prompt": "Which cranial nerve supplies parasympathetic fibers to the heart, lungs, and most of the digestive tract?",
+      "choices": ["Vagus (X)", "Glossopharyngeal (IX)", "Accessory (XI)", "Phrenic"],
+      "answer": 0,
+      "explanation": "The vagus is the only cranial nerve that extends into the thorax and abdomen and carries most parasympathetic output. The phrenic is tempting because it reaches the thorax, but it is a spinal (cervical plexus) nerve to the diaphragm, not a cranial nerve."
+    },
+    {
+      "id": "m15_q05",
+      "type": "multiple_choice",
+      "prompt": "Which group lists only cranial nerves that are sensory?",
+      "choices": [
+        "Olfactory, optic, vestibulocochlear",
+        "Olfactory, oculomotor, trigeminal",
+        "Optic, facial, vagus",
+        "Trochlear, abducens, hypoglossal"
+      ],
+      "answer": 0,
+      "explanation": "I, II, and VIII are the sensory cranial nerves. Trochlear, abducens, and hypoglossal are all motor, and facial and vagus are mixed."
+    },
+    {
+      "id": "m15_q06",
+      "type": "multiple_choice",
+      "prompt": "Why are there 8 pairs of cervical spinal nerves but only 7 cervical vertebrae?",
+      "choices": [
+        "The first cervical nerve exits above C1 and the eighth exits below C7",
+        "One cervical nerve comes from the brainstem",
+        "The phrenic nerve counts as an extra cervical nerve",
+        "C8 is actually a thoracic nerve renamed in adults"
+      ],
+      "answer": 0,
+      "explanation": "C1 leaves between the skull and atlas, so each cervical nerve exits above its numbered vertebra until C8, which exits below C7. From T1 down, each nerve exits below its vertebra."
+    },
+    {
+      "id": "m15_q07",
+      "type": "multiple_choice",
+      "prompt": "A spinal cord injury at C2 would be most immediately life threatening because it would interrupt the:",
+      "choices": ["Phrenic nerve's input to the diaphragm", "Vagus nerve's input to the heart", "Sciatic nerve", "Brachial plexus"],
+      "answer": 0,
+      "explanation": "The phrenic nerve arises from C3 to C5, so a lesion above that level cuts brain signals to the diaphragm and stops breathing. The vagus is tempting, but it is a cranial nerve leaving the brainstem above the cord, so a cord injury does not cut it."
+    },
+    {
+      "id": "m15_q08",
+      "type": "multiple_choice",
+      "prompt": "A fracture of the humerus damages a nerve, and the patient cannot extend the wrist (wrist drop). Which nerve was most likely injured?",
+      "choices": ["Median", "Ulnar", "Radial", "Musculocutaneous"],
+      "answer": 2,
+      "explanation": "The radial nerve supplies the posterior extensor muscles and runs along the humerus, so humeral fractures can injure it. The median nerve is tempting, but it mainly serves forearm flexors and the thumb."
+    },
+    {
+      "id": "m15_q09",
+      "type": "multiple_choice",
+      "prompt": "Which nerve supplies the quadriceps and is tested by the patellar reflex?",
+      "choices": ["Sciatic", "Femoral", "Obturator", "Tibial"],
+      "answer": 1,
+      "explanation": "The femoral nerve from the lumbar plexus supplies the quadriceps. The sciatic is tempting because it is the largest leg nerve, but it supplies the posterior thigh and below the knee."
+    },
+    {
+      "id": "m15_q10",
+      "type": "multiple_choice",
+      "prompt": "A painful band of blisters wraps around one side of a patient's chest at the level of the nipple. This pattern follows a:",
+      "choices": ["Dermatome", "Plexus", "Cranial nerve", "Myotome of the diaphragm"],
+      "answer": 0,
+      "explanation": "Shingles reactivates virus from one dorsal root ganglion, so the rash follows that spinal nerve's dermatome, here around T4. A plexus is a network of ventral rami, not a skin territory."
+    },
+    {
+      "id": "m15_q11",
+      "type": "multiple_choice",
+      "prompt": "You step on a sharp rock, lift that foot, and shift weight onto the other leg, which straightens. The straightening of the other leg is the:",
+      "choices": ["Stretch reflex", "Withdrawal reflex", "Crossed extensor reflex", "Babinski reflex"],
+      "answer": 2,
+      "explanation": "The crossed extensor reflex extends the opposite limb to support you. The withdrawal reflex is tempting, but it describes the injured foot being lifted by flexors."
+    },
+    {
+      "id": "m15_q12",
+      "type": "multiple_choice",
+      "prompt": "Which statement correctly describes the sympathetic division?",
+      "choices": [
+        "Craniosacral origin with long preganglionic fibers",
+        "Thoracolumbar origin with short preganglionic fibers and ganglia near the spinal cord",
+        "Thoracolumbar origin with terminal ganglia inside the organs",
+        "Craniosacral origin with ganglia in the sympathetic chain"
+      ],
+      "answer": 1,
+      "explanation": "Sympathetic neurons arise from T1 to L2 and synapse in chain or collateral ganglia close to the cord, so preganglionic fibers are short. Terminal ganglia in organs belong to the parasympathetic division."
+    },
+    {
+      "id": "m15_q13",
+      "type": "multiple_choice",
+      "prompt": "Which neurotransmitter do all autonomic preganglionic neurons release?",
+      "choices": ["Norepinephrine", "Epinephrine", "Acetylcholine", "Dopamine"],
+      "answer": 2,
+      "explanation": "Every preganglionic fiber, sympathetic or parasympathetic, is cholinergic and acts on nicotinic receptors. Norepinephrine is tempting, but it is released by most sympathetic postganglionic fibers."
+    },
+    {
+      "id": "m15_q14",
+      "type": "multiple_choice",
+      "prompt": "Acetylcholine released by parasympathetic postganglionic fibers binds which receptor on the heart?",
+      "choices": ["Nicotinic", "Muscarinic", "Alpha adrenergic", "Beta-1 adrenergic"],
+      "answer": 1,
+      "explanation": "Parasympathetic target cells have muscarinic receptors; on the heart they slow the rate. Beta-1 is tempting because it is the heart's sympathetic receptor, but it binds NE and epinephrine, not ACh."
+    },
+    {
+      "id": "m15_q15",
+      "type": "multiple_choice",
+      "prompt": "A patient with asthma uses an inhaler that opens the airways. The drug most likely stimulates which receptor?",
+      "choices": ["Beta-2 adrenergic", "Beta-1 adrenergic", "Muscarinic", "Nicotinic"],
+      "answer": 0,
+      "explanation": "Beta-2 receptors relax bronchiole smooth muscle. Beta-1 is tempting, but stimulating it would mainly speed the heart; stimulating muscarinic receptors would constrict the airways."
+    },
+    {
+      "id": "m15_q16",
+      "type": "multiple_choice",
+      "prompt": "Which effect is caused by parasympathetic stimulation?",
+      "choices": [
+        "Dilation of the pupils",
+        "Increased heart rate",
+        "Increased digestive motility and secretion",
+        "Release of glucose from the liver"
+      ],
+      "answer": 2,
+      "explanation": "Rest and digest activity increases digestive motility and secretion. The other three are sympathetic responses that prepare the body for action."
+    },
+    {
+      "id": "m15_q17",
+      "type": "multiple_choice",
+      "prompt": "Which statement about the adrenal medulla is correct?",
+      "choices": [
+        "It is controlled by parasympathetic fibers from the vagus",
+        "Its cells are like sympathetic postganglionic neurons and secrete mostly epinephrine into the blood",
+        "It secretes mostly norepinephrine directly onto target organs through axons",
+        "It receives postganglionic fibers from the celiac ganglion"
+      ],
+      "answer": 1,
+      "explanation": "Preganglionic sympathetic fibers synapse directly on adrenal medulla cells, which release about 80 percent epinephrine as a hormone. They lack axons, and the medulla has no parasympathetic supply."
+    },
+    {
+      "id": "m15_q18",
+      "type": "true_false",
+      "prompt": "Sweat glands receive both sympathetic and parasympathetic innervation.",
+      "answer": false,
+      "explanation": "Sweat glands receive only sympathetic fibers, and unusually, those fibers release ACh onto muscarinic receptors. Parasympathetic fibers do not reach the skin."
+    },
+    {
+      "id": "m15_q19",
+      "type": "true_false",
+      "prompt": "The patellar reflex is a monosynaptic reflex because the sensory neuron synapses directly on the motor neuron.",
+      "answer": true,
+      "explanation": "The contraction of the quadriceps involves a single synapse. Relaxation of the hamstrings does involve an interneuron, but the core stretch reflex is monosynaptic."
+    },
+    {
+      "id": "m15_q20",
+      "type": "true_false",
+      "prompt": "Parasympathetic preganglionic neurons have their cell bodies in the brainstem and the sacral spinal cord.",
+      "answer": true,
+      "explanation": "This is the craniosacral origin: brainstem nuclei of cranial nerves III, VII, IX, and X, plus spinal segments S2 to S4."
+    },
+    {
+      "id": "m15_q21",
+      "type": "ordering",
+      "prompt": "Put the cranial nerves in numerical order.",
+      "items": ["Oculomotor", "Trochlear", "Trigeminal", "Abducens", "Facial", "Vestibulocochlear"],
+      "explanation": "These are III through VIII. Use 'Oh Once One Takes The Anatomy Final, Very Good Vacations Are Heavenly' to recall the full sequence."
+    },
+    {
+      "id": "m15_q22",
+      "type": "ordering",
+      "prompt": "Put the events of the patellar stretch reflex in order.",
+      "items": [
+        "Tap on the patellar tendon stretches the quadriceps",
+        "Muscle spindles are stimulated",
+        "Sensory neuron carries impulses to the spinal cord",
+        "Sensory neuron synapses on a motor neuron in the anterior horn",
+        "Motor neuron stimulates the quadriceps to contract and the leg extends"
+      ],
+      "explanation": "Stretch is detected by spindles, carried in by a sensory neuron, passed directly to a motor neuron, and sent out to the same muscle, which contracts."
+    },
+    {
+      "id": "m15_q23",
+      "type": "ordering",
+      "prompt": "Put the path of a sympathetic signal to a sweat gland in order.",
+      "items": [
+        "Preganglionic cell body in the lateral horn of the thoracic cord",
+        "Axon leaves through the ventral root",
+        "White ramus communicans into a sympathetic chain ganglion",
+        "Synapse with the postganglionic neuron",
+        "Gray ramus communicans back into the spinal nerve",
+        "Postganglionic axon reaches the sweat gland"
+      ],
+      "explanation": "Myelinated preganglionic fibers enter the chain through the white ramus, synapse, and unmyelinated postganglionic fibers rejoin the spinal nerve through the gray ramus to travel to skin targets."
+    }
+  ]
+}
