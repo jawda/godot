@@ -445,5 +445,315 @@
       "items": ["Beta", "Alpha", "Theta", "Delta"],
       "explanation": "Beta is fastest (alert thinking), alpha next (relaxed), theta slower (drowsy, children), and delta slowest (deep sleep)."
     }
+  ],
+  "diagrams": [
+    {
+      "id": "m14_dg01",
+      "title": "Lobes and landmarks of the cerebrum",
+      "file": "m14_lobes.jpg",
+      "prompt": "Left lateral view of the brain. Name the four lobes and the sulci and gyri that border them.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Frontal lobe",
+          "box": [0.0, 0.1481, 0.1569, 0.0386],
+          "lines": 1
+        },
+        {
+          "text": "Precentral gyrus",
+          "box": [0.176, 0.0757, 0.2156, 0.0467],
+          "lines": 1
+        },
+        {
+          "text": "Central sulcus",
+          "box": [0.663, 0.0, 0.1883, 0.0403],
+          "lines": 1
+        },
+        {
+          "text": "Postcentral gyrus",
+          "box": [0.663, 0.0757, 0.2265, 0.0467],
+          "lines": 1
+        },
+        {
+          "text": "Parietal lobe",
+          "box": [0.663, 0.153, 0.1664, 0.0386],
+          "lines": 1
+        },
+        {
+          "text": "Parieto-occipital sulcus",
+          "accept": ["Parietooccipital sulcus"],
+          "box": [0.7913, 0.2432, 0.2087, 0.0789],
+          "lines": 2
+        },
+        {
+          "text": "Lateral sulcus",
+          "accept": ["Lateral fissure", "Sylvian fissure"],
+          "box": [0.7913, 0.3623, 0.1842, 0.0386],
+          "lines": 1
+        },
+        {
+          "text": "Occipital lobe",
+          "box": [0.7913, 0.4686, 0.1801, 0.0467],
+          "lines": 1
+        },
+        {
+          "text": "Temporal lobe",
+          "box": [0.7899, 0.6006, 0.1883, 0.0451],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m14_dg02",
+      "title": "The cranial meninges",
+      "file": "m14_meninges.jpg",
+      "prompt": "Frontal section through the top of the skull at the longitudinal fissure. Work from bone inward to cortex.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Veins",
+          "near": [0.25, 0.03],
+          "box": [0.2244, 0.0039, 0.0548, 0.0447],
+          "lines": 1
+        },
+        {
+          "text": "Superior sagittal sinus",
+          "box": [0.5806, 0.0039, 0.2023, 0.0524],
+          "lines": 1
+        },
+        {
+          "text": "Bone",
+          "accept": ["Skull", "Cranial bone"],
+          "box": [0.822, 0.171, 0.055, 0.047],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Dura mater",
+          "box": [0.824, 0.2874, 0.1064, 0.0427],
+          "lines": 1
+        },
+        {
+          "text": "Subdural space",
+          "box": [0.824, 0.3495, 0.1444, 0.0505],
+          "lines": 1
+        },
+        {
+          "text": "Arachnoid mater",
+          "accept": ["Arachnoid"],
+          "box": [0.0032, 0.2971, 0.1528, 0.0427],
+          "lines": 1
+        },
+        {
+          "text": "Subarachnoid space",
+          "box": [0.0032, 0.3903, 0.1296, 0.0932],
+          "lines": 2
+        },
+        {
+          "text": "Pia mater",
+          "box": [0.0042, 0.5126, 0.0917, 0.0427],
+          "lines": 1
+        },
+        {
+          "text": "Arachnoid trabeculae",
+          "box": [0.0032, 0.5806, 0.1939, 0.0447],
+          "lines": 1
+        },
+        {
+          "text": "Cerebral vein",
+          "box": [0.0032, 0.6874, 0.1243, 0.0447],
+          "lines": 1
+        },
+        {
+          "text": "Arachnoid granulation villi",
+          "accept": ["Arachnoid granulations", "Arachnoid villi", "Arachnoid granulation"],
+          "box": [0.823, 0.4563, 0.138, 0.0913],
+          "lines": 2
+        },
+        {
+          "text": "Longitudinal fissure",
+          "box": [0.824, 0.5883, 0.176, 0.0524],
+          "lines": 1
+        },
+        {
+          "text": "Cerebral cortex",
+          "box": [0.824, 0.6641, 0.1423, 0.0447],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m14_dg03",
+      "title": "Cross section of the spinal cord",
+      "file": "m14_cord_section.jpg",
+      "prompt": "Transverse section, posterior at top. Name the gray-matter horns and white-matter columns.",
+      "region": [0, 0, 1, 0.47],
+      "labels": [
+        {
+          "text": "Posterior horn",
+          "accept": ["Dorsal horn", "Posterior gray horn"],
+          "box": [0.0073, 0.111, 0.1773, 0.0428],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Lateral horn",
+          "accept": ["Lateral gray horn"],
+          "box": [0.0073, 0.2458, 0.1255, 0.0198],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Anterior horn",
+          "accept": ["Ventral horn", "Anterior gray horn"],
+          "box": [0.0064, 0.3902, 0.1736, 0.0428],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Posterior columns",
+          "accept": ["Dorsal columns", "Posterior funiculus", "Dorsal funiculus"],
+          "box": [0.8164, 0.0769, 0.1782, 0.0428],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Lateral columns",
+          "accept": ["Lateral funiculus"],
+          "box": [0.8173, 0.1784, 0.1645, 0.0198],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Central canal",
+          "box": [0.8164, 0.2585, 0.1382, 0.0206],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Anterior columns",
+          "accept": ["Ventral columns", "Anterior funiculus", "Ventral funiculus"],
+          "box": [0.8164, 0.3624, 0.1736, 0.0428],
+          "lines": 2,
+          "manual": true
+        }
+      ]
+    },
+    {
+      "id": "m14_dg04",
+      "title": "Ventricles and CSF circulation",
+      "file": "m14_csf_flow.jpg",
+      "prompt": "Midsagittal view; arrows show CSF flow. Name the ventricles, their connections, and where CSF is reabsorbed.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Superior sagittal sinus",
+          "box": [0.0, 0.0938, 0.1324, 0.062],
+          "lines": 2
+        },
+        {
+          "text": "Choroid plexus",
+          "box": [0.0, 0.3175, 0.1221, 0.039],
+          "lines": 1
+        },
+        {
+          "text": "Interventricular foramen",
+          "accept": ["Foramen of Monro"],
+          "box": [0.0, 0.4473, 0.123, 0.062],
+          "lines": 2
+        },
+        {
+          "text": "Third ventricle",
+          "box": [0.0, 0.5426, 0.1155, 0.0332],
+          "lines": 1
+        },
+        {
+          "text": "Cerebral aqueduct",
+          "accept": ["Mesencephalic aqueduct", "Aqueduct of Sylvius"],
+          "box": [0.2911, 0.6508, 0.1521, 0.0375],
+          "lines": 1
+        },
+        {
+          "text": "Lateral aperture",
+          "accept": ["Foramen of Luschka"],
+          "box": [0.292, 0.733, 0.1305, 0.039],
+          "lines": 1
+        },
+        {
+          "text": "Fourth ventricle",
+          "box": [0.292, 0.8167, 0.1277, 0.0332],
+          "lines": 1
+        },
+        {
+          "text": "Arachnoid granulation",
+          "accept": ["Arachnoid villi", "Arachnoid granulations"],
+          "box": [0.8235, 0.1659, 0.1765, 0.0375],
+          "lines": 1
+        },
+        {
+          "text": "Subarachnoid space",
+          "box": [0.8235, 0.2323, 0.1671, 0.0375],
+          "lines": 1
+        },
+        {
+          "text": "Meningeal dura mater",
+          "accept": ["Dura mater"],
+          "box": [0.8235, 0.2987, 0.1765, 0.0375],
+          "lines": 1
+        },
+        {
+          "text": "Right lateral ventricle",
+          "accept": ["Lateral ventricle"],
+          "box": [0.8244, 0.3997, 0.17, 0.039],
+          "lines": 1
+        },
+        {
+          "text": "Median aperture",
+          "accept": ["Foramen of Magendie"],
+          "box": [0.7559, 0.7229, 0.1352, 0.0375],
+          "lines": 1
+        },
+        {
+          "text": "Central canal",
+          "box": [0.7371, 0.8629, 0.1099, 0.0332],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m14_dg05",
+      "title": "Basal nuclei",
+      "file": "m14_basal_nuclei.jpg",
+      "prompt": "Frontal (coronal) section of the cerebrum. Name the parts of the striatum and the nearby structures.",
+      "region": [0, 0, 1, 0.95],
+      "labels": [
+        {
+          "text": "Caudate",
+          "accept": ["Caudate nucleus"],
+          "box": [0.0365, 0.4, 0.1243, 0.0449],
+          "lines": 1
+        },
+        {
+          "text": "Putamen",
+          "box": [0.0365, 0.4542, 0.1301, 0.0449],
+          "lines": 1
+        },
+        {
+          "text": "Globus pallidus",
+          "box": [0.019, 0.886, 0.2178, 0.0523],
+          "lines": 1
+        },
+        {
+          "text": "Lateral ventricle",
+          "box": [0.6988, 0.2804, 0.2237, 0.0449],
+          "lines": 1
+        },
+        {
+          "text": "Corpus callosum",
+          "box": [0.8743, 0.5009, 0.1257, 0.0916],
+          "lines": 2
+        }
+      ]
+    }
   ]
 }

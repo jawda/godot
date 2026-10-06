@@ -416,5 +416,441 @@
       "items": ["A hyaline cartilage model forms", "Chondrocytes in the diaphysis enlarge, the matrix calcifies, and a bone collar forms", "Blood vessels invade and a primary ossification center forms in the diaphysis", "The medullary cavity forms and secondary ossification centers appear in the epiphyses", "Hyaline cartilage remains only as articular cartilage and epiphyseal plates"],
       "explanation": "The cartilage model comes first. Calcification in the center and the periosteal bone collar precede the invasion of vessels that creates the primary ossification center. The medullary cavity and secondary centers follow, leaving cartilage only at the joint surfaces and growth plates."
     }
+  ],
+  "diagrams": [
+    {
+      "id": "m07_dg01",
+      "title": "Parts of a long bone",
+      "file": "m07_long_bone.jpg",
+      "prompt": "A femur cut open lengthwise. Name the regions along the left and the tissues on the right.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Proximal epiphysis",
+          "box": [0.0, 0.045, 0.1182, 0.0393],
+          "lines": 2
+        },
+        {
+          "text": "Metaphysis",
+          "near": [0.07, 0.14],
+          "box": [0.0, 0.1336, 0.1423, 0.0214],
+          "lines": 1
+        },
+        {
+          "text": "Diaphysis",
+          "accept": ["Shaft"],
+          "box": [0.0, 0.5, 0.123, 0.0214],
+          "lines": 1
+        },
+        {
+          "text": "Metaphysis",
+          "near": [0.07, 0.8],
+          "box": [0.0, 0.7871, 0.1423, 0.0214],
+          "lines": 1
+        },
+        {
+          "text": "Distal epiphysis",
+          "box": [0.0, 0.9086, 0.1182, 0.0393],
+          "lines": 2
+        },
+        {
+          "text": "Articular cartilage",
+          "near": [0.89, 0.02],
+          "box": [0.7841, 0.0079, 0.2159, 0.0214],
+          "lines": 1
+        },
+        {
+          "text": "Spongy bone",
+          "accept": ["Cancellous bone", "Trabecular bone"],
+          "box": [0.6333, 0.1414, 0.1689, 0.0214],
+          "lines": 1
+        },
+        {
+          "text": "Epiphyseal line",
+          "box": [0.6345, 0.18, 0.1906, 0.0214],
+          "lines": 1
+        },
+        {
+          "text": "Red bone marrow",
+          "accept": ["Red marrow"],
+          "box": [0.6345, 0.2186, 0.2244, 0.0186],
+          "lines": 1
+        },
+        {
+          "text": "Medullary cavity",
+          "accept": ["Marrow cavity"],
+          "box": [0.6333, 0.2571, 0.2051, 0.0214],
+          "lines": 1
+        },
+        {
+          "text": "Compact bone",
+          "accept": ["Cortical bone"],
+          "box": [0.6333, 0.2936, 0.1858, 0.0214],
+          "lines": 1
+        },
+        {
+          "text": "Endosteum",
+          "box": [0.6345, 0.4593, 0.1448, 0.0179],
+          "lines": 1
+        },
+        {
+          "text": "Yellow bone marrow",
+          "accept": ["Yellow marrow"],
+          "box": [0.6321, 0.4936, 0.2557, 0.0186],
+          "lines": 1
+        },
+        {
+          "text": "Periosteum",
+          "box": [0.6345, 0.54, 0.1448, 0.0179],
+          "lines": 1
+        },
+        {
+          "text": "Nutrient artery",
+          "box": [0.6333, 0.6314, 0.1821, 0.0214],
+          "lines": 1
+        },
+        {
+          "text": "Articular cartilage",
+          "near": [0.74, 0.97],
+          "box": [0.6321, 0.955, 0.2207, 0.0214],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m07_dg02",
+      "title": "Microscopic structure of compact bone",
+      "file": "m07_compact_bone.jpg",
+      "prompt": "A wedge of compact bone from the shaft of a long bone (inset, top left), showing osteons and their canals.",
+      "region": [0, 0, 1, 0.585],
+      "labels": [
+        {
+          "text": "Compact bone",
+          "near": [0.05, 0.02],
+          "accept": ["Cortical bone"],
+          "box": [0.0, 0.0093, 0.1091, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Medullary cavity",
+          "near": [0.06, 0.05],
+          "box": [0.0, 0.0448, 0.12, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Spongy bone",
+          "near": [0.4, 0.03],
+          "accept": ["Cancellous bone"],
+          "box": [0.3482, 0.0178, 0.0991, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Periosteum",
+          "near": [0.39, 0.06],
+          "box": [0.3482, 0.0556, 0.0855, 0.017],
+          "lines": 1
+        },
+        {
+          "text": "Concentric lamellae",
+          "box": [0.6482, 0.0873, 0.1455, 0.017],
+          "lines": 1
+        },
+        {
+          "text": "Osteon",
+          "accept": ["Haversian system"],
+          "box": [0.6945, 0.1328, 0.0573, 0.0162],
+          "lines": 1
+        },
+        {
+          "text": "Lymphatic vessel",
+          "near": [0.94, 0.18],
+          "box": [0.8736, 0.1707, 0.1264, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Nerve",
+          "near": [0.9, 0.21],
+          "box": [0.8736, 0.1977, 0.0491, 0.017],
+          "lines": 1
+        },
+        {
+          "text": "Blood vessels",
+          "near": [0.93, 0.24],
+          "box": [0.8736, 0.2301, 0.1036, 0.017],
+          "lines": 1
+        },
+        {
+          "text": "Trabeculae",
+          "box": [0.8727, 0.2625, 0.0845, 0.017],
+          "lines": 1
+        },
+        {
+          "text": "Medullary cavity",
+          "match": "Medullar cavity",
+          "near": [0.93, 0.39],
+          "box": [0.8745, 0.3799, 0.1109, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Spongy bone",
+          "near": [0.87, 0.44],
+          "accept": ["Cancellous bone"],
+          "box": [0.8173, 0.4324, 0.1, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Circumferential lamellae",
+          "box": [0.1218, 0.1846, 0.1127, 0.0324],
+          "lines": 2
+        },
+        {
+          "text": "Periosteal artery",
+          "box": [0.0582, 0.2355, 0.1218, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Periosteal vein",
+          "box": [0.0582, 0.2564, 0.1082, 0.017],
+          "lines": 1
+        },
+        {
+          "text": "Periosteum",
+          "match": "Periosteum:",
+          "near": [0.05, 0.3],
+          "box": [0.0, 0.2973, 0.0964, 0.0162],
+          "lines": 1
+        },
+        {
+          "text": "Outer fibrous layer",
+          "accept": ["Fibrous layer"],
+          "box": [0.0082, 0.3135, 0.1364, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Inner osteogenic layer",
+          "accept": ["Osteogenic layer", "Cellular layer"],
+          "box": [0.0091, 0.3297, 0.1609, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Interstitial lamellae",
+          "box": [0.0536, 0.3822, 0.1373, 0.017],
+          "lines": 1
+        },
+        {
+          "text": "Perforating canal",
+          "accept": ["Volkmann's canal", "Volkmann canal"],
+          "box": [0.0536, 0.4201, 0.1236, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Central canal",
+          "accept": ["Haversian canal"],
+          "box": [0.0536, 0.4494, 0.0991, 0.017],
+          "lines": 1
+        },
+        {
+          "text": "Blood vessels",
+          "near": [0.2, 0.49],
+          "box": [0.1545, 0.4811, 0.1036, 0.017],
+          "lines": 1
+        },
+        {
+          "text": "Lymphatic vessel",
+          "near": [0.23, 0.52],
+          "box": [0.1727, 0.5058, 0.1264, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Nerve",
+          "near": [0.31, 0.54],
+          "box": [0.2891, 0.5274, 0.0491, 0.0162],
+          "lines": 1
+        },
+        {
+          "text": "Compact bone",
+          "near": [0.44, 0.55],
+          "accept": ["Cortical bone"],
+          "box": [0.3891, 0.5444, 0.1091, 0.0193],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m07_dg03",
+      "title": "Classification of bones by shape",
+      "file": "m07_bone_shapes.jpg",
+      "prompt": "Name each shape class and the example bone drawn for it.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Flat bone",
+          "box": [0.1354, 0.0026, 0.083, 0.0188],
+          "lines": 1
+        },
+        {
+          "text": "Sternum",
+          "box": [0.0385, 0.1552, 0.0771, 0.0196],
+          "lines": 1
+        },
+        {
+          "text": "Long bone",
+          "box": [0.0, 0.3095, 0.0919, 0.0222],
+          "lines": 1
+        },
+        {
+          "text": "Femur",
+          "box": [0.003, 0.5533, 0.0573, 0.0188],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Sesamoid bone",
+          "box": [0.1117, 0.711, 0.1364, 0.0196],
+          "lines": 1
+        },
+        {
+          "text": "Patella",
+          "accept": ["Kneecap"],
+          "box": [0.0474, 0.8508, 0.0623, 0.0188],
+          "lines": 1
+        },
+        {
+          "text": "Irregular bone",
+          "box": [0.7648, 0.0026, 0.1215, 0.0222],
+          "lines": 1
+        },
+        {
+          "text": "Vertebra",
+          "box": [0.8804, 0.0844, 0.0771, 0.0196],
+          "lines": 1
+        },
+        {
+          "text": "Short bones",
+          "accept": ["Short bone"],
+          "box": [0.7777, 0.4859, 0.1077, 0.0196],
+          "lines": 1
+        },
+        {
+          "text": "Lateral cuneiform",
+          "box": [0.5988, 0.6709, 0.0889, 0.0367],
+          "lines": 2
+        },
+        {
+          "text": "Intermediate cuneiform",
+          "accept": ["Middle cuneiform"],
+          "box": [0.5988, 0.746, 0.1107, 0.0367],
+          "lines": 2
+        },
+        {
+          "text": "Medial cuneiform",
+          "box": [0.5988, 0.8159, 0.0889, 0.0367],
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "id": "m07_dg04",
+      "title": "Bone cells",
+      "file": "m07_bone_cells.jpg",
+      "prompt": "The four cell types found in bone tissue. Name each cell and its job.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Osteocyte",
+          "box": [0.0, 0.8677, 0.1326, 0.0494],
+          "lines": 1
+        },
+        {
+          "text": "Maintains bone tissue",
+          "match": "(maintains bone tissue)",
+          "box": [0.0, 0.9118, 0.1475, 0.0882],
+          "lines": 2
+        },
+        {
+          "text": "Osteoblast",
+          "near": [0.27, 0.89],
+          "box": [0.2007, 0.8677, 0.1425, 0.0441],
+          "lines": 1
+        },
+        {
+          "text": "Forms bone matrix",
+          "match": "(forms bone matrix)",
+          "box": [0.2007, 0.9118, 0.2317, 0.0511],
+          "lines": 1
+        },
+        {
+          "text": "Osteogenic cell",
+          "accept": ["Osteoprogenitor cell", "Osteogenic"],
+          "box": [0.513, 0.8677, 0.1983, 0.0511],
+          "lines": 1
+        },
+        {
+          "text": "Stem cell",
+          "match": "(stem cell)",
+          "box": [0.513, 0.9118, 0.1264, 0.0511],
+          "lines": 1
+        },
+        {
+          "text": "Osteoclast",
+          "near": [0.87, 0.89],
+          "box": [0.798, 0.8677, 0.1413, 0.0441],
+          "lines": 1
+        },
+        {
+          "text": "Resorbs bone",
+          "match": "(resorbs bone)",
+          "accept": ["Breaks down bone"],
+          "box": [0.798, 0.9118, 0.176, 0.0511],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m07_dg05",
+      "title": "Stages of fracture repair",
+      "file": "m07_fracture_repair.jpg",
+      "prompt": "A fractured femur healing in four stages, shown left to right.",
+      "region": [0, 0, 1, 0.93],
+      "labels": [
+        {
+          "text": "Hematoma",
+          "accept": ["Fracture hematoma"],
+          "box": [0.1786, 0.0375, 0.11, 0.0625],
+          "lines": 1
+        },
+        {
+          "text": "Internal callus",
+          "box": [0.2355, 0.63, 0.0782, 0.1275],
+          "lines": 2
+        },
+        {
+          "text": "New blood vessels",
+          "box": [0.3263, 0.0375, 0.1824, 0.0625],
+          "lines": 1
+        },
+        {
+          "text": "External callus",
+          "box": [0.4643, 0.165, 0.0849, 0.1275],
+          "lines": 2
+        },
+        {
+          "text": "Spongy bone trabecula",
+          "box": [0.3687, 0.7825, 0.1332, 0.1275],
+          "lines": 2
+        },
+        {
+          "text": "Healed fracture",
+          "box": [0.6988, 0.165, 0.0801, 0.1275],
+          "lines": 2
+        },
+        {
+          "text": "Bony callus of spongy bone",
+          "accept": ["Bony callus", "Hard callus"],
+          "box": [0.5917, 0.7825, 0.1525, 0.14],
+          "lines": 2
+        }
+      ]
+    }
   ]
 }

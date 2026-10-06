@@ -410,5 +410,723 @@
       "answer": true,
       "explanation": "Descriptions are always from the patient's point of view in anatomical position. When you face a patient, their right side is on your left, which is why anatomy diagrams can look reversed."
     }
+  ],
+  "diagrams": [
+    {
+      "id": "m01_dg01",
+      "title": "Body cavities",
+      "file": "m01_cavities.jpg",
+      "prompt": "Lateral view (left) and anterior view (right) of the body cavities; name each cavity and the structure that separates them.",
+      "region": [0, 0, 1, 0.94],
+      "labels": [
+        {
+          "text": "Cranial cavity",
+          "near": [0.11, 0.12],
+          "box": [0.0836, 0.0628, 0.0673, 0.0785],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Cranial cavity",
+          "near": [0.775, 0.09],
+          "box": [0.7491, 0.0628, 0.0673, 0.0785],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Vertebral cavity",
+          "accept": ["Spinal cavity"],
+          "near": [0.12, 0.615],
+          "box": [0.0845, 0.5573, 0.0782, 0.0738],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Vertebral cavity",
+          "accept": ["Spinal cavity"],
+          "near": [0.78, 0.2],
+          "box": [0.7491, 0.1727, 0.0818, 0.0785],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Dorsal body cavity",
+          "accept": ["Dorsal cavity", "Posterior body cavity"],
+          "box": [0.0, 0.3108, 0.0545, 0.1099],
+          "lines": 3,
+          "manual": true
+        },
+        {
+          "text": "Thoracic cavity",
+          "box": [0.3327, 0.281, 0.1273, 0.0392],
+          "lines": 1
+        },
+        {
+          "text": "Superior mediastinum",
+          "box": [0.3473, 0.3155, 0.1055, 0.0691],
+          "lines": 2
+        },
+        {
+          "text": "Pleural cavity",
+          "box": [0.3482, 0.3799, 0.1009, 0.0392],
+          "lines": 1
+        },
+        {
+          "text": "Pericardial cavity",
+          "match": "Pericardial cavity within the mediastinum",
+          "box": [0.3491, 0.4129, 0.1318, 0.1036],
+          "lines": 3
+        },
+        {
+          "text": "Diaphragm",
+          "box": [0.3645, 0.5306, 0.0836, 0.0392],
+          "lines": 1
+        },
+        {
+          "text": "Abdominal cavity",
+          "box": [0.34, 0.6829, 0.1382, 0.0408],
+          "lines": 1
+        },
+        {
+          "text": "Pelvic cavity",
+          "near": [0.39, 0.85],
+          "box": [0.3427, 0.8257, 0.1018, 0.0392],
+          "lines": 1
+        },
+        {
+          "text": "Abdominopelvic cavity",
+          "match": "Abdomino pelvic cavity",
+          "box": [0.7545, 0.6939, 0.0909, 0.1099],
+          "lines": 3,
+          "manual": true
+        },
+        {
+          "text": "Ventral body cavity",
+          "match": "Ventral body cavity both thoracic and abdominopelvic cavities",
+          "accept": ["Ventral cavity", "Anterior body cavity"],
+          "box": [0.8655, 0.5651, 0.1345, 0.1805],
+          "lines": 5,
+          "manual": true
+        }
+      ]
+    },
+    {
+      "id": "m01_dg02",
+      "title": "Directional terms",
+      "file": "m01_directional.jpg",
+      "prompt": "Lateral view (left) and anterior view (right) of a body in anatomical position; name each directional term.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Superior",
+          "box": [0.4109, 0.0179, 0.0873, 0.0278],
+          "lines": 1
+        },
+        {
+          "text": "Inferior",
+          "box": [0.4191, 0.9705, 0.0718, 0.0233],
+          "lines": 1
+        },
+        {
+          "text": "Cranial",
+          "accept": ["Cephalic"],
+          "box": [0.0836, 0.0627, 0.0736, 0.0233],
+          "lines": 1
+        },
+        {
+          "text": "Caudal",
+          "box": [0.0818, 0.4718, 0.0727, 0.0233],
+          "lines": 1
+        },
+        {
+          "text": "Posterior",
+          "match": "Posterior or dorsal",
+          "accept": ["Dorsal"],
+          "box": [0.0, 0.2569, 0.09, 0.0483],
+          "lines": 2
+        },
+        {
+          "text": "Anterior",
+          "match": "Anterior or ventral",
+          "accept": ["Ventral"],
+          "box": [0.3409, 0.2569, 0.1064, 0.0483],
+          "lines": 2
+        },
+        {
+          "text": "Right",
+          "box": [0.6127, 0.0609, 0.0555, 0.0278],
+          "lines": 1
+        },
+        {
+          "text": "Left",
+          "box": [0.7955, 0.0609, 0.0409, 0.0242],
+          "lines": 1
+        },
+        {
+          "text": "Medial",
+          "box": [0.6991, 0.3635, 0.0673, 0.0233],
+          "lines": 1
+        },
+        {
+          "text": "Lateral",
+          "box": [0.4564, 0.4029, 0.07, 0.0233],
+          "lines": 1
+        },
+        {
+          "text": "Proximal",
+          "near": [0.5, 0.49],
+          "box": [0.4573, 0.4816, 0.0873, 0.0233],
+          "lines": 1
+        },
+        {
+          "text": "Proximal",
+          "near": [0.96, 0.22],
+          "box": [0.9145, 0.205, 0.0855, 0.0233],
+          "lines": 1
+        },
+        {
+          "text": "Distal",
+          "near": [0.59, 0.93],
+          "box": [0.5645, 0.9194, 0.0582, 0.0242],
+          "lines": 1
+        },
+        {
+          "text": "Distal",
+          "near": [0.97, 0.565],
+          "box": [0.9445, 0.5533, 0.0555, 0.0233],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m01_dg03",
+      "title": "Anatomical planes",
+      "file": "m01_planes.jpg",
+      "prompt": "A body in anatomical position cut by the four planes; name each plane.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Sagittal plane",
+          "accept": ["Sagittal"],
+          "box": [0.0164, 0.0151, 0.1164, 0.0789],
+          "lines": 2
+        },
+        {
+          "text": "Frontal plane",
+          "match": "Frontal (coronal) plane",
+          "accept": ["Coronal plane", "Frontal", "Coronal"],
+          "box": [0.8309, 0.0691, 0.1373, 0.117],
+          "lines": 3
+        },
+        {
+          "text": "Transverse plane",
+          "accept": ["Horizontal plane", "Transverse"],
+          "box": [0.83, 0.2899, 0.17, 0.078],
+          "lines": 2
+        },
+        {
+          "text": "Oblique plane",
+          "accept": ["Oblique"],
+          "box": [0.7073, 0.7181, 0.2127, 0.039],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m01_dg04",
+      "title": "Abdominopelvic regions and quadrants",
+      "file": "m01_regions_quadrants.jpg",
+      "prompt": "Anterior view of the abdomen: nine regions on the left, four quadrants on the right.",
+      "region": [0, 0, 1, 0.94],
+      "labels": [
+        {
+          "text": "Right hypochondriac region",
+          "accept": ["Right hypochondriac"],
+          "box": [0.0573, 0.2482, 0.1164, 0.1162],
+          "lines": 3
+        },
+        {
+          "text": "Epigastric region",
+          "accept": ["Epigastric"],
+          "box": [0.2073, 0.2658, 0.08, 0.0792],
+          "lines": 2
+        },
+        {
+          "text": "Left hypochondriac region",
+          "match": "hypochondriac region",
+          "accept": ["Left hypochondriac"],
+          "near": [0.38, 0.32],
+          "box": [0.318, 0.245, 0.122, 0.125],
+          "lines": 3,
+          "manual": true
+        },
+        {
+          "text": "Right lumbar region",
+          "match": "Right lumbar Y region",
+          "accept": ["Right lumbar"],
+          "box": [0.1045, 0.4912, 0.0636, 0.1144],
+          "lines": 3
+        },
+        {
+          "text": "Umbilical region",
+          "accept": ["Umbilical"],
+          "box": [0.21, 0.507, 0.0745, 0.0792],
+          "lines": 2
+        },
+        {
+          "text": "Left lumbar region",
+          "match": "lumbar region",
+          "accept": ["Left lumbar"],
+          "near": [0.36, 0.56],
+          "box": [0.328, 0.49, 0.065, 0.118],
+          "lines": 3,
+          "manual": true
+        },
+        {
+          "text": "Right iliac region",
+          "accept": ["Right iliac", "Right inguinal region"],
+          "box": [0.1064, 0.7183, 0.0527, 0.1144],
+          "lines": 3
+        },
+        {
+          "text": "Hypogastric region",
+          "accept": ["Hypogastric", "Pubic region"],
+          "box": [0.2, 0.7342, 0.0945, 0.0792],
+          "lines": 2
+        },
+        {
+          "text": "Left iliac region",
+          "match": "iliac region",
+          "accept": ["Left iliac", "Left inguinal region"],
+          "near": [0.36, 0.79],
+          "box": [0.33, 0.715, 0.062, 0.12],
+          "lines": 3,
+          "manual": true
+        },
+        {
+          "text": "Diaphragm",
+          "box": [0.44, 0.205, 0.095, 0.06],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Right upper quadrant",
+          "match": "Right upper quadrant (RUQ)",
+          "accept": ["RUQ"],
+          "box": [0.6373, 0.3891, 0.0936, 0.1144],
+          "lines": 3
+        },
+        {
+          "text": "Left upper quadrant",
+          "match": "Left upper quadrant LUO",
+          "accept": ["LUQ"],
+          "box": [0.7755, 0.3891, 0.0818, 0.1162],
+          "lines": 3
+        },
+        {
+          "text": "Right lower quadrant",
+          "match": "Right lower quadrant (RLQ)",
+          "accept": ["RLQ"],
+          "box": [0.6391, 0.5616, 0.09, 0.1144],
+          "lines": 3
+        },
+        {
+          "text": "Left lower quadrant",
+          "match": "Left lower quadrant (LLQ)",
+          "accept": ["LLQ"],
+          "box": [0.7764, 0.5616, 0.0791, 0.1144],
+          "lines": 3
+        }
+      ]
+    },
+    {
+      "id": "m01_dg05",
+      "title": "Regional terms: head, trunk and arm",
+      "file": "m01_regional_terms.jpg",
+      "prompt": "Anterior view, upper body; give the adjective for each region (the Latin or common name is also accepted).",
+      "region": [0, 0, 0.49, 0.53],
+      "labels": [
+        {
+          "text": "Frontal",
+          "match": "Frons or forehead (frontal)",
+          "accept": ["Frons", "Forehead"],
+          "box": [0.0309, 0.0, 0.1755, 0.0217],
+          "lines": 1
+        },
+        {
+          "text": "Cranial",
+          "match": "Cranium or skull (cranial)",
+          "accept": ["Cranium", "Skull"],
+          "box": [0.1227, 0.03, 0.0645, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Facial",
+          "match": "Facies or face (facial)",
+          "accept": ["Facies", "Face"],
+          "box": [0.1227, 0.095, 0.0518, 0.0579],
+          "lines": 3
+        },
+        {
+          "text": "Oral",
+          "match": "Oris or mouth (oral)",
+          "accept": ["Oris", "Mouth"],
+          "box": [0.0, 0.1632, 0.1291, 0.0238],
+          "lines": 1
+        },
+        {
+          "text": "Mental",
+          "match": "Mentis or chin (mental)",
+          "accept": ["Mentis", "Chin"],
+          "box": [0.0, 0.1942, 0.0945, 0.0403],
+          "lines": 2
+        },
+        {
+          "text": "Axillary",
+          "match": "Axilla or armpit (axillary)",
+          "accept": ["Axilla", "Armpit"],
+          "box": [0.0, 0.2407, 0.1018, 0.0413],
+          "lines": 2
+        },
+        {
+          "text": "Brachial",
+          "match": "Brachium or arm (brachial)",
+          "accept": ["Brachium", "Arm"],
+          "box": [0.0, 0.2913, 0.0909, 0.0403],
+          "lines": 2
+        },
+        {
+          "text": "Antecubital",
+          "match": "Antecubitis or front of elbow (antecubital)",
+          "accept": ["Antecubitis", "Front of elbow"],
+          "box": [0.0, 0.3378, 0.1055, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Antebrachial",
+          "match": "Antebrachium or forearm (antebrachial)",
+          "accept": ["Antebrachium", "Forearm"],
+          "box": [0.0, 0.4039, 0.0991, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Carpal",
+          "match": "Carpus or wrist (carpal)",
+          "accept": ["Carpus", "Wrist"],
+          "box": [0.0, 0.4659, 0.0527, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Orbital",
+          "match": "Oculus or eye (orbital or ocular)",
+          "accept": ["Ocular", "Oculus", "Eye"],
+          "box": [0.3164, 0.0, 0.1127, 0.0393],
+          "lines": 2
+        },
+        {
+          "text": "Buccal",
+          "match": "Bucca or cheek (buccal)",
+          "accept": ["Bucca", "Cheek"],
+          "box": [0.3164, 0.0568, 0.1609, 0.0248],
+          "lines": 1
+        },
+        {
+          "text": "Otic",
+          "match": "Auris or ear (otic)",
+          "accept": ["Auris", "Ear"],
+          "box": [0.3155, 0.093, 0.12, 0.0248],
+          "lines": 1
+        },
+        {
+          "text": "Nasal",
+          "match": "Nasus or nose (nasal)",
+          "accept": ["Nasus", "Nose"],
+          "box": [0.3164, 0.1188, 0.1473, 0.0238],
+          "lines": 1
+        },
+        {
+          "text": "Cervical",
+          "match": "Cervicis or neck (cervical)",
+          "accept": ["Cervicis", "Neck"],
+          "box": [0.3155, 0.1519, 0.1736, 0.0248],
+          "lines": 1
+        },
+        {
+          "text": "Thoracic",
+          "match": "Thorcis or thorax, chest (thoracic)",
+          "accept": ["Thoracis", "Thorax", "Chest"],
+          "box": [0.3964, 0.1942, 0.0927, 0.0579],
+          "lines": 3
+        },
+        {
+          "text": "Mammary",
+          "match": "Mamma or breast (mammary)",
+          "accept": ["Mamma", "Breast"],
+          "box": [0.3973, 0.2593, 0.0791, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Abdominal",
+          "match": "Abdomen (abdominal)",
+          "accept": ["Abdomen"],
+          "box": [0.3973, 0.3254, 0.0809, 0.0413],
+          "lines": 2
+        },
+        {
+          "text": "Umbilical",
+          "match": "Umbilicus or navel (umbilical)",
+          "accept": ["Umbilicus", "Navel"],
+          "box": [0.3973, 0.374, 0.0745, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Coxal",
+          "match": "Hip (coxal)",
+          "accept": ["Hip"],
+          "box": [0.3973, 0.437, 0.0491, 0.0413],
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "id": "m01_dg06",
+      "title": "Regional terms: hand, leg and foot",
+      "file": "m01_regional_terms.jpg",
+      "prompt": "Anterior view, lower body and hand; give the adjective for each region (the Latin or common name is also accepted).",
+      "region": [0, 0.53, 0.49, 0.445],
+      "labels": [
+        {
+          "text": "Pollex",
+          "match": "Pollex or thumb",
+          "accept": ["Thumb"],
+          "box": [0.0, 0.5341, 0.06, 0.0382],
+          "lines": 2
+        },
+        {
+          "text": "Palmar",
+          "match": "Palma or palm (palmar)",
+          "accept": ["Palma", "Palm"],
+          "box": [0.0, 0.5775, 0.0909, 0.0413],
+          "lines": 2
+        },
+        {
+          "text": "Digital",
+          "match": "Digits (phalanges) or fingers (digital or phalangeal)",
+          "accept": ["Phalangeal", "Digits", "Phalanges", "Fingers"],
+          "near": [0.06, 0.655],
+          "box": [0.0, 0.625, 0.1264, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Patellar",
+          "match": "Patella or kneecap (patellar)",
+          "accept": ["Patella", "Kneecap"],
+          "box": [0.0709, 0.6787, 0.0691, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Crural",
+          "match": "Crus or leg (crural)",
+          "accept": ["Crus", "Leg"],
+          "box": [0.0709, 0.75, 0.0736, 0.0424],
+          "lines": 2
+        },
+        {
+          "text": "Tarsal",
+          "match": "Tarsus or ankle (tarsal)",
+          "accept": ["Tarsus", "Ankle"],
+          "box": [0.07, 0.8027, 0.0582, 0.0579],
+          "lines": 3
+        },
+        {
+          "text": "Digital",
+          "match": "Digits (phalanges) or toes (digital or phalangeal)",
+          "accept": ["Phalangeal", "Digits", "Phalanges", "Toes"],
+          "near": [0.06, 0.895],
+          "box": [0.0, 0.8657, 0.1264, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Hallux",
+          "match": "Hallux or great toe",
+          "accept": ["Great toe"],
+          "box": [0.0609, 0.9483, 0.1255, 0.0248],
+          "lines": 1
+        },
+        {
+          "text": "Pelvic",
+          "match": "Pelvis (pelvic)",
+          "accept": ["Pelvis"],
+          "box": [0.4282, 0.5382, 0.0518, 0.0413],
+          "lines": 2
+        },
+        {
+          "text": "Inguinal",
+          "match": "Inguen or groin (inguinal)",
+          "accept": ["Inguen", "Groin"],
+          "box": [0.3536, 0.5899, 0.1109, 0.0413],
+          "lines": 2
+        },
+        {
+          "text": "Pubic",
+          "match": "Pubis (pubic)",
+          "accept": ["Pubis"],
+          "box": [0.3536, 0.657, 0.05, 0.0413],
+          "lines": 2
+        },
+        {
+          "text": "Femoral",
+          "match": "Femur or thigh (femoral)",
+          "accept": ["Femur", "Thigh"],
+          "box": [0.3536, 0.7066, 0.0636, 0.0579],
+          "lines": 3
+        },
+        {
+          "text": "Pedal",
+          "match": "Pes or foot (pedal)",
+          "accept": ["Pes", "Foot"],
+          "box": [0.3482, 0.8833, 0.0755, 0.0413],
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "id": "m01_dg07",
+      "title": "Regional terms: posterior view",
+      "file": "m01_regional_terms.jpg",
+      "prompt": "Posterior view; give the adjective for each region (the Latin or common name is also accepted), or name the body division.",
+      "region": [0.49, 0, 0.51, 0.975],
+      "labels": [
+        {
+          "text": "Cephalic",
+          "match": "Cephalon or head (cephalic)",
+          "accept": ["Cephalon", "Head"],
+          "box": [0.8418, 0.0651, 0.1227, 0.0424],
+          "lines": 2
+        },
+        {
+          "text": "Cervical",
+          "match": "Cervicis or neck (cervical)",
+          "accept": ["Cervicis", "Neck"],
+          "box": [0.8409, 0.1436, 0.1127, 0.0413],
+          "lines": 2
+        },
+        {
+          "text": "Acromial",
+          "match": "Shoulder (acromial)",
+          "accept": ["Shoulder"],
+          "box": [0.6191, 0.0909, 0.0691, 0.0413],
+          "lines": 2
+        },
+        {
+          "text": "Dorsal",
+          "match": "Dorsum or back (dorsal)",
+          "accept": ["Dorsum", "Back"],
+          "box": [0.5482, 0.1426, 0.0609, 0.0579],
+          "lines": 3
+        },
+        {
+          "text": "Brachial",
+          "match": "Brachium or arm (brachial)",
+          "accept": ["Brachium", "Arm"],
+          "box": [0.5482, 0.2035, 0.0727, 0.0579],
+          "lines": 3
+        },
+        {
+          "text": "Olecranal",
+          "match": "Olecranon or back of elbow (olecranal)",
+          "accept": ["Olecranon", "Back of elbow"],
+          "box": [0.5482, 0.2634, 0.0773, 0.0764],
+          "lines": 4
+        },
+        {
+          "text": "Lumbar",
+          "match": "Lumbus or loin (lumbar)",
+          "accept": ["Lumbus", "Loin"],
+          "box": [0.5482, 0.3419, 0.0627, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Sacral",
+          "match": "Sacrum (sacral)",
+          "accept": ["Sacrum"],
+          "box": [0.5482, 0.4029, 0.0582, 0.0413],
+          "lines": 2
+        },
+        {
+          "text": "Antebrachial",
+          "match": "Antebrachium or forearm (antebrachial)",
+          "accept": ["Antebrachium", "Forearm"],
+          "box": [0.4891, 0.4463, 0.1018, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Manual",
+          "match": "Manus or hand (manual)",
+          "accept": ["Manus", "Hand"],
+          "box": [0.5191, 0.5165, 0.0618, 0.0579],
+          "lines": 3
+        },
+        {
+          "text": "Gluteal",
+          "match": "Gluteus or buttock (gluteal)",
+          "accept": ["Gluteus", "Buttock"],
+          "box": [0.5682, 0.5868, 0.0691, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Femoral",
+          "match": "Femur or thigh (femoral)",
+          "accept": ["Femur", "Thigh"],
+          "box": [0.5673, 0.6477, 0.0636, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Popliteal",
+          "match": "Popliteus or back of knee (popliteal)",
+          "accept": ["Popliteus", "Back of knee"],
+          "box": [0.5682, 0.7118, 0.0873, 0.0579],
+          "lines": 3
+        },
+        {
+          "text": "Sural",
+          "match": "Sura or calf (sural)",
+          "accept": ["Sura", "Calf"],
+          "box": [0.5682, 0.7696, 0.0464, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Calcaneal",
+          "match": "Calcaneus or heel of foot (calcaneal)",
+          "accept": ["Calcaneus", "Heel"],
+          "box": [0.5682, 0.8326, 0.0945, 0.0589],
+          "lines": 3
+        },
+        {
+          "text": "Plantar",
+          "match": "Planta or sole of foot (plantar)",
+          "accept": ["Planta", "Sole"],
+          "box": [0.5682, 0.905, 0.1027, 0.0413],
+          "lines": 2
+        },
+        {
+          "text": "Upper limb",
+          "accept": ["Upper extremity"],
+          "box": [0.9564, 0.3802, 0.0436, 0.0382],
+          "lines": 2
+        },
+        {
+          "text": "Lower limb",
+          "accept": ["Lower extremity"],
+          "box": [0.87, 0.7056, 0.0482, 0.0382],
+          "lines": 2
+        },
+        {
+          "text": "Trunk",
+          "box": [0.4945, 0.3192, 0.0455, 0.0207],
+          "lines": 1
+        }
+      ]
+    }
   ]
 }

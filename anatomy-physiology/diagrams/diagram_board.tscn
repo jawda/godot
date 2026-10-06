@@ -1,0 +1,45 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://diagrams/diagram_board.gd" id="1_board"]
+
+[node name="DiagramBoard" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_board")
+
+[node name="Canvas" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Centering" type="CenterContainer" parent="Canvas"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Stage" type="Control" parent="Canvas/Centering"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Picture" type="TextureRect" parent="Canvas/Centering/Stage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Blanks" type="Control" parent="Canvas/Centering/Stage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

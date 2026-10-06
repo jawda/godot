@@ -633,5 +633,178 @@
       ],
       "explanation": "The receptor detects the stimulus, the sensory neuron carries it in, the interneuron integrates it, the motor neuron carries the command out, and the effector responds. Monosynaptic reflexes such as the knee-jerk skip the interneuron."
     }
+  ],
+  "diagrams": [
+    {
+      "id": "m13_dg01",
+      "title": "Parts of a neuron",
+      "file": "m13_neuron_parts.jpg",
+      "prompt": "A multipolar neuron in the CNS. Trace the signal from dendrites to synapse.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Cell body",
+          "match": "Cell body (soma)",
+          "accept": ["Soma"],
+          "box": [0.5067, 0.029, 0.1988, 0.0507],
+          "lines": 1
+        },
+        {
+          "text": "Cell membrane",
+          "box": [0.0061, 0.2446, 0.1794, 0.0435],
+          "lines": 1
+        },
+        {
+          "text": "Dendrites",
+          "box": [0.0061, 0.3623, 0.1164, 0.0435],
+          "lines": 1
+        },
+        {
+          "text": "Axon",
+          "box": [0.6291, 0.1667, 0.0667, 0.0435],
+          "lines": 1
+        },
+        {
+          "text": "Oligodendrocyte",
+          "box": [0.8121, 0.1667, 0.1879, 0.0507],
+          "lines": 1
+        },
+        {
+          "text": "Node of Ranvier",
+          "accept": ["Myelin sheath gap"],
+          "box": [0.5782, 0.5562, 0.1903, 0.0435],
+          "lines": 1
+        },
+        {
+          "text": "Myelin sheath",
+          "box": [0.5782, 0.6413, 0.1624, 0.0507],
+          "lines": 1
+        },
+        {
+          "text": "Synapse",
+          "box": [0.577, 0.8949, 0.1067, 0.0525],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m13_dg02",
+      "title": "The chemical synapse",
+      "file": "m13_synapse.jpg",
+      "prompt": "Enlarged view of an axon terminal meeting the next neuron. Name each side of the synapse and its parts.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Presynaptic neuron",
+          "box": [0.404, 0.0957, 0.1841, 0.0301],
+          "lines": 1
+        },
+        {
+          "text": "Axon terminal",
+          "accept": ["Synaptic knob", "Synaptic end bulb", "Synaptic terminal"],
+          "box": [0.7781, 0.343, 0.1333, 0.0258],
+          "lines": 1
+        },
+        {
+          "text": "Synaptic vesicles",
+          "box": [0.8697, 0.4387, 0.0866, 0.0527],
+          "lines": 2
+        },
+        {
+          "text": "Neurotransmitters",
+          "near": [0.27, 0.51],
+          "box": [0.1801, 0.4957, 0.1711, 0.0258],
+          "lines": 1
+        },
+        {
+          "text": "Ligand-gated channels",
+          "match": "Ligand-gated channels with receptors for neurotransmitters",
+          "accept": ["Ligand gated channels", "Neurotransmitter receptors", "Receptors"],
+          "box": [0.0358, 0.6882, 0.2169, 0.0796],
+          "lines": 3
+        },
+        {
+          "text": "Synaptic cleft",
+          "box": [0.8965, 0.6559, 0.0876, 0.0527],
+          "lines": 2
+        },
+        {
+          "text": "Postsynaptic neuron",
+          "box": [0.4199, 0.8355, 0.193, 0.0301],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m13_dg03",
+      "title": "Glial cells of the CNS",
+      "file": "m13_cns_glia.jpg",
+      "prompt": "Neuroglia surrounding CNS neurons (yellow). Identify each glial cell type.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Microglial cell",
+          "accept": ["Microglia"],
+          "box": [0.0109, 0.033, 0.1576, 0.044],
+          "lines": 1
+        },
+        {
+          "text": "Astrocyte",
+          "box": [0.0097, 0.2684, 0.1139, 0.044],
+          "lines": 1
+        },
+        {
+          "text": "Ependymal cells",
+          "box": [0.3358, 0.9529, 0.1915, 0.044],
+          "lines": 1
+        },
+        {
+          "text": "Oligodendrocytes",
+          "box": [0.7964, 0.9513, 0.2036, 0.0455],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m13_dg04",
+      "title": "Central and peripheral nervous system",
+      "file": "m13_cns_pns.jpg",
+      "prompt": "Anterior view of the body. Name the two divisions and the organs that belong to each.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Central nervous system",
+          "accept": ["CNS"],
+          "box": [0.7099, 0.0145, 0.2901, 0.0368],
+          "lines": 1
+        },
+        {
+          "text": "Brain",
+          "box": [0.7111, 0.0697, 0.0642, 0.0316],
+          "lines": 1
+        },
+        {
+          "text": "Spinal cord",
+          "box": [0.7087, 0.1816, 0.132, 0.0368],
+          "lines": 1
+        },
+        {
+          "text": "Peripheral nervous system",
+          "accept": ["PNS"],
+          "box": [0.0, 0.375, 0.3246, 0.0382],
+          "lines": 1
+        },
+        {
+          "text": "Ganglion",
+          "box": [0.1546, 0.4303, 0.1058, 0.0382],
+          "lines": 1
+        },
+        {
+          "text": "Nerve",
+          "box": [0.1546, 0.5447, 0.0737, 0.0316],
+          "lines": 1
+        }
+      ]
+    }
   ]
 }

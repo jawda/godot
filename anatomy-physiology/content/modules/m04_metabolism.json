@@ -667,5 +667,400 @@
       "answer": true,
       "explanation": "It is a missense mutation: glutamic acid is replaced by valine in the beta chain of hemoglobin. This one change alters how hemoglobin molecules behave at low oxygen, deforming red blood cells."
     }
+  ],
+  "diagrams": [
+    {
+      "id": "m04_dg01",
+      "title": "Structure of a mitochondrion",
+      "file": "m04_mitochondrion.jpg",
+      "prompt": "A mitochondrion cut open (left) and in an electron micrograph (right); name each part.",
+      "region": [0, 0, 1, 0.94],
+      "labels": [
+        {
+          "text": "Intermembrane space",
+          "near": [0.12, 0.12],
+          "box": [0.0391, 0.0902, 0.1691, 0.0533],
+          "lines": 1
+        },
+        {
+          "text": "Intermembrane space",
+          "near": [0.48, 0.6],
+          "box": [0.3936, 0.5758, 0.1691, 0.0533],
+          "lines": 1
+        },
+        {
+          "text": "Cristae",
+          "accept": ["Crista"],
+          "box": [0.0027, 0.2787, 0.0591, 0.0451],
+          "lines": 1
+        },
+        {
+          "text": "Inner membrane",
+          "accept": ["Inner mitochondrial membrane"],
+          "box": [0.3855, 0.6496, 0.1282, 0.0451],
+          "lines": 1
+        },
+        {
+          "text": "Outer membrane",
+          "accept": ["Outer mitochondrial membrane"],
+          "box": [0.3464, 0.7193, 0.1336, 0.0471],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m04_dg02",
+      "title": "DNA replication",
+      "file": "m04_dna_replication.jpg",
+      "prompt": "A DNA molecule unwinding and being copied; name each structure and enzyme.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Chromosome",
+          "box": [0.1099, 0.0099, 0.1465, 0.0455],
+          "lines": 1
+        },
+        {
+          "text": "Free nucleotides",
+          "accept": ["Nucleotides"],
+          "box": [0.3407, 0.0909, 0.1758, 0.0435],
+          "lines": 1
+        },
+        {
+          "text": "DNA polymerase",
+          "near": [0.79, 0.12],
+          "box": [0.7021, 0.0929, 0.1807, 0.0514],
+          "lines": 1
+        },
+        {
+          "text": "DNA polymerase",
+          "near": [0.5, 0.98],
+          "box": [0.4078, 0.9526, 0.1819, 0.0474],
+          "lines": 1
+        },
+        {
+          "text": "Leading strand",
+          "box": [0.7888, 0.4111, 0.1587, 0.0534],
+          "lines": 1
+        },
+        {
+          "text": "Helicase",
+          "accept": ["DNA helicase"],
+          "box": [0.5397, 0.5099, 0.0965, 0.0455],
+          "lines": 1
+        },
+        {
+          "text": "Lagging strand",
+          "box": [0.514, 0.587, 0.0916, 0.085],
+          "lines": 2
+        },
+        {
+          "text": "Replication fork",
+          "box": [0.2039, 0.6877, 0.1209, 0.087],
+          "lines": 2
+        },
+        {
+          "text": "Original DNA",
+          "match": "Original (template) DNA",
+          "accept": ["Template DNA", "Parental DNA", "Original template DNA"],
+          "near": [0.05, 0.585],
+          "box": [0.0, 0.5217, 0.1111, 0.1265],
+          "lines": 3
+        },
+        {
+          "text": "Template strand",
+          "match": "Original (template) DNA strand",
+          "accept": [
+            "Original DNA strand",
+            "Template DNA strand",
+            "Parental strand",
+            "Original template DNA strand"
+          ],
+          "box": [0.6789, 0.9526, 0.3211, 0.0474],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m04_dg03",
+      "title": "Translation at the ribosome",
+      "file": "m04_translation.jpg",
+      "prompt": "Three steps of translation from top to bottom; name each labeled molecule or part.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Large ribosomal subunit",
+          "box": [0.0081, 0.0, 0.2568, 0.0393],
+          "lines": 2
+        },
+        {
+          "text": "Small ribosomal subunit",
+          "box": [0.0081, 0.3114, 0.2554, 0.04],
+          "lines": 2
+        },
+        {
+          "text": "mRNA",
+          "accept": ["Messenger RNA"],
+          "near": [0.12, 0.28],
+          "box": [0.0635, 0.2679, 0.1108, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Codon",
+          "box": [0.6419, 0.285, 0.1095, 0.02],
+          "lines": 1
+        },
+        {
+          "text": "Amino acid",
+          "box": [0.8973, 0.0836, 0.1027, 0.04],
+          "lines": 2
+        },
+        {
+          "text": "tRNA",
+          "accept": ["Transfer RNA"],
+          "near": [0.95, 0.17],
+          "box": [0.9081, 0.1557, 0.0919, 0.02],
+          "lines": 1
+        },
+        {
+          "text": "Anticodon",
+          "box": [0.8365, 0.1929, 0.1622, 0.0193],
+          "lines": 1
+        },
+        {
+          "text": "Polypeptide chain",
+          "accept": ["Polypeptide", "Protein"],
+          "box": [0.5905, 0.7157, 0.2797, 0.0236],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m04_dg04",
+      "title": "Stages of cellular respiration",
+      "file": "m04_cellular_respiration.jpg",
+      "prompt": "The four stages of glucose breakdown, top to bottom, with where each happens on the right; name each stage, molecule and location.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Glycolysis",
+          "box": [0.0157, 0.0061, 0.099, 0.0237],
+          "lines": 1
+        },
+        {
+          "text": "Glucose",
+          "near": [0.58, 0.033],
+          "box": [0.5422, 0.0228, 0.0745, 0.0202],
+          "lines": 1
+        },
+        {
+          "text": "Pyruvate molecules",
+          "accept": ["Pyruvate", "Pyruvic acid"],
+          "box": [0.4363, 0.1449, 0.0892, 0.0378],
+          "lines": 2
+        },
+        {
+          "text": "Transformation of pyruvate into acetyl CoA",
+          "accept": [
+            "Pyruvate oxidation",
+            "Transition reaction",
+            "Link reaction",
+            "Formation of acetyl CoA",
+            "Acetyl CoA formation"
+          ],
+          "box": [0.0147, 0.2397, 0.2461, 0.0413],
+          "lines": 2
+        },
+        {
+          "text": "Pyruvate",
+          "accept": ["Pyruvic acid"],
+          "near": [0.42, 0.32],
+          "box": [0.3775, 0.309, 0.0784, 0.0237],
+          "lines": 1
+        },
+        {
+          "text": "Acetyl CoA",
+          "accept": ["Acetyl coenzyme A"],
+          "near": [0.37, 0.42],
+          "box": [0.3186, 0.4074, 0.098, 0.0228],
+          "lines": 1
+        },
+        {
+          "text": "Krebs cycle",
+          "accept": ["Citric acid cycle", "TCA cycle"],
+          "box": [0.0167, 0.4811, 0.1098, 0.0228],
+          "lines": 1
+        },
+        {
+          "text": "Oxidative phosphorylation",
+          "accept": ["Electron transport chain"],
+          "box": [0.0157, 0.6716, 0.2382, 0.0237],
+          "lines": 1
+        },
+        {
+          "text": "Electrons",
+          "match": "Electrons removed from glucose, pyruvate, and acetyl CoA",
+          "accept": ["Electron"],
+          "box": [0.7353, 0.7533, 0.1186, 0.0966],
+          "lines": 5
+        },
+        {
+          "text": "Redox reactions",
+          "accept": ["Oxidation-reduction reactions"],
+          "box": [0.6814, 0.8727, 0.0814, 0.0378],
+          "lines": 2
+        },
+        {
+          "text": "Cytoplasm",
+          "accept": ["Cytosol"],
+          "box": [0.8873, 0.0948, 0.0931, 0.0228],
+          "lines": 1
+        },
+        {
+          "text": "Mitochondrial matrix",
+          "accept": ["Matrix"],
+          "near": [0.94, 0.35],
+          "box": [0.8873, 0.3336, 0.1127, 0.0386],
+          "lines": 2
+        },
+        {
+          "text": "Mitochondrial matrix",
+          "accept": ["Matrix"],
+          "near": [0.94, 0.57],
+          "box": [0.8873, 0.5514, 0.1127, 0.0378],
+          "lines": 2
+        },
+        {
+          "text": "Mitochondrial inner membrane",
+          "accept": ["Inner mitochondrial membrane", "Inner membrane"],
+          "box": [0.8873, 0.8104, 0.1127, 0.0562],
+          "lines": 3
+        }
+      ]
+    },
+    {
+      "id": "m04_dg05",
+      "title": "Nutrient metabolism pathways",
+      "file": "m04_nutrient_pathways.jpg",
+      "prompt": "How carbohydrates, fats and amino acids feed into and out of the Krebs cycle; name each molecule and each pathway.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Glycogen",
+          "box": [0.5982, 0.0065, 0.0773, 0.0195],
+          "lines": 1
+        },
+        {
+          "text": "Glucose",
+          "box": [0.6027, 0.1542, 0.0682, 0.0159],
+          "lines": 1
+        },
+        {
+          "text": "Glycogenolysis",
+          "box": [0.5709, 0.0418, 0.0255, 0.0951],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Glycogenesis",
+          "box": [0.68, 0.0461, 0.0236, 0.0865],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Glycolysis",
+          "box": [0.5709, 0.2579, 0.0255, 0.0677],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Gluconeogenesis",
+          "accept": ["Glyconeogenesis"],
+          "box": [0.68, 0.237, 0.0236, 0.1081],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Glycerol",
+          "box": [0.2573, 0.2788, 0.0682, 0.0187],
+          "lines": 1
+        },
+        {
+          "text": "Triglycerides",
+          "accept": ["Triglyceride"],
+          "box": [0.0045, 0.433, 0.1018, 0.0187],
+          "lines": 1
+        },
+        {
+          "text": "Glucogenic amino acids",
+          "box": [0.2691, 0.3545, 0.0964, 0.0346],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Pyruvate molecules",
+          "accept": ["Pyruvate", "Pyruvic acid"],
+          "box": [0.5982, 0.3545, 0.0836, 0.0346],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Ketone oxidation",
+          "box": [0.7427, 0.3264, 0.1355, 0.0166],
+          "lines": 1
+        },
+        {
+          "text": "Ketogenic amino acids",
+          "box": [0.8927, 0.3559, 0.1, 0.031],
+          "lines": 2
+        },
+        {
+          "text": "Ketogenesis",
+          "box": [0.7609, 0.4056, 0.0991, 0.0187],
+          "lines": 1
+        },
+        {
+          "text": "Acetyl CoA",
+          "accept": ["Acetyl coenzyme A"],
+          "box": [0.5918, 0.549, 0.09, 0.0187],
+          "lines": 1
+        },
+        {
+          "text": "Lipolysis/Beta-oxidation",
+          "accept": ["Beta-oxidation", "Beta oxidation", "Lipolysis"],
+          "box": [0.4264, 0.5483, 0.1155, 0.031],
+          "lines": 2
+        },
+        {
+          "text": "Fatty acids",
+          "box": [0.2909, 0.5922, 0.0909, 0.0216],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Lipogenesis",
+          "box": [0.4364, 0.6354, 0.0955, 0.0187],
+          "lines": 1
+        },
+        {
+          "text": "Certain amino acids",
+          "accept": ["Amino acids"],
+          "box": [0.2791, 0.7032, 0.1127, 0.0317],
+          "lines": 2
+        },
+        {
+          "text": "Krebs cycle",
+          "accept": ["Citric acid cycle", "TCA cycle"],
+          "box": [0.7082, 0.7039, 0.0936, 0.0187],
+          "lines": 1
+        },
+        {
+          "text": "Electron transport chain",
+          "accept": ["ETC"],
+          "box": [0.7518, 0.8862, 0.1827, 0.0187],
+          "lines": 1
+        }
+      ]
+    }
   ]
 }

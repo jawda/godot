@@ -675,5 +675,287 @@
       ],
       "explanation": "Stored ATP lasts only seconds, creatine phosphate supplies about 10 to 15 seconds, anaerobic glycolysis supports up to roughly a minute, and aerobic respiration dominates prolonged activity. In reality the systems overlap rather than switching cleanly."
     }
+  ],
+  "diagrams": [
+    {
+      "id": "m11_dg01",
+      "title": "Connective tissue layers of skeletal muscle",
+      "file": "m11_connective_layers.jpg",
+      "prompt": "A skeletal muscle opened up from whole muscle (top) to a single fiber (bottom).",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Skeletal muscle",
+          "box": [0.0927, 0.0, 0.1882, 0.0264],
+          "lines": 1
+        },
+        {
+          "text": "Epimysium",
+          "box": [0.3955, 0.0, 0.1318, 0.0308],
+          "lines": 1
+        },
+        {
+          "text": "Muscle fascicle",
+          "accept": ["Fascicle"],
+          "box": [0.0936, 0.3398, 0.1818, 0.0264],
+          "lines": 1
+        },
+        {
+          "text": "Perimysium",
+          "box": [0.8473, 0.3257, 0.1409, 0.0308],
+          "lines": 1
+        },
+        {
+          "text": "Endomysium",
+          "box": [0.8473, 0.36, 0.1527, 0.0308],
+          "lines": 1
+        },
+        {
+          "text": "Satellite cell",
+          "box": [0.7736, 0.4692, 0.1445, 0.0273],
+          "lines": 1
+        },
+        {
+          "text": "Muscle fiber",
+          "accept": ["Muscle fibre", "Muscle cell"],
+          "box": [0.0936, 0.6805, 0.1464, 0.0264],
+          "lines": 1
+        },
+        {
+          "text": "Sarcolemma",
+          "box": [0.7736, 0.7632, 0.1527, 0.0264],
+          "lines": 1
+        },
+        {
+          "text": "Myofibril",
+          "box": [0.6045, 0.9067, 0.1018, 0.0308],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m11_dg02",
+      "title": "Zones and bands of the sarcomere",
+      "file": "m11_sarcomere.jpg",
+      "prompt": "One sarcomere between two Z lines: thin filaments (green) and thick filaments (purple).",
+      "region": [0.15, 0, 0.7, 0.335],
+      "labels": [
+        {
+          "text": "Sarcomere",
+          "box": [0.4325, 0.0, 0.1386, 0.0301],
+          "lines": 1
+        },
+        {
+          "text": "Z line",
+          "accept": ["Z disc"],
+          "near": [0.25, 0.12],
+          "box": [0.2169, 0.1059, 0.0699, 0.0314],
+          "lines": 1
+        },
+        {
+          "text": "H zone",
+          "box": [0.459, 0.0497, 0.0867, 0.0314],
+          "lines": 1
+        },
+        {
+          "text": "M line",
+          "box": [0.4651, 0.102, 0.0747, 0.0314],
+          "lines": 1
+        },
+        {
+          "text": "Z line",
+          "accept": ["Z disc"],
+          "near": [0.75, 0.12],
+          "box": [0.7181, 0.1059, 0.0699, 0.0314],
+          "lines": 1
+        },
+        {
+          "text": "I band",
+          "match": "Lighter I band",
+          "accept": ["Lighter I band"],
+          "near": [0.32, 0.305],
+          "box": [0.2422, 0.2863, 0.1602, 0.0379],
+          "lines": 1
+        },
+        {
+          "text": "A band",
+          "match": "Darker A band",
+          "accept": ["Darker A band"],
+          "box": [0.4193, 0.2863, 0.1687, 0.0314],
+          "lines": 1
+        },
+        {
+          "text": "I band",
+          "match": "Lighter I band",
+          "accept": ["Lighter I band"],
+          "near": [0.68, 0.305],
+          "box": [0.6036, 0.2863, 0.1602, 0.0379],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m11_dg03",
+      "title": "Thick and thin filaments",
+      "file": "m11_sarcomere.jpg",
+      "prompt": "Parts of a thick filament and a myosin molecule (left) and of a thin filament (right).",
+      "region": [0, 0.335, 1, 0.665],
+      "labels": [
+        {
+          "text": "Thick filament",
+          "match": "Portion of a thick filament",
+          "box": [0.1566, 0.3477, 0.1554, 0.0641],
+          "lines": 2
+        },
+        {
+          "text": "Thin filament",
+          "match": "Portion of a thin filament",
+          "box": [0.6916, 0.3477, 0.1458, 0.0641],
+          "lines": 2
+        },
+        {
+          "text": "Head",
+          "accept": ["Myosin head"],
+          "near": [0.44, 0.61],
+          "box": [0.4024, 0.5948, 0.0675, 0.0314],
+          "lines": 1
+        },
+        {
+          "text": "Troponin",
+          "box": [0.5373, 0.4458, 0.1048, 0.0366],
+          "lines": 1
+        },
+        {
+          "text": "Actin",
+          "near": [0.77, 0.464],
+          "box": [0.7313, 0.4458, 0.0639, 0.0314],
+          "lines": 1
+        },
+        {
+          "text": "Tropomyosin",
+          "box": [0.8313, 0.4458, 0.1506, 0.0366],
+          "lines": 1
+        },
+        {
+          "text": "Actin-binding sites",
+          "accept": ["Actin binding site"],
+          "box": [0.0892, 0.685, 0.2133, 0.0366],
+          "lines": 1
+        },
+        {
+          "text": "ATP-binding site",
+          "box": [0.0964, 0.7882, 0.1904, 0.0366],
+          "lines": 1
+        },
+        {
+          "text": "Heads",
+          "accept": ["Myosin heads"],
+          "near": [0.44, 0.837],
+          "box": [0.4024, 0.8222, 0.0807, 0.0314],
+          "lines": 1
+        },
+        {
+          "text": "Tail",
+          "box": [0.0289, 0.8222, 0.0458, 0.0314],
+          "lines": 1
+        },
+        {
+          "text": "Myosin molecule",
+          "accept": ["Myosin"],
+          "box": [0.0, 0.9673, 0.194, 0.0327],
+          "lines": 1
+        },
+        {
+          "text": "Flexible hinge region",
+          "accept": ["Hinge region", "Hinge"],
+          "box": [0.2494, 0.9673, 0.2373, 0.0327],
+          "lines": 1
+        },
+        {
+          "text": "Binding site for myosin",
+          "accept": ["Myosin-binding site"],
+          "box": [0.5422, 0.6954, 0.1373, 0.0693],
+          "lines": 2
+        },
+        {
+          "text": "Actin subunits",
+          "accept": ["G actin"],
+          "box": [0.8205, 0.6954, 0.1639, 0.0314],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m11_dg04",
+      "title": "Parts of the cross-bridge",
+      "file": "m11_cross_bridge.jpg",
+      "prompt": "The start of the cross-bridge cycle: a myosin head bound to actin, with ADP and phosphate still attached.",
+      "region": [0, 0, 0.8, 0.245],
+      "labels": [
+        {
+          "text": "Calcium",
+          "accept": ["Calcium ions", "Ca2+"],
+          "box": [0.2651, 0.0, 0.0925, 0.0175],
+          "lines": 1
+        },
+        {
+          "text": "Actin",
+          "box": [0.6116, 0.0286, 0.0604, 0.0175],
+          "lines": 1
+        },
+        {
+          "text": "Thin filament",
+          "match": "(a) Thin filament",
+          "box": [0.0, 0.0691, 0.1702, 0.0214],
+          "lines": 1
+        },
+        {
+          "text": "Cross-bridge",
+          "match": "(b) Crossbridge",
+          "accept": ["Crossbridge"],
+          "box": [0.0, 0.1311, 0.164, 0.0214],
+          "lines": 1
+        },
+        {
+          "text": "Myosin head",
+          "box": [0.344, 0.1152, 0.0814, 0.0357],
+          "lines": 2
+        },
+        {
+          "text": "Thick filament",
+          "box": [0.0284, 0.2002, 0.1517, 0.0183],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m11_dg05",
+      "title": "Smooth muscle contraction",
+      "file": "m11_smooth_contraction.jpg",
+      "prompt": "A smooth muscle cell before (left) and after (right) contracting.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Relaxed muscle cell",
+          "box": [0.0, 0.1316, 0.15, 0.1009],
+          "lines": 1
+        },
+        {
+          "text": "Intermediate filaments",
+          "box": [0.0218, 0.8991, 0.17, 0.1009],
+          "lines": 1
+        },
+        {
+          "text": "Dense bodies",
+          "box": [0.2782, 0.9035, 0.1082, 0.0965],
+          "lines": 1
+        },
+        {
+          "text": "Contracted muscle cell",
+          "box": [0.5491, 0.1316, 0.1745, 0.1009],
+          "lines": 1
+        }
+      ]
+    }
   ]
 }

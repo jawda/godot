@@ -4,11 +4,14 @@ extends Node
 ## flashcard, and answers every quiz question. Run headless:
 ##   Godot_console.exe --headless --path <project> res://tests/smoke_test.tscn
 ## Pass "-- --screenshots" (without --headless) to also save PNGs to user://screenshots.
+## Pass "-- --diagram-snaps [id prefix]" (without --headless) to only screenshot every
+## labeled diagram, blank and with answers shown, for checking new diagram content.
 
 const MAIN_SCENE: PackedScene = preload("res://main/main.tscn")
 
 var _failures: PackedStringArray = []
 var _take_screenshots: bool = false
+var _diagram_snaps_taken: bool = false
 
 
 func _ready() -> void:
@@ -19,6 +22,13 @@ func _ready() -> void:
 	add_child(study_guide)
 	await _settle()
 	await _exercise_profiles(study_guide)
+	var user_arguments: PackedStringArray = OS.get_cmdline_user_args()
+	if user_arguments.has("--diagram-snaps"):
+		var prefix_index: int = user_arguments.find("--diagram-snaps") + 1
+		var id_prefix: String = user_arguments[prefix_index] if prefix_index < user_arguments.size() else ""
+		await _snap_all_diagrams(study_guide, id_prefix)
+		get_tree().quit(0)
+		return
 	await _snap("menu")
 	_check(not ContentLibrary.modules.is_empty(), "no modules loaded")
 	var tile_index: int = 0
@@ -138,9 +148,134 @@ func _exercise_module(study_guide: StudyGuide, module: StudyModule, is_first: bo
 	await _settle()
 	await _answer_all(study._quiz, module.id, is_first)
 	_check(StudyProgress.best_quiz_score(module.id) >= 0.0, "%s: best score not recorded" % module.id)
+	_check(study._sections.is_tab_hidden(ModuleStudy.Tab.DIAGRAMS) == module.diagrams.is_empty(), "%s: Diagrams tab visibility wrong" % module.id)
+	if not module.diagrams.is_empty():
+		study._sections.current_tab = ModuleStudy.Tab.DIAGRAMS
+		await _settle()
+		await _exercise_diagrams(study._diagrams, module, not _diagram_snaps_taken)
+		_diagram_snaps_taken = true
 	study._back.pressed.emit()
 	await _settle()
 	_check(study_guide._module_menu.visible, "%s: back did not return to menu" % module.id)
+
+
+## Labels every diagram twice: from the word bank with two answers swapped, then by
+## typing with one deliberate typo. Also checks every label box sits inside its region.
+func _exercise_diagrams(practice: DiagramPractice, module: StudyModule, take_snaps: bool) -> void:
+	for diagram_index: int in module.diagrams.size():
+		var diagram: LabeledDiagram = module.diagrams[diagram_index]
+		_check(ResourceLoader.exists(diagram.image_path()), "%s: missing image %s" % [diagram.id, diagram.image_file])
+		_check(diagram.labels.size() >= 3, "%s: fewer than 3 labels" % diagram.id)
+		_check(not diagram.credit.is_empty(), "%s: no credit line" % diagram.id)
+		for diagram_label: DiagramLabel in diagram.labels:
+			_check(diagram_label.box.has_area(), "%s: label %s has no box" % [diagram.id, diagram_label.text])
+			_check(diagram.region.grow(0.002).encloses(diagram_label.box), "%s: label %s outside region" % [diagram.id, diagram_label.text])
+		practice._set_typing(false)
+		practice._open_diagram(diagram_index)
+		await _settle()
+		_check(practice._blanks.size() == diagram.labels.size(), "%s: blank count wrong" % diagram.id)
+		_check(practice._chips.size() == diagram.labels.size(), "%s: chip count wrong" % diagram.id)
+		if take_snaps and diagram_index == 0:
+			await _snap("diagram_blank")
+		# Click-to-place every label in its right blank, except the first two, dropped swapped.
+		for blank: DiagramBlank in practice._blanks:
+			var chip: LabelChip = _chip_for(practice, blank.label.text)
+			practice._on_chip_chosen(chip)
+			practice._on_blank_clicked(blank)
+		var first_blank: DiagramBlank = practice._blanks[0]
+		var second_blank: DiagramBlank = practice._blanks[1]
+		# _get_drag_data can only run inside a real mouse drag, so build its result here.
+		var drag_data: Dictionary = {"chip": first_blank.placed_chip}
+		_check(second_blank._can_drop_data(Vector2.ZERO, drag_data), "%s: filled blank refused a drop" % diagram.id)
+		second_blank._drop_data(Vector2.ZERO, drag_data)
+		_check(first_blank.placed_text() == second_blank.label.text, "%s: drag onto a filled blank did not swap" % diagram.id)
+		_check(practice._chips.all(func(chip: LabelChip) -> bool: return not chip.visible), "%s: bank not empty after placing all" % diagram.id)
+		if take_snaps and diagram_index == 0:
+			await _settle()
+			await _snap("diagram_placed")
+		practice._check_answers()
+		var expected_score: float = float(diagram.labels.size() - 2) / diagram.labels.size()
+		_check(is_equal_approx(StudyProgress.best_diagram_score(diagram.id), expected_score), "%s: score %.2f, expected %.2f" % [diagram.id, StudyProgress.best_diagram_score(diagram.id), expected_score])
+		_check(first_blank.state == DiagramBlank.State.WRONG and practice._blanks[2].state == DiagramBlank.State.CORRECT, "%s: wrong grading colours" % diagram.id)
+		if take_snaps and diagram_index == 0:
+			await _settle()
+			await _snap("diagram_checked")
+		# Taking back a wrong label and placing it right must lock it as correct.
+		practice._on_blank_clicked(first_blank)
+		practice._on_blank_clicked(second_blank)
+		_place_by_click(practice, first_blank)
+		_place_by_click(practice, second_blank)
+		practice._check_answers()
+		_check(practice._check.disabled, "%s: fixing every label should finish the diagram" % diagram.id)
+		_check(is_equal_approx(StudyProgress.best_diagram_score(diagram.id), expected_score), "%s: second check changed best score" % diagram.id)
+
+		practice._set_typing(true)
+		await _settle()
+		first_blank = practice._blanks[0]
+		for blank_index: int in practice._blanks.size():
+			var blank: DiagramBlank = practice._blanks[blank_index]
+			var typed: String = blank.label.text.to_upper() if blank_index > 0 else _with_typo(blank.label.text)
+			blank._entry.text = typed
+		var typo_grade: DiagramLabel.Grade = first_blank.label.grade_typed(first_blank._entry.text)
+		practice._check_answers()
+		var all_correct: bool = practice._blanks.all(func(blank: DiagramBlank) -> bool: return blank.state == DiagramBlank.State.CORRECT)
+		if typo_grade == DiagramLabel.Grade.CLOSE:
+			_check(all_correct, "%s: typed answers (one with a typo) not all accepted" % diagram.id)
+			_check(first_blank._entry.text == first_blank.label.text, "%s: typo not corrected in the blank" % diagram.id)
+		if take_snaps and diagram_index == 0:
+			await _settle()
+			await _snap("diagram_typed")
+		_check(first_blank.label.grade_typed("zzzz") == DiagramLabel.Grade.WRONG, "%s: nonsense accepted" % diagram.id)
+		practice._start_over.pressed.emit()
+		practice._reveal.pressed.emit()
+		_check(practice._blanks.all(func(blank: DiagramBlank) -> bool: return blank.state == DiagramBlank.State.REVEALED), "%s: reveal missed blanks" % diagram.id)
+		practice._set_typing(false)
+	print("    diagrams: %d" % module.diagrams.size())
+
+
+func _snap_all_diagrams(study_guide: StudyGuide, id_prefix: String) -> void:
+	_take_screenshots = true
+	for module: StudyModule in ContentLibrary.modules:
+		if module.diagrams.is_empty() or not module.id.begins_with(id_prefix.substr(0, 3)):
+			continue
+		study_guide._module_menu.module_chosen.emit(module)
+		await _settle()
+		var study: ModuleStudy = study_guide._module_study
+		study._sections.current_tab = ModuleStudy.Tab.DIAGRAMS
+		await _settle()
+		for diagram_index: int in module.diagrams.size():
+			var diagram: LabeledDiagram = module.diagrams[diagram_index]
+			if not diagram.id.begins_with(id_prefix):
+				continue
+			study._diagrams._open_diagram(diagram_index)
+			await _settle()
+			await _snap("%s_blank" % diagram.id)
+			study._diagrams._reveal_answers()
+			await _settle()
+			await _snap("%s_answers" % diagram.id)
+		study._back.pressed.emit()
+		await _settle()
+	print("Diagram screenshots saved to ", ProjectSettings.globalize_path("user://screenshots"))
+
+
+func _chip_for(practice: DiagramPractice, answer: String) -> LabelChip:
+	for chip: LabelChip in practice._chips:
+		if chip.answer_text == answer and chip.placed_in == null:
+			return chip
+	return null
+
+
+func _place_by_click(practice: DiagramPractice, blank: DiagramBlank) -> void:
+	practice._on_chip_chosen(_chip_for(practice, blank.label.text))
+	practice._on_blank_clicked(blank)
+
+
+## Drops one letter from the middle of a long word, or returns the text unchanged.
+func _with_typo(text: String) -> String:
+	if text.length() < 9:
+		return text
+	var middle: int = text.length() / 2
+	return text.substr(0, middle) + text.substr(middle + 1)
 
 
 ## Clicks Next through every page; the last Next should hand off to the flashcards tab.

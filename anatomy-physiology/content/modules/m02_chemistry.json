@@ -420,5 +420,214 @@
       "items": ["Glucose", "Sucrose", "Glycogen"],
       "explanation": "Glucose is a monosaccharide, sucrose is a disaccharide (glucose plus fructose), and glycogen is a polysaccharide made of many glucose units. Each larger one is built by dehydration synthesis."
     }
+  ],
+  "diagrams": [
+    {
+      "id": "m02_dg01",
+      "title": "Structure of ATP",
+      "file": "m02_atp.jpg",
+      "prompt": "Structural formula of ATP; name each part and each nested molecule marked by the brackets.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Adenine",
+          "box": [0.0709, 0.0, 0.11, 0.0348],
+          "lines": 1
+        },
+        {
+          "text": "Ribose",
+          "box": [0.2677, 0.6169, 0.0926, 0.0381],
+          "lines": 1
+        },
+        {
+          "text": "Phosphate",
+          "accept": ["Phosphate groups", "Phosphates", "Phosphate group"],
+          "box": [0.6918, 0.6169, 0.1389, 0.0448],
+          "lines": 1
+        },
+        {
+          "text": "High-energy bonds",
+          "accept": ["Phosphoanhydride bonds", "High energy phosphate bonds"],
+          "box": [0.6425, 0.3068, 0.2388, 0.0431],
+          "lines": 1
+        },
+        {
+          "text": "Adenosine",
+          "near": [0.25, 0.72],
+          "box": [0.1809, 0.7015, 0.1389, 0.0381],
+          "lines": 1
+        },
+        {
+          "text": "Adenosine monophosphate",
+          "match": "Adenosine monophosphate (AMP)",
+          "accept": ["AMP"],
+          "box": [0.1187, 0.7877, 0.4255, 0.0448],
+          "lines": 1
+        },
+        {
+          "text": "Adenosine diphosphate",
+          "match": "Adenosine diphosphate (ADP)",
+          "accept": ["ADP"],
+          "box": [0.2301, 0.874, 0.3763, 0.0431],
+          "lines": 1
+        },
+        {
+          "text": "Adenosine triphosphate",
+          "match": "Adenosine triphosphate AT P",
+          "accept": ["ATP"],
+          "box": [0.314, 0.9619, 0.3719, 0.0381],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m02_dg02",
+      "title": "Levels of protein structure",
+      "file": "m02_protein_structure.jpg",
+      "prompt": "Folding of a protein from a chain of amino acids (A1, A2...) to hemoglobin; name each level and labeled part.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Primary structure",
+          "match": "(a) Primary structure",
+          "box": [0.0109, 0.0652, 0.1609, 0.0289],
+          "lines": 1
+        },
+        {
+          "text": "Chain of amino acids",
+          "accept": ["Polypeptide", "Polypeptide chain", "Amino acid chain"],
+          "box": [0.3736, 0.0652, 0.1636, 0.0246],
+          "lines": 1
+        },
+        {
+          "text": "Alpha-helix",
+          "accept": ["Alpha helix", "α-helix"],
+          "box": [0.0118, 0.4385, 0.0909, 0.0278],
+          "lines": 1
+        },
+        {
+          "text": "Hydrogen bonds",
+          "match": "Bonds",
+          "accept": ["Bonds", "Hydrogen bond"],
+          "box": [0.5964, 0.2417, 0.0545, 0.0246],
+          "lines": 1
+        },
+        {
+          "text": "Pleated sheet",
+          "match": "(b) Secondary structure (pleated sheet)",
+          "accept": ["Beta-pleated sheet", "Beta pleated sheet", "Secondary structure", "Beta sheet"],
+          "box": [0.3455, 0.4824, 0.3009, 0.0289],
+          "lines": 1
+        },
+        {
+          "text": "Tertiary structure",
+          "match": "(c) Tertiary structure",
+          "box": [0.0109, 0.9166, 0.1564, 0.0289],
+          "lines": 1
+        },
+        {
+          "text": "Quaternary structure",
+          "match": "(d) Quaternary structure",
+          "box": [0.5227, 0.9476, 0.1873, 0.0278],
+          "lines": 1
+        },
+        {
+          "text": "Heme units",
+          "accept": ["Heme", "Heme groups", "Hemes"],
+          "box": [0.4564, 0.7797, 0.0909, 0.0246],
+          "lines": 1
+        },
+        {
+          "text": "Hemoglobin",
+          "match": "Hemoglobin (globular protein)",
+          "box": [0.7564, 0.9465, 0.1327, 0.0513],
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "id": "m02_dg03",
+      "title": "Parts of a phospholipid",
+      "file": "m02_lipids.jpg",
+      "prompt": "Structural formula of a phospholipid (phosphatidylcholine) with a schematic phospholipid at right; name each part.",
+      "region": [0, 0.105, 1, 0.31],
+      "labels": [
+        {
+          "text": "Phosphorus-containing group",
+          "match": "Phosphorus-containing group (polar head)",
+          "accept": ["Phosphate group", "Phosphate-containing group"],
+          "box": [0.0591, 0.1168, 0.2355, 0.0435],
+          "lines": 2
+        },
+        {
+          "text": "Glycerol backbone",
+          "accept": ["Glycerol"],
+          "box": [0.34, 0.1159, 0.0827, 0.0408],
+          "lines": 2
+        },
+        {
+          "text": "Fatty acid chains",
+          "match": "2 fatty acid chains (nonpolar tail)",
+          "accept": ["Fatty acids", "Fatty acid tails", "Two fatty acid chains"],
+          "box": [0.5836, 0.1159, 0.1473, 0.0444],
+          "lines": 2
+        },
+        {
+          "text": "Polar head",
+          "match": "Polar head",
+          "accept": ["Hydrophilic head", "Head"],
+          "near": [0.94, 0.15],
+          "box": [0.8891, 0.1359, 0.1027, 0.0208],
+          "lines": 1
+        },
+        {
+          "text": "Nonpolar tail",
+          "match": "Nonpolar tail (schematic phospholipid)",
+          "accept": ["Hydrophobic tail", "Nonpolar tails", "Tail"],
+          "box": [0.8864, 0.2844, 0.1136, 0.0752],
+          "lines": 3
+        }
+      ]
+    },
+    {
+      "id": "m02_dg04",
+      "title": "Models of the atom",
+      "file": "m02_atom_models.jpg",
+      "prompt": "Two ways of drawing a helium atom; name each model and its labeled parts.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Electron",
+          "near": [0.78, 0.044],
+          "box": [0.7082, 0.0314, 0.1399, 0.0243],
+          "lines": 1
+        },
+        {
+          "text": "Planetary model",
+          "match": "(a) Planetary model",
+          "accept": ["Bohr model"],
+          "box": [0.1453, 0.4264, 0.3297, 0.0293],
+          "lines": 1
+        },
+        {
+          "text": "Nucleus",
+          "box": [0.6508, 0.6321, 0.1388, 0.0243],
+          "lines": 1
+        },
+        {
+          "text": "Electron cloud",
+          "match": "Cloud of negative charge (2 electrons)",
+          "accept": ["Cloud of negative charge"],
+          "box": [0.6486, 0.7729, 0.3351, 0.0564],
+          "lines": 2
+        },
+        {
+          "text": "Electron cloud model",
+          "match": "(b) Electron cloud model",
+          "box": [0.1074, 0.9579, 0.4067, 0.0293],
+          "lines": 1
+        }
+      ]
+    }
   ]
 }

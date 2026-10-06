@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" path="res://flashcards/flashcard_deck.tscn" id="3_deck"]
 [ext_resource type="PackedScene" path="res://quiz/quiz_runner.tscn" id="4_quiz"]
 [ext_resource type="PackedScene" path="res://lesson/figure_viewer.tscn" id="5_viewer"]
+[ext_resource type="PackedScene" path="res://diagrams/diagram_practice.tscn" id="6_diagrams"]
 
 [sub_resource type="InputEventKey" id="key_escape"]
 keycode = 4194305
@@ -72,6 +73,11 @@ metadata/_tab_index = 1
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
+
+[node name="Diagrams" parent="Layout/Sections" instance=ExtResource("6_diagrams")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
 
 [node name="FigureViewer" parent="." instance=ExtResource("5_viewer")]
 layout_mode = 2

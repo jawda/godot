@@ -3,3 +3,5 @@
 /android/
 # Exported apps
 build/
+# Python bytecode from tools/
+__pycache__/

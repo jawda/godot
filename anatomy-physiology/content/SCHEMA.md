@@ -56,9 +56,40 @@ file; no code changes needed.
       "items": ["listed", "in", "the", "correct", "order"],
       "explanation": "..."
     }
+  ],
+  "diagrams": [
+    {
+      "id": "m12_dg01",
+      "title": "Superficial muscles of the hip and anterior thigh",
+      "file": "m12_hip_thigh.jpg",
+      "prompt": "Right leg, anterior view. Find the four quadriceps and the adductors.",
+      "region": [0, 0, 0.52, 0.435],
+      "labels": [
+        { "text": "Rectus femoris", "box": [0.0064, 0.2577, 0.0773, 0.0387], "lines": 2 },
+        { "text": "Tensor fasciae latae", "match": "Tensor fascia latae", "box": [...], "lines": 2 },
+        { "text": "Quadriceps tendon", "match": "Quadriceps tendon (or patellar tendon)",
+          "accept": ["Patellar tendon"], "box": [...], "lines": 2 }
+      ]
+    }
   ]
 }
 ```
+
+## Labeled diagrams
+
+`diagrams` is optional. Each one shows `file` (a figure from `content/images/`, normally
+one of the module's lesson figures, whose credit line it borrows) cropped to `region`,
+with a blank over every label's `box`. Students fill the blanks from a word bank or by
+typing.
+
+- `region` and `box` are `[x, y, width, height]` as fractions of the whole image, so they
+  survive resizing. One figure with several panels can give several diagrams.
+- Write `text` (the answer) and let `tools/fill_diagram_boxes.py` fill in `box` and
+  `lines` from OCR (see the README). Use `match` when the printed words differ from the
+  answer, `accept` for alternates that also count when typed, and `near: [x, y]` to pick
+  one copy of text printed twice.
+- Every printed label inside the region should be a label, or it gives answers away.
+- Ids are unique across all modules: `mNN_dgNN`.
 
 ## Rules
 

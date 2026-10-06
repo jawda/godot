@@ -1,0 +1,28 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://diagrams/diagram_blank.gd" id="1_blank"]
+
+[node name="DiagramBlank" type="PanelContainer"]
+offset_right = 120.0
+offset_bottom = 24.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_type_variation = &"DiagramBlank"
+script = ExtResource("1_blank")
+
+[node name="Answer" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 1
+theme_type_variation = &"DiagramBlankText"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Entry" type="LineEdit" parent="."]
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"DiagramEntry"
+alignment = 1
+context_menu_enabled = false
+caret_blink = true

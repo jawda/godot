@@ -620,5 +620,367 @@
       ],
       "explanation": "Areolar tissue is richly vascular and heals quickly. Dense regular tissue has relatively few vessels and heals slowly. Cartilage has no blood vessels at all and heals the slowest, relying on diffusion from the perichondrium."
     }
+  ],
+  "diagrams": [
+    {
+      "id": "m05_dg01",
+      "title": "Types of epithelial tissue",
+      "file": "m05_epithelial_cells.jpg",
+      "prompt": "Name each epithelium by its number of layers and cell shape, then fill in the row and column headings.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Simple",
+          "near": [0.26, 0.02],
+          "box": [0.2309, 0.0045, 0.0636, 0.0294],
+          "lines": 1
+        },
+        {
+          "text": "Stratified",
+          "near": [0.56, 0.02],
+          "box": [0.5164, 0.0045, 0.0809, 0.026],
+          "lines": 1
+        },
+        {
+          "text": "Squamous",
+          "near": [0.06, 0.19],
+          "box": [0.0082, 0.1778, 0.0945, 0.0306],
+          "lines": 1
+        },
+        {
+          "text": "Cuboidal",
+          "near": [0.05, 0.51],
+          "box": [0.0127, 0.4994, 0.08, 0.026],
+          "lines": 1
+        },
+        {
+          "text": "Columnar",
+          "near": [0.06, 0.83],
+          "box": [0.0127, 0.8188, 0.0882, 0.026],
+          "lines": 1
+        },
+        {
+          "text": "Pseudostratified",
+          "near": [0.85, 0.66],
+          "box": [0.7818, 0.6467, 0.14, 0.026],
+          "lines": 1
+        },
+        {
+          "text": "Simple squamous epithelium",
+          "box": [0.15, 0.316, 0.2264, 0.0294],
+          "lines": 1
+        },
+        {
+          "text": "Stratified squamous epithelium",
+          "box": [0.4409, 0.316, 0.2418, 0.0294],
+          "lines": 1
+        },
+        {
+          "text": "Simple cuboidal epithelium",
+          "box": [0.1573, 0.6433, 0.2109, 0.0306],
+          "lines": 1
+        },
+        {
+          "text": "Stratified cuboidal epithelium",
+          "box": [0.4482, 0.6399, 0.2264, 0.0294],
+          "lines": 1
+        },
+        {
+          "text": "Simple columnar epithelium",
+          "box": [0.1527, 0.9626, 0.2182, 0.0306],
+          "lines": 1
+        },
+        {
+          "text": "Stratified columnar epithelium",
+          "box": [0.4436, 0.9626, 0.2327, 0.0306],
+          "lines": 1
+        },
+        {
+          "text": "Pseudostratified columnar epithelium",
+          "box": [0.71, 0.9626, 0.2882, 0.0306],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m05_dg02",
+      "title": "The four tissue types in the body",
+      "file": "m05_four_tissues.jpg",
+      "prompt": "Name each of the four primary tissue types and the body locations given as examples of each.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Nervous tissue",
+          "box": [0.0, 0.172, 0.1427, 0.0202],
+          "lines": 1
+        },
+        {
+          "text": "Brain",
+          "box": [0.0073, 0.1939, 0.0509, 0.0211],
+          "lines": 1
+        },
+        {
+          "text": "Spinal cord",
+          "box": [0.0073, 0.215, 0.1027, 0.0245],
+          "lines": 1
+        },
+        {
+          "text": "Nerves",
+          "box": [0.0073, 0.2369, 0.0682, 0.0202],
+          "lines": 1
+        },
+        {
+          "text": "Epithelial tissue",
+          "box": [0.0, 0.3356, 0.1518, 0.0245],
+          "lines": 1
+        },
+        {
+          "text": "Lining of hollow organs",
+          "match": "Lining of GI tract organs and other hollow organs",
+          "accept": ["Lining of GI tract organs and other hollow organs", "Lining of GI tract"],
+          "box": [0.0073, 0.3583, 0.2245, 0.0455],
+          "lines": 2
+        },
+        {
+          "text": "Skin surface (epidermis)",
+          "accept": ["Epidermis", "Skin surface"],
+          "box": [0.0073, 0.4013, 0.2155, 0.0245],
+          "lines": 1
+        },
+        {
+          "text": "Muscle tissue",
+          "box": [0.7482, 0.2319, 0.1336, 0.0202],
+          "lines": 1
+        },
+        {
+          "text": "Cardiac muscle",
+          "box": [0.7591, 0.2538, 0.14, 0.0211],
+          "lines": 1
+        },
+        {
+          "text": "Smooth muscle",
+          "box": [0.7591, 0.2757, 0.14, 0.0211],
+          "lines": 1
+        },
+        {
+          "text": "Skeletal muscle",
+          "box": [0.7591, 0.2976, 0.1427, 0.0211],
+          "lines": 1
+        },
+        {
+          "text": "Connective tissue",
+          "box": [0.75, 0.6889, 0.1736, 0.0202],
+          "lines": 1
+        },
+        {
+          "text": "Fat",
+          "match": "Fat and other soft padding tissue",
+          "accept": ["Fat and other soft padding tissue", "Adipose tissue", "Adipose"],
+          "box": [0.7591, 0.7099, 0.1591, 0.0464],
+          "lines": 2
+        },
+        {
+          "text": "Bone",
+          "box": [0.7591, 0.7538, 0.0518, 0.0202],
+          "lines": 1
+        },
+        {
+          "text": "Tendon",
+          "box": [0.7582, 0.7757, 0.0709, 0.0202],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m05_dg03",
+      "title": "Connective tissue proper",
+      "file": "m05_ct_proper.jpg",
+      "prompt": "Loose (areolar) connective tissue: drawing on the left, micrograph on the right. Name the fibers and cells.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Reticular fibers",
+          "box": [0.0, 0.0265, 0.1064, 0.0647],
+          "lines": 1
+        },
+        {
+          "text": "Adipocytes",
+          "near": [0.04, 0.21],
+          "box": [0.0, 0.1765, 0.0791, 0.0735],
+          "lines": 1
+        },
+        {
+          "text": "Mesenchymal cell",
+          "match": "Mesenchymal cell",
+          "near": [0.06, 0.36],
+          "box": [0.0, 0.3265, 0.1255, 0.0735],
+          "lines": 1
+        },
+        {
+          "text": "Elastic fibers",
+          "box": [0.0, 0.4765, 0.0909, 0.0647],
+          "lines": 1
+        },
+        {
+          "text": "Collagen fibers",
+          "box": [0.0, 0.6265, 0.1064, 0.0735],
+          "lines": 1
+        },
+        {
+          "text": "Fibroblast",
+          "box": [0.0, 0.7794, 0.0718, 0.0618],
+          "lines": 1
+        },
+        {
+          "text": "Macrophage",
+          "box": [0.0, 0.9294, 0.0891, 0.0706],
+          "lines": 1
+        },
+        {
+          "text": "Fibrocyte",
+          "box": [0.9318, 0.0471, 0.0655, 0.0735],
+          "lines": 1
+        },
+        {
+          "text": "Adipocyte",
+          "near": [0.68, 0.78],
+          "box": [0.6409, 0.7471, 0.0727, 0.0735],
+          "lines": 1
+        },
+        {
+          "text": "Mesenchymal cell",
+          "box": [0.505, 0.745, 0.105, 0.15],
+          "lines": 2,
+          "manual": true
+        }
+      ]
+    },
+    {
+      "id": "m05_dg04",
+      "title": "Types of cartilage",
+      "file": "m05_cartilage.jpg",
+      "prompt": "Drawing and micrograph of each cartilage type. Name the type of cartilage and the structures in it.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Hyaline cartilage",
+          "match": "(a) Hyaline cartilage",
+          "box": [0.4045, 0.0023, 0.19, 0.0223],
+          "lines": 1
+        },
+        {
+          "text": "Chondrocytes in lacunae",
+          "near": [0.48, 0.08],
+          "box": [0.4364, 0.0607, 0.1273, 0.0369],
+          "lines": 2
+        },
+        {
+          "text": "Matrix",
+          "near": [0.5, 0.22],
+          "box": [0.4709, 0.2081, 0.0591, 0.0184],
+          "lines": 1
+        },
+        {
+          "text": "Fibrocartilage",
+          "match": "(b) Fibrocartilage",
+          "box": [0.4173, 0.3402, 0.1655, 0.0223],
+          "lines": 1
+        },
+        {
+          "text": "Chondrocyte in lacuna",
+          "near": [0.5, 0.43],
+          "box": [0.4364, 0.4094, 0.1173, 0.0369],
+          "lines": 2
+        },
+        {
+          "text": "Collagen fiber in matrix",
+          "box": [0.4318, 0.5415, 0.1273, 0.0369],
+          "lines": 2
+        },
+        {
+          "text": "Elastic cartilage",
+          "match": "(c) Elastic cartilage",
+          "box": [0.4082, 0.6751, 0.1845, 0.0223],
+          "lines": 1
+        },
+        {
+          "text": "Chondrocyte in lacuna",
+          "near": [0.5, 0.78],
+          "box": [0.4364, 0.7627, 0.1173, 0.0376],
+          "lines": 2
+        },
+        {
+          "text": "Elastic fibers in matrix",
+          "box": [0.4373, 0.8702, 0.1164, 0.0376],
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "id": "m05_dg05",
+      "title": "Modes of glandular secretion",
+      "file": "m05_secretion_modes.jpg",
+      "prompt": "Exocrine gland cells releasing their product three different ways. Name each mode and the cell parts.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Merocrine secretion",
+          "match": "(a) Merocrine secretion",
+          "accept": ["Merocrine"],
+          "box": [0.0091, 0.168, 0.1482, 0.0483],
+          "lines": 2
+        },
+        {
+          "text": "Apocrine secretion",
+          "match": "(b) Apocrine secretion",
+          "accept": ["Apocrine"],
+          "box": [0.0091, 0.5022, 0.1455, 0.0492],
+          "lines": 2
+        },
+        {
+          "text": "Holocrine secretion",
+          "match": "(c) Holocrine secretion",
+          "accept": ["Holocrine"],
+          "box": [0.0091, 0.8472, 0.1455, 0.05],
+          "lines": 2
+        },
+        {
+          "text": "Secretion",
+          "near": [0.82, 0.03],
+          "box": [0.7709, 0.0223, 0.1, 0.0241],
+          "lines": 1
+        },
+        {
+          "text": "Secretory vesicle",
+          "box": [0.7709, 0.0867, 0.1782, 0.0295],
+          "lines": 1
+        },
+        {
+          "text": "Golgi complex",
+          "accept": ["Golgi apparatus", "Golgi body"],
+          "box": [0.7709, 0.1635, 0.1482, 0.0295],
+          "lines": 1
+        },
+        {
+          "text": "Nucleus",
+          "box": [0.7709, 0.2359, 0.0873, 0.025],
+          "lines": 1
+        },
+        {
+          "text": "Pinched-off portion of cell",
+          "match": "Pinched off portion of cell is the secretion",
+          "accept": ["Pinched off portion of cell is the secretion", "Pinched off portion of cell"],
+          "box": [0.77, 0.4263, 0.2236, 0.0492],
+          "lines": 2
+        },
+        {
+          "text": "Mature cell dies",
+          "match": "Mature cell dies and becomes secretory product",
+          "accept": ["Mature cell dies and becomes secretory product"],
+          "box": [0.77, 0.84, 0.1827, 0.0786],
+          "lines": 3
+        }
+      ]
+    }
   ]
 }

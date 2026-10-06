@@ -1,0 +1,208 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://diagrams/diagram_practice.gd" id="1_practice"]
+[ext_resource type="PackedScene" path="res://diagrams/diagram_board.tscn" id="2_board"]
+[ext_resource type="Texture2D" path="res://theme/icons/zoom_out.svg" id="3_out"]
+[ext_resource type="Texture2D" path="res://theme/icons/zoom_in.svg" id="4_in"]
+[ext_resource type="Texture2D" path="res://theme/icons/zoom_fit.svg" id="5_fit"]
+
+[sub_resource type="ButtonGroup" id="mode_group"]
+
+[sub_resource type="InputEventKey" id="key_enter"]
+keycode = 4194309
+ctrl_pressed = true
+command_or_control_autoremap = true
+
+[sub_resource type="Shortcut" id="check_shortcut"]
+events = [SubResource("key_enter")]
+
+[node name="DiagramPractice" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 16
+script = ExtResource("1_practice")
+
+[node name="Session" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Toolbar" type="HBoxContainer" parent="Session"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Previous" type="Button" parent="Session/Toolbar"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Previous diagram"
+text = "←"
+
+[node name="Picker" type="OptionButton" parent="Session/Toolbar"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text_overrun_behavior = 3
+fit_to_longest_item = false
+
+[node name="Next" type="Button" parent="Session/Toolbar"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Next diagram"
+text = "→"
+
+[node name="Zoom" type="HBoxContainer" parent="Session/Toolbar"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="ZoomOut" type="Button" parent="Session/Toolbar/Zoom"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Zoom out (or pinch, or Ctrl + scroll)"
+theme_type_variation = &"ToolbarButton"
+icon = ExtResource("3_out")
+
+[node name="ZoomLevel" type="Label" parent="Session/Toolbar/Zoom"]
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "100%"
+horizontal_alignment = 1
+
+[node name="ZoomIn" type="Button" parent="Session/Toolbar/Zoom"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Zoom in (or pinch, or Ctrl + scroll)"
+theme_type_variation = &"ToolbarButton"
+icon = ExtResource("4_in")
+
+[node name="Fit" type="Button" parent="Session/Toolbar/Zoom"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Fit the diagram to the space"
+theme_type_variation = &"ToolbarButton"
+icon = ExtResource("5_fit")
+
+[node name="Gap" type="Control" parent="Session/Toolbar"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="Mode" type="HBoxContainer" parent="Session/Toolbar"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="WordBank" type="Button" parent="Session/Toolbar/Mode"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Place labels from a list"
+theme_type_variation = &"ModeToggle"
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("mode_group")
+text = "Word bank"
+
+[node name="Typing" type="Button" parent="Session/Toolbar/Mode"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Type every label from memory"
+theme_type_variation = &"ModeToggle"
+toggle_mode = true
+button_group = SubResource("mode_group")
+text = "Type it"
+
+[node name="Workspace" type="HBoxContainer" parent="Session"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Board" parent="Session/Workspace" instance=ExtResource("2_board")]
+layout_mode = 2
+
+[node name="Sidebar" type="VBoxContainer" parent="Session/Workspace"]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Prompt" type="Label" parent="Session/Workspace/Sidebar"]
+layout_mode = 2
+text = "Instructions for this diagram."
+autowrap_mode = 3
+
+[node name="Heading" type="Label" parent="Session/Workspace/Sidebar"]
+layout_mode = 2
+theme_type_variation = &"TileTitle"
+text = "Labels"
+
+[node name="BankHint" type="Label" parent="Session/Workspace/Sidebar"]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "Click a label, then click its blank. Or drag it there. Click a filled blank to take its label back."
+autowrap_mode = 3
+
+[node name="Bank" type="ScrollContainer" parent="Session/Workspace/Sidebar"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Chips" type="HFlowContainer" parent="Session/Workspace/Sidebar/Bank"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+
+[node name="TypingHint" type="Label" parent="Session/Workspace/Sidebar"]
+visible = false
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "Type each label in its blank. Enter or Tab moves to the next one.
+
+Spelling counts on the exam, so a slip of a letter or two is accepted but corrected for you to see."
+autowrap_mode = 3
+
+[node name="Credit" type="Label" parent="Session/Workspace/Sidebar"]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+theme_override_font_sizes/font_size = 13
+text = "Figure credit"
+autowrap_mode = 3
+
+[node name="Actions" type="HBoxContainer" parent="Session"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Status" type="Label" parent="Session/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0 of 0 labeled"
+autowrap_mode = 3
+
+[node name="StartOver" type="Button" parent="Session/Actions"]
+layout_mode = 2
+focus_mode = 0
+text = "Start over"
+
+[node name="Reveal" type="Button" parent="Session/Actions"]
+layout_mode = 2
+focus_mode = 0
+text = "Show answers"
+
+[node name="Check" type="Button" parent="Session/Actions"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Check (Ctrl+Enter)"
+theme_type_variation = &"AccentButton"
+shortcut = SubResource("check_shortcut")
+shortcut_in_tooltip = false
+text = "Check"
+
+[node name="Empty" type="Label" parent="."]
+visible = false
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "No labeled diagrams for this module yet."
+horizontal_alignment = 1
+vertical_alignment = 1

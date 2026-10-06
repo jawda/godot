@@ -1,0 +1,10 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://diagrams/label_chip.gd" id="1_chip"]
+
+[node name="LabelChip" type="Button"]
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"LabelChip"
+text = "Label"
+script = ExtResource("1_chip")

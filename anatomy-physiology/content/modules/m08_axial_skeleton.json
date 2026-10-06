@@ -655,5 +655,684 @@
       ],
       "explanation": "The head articulates with the vertebral bodies, the short neck follows, the tubercle articulates with the transverse process of the vertebra, and the long curved shaft sweeps around toward the costal cartilage and sternum."
     }
+  ],
+  "diagrams": [
+    {
+      "id": "m08_dg01",
+      "title": "Skull, anterior view: left labels",
+      "file": "m08_skull_anterior.jpg",
+      "prompt": "Skull from the front. Name the bones, sutures and openings labeled on the left side.",
+      "region": [0, 0, 0.81, 0.955],
+      "labels": [
+        {
+          "text": "Coronal suture",
+          "box": [0.0027, 0.1063, 0.1182, 0.0247],
+          "lines": 1
+        },
+        {
+          "text": "Glabella",
+          "box": [0.0027, 0.1901, 0.0691, 0.0236],
+          "lines": 1
+        },
+        {
+          "text": "Supraorbital foramen",
+          "accept": ["Supraorbital notch"],
+          "box": [0.0027, 0.2793, 0.1645, 0.0279],
+          "lines": 1
+        },
+        {
+          "text": "Supraorbital margin",
+          "accept": ["Supraorbital ridge"],
+          "box": [0.0027, 0.3158, 0.1555, 0.0279],
+          "lines": 1
+        },
+        {
+          "text": "Sphenoid bone",
+          "box": [0.0027, 0.3577, 0.1218, 0.029],
+          "lines": 1
+        },
+        {
+          "text": "Temporal bone",
+          "box": [0.0018, 0.4006, 0.12, 0.029],
+          "lines": 1
+        },
+        {
+          "text": "Ethmoid bone",
+          "near": [0.06, 0.46],
+          "box": [0.0036, 0.4436, 0.1109, 0.0247],
+          "lines": 1
+        },
+        {
+          "text": "Nasal bone",
+          "box": [0.0027, 0.4866, 0.0927, 0.0247],
+          "lines": 1
+        },
+        {
+          "text": "Palatine bone",
+          "box": [0.0036, 0.5306, 0.1091, 0.0236],
+          "lines": 1
+        },
+        {
+          "text": "Nasal septum",
+          "match": "Nasal septum:",
+          "box": [0.0027, 0.58, 0.1227, 0.0279],
+          "lines": 1
+        },
+        {
+          "text": "Perpendicular plate of ethmoid bone",
+          "accept": ["Perpendicular plate", "Perpendicular plate of ethmoid"],
+          "box": [0.0127, 0.6079, 0.1536, 0.0483],
+          "lines": 2
+        },
+        {
+          "text": "Vomer bone",
+          "accept": ["Vomer"],
+          "box": [0.0127, 0.6617, 0.0982, 0.0247],
+          "lines": 1
+        },
+        {
+          "text": "Maxilla",
+          "accept": ["Maxillary bone"],
+          "near": [0.03, 0.76],
+          "box": [0.0027, 0.7508, 0.06, 0.0236],
+          "lines": 1
+        },
+        {
+          "text": "Alveolar process of maxilla",
+          "accept": ["Alveolar process"],
+          "box": [0.0018, 0.7927, 0.21, 0.029],
+          "lines": 1
+        },
+        {
+          "text": "Mental foramen",
+          "box": [0.0027, 0.8421, 0.1236, 0.0247],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m08_dg02",
+      "title": "Skull, anterior view: right labels",
+      "file": "m08_skull_anterior.jpg",
+      "prompt": "Skull from the front. Name the bones, orbit openings and nasal conchae labeled on the right side.",
+      "region": [0.215, 0, 0.785, 0.955],
+      "labels": [
+        {
+          "text": "Frontal bone",
+          "box": [0.82, 0.1815, 0.1018, 0.0247],
+          "lines": 1
+        },
+        {
+          "text": "Parietal bone",
+          "box": [0.82, 0.2632, 0.1064, 0.0247],
+          "lines": 1
+        },
+        {
+          "text": "Orbit",
+          "box": [0.8191, 0.333, 0.0445, 0.0247],
+          "lines": 1
+        },
+        {
+          "text": "Optic canal",
+          "accept": ["Optic foramen"],
+          "box": [0.8191, 0.3738, 0.0927, 0.029],
+          "lines": 1
+        },
+        {
+          "text": "Superior orbital fissure",
+          "box": [0.82, 0.4211, 0.1773, 0.029],
+          "lines": 1
+        },
+        {
+          "text": "Lacrimal bone",
+          "box": [0.82, 0.4683, 0.1136, 0.0247],
+          "lines": 1
+        },
+        {
+          "text": "Inferior orbital fissure",
+          "box": [0.82, 0.5156, 0.1655, 0.0236],
+          "lines": 1
+        },
+        {
+          "text": "Zygomatic bone",
+          "accept": ["Zygoma", "Cheekbone"],
+          "box": [0.8191, 0.5618, 0.1291, 0.029],
+          "lines": 1
+        },
+        {
+          "text": "Infraorbital foramen",
+          "box": [0.82, 0.609, 0.1527, 0.0247],
+          "lines": 1
+        },
+        {
+          "text": "Middle nasal concha",
+          "accept": ["Middle nasal turbinate"],
+          "box": [0.82, 0.6735, 0.1627, 0.0247],
+          "lines": 1
+        },
+        {
+          "text": "Inferior nasal concha",
+          "accept": ["Inferior nasal turbinate"],
+          "box": [0.82, 0.7347, 0.1645, 0.0247],
+          "lines": 1
+        },
+        {
+          "text": "Alveolar process of mandible",
+          "accept": ["Alveolar process"],
+          "box": [0.8191, 0.7905, 0.1327, 0.0483],
+          "lines": 2
+        },
+        {
+          "text": "Mandible",
+          "near": [0.86, 0.88],
+          "box": [0.82, 0.8711, 0.0755, 0.0247],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m08_dg03",
+      "title": "Skull, lateral view: left labels",
+      "file": "m08_skull_lateral.jpg",
+      "prompt": "Right side of the skull, face pointing right. Name the cranial bones, sutures and temporal bone features.",
+      "region": [0, 0, 0.85, 0.95],
+      "labels": [
+        {
+          "text": "Coronal suture",
+          "box": [0.0027, 0.0821, 0.1182, 0.0291],
+          "lines": 1
+        },
+        {
+          "text": "Parietal bone",
+          "box": [0.0036, 0.1391, 0.1055, 0.0291],
+          "lines": 1
+        },
+        {
+          "text": "Squamous suture",
+          "box": [0.0027, 0.2649, 0.14, 0.0358],
+          "lines": 1
+        },
+        {
+          "text": "Temporal bone",
+          "box": [0.0027, 0.3219, 0.1191, 0.0344],
+          "lines": 1
+        },
+        {
+          "text": "Squamous temporal",
+          "accept": ["Squamous part of temporal bone", "Squamous portion", "Squamous part"],
+          "box": [0.0027, 0.3616, 0.0882, 0.0649],
+          "lines": 2
+        },
+        {
+          "text": "Zygomatic process",
+          "accept": ["Zygomatic process of temporal bone"],
+          "box": [0.0027, 0.4305, 0.15, 0.0358],
+          "lines": 1
+        },
+        {
+          "text": "External acoustic meatus",
+          "accept": ["External auditory meatus", "External auditory canal"],
+          "box": [0.0036, 0.4702, 0.1355, 0.0596],
+          "lines": 2
+        },
+        {
+          "text": "Lambdoid suture",
+          "box": [0.0036, 0.5391, 0.1327, 0.0291],
+          "lines": 1
+        },
+        {
+          "text": "Mastoid portion",
+          "accept": ["Mastoid part"],
+          "box": [0.0036, 0.5801, 0.1227, 0.0358],
+          "lines": 1
+        },
+        {
+          "text": "Styloid process",
+          "box": [0.0027, 0.6212, 0.1227, 0.0344],
+          "lines": 1
+        },
+        {
+          "text": "Mastoid process",
+          "box": [0.0036, 0.6609, 0.13, 0.0344],
+          "lines": 1
+        },
+        {
+          "text": "Occipital bone",
+          "box": [0.0027, 0.7258, 0.1145, 0.0358],
+          "lines": 1
+        },
+        {
+          "text": "Zygomatic arch",
+          "box": [0.5173, 0.0093, 0.1227, 0.0358],
+          "lines": 1
+        },
+        {
+          "text": "Pterion",
+          "box": [0.6245, 0.0503, 0.06, 0.0305],
+          "lines": 1
+        },
+        {
+          "text": "Mandible",
+          "box": [0.4318, 0.8411, 0.0745, 0.0305],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m08_dg04",
+      "title": "Skull, lateral view: right labels",
+      "file": "m08_skull_lateral.jpg",
+      "prompt": "Right side of the skull, face pointing right. Name the facial bones and features labeled on the right.",
+      "region": [0.16, 0, 0.84, 0.95],
+      "labels": [
+        {
+          "text": "Zygomatic arch",
+          "box": [0.5173, 0.0093, 0.1227, 0.0358],
+          "lines": 1
+        },
+        {
+          "text": "Pterion",
+          "box": [0.6245, 0.0503, 0.06, 0.0305],
+          "lines": 1
+        },
+        {
+          "text": "Frontal bone",
+          "box": [0.8573, 0.1536, 0.1, 0.0291],
+          "lines": 1
+        },
+        {
+          "text": "Greater wing of sphenoid bone",
+          "accept": ["Greater wing of sphenoid", "Greater wing"],
+          "box": [0.8564, 0.204, 0.1236, 0.0649],
+          "lines": 2
+        },
+        {
+          "text": "Ethmoid bone",
+          "box": [0.8573, 0.2834, 0.1109, 0.0305],
+          "lines": 1
+        },
+        {
+          "text": "Lacrimal bone",
+          "box": [0.8573, 0.3338, 0.1127, 0.0291],
+          "lines": 1
+        },
+        {
+          "text": "Lacrimal fossa",
+          "box": [0.8573, 0.3815, 0.1155, 0.0305],
+          "lines": 1
+        },
+        {
+          "text": "Nasal bone",
+          "box": [0.8573, 0.4583, 0.0918, 0.0305],
+          "lines": 1
+        },
+        {
+          "text": "Zygomatic bone",
+          "accept": ["Zygoma", "Cheekbone"],
+          "box": [0.8564, 0.5325, 0.1282, 0.0358],
+          "lines": 1
+        },
+        {
+          "text": "Temporal process",
+          "accept": ["Temporal process of zygomatic bone"],
+          "box": [0.8564, 0.5682, 0.1409, 0.0344],
+          "lines": 1
+        },
+        {
+          "text": "Maxilla",
+          "accept": ["Maxillary bone"],
+          "box": [0.8573, 0.6265, 0.0591, 0.0305],
+          "lines": 1
+        },
+        {
+          "text": "Articular tubercle",
+          "accept": ["Articular eminence"],
+          "box": [0.8564, 0.7007, 0.1355, 0.0291],
+          "lines": 1
+        },
+        {
+          "text": "Mandibular fossa",
+          "box": [0.8573, 0.7377, 0.1345, 0.0305],
+          "lines": 1
+        },
+        {
+          "text": "Mental protuberance of mandible",
+          "accept": ["Mental protuberance"],
+          "box": [0.8564, 0.8503, 0.1064, 0.0901],
+          "lines": 3
+        },
+        {
+          "text": "Mandible",
+          "near": [0.47, 0.86],
+          "box": [0.4318, 0.8411, 0.0745, 0.0305],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m08_dg05",
+      "title": "Fetal skull and fontanelles",
+      "file": "m08_newborn_skull.jpg",
+      "prompt": "Newborn skull from above (left) and from the side (right). Name the bones, fontanelles and suture.",
+      "region": [0, 0, 1, 0.92],
+      "labels": [
+        {
+          "text": "Frontal bone",
+          "near": [0.05, 0.13],
+          "box": [0.0027, 0.0997, 0.1009, 0.0593],
+          "lines": 1
+        },
+        {
+          "text": "Ossification center",
+          "near": [0.05, 0.49],
+          "box": [0.0018, 0.434, 0.0873, 0.1105],
+          "lines": 2
+        },
+        {
+          "text": "Posterior fontanelle",
+          "near": [0.04, 0.77],
+          "accept": ["Posterior fontanel"],
+          "box": [0.0009, 0.7116, 0.0755, 0.1078],
+          "lines": 2
+        },
+        {
+          "text": "Frontal suture",
+          "accept": ["Metopic suture"],
+          "box": [0.3736, 0.0135, 0.1018, 0.0593],
+          "lines": 1
+        },
+        {
+          "text": "Anterior fontanelle",
+          "accept": ["Anterior fontanel"],
+          "box": [0.3718, 0.1563, 0.0755, 0.1078],
+          "lines": 2
+        },
+        {
+          "text": "Parietal bone",
+          "near": [0.4, 0.6],
+          "box": [0.3727, 0.5499, 0.0627, 0.1105],
+          "lines": 2
+        },
+        {
+          "text": "Occipital bone",
+          "near": [0.41, 0.84],
+          "box": [0.3727, 0.779, 0.0727, 0.1132],
+          "lines": 2
+        },
+        {
+          "text": "Parietal bone",
+          "near": [0.54, 0.12],
+          "box": [0.49, 0.0889, 0.1045, 0.0593],
+          "lines": 1
+        },
+        {
+          "text": "Ossification center",
+          "near": [0.53, 0.26],
+          "box": [0.4891, 0.2075, 0.0882, 0.1105],
+          "lines": 2
+        },
+        {
+          "text": "Posterior fontanelle",
+          "near": [0.53, 0.44],
+          "accept": ["Posterior fontanel"],
+          "box": [0.4891, 0.3881, 0.0745, 0.1105],
+          "lines": 2
+        },
+        {
+          "text": "Mastoid fontanelle",
+          "accept": ["Mastoid fontanel", "Posterolateral fontanel", "Posterolateral fontanelle"],
+          "box": [0.4891, 0.5876, 0.0745, 0.1105],
+          "lines": 2
+        },
+        {
+          "text": "Occipital bone",
+          "near": [0.55, 0.83],
+          "box": [0.4891, 0.7951, 0.1155, 0.0674],
+          "lines": 1
+        },
+        {
+          "text": "Frontal bone",
+          "near": [0.95, 0.12],
+          "box": [0.8973, 0.0889, 0.1018, 0.0593],
+          "lines": 1
+        },
+        {
+          "text": "Sphenoidal fontanelle",
+          "accept": ["Sphenoidal fontanel", "Anterolateral fontanel", "Anterolateral fontanelle"],
+          "box": [0.8964, 0.434, 0.0855, 0.1132],
+          "lines": 2
+        },
+        {
+          "text": "Temporal bone (squamous portion)",
+          "accept": ["Temporal bone", "Squamous portion of temporal bone"],
+          "box": [0.7309, 0.7951, 0.2509, 0.0674],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m08_dg06",
+      "title": "A typical vertebra",
+      "file": "m08_typical_vertebra.jpg",
+      "prompt": "A thoracic vertebra from above (left) and a stack of vertebrae from the left, behind (right). The middle labels serve both.",
+      "region": [0, 0, 1, 0.89],
+      "labels": [
+        {
+          "text": "Spinal cord",
+          "near": [0.05, 0.12],
+          "box": [0.0, 0.0947, 0.098, 0.0589],
+          "lines": 1
+        },
+        {
+          "text": "Vertebral foramen",
+          "box": [0.0, 0.1853, 0.0788, 0.1032],
+          "lines": 2
+        },
+        {
+          "text": "Facet of superior articular process",
+          "near": [0.03, 0.47],
+          "accept": ["Superior articular facet", "Superior articular process"],
+          "box": [0.0, 0.3916, 0.0733, 0.2168],
+          "lines": 4
+        },
+        {
+          "text": "Facet for head of rib",
+          "near": [0.04, 0.69],
+          "accept": ["Costal facet"],
+          "box": [0.0, 0.6358, 0.0934, 0.1053],
+          "lines": 2
+        },
+        {
+          "text": "Spinous process",
+          "near": [0.29, 0.21],
+          "box": [0.2537, 0.1558, 0.0751, 0.1137],
+          "lines": 2
+        },
+        {
+          "text": "Transverse process",
+          "box": [0.4167, 0.1684, 0.0998, 0.1116],
+          "lines": 2
+        },
+        {
+          "text": "Intervertebral disc",
+          "match": "Intervetebral disc",
+          "box": [0.4185, 0.3011, 0.1502, 0.0505],
+          "lines": 1
+        },
+        {
+          "text": "Vertebral arch",
+          "match": "Vertebral arch:",
+          "accept": ["Neural arch"],
+          "box": [0.4176, 0.3916, 0.1291, 0.0505],
+          "lines": 1
+        },
+        {
+          "text": "Lamina",
+          "box": [0.4286, 0.4442, 0.0687, 0.0505],
+          "lines": 1
+        },
+        {
+          "text": "Pedicle",
+          "box": [0.4286, 0.5053, 0.0668, 0.0505],
+          "lines": 1
+        },
+        {
+          "text": "Body",
+          "accept": ["Vertebral body", "Centrum"],
+          "box": [0.4176, 0.5811, 0.0504, 0.0589],
+          "lines": 1
+        },
+        {
+          "text": "Intervertebral foramen",
+          "match": "Spinal nerve exiting through intervertebral foramen",
+          "accept": ["Spinal nerve exiting through intervertebral foramen"],
+          "box": [0.4167, 0.6632, 0.1886, 0.1579],
+          "lines": 3
+        },
+        {
+          "text": "Spinal cord",
+          "near": [0.9, 0.13],
+          "box": [0.8544, 0.0989, 0.1016, 0.0611],
+          "lines": 1
+        },
+        {
+          "text": "Facet of superior articular process",
+          "near": [0.93, 0.24],
+          "accept": ["Superior articular facet", "Superior articular process"],
+          "box": [0.8544, 0.1811, 0.1456, 0.1116],
+          "lines": 2
+        },
+        {
+          "text": "Facet for head of rib",
+          "near": [0.92, 0.42],
+          "accept": ["Costal facet"],
+          "box": [0.8544, 0.3663, 0.1273, 0.1032],
+          "lines": 2
+        },
+        {
+          "text": "Inferior articular process",
+          "box": [0.8553, 0.6274, 0.1392, 0.1116],
+          "lines": 2
+        },
+        {
+          "text": "Spinous process",
+          "near": [0.93, 0.78],
+          "box": [0.8544, 0.7537, 0.1456, 0.0589],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m08_dg07",
+      "title": "Sternum and thoracic cage",
+      "file": "m08_thoracic_cage.jpg",
+      "prompt": "The sternum alone (left) and the whole thoracic cage (right), both anterior views. Name the parts of the sternum and the kinds of ribs.",
+      "region": [0, 0, 1, 0.955],
+      "labels": [
+        {
+          "text": "Clavicular notch",
+          "near": [0.04, 0.11],
+          "box": [0.0, 0.0737, 0.0836, 0.0737],
+          "lines": 2
+        },
+        {
+          "text": "Jugular notch",
+          "near": [0.3, 0.08],
+          "accept": ["Suprasternal notch"],
+          "box": [0.2655, 0.0445, 0.0673, 0.0722],
+          "lines": 2
+        },
+        {
+          "text": "Manubrium",
+          "near": [0.05, 0.24],
+          "box": [0.0, 0.2273, 0.0945, 0.0353],
+          "lines": 1
+        },
+        {
+          "text": "Sternal angle",
+          "near": [0.03, 0.34],
+          "box": [0.0, 0.298, 0.0609, 0.0799],
+          "lines": 2
+        },
+        {
+          "text": "Body",
+          "near": [0.05, 0.54],
+          "accept": ["Body of sternum"],
+          "box": [0.0273, 0.5146, 0.0482, 0.0415],
+          "lines": 1
+        },
+        {
+          "text": "Xiphoid process",
+          "near": [0.06, 0.85],
+          "box": [0.0273, 0.8095, 0.07, 0.0783],
+          "lines": 2
+        },
+        {
+          "text": "Jugular notch",
+          "near": [0.38, 0.17],
+          "accept": ["Suprasternal notch"],
+          "box": [0.3182, 0.1521, 0.1155, 0.043],
+          "lines": 1
+        },
+        {
+          "text": "Sternum",
+          "match": "Sternum:",
+          "box": [0.3191, 0.3287, 0.0855, 0.0369],
+          "lines": 1
+        },
+        {
+          "text": "Manubrium",
+          "near": [0.38, 0.38],
+          "box": [0.33, 0.3656, 0.0964, 0.0369],
+          "lines": 1
+        },
+        {
+          "text": "Body",
+          "near": [0.35, 0.42],
+          "accept": ["Body of sternum"],
+          "box": [0.33, 0.4025, 0.0473, 0.043],
+          "lines": 1
+        },
+        {
+          "text": "Xiphoid process",
+          "near": [0.35, 0.59],
+          "box": [0.3191, 0.5545, 0.07, 0.0783],
+          "lines": 2
+        },
+        {
+          "text": "Clavicular notch",
+          "near": [0.93, 0.17],
+          "box": [0.8591, 0.1521, 0.1355, 0.0353],
+          "lines": 1
+        },
+        {
+          "text": "Clavicle",
+          "box": [0.8591, 0.2289, 0.07, 0.0369],
+          "lines": 1
+        },
+        {
+          "text": "Scapula",
+          "box": [0.8591, 0.3656, 0.0727, 0.0415],
+          "lines": 1
+        },
+        {
+          "text": "Sternal angle",
+          "near": [0.92, 0.48],
+          "box": [0.8591, 0.4608, 0.1136, 0.043],
+          "lines": 1
+        },
+        {
+          "text": "Costal cartilages",
+          "accept": ["Costal cartilage"],
+          "box": [0.8591, 0.6037, 0.1409, 0.043],
+          "lines": 1
+        },
+        {
+          "text": "Intercostal space",
+          "box": [0.86, 0.722, 0.14, 0.043],
+          "lines": 1
+        }
+      ]
+    }
   ]
 }

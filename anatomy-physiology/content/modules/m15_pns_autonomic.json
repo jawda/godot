@@ -454,5 +454,232 @@
       ],
       "explanation": "Myelinated preganglionic fibers enter the chain through the white ramus, synapse, and unmyelinated postganglionic fibers rejoin the spinal nerve through the gray ramus to travel to skin targets."
     }
+  ],
+  "diagrams": [
+    {
+      "id": "m15_dg01",
+      "title": "Cranial nerves",
+      "file": "m15_cranial_nerves.jpg",
+      "prompt": "Inferior view of the brain. Name each cranial nerve; Roman numerals count too.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Olfactory nerve I",
+          "accept": ["Olfactory nerve", "CN I", "Olfactory"],
+          "box": [0.0, 0.0692, 0.1135, 0.0916],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Oculomotor nerve III",
+          "accept": ["Oculomotor nerve", "CN III", "Oculomotor"],
+          "box": [0.0, 0.2077, 0.139, 0.0937],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Trochlear nerve IV",
+          "accept": ["Trochlear nerve", "CN IV", "Trochlear"],
+          "box": [0.0, 0.3646, 0.1135, 0.0916],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Abducens nerve VI",
+          "accept": ["Abducens nerve", "CN VI", "Abducens"],
+          "box": [0.0, 0.501, 0.1224, 0.0916],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Vestibulocochlear nerve VIII",
+          "accept": ["Vestibulocochlear nerve", "CN VIII", "Vestibulocochlear"],
+          "box": [0.0, 0.6273, 0.2117, 0.0896],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Hypoglossal nerve XII",
+          "accept": ["Hypoglossal nerve", "CN XII", "Hypoglossal"],
+          "box": [0.0, 0.7699, 0.148, 0.0916],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Accessory nerve XI",
+          "accept": ["Accessory nerve", "CN XI", "Accessory"],
+          "box": [0.0, 0.8921, 0.125, 0.0916],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Optic nerve II",
+          "accept": ["Optic nerve", "CN II", "Optic"],
+          "box": [0.7768, 0.2566, 0.1633, 0.053],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Trigeminal nerve V",
+          "accept": ["Trigeminal nerve", "CN V", "Trigeminal"],
+          "box": [0.7755, 0.4399, 0.2245, 0.055],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Facial nerve VII",
+          "accept": ["Facial nerve", "CN VII", "Facial"],
+          "box": [0.7781, 0.5927, 0.1862, 0.0448],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Glossopharyngeal nerve IX",
+          "accept": ["Glossopharyngeal nerve", "CN IX", "Glossopharyngeal"],
+          "box": [0.7768, 0.7067, 0.2207, 0.0937],
+          "lines": 2,
+          "manual": true
+        },
+        {
+          "text": "Vagus nerve X",
+          "accept": ["Vagus nerve", "CN X", "Vagus"],
+          "box": [0.7768, 0.8473, 0.1786, 0.053],
+          "lines": 1,
+          "manual": true
+        }
+      ]
+    },
+    {
+      "id": "m15_dg02",
+      "title": "Structure of a nerve",
+      "file": "m15_nerve_structure.jpg",
+      "prompt": "A spinal nerve cut open, with one fascicle enlarged at right. Name the connective tissue layers from outside in.",
+      "region": [0, 0, 1, 0.44],
+      "labels": [
+        {
+          "text": "Spinal nerve",
+          "box": [0.0009, 0.0143, 0.1182, 0.0239],
+          "lines": 1
+        },
+        {
+          "text": "Epineurium",
+          "box": [0.0018, 0.0462, 0.1082, 0.0239],
+          "lines": 1
+        },
+        {
+          "text": "Blood vessels",
+          "box": [0.0018, 0.203, 0.1291, 0.0207],
+          "lines": 1
+        },
+        {
+          "text": "Fascicle",
+          "box": [0.3345, 0.2739, 0.0782, 0.0207],
+          "lines": 1
+        },
+        {
+          "text": "Perineurium",
+          "near": [0.06, 0.33],
+          "box": [0.0018, 0.3193, 0.1136, 0.0199],
+          "lines": 1
+        },
+        {
+          "text": "Endoneurium",
+          "box": [0.0018, 0.3654, 0.1255, 0.0207],
+          "lines": 1
+        },
+        {
+          "text": "Perineurium",
+          "near": [0.82, 0.095],
+          "box": [0.7673, 0.0844, 0.1136, 0.0199],
+          "lines": 1
+        },
+        {
+          "text": "Axon",
+          "box": [0.9445, 0.2237, 0.0518, 0.0199],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m15_dg03",
+      "title": "Nerve plexuses",
+      "file": "m15_plexuses.jpg",
+      "prompt": "Posterior view of the spinal cord with spinal segments numbered. Name the four plexuses and the major nerves they give rise to.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Cervical plexus",
+          "box": [0.8244, 0.0893, 0.1756, 0.02],
+          "lines": 1
+        },
+        {
+          "text": "Brachial plexus",
+          "box": [0.8256, 0.1786, 0.1744, 0.02],
+          "lines": 1
+        },
+        {
+          "text": "Lumbar plexus",
+          "box": [0.8256, 0.6821, 0.1696, 0.02],
+          "lines": 1
+        },
+        {
+          "text": "Sacral plexus",
+          "box": [0.8256, 0.8379, 0.1566, 0.0207],
+          "lines": 1
+        },
+        {
+          "text": "Phrenic nerve",
+          "box": [0.0047, 0.1693, 0.1601, 0.0171],
+          "lines": 1
+        },
+        {
+          "text": "Axillary nerve",
+          "box": [0.0036, 0.2071, 0.1566, 0.02],
+          "lines": 1
+        },
+        {
+          "text": "Median nerve",
+          "box": [0.004, 0.233, 0.16, 0.022],
+          "lines": 1,
+          "manual": true
+        },
+        {
+          "text": "Radial nerve",
+          "box": [0.0047, 0.2593, 0.1459, 0.0171],
+          "lines": 1
+        },
+        {
+          "text": "Ulnar nerve",
+          "box": [0.0047, 0.2829, 0.1352, 0.0171],
+          "lines": 1
+        },
+        {
+          "text": "Femoral nerve",
+          "box": [0.0047, 0.7879, 0.1661, 0.0171],
+          "lines": 1
+        },
+        {
+          "text": "Obturator nerve",
+          "box": [0.0036, 0.8114, 0.1815, 0.0179],
+          "lines": 1
+        },
+        {
+          "text": "Common fibular nerve",
+          "accept": ["Common peroneal nerve"],
+          "box": [0.0024, 0.92, 0.1459, 0.0357],
+          "lines": 2
+        },
+        {
+          "text": "Sciatic nerve",
+          "box": [0.0036, 0.9821, 0.1495, 0.0179],
+          "lines": 1
+        },
+        {
+          "text": "Tibial nerve",
+          "box": [0.3511, 0.9771, 0.1364, 0.0171],
+          "lines": 1
+        }
+      ]
+    }
   ]
 }

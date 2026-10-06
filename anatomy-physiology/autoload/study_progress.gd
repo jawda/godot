@@ -28,6 +28,8 @@ var _last_saved_unix: int = 0
 var _last_result_by_question: Dictionary[String, bool] = {}
 var _known_flashcards: Dictionary[String, bool] = {}
 var _best_score_by_module: Dictionary[String, float] = {}
+## Best first-check score per labeled diagram id.
+var _best_score_by_diagram: Dictionary[String, float] = {}
 ## Keys from lesson_section_key().
 var _read_sections: Dictionary[String, bool] = {}
 ## Module id -> (section index, page index) of the last lesson page shown.
@@ -247,6 +249,16 @@ func best_quiz_score(module_id: String) -> float:
 	return _best_score_by_module.get(module_id, -1.0)
 
 
+func record_diagram_score(diagram_id: String, score_fraction: float) -> void:
+	_best_score_by_diagram[diagram_id] = maxf(best_diagram_score(diagram_id), score_fraction)
+	_save()
+
+
+## Returns -1.0 when the diagram has never been checked.
+func best_diagram_score(diagram_id: String) -> float:
+	return _best_score_by_diagram.get(diagram_id, -1.0)
+
+
 ## Fraction of a module's questions whose most recent answer was correct.
 func question_mastery(module: StudyModule) -> float:
 	if module.quiz_questions.is_empty():
@@ -269,6 +281,9 @@ func known_flashcard_count(module: StudyModule) -> int:
 func has_started(module: StudyModule) -> bool:
 	for question: QuizQuestion in module.quiz_questions:
 		if was_answered(question.id):
+			return true
+	for diagram: LabeledDiagram in module.diagrams:
+		if best_diagram_score(diagram.id) >= 0.0:
 			return true
 	return known_flashcard_count(module) > 0 or read_section_count(module) > 0
 
@@ -293,6 +308,7 @@ func _clear_progress() -> void:
 	_last_result_by_question.clear()
 	_known_flashcards.clear()
 	_best_score_by_module.clear()
+	_best_score_by_diagram.clear()
 	_read_sections.clear()
 	_lesson_positions.clear()
 	_last_module_id = ""
@@ -312,6 +328,7 @@ func _save() -> void:
 		"answers": _last_result_by_question,
 		"known_flashcards": _known_flashcards.keys(),
 		"best_scores": _best_score_by_module,
+		"diagram_scores": _best_score_by_diagram,
 		"read_sections": _read_sections.keys(),
 		"lesson_positions": positions,
 		"last_module": _last_module_id,
@@ -336,6 +353,9 @@ func _load_progress(parsed: Variant) -> void:
 	var best_scores: Dictionary = save_data.get("best_scores", {})
 	for module_id: String in best_scores:
 		_best_score_by_module[module_id] = float(best_scores[module_id])
+	var diagram_scores: Dictionary = save_data.get("diagram_scores", {})
+	for diagram_id: String in diagram_scores:
+		_best_score_by_diagram[diagram_id] = float(diagram_scores[diagram_id])
 	var positions: Dictionary = save_data.get("lesson_positions", {})
 	for module_id: String in positions:
 		var position: Array = positions[module_id]

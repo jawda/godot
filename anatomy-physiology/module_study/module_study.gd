@@ -1,11 +1,11 @@
 class_name ModuleStudy
 extends MarginContainer
-## One module's study screen: Lesson, Flashcards, and Quiz tabs.
+## One module's study screen: Lesson, Flashcards, Quiz, and Diagrams tabs.
 ## TabContainer turns each child node into a tab named after the node.
 
 signal back_requested
 
-enum Tab { LESSON, FLASHCARDS, QUIZ }
+enum Tab { LESSON, FLASHCARDS, QUIZ, DIAGRAMS }
 
 var _module: StudyModule = null
 
@@ -17,6 +17,7 @@ var _module: StudyModule = null
 @onready var _lesson: LessonView = $Layout/Sections/Lesson
 @onready var _flashcards: FlashcardDeck = $Layout/Sections/Flashcards
 @onready var _quiz: QuizRunner = $Layout/Sections/Quiz
+@onready var _diagrams: DiagramPractice = $Layout/Sections/Diagrams
 @onready var _figure_viewer: FigureViewer = $FigureViewer
 
 
@@ -34,6 +35,10 @@ func show_module(module: StudyModule, opening_tab: int = Tab.LESSON) -> void:
 	_lesson.show_module(module)
 	_flashcards.load_deck(module.flashcards)
 	_quiz.start(module.quiz_questions, module.id)
+	_diagrams.load_diagrams(module.diagrams)
+	_sections.set_tab_hidden(Tab.DIAGRAMS, module.diagrams.is_empty())
+	if opening_tab == Tab.DIAGRAMS and module.diagrams.is_empty():
+		opening_tab = Tab.LESSON
 	_figure_viewer.hide()
 	# tab_changed only fires on an actual change, so record the place directly too.
 	_sections.current_tab = opening_tab

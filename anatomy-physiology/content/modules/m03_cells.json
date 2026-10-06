@@ -421,5 +421,368 @@
       "answer": 0,
       "explanation": "Gap junctions form protein channels that connect the cytoplasm of adjacent cells, letting electrical signals spread. Desmosomes are also abundant in heart muscle, but they hold cells together mechanically rather than allowing ions to pass. Tight junctions seal cells to prevent leakage."
     }
+  ],
+  "diagrams": [
+    {
+      "id": "m03_dg01",
+      "title": "Parts of a typical cell",
+      "file": "m03_cell.jpg",
+      "prompt": "A generalized animal cell; name each organelle and cell structure.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Mitochondria",
+          "accept": ["Mitochondrion"],
+          "box": [0.6433, 0.0016, 0.1415, 0.0357],
+          "lines": 1
+        },
+        {
+          "text": "Intermediate filament",
+          "accept": ["Intermediate filaments"],
+          "box": [0.2165, 0.045, 0.1378, 0.0682],
+          "lines": 2
+        },
+        {
+          "text": "Ribosomes",
+          "accept": ["Ribosome"],
+          "box": [0.1464, 0.1504, 0.123, 0.0341],
+          "lines": 1
+        },
+        {
+          "text": "Rough endoplasmic reticulum",
+          "accept": ["Rough ER", "RER"],
+          "box": [0.0123, 0.245, 0.2116, 0.0682],
+          "lines": 2
+        },
+        {
+          "text": "Nucleus",
+          "box": [0.0726, 0.3674, 0.0923, 0.0341],
+          "lines": 1
+        },
+        {
+          "text": "Nucleolus",
+          "box": [0.0246, 0.4543, 0.1095, 0.0357],
+          "lines": 1
+        },
+        {
+          "text": "Chromatin",
+          "box": [0.0, 0.5581, 0.1107, 0.0357],
+          "lines": 1
+        },
+        {
+          "text": "Golgi apparatus",
+          "accept": ["Golgi complex", "Golgi body"],
+          "box": [0.0, 0.6822, 0.1107, 0.0729],
+          "lines": 2
+        },
+        {
+          "text": "Golgi vesicle",
+          "box": [0.0025, 0.8574, 0.1378, 0.0419],
+          "lines": 1
+        },
+        {
+          "text": "Cytoplasm",
+          "accept": ["Cytosol"],
+          "box": [0.1218, 0.9628, 0.1169, 0.0372],
+          "lines": 1
+        },
+        {
+          "text": "Plasma membrane",
+          "accept": ["Cell membrane"],
+          "box": [0.7761, 0.0744, 0.1181, 0.0667],
+          "lines": 2
+        },
+        {
+          "text": "Microtubule",
+          "accept": ["Microtubules"],
+          "box": [0.8413, 0.2357, 0.1279, 0.0357],
+          "lines": 1
+        },
+        {
+          "text": "Centrosome",
+          "box": [0.8585, 0.3519, 0.1341, 0.0357],
+          "lines": 1
+        },
+        {
+          "text": "Microfilament",
+          "accept": ["Microfilaments", "Actin filament"],
+          "box": [0.8585, 0.4558, 0.1415, 0.0357],
+          "lines": 1
+        },
+        {
+          "text": "Lysosome",
+          "box": [0.8229, 0.6093, 0.1132, 0.0403],
+          "lines": 1
+        },
+        {
+          "text": "Smooth endoplasmic reticulum",
+          "accept": ["Smooth ER", "SER"],
+          "box": [0.7712, 0.7194, 0.2239, 0.0682],
+          "lines": 2
+        },
+        {
+          "text": "Secretory vesicle",
+          "box": [0.6913, 0.8124, 0.1845, 0.0419],
+          "lines": 1
+        },
+        {
+          "text": "Peroxisome",
+          "box": [0.615, 0.8698, 0.1279, 0.0341],
+          "lines": 1
+        },
+        {
+          "text": "Vacuole",
+          "box": [0.4613, 0.9628, 0.091, 0.0357],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m03_dg02",
+      "title": "The plasma membrane",
+      "file": "m03_membrane.jpg",
+      "prompt": "A section of plasma membrane seen in 3-D; name each component.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Glycoprotein",
+          "match": "Glycoprotein: protein with carbohydrate attached",
+          "box": [0.1783, 0.0, 0.2617, 0.115],
+          "lines": 2
+        },
+        {
+          "text": "Glycolipid",
+          "match": "Glycolipid: lipid with carbohydrate attached",
+          "box": [0.7531, 0.005, 0.2069, 0.16],
+          "lines": 3
+        },
+        {
+          "text": "Peripheral membrane protein",
+          "accept": ["Peripheral protein"],
+          "box": [0.0, 0.78, 0.2114, 0.1175],
+          "lines": 2
+        },
+        {
+          "text": "Integral membrane protein",
+          "accept": ["Integral protein"],
+          "box": [0.2366, 0.8925, 0.1874, 0.1075],
+          "lines": 2
+        },
+        {
+          "text": "Cholesterol",
+          "box": [0.4994, 0.89, 0.1154, 0.0575],
+          "lines": 1
+        },
+        {
+          "text": "Channel protein",
+          "accept": ["Protein channel"],
+          "box": [0.6834, 0.89, 0.1589, 0.0675],
+          "lines": 1
+        },
+        {
+          "text": "Phospholipid bilayer",
+          "accept": ["Lipid bilayer"],
+          "box": [0.8709, 0.785, 0.1291, 0.1175],
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "id": "m03_dg03",
+      "title": "The nucleus",
+      "file": "m03_nucleus.jpg",
+      "prompt": "Cutaway view of the nucleus with the endoplasmic reticulum wrapped around it; name each structure.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Nuclear envelope",
+          "accept": ["Nuclear membrane"],
+          "box": [0.0, 0.0902, 0.1918, 0.0434],
+          "lines": 1
+        },
+        {
+          "text": "Chromatin",
+          "match": "Chromatin (condensed)",
+          "box": [0.0, 0.1836, 0.1377, 0.0785],
+          "lines": 2
+        },
+        {
+          "text": "Nucleolus",
+          "box": [0.0, 0.3656, 0.1107, 0.0367],
+          "lines": 1
+        },
+        {
+          "text": "Nuclear pores",
+          "accept": ["Nuclear pore"],
+          "box": [0.8456, 0.0351, 0.1544, 0.0451],
+          "lines": 1
+        },
+        {
+          "text": "Nucleus",
+          "box": [0.8456, 0.2571, 0.0952, 0.0384],
+          "lines": 1
+        },
+        {
+          "text": "Cisternae",
+          "accept": ["Cisterna", "ER cisternae"],
+          "box": [0.13, 0.9616, 0.1133, 0.0384],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m03_dg04",
+      "title": "Phases of mitosis",
+      "file": "m03_mitosis.jpg",
+      "prompt": "A dividing cell shown left to right through each stage; name each stage.",
+      "region": [0, 0, 1, 0.235],
+      "labels": [
+        {
+          "text": "Prophase",
+          "box": [0.0445, 0.0118, 0.0827, 0.0307],
+          "lines": 1
+        },
+        {
+          "text": "Prometaphase",
+          "box": [0.1918, 0.013, 0.1218, 0.0295],
+          "lines": 1
+        },
+        {
+          "text": "Metaphase",
+          "box": [0.3727, 0.013, 0.0927, 0.0295],
+          "lines": 1
+        },
+        {
+          "text": "Anaphase",
+          "box": [0.5391, 0.013, 0.0864, 0.0295],
+          "lines": 1
+        },
+        {
+          "text": "Telophase",
+          "box": [0.7082, 0.013, 0.0891, 0.0295],
+          "lines": 1
+        },
+        {
+          "text": "Cytokinesis",
+          "box": [0.8673, 0.0118, 0.1009, 0.0307],
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "id": "m03_dg05",
+      "title": "Blood cell lineages",
+      "file": "m03_hematopoiesis.jpg",
+      "prompt": "Family tree of blood cells, starting from one stem cell at the top; name each cell.",
+      "region": [0, 0, 1, 1],
+      "labels": [
+        {
+          "text": "Hemocytoblast",
+          "match": "Multipotential hematopoietic stem cell (Hemocytoblast)",
+          "accept": ["Hematopoietic stem cell", "Multipotential hematopoietic stem cell"],
+          "box": [0.3918, 0.0819, 0.2073, 0.0509],
+          "lines": 2
+        },
+        {
+          "text": "Common myeloid progenitor",
+          "accept": ["Myeloid stem cell"],
+          "box": [0.1636, 0.2821, 0.2109, 0.0288],
+          "lines": 1
+        },
+        {
+          "text": "Common lymphoid progenitor",
+          "accept": ["Lymphoid stem cell"],
+          "box": [0.6345, 0.2832, 0.2209, 0.0277],
+          "lines": 1
+        },
+        {
+          "text": "Megakaryocyte",
+          "box": [0.0145, 0.6327, 0.1164, 0.0277],
+          "lines": 1
+        },
+        {
+          "text": "Thrombocytes",
+          "accept": ["Platelets", "Thrombocyte"],
+          "box": [0.0182, 0.7577, 0.1091, 0.0288],
+          "lines": 1
+        },
+        {
+          "text": "Erythrocyte",
+          "accept": ["Red blood cell", "RBC"],
+          "box": [0.1582, 0.4757, 0.0882, 0.0277],
+          "lines": 1
+        },
+        {
+          "text": "Mast cell",
+          "box": [0.2745, 0.4746, 0.07, 0.0254],
+          "lines": 1
+        },
+        {
+          "text": "Myeloblast",
+          "box": [0.3845, 0.4746, 0.0845, 0.0288],
+          "lines": 1
+        },
+        {
+          "text": "Basophil",
+          "box": [0.19, 0.7002, 0.0682, 0.0288],
+          "lines": 1
+        },
+        {
+          "text": "Neutrophil",
+          "box": [0.28, 0.7002, 0.08, 0.0277],
+          "lines": 1
+        },
+        {
+          "text": "Eosinophil",
+          "box": [0.3855, 0.7002, 0.08, 0.0277],
+          "lines": 1
+        },
+        {
+          "text": "Monocyte",
+          "box": [0.4927, 0.7002, 0.0773, 0.0277],
+          "lines": 1
+        },
+        {
+          "text": "Macrophage",
+          "box": [0.3991, 0.9657, 0.0964, 0.0288],
+          "lines": 1
+        },
+        {
+          "text": "Dendritic cell",
+          "box": [0.5582, 0.9657, 0.0991, 0.0243],
+          "lines": 1
+        },
+        {
+          "text": "Natural killer cell",
+          "match": "Natural killer cell (Large granular lymphocyte)",
+          "accept": ["NK cell", "Large granular lymphocyte"],
+          "box": [0.5282, 0.4712, 0.2091, 0.0498],
+          "lines": 2
+        },
+        {
+          "text": "Small lymphocyte",
+          "accept": ["Lymphocyte"],
+          "box": [0.8118, 0.4558, 0.1336, 0.0277],
+          "lines": 1
+        },
+        {
+          "text": "T lymphocyte",
+          "accept": ["T cell"],
+          "box": [0.7491, 0.6084, 0.1036, 0.0277],
+          "lines": 1
+        },
+        {
+          "text": "B lymphocyte",
+          "accept": ["B cell"],
+          "box": [0.8882, 0.6084, 0.1036, 0.0277],
+          "lines": 1
+        },
+        {
+          "text": "Plasma cell",
+          "box": [0.8955, 0.7588, 0.0891, 0.0254],
+          "lines": 1
+        }
+      ]
+    }
   ]
 }
