@@ -1,0 +1,120 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://terminology/term_reference.gd" id="1_reference"]
+[ext_resource type="PackedScene" path="res://terminology/term_card.tscn" id="2_card"]
+
+[sub_resource type="ButtonGroup" id="filter_group"]
+
+[node name="TermReference" type="HBoxContainer"]
+theme_override_constants/separation = 24
+script = ExtResource("1_reference")
+
+[node name="List" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+theme_type_variation = &"OutlinePanel"
+
+[node name="Layout" type="VBoxContainer" parent="List"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Search" type="LineEdit" parent="List/Layout"]
+layout_mode = 2
+placeholder_text = "Search a term or a meaning: itis, cardio, heart"
+clear_button_enabled = true
+
+[node name="Filters" type="HFlowContainer" parent="List/Layout"]
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+
+[node name="All" type="Button" parent="List/Layout/Filters"]
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ModeToggle"
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("filter_group")
+text = "All"
+
+[node name="Prefixes" type="Button" parent="List/Layout/Filters"]
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ModeToggle"
+toggle_mode = true
+button_group = SubResource("filter_group")
+text = "Prefixes"
+
+[node name="Roots" type="Button" parent="List/Layout/Filters"]
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ModeToggle"
+toggle_mode = true
+button_group = SubResource("filter_group")
+text = "Roots"
+
+[node name="Suffixes" type="Button" parent="List/Layout/Filters"]
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ModeToggle"
+toggle_mode = true
+button_group = SubResource("filter_group")
+text = "Suffixes"
+
+[node name="Words" type="Button" parent="List/Layout/Filters"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Whole words from the lessons, broken into their parts"
+theme_type_variation = &"ModeToggle"
+toggle_mode = true
+button_group = SubResource("filter_group")
+text = "Words"
+
+[node name="Body" type="Button" parent="List/Layout/Filters"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Directions, planes, regions, cavities, and positions"
+theme_type_variation = &"ModeToggle"
+toggle_mode = true
+button_group = SubResource("filter_group")
+text = "Body terms"
+
+[node name="Abbreviations" type="Button" parent="List/Layout/Filters"]
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ModeToggle"
+toggle_mode = true
+button_group = SubResource("filter_group")
+text = "Abbreviations"
+
+[node name="Count" type="Label" parent="List/Layout"]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "0 of 0 terms"
+
+[node name="Results" type="ScrollContainer" parent="List/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Entries" type="VBoxContainer" parent="List/Layout/Results"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="NoMatches" type="Label" parent="List/Layout"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"MutedLabel"
+text = "Nothing matches. Try part of the word, or search the meaning instead."
+autowrap_mode = 3
+
+[node name="Detail" type="ScrollContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+
+[node name="Card" parent="Detail" instance=ExtResource("2_card")]
+layout_mode = 2
+size_flags_vertical = 0

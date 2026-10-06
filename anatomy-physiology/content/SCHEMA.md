@@ -109,3 +109,48 @@ typing.
   `file` is a name inside `content/images/`. Images are JPG or PNG, about 1000 px wide.
   Only use images whose license allows reuse (CC BY, CC BY-SA, CC0, public domain) and
   record the license in `credit` and the original page in `source`.
+
+# Medical terminology schema
+
+Every file in `content/terminology/` adds entries to the **Medical terms** screen (the
+searchable reference, its flashcards, and its quiz) and to the clickable terms in lesson
+text. Files are merged, so the split into files is only for editing convenience.
+
+```json
+{
+  "entries": [
+    { "id": "p_hypo", "kind": "prefix", "term": "hypo-", "meaning": "below, under; deficient",
+      "examples": ["hypodermis: the layer below the skin", "hypoglycemia: low blood glucose"] },
+    { "id": "r_oste", "kind": "root", "term": "oste/o", "meaning": "bone",
+      "examples": ["osteocyte: a mature bone cell"] },
+    { "id": "s_blast", "kind": "suffix", "term": "-blast", "meaning": "immature or forming cell",
+      "examples": ["osteoblast: a bone-forming cell"] },
+    { "id": "w_osteoblast", "kind": "word", "term": "osteoblast", "forms": ["osteoblasts"],
+      "meaning": "a cell that builds new bone matrix", "parts": ["r_oste", "s_blast"] },
+    { "id": "b_anterior", "kind": "body", "group": "Directional terms", "term": "anterior",
+      "forms": ["ventral"], "meaning": "toward the front of the body", "opposite": "b_posterior",
+      "examples": ["The sternum is anterior to the heart."] },
+    { "id": "a_cns", "kind": "abbreviation", "term": "CNS", "meaning": "central nervous system",
+      "examples": ["The CNS is the brain and spinal cord."] }
+  ]
+}
+```
+
+- `kind` is one of `prefix`, `root`, `suffix`, `word`, `body`, `abbreviation`.
+- Ids are unique across all files and follow the kind: `p_` prefix, `r_` root
+  (combining form), `s_` suffix, `w_` word, `b_` body term, `a_` abbreviation, then the
+  lowercase ASCII stem (`r_oste` for oste/o, `s_itis` for -itis).
+- Write prefixes with a trailing hyphen (`hypo-`), suffixes with a leading hyphen
+  (`-itis`), and roots as combining forms (`cardi/o`). `meaning` is short enough to be a
+  quiz answer; separate senses with a semicolon.
+- `word` entries break a whole word into `parts` (ids of prefix/root/suffix entries, in
+  order). Every part id must exist.
+- `body` entries need a `group`: `Directional terms`, `Body planes`, `Body regions`,
+  `Body cavities`, or `Body positions`. `opposite` is optional and names another body id.
+- `forms` lists other spellings (plurals, synonyms) that should also link from lesson
+  text. Lessons link a word, body term, or abbreviation the first time it appears on a
+  page: words and body terms match case-insensitively, abbreviations exactly. Set
+  `"link": false` on a term that is also everyday English (deep, section, parietal) so
+  lessons don't link it where it means something else.
+- `examples` are optional plain strings; the same text rules as modules apply (no square
+  brackets, no em dashes).

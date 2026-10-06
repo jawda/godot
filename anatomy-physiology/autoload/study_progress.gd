@@ -148,8 +148,8 @@ func profile_summary(profile_id: String) -> Dictionary:
 	var read_count: int = 0
 	if data is Dictionary:
 		var answers: Dictionary = (data as Dictionary).get("answers", {})
-		for was_correct: Variant in answers.values():
-			if bool(was_correct):
+		for question_id: String in answers:
+			if bool(answers[question_id]) and not ContentLibrary.is_terminology_question(question_id):
 				mastered_count += 1
 		read_count = ((data as Dictionary).get("read_sections", []) as Array).size()
 	return {"mastered": mastered_count, "read": read_count}
@@ -288,10 +288,12 @@ func has_started(module: StudyModule) -> bool:
 	return known_flashcard_count(module) > 0 or read_section_count(module) > 0
 
 
+## Module questions only: the generated terminology questions are extra practice and
+## would otherwise push the home screen's "N of M mastered" past M.
 func mastered_question_count() -> int:
 	var mastered_count: int = 0
-	for was_correct: bool in _last_result_by_question.values():
-		if was_correct:
+	for question_id: String in _last_result_by_question:
+		if _last_result_by_question[question_id] and not ContentLibrary.is_terminology_question(question_id):
 			mastered_count += 1
 	return mastered_count
 

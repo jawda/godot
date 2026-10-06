@@ -5,6 +5,7 @@ extends MarginContainer
 signal module_chosen(module: StudyModule)
 signal mixed_review_requested
 signal missed_review_requested
+signal terminology_requested
 signal continue_requested(module: StudyModule, tab: int)
 signal switch_profile_requested
 
@@ -20,6 +21,7 @@ var _tiles: Array[ModuleTile] = []
 @onready var _overall: Label = $Layout/Actions/Overall
 @onready var _mixed_review: Button = $Layout/Actions/MixedReview
 @onready var _missed_questions: Button = $Layout/Actions/MissedQuestions
+@onready var _medical_terms: Button = $Layout/Actions/MedicalTerms
 @onready var _module_list: ScrollContainer = $Layout/ModuleList
 @onready var _modules: GridContainer = $Layout/ModuleList/Modules
 @onready var _load_note: Label = $Layout/Footer/LoadNote
@@ -32,6 +34,7 @@ func _ready() -> void:
 	_switch_profile.pressed.connect(switch_profile_requested.emit)
 	_continue.pressed.connect(_on_continue_pressed)
 	_missed_questions.pressed.connect(missed_review_requested.emit)
+	_medical_terms.pressed.connect(terminology_requested.emit)
 	_reset_progress.pressed.connect(_confirm_reset.popup_centered)
 	_confirm_reset.confirmed.connect(StudyProgress.reset_all)
 	StudyProgress.progress_changed.connect(refresh)
@@ -55,6 +58,7 @@ func refresh() -> void:
 	_missed_questions.text = "Missed questions (%d)" % missed_count
 	_missed_questions.disabled = missed_count == 0
 	_mixed_review.disabled = ContentLibrary.total_question_count() == 0
+	_medical_terms.disabled = ContentLibrary.terms.is_empty()
 	_overall.text = "%d of %d questions mastered across %d modules" % [
 		StudyProgress.mastered_question_count(), ContentLibrary.total_question_count(),
 		ContentLibrary.modules.size()]

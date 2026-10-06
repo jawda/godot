@@ -1,0 +1,37 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://terminology/term_list_entry.gd" id="1_entry"]
+
+[node name="TermListEntry" type="Button"]
+custom_minimum_size = Vector2(0, 40)
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"OutlineEntry"
+script = ExtResource("1_entry")
+
+[node name="Content" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_right = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 14
+
+[node name="Term" type="Label" parent="Content"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 4
+text = "oste/o"
+text_overrun_behavior = 3
+
+[node name="Meaning" type="Label" parent="Content"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"MutedLabel"
+text = "bone"
+text_overrun_behavior = 3

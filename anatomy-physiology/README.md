@@ -34,6 +34,19 @@ From the home screen:
 - **Mixed review**: 20 random questions from every module you've started.
 - **Missed questions**: every question whose most recent answer was wrong. Getting it
   right clears it.
+- **Medical terms**: a quick reference for students who haven't taken medical
+  terminology. 763 entries: prefixes, roots, and suffixes; about 240 words from the
+  lessons broken into their parts; body directions, planes, regions, and cavities; and
+  abbreviations. Search by term or by meaning ("itis", "cardio", or "heart"), or filter
+  by kind. A word's card links to its parts, and a part's card lists the words built
+  from it. The **Flashcards** and **Quiz** tabs drill a practice set you pick (word
+  parts by default). Quiz answers show up in Missed questions but don't count toward the
+  module mastery numbers.
+
+Terms in lesson text are underlined the first time they appear on a page. Hover one for
+its meaning, or click it for the full card; **Open in Medical terms** jumps to the
+reference, and its back button returns to the lesson. Content lives in
+`content/terminology/` (see "Medical terminology schema" in `content/SCHEMA.md`).
 
 ## Profiles and saving
 

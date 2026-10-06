@@ -1,12 +1,9 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://module_study/module_study.gd" id="1_study"]
-[ext_resource type="PackedScene" path="res://lesson/lesson_view.tscn" id="2_lesson"]
+[ext_resource type="Script" path="res://terminology/terminology_screen.gd" id="1_screen"]
+[ext_resource type="PackedScene" path="res://terminology/term_reference.tscn" id="2_reference"]
 [ext_resource type="PackedScene" path="res://flashcards/flashcard_deck.tscn" id="3_deck"]
 [ext_resource type="PackedScene" path="res://quiz/quiz_runner.tscn" id="4_quiz"]
-[ext_resource type="PackedScene" path="res://lesson/figure_viewer.tscn" id="5_viewer"]
-[ext_resource type="PackedScene" path="res://diagrams/diagram_practice.tscn" id="6_diagrams"]
-[ext_resource type="PackedScene" path="res://terminology/term_popup.tscn" id="7_term_popup"]
 
 [sub_resource type="InputEventKey" id="key_escape"]
 keycode = 4194305
@@ -14,7 +11,7 @@ keycode = 4194305
 [sub_resource type="Shortcut" id="back_shortcut"]
 events = [SubResource("key_escape")]
 
-[node name="ModuleStudy" type="MarginContainer"]
+[node name="TerminologyScreen" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -24,7 +21,7 @@ theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 24
-script = ExtResource("1_study")
+script = ExtResource("1_screen")
 
 [node name="Layout" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -45,23 +42,55 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="Number" type="Label" parent="Layout/Header/Titles"]
+[node name="Kind" type="Label" parent="Layout/Header/Titles"]
 layout_mode = 2
 theme_type_variation = &"MutedLabel"
-text = "MODULE 1"
+text = "QUICK REFERENCE"
 
 [node name="Title" type="Label" parent="Layout/Header/Titles"]
 layout_mode = 2
 theme_type_variation = &"HeadingLabel"
-text = "Module title"
-text_overrun_behavior = 3
+text = "Medical terms"
+
+[node name="Practice" type="HBoxContainer" parent="Layout/Header"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Caption" type="Label" parent="Layout/Header/Practice"]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "Practice"
+
+[node name="PracticeSet" type="OptionButton" parent="Layout/Header/Practice"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Which terms the flashcards and quiz use"
+selected = 0
+item_count = 8
+popup/item_0/text = "Word parts (prefixes, roots, suffixes)"
+popup/item_0/id = 0
+popup/item_1/text = "Prefixes"
+popup/item_1/id = 1
+popup/item_2/text = "Roots"
+popup/item_2/id = 2
+popup/item_3/text = "Suffixes"
+popup/item_3/id = 3
+popup/item_4/text = "Words from the lessons"
+popup/item_4/id = 4
+popup/item_5/text = "Body terms"
+popup/item_5/id = 5
+popup/item_6/text = "Abbreviations"
+popup/item_6/id = 6
+popup/item_7/text = "Everything"
+popup/item_7/id = 7
 
 [node name="Sections" type="TabContainer" parent="Layout"]
 layout_mode = 2
 size_flags_vertical = 3
 current_tab = 0
 
-[node name="Lesson" parent="Layout/Sections" instance=ExtResource("2_lesson")]
+[node name="Reference" parent="Layout/Sections" instance=ExtResource("2_reference")]
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -74,14 +103,3 @@ metadata/_tab_index = 1
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
-
-[node name="Diagrams" parent="Layout/Sections" instance=ExtResource("6_diagrams")]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 3
-
-[node name="FigureViewer" parent="." instance=ExtResource("5_viewer")]
-layout_mode = 2
-
-[node name="TermPopup" parent="." instance=ExtResource("7_term_popup")]
-layout_mode = 2

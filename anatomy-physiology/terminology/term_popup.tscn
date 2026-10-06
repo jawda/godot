@@ -1,0 +1,64 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://terminology/term_popup.gd" id="1_popup"]
+[ext_resource type="PackedScene" path="res://terminology/term_card.tscn" id="2_card"]
+
+[sub_resource type="InputEventKey" id="key_escape"]
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="close_shortcut"]
+events = [SubResource("key_escape")]
+
+[node name="TermPopup" type="Control"]
+visible = false
+top_level = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_popup")
+
+[node name="Scrim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "Click outside the card to close it"
+color = Color(0, 0, 0, 0.82)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Frame" type="VBoxContainer" parent="Center"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Card" parent="Center/Frame" instance=ExtResource("2_card")]
+layout_mode = 2
+
+[node name="Actions" type="HBoxContainer" parent="Center/Frame"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="OpenReference" type="Button" parent="Center/Frame/Actions"]
+layout_mode = 2
+tooltip_text = "Search every prefix, root, suffix, and body term"
+text = "Open in Medical terms"
+
+[node name="Close" type="Button" parent="Center/Frame/Actions"]
+layout_mode = 2
+theme_type_variation = &"AccentButton"
+shortcut = SubResource("close_shortcut")
+text = "Close"

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" path="res://profiles/profile_select.tscn" id="5_profiles"]
 [ext_resource type="PackedScene" path="res://module_study/module_study.tscn" id="3_study"]
 [ext_resource type="PackedScene" path="res://review/review_session.tscn" id="4_review"]
+[ext_resource type="PackedScene" path="res://terminology/terminology_screen.tscn" id="6_terminology"]
 
 [node name="StudyGuide" type="Control"]
 layout_mode = 3
@@ -27,5 +28,9 @@ visible = false
 layout_mode = 1
 
 [node name="ReviewSession" parent="." instance=ExtResource("4_review")]
+visible = false
+layout_mode = 1
+
+[node name="TerminologyScreen" parent="." instance=ExtResource("6_terminology")]
 visible = false
 layout_mode = 1

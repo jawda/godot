@@ -6,6 +6,7 @@ extends HBoxContainer
 
 signal flashcards_requested
 signal figure_requested(texture: Texture2D, caption: String)
+signal term_requested(entry: TermEntry)
 
 const OUTLINE_ENTRY_SCENE: PackedScene = preload("res://lesson/outline_entry.tscn")
 const TARGET_PAGE_LENGTH: int = 700
@@ -40,6 +41,9 @@ func _ready() -> void:
 	_previous.pressed.connect(_go_back)
 	_next.pressed.connect(_go_forward)
 	_figure.enlarge_requested.connect(figure_requested.emit)
+	_text.meta_clicked.connect(_on_term_clicked)
+	_text.meta_hover_started.connect(_on_term_hovered)
+	_text.meta_hover_ended.connect(func(_meta: Variant) -> void: _text.tooltip_text = "")
 
 
 ## Opens the module where the student left off, or at the first unfinished section.
@@ -101,7 +105,7 @@ func _show_page() -> void:
 	if _pages.size() > 1:
 		_breadcrumb.text += "   ·   Page %d of %d" % [_page_index + 1, _pages.size()]
 	_heading.text = section.heading
-	_text.text = _page_bbcode(_pages[_page_index])
+	_text.text = TermLinker.link_terms(_page_bbcode(_pages[_page_index]))
 	if is_first_page:
 		_figure.show_figure(section)
 	else:
@@ -140,6 +144,23 @@ func _go_back() -> void:
 		_show_page()
 	elif _section_index > 0:
 		_open_section(_section_index - 1, 999)
+
+
+func _on_term_clicked(meta: Variant) -> void:
+	var entry: TermEntry = TermLinker.entry_for_meta(meta)
+	if entry != null:
+		term_requested.emit(entry)
+
+
+## Hovering a linked term previews its meaning before the student commits to a click.
+func _on_term_hovered(meta: Variant) -> void:
+	var entry: TermEntry = TermLinker.entry_for_meta(meta)
+	if entry == null:
+		return
+	var breakdown: String = ContentLibrary.term_breakdown(entry)
+	_text.tooltip_text = "%s: %s" % [entry.term, entry.meaning]
+	if not breakdown.is_empty():
+		_text.tooltip_text += "\n" + breakdown
 
 
 func _page_bbcode(lines: PackedStringArray) -> String:

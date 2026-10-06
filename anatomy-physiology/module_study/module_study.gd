@@ -4,6 +4,7 @@ extends MarginContainer
 ## TabContainer turns each child node into a tab named after the node.
 
 signal back_requested
+signal terminology_requested(entry: TermEntry)
 
 enum Tab { LESSON, FLASHCARDS, QUIZ, DIAGRAMS }
 
@@ -19,12 +20,15 @@ var _module: StudyModule = null
 @onready var _quiz: QuizRunner = $Layout/Sections/Quiz
 @onready var _diagrams: DiagramPractice = $Layout/Sections/Diagrams
 @onready var _figure_viewer: FigureViewer = $FigureViewer
+@onready var _term_popup: TermPopup = $TermPopup
 
 
 func _ready() -> void:
 	_back.pressed.connect(back_requested.emit)
 	_lesson.flashcards_requested.connect(func() -> void: _sections.current_tab = Tab.FLASHCARDS)
 	_lesson.figure_requested.connect(_figure_viewer.open)
+	_lesson.term_requested.connect(_term_popup.open)
+	_term_popup.reference_requested.connect(terminology_requested.emit)
 	_sections.tab_changed.connect(_on_tab_changed)
 
 
@@ -40,6 +44,7 @@ func show_module(module: StudyModule, opening_tab: int = Tab.LESSON) -> void:
 	if opening_tab == Tab.DIAGRAMS and module.diagrams.is_empty():
 		opening_tab = Tab.LESSON
 	_figure_viewer.hide()
+	_term_popup.hide()
 	# tab_changed only fires on an actual change, so record the place directly too.
 	_sections.current_tab = opening_tab
 	_on_tab_changed(opening_tab)

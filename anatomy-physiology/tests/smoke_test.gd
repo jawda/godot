@@ -36,6 +36,7 @@ func _ready() -> void:
 		await _exercise_module(study_guide, module, tile_index == 0)
 		tile_index += 1
 	await _exercise_reviews(study_guide)
+	await _exercise_terminology(study_guide)
 	await _exercise_continue(study_guide)
 	for profile: StudyProfile in StudyProgress.profiles():
 		StudyProgress.delete_profile(profile.id)
@@ -421,6 +422,107 @@ func _exercise_reviews(study_guide: StudyGuide) -> void:
 	study_guide._review_session._back.pressed.emit()
 	await _settle()
 	await _snap("menu_after")
+
+
+## Every generated question, every lesson page's term links, then the Medical terms
+## screen: search, filters, card links, flashcards, a quiz, and the popup from a lesson.
+func _exercise_terminology(study_guide: StudyGuide) -> void:
+	_check(ContentLibrary.terms.size() > 500, "only %d terminology entries loaded" % ContentLibrary.terms.size())
+	for question: QuizQuestion in ContentLibrary.terminology_questions(ContentLibrary.terms):
+		var distinct: Dictionary[String, bool] = {}
+		for choice: String in question.choices:
+			distinct[choice.to_lower()] = true
+		_check(question.choices.size() == 4 and distinct.size() == 4, "%s: choices not 4 distinct answers" % question.id)
+		_check(ContentLibrary.get_question(question.id) == question, "%s: not found by id" % question.id)
+	var link_count: int = 0
+	for module: StudyModule in ContentLibrary.modules:
+		for section: LessonSection in module.lesson_sections:
+			for page: PackedStringArray in section.build_pages(LessonView.TARGET_PAGE_LENGTH):
+				var linked: String = TermLinker.link_terms("\n\n".join(page))
+				link_count += linked.count("[url=")
+				_check(not _parse_bbcode(linked).contains("["), "%s / %s: term links broke the BBCode" % [module.id, section.heading])
+	print("    terminology: %d entries, %d lesson links" % [ContentLibrary.terms.size(), link_count])
+	_check(link_count > 200, "only %d term links across all lessons" % link_count)
+
+	var menu: ModuleMenu = study_guide._module_menu
+	menu._medical_terms.pressed.emit()
+	await _settle()
+	var screen: TerminologyScreen = study_guide._terminology
+	_check(screen.visible, "Medical terms button did not open the screen")
+	var reference: TermReference = screen._reference
+	_check(reference._count.text.begins_with("%d of" % ContentLibrary.terms.size()), "reference does not start with every term listed")
+	await _snap("terms_reference")
+	reference._search.text = "itis"
+	reference._search.text_changed.emit("itis")
+	var itis_rows: Array = reference._entries.filter(func(row: TermListEntry) -> bool: return row.visible)
+	_check(itis_rows.any(func(row: TermListEntry) -> bool: return row.entry.id == "s_itis"), "search for itis misses -itis")
+	_check(reference._current != null and reference._current.visible, "selection not moved to a matching row")
+	reference._search.text = "heart"
+	reference._search.text_changed.emit("heart")
+	_check(reference._row_for(ContentLibrary.get_term("r_cardi")).visible, "search by meaning (heart) misses cardi/o")
+	reference._search.text = ""
+	reference._search.text_changed.emit("")
+	reference._show_prefixes.button_pressed = true
+	_check(reference._entries.all(func(row: TermListEntry) -> bool: return not row.visible or row.entry.kind == TermEntry.Kind.PREFIX), "Prefixes filter shows other kinds")
+	await reference.show_term(ContentLibrary.get_term("w_osteoblast"))
+	_check(reference._show_all.button_pressed and reference._card.entry.id == "w_osteoblast", "show_term did not clear the filter for a hidden word")
+	_check(reference._card._details.text.contains("term:r_oste"), "word card does not link its parts")
+	reference._card._details.meta_clicked.emit("term:r_oste")
+	await _settle()
+	_check(reference._card.entry.id == "r_oste" and reference._current.entry.id == "r_oste", "clicking a part on the card did not select it")
+	_check(reference._card._details.text.contains("term:w_osteoblast"), "part card does not list words built from it")
+	await _snap("terms_card")
+
+	screen._sections.current_tab = TerminologyScreen.Tab.FLASHCARDS
+	await _settle()
+	_check(screen._practice.visible, "practice set hidden on the flashcards tab")
+	var deck: FlashcardDeck = screen._flashcards
+	var word_part_count: int = ContentLibrary.terms.filter(func(entry: TermEntry) -> bool: return entry.is_word_part()).size()
+	_check(deck._all_cards.size() == word_part_count, "word part deck has %d cards, expected %d" % [deck._all_cards.size(), word_part_count])
+	for flip_index: int in 6:
+		deck._card.pressed.emit()
+		deck._know_it.pressed.emit()
+	screen._practice_set.select(TerminologyScreen.PracticeSet.BODY)
+	screen._practice_set.item_selected.emit(TerminologyScreen.PracticeSet.BODY)
+	_check(deck._all_cards.all(func(card: Flashcard) -> bool: return card.id.begins_with("term_b_")), "Body terms practice set has other cards")
+	screen._sections.current_tab = TerminologyScreen.Tab.QUIZ
+	await _settle()
+	_check(screen._quiz._questions.size() == TerminologyScreen.QUIZ_SIZE, "terminology quiz is not %d questions" % TerminologyScreen.QUIZ_SIZE)
+	await _answer_all(screen._quiz, "terminology quiz", false)
+	_check(StudyProgress.mastered_question_count() <= ContentLibrary.total_question_count(), "terminology answers counted as module mastery")
+	screen._back.pressed.emit()
+	await _settle()
+	_check(menu.visible, "Medical terms back did not return to the menu")
+
+	# A linked term in a lesson opens the popup, and the popup can open the reference.
+	var module: StudyModule = ContentLibrary.modules[0]
+	menu.module_chosen.emit(module)
+	await _settle()
+	var study: ModuleStudy = study_guide._module_study
+	var linked_page: int = -1
+	for section_index: int in study._lesson._sections.size():
+		study._lesson._open_section(section_index, 0)
+		if study._lesson._text.text.contains("[url=term:"):
+			linked_page = section_index
+			break
+	_check(linked_page >= 0, "no linked term in module 1's lesson")
+	if linked_page >= 0:
+		var lesson_text: String = study._lesson._text.text
+		var meta_start: int = lesson_text.find("[url=") + 5
+		var meta: String = lesson_text.substr(meta_start, lesson_text.find("]", meta_start) - meta_start)
+		study._lesson._text.meta_clicked.emit(meta)
+		await _settle()
+		_check(study._term_popup.visible and study._term_popup._card.entry == TermLinker.entry_for_meta(meta), "clicking a lesson term did not open its card")
+		await _snap("term_popup")
+		study._term_popup._open_reference.pressed.emit()
+		await _settle()
+		_check(screen.visible and screen._reference._card.entry == TermLinker.entry_for_meta(meta), "Open in Medical terms did not show the term")
+		_check(screen._back.text.contains("lesson"), "back button does not offer the lesson")
+		screen._back.pressed.emit()
+		await _settle()
+		_check(study.visible, "back from Medical terms did not return to the lesson")
+	study._back.pressed.emit()
+	await _settle()
 
 
 func _parse_bbcode(text: String) -> String:
